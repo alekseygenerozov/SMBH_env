@@ -91,20 +91,20 @@
 
 \begin{abstract}
   We calculate the steady-state hydrodynamic profiles of hot gas in
-  the nuclei of a sample of early-type quiescent galaxies from the
-  Nuker database.  We assume that mass is supplied to the
-  circumnuclear medium (CNM) entirely by stellar winds according to
-  the radial stellar profiles for each galaxy, while the gas is heated
-  by a combination of shocked stellar winds and supernovae.  Our
-  analytic and numerical results are used to estimate the accretion
-  rates onto the central supermassive black holes (SMBH) as a function
-  of the SMBH mass $M_{\bullet}$ and the heating efficiency, the
-  latter of which is related schematically to the age of the stellar
-  population, the frequency of supernovae, and the efficacy of
-  accretion feedback processes.  For a fixed heating efficiency, we
-  find that the SMBH accretion Eddington factor increases with the
-  SMBH mass, $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{\alpha}$
-  with $\alpha \approx 0.5, 1$ for core and cusp nuclei, respectively.
+  the nuclei of a sample of early-type quiescent galaxies.  We assume
+  that mass is supplied to the circumnuclear medium (CNM) entirely by
+  stellar winds according to the radial stellar profiles for each
+  galaxy, while the gas is heated by a combination of shocked stellar
+  winds and supernovae.  Our analytic and numerical results are used
+  to estimate the accretion rates onto the central supermassive black
+  holes (SMBH) as a function of the SMBH mass $M_{\bullet}$ and the
+  heating efficiency, the latter of which is related schematically to
+  the age of the stellar population, the frequency of supernovae, and
+  the efficacy of accretion feedback processes.  For a fixed heating
+  efficiency, we find that the SMBH accretion Eddington factor
+  increases with the SMBH mass, $\dot{M}/\dot{M}_{\rm edd} \propto
+  M_{\bullet}^{\alpha}$ with $\alpha \approx 0.5, 1$ for cups and core
+  nuclei, respectively.
   % However, considering the potentially lower heating efficiency of low
   % mass SMBHs (due to a younger stellar population and the rareity of
   % supernovae within the stagnation radius) and their resulting higher
@@ -360,16 +360,21 @@ Although the use of equation (\ref{eq:Msigma}) is questionable for low mass BHs 
 
 First, by demanding continuity of the entropy derivative at the stagnation radius, the temperature at the stagnation radius is given by (equation~[\ref{eq:Tanalytic}])
 \begin{align}
-T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v_{w}^{2}}{2} \approx 4 \times 10^6\,v_{500}^2 \, \chi   \,\,{\rm K} 
+T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v_{w}^{2}}{2} \approx 6
+\times 10^6\,v_{500}^2 \, \mu  \,\,{\rm K} 
 \end{align}
-{\bf BDM: i picked $\mu = 0.62$ and stick to it.}
+%{\bf BDM: i picked $\mu = 0.62$ and stick to it.}
 
 Next, by demanding hydrostatic equilibrium at the stagnation point, an expression for the stagnation radius can be derived (equation~[\ref{eq:rstag}]),
 \begin{align}
-  \x=\frac{1}{\zeta^2 n}\left[ (1+\Mstar(\rs)/\Mbh)\left(A-\frac{n}{2}\right)-B\right],
+  \x=\frac{1}{\zeta^2 n}\left[
+    \frac{\Mstar}{\Mbh}\left(A-\frac{n}{2}\right)+(B-\frac{n}{2})\right],
   \label{eq:stag_analytic}
 \end{align}
-where $\zeta \equiv v_{w,0}/\sigma$ {\bf BDM: note new definition}, $r_{\rm soi} = GM_{\bullet}/\sigma^{2}$ is the radius of the SMBH sphere of influence (soi), and A/B are constants that depend on the Nuker parameter $\Gamma$ and the adiabatic index of the gas.  
+where $\zeta \equiv v_{w,0}/\sigma$, $r_{\rm soi}
+=GM_{\bullet}/\sigma^{2}$ is the radius of the SMBH sphere of
+influence (soi), and A and B are constants that depend on the Nuker
+parameter $\Gamma$ and the adiabatic index of the gas.
 
 If the SMBH dominates the potential at the stagnation radius
 ($M_{\bullet} \gg M_{\star}$; $v_{w,0} \gg 200 M_{\bullet,8}^{0.2}$ km
@@ -379,8 +384,7 @@ simplified greatly:
   &\rs=\frac{7}{2}\frac{G \Mbh}{n \vwO^2} \simeq 6 \, \pc \,\, \Mbheight v_{500}^{-2},
   \label{eq:stag_simple}
 \end{align}
-where we have assumed $n = 1$ {\bf BDM: true?  should there be a
-  $\chi$ in this?}.  Note that this expression is similar to that
+where we have assumed $n = 1$.  Note that this expression is similar to that
 obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).
 
 The SMBH accretion rate is simply given by the integrated mass loss rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
@@ -389,9 +393,9 @@ The SMBH accretion rate is simply given by the integrated mass loss rate interio
 &\approx&
   \begin{cases}
     1.6 \times 10^{-3}  M_{\bullet,8}^{1.9}
-    v_{500}^{-4} \chi^{-2} \eta \Msun \, \pyear& \text{core} \\
+    v_{500}^{-4}  \eta \Msun \, \pyear& \text{core} \\
     3.4 \times 10^{-3} \Mbheight^{1.4}
-    v_{500}^{-2} \chi^{-1} \eta \Msun \, \pyear  & \text{cusp}, 
+    v_{500}^{-2}  \eta \Msun \, \pyear  & \text{cusp}, 
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
@@ -406,9 +410,9 @@ from which one derives
 \begin{align}
   \rho(\rs)\simeq
   \begin{cases}
-    3 \times 10^{-24} \Mbheight^{-0.14} v_{500}^{-1} \chi^{-1/2} \eta \,
+    3 \times 10^{-24} \Mbheight^{-0.14} v_{500}^{-1}  \eta \,
     \, {\rm g \, cm^{-3}}& \text{core}\\
-    6 \times 10^{-24}  \Mbheight^{-0.56} v_{500}  \chi^{1/2}  \eta \,\, {\rm g \,cm^{-3}} & \text{cusp}
+    6 \times 10^{-24}  \Mbheight^{-0.56} v_{500}    \eta \,\, {\rm g \,cm^{-3}} & \text{cusp}
   \end{cases}
   \label{eq:rhors}
 \end{align}
@@ -481,14 +485,13 @@ Our results for $r_{\rm s}/r_{\rm soi}$ can be compared directly to our analytic
 \begin{figure}
   \includegraphics[width=\columnwidth]{profiles.eps}
   \caption{\label{fig:profiles}Radial profiles of the CNM density
-    ({\it top}), temperature ({\it top}), velocity ({\it ADD}), and
+    ({\it top}), temperature ({\it middle}), velocity  ({\it bottom}), and
     interior X-ray luminosity ({\it bottom}), calculated for three
     characteristic galaxies from our samples: NGC1172 ({\it blue}),
     NGC4478 ({\it green}), and NGC3115 ({\it black}).  Different line
     styles denote different values of the effective wind heating rate,
     $v_{w,0}$=1000 km s$^{-1}$ ({\it solid}) and 200 km s$^{-1}$ ({\it
-      dot-dashed}).  {\bf BDM: add velocity profiles...xray luminosity
-      can probably go elsewhere}}
+     dot-dashed}).}
 \end{figure}
 
 \begin{figure}
@@ -533,9 +536,9 @@ Though representing a much smaller quantity of mass, main sequence winds have mu
 
 \subsubsection{Millisecond Pulsars} The spin down power of millisecond pulsars (MSPs) could in principle be an important heating source.  If the number of MSPs per unit stellar mass is $n_{\rm msp}$ and each contributes an average spin-down luminosity $L_{\rm sd}$, then the resulting heating per unit volume $e \approx L_{\rm sd}n_{\rm msp}\epsilon$ corresponds to an effective heating rate (equation~ [\ref{eq:vw_eff}])
   \begin{align}
-    \vwO=\sqrt{\frac{2 t_h n_{\rm msp} L_{\rm sd}}{\eta}},
+    \vwO=\sqrt{\frac{\epsilon 2 t_h n_{\rm msp} L_{\rm sd}}{\eta}},
   \end{align}
-where $\eta < 1$ is the thermalization efficiency of the wind.  The $\sim 30,000$ estimated MSPs in the Milky Way of stellar mass $6\times 10^{10}M_{\odot}$ (\citealt{Lorimer13}) corresponds to $n_{\rm msp}\simeq3 \times 10^{-40} $ MSPs g$^{-1}$.  If we assume an average spin-down luminosity $L_{\rm sd}\simeq 10^{35}$ ergs s$^{-1}$ characteristic of Fermi pulsars, then we find that $\vwO\simeq 120\epsilon (\eta/0.1)^{-1/2}$ km s$^{-1}$.  Thus, assuming a high thermalization efficiency $\epsilon \sim 1$, MSP heating can be comparable to main sequence heating.  However, much lower thermalization efficiencies of $\epsilon \lesssim 0.1$ are inferred based on modeling the insterstellar mediums of globular clusters \citep{NaimanSoares-Furtado+:2013a}, while the binaries giving rise to through accretion MSPs may be disocciated by stellar interactions in the dense nuclear cluster.  
+where $\epsilon< 1$ is the thermalization efficiency of the wind.  The $\sim 30,000$ estimated MSPs in the Milky Way of stellar mass $6\times 10^{10}M_{\odot}$ (\citealt{Lorimer13}) corresponds to $n_{\rm msp}\simeq3 \times 10^{-40} $ MSPs g$^{-1}$.  If we assume an average spin-down luminosity $L_{\rm sd}\simeq 10^{35}$ ergs s$^{-1}$ characteristic of Fermi pulsars, then we find that $\vwO\simeq 120\epsilon^{1/2} (\eta/0.1)^{-1/2}$ km s$^{-1}$.  Thus, assuming a high thermalization efficiency $\epsilon \sim 1$, MSP heating can be comparable to main sequence heating.  However, much lower thermalization efficiencies of $\epsilon \lesssim 0.1$ are inferred based on modeling the insterstellar mediums of globular clusters \citep{NaimanSoares-Furtado+:2013a}, while the binaries giving rise to through accretion MSPs may be disocciated by stellar interactions in the dense nuclear cluster.  
 \subsubsection{Type Ia Supernovae} 
 
 Energy injected by Type Ia supernovae (SNe Ia) represents a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  Assuming that each Ia injects a thermal energy $E_{\rm Ia}$ into the instellar medium, and that the SNe rate (per stellar mass) is given by $R_{\rm Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm Ia}$ produces an effective wind heating parameter (equation~[\ref{eq:vw_eff}])
@@ -675,16 +678,55 @@ km s$^{-1}$ (close to, but somewhat higher than that expected from SNe Ia) gives
   %% AG in the future we will have to be carfeful of the mean molecular weight.
 \end{figure*}
 
+\subsubsection{Comparison with observed X-ray Luminosity-Mass
+  Relation}
+%Note currently I reverse-engineer the stellar mass from the black
+%hole mass inferred from M-sigma; however, it would be better to use
+%the tabulated black hole mass from the Mbh-Mbulge relation.
+Figure 1 of \citealt{MillerGallo+:2014a} plots the observed
+relationship of unresolved x-ray luminosity versus galactic stellar
+mass for a sample of quiescent galaxies. We may construct a similar
+relationship with our own sample using the inferred accretion rates
+from our solutions.  To infer an x-ray luminosity for each solution,
+we scale our calculated $\Mdot c^2$ by a constant. We pick $5\times
+10^{-7}$, which gives comparable an x-ray luminosities comparable to
+those in \citealt{MillerGallo+:2014a}.
+%describe the quadratic procedure.
+
+Our results are plotted in Figure~\ref{fig:bh_xray}. For each galaxy
+in our sample we select the $\vwO$=200 km/s if $\rs<\rIa$
+for this solution,  $\vwO$=500 km/s is $\rs>\rIa$ for this solution,
+or exclude it.  $\vwO$ encapsulates heating SNe Ia heating, and it
+would only make sense to include this heating if $\rs$>$\rIa$ as
+discussed in Section~\ref{sec:heating}. At low $\Mbh$ we have
+$\vwO$=200 km/s and at high $\Mbh$ we have $\vwO$=500 km/s.
+Note that much of our sample is excluded in this Figure, since for
+$\vwO$=200 km/s we would have $\rs>\rIa$ and four $\vwO$=500 km/s we
+would have $\rs<\rIa$ (i.e. the relative locations of $\rs$ and $\rIa$
+would be inconsistent with the assumed level of heating).
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{bh_xray.eps}
+\caption{\label{fig:bh_xray} Accretion power plotted as a function of 
+  stellar mass for our solutions (points) with the trend of nuclear
+  x-ray luminosity with stellar mass and the detection upper limit
+  from Figure 1 of \citealt{MillerGallo+:2014a}. In the top panel we
+  take the accretion power to be $\epsilon \Mdot c^2$, with
+  $\epsilon=5\time 10^{-7}$ chosen to make our accretion powers
+  comparable to the observed x-ray luminosities..}
+\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
 
 \subsection{Cooling}
 \label{sec:cooling}
-Our models neglect radiative cooling, an assumption we now check.  At high temperatures  $T\gsim
-2\times 10^7$ K gas cools through free-free emission, while at lower temperatures it cools predominantly through metal lines.  
-To assess the importance of radiative cooling in our solutions we compare the heating rate $H=q
-\vw^2/2$ to the nominal cooling rate
+Our models neglect radiative cooling, an assumption we now check.  At
+high temperatures $T\gsim 2\times 10^7$ K gas cools through free-free
+emission, while at lower temperatures it cools predominantly through
+metal lines.  To assess the importance of radiative cooling in our
+solutions we compare the heating rate $H=q \vw^2/2$ to the nominal
+cooling rate
 \begin{align}
   c =\Lambda(T) n^2,
 \label{eq:cooling}
@@ -772,9 +814,30 @@ For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta
   %% this scale to the sphere of influence scale.
   This suggests that angular momentum should generally be unimportant.
 
-  \section{Summary}
-\label{sec:summary}
+  \section{Summary and conclusions}
+  We have calculated steady-state models for circumnuclear medium of a
+  sample of early type galaxies, assuming that gas is supplied
+  entirely by stellar wind mass loss and heated by shocked stellar
+  winds and SNe Ia. We may use these profiles to calculate an $\Mdot$
+  onto each of sample galaxy's SMBH, and get the scaling of $\Mdot$
+  with $\Mbh$. We may then compare our results with observed trends of
+  nuclear x-ray luminosity. Our main conclusions may be summarized as
+  follows.
+
+  \begin{enumerate}
+    \item We find that $\eddr \propto \Mbh^{\alpha}$, where the value
+      of $\alpha$ depends on the slope of the stellar density profile
+      ($\alpha\simeq0.5,1$ for cusp and core galaxies respectively). 
+ 
+  \end{enumerate}
   
+
+
+
+
+
+
+ 
 
   \clearpage
   \appendix

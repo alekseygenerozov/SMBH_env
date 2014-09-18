@@ -42,26 +42,29 @@ Then multiplying Equation~\ref{eqn:HSE}  $\frac{1}{\gamma-1}$ and subtracting it
 From the above equation we may obtain an expression for the Stagnation point using L'Hopital's rule and Equation~\ref{eq:tstag}. To obtain an analytic expression, we take $\Mstar\sim r^{2-\Gamma}$
 
 \begin{align}
-&\kewO n =A \phirs -B \frac{G \Mbh}{\rs}\\
-&A=\left[\frac{4\gamma-(\gamma-1)(1+\Gamma)}{4(\gamma-1)}\right]; \hspace{1cm} B=\frac{2-\Gamma}{4} 
+&\kew n =A \frac{G \Mstar}{\rs} +B \frac{G \Mbh}{\rs}\\
+&A=\left[\frac{4\gamma-(\gamma-1)(1+\Gamma)}{4(\gamma-1)}\right]; \hspace{1cm} B=\frac{\gamma+3}{4(\gamma-1)}
 \end{align}
 
 Note that in the above expression $\Mstar$ is evaluated at the stagnation radius. Let $\omega=\Mstar(\rs)/\Mbh$ and 
 $\eta=v_{w,0}/\sigma_{\rm soi}$. We may re-parameterize this relationship as follows:
 
 \begin{align}
-\x=\frac{1}{\zeta^2 n}\left[ (1+\omega)\left(A-\frac{n}{2}\right)-B\right]
+  \x=\frac{1}{\zeta^2 n}\left[
+   \frac{\Mstar}{\Mbh}\left(A-\frac{n}{2}\right)+(B-\frac{n}{2})\right].
 \end{align}
 
-Note that in general $\omega$ is an implicit function of $x$. Cusp galaxies have $\Gamma\simeq1$.  Then $\omega=x$. With $\gamma=5/3$, $A=2$ and $B=1/4$.  Then:
+Note that in general $\omega$ is an implicit function of $x$. Cusp galaxies have $\Gamma\simeq1$.  Then $\Mstar/\Mbh=x$. With $\gamma=5/3$, $A=2$ and $B=7/4$.  Then:
 
 \begin{align}
 \x=\frac{7-2n}{2\zeta^2 n+2n-8}
 \end{align}
 
-Consider the limit $\lim_{\eta \to 0}$ (the extra heating $\vwO$ goes to 0. Then we will get a negative value for the stagnation radius unless the gas density profile is quite steep at the $\rs$: $3.5<n<4$...
+Consider the limit $\lim_{\eta \to 0}$ (the extra heating $\vwO$ goes to 0. Then we will get a negative value for the stagnation radius unless the gas density profile is quite steep at the $\rs$: $3.5<n<4$.
 
-In contrast for a core galaxy we will have $\Gamma\simeq0, A=9/4, B=1/2$, and  $\omega=x^2$. Thus we will have a quadratic equation for stagnation radius, which gives
+In contrast for a core galaxy we will have $\Gamma\simeq0, A=9/4,
+B=7/4$, and $\Mstar/\Mbh=x^2$. Thus we will have a quadratic equation for
+stagnation radius, which gives
 
 \begin{align}
 \x=\frac{\zeta^2 n \pm \sqrt{\eta^4 n^2 -4 \left(\frac{9}{4}-\frac{n}{2}\right) \left(\frac{7}{4}-\frac{n}{2}\right)}}{2\left(\frac{9}{4}-\frac{n}{2}\right)}
