@@ -103,7 +103,7 @@
   the efficacy of accretion feedback processes.  For a fixed heating
   efficiency, we find that the SMBH accretion Eddington factor
   increases with the SMBH mass, $\dot{M}/\dot{M}_{\rm edd} \propto
-  M_{\bullet}^{\alpha}$ with $\alpha \approx 0.5, 1$ for cups and core
+  M_{\bullet}^{\alpha}$ with $\alpha \approx 0.5, 1$ for cusp and core
   nuclei, respectively.
   % However, considering the potentially lower heating efficiency of low
   % mass SMBHs (due to a younger stellar population and the rareity of
@@ -301,14 +301,14 @@ recycled into gas on the Hubble time $\th = 10^{10}$ years (see, e.g.,
 \citealt{Ciotti+91}).  In Appendix \ref{app:eta} we estimate that
 $\eta \approx 0.11(t_{\star}/t_{\rm h})^{-1.26}$ for a Salpeter IMF,
 assuming that all stars are formed in a burst of star formation at a
-common age of $t_{\star}$ (equation~\ref{eq:eta}).  We adopt
+common age of $t_{\star}$ (equation~[\ref{eq:eta}]).  We adopt
 $\eta=1$ as fiducial, but note that changing $\eta$ is equivalent to
 rescaling $\rho$ by the same factor.\footnote{This is {\it not} true
   if cooling is included, since the cooling rate is proportional to
   density {\it squared}.}
 
 Source terms $\propto q$ also appear in the momentum and entropy
-equations (equation~\ref{eq:dvdt} and \ref{eq:dsdt}) due to the fact
+equations (equation~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) due to the fact
 that the isotropic mass injection in the rest frame of the SMBH
 represents a source of momentum and energy upon being incorporated
 into the mean flow (see also below).  
@@ -344,7 +344,7 @@ Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
 for time integration and artificial viscosity terms in the velocity
 and entropy equations for numerical stability. This scheme is
-described in \citealt{Brandenburg:2003a}.  We solve the equations for
+described in \cite{Brandenburg:2003a}.  We solve the equations for
 different choices of $v_{\rm w,0}$ spanning the physically expected
 range.  Although we are most interested in the steady-state CNM
 structure, the time-dependent equations are solved to avoid numerical
@@ -497,17 +497,18 @@ As expected, the gas density increases towards the SMBH.  For some
 profiles (e.g. NGC1172 and NGC4478) the density $\rho$ follows a power
 law from the stagnation radius (squares in Fig.~\ref{fig:profiles})
 inwards $\rho \propto r^{n}$ with $n \approx 1$. Note that this is
-shallower than the $-3/2$ for Bondi accretion. However, the power law
-behavior does not extend through all radii. NGC4365 which has a
-prominent break in the gas density profile, near the stagnation
-radius. This is also roughly the location of the break in the stellar
-light profile ($\rb$). The temperature profile is relatively flat at
-large radii, but increases as $\propto 1/r^{k}$ interior to the sphere
-of influence, where $k$ is smaller than 1 (which would be expected for
-virialized gas).  The inwardly directed velocity increases towards the
-hole approaching the expected free-fall rate $v \propto v_{\rm
-  ff}\propto r^{-1/2}$ interior to the sonic point, and then increases
-outwards towards large radii.
+shallower than the $-3/2$ power law for Bondi accretion. However, the
+power law behavior does not extend through all radii, and the gas
+density profile may have breaks mirroring those in the stellar density
+profile. For example, NGC4365 has a prominent break in the gas density
+profile, near the stagnation radius. This coincides with the location
+of the break in the stellar light profile ($\rb$). The temperature
+profile is relatively flat at large radii, but increases as $\propto
+1/r^{k}$ interior to the sphere of influence, where $k$ is smaller
+than 1--the power expected for virialized gas.  The inwardly
+directed velocity increases towards the hole approaching the expected
+free-fall rate $v \propto v_{\rm ff}\propto r^{-1/2}$ interior to the
+sonic point, and then increases outwards towards large radii.
 % {\bf BDM: I made this up - in general we need
 %   more explanation of what the plots are actually showing, with some
 %   physical explanation.}
@@ -730,7 +731,7 @@ $L_X \sim \Mbh^\alpha$, where $\alpha\simeq 0.7-0.8$
 
 This is shown in the top panel Figure~\ref{fig:bh_xray}. The
 relationship from \citealt{MillerGallo+:2014a} and their detection
-upper limits are shown as the blue and black solid lines
+upper limits are the black and blue solid lines
 respectively. The points correspond to the $\dot{M} c^2$ for our
 solutions (scaled by $5\times 10^{-7}$).  We must choose a $\vwO$ for
 each galaxy.  We select $\vwO$=200 km/s if $\rs<\rIa$ for this $\vwO$,
@@ -860,20 +861,19 @@ galaxies.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{bh_xray.eps}
-\caption{\label{fig:bh_xray} Accretion power plotted as a function of
-  stellar mass for our solutions (points) and the trend of nuclear
+\caption{\label{fig:bh_xray} X-ray luminosity plotted as a function of
+  stellar mass for our solutions (points), the trend of nuclear
   x-ray luminosity with stellar mass (black line) and the detection
   upper limit (blue line) from Fig. 1 of
-  \citealt{MillerGallo+:2014a}. In the top panel we take the accretion
-  power to be $\epsilon_1 \Mdot c^2$, with $\epsilon_1=5\times
-  10^{-7}$ chosen to make our accretion powers comparable to the
-  observed x-ray luminosities. In the bottom panel, we take the
-  accretion power to be quadratic in $\Mdot$--$\epsilon_2 \eddr \Mdot
+  \citealt{MillerGallo+:2014a}. In the top panel we take the X-ray
+  luminosity to be $\epsilon_1 \Mdot c^2$, with $\epsilon_1=5\times
+  10^{-7}$ chosen to make our luminosities comparable to those
+  observed. In the bottom panel, we take the
+  accretion power to be quadratic in $\Mdot$. $L_x=\epsilon_2 \eddr \Mdot
   c^2$ with $\epsilon2$=$2\times10^{-4}$. For a given galaxy, we take
   either $\vwO=200$ km/s (green points) or $\vwO=500$ km/s (orange
   points). We choose the solution for which the relative positions of
   $\rs$ and $\rIa$ are consistent with the assumed level of heating}
-  %(see text for details).}
 \end{figure}
 
 \section{Discussion}
@@ -908,14 +908,17 @@ For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{cooling.eps}
-  \caption{\label{fig:cooling} Ratio of heating ($H$) to cooling rate ($C$) for each of our solutions. The cooling rate is calculated using the approximate (solar metallicity) cooling function in Equation~(\ref{eq:cooling}). The heating rate is estimated as $q \vw^2/2$. The ratio is computed from equation (\ref{eq:cooling}) assuming a stellar mass loss rate parameter $\eta=1$.}
+  \caption{\label{fig:cooling} Ratio of heating ($H$) to cooling rate
+    ($C$) for each of our solutions. The cooling rate is calculated
+    using the approximate (solar metallicity) cooling function in
+    Equation~(\ref{eq:cooling}). The heating rate is estimated as $q
+    \vw^2/2$. The ratio is computed from equation (\ref{eq:cooling})
+    assuming a stellar mass loss rate parameter $\eta=1$.}
 \end{figure}
 
 
 \input{figures/eta_tab.tex}
 
-\subsection{Conduction}
-\label{sec:conduction}{
 
   \subsection{Angular Momentum}
   \label{sec:ang}
@@ -974,7 +977,7 @@ For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta
   %% this scale to the sphere of influence scale.
   This suggests that angular momentum should generally be unimportant.
 
-  \section{Summary and conclusions}
+  \section{Summary}
   \label{sec:summary}
   We have calculated steady-state models for circumnuclear medium of a
   sample of early type galaxies, assuming that gas is supplied
@@ -1003,7 +1006,7 @@ For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta
     agrees with the Bondi radius, $\rb$, within a factor of a
     few. Thus, use of the Bondi formula is a good approximation.
   \item We compare our solutions for density and temperature to those
-    inferred from Chandra x-ray observations by \citealt{Allen+:2006a}
+    inferred from Chandra x-ray observations by \citealt{AllenDunn+:2006a}
     and \citealt{RussellMcNamara+:2013a} for a handful of galaxies in
     which our sample overlap with theirs. In general, we cannot match
     the observed gas density slope on large scales. 
