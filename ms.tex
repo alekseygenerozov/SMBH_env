@@ -275,7 +275,13 @@ $\S\ref{sec:summary}$ we summarize our results.
 
 \label{sec:sample}
 
-Our sample includes 61 early-type galaxies from \citetalias{WangMerritt:2004a}, as represent a subset of a larger sample of \citet{FaberTremaine+:1997a} with Hubble WFPC2 imaging.  We focus on elliptical galaxies because we are interested in isolating SMBHs fed by the steady mass loss from the relatively old stellar population, instead of fresh gas flowing into the sphere of influence from larger scales.
+Our sample includes 61 early-type galaxies from
+\citetalias{WangMerritt:2004a}, as represent a subset of a larger
+sample of \citet{FaberTremaine+:1997a} with Hubble WFPC2 imaging.  We
+focus on elliptical galaxies because we are interested in isolating
+SMBHs fed by the steady mass loss from the relatively old stellar
+population, instead of fresh gas flowing into the sphere of influence
+from larger scales.
 
 The surface brightness of each galaxy in the sample is parameterized by a Nuker Law (WM04; their Table 1),
 \begin{equation}
@@ -377,11 +383,14 @@ a possible supersonic outflow on large scales.
 
 We do not include radiative cooling in the entropy equation because
 across much of the parameter space radiative cooling is negligible
-compared to other sources of cooling (e.g., advection).  Although radiative
-cooling cannot be neglected in some cases (especially if $\vwO$ is low
-or $\eta$ is high), our 1D scheme cannot account for the true multi-phase behavior of local thermal instabilities anyways (e.g.~\citealt{textit}).  Our steady state solutions neglecting radiation can
-nevertheless be used to ascertain over what parameter space cooling
-instabilities are likely to develop ($\S\ref{sec:cooling}$).
+compared to other sources of cooling (e.g., advection).  Although
+radiative cooling cannot be neglected in some cases (especially if
+$\vwO$ is low or $\eta$ is high), our 1D scheme cannot account for the
+true multi-phase behavior of local thermal instabilities anyways
+(e.g.~\citealt{McCourt+12}).  Our steady state solutions neglecting
+radiation can nevertheless be used to ascertain over what parameter
+space cooling instabilities are likely to develop
+($\S\ref{sec:cooling}$).
 %Dependence of the heating to cooling ratio has a far steeper
 %dependence on vwO than on eta...
 
@@ -451,11 +460,16 @@ simplified greatly:
 \end{align}
 where in the numerical estimate we have assume $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).  On the other hand, if wind heating is much weaker ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to very large radii or may not exist at all.  
 
-Though important across some radii, the importance of conductive heating can be estimated by comparing its magnitude to that of wind heating, viz.~
-\begin{eqnarray}
-\left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm w}^{2}/2}\right|_{r_{\rm s}} &\sim& \frac{2t_{\rm h}\kappa_0 T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}} \nonumber \\
-&\sim& 0.5\left(\frac{\eta}{0.1}\right)^{-1}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-\beta} v_{500}^{3}\chi^{3},
+The importance of conductive heating can be estimated by comparing its
+magnitude to that of wind heating, viz.~
+\begin{eqnarray} \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
+w}^{2}/2}\right|_{r_{\rm s}} &\sim& \frac{2t_{\rm h}\kappa_0
+T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}}
+\nonumber \\ &\sim&
+0.5\left(\frac{\eta}{0.1}\right)^{-1}\left(\frac{r_{\rm s}}{r_{\rm
+soi}}\right)^{-\beta} v_{500}^{3}\chi^{3},
 \end{eqnarray}
+
 where we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$ and in the second equality have made use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}) and have approximated $4\pi r_{\rm s}^{3}\rho_{\star}(r_{\rm s}) \approx M_{\bullet}(r_{\rm s}/r_{\rm soi})^{\beta}$ with $\beta \approx 1-2$.  We thus see that conductive heating is important near the stagnation radius for high values of $v_{\rm w} \gtrsim 500$ km s$^{-1}$ and $\eta \gtrsim 0.1$, but that it is safely neglected to first order for lower heating rates.
 
 The SMBH accretion rate is simply given by the integrated mass loss rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
@@ -683,7 +697,7 @@ which is notably independent of radius $r$.  Thus we require $\epsilon_{\rm j} \
 
 The total heating rate $\vwO = \sqrt{v_{\rm w,0}^{\star} + v_{\rm w,0}^{\rm Ia} + v_{\rm w,0}^{\rm p} + v_{\rm w,0}^{\bullet}}$ has contributions from stellar winds, supernovae, pulsars, and SMBH feedback.  Since pulsar heating appears unlikely to contribute appreciably, and since SMBH heating is uncertain, we first focus on heating from stellar winds and supernovae.  
 
-Figure~\ref{fig:vweff} shows an estimate of how the combined heating depends on the age of the stellar population $\tage$ and the SMB mass $\Mbh$.  For $M_{\bullet} \gtrsim 1.5\times 10^8 (\tau_{\star}/t_{\rm h})^{0.5} \Msun$, SNe Ia occur sufficiently frequently within the stagnation radius (i.e., $r_{\rm Ia} > r_{\rm s}$; eq.~[\ref{eq:rIa}]) to contribute their full heating rate.   $v_{\rm w,0}^{\rm Ia} \sim 250$ km s$^{-1}$.  On the other hand, for lower mass BHs Ia SNe are infrequent, in which case main sequence stars ($v_{\rm w,0}^{\star} \simeq 100-150$ km s$^{-1}$) dominate the heating at most times of interest.\footnote{Although SN Ia will still occur surrounding low mass SMBHs, if they are infrequent interior to the radius where the accretion rate is being set, then they will not affect the flow at most near the SMBH at most epochs.}  For very young stellar populations ($\tage \lsim 10^7$ years), $\vwO\simeq 1000$ km s$^{-1}$ due to contributions from line driven winds from high mass main sequence stars.
+Figure~\ref{fig:vweff} shows an estimate of how the combined heating depends on the age of the stellar population $\tage$ and the SMB mass $\Mbh$.  For $M_{\bullet} \gtrsim 1.5\times 10^8 (\tau_{\star}/t_{\rm h})^{0.5} \Msun$, SNe Ia occur sufficiently frequently within the stagnation radius (i.e., $r_{\rm Ia} > r_{\rm s}$; eq.~[\ref{eq:rIa}]) to contribute their full heating rate.   $v_{\rm w,0}^{\rm Ia} \sim 250$ km s$^{-1}$.  On the other hand, for lower mass BHs Ia SNe are infrequent, in which case main sequence stars ($v_{\rm w,0}^{\star} \simeq 100-150$ km s$^{-1}$) dominate the heating at most times of interest.\footnote{Although SN Ia will still occur surrounding low mass SMBHs, if they are infrequent interior to the radius where the accretion rate is being set, then they will not affect the flow near the SMBH at most epochs.}  For very young stellar populations ($\tage \lsim 10^7$ years), $\vwO\simeq 1000$ km s$^{-1}$ due to contributions from line driven winds from high mass main sequence stars.
 
   \begin{figure}
     \includegraphics[width=\columnwidth]{vw-contour.eps}
@@ -923,7 +937,16 @@ where $n = \rho/\mu m_p$ and we approximate the cooling function $\Lambda(T)$ as
   \label{eq:cooling2}
 \end{align}
 
-If cooling becomes important in the flow, it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes (e.g.~\citealt{Fabian&Peterson06}).  In practice this should could manifest as a large increase in the stagnation radius, due an effective {\it decrease} in the effective heating rate.  This global ``instability" is not a true instability insofar as the gas does not necessarily clump locally into low-T clouds.  
+If cooling becomes important in the flow, it may lead to thermal
+instabilities.  There are two kinds of ``instabilities", global and
+local.  The global instability is simply that, if cooling becomes very
+rapid, the gas loses thermal pressure and starts to inflow faster,
+i.e. the entire CNM accretes (e.g. ).  In
+practice this should could manifest as a large increase in the
+stagnation radius, due an effective {\it decrease} in the effective
+heating rate.  This global ``instability" is not a true instability
+insofar as the gas does not necessarily clump locally into low-T
+clouds.
 
 However, \citealt{McCourt+12} argue that even if cooling is exactly balanced by heating everywhere, there is still a local thermal instability that operates to turn hot gas into cold clouds.  However, this local instability only causes a significant local drop-out of mass from the hot medium (to low-T clouds), if the cooling timescale,
 \be
@@ -1073,7 +1096,39 @@ For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta
 
 \section{Analytic model for dependence of wind heating $v_{\rm w,0}^{\star}$ on stellar age}
 \label{app:windheat}
-{\bf BDM: Nick add}
+If we assume that a stellar population forms impulsively in the distant pass with IMF $\mu(m_*)$(with minimum mass $m_0$ and maximum mass $m_1$), then the surviving mass fraction at any future time $t$ is given by 
+\begin{equation}
+f(t) =\frac{ \int_{m_0}^{m_{\rm max}(t)} m_* \mu(m_*) dm_* }{ \int_{m_0}^{m_1} m_* \mu(m_*) dm_* },
+\end{equation}
+where 
+\begin{equation}
+m_{\rm max}(t) \approx 2.5M_\odot~ \left( \frac{t}{10^9~{\rm yr}} \right)^{-0.4}.
+\end{equation}
+For a Salpeter IMF $\mu(m_*) \propto m_*^{-2.35}$ with $m_0=0.1M_\odot$ and $m_1=100M_\odot$,
+\begin{equation}
+f_{\rm Sal}(t) = 1.098 - 0.490 \left(\frac{t}{10^{10}~{\rm yr}} \right)^{0.14}
+\end{equation}
+{\bf NCS: we should probably use a Kroupa/Chabrier IMF, but this gets the ball rolling.}
+If we approximate post-main sequence evolution as instantaneous and define $\lambda(m_*)$ as the fractional mass lost during all stages of stellar evolution, then the mass loss rate density
+\begin{equation}
+q(t) = \frac{\rho_*}{\bar{m}_*} \lambda(m_{\rm max}(t)) m_{\rm max}(t) \frac{df}{dt},
+\end{equation}
+where the mean stellar mass $\bar{m}_* = \int_{m_0}^{m_{\rm max}(t)} m_*\mu(m_*)dm_* \approx 0.3 M_\odot$.  Further approximating $\lambda(m_*)=0.5$, and using the Salpeter IMF once more, gives
+\begin{equation}
+q(t) = \frac{\rho_*}{10^{10}~{\rm yr}} \times 0.11 \left(\frac{t}{10^{10}~{\rm yr}} \right)^{-1.26}.
+\end{equation}
+This is a specific, time-dependent definition of $\eta(t) (=0.11(t/t_{\rm h})^{-1.26})$; if we consider different star formation scenarios (for example, continuous star formation) or different IMFs, it will change.  Once these free parameters are specified, however, we can answer an important question: do young stellar populations increase or decrease the SMBH feeding rate $\dot{M}$?  Clearly, $\eta(t)$ is larger for young stellar populations, but these stars also have high wind velocities that diminish the stagnation radius.  Crudely approximating $v_{\rm w}=200~{\rm km~s}$ for $m_{\rm max} < 10M_{\odot}$ and $v_{\rm w}=1000~{\rm km~s}$ for $m_{\rm max} > 10M_{\odot}$ (motivated by the transition from dust-driven wind loss on the AGB to line-driven wind loss on the main sequence), we can employ the relation $\dot{M} \propto \eta(t) r_{\rm s}^{2-\Gamma}\propto \eta(t) v_{\rm w}^{-4+2\Gamma}$ (where $\rho_* \propto r^{-\Gamma}$) to determine the impact of stellar ``youth'' on SMBH feeding rates.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{NickPlot.eps}
+\caption{\label{NickPlot} SMBH feeding rates $\dot{M}=\eta(t) \times M_*(r_{\rm s})$, in arbitrary units.  The green, blue, and black curves are for galaxies with $\Gamma$ values of $0.1$, $0.5$, and $0.9$, respectively.  Solid curves represent impulsive-mode star formation, while dotted curves represent continuous-mode star formation.}
+\end{figure}
+
+In Fig. \ref{NickPlot} we plot $\dot{M}$, in arbitrary units, as a function of time, for three different stellar density profiles $\Gamma = \{1.1, 1.5, 1.9\}$ (which are normalized to have the same mass at an influence radius $r_{\rm soi}=10~{\rm pc}$ around a $10^7M_\odot$ SMBH).  We parametrize the wind velocity as 
+\begin{equation}
+\frac{v_{\rm w}}{\rm km~s^{-1}}=600-400\tanh\left( \frac{t-10^{7.5}~{\rm yr}}{10^{7}~{\rm yr}}\right).
+\end{equation}
+The ``impulsive burst'' mode of star formation produces large ($\sim 10$) differences between the three $\dot{M}$ curves at early times, when $r_{\rm s}$ is small, but smaller ($\sim 3$) differences at late times, when $r_{\rm s}$ is large.  We also plot, as dotted curves, a simple model for the ``continuous'' mode of star formation, where mass loss is calculated as $\bar{\eta} = \int\eta(t)dt/t_{\rm h} \approx 4$ and an average energy injection in the wind is calculated as $\bar{v_{\rm w}^2}=\int\eta(t)v_{\rm w}^2(t)dt/\bar{\eta} \approx (800~{\rm km~s}^{-1})^2$.  Interestingly, the continuous mode of star formation produces small differences from late-time $\dot{M}$ seen in cusp galaxies with impulsive star formation; however, continuous mode star formation decreases late-time $\dot{M}$ by an order of magnitude relative to impulsive star formation in core galaxies.
   \footnotesize{
     \bibliographystyle{mn2e}
     \bibliography{master}
