@@ -274,7 +274,8 @@ $\S\ref{sec:summary}$ we summarize our results.
 \subsection{Galaxy Sample}
 
 \label{sec:sample}
-
+%AG:It is unclear whether if/how the Nuker profile will show up in
+%this parametrized study.
 Our sample includes 61 early-type galaxies from
 \citetalias{WangMerritt:2004a}, as represent a subset of a larger
 sample of \citet{FaberTremaine+:1997a} with Hubble WFPC2 imaging.  We
@@ -472,19 +473,23 @@ soi}}\right)^{-\beta} v_{500}^{3}\chi^{3},
 
 where we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$ and in the second equality have made use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}) and have approximated $4\pi r_{\rm s}^{3}\rho_{\star}(r_{\rm s}) \approx M_{\bullet}(r_{\rm s}/r_{\rm soi})^{\beta}$ with $\beta \approx 1-2$.  We thus see that conductive heating is important near the stagnation radius for high values of $v_{\rm w} \gtrsim 500$ km s$^{-1}$ and $\eta \gtrsim 0.1$, but that it is safely neglected to first order for lower heating rates.
 
-The SMBH accretion rate is simply given by the integrated mass loss rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
+The SMBH accretion rate is simply given by the integrated mass loss
+rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
+%AG: Should we have separate cores and cusps? Or just write a general
+%relationship in terms of gamma?
 \begin{eqnarray}
   \dot{M} &=& \frac{\eta \Menc(\rs)}{\th} \nonumber \\
 &\approx&
   \begin{cases}
-    1.6 \times 10^{-3}  M_{\bullet,8}^{1.9}
-    v_{500}^{-4}  \eta \Msun \, \pyear& \text{core} \\
-    3.4 \times 10^{-3} \Mbheight^{1.4}
-    v_{500}^{-2}  \eta \Msun \, \pyear  & \text{cusp}, 
+    1.6 \times 10^{-3} M_{\bullet,8}^{1.9}
+    \chi^{-4} v_{500}^{-4}  \eta \Msun \, \pyear& \text{core} \\
+    3.4 \times 10^{-3} \Mbheight^{1.4} \chi^{-2}
+    \chi^{-2} v_{500}^{-2}  \eta \Msun \, \pyear  & \text{cusp}, 
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-where the numerical estimates again assume that $M_{\bullet} \gg M_{\star}$ at the stagnation radius.  Equation (\ref{eq:mdot_analytic}) predicts that $\dot{M}$ should increase with SMBH mass at fixed heating $v_{500}$, but decreases rapidly with increased heating.
+
+
 
 The density of gas at the stagnation radius $\rho(r_{\rm s})$ can be estimated by using equations (\ref{eq:stag_simple}) and (\ref{eq:mdot_analytic}) in conjunction with an alternative estimate of the mass accretion rate as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$, viz.
 \begin{align}
@@ -725,7 +730,7 @@ SMBH in units of the Eddington accretion rate $\dot{M}_{\rm edd}
 \equiv L_{\rm edd}/0.1 c^{2}$, where $L_{\rm edd} \approx 1.4\times
 10^{46}M_{\bullet,8}$ erg s$^{-1}$.  Figure~\ref{fig:mdot_mass} shows
 $\dot{M}/\dot{M}_{\rm edd}$ as a function of $\Mbh$ for different
-values of $\vwO =$ 200, 500 and 1000 km s$^{-1}$.
+values of $\vwO =$ 150, 300 and 600 km s$^{-1}$.
 
 Note that since we expect $\dot{M}\sim\vwO^{-2}$ for a cusp galaxy and
 $\dot{M}\sim\vwO^{-4}$ for a core galaxy
