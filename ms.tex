@@ -29,7 +29,7 @@
 \newcommand{\lambdars}{\lambda_{\rs}}
 \newcommand{\vw}{v_w}
 
-\newcommand{\dxdy}[2]{\frac{\partial #1}{\partial #2} }
+\newcommand{\dxdy}[2]{\frac{d #1}{d #2} }
 \newcommand{\ddr}[1]{\dxdy{#1}{r}}
 \newcommand{\drhodt}{\dxdy{\rho}{t}}
 \newcommand{\dpdr}{\dxdy{p}{r}}
@@ -319,7 +319,8 @@ SMBH mass $\Mbh$ is determined from the $\Mbh-\sigma$ relationship.
 Following \citet{Quataert:2004a} (see also \citealt{HolzerAxford:1970a,De-ColleGuillochon+:2012a,ShcherbakovWong+:2014a}), we calculate the gas density profile $\rho$ of the CNM for each galaxy within our sample by solving the equations of one-dimensional (spherically symmetric) time-dependent hydrodynamics,
 \begin{align}
   &\drhodt+\frac{1}{r^2}\frac{\partial}{\partial r}\left(\rho r^2 v\right)=q \label{eq:drhodt}\\
-  &\rho \left(\frac{\partial v}{\partial t} + v\frac{\partial v}{\partial r}\right) =-\dpdr- \rho\frac{GM_{\bf enc}}{r^{2}} -q v \label{eq:dvdt}\\
+  &\rho \left(\frac{\partial v}{\partial t} + v\frac{\partial
+      v}{\partial r}\right) =-\frac{\partial p}{\partial r}- \rho\frac{GM_{\bf enc}}{r^{2}} -q v \label{eq:dvdt}\\
   &\rho T\left(\frac{\partial s}{\partial t} + v\frac{\partial
       s}{\partial r}\right)=q\left[\ke+\kew-\gammaf \cs \right] +\nabla\cdot(\kappa \nabla T)
 , 
@@ -476,20 +477,31 @@ where we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$ and in the second 
 The SMBH accretion rate is simply given by the integrated mass loss
 rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
 %AG: Should we have separate cores and cusps? Or just write a general
-%relationship in terms of gamma?
+
 \begin{eqnarray}
   \dot{M} &=& \frac{\eta \Menc(\rs)}{\th} \nonumber \\
 &\approx&
   \begin{cases}
-    1.6 \times 10^{-3} M_{\bullet,8}^{1.9}
-    \chi^{-4} v_{500}^{-4}  \eta \Msun \, \pyear& \text{core} \\
-    3.4 \times 10^{-3} \Mbheight^{1.4} \chi^{-2}
-    \chi^{-2} v_{500}^{-2}  \eta \Msun \, \pyear  & \text{cusp}, 
+    1.5 \times 10^{-3} M_{\bullet,8}^{1.76}
+    \chi^{-3.8} v_{500}^{-3.8}  \eta \Msun \, \pyear& \text{core} \\
+    2.6 \times 10^{-3} \Mbheight^{1.48} 
+    \chi^{-2.4} v_{500}^{-2.4}  \eta \Msun \, \pyear  & \text{cusp}, 
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
 
+The Eddington ratio $\eddr$ is given by 
 
+\begin{eqnarray}
+\eddr&\approx&
+  \begin{cases}
+    6.6 \times 10^{-4} M_{\bullet,8}^{0.76}
+    \chi^{-3.8} v_{500}^{-3.8}  \eta \Msun \, \pyear& \text{core} \\
+    1.2 \times 10^{-3} \Mbheight^{0.48} 
+    \chi^{-2.4} v_{500}^{-2.4}  \eta \Msun \, \pyear  & \text{cusp}, 
+  \end{cases}
+  \label{eq:eddr_analytic}
+\end{eqnarray}
 
 The density of gas at the stagnation radius $\rho(r_{\rm s})$ can be estimated by using equations (\ref{eq:stag_simple}) and (\ref{eq:mdot_analytic}) in conjunction with an alternative estimate of the mass accretion rate as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$, viz.
 \begin{align}
@@ -730,7 +742,8 @@ SMBH in units of the Eddington accretion rate $\dot{M}_{\rm edd}
 \equiv L_{\rm edd}/0.1 c^{2}$, where $L_{\rm edd} \approx 1.4\times
 10^{46}M_{\bullet,8}$ erg s$^{-1}$.  Figure~\ref{fig:mdot_mass} shows
 $\dot{M}/\dot{M}_{\rm edd}$ as a function of $\Mbh$ for different
-values of $\vwO =$ 150, 300 and 600 km s$^{-1}$.
+values of $\vwO =$ 150, 300 and 600 km s$^{-1}$, and for both core
+($\gamma$=0.1) and cusp galaxies ($\gamma$=0.8). 
 
 Note that since we expect $\dot{M}\sim\vwO^{-2}$ for a cusp galaxy and
 $\dot{M}\sim\vwO^{-4}$ for a core galaxy
@@ -743,8 +756,11 @@ enclosed inside of $\rs$, so for core galaxies $\dot{M}\sim \Mbh
 tendency for core galaxies to have a larger $\rs/\rsoi$ for fixed
 $\eta$ (see Figure~\ref{fig:stag}). Therefore, for $\rs/\rsoi<1$ core
 galaxies would have a smaller $\dot{M}$ than cusp galaxies.  For
-$\vwO=1000$ km s$^{-1}$, core galaxies have a smaller accretion rate
-for a given SMBH mass.
+$\vwO=600$ km s$^{-1}$, core galaxies have a smaller accretion rate
+for a given SMBH mass. On the other hand, if  $\rs/\rsoi>1$ (as would
+be expected for small $\vwO$), core galaxies would have a larger
+accretion rate. Thus, for $\vwO=150$ km/s, core galaxies have a large
+accretion rate for a given $\Mbh$.  
 %% AG-The variation in accretion rate for w/ vw for core galaxies is comparable to that of cusp galaxies and belies the steep dependence stated above.
 %% AG-Note separation of cores and cusps (at vw=1000 km/s, where there are enough core galaxies for this comparison to be made). Also, note that the spread in core galaxies is far larger.
 
@@ -787,7 +803,16 @@ sources such as SN Ia and millisecond pulsars.
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{mdot_mass.eps}
-  \caption{\label{fig:mdot_mass}  Accretion rate $\dot{M}$ in units of the Eddington rate $\dot{M}_{\rm edd}$ as a function of SMBH mass for each galaxy in our sample, calculated for different values of the wind heating parameter $\vwO =$ 200 km s$^{-1}$ ({\it green}), 500 km s$^{-1}$ ({\it orange}), and 1000 km s$^{-1}$ ({\it blue}).  Squares correspond to cusp galaxies, while triangles correspond to cores.}
+  \caption{\label{fig:mdot_mass} Accretion rate $\dot{M}$ in units of
+    the Eddington rate $\dot{M}_{\rm edd}$ as a function of SMBH mass
+    for each galaxy in our sample, calculated for different values of
+    the wind heating parameter $\vwO =$ 150 km s$^{-1}$ ({\it green}),
+    600 km s$^{-1}$ ({\it orange}), and 1000 km s$^{-1}$ ({\it blue}).
+    Squares correspond to cusp galaxies ($\gamma=0.8$), while
+    triangles correspond to cores ($\gamma$=0.1). The curves correspond
+    to the analytic results for $\eddr$ from equation
+    (\ref{eq:eddr_analytic}) for cusps (solid lines) and cores (dashed
+    lines).  }
 \end{figure}
 
 %% AG:  Also want to include a plot of x-ray luminosity (less abstract than the accretion rate). 
@@ -831,7 +856,7 @@ galaxies.
 %   is due to the increased velocity dispersion (and thus increased
 %   heating) towards the galactic center.
 
-\item \emph{NGC5813} %eta=0.1
+\item \emph{NGC5813} %eta=0.1 
   The observed density profile (\citealt{RussellMcNamara+:2013a}) is
   shallower than our calculated density profile, which has a sharp
   break at $\sim$0.1 kpc, the location of the break radius in the
@@ -1066,12 +1091,14 @@ For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta
   follows.
 
   \begin{enumerate}
+  %Younger population=>higher accretion rate; generally higher eta and
+  %lower vw except for very young stellar populations.
   \item We find that $\eddr \propto \Mbh^{\alpha}$, where the value of
     $\alpha$ depends on the slope of the stellar density profile
     ($\alpha\simeq0.5,1$ for cusp and core galaxies respectively). One
     possible solution that the wind mass loss rate (i.e. $\eta$)
     decreases with $\Mbh$, as would be expected if low mass SMBH
-    preferentially hosted older stellar populations. Another possible
+    preferentially hosted younger stellar populations. Another possible
     explanation is that the effective heating rate of the CNM $v_{\rm w,0}$
     decreases with decreasing SMBH mass. This could again be due to an
     older stellar population, since $v_{\rm w,0} \propto \eta^{−1/2}$
@@ -1129,7 +1156,11 @@ This is a specific, time-dependent definition of $\eta(t) (=0.11(t/t_{\rm h})^{-
 \caption{\label{NickPlot} SMBH feeding rates $\dot{M}=\eta(t) \times M_*(r_{\rm s})$, in arbitrary units.  The green, blue, and black curves are for galaxies with $\Gamma$ values of $0.1$, $0.5$, and $0.9$, respectively.  Solid curves represent impulsive-mode star formation, while dotted curves represent continuous-mode star formation.}
 \end{figure}
 
-In Fig. \ref{NickPlot} we plot $\dot{M}$, in arbitrary units, as a function of time, for three different stellar density profiles $\Gamma = \{1.1, 1.5, 1.9\}$ (which are normalized to have the same mass at an influence radius $r_{\rm soi}=10~{\rm pc}$ around a $10^7M_\odot$ SMBH).  We parametrize the wind velocity as 
+In Fig. \ref{NickPlot} we plot $\dot{M}$, in arbitrary units, as a
+function of time, for three different stellar density profiles $\Gamma
+= \{1.1, 1.5, 1.9\}$ (which are normalized to have the same mass at an
+influence radius $r
+_{\rm soi}=10~{\rm pc}$ around a $10^7M_\odot$ SMBH).  We parametrize the wind velocity as 
 \begin{equation}
 \frac{v_{\rm w}}{\rm km~s^{-1}}=600-400\tanh\left( \frac{t-10^{7.5}~{\rm yr}}{10^{7}~{\rm yr}}\right).
 \end{equation}

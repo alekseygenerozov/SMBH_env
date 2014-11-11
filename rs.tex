@@ -1,60 +1,102 @@
-It is possible to derive an analytic expression for the steady-state stagnation radius, $\rs$, in terms of $v_w$ and the power law slope of the density at $\rs$.  Consider the steady-state entropy equation.
+It is possible to derive an analytic expression for the steady-state
+stagnation radius, $\rs$, in terms of $v_w$ and the power law slope of
+the density at $\rs$.  Consider the steady-state entropy equation.
 
 \begin{align}
 &\rho T v \dsdr=\Q\\
 &\dsdr=\frac{\Q}{\rho T v} \label{eq:ss_entropy}
 \end{align}
 
-At $\rs$, the velocity, $v$ goes to zero.  Therefore, the numerator must also go to 0. This implies that the  temperature at the $\rs$ is given by
+At $\rs$, the velocity, $v$ goes to zero.  Therefore, the numerator
+must also go to 0 (otherwise the entropy derivative would blow up at
+$\rs$). This implies that
 
 \begin{align}
- &\frac{\kb T}{\mu \mp}=\gammafi \kew 
+ &\frac{\gamma}{\gamma-1} \frac{p(\rs)}{\rho(\rs)}=\frac{\vw(\rs)^2}{2} \\
+ &\frac{\kb T(\rs)}{\mu \mp}=\gammafi \frac{\vw(\rs)^2}{2} .
 \label{eq:appTanalytic}
 \end{align}
 
-From the first law of thermodynamics 
+From the first law of thermodynamics.
 
 \begin{align}
 T\dsdr&=\ddr{u}+p\ddr{(1/\rho)}\\
 &=\frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho}\\
-&=\frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho} \underbrace{\dxdy{\log{\rho}}{\log{r}}}_{-n} \label{eq:first_law}
+&=\frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho} \frac{1}{r} \dxdy{\log{\rho}}{\log{r}} \label{eq:first_law}
 \end{align}
 
-Combining Equation~\ref{eq:first_law} and Equation~\ref{eq:ss_entropy}, one obtains.
+Let $n=-\left.d\log(\rho)/d\log(r)\right|_{\rs}$. Combining equation~\ref{eq:ss_entropy} and equation~\ref{eq:first_law},
 
 \begin{align}
-\frac{1}{\gamma-1}\ddr{(p/\rho)}+r n \cs=\frac{\Q}{\rho  v} \label{eqn:combo1}
+\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}  \frac{p(\rs)}{\rho(\rs)}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs} \label{eq:combo1}
+\end{align}
+
+The source term on the right may be rewritten using L'Hopital's rule. 
+
+\begin{align}
+  &\lim_{r \rightarrow \rs} A=\frac{\lim_{r \rightarrow \rs}
+    \frac{d}{dr}\left[q (r)\left(\ke -\gammaf
+        \frac{p}{\rho}+\kew\right)\right]}{\lim_{r \rightarrow \rs}
+    \frac{d}{dr} \left(\rho v\right)}\\
+  &=\frac{ q'(\rs) \overbrace{\left.\left(\ke
+        -\gammaf\frac{p}{\rho}+\kew\right)\right|_{\rs}}^0+ q(\rs)
+    \frac{d}{dr} \left[\left(\ke -\gammaf
+        \frac{p}{\rho}+\kew\right)\right]_{\rs}}{\underbrace{\rho'(\rs)
+      v(\rs)}_0 +\underbrace{v'(\rs)\rho(\rs)}_{q(\rs)}}\\
+  &= \frac{d}{dr} \left[\left(\ke -\gammaf \frac{p}{\rho}+\kew\right)\right]_{\rs}
+\end{align}
+
+$\vw^2=\vwO^2+ G \Menc/r$, where
+$\Menc=\Mbh+\Mstar$. Assuming $\Mstar \sim r^{2-\Gamma}$,
+
+\begin{align}
+\lim_{r \rightarrow \rs} A=-\gammaf
+\left.\ddr{(p/\rho)}\right|_{\rs}-\frac{G \Menc(\rs)}{2 \rs^2}+(2-\Gamma) \frac{G
+  \Mstar(\rs)}{2 \rs^2}.
+\end{align}
+
+Substituting this expression back into Eqn. (\ref{eq:combo1})
+
+\begin{align}
+&\frac{\gamma+1}{\gamma-1}
+\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}
+\frac{p(\rs)}{\rho(\rs)}=-\frac{G \Menc(\rs)}{2 \rs^2} + (2-\Gamma) \frac{G
+  \Mstar(\rs)}{2 \rs^2}.  \label{eq:rs1}
 \end{align}
 
 At the stagnation point we also have (from the momentum equation)
 
 \begin{align}
-&\frac{1}{\rho}\dpdr=-\dphidr\\
-&\ddr{(p/\rho)}-r n \cs=-\dphidr \label{eqn:HSE}
+&\frac{1}{\rho}\dpdr=- \frac{G\Menc}{\rs^2}\\
+&\ddr{(p/\rho)}-p \ddr{(1/\rho)}=-\frac{G \Menc}{\rs^2}\\
+&\ddr{(p/\rho)}+\frac{p}{\rho^2} \ddr{\rho} = -\frac{G \Menc}{\rs^2}\\
+&\ddr{(p/\rho)}+\frac{p}{\rho}
+\underbrace{\frac{d\log(\rho)}{dr}}_{-n/r} = -\frac{G \Menc}{\rs^2} \label{eq:HSE}
 \end{align}
 
-Then multiplying Equation~\ref{eqn:HSE}  $\frac{1}{\gamma-1}$ and subtracting it from Equation~\ref{eqn:combo1} we obtain
+Combining equation (\ref{eq:rs1}) and equation (\ref{eq:HSE}) 
 
 \begin{align}
-\gammaf r n \cs = \frac{1}{\gamma-1} \dphidr + \frac{\Q}{\rho  v}
+&2 n \gammaf \frac{p(\rs)}{\rho(\rs)}= A \frac{G \Mstar(\rs)}{\rs} +B \frac{G \Mbh}{\rs}\\
+&A=\left[\frac{4\gamma-(\gamma-1)(1+\Gamma)}{2 (\gamma-1)}\right]\\
+&B=\frac{\gamma+3}{2 (\gamma-1)}
 \end{align}
 
-From the above equation we may obtain an expression for the Stagnation point using L'Hopital's rule and Equation~\ref{eq:appTanalytic}. To obtain an analytic expression, we take $\Mstar\sim r^{2-\Gamma}$
+Then using equation (\ref{eq:appTanalytic})
 
 \begin{align}
-&\kew n =A \frac{G \Mstar}{\rs} +B \frac{G \Mbh}{\rs}\\
-&A=\left[\frac{4\gamma-(\gamma-1)(1+\Gamma)}{4(\gamma-1)}\right]; \hspace{1cm} B=\frac{\gamma+3}{4(\gamma-1)}
+& \rs=\frac{G \Mbh}{n \vw(\rs)^2}\left(A \frac{\Mstar(\rs)}{\Mbh} +B\right).
 \end{align}
 
-Note that in the above expression $\Mstar$ is evaluated at the stagnation radius. Let $\omega=\Mstar(\rs)/\Mbh$ and 
-$\eta=v_{w,0}/\sigma_{\rm soi}$. We may re-parameterize this relationship as follows:
+Let  $\eta=v_{w,0}/\sigma_{\rm soi}$. We
+may re-parameterize this relationship as follows:
 
 \begin{align}
   \x=\frac{1}{\zeta^2 n}\left[
-   \frac{\Mstar}{\Mbh}\left(A-\frac{n}{2}\right)+(B-\frac{n}{2})\right].
+   \frac{\Mstar(\rs)}{\Mbh}\left(A-\frac{n}{2}\right)+\left(B-\frac{n}{2}\right)\right].
 \end{align}
 
-Note that in general $\omega$ is an implicit function of $x$. Cusp galaxies have $\Gamma\simeq1$.  Then $\Mstar/\Mbh=x$. With $\gamma=5/3$, $A=2$ and $B=7/4$.  Then:
+Note that in general $\omega$ is an implicit function of $x$. Cusp galaxies have $\Gamma\simeq1$.  Then $\Mstar(\rs)/\Mbh=x$. With $\gamma=5/3$, $A=2$ and $B=7/4$.  Then:
 
 \begin{align}
 \x=\frac{7-2n}{2\zeta^2 n+2n-8}
