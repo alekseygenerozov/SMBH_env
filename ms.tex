@@ -322,7 +322,8 @@ Following \citet{Quataert:2004a} (see also \citealt{HolzerAxford:1970a,De-ColleG
   &\rho \left(\frac{\partial v}{\partial t} + v\frac{\partial
       v}{\partial r}\right) =-\frac{\partial p}{\partial r}- \rho\frac{GM_{\bf enc}}{r^{2}} -q v \label{eq:dvdt}\\
   &\rho T\left(\frac{\partial s}{\partial t} + v\frac{\partial
-      s}{\partial r}\right)=q\left[\ke+\kew-\gammaf \cs \right] +\nabla\cdot(\kappa \nabla T)
+      s}{\partial r}\right)=q\left[\ke+\kew-\gammaf \cs \right]
+  +\nabla\cdot(\kappa \nabla T)
 , 
 \label{eq:dsdt}
 \end{align}
@@ -356,7 +357,25 @@ represents a source of momentum and energy relative to the mean flow (see also b
 %No net momentum is in the winds, but mass is being added which adds a
 %term in the velocity equation...
 
-The second source term in equation (\ref{eq:dsdt}) accounts for heating transportation by electron conductivity, where the conductivity $\kappa = \kappa_0 T^{5/2}$ is assumed to equal the classical ``Spitzer" value (\citealt{Spitzer62}); although even a weak magnetic field could in principle strongly suppress the conductivity perpendicular to the field, the radially-decreasing temperature profiles of interest are susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field structure (\citealt{Parrish&Stone07}).
+
+The second source term in equation (\ref{eq:dsdt}) accounts for
+heating transportation by electron conductivity. We take the
+conductivity to be $\kappa_{\rm eff}=\kappa_{\rm spitzer}/(1+\psi)$,
+as described in \citealt{DaltonBalbus:1993a}. $\kappa_{\rm spitzer}$
+is the classical \citealt{Spitzer62} value, $\kappa_{\rm spitzer} =
+\kappa_0 T^{5/2}$ ($\kappa_0\simeq 2\times 10^{-6}$ in cgs units). The
+term in the denominator is a flux limiter. The conductive flux should
+saturate when the mean free path for electron coulomb scattering
+becomes comparable to the temperature length scale.  More precisely
+$\psi=\frac{\kappa_{\rm spitzer} \nabla T}{5\phi \rho c_s^3}$ (the
+Spitzer conductive flux over the saturated conductive flux; $\phi$ is
+a dimensionless constant of order unity or less). Although even a weak
+magnetic field could in principle strongly suppress the conductivity
+perpendicular to the field, the radially-decreasing temperature
+profiles of interest are susceptible to the magneto-thermal
+instability (\citealt{Balbus01}), the non-linear evolution of which is
+believed to result in a radially-directed field structure
+(\citealt{Parrish&Stone07}).
 
 Following \citet{ShcherbakovWong+:2014a}, the term in the entropy
 equation $\propto \vw^2 = \sigma(r)^2+v_{w,0}^2$ accounts for external
@@ -364,13 +383,13 @@ heating sources.  Here $\sigma(r) = \sqrt{GM_{\rm enc}/r}$ is the
 velocity dispersion of the stars, thus accounting for the fact that at
 a minimum the gas experiences shock heating between the stellar winds
 of velocities moving with respect to each other a characteristic
-velocity $\sim \sigma$.  This heating is present if the wind velocities themselves
-are low, $\ll \sigma$, as characterize the majority of AGB mass loss.
-The term $v_{w,0}^{2}$ parameterizes additional sources of heating,
-such as main sequence winds, millisecond pulsars, supernovae, etc.  As
-discussed in $\S\ref{sec:heating}$, the value of $v_{w,0}$ is
-uncertain and will in general depend on the SMBH mass and the age of
-the stellar population.
+velocity $\sim \sigma$.  This heating is present if the wind
+velocities themselves are low, $\ll \sigma$, as characterize the
+majority of AGB mass loss.  The term $v_{w,0}^{2}$ parameterizes
+additional sources of heating, such as main sequence winds,
+millisecond pulsars, supernovae, etc.  As discussed in
+$\S\ref{sec:heating}$, the value of $v_{w,0}$ is uncertain and will in
+general depend on the SMBH mass and the age of the stellar population.
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
@@ -462,18 +481,6 @@ simplified greatly:
 \end{align}
 where in the numerical estimate we have assume $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).  On the other hand, if wind heating is much weaker ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to very large radii or may not exist at all.  
 
-The importance of conductive heating can be estimated by comparing its
-magnitude to that of wind heating, viz.~
-\begin{eqnarray} \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
-w}^{2}/2}\right|_{r_{\rm s}} &\sim& \frac{2t_{\rm h}\kappa_0
-T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}}
-\nonumber \\ &\sim&
-0.5\left(\frac{\eta}{0.1}\right)^{-1}\left(\frac{r_{\rm s}}{r_{\rm
-soi}}\right)^{-\beta} v_{500}^{3}\chi^{3},
-\end{eqnarray}
-
-where we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$ and in the second equality have made use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}) and have approximated $4\pi r_{\rm s}^{3}\rho_{\star}(r_{\rm s}) \approx M_{\bullet}(r_{\rm s}/r_{\rm soi})^{\beta}$ with $\beta \approx 1-2$.  We thus see that conductive heating is important near the stagnation radius for high values of $v_{\rm w} \gtrsim 500$ km s$^{-1}$ and $\eta \gtrsim 0.1$, but that it is safely neglected to first order for lower heating rates.
-
 The SMBH accretion rate is simply given by the integrated mass loss
 rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
 %AG: Should we have separate cores and cusps? Or just write a general
@@ -519,9 +526,37 @@ from which one derives
   \label{eq:rhors}
 \end{align}
 
+The importance of conductive heating can be estimated by comparing its
+magnitude to that of wind heating, viz.~
+\begin{eqnarray} \left.\frac{\nabla\cdot(f_{\rm cond})}{q v_{\rm
+w}^{2}/2}\right|_{r_{\rm s}} &\sim& \frac{2t_{\rm h} \phi \rho(\rs) c_s(\rs)^3}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}}
+\nonumber \\ &\sim&
+\frac{10 \phi}{2-\Gamma}, \label{eq:condRatio}
+\end{eqnarray}
 
-\subsection{Comparison with Bondi Accretion}
-The spherical accretion rate onto a point source from a surrounding medium of fixed sound speed $c_{\rm s} = (kT/\mu m_p)^{1/2}$ and density is given by (\citealt{Bondi52}) 
+%Is the stagnation radius the best choice for evaluating the
+%importance of conduction? I think it would be greater on the inner
+%grid. 
+where we have used the saturated heat conduction flux and approximated
+$\nabla \sim 1/r_{\rm st}$ and in the second equality have made use of
+equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and
+(\ref{eq:rhors}). The stellar density is assumed to be a power law
+$\rho_{\star}=\frac{\Mbh \left(2-\Gamma\right)}{4 \pi \rsoi^3}
+\left(\frac{\rs}{\rsoi}\right)^{-1-\Gamma}$.
+% We thus see that
+% conductive heating is important near the stagnation radius for high
+% values of $v_{\rm w} \gtrsim 500$ km s$^{-1}$ and $\eta \gtrsim 0.1$,
+% but that it is safely neglected to first order for lower heating
+% rates.
+
+By using the saturated value of the conductive heat flux we have found
+an upper bound on the ratio of the rate of heating to the rate of heat
+conduction is equation~\eqref{eq:condRatio}.  For $\phi\simeq 1$, the
+conductive flux could be quite important. However, the value of $\phi$
+has some uncertainty as it will depend on various details from plasma
+physics, and could plausibly be an order of magnitude smaller. In
+light of these uncertainties we neglect the effect of the conductive flux
+
 \begin{align}
   \dot{M}_{\rm B} =4\pi \lambda r_b^2 \rho(r_b) v_{\rm ff}(r_b),
 \label{eq:bondi}
@@ -557,10 +592,24 @@ accretion rate predicted by our model is quite close to $\dot{M}_{\rm
 
 Numerical solutions are calculated for each galaxy for three different values of the stellar wind heating parameter $v_{w,0}$ = 200, 500, 1000 km s$^{-1}$.  
 
-Figure~\ref{fig:profiles} shows three representative profiles of the density $\rho(r)$, temperature $T(r)$, and radial velocity $|v(r)|$.  As expected, the gas density increases towards the SMBH.  For some profiles (e.g. NGC1172 and NGC4478) the density $\rho$ follows a power law from the stagnation radius (squares in Fig.~\ref{fig:profiles}) inwards $\rho \propto r^{-n}$ with $n \approx 1$. Note that this is shallower than the $-3/2$ power law for Bondi accretion. However, the power law behavior does not extend through all radii, and the gas density profile may have breaks mirroring those in the stellar density profile. For example, NGC4365 has a prominent break in the gas density profile, near the stagnation radius. This coincides with the location
-of the break in the stellar light profile ($\rb$). The temperature profile is relatively flat at large radii, but increases as $\propto
-1/r^{k}$ interior to the sphere of influence, where $k$ is smaller than 1--the power expected for virialized gas.  The inwardly
-directed velocity increases towards the hole approaching the expected free-fall rate $v \propto v_{\rm ff}\propto r^{-1/2}$ interior to the sonic point, and then increases outwards towards large radii.
+Figure~\ref{fig:profiles} shows three representative profiles of the
+density $\rho(r)$, temperature $T(r)$, and radial velocity $|v(r)|$.
+As expected, the gas density increases towards the SMBH.  For some
+profiles (e.g. NGC1172 and NGC4478) the density $\rho$ follows a power
+law from the stagnation radius (squares in Fig.~\ref{fig:profiles})
+inwards $\rho \propto r^{-n}$ with $n \approx 1$. Note that this is
+shallower than the $-3/2$ power law for Bondi accretion. However, the
+power law behavior does not extend through all radii, and the gas
+density profile may have breaks mirroring those in the stellar density
+profile. For example, NGC4365 has a prominent break in the gas density
+profile, near the stagnation radius. This coincides with the location
+of the break in the stellar light profile ($\rb$). The temperature
+profile is relatively flat at large radii, but increases as $\propto
+1/r^{k}$ interior to the sphere of influence, where $k$ is smaller
+than 1--the power expected for virialized gas.  The inwardly directed
+velocity increases towards the hole approaching the expected free-fall
+rate $v \propto v_{\rm ff}\propto r^{-1/2}$ interior to the sonic
+point, and then increases outwards towards large radii.
 % {\bf BDM: I made this up - in general we need
 %   more explanation of what the plots are actually showing, with some
 %   physical explanation.}
