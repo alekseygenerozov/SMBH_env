@@ -1,38 +1,21 @@
-It is possible to derive an analytic expression for the steady-state
-stagnation radius, $\rs$, in terms of $v_w$ and the power law slope of
-the density at $\rs$.  Consider the steady-state entropy equation.
 
+Here we derive an analytic expression for the steady-state stagnation radius $r_{\rm s}$.  The steady-state entropy equation (eq.~[\ref{eq:dsdt}]) can be manipulated to read
 \begin{align}
-&\rho T v \dsdr=\Q\\
-&\dsdr=\frac{\Q}{\rho T v} \label{eq:ss_entropy}
+T\dsdr=\frac{\Q}{\rho v} \label{eq:ss_entropy}
 \end{align}
-
-At $\rs$, the velocity, $v$ goes to zero.  Therefore, the numerator
-must also go to 0 (otherwise the entropy derivative would blow up at
-$\rs$). This implies that
-
+By definition, the velocity $v$ goes to zero at the stagnation radius.  In order to avoid the entropy derivate from diverging, the numerator of (\ref{eq:ss_entropy}) must also goto zero at $r_{\rm s}$, implying that
 \begin{align}
- &\frac{\gamma}{\gamma-1} \frac{p(\rs)}{\rho(\rs)}=\frac{\vw(\rs)^2}{2} \\
- &\frac{\kb T(\rs)}{\mu \mp}=\gammafi \frac{\vw(\rs)^2}{2} .
+ \frac{\gamma}{\gamma-1} \frac{p(\rs)}{\rho(\rs)}=\frac{\vw(\rs)^2}{2} \Rightarrow \frac{\kb T(\rs)}{\mu \mp}=\gammafi \frac{\vw(\rs)^2}{2} .
 \label{eq:appTanalytic}
 \end{align}
-
-From the first law of thermodynamics.
-
+Combining (\ref{eq:ss_entropy}) with the first law of thermodynamics,
 \begin{align}
-T\dsdr&=\ddr{u}+p\ddr{(1/\rho)}\\
-&=\frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho}\\
-&=\frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho} \frac{1}{r} \dxdy{\log{\rho}}{\log{r}} \label{eq:first_law}
+T\dsdr =& \frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho} = \\
+& 
+\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}  \frac{p(\rs)}{\rho(\rs)}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
+ \label{eq:first_law}
 \end{align}
-
-Let $n=-\left.d\log(\rho)/d\log(r)\right|_{\rs}$. Combining equation~\ref{eq:ss_entropy} and equation~\ref{eq:first_law},
-
-\begin{align}
-\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}  \frac{p(\rs)}{\rho(\rs)}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs} \label{eq:combo1}
-\end{align}
-
-The source term on the right may be rewritten using L'Hopital's rule. 
-
+where $n\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule as follows:
 \begin{align}
   &\lim_{r \rightarrow \rs} A=\frac{\lim_{r \rightarrow \rs}
     \frac{d}{dr}\left[q (r)\left(\ke -\gammaf
@@ -45,86 +28,58 @@ The source term on the right may be rewritten using L'Hopital's rule.
       v(\rs)}_0 +\underbrace{v'(\rs)\rho(\rs)}_{q(\rs)}}\\
   &= \frac{d}{dr} \left[\left(\ke -\gammaf \frac{p}{\rho}+\kew\right)\right]_{\rs}
 \end{align}
-
-$\vw^2=\vwO^2+ G \Menc/r$, where
-$\Menc=\Mbh+\Mstar$. Assuming $\Mstar \sim r^{2-\Gamma}$,
-
+Now using the definition $\vw^2=\vwO^2+ G \Menc/r$, where
+$\Menc=\Mbh+\Mstar$, and assuming $\Mstar \sim r^{2-\Gamma}$, we find that
 \begin{align}
 \lim_{r \rightarrow \rs} A=-\gammaf
 \left.\ddr{(p/\rho)}\right|_{\rs}-\frac{G \Menc(\rs)}{2 \rs^2}+(2-\Gamma) \frac{G
   \Mstar(\rs)}{2 \rs^2}.
 \end{align}
-
-Substituting this expression back into Eqn. (\ref{eq:combo1})
-
+Substituting this expression back into equation (\ref{eq:first_law}) and using equation (\ref{eq:appTanalytic}) gives
 \begin{align}
 &\frac{\gamma+1}{\gamma-1}
-\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}
-\frac{p(\rs)}{\rho(\rs)}=-\frac{G \Menc(\rs)}{2 \rs^2} + (2-\Gamma) \frac{G
-  \Mstar(\rs)}{2 \rs^2}.  \label{eq:rs1}
+\left.\ddr{(p/\rho)}\right|_{\rs}+ n v_{w}(r_{\rm s})^{2} = (2-\Gamma) \frac{G
+  \Mstar(\rs)}{2 \rs^2} -\frac{G \Menc(\rs)}{2 \rs^2}.  \label{eq:rs1}
 \end{align}
-
-At the stagnation point we also have (from the momentum equation)
-
+A second equation results from evaluating the momentum equation (eq.~[\ref{eq:dvdt}]) at the stagnation point
 \begin{align}
-&\frac{1}{\rho}\dpdr=- \frac{G\Menc}{\rs^2}\\
-&\ddr{(p/\rho)}-p \ddr{(1/\rho)}=-\frac{G \Menc}{\rs^2}\\
-&\ddr{(p/\rho)}+\frac{p}{\rho^2} \ddr{\rho} = -\frac{G \Menc}{\rs^2}\\
+&\frac{1}{\rho}\dpdr=- \frac{G\Menc}{\rs^2} \Rightarrow
 &\ddr{(p/\rho)}+\frac{p}{\rho}
 \underbrace{\frac{d\log(\rho)}{dr}}_{-n/r} = -\frac{G \Menc}{\rs^2} \label{eq:HSE}
 \end{align}
-
-Combining equation (\ref{eq:rs1}) and equation (\ref{eq:HSE}) 
-
+Finally, combining equations (\ref{eq:rs1}) and (\ref{eq:HSE}) gives 
 \begin{align}
-&2 n \gammaf \frac{p(\rs)}{\rho(\rs)}= A \frac{G \Mstar(\rs)}{\rs} +B \frac{G \Mbh}{\rs}\\
+\rs=\frac{G \Mbh}{n \vw(\rs)^2}\left(A \frac{\Mstar(\rs)}{\Mbh} +B\right),
+\end{align}
+where
+\begin{align}
 &A=\left[\frac{4\gamma-(\gamma-1)(1+\Gamma)}{2 (\gamma-1)}\right]\\
 &B=\frac{\gamma+3}{2 (\gamma-1)}
 \end{align}
-
-Then using equation (\ref{eq:appTanalytic})
-
-\begin{align}
-& \rs=\frac{G \Mbh}{n \vw(\rs)^2}\left(A \frac{\Mstar(\rs)}{\Mbh} +B\right).
-\end{align}
-
-Let  $\eta=v_{w,0}/\sigma_{\rm soi}$. We
-may re-parameterize this relationship as follows:
-
+Defining $\eta \equiv v_{w,0}/\sigma_{\rm soi}$, this relationship can be reparameterized as follows:
 \begin{align}
   \x=\frac{1}{\zeta^2 n}\left[
-   \frac{\Mstar(\rs)}{\Mbh}\left(A-\frac{n}{2}\right)+\left(B-\frac{n}{2}\right)\right].
+   \frac{\Mstar(\rs)}{\Mbh}\left(A-\frac{n}{2}\right)+\left(B-\frac{n}{2}\right)\right],
 \end{align}
+where we note that in general $\omega$ is an implicit function of $x$. 
 
-Note that in general $\omega$ is an implicit function of $x$. Cusp galaxies have $\Gamma\simeq1$.  Then $\Mstar(\rs)/\Mbh=x$. With $\gamma=5/3$, $A=2$ and $B=7/4$.  Then:
-
+For cusp galaxies ($\Gamma\simeq1$) we have $\Mstar(\rs)/\Mbh=x$, $A=2$, and $B=7/4$ for $\gamma = 5/3$, such that 
 \begin{align}
 \x=\frac{7-2n}{2\zeta^2 n+2n-8}
 \end{align}
+In the limit of zero wind heating $\eta \rightarrow 0$, no solution for $r_{\rm s}$ exists unless the gas density profile at the stagnation radius is steep, 3.5 $<$ n $<$ 4.  
 
-Consider the limit $\lim_{\eta \to 0}$ (the extra heating $\vwO$ goes to 0. Then we will get a negative value for the stagnation radius unless the gas density profile is quite steep at the $\rs$: $3.5<n<4$.
-
-In contrast for a core galaxy we will have $\Gamma\simeq0, A=9/4,
-B=7/4$, and $\Mstar/\Mbh=x^2$. Thus we will have a quadratic equation for
-stagnation radius, which gives
-
+For core galaxies ($\Gamma \simeq 0$) with $\Mstar/\Mbh=x^2$, A=9/4, and B=7/4, the stagnation radius instead obeys a quadratic equation
 \begin{align}
 \x=\frac{\zeta^2 n \pm \sqrt{\eta^4 n^2 -4 \left(\frac{9}{4}-\frac{n}{2}\right) \left(\frac{7}{4}-\frac{n}{2}\right)}}{2\left(\frac{9}{4}-\frac{n}{2}\right)}
 \label{eq:rstag}
 \end{align}
-
-Consider the limit $\lim_{\zeta \to 0}$, then for $\rs$ to exist we must have $3.5<n<4.5$.
+In this case no solution exists in the zero heating limit ($\zeta \rightarrow 0$) unless $3.5<n<4.5$.
 
 When $\Mstar << \Mbh$ at the stagnation radius, the relationship between $\rs$ and $\vw$ is greatly simplified. 
-
 \begin{align}
-\kewO=\frac{7}{4}\frac{G \Mbh}{n \rs}
+\kewO=\frac{7}{4}\frac{G \Mbh}{n \rs},
 \end{align}
+where the pre-factor on the right-hand side corresponds to $\gamma=5/3$ and $\Gamma=1$ or 0.  
 
-Where the pre-factor on the right-hand side is valid for $\gamma=5/3$ and $\Gamma=1$ or 0.  
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "ms"
-%%% End:
 
