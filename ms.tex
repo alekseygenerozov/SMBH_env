@@ -540,10 +540,10 @@ rate interior to the stagnation radius (equation~[\ref{eq:q}]),
   \dot{M} &=& \frac{\eta \Menc(\rs)}{\th} \nonumber \\
 &\approx&
   \begin{cases}
-    1.5 \times 10^{-3} M_{\bullet,8}^{1.76}
-    \chi^{-3.8} v_{500}^{-3.8}  \eta \Msun \, \pyear& \text{core} \\
-    2.6 \times 10^{-3} M_{\bullet,8}^{1.48} 
-    \chi^{-2.4} v_{500}^{-2.4}  \eta \Msun \, \pyear  & \text{cusp}, 
+    1.5 \times 10^{-4} M_{\bullet,8}^{1.76}
+    \chi^{-3.8} v_{500}^{-3.8}  \eta_{-1} \Msun \, \pyear& \text{core} \\
+    2.6 \times 10^{-4} M_{\bullet,8}^{1.48} 
+    \chi^{-2.4} v_{500}^{-2.4}  \eta_{-1} \Msun \, \pyear  & \text{cusp}, 
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
@@ -553,10 +553,10 @@ The Eddington ratio $\eddr$ is given by
 \begin{eqnarray}
 \eddr&\approx&
   \begin{cases}
-    6.6 \times 10^{-4} M_{\bullet,8}^{0.76}
-    \chi^{-3.8} v_{500}^{-3.8}  \eta \Msun \, \pyear& \text{core} \\
-    1.2 \times 10^{-3} \Mbheight^{0.48} 
-    \chi^{-2.4} v_{500}^{-2.4}  \eta \Msun \, \pyear  & \text{cusp}, 
+    6.6 \times 10^{-5} M_{\bullet,8}^{0.76}
+    \chi^{-3.8} v_{500}^{-3.8}  \eta_{-1} \Msun \, \pyear& \text{core} \\
+    1.2 \times 10^{-4} \Mbheight^{0.48} 
+    \chi^{-2.4} v_{500}^{-2.4}  \eta_{-1} \Msun \, \pyear  & \text{cusp}, 
   \end{cases}
   \label{eq:eddr_analytic}
 \end{eqnarray}
@@ -1041,14 +1041,23 @@ Radiative cooling can have an important on even the qualitative features of the 
 
 An important ratio controlling the importance of thermal stability is thus
 \begin{align}
-\left.\frac{\dot{q}_{\rm cool}}{q v_{\rm w}^{2}/2}\right|_{\rm r{s}} \simeq
+\left.\frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rm r{s}} \simeq
   \begin{cases}
-   0.02\eta M_{\bullet,8}^{0.92}v_{500}^{-7.8}\chi^{-7.8}  &, \text{core}\\
-   0.08\eta M_{\bullet,8}^{0.5}v_{500}^{-5.4}\chi^{-5.4}  &, \text{cusp},     
+   12\eta^{-1} M_{\bullet,8}^{-0.9}v_{500}^{7.2}\chi^{7.2}  &, \text{core}\\
+   4\eta^{-1} M_{\bullet,8}^{-0.5}v_{500}^{5.8}\chi^{5.8}  &, \text{cusp},     
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-where we have used equations (\ref{eq:rhostarrs}) and (\ref{eq:rhors}).  We thus see that we require $v_{\rm w} \gtrsim $ 300 km s$^{-1}$ for stability, with a weak sensitivity on $\eta$ and $M_{\bullet}$.  
+where we have used equations (\ref{eq:rhostarrs}) and
+(\ref{eq:rhors}).  We thus see that we require $v_{\rm w} \gtrsim $
+300 km s$^{-1}$ for stability, with a weak sensitivity on $\eta$ and
+$M_{\bullet}$.  {\bf AG:I flipped the ratio to be consistent with the
+  ratio of timescales given below (NB here we are comparing heating
+  and cooling rates as opposed to timescales). Modulo factors of order
+  unity I find no inconsistency. We should probably only keep one of
+  these ratios. Note I have adopted the new convention of Gamma=0.8 is
+  a cusp galaxy and Gamma=0.1 is a core galaxy.}
+
 
 
 If cooling becomes important in the flow, it may lead to thermal
@@ -1072,14 +1081,14 @@ Using equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), (\ref{eq:rhors}), 
 \begin{align}
   \left.\frac{t_{\rm cool}}{t_{\rm ff}}\right|_{r_{\rm s}}\simeq
   \begin{cases}
-    12 \Mbheight^{-0.66} \eta^{-1}(\chi v_{500})^{6.4}, & \text{core}\\
-    6  \Mbheight^{-0.24} \eta^{-1}(\chi v_{500})^{4.4} ,   & \text{cusp}
+    11 \Mbheight^{-0.8} \eta^{-1}(\chi v_{500})^{7.2}, & \text{core}\\
+    6  \Mbheight^{-0.5} \eta^{-1}(\chi v_{500})^{5.8} ,   & \text{cusp}
   \end{cases}
   \label{eq:coolingratio}
 \end{align}
-We thus see that $t_{\rm cool} \lesssim 10 t_{\rm ff}$ at the stagnation radius for low $v_{\rm w} \lesssim 250$ km s$^{-1}$ if $\eta \sim 0.1$, but even for higher $v_{\rm w}$ if $\eta \sim 1$.    
-
-{\bf BDM: in fact, I think the above criteria for tcool/tff and qdotcool/qdotwind are identical to constants of order unit, since we are using gas density estimated from free-fall time... since the BH mass dependencies are different we need to recheck algebra}
+We thus see that $t_{\rm cool} \lesssim 10 t_{\rm ff}$ at the
+stagnation radius for low $v_{\rm w} \lesssim 250$ km s$^{-1}$ if
+$\eta \sim 0.1$, but even for higher $v_{\rm w}$ if $\eta \sim 1$.
 
 Fig.~\ref{fig:cooling} shows $t_{\rm cool}/t_{\rm ff}$ as a function of radius for all of our solutions {\bf BDM: change plots}, with different colors denoting different values of $v_{w,0}$.  For our highest heating rates we observe that cooling is unimportant for all solutions across all radii.  With a few exceptions this is also true for $\vwO$=500 km s$^{-1}$.  However, for our lowest heating rate $\vwO$=200 km s$^{-1}$ cooling may be quite important, especially for high $\eta$ (young stellar population;  Appendix~\ref{app:eta}).  
 

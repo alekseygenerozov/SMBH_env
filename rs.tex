@@ -60,18 +60,25 @@ Defining $\eta \equiv v_{w,0}/\sigma_{\rm soi}$, this relationship can be repara
 \begin{align}
   \x=\frac{1}{2 \zeta^2 n}\left[
    \frac{\Mstar(\rs)}{\Mbh}\left(A-n\right)+\left(B-n\right)\right],
+  %\x=\frac{1}{2 \zeta^2 n}\left[
+  %\frac{\Mstar(\rs)}{\Mbh}\left(A-n\right)+\left(B-n\right)\right],
 \end{align}
 
-{\bf AG: Note that I have taken sigmainf=2 G Mbh/rinf}. For cusp galaxies ($\Gamma\simeq1$) we have $\Mstar(\rs)/\Mbh=x$, $A=4$, and $B=7/2$ for $\gamma = 5/3$, such that 
+{\bf AG: Note that I have taken sigmainf=2 G Mbh/rinf. Commented out
+  equations have sigmainf=G Mbh/rinf}. For cusp galaxies ($\Gamma\simeq1$) we have $\Mstar(\rs)/\Mbh=x$, $A=4$, and $B=7/2$ for $\gamma = 5/3$, such that 
 \begin{align}
 \x=\frac{7-2n}{4\zeta^2 n+2n-8}
+%\x=\frac{7-2n}{2\zeta^2 n+2n-8}
 \end{align}
 In the limit of zero wind heating $\eta \rightarrow 0$, no solution for $r_{\rm s}$ exists unless the gas density profile at the stagnation radius is steep, 3.5 $<$ n $<$ 4.  
 
 For core galaxies ($\Gamma \simeq 0$) with $\Mstar/\Mbh=x^2$, A=9/2,
 and B=7/2, the stagnation radius instead obeys a quadratic equation
 \begin{align}
-\x=\frac{\zeta^2 n \pm \sqrt{\zeta^4 n^2 - \left(\frac{9}{2}-n\right) \left(\frac{7}{2}-n\right)}}{\left(\frac{9}{2}-n\right)}
+\x=\frac{\zeta^2 n \pm \sqrt{\zeta^4 n^2 - \left(\frac{9}{2}-n\right)
+    \left(\frac{7}{2}-n\right)}}{\left(\frac{9}{2}-n\right)}
+%\x=\frac{\zeta^2 n \pm \sqrt{\zeta^4 n^2 - 4 \left(\frac{9}{2}-n\right)
+%\left(\frac{7}{2}-n\right)}}{2 \left(\frac{9}{2}-n\right)}
 \label{eq:rstag}
 \end{align}
 In this case no solution exists in the zero heating limit ($\zeta \rightarrow 0$) unless $3.5<n<4.5$.
