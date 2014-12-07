@@ -334,22 +334,18 @@ enclosed mass.  We assume an ideal gas equation of state with $p =
 \rho kT/\mu m_p$ with $\mu = 0.62$  and $\gamma = 5/3$. {\bf BDM: take $\mu = 0.62$ here for fully ionized gas}
 
 The source term in the continuity equation (equation~\ref{eq:drhodt}),
-%Should equations be referenced as equation of equation
 \begin{align}
   q=\frac{\eta \rhostar}{\th},
 \label{eq:q}
 \end{align}
 represents mass input from stellar winds, which we parameterize in
 terms of the fraction $\eta$ of the stellar density $\rhostar$ being
-recycled into gas on the Hubble time $\th = 10^{10}$ years (see, e.g.,
-\citealt{Ciotti+91}).  In Appendix \ref{app:eta} we estimate that
-$\eta \approx 0.11(t_{\star}/t_{\rm h})^{-1.26}$ for a Salpeter IMF,
-assuming that all stars are formed in a burst of star formation at a
-common age of $t_{\star}$ (equation~[\ref{eq:eta}]).  We adopt
-$\eta=0.1$ as fiducial {\bf BDM: take $\eta = 0.1$ instead of 1}, but note that changing $\eta$ is equivalent to
-rescaling $\rho$ by the same factor.\footnote{This is {\it not} true
-  if cooling is included, since the cooling rate is proportional to
-  density {\it squared}.}
+recycled into gas on the Hubble time $\th = 1.4 \times 10^{10}$
+years. $\eta\simeq 0.02 \left(\frac{t}{th}\right)^{-1.3}$ 
+(see, e.g., \citealt{Ciotti+91})\footnote{Note that 
+\citealt{Ciotti+91} gives the overall mass return rate from evolved
+stars as a function of B-band luminosity. We give the mass return rate
+per unit volume. However, our expressions are equivalent.} 
 
 Source terms $\propto q$ also appear in the momentum and entropy
 equations (equation~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) due to the fact
@@ -540,10 +536,10 @@ rate interior to the stagnation radius (equation~[\ref{eq:q}]),
   \dot{M} &=& \frac{\eta \Menc(\rs)}{\th} \nonumber \\
 &\approx&
   \begin{cases}
-    1.5 \times 10^{-4} M_{\bullet,8}^{1.76}
-    \chi^{-3.8} v_{500}^{-3.8}  \eta_{-1} \Msun \, \pyear& \text{core} \\
-    2.6 \times 10^{-4} M_{\bullet,8}^{1.48} 
-    \chi^{-2.4} v_{500}^{-2.4}  \eta_{-1} \Msun \, \pyear  & \text{cusp}, 
+    2.9 \times 10^{-5} M_{\bullet,8}^{1.76}
+    \chi^{-3.8} v_{500}^{-3.8}  \eta_{0.02} \Msun \, \pyear& \text{core} \\
+    5.3 \times 10^{-5} M_{\bullet,8}^{1.48} 
+    \chi^{-2.4} v_{500}^{-2.4}  \eta_{0.02} \Msun \, \pyear  & \text{cusp}, 
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
@@ -553,10 +549,10 @@ The Eddington ratio $\eddr$ is given by
 \begin{eqnarray}
 \eddr&\approx&
   \begin{cases}
-    6.6 \times 10^{-5} M_{\bullet,8}^{0.76}
-    \chi^{-3.8} v_{500}^{-3.8}  \eta_{-1} \Msun \, \pyear& \text{core} \\
-    1.2 \times 10^{-4} \Mbheight^{0.48} 
-    \chi^{-2.4} v_{500}^{-2.4}  \eta_{-1} \Msun \, \pyear  & \text{cusp}, 
+    1.3 \times 10^{-5} M_{\bullet,8}^{0.76}
+    \chi^{-3.8} v_{500}^{-3.8}  \eta_{0.02}   & \text{core} \\
+    2.4 \times 10^{-5} \Mbheight^{0.48} 
+    \chi^{-2.4} v_{500}^{-2.4}  \eta_{0.02}   & \text{cusp}, 
   \end{cases}
   \label{eq:eddr_analytic}
 \end{eqnarray}
@@ -564,11 +560,11 @@ The Eddington ratio $\eddr$ is given by
 The stellar density at the stagnation radius (eq.~[\ref{eq:stag_simple}]) is usefully approximated as
 \begin{eqnarray}
   && \rho_{\star}(r_{\rm s}) \approx \nonumber \\
-&& \begin{cases}
-    1.0\times 10^{-18}M_{\bullet,8}^{-1.2}v_{500}^{2}\chi^{2}\,{\rm g\,cm^{-3}}
-& \text{core} \\
-    1.1 \times 10^{-18} M_{\bullet,8}^{-1.6}v_{500}^{4}\chi^{4}
-      \,{\rm g\,cm^{-3}}  & \text{cusp}, 
+  && \begin{cases}
+    9.4 \times 10^{-19}M_{\bullet,8}^{-1.2}v_{500}^{2.2}\chi^{2.2}\,{\rm g\,cm^{-3}}
+    & \text{core} \\
+    1.1 \times 10^{-18} M_{\bullet,8}^{-1.5}v_{500}^{3.6}\chi^{3.6}
+    \,{\rm g\,cm^{-3}}  & \text{cusp}, 
   \end{cases}
   \label{eq:rhostarrs}
 \end{eqnarray}
@@ -582,9 +578,9 @@ from which one derives
 \begin{align}
   \rho(\rs)\simeq
   \begin{cases}
-    3 \times 10^{-24} \Mbheight^{-0.14} v_{500}^{-1}  \eta \,
+    5 \times 10^{-26} \Mbheight^{-0.2} v_{500}^{-0.8}  \eta_{0.02} \,
     \, {\rm g \, cm^{-3}}& \text{core}\\
-    6 \times 10^{-24}  \Mbheight^{-0.56} v_{500}    \eta \,\, {\rm g \,cm^{-3}} & \text{cusp}
+    9 \times 10^{-26}  \Mbheight^{-0.5} v_{500}^{0.6}  \eta_{0.02} \,\, {\rm g \,cm^{-3}} & \text{cusp}
   \end{cases}
   \label{eq:rhors}
 \end{align}
@@ -1009,10 +1005,10 @@ Our analytic expression for the accretion rate (eq.~[\ref{eq:mdot_analytic}]) ca
 \begin{eqnarray}
   t_{\rm growth}/t_{\rm h} \approx 
   \begin{cases}
-    6.3 M_{\bullet,8}^{-0.9}
-    v_{500}^{4}  \eta \Msun \, \pyear& \text{core} \\
-    2.9 \Mbheight^{-0.4}
-    v_{500}^{-2}  \eta \Msun \, \pyear  & \text{cusp}, 
+    250 M_{\bullet,8}^{-0.76}
+    v_{500}^{3.8} \chi^{3.8}  \eta_{0.02}  & \text{core} \\
+    140 \Mbheight^{-0.48}
+    v_{500}^{2.4} \chi^{2.4}  \eta_{0.02}  & \text{cusp}, 
   \end{cases}
   \label{eq:tgrow_analytic}
 \end{eqnarray}
@@ -1043,8 +1039,8 @@ An important ratio controlling the importance of thermal stability is thus
 \begin{align}
 \left.\frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rm r{s}} \simeq
   \begin{cases}
-   12\eta^{-1} M_{\bullet,8}^{-0.9}v_{500}^{7.2}\chi^{7.2}  &, \text{core}\\
-   4\eta^{-1} M_{\bullet,8}^{-0.5}v_{500}^{5.8}\chi^{5.8}  &, \text{cusp},     
+   590 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.76}v_{500}^{7.2}\chi^{7.2}  &, \text{core}\\
+   210 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.48}v_{500}^{5.8}\chi^{5.8}  &, \text{cusp},     
   \end{cases}
   \label{eq:cooling2}
 \end{align}
@@ -1081,8 +1077,8 @@ Using equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), (\ref{eq:rhors}), 
 \begin{align}
   \left.\frac{t_{\rm cool}}{t_{\rm ff}}\right|_{r_{\rm s}}\simeq
   \begin{cases}
-    11 \Mbheight^{-0.8} \eta^{-1}(\chi v_{500})^{7.2}, & \text{core}\\
-    6  \Mbheight^{-0.5} \eta^{-1}(\chi v_{500})^{5.8} ,   & \text{cusp}
+    560 \Mbheight^{-0.76} \eta_{0.02}^{-1}(\chi v_{500})^{7.2}, & \text{core}\\
+    310  \Mbheight^{-0.48} \eta_{0.02}^{-1}(\chi v_{500})^{5.8} ,   & \text{cusp}
   \end{cases}
   \label{eq:coolingratio}
 \end{align}
@@ -1217,9 +1213,9 @@ For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta
   \label{app:rs}
   \input{rs}
 
-  \section{Analytic model for dependence of wind mass loss rate on stellar age}
-  \label{app:eta}
-  \input{eta}
+  % \section{Analytic model for dependence of wind mass loss rate on stellar age}
+  % \label{app:eta}
+%  \input{eta}
 
 \section{Analytic model for dependence of wind heating $v_{\rm w,0}^{\star}$ on stellar age}
 \label{app:windheat}
