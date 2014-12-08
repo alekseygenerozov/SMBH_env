@@ -426,20 +426,38 @@ We begin by describing a number of useful analytic results before describing our
 \label{sec:results}
 \subsection{Analytics: Flow properties at $\rs$}
 
-This section summarizes analytic estimates of several physical quantities of interest, such as the stagnation radius $\rs$ and the mass accretion rate, the detailed derivation of which are given in Appendix \ref{app:rs}.  All of our results are derived under the assumption that thermal conductivity can be neglected.
+This section summarizes analytic estimates of several physical
+quantities of interest, such as the stagnation radius $\rs$ and the
+mass accretion rate, the detailed derivation of which are given in
+Appendix \ref{app:rs}.  All of our results are derived under the
+assumption that thermal conductivity can be neglected.
 
 When possible our results are expressed in terms of the wind heating
-parameter $v_{\rm w,0}$; the power-law slope of the density profile
-$n$ (also evaluated at $r = \rs$); and the dimensionless parameter \be
-\chi \equiv v_{\rm w}^{2}/v_{\rm w,0}^{2} \approx \left(1 + \sigma^{2}/v_{\rm w,0}^{2}\right) \approx
-\left(1+0.14 \Mbheight^{0.43}v_{500}^{-1}\right), \ee where $v_{500}
-\equiv v_{w,0}/500$ km s$^{-1}$, $M_{\bullet,8} \equiv
-M_{\bullet}/10^{8}M_{\odot}$, and the second equality makes use of the
-$M_{\bullet}-\sigma$ correlation (\citealt{Gultekin+09}) \be
+parameter $\vw$; the power-law slope of the density profile
+$n$ (also evaluated at $r = \rs$); Note that $\vw^2=\vw0^2+\sigma^2$,
+where the $\sigma$ accounts for shock heating between stellar winds moving
+with respect to each other with relative velocity $\sigma$, and $\vwO$
+is a free parameter accounting for additional sources of
+heating.  $\vw$ may be calculated analytically (for a given $\Mbh$ and
+$\vwO$) using $\vw=\chi \vwO$, where
+
+ \begin{align}
+&\chi^2 \equiv v_{\rm w}^{2}/v_{\rm w,0}^{2} \approx \left(1 +
+  \sigma^{2}/v_{\rm w,0}^{2}\right) \approx \\
+&\left(1+0.14 \Mbheight^{0.43}\frac{\vwO}{500 {\rm km/s}}^{-1}\right), 
+\end{align}
+
+% where $v_{500} $M_{\bullet,8} \equiv
+where $M_{\bullet,8} \equiv M_{\bullet}/10^{8}M_{\odot}$, and the
+second equality makes use of the $M_{\bullet}-\sigma$ correlation
+(\citealt{Gultekin+09})
+
+ \begin{align}
 M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
       km\,s^{-1}}}\right)^{5.1}M_{\odot}.
 \label{eq:Msigma}
-\ee
+\end{align}
+
 Although the use of equation (\ref{eq:Msigma}) is questionable for low mass BHs (e.g., \citealt{Greene&Ho07}), our results are not particularly sensitive to this assumption.  
 
 First, by demanding continuity of the entropy derivative at the stagnation radius, the temperature at the stagnation radius is given by.
