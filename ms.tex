@@ -676,9 +676,7 @@ for $\vwO=300$ km s$^{-1}$. Hence, $H/C$ and $\tcool/\tff$ do not
 closely match at $\rs$ for this $\vwO$. {\bf AG would be good to
   clarify the physics here a little more.}
 
-\section{Applications}
-\label{sec:applications}
-\subsection{Sources of Heating}
+\section{Sources of Heating}
 \label{sec:heating}
 
 Important properties such as the location of the stagnation radius, the SMBH accretion rate, and the possibility of thermal instability depend sensitively on the assumed heating rate $\propto v_{w,0}^{2}$  This section discusses individual heating sources, providing estimates of the value of $\vwO$ corresponding to each.  Before proceeding, note that $\vwO$ is related to the volumetric heating rate $e$ according to 
@@ -778,9 +776,38 @@ Thus only for massive SMBHs $M_{\bullet} \gtrsim 10^8 \Msun$ and/or very young p
 
 \subsubsection{SMBH Feedback}
 
-Feedback from accretion onto the SMBH also represents a potentially important source of heating which is the most difficult to quantify.  A key difference between AGN heating and other sources discussed thus far is its likely dependence on the mass accretion rate $\dot{M}$.  We assume that the total heating rate from the SMBH is $\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an efficiency factor.  If this energy is deposited uniformly out to a radius $r_{\rm heat}$ and volume $V_{\rm heat}$, then the local heating rate $e = \epsilon_{\rm j}\dot{M}c^{2}/V_{\rm out}$ results in an effective wind heating rate of
+Feedback from accretion onto the SMBH also represents a potentially important source of heating which is the most difficult to quantify.  A key difference between AGN heating and other sources discussed thus far is its likely dependence on the mass accretion rate $\dot{M}$.  There are two types of SMBH feedback: kinetic and radiative.
+
+Radiative feedback can be effective even in low luminosity AGN via Compton heating (e.g.,~\citealt{Gan+14}).  Compton heating provides a volumetric heating rate (\citealt{Gan+14})
 \be
-v_w^{\bullet} \approx  \left(\frac{2t_{\rm h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm out}\eta \rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \approx c\epsilon_{\rm j}^{1/2}\left(\frac{r_{\rm s}}{r_{\rm heat}}\right)^{\beta/2},
+\dot{e}_{\rm C} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
+\ee
+where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K, which is assumed to be much higher than the gas temperature.  We can estimate the importance of Compton heating by assuming that $L = \epsilon \dot{M}c^{2}$, where $\epsilon$ is the radiative efficiency and where $\dot{M}$ is estimated from equation (\ref{eq:mdot_analytic}). 
+
+Using equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}), (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we thus calculate that (eq.~[\ref{eq:vw_eff}])
+\begin{align}
+v_{\rm w,0}^{\rm C}  \simeq
+  \begin{cases}
+   125 T_{\rm C,9}^{0.5}\epsilon^{0.5}\eta_{0.02}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm km\,s^{-1}}  &, \text{core}\\
+   200 \eta_{0.02}^{0.5}T_{\rm C,9}^{0.5}\epsilon^{0.5} M_{\bullet,8}^{0.24}v_{500}^{-0.7}\,{\rm km\,s^{-1}}   &, \text{cusp},     
+  \end{cases}
+  \label{eq:vC}
+\end{align}
+Assuming that heating were dominated by Compton heating ($v_{w} = v_{\rm w,0}^{C}$) we find that
+\begin{align}
+v_{\rm w,0}^{\rm C}  \simeq
+  \begin{cases}
+   106 \eta_{0.02}^{0.21}T_{\rm C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}  &, \text{core}\\
+   76 \eta_{0.02}^{0.29}T_{\rm C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}   &, \text{cusp},     
+  \end{cases}
+  \label{eq:vC2}
+\end{align}
+where $\epsilon_{-2} = \epsilon/0.01$.  So, unless we have high $\eta$ then Compton heating will not be sufficient to stabilize the flow.
+
+
+Kinetic feedback occurs in the form of an mass outflow or jet from the viscinity of the black hole, which deposits its energy at much larger radii.  We assume that the total heating rate from the SMBH is $\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an efficiency factor.  If this energy is deposited uniformly out to a radius $r_{\rm heat}$ and volume $V_{\rm heat}$, then the local heating rate $e = \epsilon_{\rm j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind heating rate of
+\be
+v_w^{\bullet} \approx  \left(\frac{2t_{\rm h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta \rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \approx c\epsilon_{\rm j}^{1/2}\left(\frac{r_{\rm s}}{r_{\rm heat}}\right)^{\beta/2},
 \ee
 where we have used the fact that $\dot{M} \approx \eta M_{\rm enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto M_{\bullet}(r/r_{\rm soi})^{\beta}$ with $\beta \approx 1-2$ for radii interior to the outer break radius.  Thus for $r_{\rm heat} \sim r_{\rm s}$, even a small heating efficiency $\epsilon_{\rm j} \sim 10^{-6}$ is sufficient for $v_{\rm w,0}^{\bullet}$ to exceed other sources of non-accretion powered heating.  
 
@@ -847,6 +874,10 @@ stars.
   % long then it would be wrong to ignore the SNe contribution. The
   % difference would be that the SNe heating would just be less steady.
   % AG-Thornton and http://arxiv.org/pdf/1402.6695v2.pdf...
+
+
+\section{Applications}
+\label{sec:applications}
 
 \subsection{Mass accretion rate}
 
