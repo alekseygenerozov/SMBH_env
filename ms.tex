@@ -303,11 +303,11 @@ and $\beta$.  We compute models for three different black hole masses, $\Mbh = 1
 \subsection{Hydrodynamic Equations}
 \label{sec:hydro}
 
-Following \citet{Quataert:2004a} (see also \citealt{HolzerAxford:1970a,De-ColleGuillochon+:2012a,ShcherbakovWong+:2014a}), we calculate the gas density profile $\rho$ of the CNM for each galaxy within our sample by solving the equations of one-dimensional (spherically symmetric) time-dependent hydrodynamics,
+Following \citet{Quataert:2004a} (see also \citealt{HolzerAxford:1970a,De-ColleGuillochon+:2012a,ShcherbakovWong+:2014a}), we calculate the gas density profile $\rho$ of the CNM for each galaxy model by solving the equations of one-dimensional (spherically symmetric) time-dependent hydrodynamics,
 \begin{align}
   &\drhodt+\frac{1}{r^2}\frac{\partial}{\partial r}\left(\rho r^2 v\right)=q \label{eq:drhodt}\\
   &\rho \left(\frac{\partial v}{\partial t} + v\frac{\partial
-      v}{\partial r}\right) =-\frac{\partial p}{\partial r}- \rho\frac{GM_{\bf enc}}{r^{2}} -q v \label{eq:dvdt}\\
+      v}{\partial r}\right) =-\frac{\partial p}{\partial r}- \rho\frac{GM_{\rm enc}}{r^{2}} -q v \label{eq:dvdt}\\
   &\rho T\left(\frac{\partial s}{\partial t} + v\frac{\partial
       s}{\partial r}\right)=q\left[\ke+\kew-\gammaf \cs \right] +\nabla\cdot(\kappa \nabla T)
 , 
@@ -316,7 +316,7 @@ Following \citet{Quataert:2004a} (see also \citealt{HolzerAxford:1970a,De-ColleG
 where $v$, $T$, $p$ and $s$ are the radial velocity, temperature,
 pressure and specific entropy of the gas, respectively, and $M_{\rm enc} = M_{\star}(r) + \Mbh$ is the
 enclosed mass.  We assume an ideal gas equation of state with $p =
-\rho kT/\mu m_p$ with $\mu = 0.62$  and $\gamma = 5/3$. {\bf BDM: take $\mu = 0.62$ here for fully ionized gas}
+\rho kT/\mu m_p$ with $\mu = 0.62$  and $\gamma = 5/3$. {\bf BDM: take $\mu = 0.62$ here for fully ionized gas - what did you do?}
 
 The source term in the continuity equation (eq.~[\ref{eq:drhodt}]),
 \begin{align}
@@ -326,81 +326,32 @@ The source term in the continuity equation (eq.~[\ref{eq:drhodt}]),
 represents mass input from stellar winds, which we parameterize in
 terms of the fraction $\eta$ of the stellar density $\rhostar$ being
 recycled into gas on the Hubble time $\th = 1.4 \times 10^{10}$
-years. $\eta\simeq 0.02 \left(\frac{t}{th}\right)^{-1.3}$ 
-(see, e.g., \citealt{Ciotti+91})\footnote{Note that 
-\citealt{Ciotti+91} gives the overall mass return rate from evolved
+years.  To good approximation $\eta\simeq 0.02 (t/t_h)^{-1.3}$ at time $t$ following a burst of star formation (e.g., \citet{Ciotti+91}),\footnote{Note that 
+\citet{Ciotti+91} gives the overall mass return rate from evolved
 stars as a function of B-band luminosity. We give the mass return rate
-per unit volume. However, our expressions are equivalent.} 
+per unit volume. However, our expressions are equivalent.} although $\eta$ will generally be higher in cases of ongoing star formation.  
 
-Source terms $\propto q$ also appear in the momentum and entropy
-equations (equation~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) due to the fact
-that the isotropic mass injection in the rest frame of the SMBH
-represents a source of momentum and energy relative to the mean flow (see also below).  
-%No net momentum is in the winds, but mass is being added which adds a
-%term in the velocity equation...
+Source terms $\propto q$ also appear in the momentum and entropy equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) due to the fact that the isotropic mass injection in the rest frame of the SMBH
+represents a source of momentum and energy relative to the mean flow (see also below).  Physically these terms result from the mismatch between the properties of virialized gas injected locally by stellar winds and the mean properties of the background flow.   As we shall discuss in $\S$, the cooling term $\propto q p/\rho$ represents an important stabilizing term in comparison to radiative cooling.  
 
-The second source term in equation (\ref{eq:dsdt}) accounts for
-heating transportation by electron conductivity. We take the
-conductivity to be $\kappa_{\rm eff}=\kappa_{\rm spitzer}/(1+\psi)$,
-as described in \citealt{DaltonBalbus:1993a}. $\kappa_{\rm spitzer}$
-is the classical \citealt{Spitzer62} value, $\kappa_{\rm spitzer} =
-\kappa_0 T^{5/2}$ ($\kappa_0\simeq 2\times 10^{-6}$ in cgs units). The
-term in the denominator is a flux limiter. The conductive flux should
-saturate when the mean free path for electron coulomb scattering
-becomes comparable to the temperature length scale.  More precisely
-$\psi=\frac{\kappa_{\rm spitzer} \nabla T}{5\phi \rho c_s^3}$ (the
-Spitzer conductive flux over the saturated conductive flux; $\phi$ is
-a dimensionless constant of order unity or less). Although even a weak
-magnetic field could in principle strongly suppress the conductivity
-perpendicular to the field, the radially-decreasing temperature
-profiles of interest are susceptible to the magneto-thermal
-instability (\citealt{Balbus01}), the non-linear evolution of which is
-believed to result in a radially-directed field structure
-(\citealt{Parrish&Stone07}).
 
-Following \citet{ShcherbakovWong+:2014a}, the term in the entropy
-equation $\propto \vw^2 = \sigma(r)^2+v_{w,0}^2$ accounts for external
-heating sources.  Here $\sigma(r) = \sqrt{GM_{\rm enc}/r}$ is the
-velocity dispersion of the stars, thus accounting for the fact that at
-a minimum the gas experiences shock heating between the stellar winds
-of velocities moving with respect to each other a characteristic
-velocity $\sim \sigma$.  This heating is present if the wind velocities themselves
-are low, $\ll \sigma$, as characterize the majority of AGB mass loss.
-The term $v_{w,0}^{2}$ parameterizes additional sources of heating,
-such as main sequence winds, millisecond pulsars, supernovae, etc.  As
-discussed in $\S\ref{sec:heating}$, the value of $v_{w,0}$ is
-uncertain and will in general depend on the SMBH mass and the age of
-the stellar population.
+The last term in equation (\ref{eq:dsdt}) accounts for heat transportation by electron conductivity, where $\kappa_{\rm eff}=\kappa_{\rm spitz}/(1+\psi)$ (\citealt{DaltonBalbus:1993a}) is the conducitivity and $\kappa_{\rm spitz} = \kappa_0 T^{5/2}$ is the classical \citet{Spitzer62} value ($\kappa_0\simeq 2\times 10^{-6}$ in cgs units).  The flux limitor $\psi = \kappa_{\rm spitz} \nabla T/(5\phi \rho c_s^3)$ saturates the conductive flux if the mean free path for electron coulomb scattering becomes comparable to the temperature length scale.  Here $c_s \equiv (kT/\mu m_p)^{1/2}$ is the isothermal sound speed and $\phi$ is an uncertain dimensionless constant, typically taken to be of order unity of less (we adopt $\phi = XXX$).  Even a weak magnetic field could in principle also suppress the conductivity perpendicular to the field.  However, the radially-decreasing temperature profiles of interest are susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field structure (\citealt{Parrish&Stone07}).
+
+Following \citet{ShcherbakovWong+:2014a}, the term $\propto \vw^2 = \sigma(r)^2+v_{w,0}^2$ in the entropy equation accounts heating sources.  Here $\sigma(r) = \sqrt{GM_{\rm enc}/r}$ is the velocity dispersion of the stars, accounting for the minimum amount of shock heating from the stellar winds due to the random movement of stars with respect to each other at the characteristic velocity $\sim \sigma$.  This heating is present even for low wind velocities $\ll \sigma$, as characterize the majority of AGB mass loss.
+The term $v_{w,0}^{2}$ parameterizes the contribution of additional sources of heating, including main sequence winds, millisecond pulsars, supernovae, AGN feedback, etc.  As discussed in $\S\ref{sec:heating}$, the value of $v_{w,0}$ is uncertain and will in general depend on the SMBH mass and the age of the stellar population.
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
 for time integration and artificial viscosity terms in the velocity
 and entropy equations for numerical stability (\citealt{Brandenburg:2003a}).  We solve the equations for
-different choices of $v_{\rm w,0}$ spanning the physically expected
-range.  Although we are most interested in the steady-state CNM
-structure, the time-dependent equations are solved to avoid numerical
-issues that arise near the critical sonic points, of which there are
-up to two because of the supersonic inflow on small radial scales and
-a possible supersonic outflow on large scales.
+different choices of $v_{\rm w,0} = 300, 600, 1200$ km s$^{-1}$ spanning the physically expected
+range.  Although we are most interested in the steady-state CNM structure, the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic inflow on small radial scales and a possible supersonic outflow on large scales.
 
-We do not include radiative cooling in the entropy equation because
-across much of the parameter space radiative cooling is negligible
-compared to other sources of cooling (e.g., advection).  Although
-radiative cooling cannot be neglected in some cases (especially if
-$\vwO$ is low or $\eta$ is high), our 1D scheme cannot account for the
-true multi-phase behavior of local thermal instabilities anyways
-(e.g.~\citealt{McCourt+12}).  Our steady state solutions neglecting
-radiation can nevertheless be used to ascertain over what parameter
-space cooling instabilities are likely to develop
-($\S\ref{sec:cooling}$).
-%Dependence of the heating to cooling ratio has a far steeper
-%dependence on vwO than on eta...
+Radiative cooling is not included in the entropy equation, although its effect is assessed critically in $\S\ref{sec:cooling}$.  Across much of the parameter space radiative cooling is negligible compared to other sources of cooling (e.g., advection).  Radiative cooling cannot be neglected in some cases (if
+$\vwO$ is low and/or $\eta$ is high), once it becomes important it leads to thermal instabilities, which our one-dimensional time-dependent modeal cannot account for anyways (e.g.~\citealt{McCourt+12}).  A chief goal of this work is instead to use our steady state solutions neglecting radiation to ascertain over what physical conditions cooling instabilities are likely to develop ($\S\ref{sec:cooling}$).
 
-The accuracy of our numerical solutions is assessed by checking the
-level of conservation of mass across the grid, as well as the integral
-constraint on the energy.  Mass and energy are conserved to $\lesssim
-40$ per cent for all solutions presented in this
-paper. 
+The accuracy of our numerical solutions is assessed by checking the level of conservation of mass across the grid, as well as the integral constraint on the energy.  Mass and energy are conserved to $\lesssim
+40$ per cent for all solutions presented in this paper. 
 {\bf BDM: more details...}
 
 
