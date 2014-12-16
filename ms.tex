@@ -363,7 +363,7 @@ The accuracy of our numerical solutions is assessed by checking the level of con
 We begin by describing useful analytic results before presenting our numerical solutions.  
 
 \label{sec:results}
-\subsection{Properties near the stagnation radius}
+\subsection{Analytic Results}
 
 Here we summarize analytic estimates of physical quantities, such as the stagnation radius $\rs$ and the mass accretion rate, the detailed derivation of which are given in Appendix \ref{app:rs}.  Our results are expressed in terms of the SMBH mass $M_{\bullet} = 10^{8}M_{\bullet,8}M_{\odot}$ and the wind heating parameter (eq.~[\ref{eq:dsdt}])
 \begin{eqnarray}
@@ -371,6 +371,8 @@ v_{\rm w} &=& v_{\rm w,0}\left(1+\frac{\sigma^{2}}{v_{\rm w,0}^{2}}\right)^{1/2}
  &\approx& v_{\rm w,0}\left(1+0.14 \Mbheight^{0.43}\left[\frac{\vwO}{500\,{\rm km/s}}\right]^{-1}\right)^{1/2},
 \end{eqnarray}
 where $\vwO$ is a free parameter accounting for sources of heating beyond the baseline level produced by the stellar winds of old stars, and the final equality makes use of $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
+
+\subsubsection{Properties at the Stagnation Radius}
 
 First, continuity of the entropy derivative at the stagnation radius demands that the temperature at the stagnation radius is given by
 \begin{align}
@@ -398,36 +400,7 @@ If the SMBH dominates the gravitational potential at the stagnation radius ($M_{
 \end{align}
 where the numerical estimate assumes $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).  On the other hand, if wind heating is weaker ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to very large radii or may not exist at all.  
 
-Our above analysis neglects heat conduction near the stagnation radius, an assumption we can now check.
-The importance of conductive heating can be estimated by comparing its
-magnitude to that of wind heating, viz.~
-\begin{align}
-  \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
-w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
-T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}(1+\phi)}
-\nonumber \\ &\sim {\rm min}
-  \begin{cases}
-  10 \eta_{0.02}^{-1}
-M_{\bullet,8}^{-0.8} v_{500}^{6.8} &  \text{unsaturated (core)}\\
- 10 \eta_{0.02}^{-1}
-M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
-  10 \phi/(2-\Gamma) & \text{saturated},
-  \end{cases}
- \label{eq:rhors}
-\end{align}
-where in the second equality have made use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}) and have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$, $\nabla \sim 1/r_{\rm st}$.  Since the stagnation radius is usually well inside the break radius, the stellar density is approximated as (eq.~[\ref{eq:rhostar}])
-\begin{eqnarray}
-  \rho_{\star}(r_{\rm s}) &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
- &\approx& \begin{cases}
-    9.4 \times 10^{-19}M_{\bullet,8}^{-1.2}v_{500}^{2.2}\,{\rm g\,cm^{-3}}
-    & \text{core} \\
-    1.1 \times 10^{-18} M_{\bullet,8}^{-1.5}v_{500}^{3.6}
-    \,{\rm g\,cm^{-3}}  & \text{cusp}, 
-  \end{cases}
-  \label{eq:rhostarrs}
-\end{eqnarray}
-Even in the case of saturated heat flux, we see that for expected values $\phi < 1$, heat condution is at most moderately important at the stagnation radius, justifying its neglect in our analysis.  
-
+\subsubsection{SMBH Accretion Rate}
 
 The SMBH accretion rate is simply given by the integrated mass loss
 rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
@@ -453,6 +426,7 @@ The Eddington ratio $\eddr$ is given by
   \end{cases}
   \label{eq:eddr_analytic}
 \end{eqnarray}
+
 The density of gas at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate.  We roughly estimate its value using equations (\ref{eq:stag_simple}) and (\ref{eq:mdot_analytic}) in conjunction with an alternative estimate of the mass accretion rate as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$, viz.
 \begin{align}
   &\dot{M}\simeq\frac{(4 \pi/3) \rs^3 \rho(\rs)}{\tff(\rs)},
@@ -475,45 +449,175 @@ and~\eqref{eq:mdot_gas}, one can also write
 \label{eq:rhors2}
 \end{align}
 
-\subsection{Comparison with Bondi Accretion}
-The spherical accretion rate onto a point source from a surrounding
-medium of fixed sound speed $c_{\rm s} = (kT/\mu m_p)^{1/2}$ and
-density is given by (\citealt{Bondi52})
+Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) is usefully compared to the traditional ``Bondi" accretion rate onto a point source from a surrounding medium of fixed sound speed $c_{\rm s} = (kT/\mu m_p)^{1/2}$ and
+density (\citealt{Bondi52}):
 \begin{align}
   \dot{M}_{\rm B} =4\pi \lambda r_b^2 \rho(r_b) v_{\rm ff}(r_b),
 \label{eq:bondi}
 \end{align}
-where $r_b \equiv GM/c_{s}^{2}$ is the ``Bondi radius", $v_{\rm ff} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  
-
-Rewriting equation (\ref{eq:mdot_gas}) as
+where $r_b \equiv GM/c_{s}^{2}$ is the Bondi radius, $v_{\rm ff} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  Rewriting equation (\ref{eq:mdot_gas}) as $\dot{M}\simeq 4\pi \rs^2 \rho(\rs) v_{\rm ff}(\rs)/3$,
+we note a similarity Bondi formula (eq.~[\ref{eq:bondi}]) with the exception that $\rb$ is replaced by $\rs$.  In fact, when the stagnation radius resides interior to the sphere of influence we have (eq.~[\ref{eq:stag_simple}])
 \begin{align}
-  &\dot{M}\simeq\frac{(4 \pi/3) \rs^3 \rho(\rs)}{\tff} =\frac{4
-    \pi}{3} \rs^2 \rho(\rs) v_{\rm ff}(\rs)
-\end{align}
-we note the qualitative similarity between this expression and the Bondi formula (equation~[\ref{eq:bondi}]) with the exception that $\rb$ is replaced by $\rs$.  Using equation (\ref{eq:stag_simple})
-\begin{align}
-  \rs\approx\frac{7}{2}\frac{G \Mbh}{\vwO^2} \approx \frac{14}{3}\frac{GM_{\bullet}}{c_{s}^{2}},
+  \rs\approx\frac{7}{2}\frac{G \Mbh}{\vwO^2} \approx \frac{14}{3}\frac{GM_{\bullet}}{c_{s}^{2}} = \frac{14}{3}r_{\rm B},
   \label{eq:rs_simple}
 \end{align}
-where in the second line we have used the fact that $v_{w}^{2}/2 =
-c_s^2/(\gamma-1)$ at $\rs$.  Thus, provided that a stagnation radius
-exists which is interior to the sphere of influence radius, the
-accretion rate predicted by our model is quite close to $\dot{M}_{\rm
-  B}$.
- %({\bf BDM: Check - as this depends on
- % whether eq 10 is correct})
+where in the second line we have used equation (\ref{eq:Tanalytic}).  
+
+\subsubsection{Importance of Heat Conduction}
+
+Our analytic results neglect the effects of heat conduction near the stagnation radius, an assumption we now check.  The importance of conductive heating can be estimated by comparing its magnitude to that of ``wind" heating, viz.~
+\begin{align}
+  \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
+w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
+T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}(1+\phi)}
+\nonumber \\ &\sim {\rm min}
+  \begin{cases}
+  10 \eta_{0.02}^{-1}
+M_{\bullet,8}^{-0.8} v_{500}^{6.8} &  \text{unsaturated (core)}\\
+ 10 \eta_{0.02}^{-1}
+M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
+  10 \phi/(2-\Gamma) & \text{saturated},
+  \end{cases}
+ \label{eq:rhors}
+\end{align}
+where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$, $\nabla \sim 1/r_{\rm st}$.  Because the stagnation radius is usually well inside the break radius, the stellar density is approximated as (eq.~[\ref{eq:rhostar}])
+\begin{eqnarray}
+  \rho_{\star}(r_{\rm s}) &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
+ &\approx& \begin{cases}
+    9.4 \times 10^{-19}M_{\bullet,8}^{-1.2}v_{500}^{2.2}\,{\rm g\,cm^{-3}}
+    & \text{core} \\
+    1.1 \times 10^{-18} M_{\bullet,8}^{-1.5}v_{500}^{3.6}
+    \,{\rm g\,cm^{-3}}  & \text{cusp}, 
+  \end{cases}
+  \label{eq:rhostarrs}
+\end{eqnarray}
+Even in the saturated heat flux case, heat conduction is at most moderately important for expected values of the saturation parameter $\phi < 1$, justifying its neglect in our analysis.  
+
+\subsubsection{Thermal Instability}
+
+Radiative cooling, if important, can qualitative alter key features of the flow.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ according to $\dot{q}_{\rm cool} \propto T^{-2.7}$ (eq.~[\ref{eq:cooling}] below) is thermally unstable.  Thermal instability leads to higher black hole accretion rates and enhanced star formation which, when coupled by feed-back processes, can lead to limit cycle behavior, inconsistent with our assumption of a a steady-state flow (e.g. Ciotti refs).  
+
+Radiative cooling can, however, be stabilized by the other source of (stable) wind cooling, such as the last term $\propto c_{s}^{2} \propto T$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius equals $q v_{\rm w}^{2}/2$.  To assess the conditions for thermal stability we compare the nominal rate of wind heating to the rate of radiative cooling $\dot{q}_{\rm cool} =\Lambda(T) n^2$ at the stagnation radius,
+\begin{align}
+\left.\frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rm r{s}} \simeq
+  \begin{cases}
+   590 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.76}v_{500}^{7.2}  &, \text{core}\\
+   210 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.48}v_{500}^{5.8}  &, \text{cusp},     
+  \end{cases}
+  \label{eq:cooling2}
+\end{align}
+where we have used equations (\ref{eq:rhostarrs}) and
+(\ref{eq:rhors}).  Here $n = \rho/\mu m_p$ and we have approximated the cooling function $\Lambda(T)$ assuming solar metallicity gas using piece-wise power law (\citealt{Draine:2011a}, Fig. 34.1):
+\begin{align}
+\Lambda(T)\simeq
+  \begin{cases}
+    2.3 \times 10^{-24} \left(T/10^6 \text{K}\right)^{0.5} $erg cm$^3 $s$^{-1}&, T > 2 \times 10^7 \text{K} \\
+    1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}&, T < 2 \times 10^7 \text{K}     
+  \end{cases}
+  \label{eq:cooling2}
+\end{align}
+Note that at the stagnation radius equation (\ref{eq:cooling2}) is equivalent to the ratio of the cooling to free-fall timescale, i.e.
+\begin{align}
+\left. \frac{\tcool}{\tff}\right|_{\rs}&= \frac{9}{5} \left. \frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rs},
+\end{align}
+where we have used equations~(\eqref{eq:Tanalytic}) and (\eqref{eq:rhors2}). 
+
+There thus exists a critical minimum wind velocity required for thermal stability at the stagnation radius
+\begin{align}
+v_{\rm crit} \simeq
+  \begin{cases}
+   200 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
+   200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp},     
+  \end{cases}
+  \label{eq:cooling2}
+\end{align}
+In $\S\ref{sec:numerical}$ we will show that $v_{w} \gtrsim v_{\rm crit} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius.  
 
 
-%% AG-Apparently even in the low heating case, it is still possible to
-%% an outflow (from the analytic results above the gas density must be
-%% quite steep in this case). However, at low heating we will probably
-%% become subject to a cooling instablity.  AG-I believe that in the
-%% case of core galaxy, the negative root of the quadratic should be
-%% taken...
 
-\subsection{Numerical Solutions}
+If cooling becomes important in the flow, it may lead to thermal
+instabilities.  There are two kinds of ``instabilities", global and
+local.  The global instability is simply that, if cooling becomes very
+rapid, the gas loses thermal pressure and starts to inflow faster,
+i.e. the entire CNM accretes (e.g. {\bf AG citation missing here.}).  In
+practice this should could manifest as a large increase in the
+stagnation radius, due an effective {\it decrease} in the effective
+heating rate.  This global ``instability" is not a true instability
+insofar as the gas does not necessarily clump locally into low-T
+clouds.
 
-Numerical solutions are calculated for each galaxy for three different values of the stellar wind heating parameter $v_{w,0}$ = 300, 600, 1200 km s$^{-1}$.  
+However, \citet{McCourt+12} argue that even if cooling is exactly
+balanced by heating everywhere, there is still a local thermal
+instability that operates to turn hot gas into cold clouds.  However,
+this local instability only causes a significant local drop-out of
+mass from the hot medium (to low-T clouds), if the cooling timescale,
+\begin{align}
+\frac{\tcool}{\tff} &\equiv \frac{3\rho k T/2 \mu \mp}{\dot{q}_{\rm cool}}
+\end{align} 
+is locally shorter than the approximately 10 times the free-fall
+timescale $t_{\rm ff}$. 
+ 
+
+Fig.~\ref{fig:cooling} shows $H/C=(q \vw^2+q v^2)/2$ and $\tcool/\tff$
+as a function of radius for all of our solutions. {\bf BDM: change
+  plots}, with different colors denoting different values of $\vwO$.
+For our highest heating rates we observe that cooling is unimportant
+for all solutions across all radii--neither the local nor the global
+thermal instability would be present. However,  for our smallest value
+of $\vwO$=300 km s$^{-1}$ with $\Mbh=10^8 \Msun$, the solution would be
+thermally unstable as $H/C<1$ and $\tcool/\tff<10$. Note that the
+precise region of the parameter space which would be thermally
+unstable would depend on the value of $\eta$--in
+Fig.~\pageref{fig:cooling} we have chosen $\eta=0.02$, which would be
+appropriate for a stellar population with $\tage\simeq \th$. This
+value is on the low end of what we would physically expect for
+$\eta$. 
+
+For $\vwO=1200$ km s$^{-1}$ and $\vwO=600$ km s$^{-1}$, we have
+$H/C\simeq\tcool/\tff$ at $\rs$ as expected. However, the two ratios
+diverge away from $\rs$, as equation~\eqref{eq:rhors2} is not a good
+approximation away from $\rs$. Similarly, it is poorer approximation
+for $\vwO=300$ km s$^{-1}$. Hence, $H/C$ and $\tcool/\tff$ do not
+closely match at $\rs$ for this $\vwO$. {\bf AG would be good to
+  clarify the physics here a little more.}
+
+% For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta$ such that $H/C >$1 at all radii.  Roughly speaking, this is the maximum $\eta$ for which it would be safe to ignore cooling.  If cooling is important, the CNM is likely to be thermally unstable, resulting in the formation of a cold medium that could substantially enhance the rate of accretion onto the SMBH.  
+
+%\begin{align}
+ % \Lambda(T)\simeq
+  %\begin{cases}
+   % 2.3 \times 10^{-24} \left(T/10^6 \text{K}\right)^{0.5} $erg cm$^3 $s$^{-1}& \text{if } T \gsim 2 \times 10^7 \text{K} \\
+   % 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}& \text{if } T \lsim 2 \times 10^7 \text{K}     
+  %\end{cases}
+  %\label{eq:cooling}
+%\end{align}
+
+\begin{figure}
+  \includegraphics[width=\columnwidth]{cooling.eps}
+  \caption{\label{fig:cooling} Ratio of heating ($H$) to cooling rate
+    ($C$) for each of our solutions (solid lines). The cooling rate is
+    calculated using the approximate (solar metallicity) cooling
+    function in Equation~(\ref{eq:cooling}). The heating rate is
+    estimated as $q \vw^2/2+q v^2/2$. The ratio is computed from
+    equation (\ref{eq:cooling}) assuming a stellar mass loss rate
+    parameter $\eta=0.02$. We also plot the ratio $\tcool/\tff$
+    vs. radius. $H/C$ is a diagnostic for global thermal stability,
+    and a solution should be stable as long as
+    $H/C\gsim1$. $\tcool/\tff$ is a diagnostic for local thermal
+    instability, solutions should be stable as long as $\tcool/t_{\rm
+      ff}\gsim$10 \citealt{McCourt+12}. Notice that for high $\vwO$
+    the two ratios coincide at $\rs$ (marked with a square for each
+    solution).}
+\end{figure}
+
+
+%\input{figures/eta_tab.tex}
+
+
+\subsection{Numerical Results}
+\label{sec:numerical}
+
+This section describes the results of our numerical calculations and tests the accuracy of the analytic expressions provided in the previous section.  Numerical solutions are calculated for each galaxy for three different values of the stellar wind heating parameter $v_{w,0}$ = 300, 600, 1200 km s$^{-1}$.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$, for the cusp
@@ -1053,133 +1157,6 @@ which we have normalized in terms of the Hubble time.
 
 \subsection{Cooling}
 \label{sec:cooling}
-Our models neglect radiative cooling, an assumption we now check.  At high temperatures $T\gsim 2\times 10^7$ K gas cools through free-free emission, while at lower temperatures it cools predominantly through metal lines.  To assess the importance of radiative cooling in our solutions we compare the heating rate $H=q \vw^2/2$ to the nominal cooling rate
-\begin{align}
-  \dot{q}_{\rm cool} =\Lambda(T) n^2,
-\label{eq:cooling}
-\end{align}
-where $n = \rho/\mu m_p$ and we approximate the cooling function $\Lambda(T)$ assuming solar metallicity gas using piece-wise power law (Fig. 34.1 in \cite{Draine:2011a}):
-\begin{align}
-\Lambda(T)\simeq
-  \begin{cases}
-    2.3 \times 10^{-24} \left(T/10^6 \text{K}\right)^{0.5} $erg cm$^3 $s$^{-1}&, T \gsim 2 \times 10^7 \text{K} \\
-    1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}&, T \lsim 2 \times 10^7 \text{K}     
-  \end{cases}
-  \label{eq:cooling2}
-\end{align}
-
-Radiative cooling can have an important on even the qualitative features of the flow, because initially hydrostatic gas that cools at constant pressure $P \propto nT$ according to $\dot{q}_{\rm cool} \propto T^{-2.7}$ (eq.~[\ref{eq:cooling}]) is thermally unstable.  Radiative cooling can be stabilized, however, by the other source of (stable) wind cooling, given by the last term $\propto T$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius equals $q v_{\rm w}^{2}/2$.
-
-An important ratio controlling the importance of thermal stability is thus
-\begin{align}
-\left.\frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rm r{s}} \simeq
-  \begin{cases}
-   590 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.76}v_{500}^{7.2}  &, \text{core}\\
-   210 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.48}v_{500}^{5.8}  &, \text{cusp},     
-  \end{cases}
-  \label{eq:cooling2}
-\end{align}
-where we have used equations (\ref{eq:rhostarrs}) and
-(\ref{eq:rhors}).  We thus see that we require $v_{\rm w} \gtrsim $
-300 km s$^{-1}$ for stability, with a weak sensitivity on $\eta$ and
-$M_{\bullet}$.  {\bf AG:I flipped the ratio to be consistent with the
-  ratio of timescales given below (NB here we are comparing heating
-  and cooling rates as opposed to timescales). Modulo factors of order
-  unity I find no inconsistency. We should probably only keep one of
-  these ratios. Note I have adopted the new convention of Gamma=0.8 is
-  a cusp galaxy and Gamma=0.1 is a core galaxy.}
-
-
-
-If cooling becomes important in the flow, it may lead to thermal
-instabilities.  There are two kinds of ``instabilities", global and
-local.  The global instability is simply that, if cooling becomes very
-rapid, the gas loses thermal pressure and starts to inflow faster,
-i.e. the entire CNM accretes (e.g. {\bf AG citation missing here.}).  In
-practice this should could manifest as a large increase in the
-stagnation radius, due an effective {\it decrease} in the effective
-heating rate.  This global ``instability" is not a true instability
-insofar as the gas does not necessarily clump locally into low-T
-clouds.
-
-However, \citet{McCourt+12} argue that even if cooling is exactly
-balanced by heating everywhere, there is still a local thermal
-instability that operates to turn hot gas into cold clouds.  However,
-this local instability only causes a significant local drop-out of
-mass from the hot medium (to low-T clouds), if the cooling timescale,
-\begin{align}
-\frac{\tcool}{\tff} &\equiv \frac{3\rho k T/2 \mu \mp}{\dot{q}_{\rm cool}}
-\end{align} 
-is locally shorter than the approximately 10 times the free-fall
-timescale $t_{\rm ff}$. 
-
-At the stagnation $\tcool/\tff$ is equal to the ratio of the heating to
-the cooling rate to factors of order unity as shown below 
-
-\begin{align}
-\left. \frac{\tcool}{\tff}\right|_{\rs}&=\left. \frac{3}{5} \frac{\rho 
-  \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rs}\\
-&=\frac{9}{5} \left. \frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rs}.
-\end{align}
-
-In the first line we have used equation~\eqref{eq:Tanalytic} and in
-the second line we have used equation~\eqref{eq:rhors2}. 
-
-Fig.~\ref{fig:cooling} shows $H/C=(q \vw^2+q v^2)/2$ and $\tcool/\tff$
-as a function of radius for all of our solutions. {\bf BDM: change
-  plots}, with different colors denoting different values of $\vwO$.
-For our highest heating rates we observe that cooling is unimportant
-for all solutions across all radii--neither the local nor the global
-thermal instability would be present. However,  for our smallest value
-of $\vwO$=300 km s$^{-1}$ with $\Mbh=10^8 \Msun$, the solution would be
-thermally unstable as $H/C<1$ and $\tcool/\tff<10$. Note that the
-precise region of the parameter space which would be thermally
-unstable would depend on the value of $\eta$--in
-Fig.~\pageref{fig:cooling} we have chosen $\eta=0.02$, which would be
-appropriate for a stellar population with $\tage\simeq \th$. This
-value is on the low end of what we would physically expect for
-$\eta$. 
-
-For $\vwO=1200$ km s$^{-1}$ and $\vwO=600$ km s$^{-1}$, we have
-$H/C\simeq\tcool/\tff$ at $\rs$ as expected. However, the two ratios
-diverge away from $\rs$, as equation~\eqref{eq:rhors2} is not a good
-approximation away from $\rs$. Similarly, it is poorer approximation
-for $\vwO=300$ km s$^{-1}$. Hence, $H/C$ and $\tcool/\tff$ do not
-closely match at $\rs$ for this $\vwO$. {\bf AG would be good to
-  clarify the physics here a little more.}
-
-% For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta$ such that $H/C >$1 at all radii.  Roughly speaking, this is the maximum $\eta$ for which it would be safe to ignore cooling.  If cooling is important, the CNM is likely to be thermally unstable, resulting in the formation of a cold medium that could substantially enhance the rate of accretion onto the SMBH.  
-
-%\begin{align}
- % \Lambda(T)\simeq
-  %\begin{cases}
-   % 2.3 \times 10^{-24} \left(T/10^6 \text{K}\right)^{0.5} $erg cm$^3 $s$^{-1}& \text{if } T \gsim 2 \times 10^7 \text{K} \\
-   % 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}& \text{if } T \lsim 2 \times 10^7 \text{K}     
-  %\end{cases}
-  %\label{eq:cooling}
-%\end{align}
-
-\begin{figure}
-  \includegraphics[width=\columnwidth]{cooling.eps}
-  \caption{\label{fig:cooling} Ratio of heating ($H$) to cooling rate
-    ($C$) for each of our solutions (solid lines). The cooling rate is
-    calculated using the approximate (solar metallicity) cooling
-    function in Equation~(\ref{eq:cooling}). The heating rate is
-    estimated as $q \vw^2/2+q v^2/2$. The ratio is computed from
-    equation (\ref{eq:cooling}) assuming a stellar mass loss rate
-    parameter $\eta=0.02$. We also plot the ratio $\tcool/\tff$
-    vs. radius. $H/C$ is a diagnostic for global thermal stability,
-    and a solution should be stable as long as
-    $H/C\gsim1$. $\tcool/\tff$ is a diagnostic for local thermal
-    instability, solutions should be stable as long as $\tcool/t_{\rm
-      ff}\gsim$10 \citealt{McCourt+12}. Notice that for high $\vwO$
-    the two ratios coincide at $\rs$ (marked with a square for each
-    solution).}
-\end{figure}
-
-
-%\input{figures/eta_tab.tex}
-
 
   \subsection{Angular Momentum}
   \label{sec:ang}
