@@ -299,7 +299,6 @@ M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
 \end{align}
 Although the use of equation (\ref{eq:Msigma}) is questionable for low mass black holes (e.g., \citealt{Greene&Ho07}), our results are not overly sensitive to this assumption.  
 
-
 A galaxy model is fully specified by four parameters: $\Mbh$, $\Gamma$, $r_b$,
 and $\beta$.  We compute models for three different black hole masses, $\Mbh = 10^6$, $10^7$, $10^8 \Msun$.  The distribution of $\Gamma$ in the \citet{LauerFaber+:2007a} sample is bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim 0.3$ and a concentration of ``cusp" galaxies with $\Gamma \gsim 0.7$.  We bracket these possibilities by considering models with $\Gamma=0.8$ and $\Gamma=0.1$.  Since we are generally interested in properties of the gas flow on radial scales $\ll r_b$, we fix $\beta = 2$ (a typical value), an assumption to which most of our results is not sensitive.  However, the presence of $\rb$ is necessary for to obtain a converged steady state for some regions of our parameter space. We adopt $\rb=100$ pc for cusp galaxies ($\Gamma=0.8$), while for core galaxy models we employ the scaling relation $\rb = $, motivated again by the \citet{LauerFaber+:2007a} sample. ({\bf BDM: fill in!}).  Though simplistic, our results are not sensitive to our assumption about the value of $\rb$.
 
@@ -329,14 +328,13 @@ The source term in the continuity equation (eq.~[\ref{eq:drhodt}]),
 represents mass input from stellar winds, which we parameterize in
 terms of the fraction $\eta$ of the stellar density $\rhostar$ being
 recycled into gas on the Hubble time $\th = 1.4 \times 10^{10}$
-years.  To good approximation $\eta\simeq 0.02 (t/t_h)^{-1.3}$ at time $t$ following a burst of star formation (e.g., \citet{Ciotti+91}),\footnote{Note that 
+years.  To good approximation $\eta\simeq 0.02 (t_{\star}/t_h)^{-1.3}$ at time $t_{\star}$ following a burst of star formation (e.g., \citet{Ciotti+91}),\footnote{Note that 
 \citet{Ciotti+91} gives the overall mass return rate from evolved
 stars as a function of B-band luminosity. We give the mass return rate
 per unit volume. However, our expressions are equivalent.} although $\eta$ will generally be higher in cases of ongoing star formation.  
 
 Source terms $\propto q$ also appear in the momentum and entropy equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) due to the fact that the isotropic mass injection in the rest frame of the SMBH
 represents a source of momentum and energy relative to the mean flow (see also below).  Physically these terms result from the mismatch between the properties of virialized gas injected locally by stellar winds and the mean properties of the background flow.   As we shall discuss in $\S$, the cooling term $\propto q p/\rho$ represents an important stabilizing term in comparison to radiative cooling.  
-
 
 The last term in equation (\ref{eq:dsdt}) accounts for heat transportation by electron conductivity, where $\kappa_{\rm eff}=\kappa_{\rm spitz}/(1+\psi)$ (\citealt{DaltonBalbus:1993a}) is the conducitivity and $\kappa_{\rm spitz} = \kappa_0 T^{5/2}$ is the classical \citet{Spitzer62} value ($\kappa_0\simeq 2\times 10^{-6}$ in cgs units).  The flux limitor $\psi = \kappa_{\rm spitz} \nabla T/(5\phi \rho c_s^3)$ saturates the conductive flux if the mean free path for electron coulomb scattering becomes comparable to the temperature length scale.  Here $c_s \equiv (kT/\mu m_p)^{1/2}$ is the isothermal sound speed and $\phi$ is an uncertain dimensionless constant, typically taken to be of order unity of less (we adopt $\phi = XXX$).  Even a weak magnetic field could in principle also suppress the conductivity perpendicular to the field.  However, the radially-decreasing temperature profiles of interest are susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field structure (\citealt{Parrish&Stone07}).
 
@@ -727,33 +725,20 @@ From the ATNF radio pulsar catalog (\citealt{Manchester+05}), we estimate that t
 
 \subsubsection{Type Ia Supernovae} 
 
-Energy injected by Type Ia supernovae (SNe Ia) represents a
-potentially important source of heating, which unlike core collapse
-SNe is present even in an evolved stellar population.  Assuming that
-each Ia injects a thermal energy $E_{\rm Ia}$ into the interstellar
-medium, and that the SNe rate (per stellar mass) is given by $R_{\rm
-  Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm
-  Ia}$ produces an effective wind heating parameter
-(equation~[\ref{eq:vw_eff}])
-\begin{align} v_{\rm w,0}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
+Energy injected by Type Ia supernovae (SNe Ia) represents a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  Assuming that each Ia injects a thermal energy $E_{\rm Ia}$ into the interstellar medium, and that the SNe rate (per stellar mass) is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm  Ia}$ produces an effective wind heating parameter (equation~[\ref{eq:vw_eff}]) \begin{align} v_{\rm w,0}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
 E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
 \end{align} The thermal energy injected by a Ia SN $E_{\rm Ia} \simeq
 \epsilon_{\rm Ia} 10^{51}$ ergs depends on the efficiency $\epsilon$
-with which the blast wave energy is converted into bulk or turbulent
+with which the initial blast wave energy is converted into bulk or turbulent
 motion instead of being lost to radiation.  \cite{Thornton+98}
 estimate a radiative efficiency $\epsilon_{\rm Ia} \sim 0.1$,
 depending weakly on surrounding density, but \citet{Sharma+14} argues
 that $\epsilon_{\rm Ia}$ can be considerably higher, $\sim 0.4$, if
 the SNe occur in a hot dilute medium, as may characterize the circumnuclear medium.
 
-The Ia SN rate $\RateIa$ depends on the age of the stellar population,
-as it represent the convolution of the star formation rate and the Ia
-delay time distribution (DTD) divided by the present stellar mass.  In
-the limit of impulsive star formation, $\RateIa$ is the DTD evaluated
-at the time since the star formation episode.  The observationally
-inferred DTD (Fig. 1 of \citealt{MaozMannucci+:2012a}) has the
-approximate functional form
-\begin{align}
+The Ia SN rate $\RateIa$ depends on the age of the stellar population, as it represent the convolution of the star formation rate and the Ia delay time distribution (DTD) divided by the present stellar mass.  In
+the limit of impulsive star formation, $\RateIa$ is the DTD evaluated at the time since the star formation episode.  The observationally inferred DTD (Fig. 1 of \citealt{MaozMannucci+:2012a}) has the
+approximate functional form \begin{align}
   R_{\rm Ia} =1.7\times 10^{-14}\left(\tau_{\star}/t_{\rm
       h}\right)^{-1.12} M_{\odot}^{-1}\,{\rm yr^{-1}}
 \label{eq:DTD}
@@ -762,53 +747,34 @@ approximate functional form
   (c.f.~\citealt{Scannapieco&Bildsten05}). {\bf AG:I deleted the extra
     factor of $\chi$ that was hanging out here.}
 
-  Using equations (\ref{eq:vw_sne}), (\ref{eq:DTD}), and
-  (\ref{eq:eta}) we thus estimate that 
-
-  \begin{align} 
-    v_{w,0}^{\rm Ia} \approx 700(\epsilon_{\rm
-      Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{0.09} \eta_{0.02}^{-1/2}\,{\rm km
+From equations (\ref{eq:vw_sne}), (\ref{eq:DTD}) we thus estimate that 
+  \begin{eqnarray} 
+    v_{w,0}^{\rm Ia} &\approx& 700(\epsilon_{\rm
+      Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{-0.56}\eta_{0.02}^{-1/2}\,{\rm km
+      \,s^{-1}} \nonumber \\
+&\approx& 700(\epsilon_{\rm
+      Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{0.09}\,{\rm km
       \,s^{-1}},
-  \end{align}
+\label{eq:vIa}
+  \end{eqnarray}
+where in the second line we have taken $\eta\simeq 0.02 (\tau_{\star}/t_h)^{-1.3}$ for a single burst of star formation (\citealt{Ciotti+91}).
 
- showing that the effective
-  velocity due to SN heating is (coincidentally) a weak function of
-  the stellar age.
-
-  The relatively high value of $v_{w,0}^{\rm Ia}$ implies that Ia SNe
-  represent a potentially dominant source of non-AGN heating in the
-  CNM.  However, SNe can only be approximated as "constant" heating
-  source throughout space and time if the rate of SNe is rapid
-  compared to the inflow time at the radius of interest
-  (\citealt{ShcherbakovWong+:2014a}).  To estimate when this
-  approximation is valid, we estimate the ``Ia radius"
+The high value of $v_{w,0}^{\rm Ia}$ implies that Ia SNe represent a potentially dominant source of non-AGN heating in the CNM.  However, SNe can only be approximated as being a constant heating source throughout space and time if the rate of SNe is rapid compared to the inflow time at the radius of interest (\citealt{ShcherbakovWong+:2014a}).  To estimate when this approximation is valid, we estimate the ``Ia radius"
   \begin{align}
     r_{\rm Ia} \sim \left(\frac{G}{R_{\rm Ia}\sigma}\right)^{1/2} \sim
     38 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
     \label{eq:rIa}
   \end{align}
-as the location exterior of which the time interval between subsequent
-supernovae $\tau_{\rm Ia} \sim 1/M_{\rm enc}R_{\rm Ia} \sim
-G/r\sigma^{2}R_{\rm Ia}$ exceeds the local dynamical timescale $t_{\rm
-dyn} \sim r/\sigma$, where we again adopt the Ia rate for an old
-stellar population and in the final equality we estimate the velocity
-dispersion using the $M_{\bullet}-\sigma$ relationship
-(equation~[\ref{eq:Msigma}]).  Between subsequent supernova, stars
-release a gaseous mass $M_{\rm gas} \approx \eta M_{\star}\tau_{\rm
-Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally
-bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm
-gas}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm
-Ia}/E_{\rm bind} \sim (v_{\rm w,0}^{\rm Ia})^{2}/2\sigma^{2}$.
+as the location exterior of which the time interval between subsequent supernovae $\tau_{\rm Ia} \sim 1/M_{\rm enc}R_{\rm Ia} \sim G/r\sigma^{2}R_{\rm Ia}$ exceeds the local dynamical timescale $t_{\rm
+dyn} \sim r/\sigma$, where we again adopt the Ia rate for an old stellar population and in the final equality we estimate the velocity dispersion using the $M_{\bullet}-\sigma$ relationship
+(equation~[\ref{eq:Msigma}]).  Between subsequent supernovae, stars release a gaseous mass $M_{\rm gas} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm gas}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{\rm w,0}^{\rm Ia})^{2}/2\sigma^{2}$.
 
-
-
-Note that the stagnation radius scales approximately linearly with
-$M_{\bullet}$ (equation~[\ref{eq:stag_simple}]), while $\rIa$ is
-roughly indpendent of SMBH mass.  For small $\Mbh$, the stagnation
-radius thus lies well inside $\rIa$ and hence Ia SNe will not
-contribute appreciably to the heating rate.  On the other hand, for
-massive SMBHs $M_{\bullet} \gtrsim 10^8 \Msun$, SNe Ia represent an
-important, and possibly dominant, contribution to the overall heating.
+Assuming that $v_{\rm w,0}^{\rm Ia} \gg \sigma$ then by substituting equation (\ref{eq:vIa}) into (\ref{eq:rs_simple}) we can write
+\begin{eqnarray}
+\frac{r_{\rm Ia}}{r_{\rm s}} &\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68}\eta_{0.02}  \nonumber \\
+&\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{0.38}
+\end{eqnarray}
+Thus only for massive SMBHs $M_{\bullet} \gtrsim 10^8 \Msun$ and/or very young populations will SNe Ia represent a steady source of heating at the nominal stagnation radius.
 
 \subsubsection{SMBH Feedback}
 
