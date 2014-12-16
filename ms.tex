@@ -283,11 +283,12 @@ The Nuker profile is a broken power law which transitions from an inner power la
 \begin{cases}
 \rho_\star(\rsoi) \left(r/\rsoi\right)^{-1-\Gamma} & r \leq r_b\\
 \rho_\star(r_b) \left(r/r_b\right)^{-1-\beta} & r > r_b,
+\label{eq:rhostar}
 \end{cases}
 \end{align}
 where $\rho_\star(\rsoi)$ is the stellar density at the radius of the black hole sphere of influence, 
 \be
-\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6},
+\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
 \label{eq:rsoi}
 \ee
 and the final equality in (\ref{eq:rsoi}) employs a recent version of the $\Mbh-\sigma$ relationship (\citealt{Gultekin+09}),
@@ -296,6 +297,8 @@ M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
       km\,s^{-1}}}\right)^{5.1}M_{\odot}.
 \label{eq:Msigma}
 \end{align}
+Although the use of equation (\ref{eq:Msigma}) is questionable for low mass black holes (e.g., \citealt{Greene&Ho07}), our results are not overly sensitive to this assumption.  
+
 
 A galaxy model is fully specified by four parameters: $\Mbh$, $\Gamma$, $r_b$,
 and $\beta$.  We compute models for three different black hole masses, $\Mbh = 10^6$, $10^7$, $10^8 \Msun$.  The distribution of $\Gamma$ in the \citet{LauerFaber+:2007a} sample is bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim 0.3$ and a concentration of ``cusp" galaxies with $\Gamma \gsim 0.7$.  We bracket these possibilities by considering models with $\Gamma=0.8$ and $\Gamma=0.1$.  Since we are generally interested in properties of the gas flow on radial scales $\ll r_b$, we fix $\beta = 2$ (a typical value), an assumption to which most of our results is not sensitive.  However, the presence of $\rb$ is necessary for to obtain a converged steady state for some regions of our parameter space. We adopt $\rb=100$ pc for cusp galaxies ($\Gamma=0.8$), while for core galaxy models we employ the scaling relation $\rb = $, motivated again by the \citet{LauerFaber+:2007a} sample. ({\bf BDM: fill in!}).  Though simplistic, our results are not sensitive to our assumption about the value of $\rb$.
@@ -347,7 +350,7 @@ and entropy equations for numerical stability (\citealt{Brandenburg:2003a}).  We
 different choices of $v_{\rm w,0} = 300, 600, 1200$ km s$^{-1}$ spanning the physically expected
 range.  Although we are most interested in the steady-state CNM structure, the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic inflow on small radial scales and a possible supersonic outflow on large scales.
 
-Radiative cooling is not included in the entropy equation, although its effect is assessed critically in $\S\ref{sec:cooling}$.  Across much of the parameter space radiative cooling is negligible compared to other sources of cooling (e.g., advection).  Radiative cooling cannot be neglected in some cases (if
+Radiative cooling is not included in the entropy equation, although its effect is assessed critically in $\S\ref{sec:cooling}$.  Across much of the parameter space radiative cooling is subdominant compared to other sources of cooling (e.g., advection).  Radiative cooling cannot be neglected in some cases (if
 $\vwO$ is low and/or $\eta$ is high), once it becomes important it leads to thermal instabilities, which our one-dimensional time-dependent modeal cannot account for anyways (e.g.~\citealt{McCourt+12}).  A chief goal of this work is instead to use our steady state solutions neglecting radiation to ascertain over what physical conditions cooling instabilities are likely to develop ($\S\ref{sec:cooling}$).
 
 The accuracy of our numerical solutions is assessed by checking the level of conservation of mass across the grid, as well as the integral constraint on the energy.  Mass and energy are conserved to $\lesssim
@@ -357,46 +360,19 @@ The accuracy of our numerical solutions is assessed by checking the level of con
 
 \section{Results}
 
-We begin by describing a number of useful analytic results before describing our numerical solutions.  
+We begin by describing useful analytic results before presenting our numerical solutions.  
 
 \label{sec:results}
-\subsection{Analytics: Flow properties at $\rs$}
+\subsection{Properties near the stagnation radius}
 
-This section summarizes analytic estimates of several physical
-quantities of interest, such as the stagnation radius $\rs$ and the
-mass accretion rate, the detailed derivation of which are given in
-Appendix \ref{app:rs}.  All of our results are derived under the
-assumption that thermal conductivity can be neglected.
+Here we summarize analytic estimates of physical quantities, such as the stagnation radius $\rs$ and the mass accretion rate, the detailed derivation of which are given in Appendix \ref{app:rs}.  Our results are expressed in terms of the SMBH mass $M_{\bullet} = 10^{8}M_{\bullet,8}M_{\odot}$ and the wind heating parameter (eq.~[\ref{eq:dsdt}])
+\begin{eqnarray}
+v_{\rm w} &=& v_{\rm w,0}\left(1+\frac{\sigma^{2}}{v_{\rm w,0}^{2}}\right)^{1/2} \nonumber \\
+ &\approx& v_{\rm w,0}\left(1+0.14 \Mbheight^{0.43}\left[\frac{\vwO}{500\,{\rm km/s}}\right]^{-1}\right)^{1/2},
+\end{eqnarray}
+where $\vwO$ is a free parameter accounting for sources of heating beyond the baseline level produced by the stellar winds of old stars, and the final equality makes use of $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
 
-When possible our results are expressed in terms of the wind heating
-parameter $\vw$; the power-law slope of the density profile
-$n$ (also evaluated at $r = \rs$); Note that $\vw^2=\vwO^2+\sigma^2$,
-where the $\sigma$ accounts for shock heating between stellar winds moving
-with respect to each other with relative velocity $\sigma$, and $\vwO$
-is a free parameter accounting for additional sources of
-heating.  $\vw$ may be calculated analytically (for a given $\Mbh$ and
-$\vwO$) using $\vw=\chi \vwO$, where
-
- \begin{align}
-&\chi^2 \equiv v_{\rm w}^{2}/v_{\rm w,0}^{2} \approx \left(1 +
-  \sigma^{2}/v_{\rm w,0}^{2}\right) \approx \\
-&\left(1+0.14 \Mbheight^{0.43}\frac{\vwO}{500 {\rm km/s}}^{-1}\right), 
-\end{align}
-
-% where $v_{500} $M_{\bullet,8} \equiv
-where $M_{\bullet,8} \equiv M_{\bullet}/10^{8}M_{\odot}$, and the
-second equality makes use of the $M_{\bullet}-\sigma$ correlation
-(\citealt{Gultekin+09})
-
- \begin{align}
-M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
-      km\,s^{-1}}}\right)^{5.1}M_{\odot}.
-\label{eq:Msigma}
-\end{align}
-
-Although the use of equation (\ref{eq:Msigma}) is questionable for low mass BHs (e.g., \citealt{Greene&Ho07}), our results are not particularly sensitive to this assumption.  
-
-First, by demanding continuity of the entropy derivative at the stagnation radius, the temperature at the stagnation radius is given by.
+First, continuity of the entropy derivative at the stagnation radius demands that the temperature at the stagnation radius is given by
 \begin{align}
 T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v_{w}^{2}}{2} \approx 3.7
 \times 10^6\ \, v_{500}^2 \,\,{\rm K} 
@@ -404,98 +380,57 @@ T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v_{w}^{2}}{2} \approx 3.7
 \end{align}
 %{\bf BDM: i picked $\mu = 0.62$ and stick to it.}
 
-Demanding hydrostatic equilibrium at the stagnation point provides an
-expression for the stagnation radius
-
+Hydrostatic equilibrium at the stagnation radius ($v = 0$) can be used to determine the stagnation radius
 \begin{align}
-  \frac{\rs}{\rsoi}=\frac{1}{2 \zeta^2 n}\left[
-   \frac{\Mstar(\rs)}{\Mbh}\left(\frac{9-\Gamma}{2}-n\right)+\left(\frac{7}{2}-n\right)\right]
+  \frac{\rs}{\rsoi}=\frac{\sigma^{2}}{2 v_{w,0}^{2} n}\left[
+   \frac{\Mstar(\rs)}{\Mbh}\left(\frac{9-\Gamma}{2}-n\right)+\left(\frac{7}{2}-n\right)\right],
  \label{eq:stag_analytic}
 \end{align}
-
-
-where $\zeta \equiv v_{w,0}/\sigma$, $n$ is the power-law slope of the
-density profile at $r = r_{\rm s}$,
-
-\begin{align}
-r_{\rm soi} = \frac{GM_{\bullet}}{\sigma^{2}} \approx 14M_{\bullet,8}^{0.6}\,\,{\rm pc}
-\end{align}
-
-is the radius of the SMBH sphere of
-influence (soi), and A and B are constants that depend on the Nuker
+in terms of the radius of the sphere of influence (eq.~[\ref{eq:rsoi}]), where $n$ is the power-law slope of the
+density profile at $r = r_{\rm s}$, and A and B are constants that depend on the Nuker
 parameter $\Gamma$ and the adiabatic index of the gas.
 
-If the SMBH dominates the potential at the stagnation radius
-($M_{\bullet} \gg M_{\star}$; $v_{w,0} \gg 200 M_{\bullet,8}^{0.2}$ km
-s$^{-1}$) then the relationship between $\rs$ and $v_{w}$ is
-simplified greatly:
+If the SMBH dominates the gravitational potential at the stagnation radius ($M_{\bullet} \gg M_{\star}$; $v_{w,0} \gg \sigma$) then equation (\ref{eq:stag_analytic}) simplifies greatly
 \begin{align}
-  &\rs=\frac{7}{2}\frac{G \Mbh}{n \vwO^2} \simeq 6
+  &\rs=\frac{7}{2}\frac{G \Mbh}{n \vwO^2} \approx 6
  \, \pc \,\, \Mbheight v_{500}^{-2},
   \label{eq:stag_simple}
 \end{align}
-where in the numerical estimate we have assume $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).  On the other hand, if wind heating is much weaker ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to very large radii or may not exist at all.  
+where the numerical estimate assumes $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).  On the other hand, if wind heating is weaker ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to very large radii or may not exist at all.  
 
+Our above analysis neglects heat conduction near the stagnation radius, an assumption we can now check.
 The importance of conductive heating can be estimated by comparing its
 magnitude to that of wind heating, viz.~
-\begin{align} \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
+\begin{align}
+  \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
-T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}}
-\nonumber \\ &\sim
-53 \eta_{0.02}^{-1}\left(\frac{r_{\rm s}}{r_{\rm
-soi}}\right)^{-\beta} v_{500}^{9} \nonumber \\ &\sim
-23 \,\, 0.43^{\beta-1} \eta_{0.02}^{-1}
-M_{\bullet,8}^{-1.2+0.4\beta} v_{500}^{9-2\beta}
-\label{eq:condRatio1}
+T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}(1+\phi)}
+\nonumber \\ &\sim {\rm min}
+  \begin{cases}
+  10 \eta_{0.02}^{-1}
+M_{\bullet,8}^{-0.8} v_{500}^{6.8} &  \text{unsaturated (core)}\\
+ 10 \eta_{0.02}^{-1}
+M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
+  10 \phi/(2-\Gamma) & \text{saturated},
+  \end{cases}
+ \label{eq:rhors}
 \end{align}
-
-where we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$ and in
-the second equality have made use of equations (\ref{eq:Tanalytic}),
-(\ref{eq:stag_simple}) and have approximated $4\pi r_{\rm
-  s}^{3}\rho_{\star}(r_{\rm s}) \approx M_{\bullet}(r_{\rm s}/r_{\rm
-  soi})^{\beta}$ with $\beta \approx 1-2$.  We thus see that
-conductive heating is important near the stagnation radius for high
-values of $v_{\rm w} \gtrsim 300$ km s$^{-1}$ and $\eta=0.02$, but
-that it is safely neglected to first order for lower heating
-rates. {\bf AG:Note that threshold vw is rather--the 300 km/s is
-  estimated for cusp galaxies. The change in normalization is due to
-  the change in the fiducial eta from 0.1 to 0.02. This seems like bad
-  news. Should probably include mass. Although this is tricky as cusp
-  and core galaxies have opposite dependencies on mass. Perhaps we
-  will have to lean on the saturated argument more if we really would
-  like to avoid conductivity. Or perhaps including conductivity is
-  truly unavoidable. ):}
-
-In fact, for high heating rates conductive heating is less important
-than equation~\eqref{eq:condRatio1} would suggest due to the effects
-of saturation. In this regime the importance of conductive heating can
-be estimated the conductive flux in equation~\eqref{eq:condRatio1}
-with its saturated value.
-\begin{eqnarray} \left.\frac{\nabla\cdot(f_{\rm cond})}{q v_{\rm
-w}^{2}/2}\right|_{r_{\rm s}} &\sim& \frac{2t_{\rm h} \phi \rho(\rs) c_s(\rs)^3}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}}
-\nonumber \\ &\sim&
-\frac{10 \phi}{2-\Gamma}, \label{eq:condRatio}
+where in the second equality have made use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}) and have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$, $\nabla \sim 1/r_{\rm st}$.  Since the stagnation radius is usually well inside the break radius, the stellar density is approximated as (eq.~[\ref{eq:rhostar}])
+\begin{eqnarray}
+  \rho_{\star}(r_{\rm s}) &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
+ &\approx& \begin{cases}
+    9.4 \times 10^{-19}M_{\bullet,8}^{-1.2}v_{500}^{2.2}\,{\rm g\,cm^{-3}}
+    & \text{core} \\
+    1.1 \times 10^{-18} M_{\bullet,8}^{-1.5}v_{500}^{3.6}
+    \,{\rm g\,cm^{-3}}  & \text{cusp}, 
+  \end{cases}
+  \label{eq:rhostarrs}
 \end{eqnarray}
+Even in the case of saturated heat flux, we see that for expected values $\phi < 1$, heat condution is at most moderately important at the stagnation radius, justifying its neglect in our analysis.  
 
-where we have approximated $\nabla \sim 1/r_{\rm st}$ and in the
-second equality have made use of equations (\ref{eq:Tanalytic}),
-(\ref{eq:stag_simple}), and (\ref{eq:rhors}). The stellar density is
-assumed to be a power law $\rho_{\star}=\frac{\Mbh
-  \left(2-\Gamma\right)}{4 \pi \rsoi^3}
-\left(\frac{\rs}{\rsoi}\right)^{-1-\Gamma}$.
-
-From the saturated value of the conductive heat flux we have found an
-upper bound on the ratio of the rate of heating to the rate of heat
-conduction in equation~\eqref{eq:condRatio}.  For $\phi\simeq 1$, the
-conductive flux could be quite important. However, the value of $\phi$
-depends various details from plasma physics, and could plausibly be an
-order of magnitude smaller. In light of these uncertainties we neglect
-the effect of the conductive flux.
 
 The SMBH accretion rate is simply given by the integrated mass loss
 rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
-%AG: Should we have separate cores and cusps? Or just write a general
-
 \begin{eqnarray}
   \dot{M} &=& \frac{\eta \Menc(\rs)}{\th} \nonumber \\
 &\approx&
@@ -507,9 +442,7 @@ rate interior to the stagnation radius (equation~[\ref{eq:q}]),
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-
 The Eddington ratio $\eddr$ is given by 
-
 \begin{eqnarray}
 \eddr&\approx&
   \begin{cases}
@@ -520,20 +453,7 @@ The Eddington ratio $\eddr$ is given by
   \end{cases}
   \label{eq:eddr_analytic}
 \end{eqnarray}
-
-The stellar density at the stagnation radius (eq.~[\ref{eq:stag_simple}]) is usefully approximated as
-\begin{eqnarray}
-  && \rho_{\star}(r_{\rm s}) \approx \nonumber \\
-  && \begin{cases}
-    9.4 \times 10^{-19}M_{\bullet,8}^{-1.2}v_{500}^{2.2}\,{\rm g\,cm^{-3}}
-    & \text{core} \\
-    1.1 \times 10^{-18} M_{\bullet,8}^{-1.5}v_{500}^{3.6}
-    \,{\rm g\,cm^{-3}}  & \text{cusp}, 
-  \end{cases}
-  \label{eq:rhostarrs}
-\end{eqnarray}
-
-The density of gas at the stagnation radius $\rho(r_{\rm s})$ can be roughly estimated by using equations (\ref{eq:stag_simple}) and (\ref{eq:mdot_analytic}) in conjunction with an alternative estimate of the mass accretion rate as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$, viz.
+The density of gas at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate.  We roughly estimate its value using equations (\ref{eq:stag_simple}) and (\ref{eq:mdot_analytic}) in conjunction with an alternative estimate of the mass accretion rate as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$, viz.
 \begin{align}
   &\dot{M}\simeq\frac{(4 \pi/3) \rs^3 \rho(\rs)}{\tff(\rs)},
   \label{eq:mdot_gas}
