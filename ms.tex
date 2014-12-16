@@ -358,14 +358,14 @@ We begin by describing useful analytic results before presenting our numerical s
 
 Here we summarize analytic estimates of physical quantities, such as the stagnation radius $\rs$ and the mass accretion rate, the detailed derivation of which are given in Appendix \ref{app:rs}.  Our results are expressed in terms of the SMBH mass $M_{\bullet} = 10^{8}M_{\bullet,8}M_{\odot}$ and the wind heating parameter (eq.~[\ref{eq:dsdt}])
 \begin{eqnarray}
-v_{\rm w} &=& v_{\rm w,0}\left(1+\frac{\sigma^{2}}{v_{\rm w,0}^{2}}\right)^{1/2} \nonumber \\
- &\approx& v_{\rm w,0}\left(1+0.14 \Mbheight^{0.43}\left[\frac{\vwO}{500\,{\rm km/s}}\right]^{-1}\right)^{1/2},
+v_{\rm w} = v_{\rm w,0}\left(1+\frac{\sigma^{2}}{v_{\rm w,0}^{2}}\right)^{1/2} 
+ \approx v_{\rm w,0}\left(1+0.14 \Mbheight^{0.43}v_{500}^{-1}\right)^{1/2},
 \end{eqnarray}
-where $\vwO$ is a free parameter accounting for sources of heating beyond the baseline level produced by the stellar winds of old stars, and the final equality makes use of $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
+where the parameter $\vwO = 500 v_{500}$ km s$^{-1}$ accounts for wind heating beyond the baseline level produced by the winds of old stars, and the final equality makes use of $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
 
-\subsubsection{Properties at the Stagnation Radius}
+\subsubsection{Flow Properties Near the Stagnation Radius}
 
-First, continuity of the entropy derivative at the stagnation radius demands that the temperature at the stagnation radius is given by
+Continuity of the entropy derivative at the stagnation radius demands that the temperature at the stagnation radius is given by (Appendix \ref{app:rs})
 \begin{align}
 T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v_{w}^{2}}{2} \approx 3.7
 \times 10^6\ \, v_{500}^2 \,\,{\rm K} 
@@ -373,7 +373,7 @@ T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v_{w}^{2}}{2} \approx 3.7
 \end{align}
 %{\bf BDM: i picked $\mu = 0.62$ and stick to it.}
 
-Hydrostatic equilibrium at the stagnation radius ($v = 0$) can be used to determine the stagnation radius
+Hydrostatic equilibrium can be used to determine the location of the stagnation radius where $v = 0$ (Appendix \ref{app:rs})
 \begin{align}
   \frac{\rs}{\rsoi}=\frac{\sigma^{2}}{2 v_{w,0}^{2} n}\left[
    \frac{\Mstar(\rs)}{\Mbh}\left(\frac{9-\Gamma}{2}-n\right)+\left(\frac{7}{2}-n\right)\right],
@@ -389,12 +389,11 @@ If the SMBH dominates the gravitational potential at the stagnation radius ($M_{
  \, \pc \,\, \Mbheight v_{500}^{-2},
   \label{eq:stag_simple}
 \end{align}
-where the numerical estimate assumes $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).  On the other hand, if wind heating is weaker ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to very large radii or may not exist at all.  
+where the numerical estimate assumes $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their equation~[6]).  In the opposite limit when the wind heating is weaker ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to very large radii or may not exist at all.  
 
 \subsubsection{SMBH Accretion Rate}
 
-The SMBH accretion rate is simply given by the integrated mass loss
-rate interior to the stagnation radius (equation~[\ref{eq:q}]), 
+The SMBH accretion rate is given by the integrated mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
 \begin{eqnarray}
   \dot{M} &=& \frac{\eta \Menc(\rs)}{\th} \nonumber \\
 &\approx&
@@ -406,7 +405,7 @@ rate interior to the stagnation radius (equation~[\ref{eq:q}]),
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-The Eddington ratio $\eddr$ is given by 
+where we have made use of equation (\ref{eq:stag_simple}), i.e. assuming that $v_{w,0} \gg \sigma$.  The resulting Eddington ratio $\eddr$ is given by 
 \begin{eqnarray}
 \frac{\dot{M}}{\dot{M}_{\rm edd}} &\approx&
   \begin{cases}
@@ -418,45 +417,46 @@ The Eddington ratio $\eddr$ is given by
   \label{eq:eddr_analytic}
 \end{eqnarray}
 
-The density of gas at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate.  We roughly estimate its value using equations (\ref{eq:stag_simple}) and (\ref{eq:mdot_analytic}) in conjunction with an alternative estimate of the mass accretion rate as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$, viz.
+The gas density at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate.  Its value can be crudely estimated using equation (\ref{eq:mdot_analytic}) in conjunction with an alternative estimate of $\dot{M}$ as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$, viz.
 \begin{align}
-  &\dot{M}\simeq\frac{(4 \pi/3) \rs^3 \rho(\rs)}{\tff(\rs)},
+  &\dot{M}\sim\frac{(4 \pi/3) \rs^3 \rho(\rs)}{\tff(\rs)},
   \label{eq:mdot_gas}
 \end{align}
 from which one derives 
 \begin{align}
-  \rho(\rs)\simeq
+  \rho(\rs)\approx
   \begin{cases}
     5 \times 10^{-26} \Mbheight^{-0.2} v_{500}^{-0.8}  \eta_{0.02} \,
-    \, {\rm g \, cm^{-3}}& \text{core}\\
-    9 \times 10^{-26}  \Mbheight^{-0.5} v_{500}^{0.6}  \eta_{0.02} \,\, {\rm g \,cm^{-3}} & \text{cusp}
+    \, {\rm g \, cm^{-3}}& \text{core},\\
+    9 \times 10^{-26}  \Mbheight^{-0.5} v_{500}^{0.6}  \eta_{0.02} \,\, {\rm g \,cm^{-3}} & \text{cusp},
   \end{cases}
   \label{eq:rhors}
 \end{align}
-Note that by combining equations~\eqref{eq:mdot_analytic}
-and~\eqref{eq:mdot_gas}, one can also write
-\begin{align}
-\rho(\rs)=\frac{3 q(\rs) \tff(\rs)}{2-\Gamma}.
-\label{eq:rhors2}
-\end{align}
+again using equation (\ref{eq:rs_simple}) for the stagnation radius.  
 
-Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) is usefully compared to the traditional ``Bondi" accretion rate onto a point source from a surrounding medium of fixed sound speed $c_{\rm s} = (kT/\mu m_p)^{1/2}$ and
-density (\citealt{Bondi52}):
+%Note that by combining equations~\eqref{eq:mdot_analytic}
+%and~\eqref{eq:mdot_gas}, one can also write
+%\begin{align}
+%\rho(\rs)=\frac{3 q(\rs) \tff(\rs)}{2-\Gamma}.
+%\label{eq:rhors2}
+%\end{align}
+
+It is useful to compare our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) to the traditional ``Bondi" rate for accretion onto a point source from an external medium of fixed density and temperature density (\citealt{Bondi52}):
 \begin{align}
   \dot{M}_{\rm B} =4\pi \lambda r_b^2 \rho(r_b) v_{\rm ff}(r_b),
 \label{eq:bondi}
 \end{align}
 where $r_b \equiv GM/c_{s}^{2}$ is the Bondi radius, $v_{\rm ff} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  Rewriting equation (\ref{eq:mdot_gas}) as $\dot{M}\simeq 4\pi \rs^2 \rho(\rs) v_{\rm ff}(\rs)/3$,
-we note a similarity Bondi formula (eq.~[\ref{eq:bondi}]) with the exception that $\rb$ is replaced by $\rs$.  In fact, when the stagnation radius resides interior to the sphere of influence we have (eq.~[\ref{eq:stag_simple}])
+we note a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $\rb$ is replaced by $\rs$.  When the stagnation radius resides interior to the sphere of influence we indeed have (eq.~[\ref{eq:stag_simple}])
 \begin{align}
   \rs\approx\frac{7}{2}\frac{G \Mbh}{\vwO^2} \approx \frac{14}{3}\frac{GM_{\bullet}}{c_{s}^{2}} = \frac{14}{3}r_{\rm B},
   \label{eq:rs_simple}
 \end{align}
-where in the second line we have used equation (\ref{eq:Tanalytic}).  
+where the second equality makes use of equation (\ref{eq:Tanalytic}). 
 
 \subsubsection{Importance of Heat Conduction}
 
-Our analytic results neglect the effects of heat conduction near the stagnation radius, an assumption we now check.  The importance of conductive heating can be estimated by comparing its magnitude to that of ``wind" heating, viz.~
+The above analytic results neglect the effects of heat conduction near the stagnation radius, an assumption we now check.  The importance of conductive heating can be estimated by comparing its magnitude to the nominal level of ``wind" heating:
 \begin{align}
   \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
@@ -471,7 +471,7 @@ M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
   \end{cases}
  \label{eq:rhors}
 \end{align}
-where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$, $\nabla \sim 1/r_{\rm st}$.  Because the stagnation radius is usually well inside the break radius, the stellar density is approximated as (eq.~[\ref{eq:rhostar}])
+where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim 1/r_{\rm st}^{2}$, $\nabla \sim 1/r_{\rm st}$.  Because the stagnation radius is usually well inside the break radius, we have approximated the stellar density as (eq.~[\ref{eq:rhostar}])
 \begin{eqnarray}
   \rho_{\star}(r_{\rm s}) &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
  &\approx& \begin{cases}
@@ -482,7 +482,7 @@ where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:
   \end{cases}
   \label{eq:rhostarrs}
 \end{eqnarray}
-Even in the saturated heat flux case, heat conduction is at most moderately important for expected values of the saturation parameter $\phi < 1$, justifying its neglect in our analysis.  
+Even in the saturated case, heat conduction is at most an order unity correction for expected values of the saturation parameter $\phi < 0.3$, justifying its neglect in our analysis.  
 
 \subsubsection{Thermal Instability}
 
