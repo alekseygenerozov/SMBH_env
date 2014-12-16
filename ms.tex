@@ -271,23 +271,13 @@ $\S\ref{sec:summary}$ we summarize our results.
 \section{Model}
 \label{sec:model}
 \subsection{Galaxy models}
-\citealt{LauerFaber+:2007a} used Hubble WFPC2 imaging to measure the
-surface brightness profiles for hundred of nearby early type
-galaxies. The measured surface brightness profile can generally be
-well fit using a Nuker law
-
+\citet{LauerFaber+:2007a} use Hubble WFPC2 imaging to measure the
+radial surface brightness profiles for hundreds of nearby early type galaxies. The measured surface brightness profile is generally well-fit by a ``Nuker" law parameterization:
 \begin{equation}
   I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b}.
 \end{equation}
-The Nuker profile is a broken power law which transitions from an
-inner power law slope, $\Gamma$, to an outer power law slope, $\beta$,
-at a break radius, $\rb$.
 
-Assuming spherical symmetry this corresponds to a stellar density
-$\rhostar \sim r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\sim
-r^{-1-\beta}$ for $r \gg \rb$. Thus, we adopt a broken power law for 
-$\rhostar$ 
-
+The Nuker profile is a broken power law which transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta$, at a break radius, $\rb$.  Assuming spherical symmetry, this corresponds to a stellar density $\rhostar \sim r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\sim r^{-1-\beta}$ for $r \gg \rb$, thus motivating us to adopt a broken power-law profile
 \begin{align}
 \rho_\star = 
 \begin{cases}
@@ -295,84 +285,20 @@ $\rhostar$
 \rho_\star(r_b) \left(r/r_b\right)^{-1-\beta} & r > r_b,
 \end{cases}
 \end{align}
-
-where $\rho_\star(\rsoi)$ is the stellar density at the black hole
-sphere of influence, $\rsoi$. $\rho_\star(\rsoi)$ is chosen so that
-the stellar mass inside $\rsoi$, $\Mstar(\rsoi)$, is equal to the
-black hole mass.  $\rsoi=G \Mbh/\sigma^2$. Using the $\Mbh-\sigma$ relation
-from \citealt{Gultekin+09}
-
+where $\rho_\star(\rsoi)$ is the stellar density at the radius of the black hole sphere of influence, 
+\be
+\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6},
+\label{eq:rsoi}
+\ee
+and the final equality in (\ref{eq:rsoi}) employs a recent version of the $\Mbh-\sigma$ relationship (\citealt{Gultekin+09}),
  \begin{align}
 M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
-      km\,s^{-1}}}\right)^{5.1}M_{\odot}, 
+      km\,s^{-1}}}\right)^{5.1}M_{\odot}.
 \label{eq:Msigma}
 \end{align}
 
-we obtain $\rsoi \approx 14 M_{\bullet,8}^{0.6}$. In order to
-completely specify the galaxy model we must choose $\Mbh$, $\Gamma$, $r_b$,
-and $\beta$. We compute models for three different models of
-$\Mbh$: $10^6$, $10^7$, $10^8 \Msun$. In the
-\citealt{LauerFaber+:2007a} sample the distribution of the $\Gamma$s
-is bimodal, with a concentration of core galaxies with $\Gamma \lsim
-0.3$ and a concentration of cusp galaxies with $\Gamma \gsim
-0.7$. We calculate models for $\Gamma=0.8$ and $\Gamma=0.1$. 
-
-We are interested in the gas flow on scales smaller than
-the break radius $\rb$, which typically occurs at a radius of 100s of
-parsecs. Thus, we fix $\beta$ to be 2 {\bf AG:I have not yet checked this
-  directly via numerical experiments}.  The presence of $\rb$ is 
-necessary for to obtain a converged steady state for some regions of
-our parameter space. For cusp galaxies, $r_b$ is a few hundred parsecs
-independently of $\Mbh$. We adopt $\rb=100$ pc for our cusp
-galaxies ($\Gamma=0.8$), while for our core galaxy models we use the
-scaling relation...{\bf AG: Need to figure out normalization for
-  scaling relation from Lauer. Fixed rb at a given Mbh only has a
-  factor of a few effect on rs--this will be discussed in the section
-  on numerical solutions.}
-
-% \subsection{Galaxy Sample}
-
-% \label{sec:sample}
-% %AG:It is unclear whether if/how the Nuker profile will show up in
-% %this parametrized study.
-% {\bf BDM: we may show plot of NUKER masses, $\Gamma$'s, etc here to (1) motivate the parametric study; (2) in individual cases we may want to compare solutions to specific galaxies.}
-
-% Our sample includes 61 early-type galaxies from
-% \citetalias{WangMerritt:2004a}, as represent a subset of a larger
-% sample of \citet{FaberTremaine+:1997a} with Hubble WFPC2 imaging.  We
-% focus on elliptical galaxies because we are interested in isolating
-% SMBHs fed by the steady mass loss from the relatively old stellar
-% population, instead of fresh gas flowing into the sphere of influence
-% from larger scales.
-
-% The surface brightness of each galaxy in the sample is parameterized by a Nuker Law (WM04; their Table 1),
-% \begin{equation}
-%   I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b}.
-% \end{equation}
-% The Nuker profile is a broken power law which transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta$, at a break radius, $\rb$.  
-
-% Given $I(\xi)$ we follow the procedure outlined by
-% \citetalias{WangMerritt:2004a} to compute the spherically-symmetric
-% stellar density profile $\rhostar(r)$ and stellar mass profile
-% $M_{\star}(r) = 4\pi \int \rhostar r^{2}dr$, both of which are used in
-% our model.  For reference, note that stellar density $\rhostar\sim
-% r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\sim r^{-1-\beta}$ for $r
-% \gg \rb$.  Since $\Gamma\approx 1$ for ``cusp" galaxies, while
-% $\Gamma\approx 0$ for ``core" galaxies, at small radii $\ll \rb$ we
-% thus have $\rhostar \propto r^{-\alpha}$ and $M_{\star} \propto
-% r^{\beta}$ with $\beta = 3-\alpha \approx 1-2$.  For each galaxy the
-% SMBH mass $\Mbh$ is determined from the $\Mbh-\sigma$ relationship.
-% %%AG-ugh I just took the Mbh from Wang & Merritt, which I guess is
-% %%calculated from an outdated M-sigma. It would be bizarre to use 2
-% %%different relations.
-
-
-% AG:Is there a systematic dependence of beta on galaxy type$.
-
-%% AG--some discussion of alternate parameterizations.  My intuition
-%% is that for our purposes the parameterization should not
-%% matter. But some discussion of alternate possibilities could
-%% prevent Alistar Graham from yelling at us.
+A galaxy model is fully specified by four parameters: $\Mbh$, $\Gamma$, $r_b$,
+and $\beta$.  We compute models for three different black hole masses, $\Mbh = 10^6$, $10^7$, $10^8 \Msun$.  The distribution of $\Gamma$ in the \citet{LauerFaber+:2007a} sample is bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim 0.3$ and a concentration of ``cusp" galaxies with $\Gamma \gsim 0.7$.  We bracket these possibilities by considering models with $\Gamma=0.8$ and $\Gamma=0.1$.  Since we are generally interested in properties of the gas flow on radial scales $\ll r_b$, we fix $\beta = 2$ (a typical value), an assumption to which most of our results is not sensitive.  However, the presence of $\rb$ is necessary for to obtain a converged steady state for some regions of our parameter space. We adopt $\rb=100$ pc for cusp galaxies ($\Gamma=0.8$), while for core galaxy models we employ the scaling relation $\rb = $, motivated again by the \citet{LauerFaber+:2007a} sample. ({\bf BDM: fill in!}).  Though simplistic, our results are not sensitive to our assumption about the value of $\rb$.
 
 \subsection{Hydrodynamic Equations}
 \label{sec:hydro}
@@ -392,7 +318,7 @@ pressure and specific entropy of the gas, respectively, and $M_{\rm enc} = M_{\s
 enclosed mass.  We assume an ideal gas equation of state with $p =
 \rho kT/\mu m_p$ with $\mu = 0.62$  and $\gamma = 5/3$. {\bf BDM: take $\mu = 0.62$ here for fully ionized gas}
 
-The source term in the continuity equation (equation~\ref{eq:drhodt}),
+The source term in the continuity equation (eq.~[\ref{eq:drhodt}]),
 \begin{align}
   q=\frac{\eta \rhostar}{\th},
 \label{eq:q}
