@@ -700,13 +700,14 @@ closely match at $\rs$ for this $\vwO$. {\bf AG would be good to
 \section{Sources of Heating}
 \label{sec:heating}
 
-Important properties such as the location of the stagnation radius, the SMBH accretion rate, and the possibility of thermal instability depend sensitively on the assumed heating rate $\propto v_{w,0}^{2}$  This section discusses individual heating sources, providing estimates of the value of $\vwO$ corresponding to each.  Before proceeding, note that $\vwO$ is related to the volumetric heating rate $e$ according to 
+Key properties of the flow, such as the stagnation radius, the SMBH accretion rate, and the likelihood of thermal instability depend sensitively on the assumed heating rate $\propto qv_{w,0}^{2}$.  This section summarizes individual heating sources, providing estimates of the value of
 \begin{align}
-  &\frac{q \vwO^2}{2}=e \,\,\,\Rightarrow\,\,\,\vwO = \sqrt{\frac{2 t_h e}{\eta \rhostar}}
+  v_{\rm w,0} = \sqrt{\frac{2 t_h e}{\eta \rhostar}}
   \label{eq:vw_eff}
 \end{align}
+for each, where $e$ is volumetric heating rate.  
 
-\subsubsection{Stellar winds} 
+\subsection{Stellar winds} 
 {\bf AG: This section may have to be substantially modified in light
   of our more careful analysis of stellar winds.}
 
@@ -730,19 +731,18 @@ Appendix \ref{app:windheat} we present a toy model for how $v_{\rm
   w,0}$ varies as a function of stellar age ({\bf BDM: Nick can
   create}).
 
-\subsubsection{Millisecond Pulsars} Energy injection due to the spin-down of millisecond pulsars (MSPs) is a potentially important heating source.  If the number of MSPs per unit stellar mass is $n_{\rm msp}$ and each contributes an average spin-down luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit volume $e \approx L_{\rm sd}n_{\rm
-  msp}\epsilon$ corresponds to an effective heating rate (eq.~ [\ref{eq:vw_eff}])
+\subsection{Millisecond Pulsars} Energy injection from the spin-down of millisecond pulsars (MSPs) is a potentially important heating source.  If the number of MSPs per unit stellar mass is $n_{\rm msp}$ and each contributes on average a spin-down luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit volume $e \approx \bar{L}_{\rm sd}n_{\rm
+  msp}\epsilon$ results in an effective heating rate (eq.~ [\ref{eq:vw_eff}])
 \begin{eqnarray}
-  v_{\rm w,0}^{\rm MSP} &=&\left({\frac{2\epsilon t_h n_{\rm msp} \bar{L}_{\rm sd}}{\eta}}\right)^{1/2} \nonumber \\
-  &\approx& 90\epsilon^{1/2}\left(\frac{\bar{L}_{\rm
+  v_{\rm w,0}^{\rm MSP} \approx 30\left(\frac{\epsilon}{0.1}\right)^{1/2}\left(\frac{\bar{L}_{\rm
         sd}}{10^{34}\,{\rm erg\,s^{-1}}}\right)^{1/2}
   \eta_{0.02}^{-1/2}\,{\rm km\,s^{-1}},
   \end{eqnarray}
-where $\epsilon< 1$ is the thermalization efficiency of the wind.  The above estimate adopts a pulsar density $n_{\rm msp}\simeq3 \times 10^{-40} $ MSPs g$^{-1}$ motivated by the $\sim 30,000$ estimated MSPs in the Milky Way of stellar mass $6\times 10^{10}M_{\odot}$ (\citealt{Lorimer13}).  
+where $\epsilon$ is the thermalization efficiency of the wind, normalized to a value $\epsilon \lesssim 0.1$ inferred based on modeling the insterstellar mediums of globular clusters \citep{NaimanSoares-Furtado+:2013a}.  The above estimate adopts a pulsar density $n_{\rm msp}\simeq3 \times 10^{-40} $ MSPs g$^{-1}$ motivated by the $\sim 30,000$ estimated MSPs in the Milky Way of stellar mass $6\times 10^{10}M_{\odot}$ (\citealt{Lorimer13}).  
 
-From the ATNF radio pulsar catalog (\citealt{Manchester+05}), we estimate that the average spin-down luminosity of millisecond pulsars in the field (excluding those in globular clusters) to be $\bar{L}_{\rm sd} \sim 10^{34}$ erg s$^{-1}$, in which case $v_{\rm w,0} \lesssim 100$ km s$^{-1}$ is unimportant even for $\epsilon = 1$.  For higher spin-down luminosities, $L_{\rm sd}\simeq 10^{35}$ ergs s$^{-1}$ characteristic of some Fermi-detected pulsars, then the higher value of $v_{\rm w,0} \lesssim 300$ km s$^{-1}$ makes MSP heating in principle be important for $\epsilon = 1$.  However, much lower thermalization efficiencies of $\epsilon \lesssim 0.1$ are inferred based on modeling the insterstellar mediums of globular clusters \citep{NaimanSoares-Furtado+:2013a}.  Also, the binaries giving rise to MSPs may be disocciated by stellar interactions in the dense nuclear cluster, reducing their numbers as compared to the field population.  We thus conclude that MSPs are unlikely to be an important source of heating.  
+The average spin-down luminosity of millisecond pulsars in the field is estimated to be $\bar{L}_{\rm sd} \sim 10^{34}$ erg s$^{-1}$ based on the ATNF radio pulsar catalog (\citealt{Manchester+05}), in which case $v_{\rm w,0} \lesssim 30$ km s$^{-1}$.  For higher spin-down luminosities, $L_{\rm sd}\simeq 10^{35}$ ergs s$^{-1}$ characteristic of some Fermi-detected pulsars, then the higher value of $v_{\rm w,0} \lesssim 300$ km s$^{-1}$ makes MSP heating in principle important under the optimistc assumption $\epsilon = 1$.  On the other hand, the binaries giving rise to MSPs may be disocciated by stellar interactions in the dense nuclear cluster, reducing their numbers as compared to the field population estimate above.  We conclude that MSPs are unlikely to be an important source of heating.  
 
-\subsubsection{Type Ia Supernovae} 
+\subsection{Type Ia Supernovae} 
 
 Energy injected by Type Ia supernovae (SNe Ia) represents a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  Assuming that each Ia injects a thermal energy $E_{\rm Ia}$ into the interstellar medium, and that the SNe rate (per stellar mass) is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm  Ia}$ produces an effective wind heating parameter (equation~[\ref{eq:vw_eff}]) \begin{align} v_{\rm w,0}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
 E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
