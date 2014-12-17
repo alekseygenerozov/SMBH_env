@@ -731,7 +731,7 @@ Appendix \ref{app:windheat} we present a toy model for how $v_{\rm
   w,0}$ varies as a function of stellar age ({\bf BDM: Nick can
   create}).
 
-\subsection{Millisecond Pulsars} Energy injection from the spin-down of millisecond pulsars (MSPs) is a potentially important heating source.  If the number of MSPs per unit stellar mass is $n_{\rm msp}$ and each contributes on average a spin-down luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit volume $e \approx \bar{L}_{\rm sd}n_{\rm
+\subsection{Millisecond Pulsars} Energy injection from millisecond pulsars (MSPs) is a potentially important heating source.  If the number of MSPs per unit stellar mass is $n_{\rm msp}$ and each contributes on average a spin-down luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit volume $e \approx \bar{L}_{\rm sd}n_{\rm
   msp}\epsilon$ results in an effective heating rate (eq.~ [\ref{eq:vw_eff}])
 \begin{eqnarray}
   v_{\rm w,0}^{\rm MSP} \approx 30\left(\frac{\epsilon}{0.1}\right)^{1/2}\left(\frac{\bar{L}_{\rm
@@ -787,12 +787,12 @@ as the location exterior of which the time interval between subsequent supernova
 dyn} \sim r/\sigma$, where we again adopt the Ia rate for an old stellar population and in the final equality we estimate the velocity dispersion using the $M_{\bullet}-\sigma$ relationship
 (equation~[\ref{eq:Msigma}]).  
 
-Assuming that $v_{\rm w,0}^{\rm Ia} \gg \sigma$ then by substituting equation (\ref{eq:vIa}) into (\ref{eq:rs_simple}) we can write
+Assuming that $v_{\rm w,0}^{\rm Ia} \gg \sigma$ then by substituting $v_{\rm w,0}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into our expression for the stagnation radius (\ref{eq:rs_simple}), we can write
 \begin{eqnarray}
-\frac{r_{\rm Ia}}{r_{\rm s}} &\approx& 12.4\eta_{0.02} M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68} \nonumber \\
+\left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w,0}^{\rm Ia}} &\approx& 12.4\eta_{0.02} M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68} \nonumber \\
 &\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{0.38}
 \end{eqnarray}
-The fact that $r_{\rm Ia} \gg r_{\rm s}$ implies that Ia heating only represents a sources of steady heating near the stagnation radius for very massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ and/or very young populations ($\tau_{\star} \ll t_{\rm h}$).
+The fact that $r_{\rm Ia} \gg r_{\rm s}$ would appear to imply that Ia heating only represents a sources of steady heating near the stagnation radius for very massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ and/or very young populations ($\tau_{\star} \ll t_{\rm h}$).  However, this expression underestimates the importance of Ia heating, since the actual stagnation radius will be substantially larger than its value for $v_{\rm w,0}^{\rm Ia}$ if the nominal heating rate is much less than this.  In general it is reasonable to expect that the impact of Ia SN will increase for larger SMBH masses.
 
 What is the effect of the Ia radius?  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{\rm w,0}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence Ia SN can in principle periodically clear out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$. 
 
@@ -833,7 +833,7 @@ v_{w,0}^{\bullet} &\approx&  \left(\frac{2t_{\rm h}\epsilon_{\rm j}\dot{M}c^{2}}
 \end{eqnarray}
 where we have used the fact that $\dot{M} \approx \eta M_{\rm enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ for radii interior to the outer break radius (eq.~[\ref{eq:rhostar}]).  Thus for $r_{\rm heat} \sim r_{\rm s}$, even a small heating efficiency $\epsilon_{\rm j} \sim 10^{-6}$ is sufficient for $v_{\rm w,0}^{\bullet}$ to exceed other sources of non-accretion powered heating.  However, if the jet distributes its energy on much larger scales comparable to the galaxy $r_{\rm heat} \sim $ kpc $\sim 10^{3}r_{\rm s}$ then the heating rate would be much smaller. 
 
-For a fixed heating radius $r_{\rm heat}$ we just see that $v_{\rm w,0}^{\bullet} \propto r_{\rm s}^{\beta/2} \propto v_{\rm w,0}^{\Gamma-2}$ is proportional to $v_{w,0}$ to a negative power, where the last proportionality makes use of equation (\ref{eq:stag_simple}).  As in the case of Compton heating, SMBH kinetic heating, when dominant, may thus ``self-regulate".  However, unlike in the case of local stellar wind heating, SMBH heating may not be thermally stable, since the central accretion rate does not respond instantaneously to a change in the thermodynamic properties of the gas on larger scales.  
+For a fixed heating radius $r_{\rm heat}$ we just see that $v_{\rm w,0}^{\bullet} \propto r_{\rm s}^{\beta/2} \propto M_{\bullet}^{1-\Gamma/2}v_{\rm w,0}^{\Gamma-2}$ is proportional to $v_{w,0}$ to a negative power, where the last proportionality makes use of equation (\ref{eq:stag_simple}).  As in the case of Compton heating, SMBH kinetic heating, when dominant, may thus ``self-regulate".  However, unlike in the case of local stellar wind heating, SMBH heating may not be thermally stable, since the central accretion rate does not respond instantaneously to a change in the thermodynamic properties of the gas on larger scales.  Also note that $v_{\rm w,0}^{\bullet}$ is proportional to a positive power of SMBH mass $\propto M_{\bullet}^{1(0.5)}$ for core(cusp) galaxies, respectively.  This is dependence may have important implications for the predicted dependence of X-ray luminosity on SMBH mass ($\S\ref{sec:mdot}$).    
 
 What is a physically motivated value of the heating radius $r_{\rm heat}$?  \citet{Bromberg+11} show that a jet of luminosity $L_{\rm j}$ and half opening angle $\theta_{\rm j} = 0.1$ (characteristic of AGN jets) propagates through a gaseous mass $M_{\rm g}$ to a radius $r$ in a
 timescale
@@ -894,44 +894,18 @@ stars.
 \label{sec:applications}
 
 \subsection{Mass accretion rate}
+\label{sec:mdot}
 
-For each solution we calculate the accretion rate $\dot{M}$ onto the
-SMBH in units of the Eddington accretion rate $\dot{M}_{\rm edd}
-\equiv L_{\rm edd}/0.1 c^{2}$, where $L_{\rm edd} \approx 1.4\times
-10^{46}M_{\bullet,8}$ erg s$^{-1}$.  Figure~\ref{fig:mdot_mass} shows
-$\dot{M}/\dot{M}_{\rm edd}$ as a function of $\Mbh$ for different
+For each solution we calculate the accretion rate $\dot{M}$ onto the SMBH in units of the Eddington accretion rate $\dot{M}_{\rm edd} \equiv L_{\rm edd}/0.1 c^{2}$, where $L_{\rm edd} \approx 1.4\times 10^{46}M_{\bullet,8}$ erg s$^{-1}$.  Figure~\ref{fig:mdot_mass} shows $\dot{M}/\dot{M}_{\rm edd}$ as a function of $\Mbh$ for different
 values of $\vwO =$ 300, 600 and 1200 km s$^{-1}$, and for
 both core ($\Gamma$=0.1) and cusp galaxies ($\Gamma$=0.8).
 
-Note that since we expect $\dot{M}\sim\vwO^{-2}$ for a cusp galaxy and
-$\dot{M}\sim\vwO^{-4}$ for a core galaxy
-(equation~[\ref{eq:mdot_analytic}]), the mass accretion rate is
-expected to be a sensitive function of the assumed heating rate.
-% However, the accretion rate is proportional to the stellar mass
-% enclosed inside of $\rs$, so for core galaxies $\dot{M}\sim \Mbh
-% (\rs/\rsoi)^{2}$,while for cusp galaxies $\dot{M}\sim \Mbh
-% (\rs/\rsoi)$.  This steeper dependence is enough to offset the
-% tendency for core galaxies to have a larger $\rs/\rsoi$ for fixed
-% $\eta$ (see Figure~\ref{fig:stag}). Therefore, for $\rs/\rsoi<1$ core
-% galaxies would have a smaller $\dot{M}$ than cusp galaxies.  For
-% $\vwO=600$ km s$^{-1}$, core galaxies have a smaller accretion rate
-% for a given SMBH mass. On the other hand, if  $\rs/\rsoi>1$ (as would
-% be expected for small $\vwO$), core galaxies would have a larger
-% accretion rate. Thus, for $\vwO=150$ km/s, core galaxies have a large
-% accretion rate for a given $\Mbh$. 
-
-%% AG-The variation in accretion rate for w/ vw for core galaxies is comparable to that of cusp galaxies and belies the steep dependence stated above.
-%% AG-Note separation of cores and cusps (at vw=1000 km/s, where there are enough core galaxies for this comparison to be made). Also, note that the spread in core galaxies is far larger.
-
-We find that $\dot{M}/\dot{M}_{\rm edd}$ tends to increase with SMBH
-mass $M_{\bullet}$.  This appears to be in contradiction with the
-general down sizing trend observed for SMBH accretion in the local
-universe (e.g.~\citealt{Heckman+04}; \citealt{Gallo+08}), such as the
-fact that for quiescent galaxies the nuclear X-ray luminosity obeys
-$L_X \sim \Mbh^\alpha$, where $\alpha\simeq 0.7-0.8$
-\citep{MillerGallo+:2014a}.  Our model instead predicts that $\Mdot
+For fixed wind heating $\dot{M}/\dot{M}_{\rm edd}$ tends to increase with SMBH mass  $\propto  M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively.  This appears to be in contradiction with the general down sizing trend observed for SMBH accretion in the local
+universe (e.g.~\citealt{Heckman+04}; \citealt{Gallo+08}), such as the fact that for quiescent galaxies the nuclear X-ray luminosity obeys $L_X \sim \Mbh^\alpha$, where $\alpha\simeq 0.7-0.8$ \citep{MillerGallo+:2014a}.  Our model instead predicts that $\Mdot
 \sim \Mbh^{1.5-2}$, such that if $L_x\sim M$, then we would have $\L_x
-\sim \Mbh^{1.5-2}$, steeper than the observed relationship. 
+\sim \Mbh^{1.5-2}$, steeper than the observed relationship.  
+
+Hower, the mass accretion rate is also a sensitive function of the assumed heating rate, such that $\dot{M}\sim\vwO^{-3.8(-2.4)}$ for a core(cusp) galaxies, respectively.  Thus, only a weak positive dependence of $v_{\rm w,0} \propto M_{\bullet}^{0.25-0.3}$ would be sufficient to explain the trend in X-ray luminosity with BH masses in scenarios where $L_X \propto \dot{M}$, or a somewhat steeper dependence $v_{\rm w,0} \propto M_{\bullet}^{0.35-0.45}$ if $L_{X} \propto \dot{M}^{2}$.  What could cause this dependence?  Maybe Ia SNa...
 
 % This is shown in the top panel Figure~\ref{fig:bh_xray}. The
 % relationship from \citealt{MillerGallo+:2014a} and their detection
