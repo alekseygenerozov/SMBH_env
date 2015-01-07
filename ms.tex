@@ -1,5 +1,6 @@
 \documentclass[usenatbib,fleqn]{mn2e}
 \usepackage{amsmath,amssymb}
+\usepackage{mathrsfs}
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{hyperref}
@@ -552,52 +553,65 @@ Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $v_{w} \gtrsim
 \subsection{Numerical Results}
 \label{sec:numerical}
 
-
-\begin{deluxetable}{lccccccccc}
+\begin{deluxetable}{lllllll}
 \tabletypesize{\scriptsize}
-\tablecolumns{6}
 \tabcolsep0.05in\footnotesize
 \tablewidth{0pc}
-\tablecaption{Results
-\label{tab:surveys}}
-\tablehead {
-\colhead{Name}           &
-\colhead{Ang.~Res.}  &
-\colhead{$\nu$}          &
-\colhead{F$_{\rm lim}^{(a)}$}               & 
-\colhead{Area}          &
-\colhead{$\Delta T$$^{(c)}$}            &
-%\colhead{$T$$^{(d)}$}        &
-\colhead{N$_{\rm obs}$$^{(e)}$}        &
-\colhead{ref.}           
-}
+\tablecaption{Cusp Results
+\label{tab:sols}}
+\tablehead{\colhead{$M_{\bullet,8}$} & \colhead{$v_{w,0}$} &
+  \colhead{$\gamma$} & \colhead{$r_b$} &
+  \colhead{$\dot{M}/\dot{M}_{\rm Edd}$} & \colhead{$t_{\rm
+      cool}/t_{\rm ff} (r_s)$} & \colhead{comments}}
 \startdata
-\colhead{}           &
-\colhead{(arcsec)}  &
-\colhead{(GHz)}          &
-\colhead{(mJy)}               & 
-\colhead{(deg$^{2}$)}          &
-\colhead{(d)}            &
-%\colhead{(yr)}      &       
-\colhead{}      \\
-\hline
-LOFAR & 80 & 0.15 & 11 & 1500 & 30 & 36 & 1\\
-LOFAR-Expanded  & - & - & 1.1 & $10^{4}$  & 30  & 36 & -\\
-VAST-Wide  & 10 & 1.3 & 0.5 & 10$^{4}$ & 1   & 1096 & 2\\
-VAST-Deep & - & - & 0.05 & -  & 365  & 4 & - \\
-VAST-Deep Single Field & - & - & - & -  & 1  & 365 & - \\
-VLASS-Wide  & 2 & 3 & 0.1 & $10^{4}$ & 365  & 4 & - \\
-VLASS-Deep  & 0.6 & - & 0.003 & 10  & 365  & 4 & - \\
-%VLASS-Deep-Short  & - & - & 0.01 & 40  & 10  & 10 & - \\
-%CMB50cm  & 840 & 150 & 3.2 & 10$^{4}$  & 1  & 1096 & - \\
-%CMB2m  & - & - & 1.0 & -  & -  & - & - \\
-CMB-fast  & 840 & 150 & 1.0 & 10$^{4}$  & 1  & 1096 & - \\
-CMB-deep  & - & - & 0.1 & -  & 100  & 11 & - \\
+0.01 & 300.0 & 0.8 & 100.0 & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
+unresolved \\
+0.01 & 600.0 & 0.8 & 100.0 & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
+10^{ 2 }$ &  rb in fact unresolved\\
+0.01 & 1200.0 & 0.8 & 100.0 & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
+10^{ 4 }$ &  rb in fact unresolved\\
+0.1 & 300.0 & 0.8 & 100.0 & $ 2.5 \times 10^{ -3 }$ & 0.29 & energy
+cons on outer grid \\
+0.1 & 600.0 & 0.8 & 100.0 & $ 1.8 \times 10^{ -4 }$ & 97 &  \\
+0.1 & 1200.0 & 0.8 & 100.0 & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
+10^{ 3 }$ &  energy cons on inner grid\\
+1 & 300.0 & 0.8 & 100.0 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{ -2 }$ &  \\
+1 & 600.0 & 0.8 & 100.0 & $ 7.3 \times 10^{ -4 }$ & 21 &  \\
+1 & 1200.0 & 0.8 & 100.0 & $ 9.9 \times 10^{ -5 }$ & $ 1.5 \times 10^{ 3 }$ &  \\
+0.1 & 300.0 & 0.8 & 50.0 & $ 2.0 \times 10^{ -3 }$ & 0.46 &  \\
+0.1 & 300.0 & 0.8 & 300.0 & $ 7.2 \times 10^{ -3 }$ & $ 6.7 \times 10^{ -2 }$ &  \\
+0.1 & 300.0 & 0.8 & 200.0 & $ 5.3 \times 10^{ -3 }$ & 0.12 &  \\
+0.1 & 300.0 & 0.8 & 400.0 & $ 8.9 \times 10^{ -3 }$ & $ 4.7 \times 10^{ -2 }$ &  \\
+1 & 300.0 & 0.8 & 50.0 & $ 8.2 \times 10^{ -3 }$ & 0.19 &  \\
+1 & 300.0 & 0.8 & 200.0 & $ 3.6 \times 10^{ -2 }$ & $ 1.7 \times 10^{ -2 }$ &  \\
+1 & 300.0 & 0.8 & 300.0 & $ 5.2 \times 10^{ -2 }$ & $ 9.8 \times 10^{
+  -3 }$ &  rb=400 pc was unsuccessful\\
 \enddata
-\tablecomments{Put Results Here}
 \end{deluxetable}
 
-This section describes the results of our numerical calculations, which we use to assess the validity of the analytic expressions provided in the previous section.  Numerical solutions are calculated for each galaxy for three different values of the stellar wind heating parameter $v_{w,0}$ = 300, 600, 1200 km s$^{-1}$.  
+\begin{deluxetable}{lllllll}
+\tabletypesize{\scriptsize}
+%\tablecolumns{6}
+\tabcolsep0.05in\footnotesize
+\tablewidth{0pc}
+\tablecaption{Core Results \label{tab:sols}}
+\tablehead{\colhead{$M_{\bullet,8}$} & \colhead{$v_{w,0}$} &
+\colhead{$\gamma$} & \colhead{$r_b$} & \colhead{$\dot{M}/\dot{M}_{\rm
+Edd}$}  & \colhead{$t_{\rm cool}/t_{\rm ff} (r_s)$} & \colhead{comments}}
+\startdata
+0.01 & 600.0 & 0.1 & 100.0 & $ 3.4 \times 10^{ -5 }$ & $ 1.2 \times 10^{ 2 }$ &  \\
+0.01 & 1200.0 & 0.1 & 100.0 & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times 10^{ 4 }$ &  \\
+0.1 & 1200.0 & 0.1 & 100.0 & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{ 3 }$ &  \\
+1 & 1200.0 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
+1 & 1200.0 & 0.1 & 300.0 & $ 1.9 \times 10^{ -4 }$ & $ 1.3 \times 10^{ 2 }$ &  \\
+\enddata
+\end{deluxetable}
+
+This section describes the results of our numerical calculations,
+which we use to assess the validity of the analytic expressions
+provided in the previous section.  Numerical solutions are calculated
+for each galaxy for three different values of the stellar wind heating
+parameter $v_{w,0}$ = 300, 600, 1200 km s$^{-1}$.
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$, for the cusp
@@ -809,37 +823,91 @@ There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback
 \ee
 where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$.  
 
-We estimate the importance of Compton heating by assuming the SMBH radiates with a luminosity $L = \epsilon \dot{M}c^{2}$, where $\epsilon$ is the radiative efficiency and where $\dot{M}$ is estimated from equation (\ref{eq:mdot_analytic}).  Then using equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}), (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation (\ref{eq:vw_eff}) that
-\begin{align}
-v_{\rm w,0}^{\rm C}  \simeq
-  \begin{cases}
-   13 \eta_{0.02}^{0.5}T_{\rm C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm km\,s^{-1}}  &, \text{core}\\
-   20 \eta_{0.02}^{0.5}T_{\rm C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.24}v_{500}^{-0.7}\,{\rm km\,s^{-1}}   &, \text{cusp},     
+
+{\bf AG: Note that I obtain Compton heating which is a factor of 2
+  higher--although power law dependences look right to me. Note that
+  the Compton heating will depend on radius--I use rs in my own
+  estimate. }
+We estimate the importance of Compton heating by assuming the SMBH
+radiates with a luminosity $L = \epsilon \dot{M}c^{2}$, where
+$\epsilon$ is the radiative efficiency and where $\dot{M}$ is
+estimated from equation (\ref{eq:mdot_analytic}).  Then using
+equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}),
+(\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation
+(\ref{eq:vw_eff}) that
+\begin{align} v_{\rm w,0}^{\rm C} \simeq
+  \begin{cases} 13 \eta_{0.02}^{0.5}T_{\rm
+C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm
+km\,s^{-1}} &, \text{core}\\ 20 \eta_{0.02}^{0.5}T_{\rm
+C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.24}v_{500}^{-0.7}\,{\rm
+km\,s^{-1}} &, \text{cusp},
   \end{cases}
   \label{eq:vC}
-\end{align}
-where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} = \epsilon/0.01 \sim 1$ is the maximum radiative efficiency for a thick accretion flow (e.g.~\citealt{Narayan&Yi95}).  Assuming that heating is dominated by Compton heating ($v_{w} = v_{\rm w,0}^{C}$) one finds that
-\begin{align}
-v_{\rm w,0}^{\rm C}  \simeq
-  \begin{cases}
-   106 \eta_{0.02}^{0.21}T_{\rm C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}  &, \text{core}\\
-   76 \eta_{0.02}^{0.29}T_{\rm C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}   &, \text{cusp},     
+\end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
+\epsilon/0.01 \sim 1$ is the maximum radiative efficiency for a thick
+accretion flow (e.g.~\citealt{Narayan&Yi95}).  Assuming that heating
+is dominated by Compton heating ($v_{w} = v_{\rm w,0}^{C}$) one finds
+that
+\begin{align} v_{\rm w,0}^{\rm C} \simeq
+  \begin{cases} 106 \eta_{0.02}^{0.21}T_{\rm
+C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
+&, \text{core}\\ 76 \eta_{0.02}^{0.29}T_{\rm
+C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
+&, \text{cusp},
   \end{cases}
   \label{eq:vC2}
-\end{align}
-Unless $\eta$ is very high, we conclude that Compton heating is insufficient to stabilize the steady flow against cooling instability (e.g. $v_{\rm w,0}^{C} < v_{\rm critt}$; eq.~[\ref{eq:cooling2}]).  
+\end{align} Unless $\eta$ is very high, we conclude that Compton
+heating is insufficient to stabilize the steady flow against cooling
+instability (e.g. $v_{\rm w,0}^{C} < v_{\rm critt}$;
+eq.~[\ref{eq:cooling2}]).
 
-In contrast to radiative feedback, kinetic feedback occurs in the form of an mass outflow or jet from the viscinity of the black hole, which deposits its energy at much larger radii.  We assume that the total heating rate from the SMBH is $\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an efficiency factor.  If this energy is deposited uniformly out to a radius $r_{\rm heat}$ and volume $V_{\rm heat}$, then the local heating rate $e = \epsilon_{\rm j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind heating rate of
-\begin{eqnarray}
-v_{w,0}^{\bullet} &\approx&  \left(\frac{2t_{\rm h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta \rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2}   \nonumber \\
-&\approx& c\epsilon_{\rm j}^{1/2}\left(\frac{r_{\rm s}}{r_{\rm heat}}\right)^{1-\Gamma/2},
-\end{eqnarray}
-where we have used the fact that $\dot{M} \approx \eta M_{\rm enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ for radii interior to the outer break radius (eq.~[\ref{eq:rhostar}]).  Thus for $r_{\rm heat} \sim r_{\rm s}$, even a small heating efficiency $\epsilon_{\rm j} \sim 10^{-6}$ is sufficient for $v_{\rm w,0}^{\bullet}$ to exceed other sources of non-accretion powered heating.  However, if the jet distributes its energy on much larger scales comparable to the galaxy $r_{\rm heat} \sim $ kpc $\sim 10^{3}r_{\rm s}$ then the heating rate would be much smaller. 
+In contrast to radiative feedback, kinetic feedback occurs in the form
+of an mass outflow or jet from the viscinity of the black hole, which
+deposits its energy at much larger radii.  We assume that the total
+heating rate from the SMBH is $\epsilon_{\rm j} \dot{M}c^{2}$, where
+$\epsilon_{\rm j} < 1$ is an efficiency factor.  If this energy is
+deposited uniformly out to a radius $r_{\rm heat}$ and volume $V_{\rm
+heat}$, then the local heating rate $e = \epsilon_{\rm
+j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind heating rate
+of
+\begin{eqnarray} v_{w,0}^{\bullet} &\approx& \left(\frac{2t_{\rm
+h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
+\rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
+j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
+&\approx& c\epsilon_{\rm j}^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
+heat}}\right)^{1-\Gamma/2},
+\end{eqnarray} where we have used the fact that $\dot{M} \approx \eta
+M_{\rm enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto
+M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ for radii interior to the outer
+break radius (eq.~[\ref{eq:rhostar}]).  Thus for $r_{\rm heat} \sim
+r_{\rm s}$, even a small heating efficiency $\epsilon_{\rm j} \sim
+10^{-6}$ is sufficient for $v_{\rm w,0}^{\bullet}$ to exceed other
+sources of non-accretion powered heating.  However, if the jet
+distributes its energy on much larger scales comparable to the galaxy
+$r_{\rm heat} \sim $ kpc $\sim 10^{3}r_{\rm s}$ then the heating rate
+would be much smaller.
 
-For a fixed heating radius $r_{\rm heat}$ we just see that $v_{\rm w,0}^{\bullet} \propto r_{\rm s}^{\beta/2} \propto M_{\bullet}^{1-\Gamma/2}v_{\rm w,0}^{\Gamma-2}$ is proportional to $v_{w,0}$ to a negative power, where the last proportionality makes use of equation (\ref{eq:stag_simple}).  As in the case of Compton heating, SMBH kinetic heating, when dominant, may thus ``self-regulate".  However, unlike in the case of local stellar wind heating, SMBH heating may not be thermally stable, since the central accretion rate does not respond instantaneously to a change in the thermodynamic properties of the gas on larger scales.  Also note that $v_{\rm w,0}^{\bullet}$ is proportional to a positive power of SMBH mass $\propto M_{\bullet}^{1(0.5)}$ for core(cusp) galaxies, respectively.  This is dependence may have important implications for the predicted dependence of X-ray luminosity on SMBH mass ($\S\ref{sec:mdot}$).    
+For a fixed heating radius $r_{\rm heat}$ we just see that $v_{\rm
+  w,0}^{\bullet} \propto r_{\rm s}^{\beta/2} \propto
+M_{\bullet}^{1-\Gamma/2}v_{\rm w,0}^{\Gamma-2}$ is proportional to
+$v_{w,0}$ to a negative power, where the last proportionality makes
+use of equation (\ref{eq:stag_simple}).  As in the case of Compton
+heating, SMBH kinetic heating, when dominant, may thus
+``self-regulate".  However, unlike in the case of local stellar wind
+heating, SMBH heating may not be thermally stable, since the central
+accretion rate does not respond instantaneously to a change in the
+thermodynamic properties of the gas on larger scales.  Also note that
+$v_{\rm w,0}^{\bullet}$ is proportional to a positive power of SMBH
+mass $\propto M_{\bullet}^{1(0.5)}$ for core(cusp) galaxies,
+respectively.  This is dependence may have important implications for
+the predicted dependence of X-ray luminosity on SMBH mass
+($\S\ref{sec:mdot}$).
 
-What is a physically motivated value of the heating radius $r_{\rm heat}$?  \citet{Bromberg+11} show that a jet of luminosity $L_{\rm j}$ and half opening angle $\theta_{\rm j} = 0.1$ (characteristic of AGN jets) propagates through a gaseous mass $M_{\rm g}$ to a radius $r$ in a
-timescale
+What is a physically motivated value of the heating radius $r_{\rm
+  heat}$?  \citet{Bromberg+11} show that a jet of luminosity $L_{\rm
+  j}$ and half opening angle $\theta_{\rm j} = 0.1$ (characteristic of
+AGN jets) propagates through a gaseous mass $M_{\rm g}$ to a radius
+$r$ in a timescale
 \begin{eqnarray}
 t_{\rm jet} &\sim& 4000\,{\rm yr}\left(\frac{{L}_{\rm j}}{10^{40}\,\rm erg\,s^{-1}}\right)^{-1/3}\left(\frac{r}{\rm pc}\right)^{2/3}\left(\frac{M_{\rm g}}{10^{8}M_{\odot}}\right)^{1/3} 
 \end{eqnarray}
@@ -981,7 +1049,7 @@ new gridded approach.}
 % % Thus, we choose $\vwO=500$ km/s.  We choose an
 % % $\eta$ so that our solution would be consistent with the observed
 % % density profiles. The comparison is shown in
-% %% AG-The chosen properties, in particular eta may be summarized in a table.
+% %% AG-The chosen properties, in particular eta may be summarized in a tabe.
 % %% AG-Mention rising temperature profiles on large scales.
 
 % \begin{itemize}

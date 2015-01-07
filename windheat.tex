@@ -1,100 +1,212 @@
-If we assume that a stellar population forms
-impulsively in the distant pass with IMF $\mu(m_*)$(with minimum mass
-$m_0$ and maximum mass $m_1$), then the surviving mass fraction at any
-future time $t$ is given by
-\begin{equation}
-f(t) =\frac{ \int_{m_0}^{m_{\rm T}(t)} m_* \mu(m_*) dm_* }{ \int_{m_0}^{m_1} m_* \mu(m_*) dm_* },
-\end{equation}
-where the main sequence turnoff mass is approximately
-\begin{equation}
-m_{\rm T}(t) \approx 2.5M_\odot~ \left( \frac{t}{10^9~{\rm yr}} \right)^{-0.4}.
-\end{equation}
-For a Salpeter IMF $\mu(m_*) \propto m_*^{-2.35}$ with $m_0=0.1M_\odot$ and $m_1=100M_\odot$,
-\begin{equation}
-f_{\rm Sal}(t) = 1.098 - 0.490 \left(\frac{t}{10^{10}~{\rm yr}} \right)^{0.14}
-\end{equation}
-{\bf NCS: we should probably use a Kroupa/Chabrier IMF, but this gets the ball rolling.}
-If we approximate post-main sequence evolution as instantaneous and define $\lambda(m_*)$ as the fractional mass lost during all stages of stellar evolution, then the mass loss rate density
-\begin{equation}
-q(t) = \frac{\rho_*}{\bar{m}_*} \lambda(m_{\rm T}(t)) m_{\rm T}(t) \frac{df}{dt},
-\end{equation}
-where the mean stellar mass $\bar{m}_* = \int_{m_0}^{m_{\rm T}(t)} m_*\mu(m_*)dm_* \approx 0.3 M_\odot$.  Further approximating $\lambda(m_*)=0.5$, and using the Salpeter IMF once more, gives
-\begin{equation}
-q(t) = \frac{\rho_*}{10^{10}~{\rm yr}} \times 0.11 \left(\frac{t}{10^{10}~{\rm yr}} \right)^{-1.26}.
-\end{equation}
-This is a specific, time-dependent definition of $\eta(t) (=0.11(t/t_{\rm h})^{-1.26})$; if we consider different star formation scenarios (for example, continuous star formation) or different IMFs, it will change.  Once these free parameters are specified, however, we can answer an important question: do young stellar populations increase or decrease the SMBH feeding rate $\dot{M}$?  Clearly, $\eta(t)$ is larger for young stellar populations, but these stars also have high wind velocities that diminish the stagnation radius.  Crudely approximating $v_{\rm w}=75~{\rm km~s}^{-1}$ for $m_{\rm T} < 10M_{\odot}$ and $v_{\rm w}=3000~{\rm km~s}^{-1}$ for $m_{\rm T} > 10M_{\odot}$ (motivated by the transition from dust-driven wind loss on the AGB to line-driven wind loss from Wolf-Rayet stars), we can employ the relation $\dot{M} \propto \eta(t) r_{\rm s}^{2-\Gamma}\propto \eta(t) v_{\rm w}^{-4+2\Gamma}$ (where $\rho_* \propto r^{-\Gamma}$) to determine the impact of stellar ``youth'' on SMBH feeding rates.
-{\bf AG:As I previously mentioned this discussion of the eta is not
-  quite correct...}
-\begin{figure}
-\includegraphics[width=\columnwidth]{NickPlot.eps}
-\caption{\label{NickPlot} SMBH feeding rates $\dot{M}=\eta(t) \times M_*(r_{\rm s})$, in arbitrary units.  The green, blue, and black curves are for galaxies with $\Gamma$ values of $0.1$, $0.5$, and $0.9$, respectively.  Solid curves represent impulsive-mode star formation, while dotted curves represent continuous-mode star formation. {\bf NCS: I think these old continuous curves are wrong, need to revise}}
-\end{figure}
+% If we assume that a stellar population forms
+% impulsively in the distant pass with IMF $\mu(m_*)$(with minimum mass
+% $m_0$ and maximum mass $m_1$), then the surviving mass fraction at any
+% future time $t$ is given by
+% \begin{equation}
+% f(t) =\frac{ \int_{m_0}^{m_{\rm T}(t)} m_* \mu(m_*) dm_* }{ \int_{m_0}^{m_1} m_* \mu(m_*) dm_* },
+% \end{equation}
+% where the main sequence turnoff mass is approximately
+% \begin{equation}
+% m_{\rm T}(t) \approx 2.5M_\odot~ \left( \frac{t}{10^9~{\rm yr}} \right)^{-0.4}.
+% \end{equation}
+% For a Salpeter IMF $\mu(m_*) \propto m_*^{-2.35}$ with $m_0=0.1M_\odot$ and $m_1=100M_\odot$,
+% \begin{equation}
+% f_{\rm Sal}(t) = 1.098 - 0.490 \left(\frac{t}{10^{10}~{\rm yr}} \right)^{0.14}
+% \end{equation}
+% {\bf NCS: we should probably use a Kroupa/Chabrier IMF, but this gets the ball rolling.}
+% If we approximate post-main sequence evolution as instantaneous and define $\lambda(\Mstar)$ as the fractional mass lost during all stages of stellar evolution, then the mass loss rate density
+% \begin{equation}
+% q(t) = \frac{\rho_*}{\bar{m}_*} \lambda(m_{\rm T}(t)) m_{\rm T}(t) \frac{df}{dt},
+% \end{equation}
+% where the mean stellar mass $\bar{m}_* = \int_{m_0}^{m_{\rm T}(t)} \Mstar\mu(\Mstar)d\Mstar \approx 0.3 M_\odot$.  Further approximating $\lambda(\Mstar)=0.5$, and using the Salpeter IMF once more, gives
+% \begin{equation}
+% q(t) = \frac{\rho_*}{10^{10}~{\rm yr}} \times 0.11 \left(\frac{t}{10^{10}~{\rm yr}} \right)^{-1.26}.
+% \end{equation}
+% This is a specific, time-dependent definition of $\eta(t) (=0.11(t/t_{\rm h})^{-1.26})$; if we consider different star formation scenarios (for example, continuous star formation) or different IMFs, it will change.  Once these free parameters are specified, however, we can answer an important question: do young stellar populations increase or decrease the SMBH feeding rate $\dot{M}$?  Clearly, $\eta(t)$ is larger for young stellar populations, but these stars also have high wind velocities that diminish the stagnation radius.  Crudely approximating $v_{\rm w}=75~{\rm km~s}^{-1}$ for $m_{\rm T} < 10M_{\odot}$ and $v_{\rm w}=3000~{\rm km~s}^{-1}$ for $m_{\rm T} > 10M_{\odot}$ (motivated by the transition from dust-driven wind loss on the AGB to line-driven wind loss from Wolf-Rayet stars), we can employ the relation $\dot{M} \propto \eta(t) r_{\rm s}^{2-\Gamma}\propto \eta(t) v_{\rm w}^{-4+2\Gamma}$ (where $\rho_* \propto r^{-\Gamma}$) to determine the impact of stellar ``youth'' on SMBH feeding rates.
+% {\bf AG:As I previously mentioned this discussion of the eta is not
+%   quite correct...}
+% \begin{figure}
+% \includegraphics[width=\columnwidth]{NickPlot.eps}
+% \caption{\label{NickPlot} SMBH feeding rates $\dot{M}=\eta(t) \times \Mstar(r_{\rm s})$, in arbitrary units.  The green, blue, and black curves are for galaxies with $\Gamma$ values of $0.1$, $0.5$, and $0.9$, respectively.  Solid curves represent impulsive-mode star formation, while dotted curves represent continuous-mode star formation. {\bf NCS: I think these old continuous curves are wrong, need to revise}}
+% \end{figure}
 
-In Fig. \ref{NickPlot} we plot $\dot{M}$, in arbitrary units, as a
-function of time, for three different stellar density profiles $\Gamma
-= \{1.1, 1.5, 1.9\}$ (which are normalized to have the same mass at an
-influence radius $r _{\rm soi}=10~{\rm pc}$ around a $10^7M_\odot$
-SMBH).  We parametrize the wind velocity as
-\begin{equation} \frac{v_{\rm w}}{3000 ~\rm
-km~s^{-1}}=520-495\tanh\left( \frac{t-10^{7.5}~{\rm yr}}{10^{7}~{\rm
-yr}}\right). \label{NickV1}
-\end{equation} This counts Type II SNe heating as ``winds;'' if
-instead we are in the portion of parameter space where $r_{\rm II}$ is
-very large, then we use the alternate parametrization
-\begin{equation} \frac{v_{\rm w}}{3000 ~\rm
-km~s^{-1}}=520-495\tanh\left( \frac{t-10^{7}~{\rm yr}}{10^{6.5}~{\rm
-yr}}\right), \label{NickV2}
-\end{equation} which only allows short lived Wolf-Rayet stars to
-contribute to the high-heating mode.  The ``impulsive burst'' mode of
-star formation produces large ($\sim 10$) differences between the
-three $\dot{M}$ curves at early times, when $r_{\rm s}$ is small, but
-smaller ($\sim 3$) differences at late times, when $r_{\rm s}$ is
-large.  We also plot, as dotted curves, a simple model for the
-``continuous'' mode of star formation, where mass loss is calculated
-as $\bar{\eta} = \int\eta(t)dt/t_{\rm h} \approx 4$ and an average
-energy injection in the wind is calculated as $\bar{v_{\rm
-w}^2}=\int\eta(t)v_{\rm w}^2(t)dt/\bar{\eta} \approx (800~{\rm
-km~s}^{-1})^2$.  Interestingly, the continuous mode of star formation
-produces small differences from late-time $\dot{M}$ seen in cusp
-galaxies with impulsive star formation; however, continuous mode star
-formation decreases late-time $\dot{M}$ by an order of magnitude
-relative to impulsive star formation in core galaxies.  {\bf NCS: I
-think this old discussion of MDot in the continuous limit is wrong,
-need to revise}
+% In Fig. \ref{NickPlot} we plot $\dot{M}$, in arbitrary units, as a
+% function of time, for three different stellar density profiles $\Gamma
+% = \{1.1, 1.5, 1.9\}$ (which are normalized to have the same mass at an
+% influence radius $r _{\rm soi}=10~{\rm pc}$ around a $10^7M_\odot$
+% SMBH).  We parametrize the wind velocity as
+% \begin{equation} \frac{v_{\rm w}}{3000 ~\rm
+% km~s^{-1}}=520-495\tanh\left( \frac{t-10^{7.5}~{\rm yr}}{10^{7}~{\rm
+% yr}}\right). \label{NickV1}
+% \end{equation} This counts Type II SNe heating as ``winds;'' if
+% instead we are in the portion of parameter space where $r_{\rm II}$ is
+% very large, then we use the alternate parametrization
+% \begin{equation} \frac{v_{\rm w}}{3000 ~\rm
+% km~s^{-1}}=520-495\tanh\left( \frac{t-10^{7}~{\rm yr}}{10^{6.5}~{\rm
+% yr}}\right), \label{NickV2}
+% \end{equation} which only allows short lived Wolf-Rayet stars to
+% contribute to the high-heating mode.  The ``impulsive burst'' mode of
+% star formation produces large ($\sim 10$) differences between the
+% three $\dot{M}$ curves at early times, when $r_{\rm s}$ is small, but
+% smaller ($\sim 3$) differences at late times, when $r_{\rm s}$ is
+% large.  We also plot, as dotted curves, a simple model for the
+% ``continuous'' mode of star formation, where mass loss is calculated
+% as $\bar{\eta} = \int\eta(t)dt/t_{\rm h} \approx 4$ and an average
+% energy injection in the wind is calculated as $\bar{v_{\rm
+% w}^2}=\int\eta(t)v_{\rm w}^2(t)dt/\bar{\eta} \approx (800~{\rm
+% km~s}^{-1})^2$.  Interestingly, the continuous mode of star formation
+% produces small differences from late-time $\dot{M}$ seen in cusp
+% galaxies with impulsive star formation; however, continuous mode star
+% formation decreases late-time $\dot{M}$ by an order of magnitude
+% relative to impulsive star formation in core galaxies.  {\bf NCS: I
+% think this old discussion of MDot in the continuous limit is wrong,
+% need to revise}
 
-The continuous mode of star formation can be studied more accurately
-by including arbitrary star formation histories $S(t)$, measured in
-units of mass per time.  In particular, if an impulsively formed
-stellar population that is $t$ years of age, we can write its current
-mass loss rate, $\dot{\bar{m}}(t)$, and its current effective wind
-speed, $\bar{v}_{\rm w}(t)$.  Specifically,
+The energy and mass injection from stellar winds will be the sum ofthe
+contributions from main sequence and post-main sequence (PMS) stars.
+For an impulsively formed stellar population of age $t$, the mass
+injection rate per unit stellar mass ($\dot{\bar{m}}(t)$) and energy
+injection rate per unit stellar mass will be given by
+($\dot{\bar{e}}(t)$).
+
 \begin{align} 
   \dot{\bar{m}}(t) &= \frac{\Delta M(t) \mu(M_{\rm TO}(t))
-    \left|\dot{M}_{\rm TO}(t)\right| + f_{\rm ms} \int_{m_0}^{m_{\rm
+    \left|\dot{M}_{\rm TO}(t)\right| + f_{\rm MS} \int_{m_0}^{m_{\rm
         T}(t)}
-    \dot{m}(m_*, t) \mu(m_*) {\rm d}m_* }{\bar{m}_*}\\
-  \dot{\bar{e}}(t) &=\dot{e}_{\rm TO}+ f_{\rm MS} \int_{m_0}^{m_{\rm T}(t)}
-  \frac{\vw^2(t) \dot{m}(m_*, t) \mu(m_*) {\rm d}m_*}{\bar{m}_*}.
+    \dot{m}(\Mstar, t) \mu(\Mstar) {\rm d}\Mstar }{\bar{m}_*}\\
+  \dot{\bar{e}}(t) &=\dot{e}_{\rm TO}(t)+ f_{\rm MS} \int_{m_0}^{m_{\rm T}(t)}
+  \frac{\vw^2(\Mstar, t) \dot{m}(\Mstar, t) \mu(\Mstar) {\rm d}\Mstar}{\bar{m}_*}.
+  \label{eq:edotImp}
 \end{align} 
 
-The first term corresponds to a more impulsive contribution from
-post-main sequence (PMS) stars, while the second term corresponds to
-the contribution from main-sequence winds. 
+The first terms in each expression above correspond to the
+contributions from PMS stars, while the second terms correspond to the
+contributions from main sequence stars. The main sequence winds are
+subdominant in mass, and may be not be thermalized and
+mixed with the rest of the injected gas. Thus, we include a
+thermalization efficiency, $ 0\le f_{\rm MS}\le 1$, in
+equation~\eqref{eq:edotImp}. Throughout this paper we set $f_{\rm
+  MS}=1$. 
+
+We assume a Salpeter IMF $\mu(\Mstar)\sim M^{-2.35}$, truncated at $0.1
+\Msun$ on the low mass end and at $100 \Msun$ on the high mass
+end. The corresponding $\bar{m}_*$ is 0.35 $\Msun$.
+
+For the turnoff mass, $M_{\rm TO}$, we take the following fitting
+formula 
+
+\begin{align}
+\log(M_{\rm TO})=0.24 + 0.068 x^2-0.34 x+4.76 e^{-4.58 x},
+\end{align}
+
+where $x=\log(t/10^9 {\rm years})$ and $M_{\rm TO}$ is in units
+$\Msun$. This fit is designed to reproduce the results in 
+Table 9 of \citet{MaederMeynet:1987a} and then asymptotes to the fit
+for $M_{\rm TO}$ given in equation (9) of \citet{CiottiOstriker:2007a}
+for intermediate and late times ($t \gsim 10^8$ years).
+
+For $\Delta M(t)$ we use equation (10) from \citet{CiottiOstriker:2007a}
+
+\begin{align}
+\Delta M=
+\begin{cases}
+0.945 M_{\rm TO}-0.503 & M_{\rm TO} < 9 \Msun\\
+ M_{\rm TO}-1.4 \Msun &  M_{\rm TO} \ge 9 \Msun
+\end{cases}
+\end{align}
+
+To estimate the mass loss from main sequence stars $\dot{\Mstar,t}$,
+we use equation 4 \citet{SchroderCuntz:2005a}\footnote{This
+  prescription is a generalization of the Reimers' mass loss law. This
+expression is derived assuming the stellar wind results from the
+turbulent overflow of moaterial in the chromosphere or underneath it.} {\bf AG:
+  unfortunately this is not really meant for MS stars...}
+
+\begin{align}
+  \dot{m}(\Mstar)=8 \times 10^{-14} \frac{L_* R_*}{\Mstar}
+  \left(\frac{T_{\rm eff}}{\rm 4000 K}\right)^{3.5}
+  \left(1+\frac{g_{\odot}}{4300 g_*}\right) \Msun \pyear,\
+\end{align}
+
+where  $R_*$, $L_*$, $T_{\rm eff}$ and $g_*$ are the stellar radius,
+luminosity, effective and surface gravity respectively. $g_{\odot}$ is
+the stellar surface gravity. To calculate $R_*$ and $L_*$ we use the
+following scaling relations (taken from Kippenhann and Weygert Figures
+22.2 and 22.3).
+
+\begin{align}
+L_*=
+\begin{cases}
+L_{\odot} (\Mstar/\Msun)^{3.2} & \Mstar > \Msun \\
+L_{\odot} (\Mstar/\Msun)^{2.5} & \Mstar \le \Msun
+\end{cases}
+\end{align}
+
+\begin{align}
+r_*=
+\begin{cases}
+R_{\odot} (\Mstar/\Msun)^{0.57} & \Mstar > \Msun \\
+R_{\odot} (\Mstar/\Msun)^{0.8} & \Mstar \le \Msun
+\end{cases}
+\end{align}
 
 
-{\bf Note that I have not written the turnoff contribution in terms of
-  a wind velocity. One can simply read off the specific energy
-  injection rate from Voss '09...}
+To get a handle on $\dot{e}_{\rm TO}(t)$, we use the results from
+\citet{VossDiehl+:2009a} who use a population synthesis code to
+simulate the mass and energy injection into the ISM from an OB
+association. For the first $\sim 10$ Myr the energy injection will
+come from energetic Wolf-Rayet star winds. The energy injection rate
+per massive star ($\Mstar>8 \Msun$), $\dot{\mathcal{E}} (t)$, from
+stellar winds is plotted in the top panel of their Figure 7 and is
+well fit {\bf AG: A little more detail here...} by
+
+\begin{align}
+\dot{\mathcal{E}} (t)=
+\begin{cases}
+  1.3 \times 10^{36} {\rm ergs/s} & t<4 \times 10^6 {\rm years}\\
+  1.3  \times 10^{36} {\rm ergs/s} \left(\frac{t}{4 \times  10^6}\right)^{-3.73} & t \ge 4 \times 10^6 {\rm years}.
+\end{cases}
+\label{eq:voss}
+\end{align}
+
+ $\dot{e}_{\rm TO}(t)$ is related to $\dot{\mathcal{E}}$  via 
+
+\begin{align}
+\dot{e}_{\rm TO}(t)=f_{8} \dot{\mathcal{E}} / \bar{m}_*,
+\label{eq:eto}
+\end{align}
+
+where $f_{8}$ is the fraction of the stellar population with
+$\Mstar>8 \Msun$. $f_8=2.6 \times 10^{-3}$ for our assumed Salpeter
+IMF.  Equation~\eqref{eq:voss} and~\eqref{eq:eto} will be valid onlyfor $t
+\lsim 10$ Myr. However, the turnoff contribution will become extremely
+energetically subdominant at later times as far slower dust-driven
+winds come to dominate the energy budget {\bf AG: Nick check--is the
+  preceding sentence accurate}
+
+We calculate the wind velocity for main sequence winds $v_w (\Mstar,
+t)$ using...{\bf AG:Current just use the value for the sun~430 km/s
+  replace with the real prescription we end up using.}
 
 The effective wind velocity in the impulsive limit may then be written
 as 
 
 \begin{align}
-\bar{v}_w=2 \dot{\bar{e}}/\dot{\bar{m}}
+\bar{v}_w(t)=2 \dot{\bar{e}}(t)/\dot{\bar{m}}(t)
+\label{eq:vwImp}
 \end{align}
 
+We plot $\bar{v}_w$ in Figure~\ref{fig:vwImp}.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{vwImp.pdf}
+\caption{\label{fig:vwImp} The effective $\vw$ from stellar winds from
+  a stellar population formed in a starburst $t$ years ago.}
+\end{figure}
+
 We can then use these integrated quantities to determine the effective
-$V_w$ for arbitrary star formation histories.
+$V_w$ for arbitrary star formation histories. For a stellar population
+with star formation rate $S(t)$ 
 
 \begin{align} 
   \dot{M}(t) &= \int_0^t S(t_1) \dot{\bar{m}}(t-t_1){\rm
