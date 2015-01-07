@@ -123,7 +123,7 @@ turbulent overflow of moaterial in the chromosphere or underneath it.} {\bf AG:
   unfortunately this is not really meant for MS stars...}
 
 \begin{align}
-  \dot{m}(\Mstar)=8 \times 10^{-14} \frac{L_* R_*}{\Mstar}
+  \dot{m}(\Mstar)=8 \times 10^{-14} \frac{L_* r_*}{\Mstar}
   \left(\frac{T_{\rm eff}}{\rm 4000 K}\right)^{3.5}
   \left(1+\frac{g_{\odot}}{4300 g_*}\right) \Msun \pyear,\
 \end{align}
@@ -155,7 +155,7 @@ To get a handle on $\dot{e}_{\rm TO}(t)$, we use the results from
 \citet{VossDiehl+:2009a} who use a population synthesis code to
 simulate the mass and energy injection into the ISM from an OB
 association. For the first $\sim 10$ Myr the energy injection will
-come from energetic Wolf-Rayet star winds. The energy injection rate
+be dominated by fast Wolf-Rayet star winds. The energy injection rate
 per massive star ($\Mstar>8 \Msun$), $\dot{\mathcal{E}} (t)$, from
 stellar winds is plotted in the top panel of their Figure 7 and is
 well fit {\bf AG: A little more detail here...} by
@@ -169,6 +169,13 @@ well fit {\bf AG: A little more detail here...} by
 \label{eq:voss}
 \end{align}
 
+Equation~\eqref{eq:voss} is valid only for $t \lsim 10$ Myr. For $t\gsim
+10$ Myr, $\dot{e}_{\rm TO}$ will be negligible as lower mass stars
+shed their gas is slow dust-driven winds during their post-main
+sequence evolution {\bf AG-Nick is the preceding statement accurate},
+and for our purposes the exact functional form of $\dot{e}_{\rm
+  TO}(t)$ is unimportant. So we adopt Equation~\eqref{eq:voss} for all times.
+
  $\dot{e}_{\rm TO}(t)$ is related to $\dot{\mathcal{E}}$  via 
 
 \begin{align}
@@ -176,13 +183,9 @@ well fit {\bf AG: A little more detail here...} by
 \label{eq:eto}
 \end{align}
 
-where $f_{8}$ is the fraction of the stellar population with
-$\Mstar>8 \Msun$. $f_8=2.6 \times 10^{-3}$ for our assumed Salpeter
-IMF.  Equation~\eqref{eq:voss} and~\eqref{eq:eto} will be valid onlyfor $t
-\lsim 10$ Myr. However, the turnoff contribution will become extremely
-energetically subdominant at later times as far slower dust-driven
-winds come to dominate the energy budget {\bf AG: Nick check--is the
-  preceding sentence accurate}
+where $f_{8}$ is the fraction of the stellar population with $\Mstar>8
+\Msun$. $f_8=2.6 \times 10^{-3}$ for our assumed Salpeter IMF.
+
 
 We calculate the wind velocity for main sequence winds $v_w (\Mstar,
 t)$ using...{\bf AG:Current just use the value for the sun~430 km/s
@@ -196,7 +199,7 @@ as
 \label{eq:vwImp}
 \end{align}
 
-We plot $\bar{v}_w$ in Figure~\ref{fig:vwImp}.
+We plot $\bar{v}_w$ versus time in Figure~\ref{fig:vwImp}.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwImp.pdf}
