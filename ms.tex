@@ -93,33 +93,7 @@
 \maketitle
 
 \begin{abstract}
-  Steady-state hydrodynamic profiles of hot gas in  the nuclei of a sample of early-type quiescent galaxies are calculated.  We assume
-  that mass is supplied to the circumnuclear medium (CNM) entirely by
-  stellar winds according to the radial stellar profiles for each
-  galaxy, while the gas is heated by a combination of shocked stellar
-  winds and supernovae.  Our analytic and numerical results are used
-  to estimate the accretion rates onto the central supermassive black
-  holes (SMBH) as a function of the SMBH mass $M_{\bullet}$ and the
-  heating efficiency, the latter of which is related schematically to
-  the age of the stellar population, the frequency of supernovae, and
-  the efficacy of accretion feedback processes.  For a fixed heating
-  efficiency, we find that the SMBH accretion Eddington factor
-  increases with the SMBH mass, $\dot{M}/\dot{M}_{\rm edd} \propto
-  M_{\bullet}^{\alpha}$ with $\alpha \approx 0.5, 1$ for cusp and core
-  nuclei, respectively.
-  % However, considering the potentially lower heating efficiency of low
-  % mass SMBHs (due to a younger stellar population and the rareity of
-  % supernovae within the stagnation radius) and their resulting higher
-  % susceptibility to cooling instability, we find a flatter
-  % relationship $\alpha \approx 0$. 
-  Our results are used to check previous estimates of the SMBH
-  accretion rate assuming Bondi accretion and extrapolating the X-ray
-  measured density and temperature to the unresolved Bondi radius.  We
-  also discuss the implications of our results for the diversity of
-  CNM environments encountered by the jetted outflows from tidal
-  disruption events, and for the use of an assumed
-  $\dot{M}-M_{\bullet}$ relationship to constrain the occupation
-  fraction of SMBHs in low mass galaxies.
+Steady-state one-dimensional hydrodynamic profiles of hot gas in the nuclei of quiescent galaxies are calculated for a range of black hole masses, parameterized gas heating rates, and physically-motivated stellar density profiles.  Mass is supplied to the circumnuclear medium (CNM) by stellar winds, while gas is heated by a combination of stellar winds, supernovae, and black hole feedback.  Analytic estimates are derived, neglecting radiative cooling, for quantities including the stagnation radius where the radial velocity goes to zero (if it exists) and the black hole accretion rate as a function of the heating efficiency, the latter of which is related to the star-formation history of the stellar population.  These results are used to assess over what range of conditions radiative instability will develop, assuming a feedback due to the average star formation history for galaxies of the given black hole mass.  Our main conclusion is that.....  Implications of our results for estimates of the accretion rate using Bondi formula, and for the diversity of CNM environments encountered by the jetted outflows from tidal disruption events, and for the use of an assumed $\dot{M}-M_{\bullet}$ relationship to constrain the occupation fraction of SMBHs in low mass galaxies, are briefly discussed.
 \end{abstract}
 
 \begin{keywords}
@@ -139,87 +113,42 @@ manifest themselves as luminous Active Galactic Nuclei (AGN).  Nearly
 quiescent SMBHs, such as those hosting low luminosity AGN, constitute
 a silent majority (e.g.~\citealt{Ho:2009a}).
 
-In order to understand why most SMBHs appear to be inactive, it is
-necessary to understand their gaseous environments.  Hot gas near the
-SMBH sphere of influence (the `circumnuclear medium' or CNM) controls
-the central mass accretion rate $\dot{M}$.  Better knowledge of how
-$\dot{M}$ varies with the SMBH mass $\Mbh$ and other properties of the
-galactic nucleus is necessary to understand the co-evolution of SMBHs
-and their host galaxies with cosmic time.  SMBH growth in the low
-redshift universe, for instance, appears to be dominated by low mass
-black holes (e.g.~\citealt{Heckman+04}).  Although this is often
-attributed to cosmological ``down sizing" (e.g, \citealt{Gallo+08}),
-the physical processes involved may be distinct from those operating
-at higher SMBH masses and accretion rates in quasars.
+To understand why most SMBHs appear to be inactive requires understanding their gaseous environments.  Hot gas near the
+SMBH sphere of influence (hereafter the `circumnuclear medium', or CNM) controls the central mass accretion rate $\dot{M}$.  The latter in turn affects the luminosity of the accretion flow and the possible impact of its energy and momentum input (`feedback') on larger scales.  The presence of dense gas in the nucleus can also lead to runaway cooling instabilities, resulting in bursty star-formation or episodic AGN activity (reference Ciotti and others).
 
-The accretion rates of low mass SMBHs and their resulting nuclear
-X-ray luminosities $L_X$ also have implications for observational
+Knowledge of how $\dot{M}$ varies with the SMBH mass $\Mbh$ and other properties of the
+galactic nucleus informs key questions related to co-evolution of SMBHs and their host galaxies with cosmic time.  SMBH growth in the low redshift universe appears to be dominated by lower mass black holes (e.g.~\citealt{Heckman+04}).  This is often
+attributed to cosmological `down sizing' (e.g, \citealt{Gallo+08}), even though the physical processes involved may be distinct from those operating at higher SMBH masses and accretion rates in quasars.
+
+The accretion rates of low mass SMBHs, and their resulting nuclear X-ray luminosities $L_X$, also have implications for observational
 constraints on their occupation fraction in low mass galaxies and the
-possible existence of intermediate mass black holes.
-\citet{MillerGallo+:2014a} combine the relationship between $\Mbh$ and
-$L_X$ from a sample of relatively high mass galaxies
-(\citealt{Gallo+08}) with upper limits on $L_X$ in several lower mass
-galaxies, to infer tentative evidence for an occupation fraction less
-than unity.  However, this method relies on extrapolating a power-law
-fit to the $L_X-\Mbh$ distribution to low $\Mbh$, below the
-instrumental detection threshold.  The conclusions of
-\citet{MillerGallo+:2014a} are thus sensitive to possible changes in
-the $L_X$-$\Mbh$ relationship at small $\Mbh$.
+possible existence of intermediate mass black holes.  By combining the average relationship between $\Mbh$ and
+$L_X$ measured from a sample of high mass galaxies (\citealt{Gallo+08}) with upper limits on $L_X$ in lower mass
+galaxies, \citet{MillerGallo+:2014a}  infer tentative evidence for an occupation fraction less than unity in the latter.  This method, however, relies on extrapolating a power-law fit to the $L_X-\Mbh$ distribution to low $\Mbh$ below the detection threshold.  
+
+%The conclusions of
+%\citet{MillerGallo+:2014a} are thus sensitive to possible changes in
+%the $L_X$-$\Mbh$ relationship at small $\Mbh$.
 % AG: In our model we obtain a steeper relationship, but we have difficulty matching the observed relationship above the detection threshold
 
-The density profile of the CNM also influences the emission from
-stellar tidal disruption events (TDEs), such as the high energy
-transient {\it Swift} J1644+57 (\citealt{Levan+11};
-\citealt{Bloom+11}, \citealt{Burrows+11}; \citealt{Zauderer+11}).
+The gas density of the CNM also influences the emission from stellar tidal disruption events (TDEs), such as the high energy
+transient {\it Swift} J1644+57 (\citealt{Levan+11}; \citealt{Bloom+11}, \citealt{Burrows+11}; \citealt{Zauderer+11}).
 This event was powered by a transient relativistic jet, which produced
 synchrotron radio emission as the jet material was decelerated by
 shock interaction with the CNM of the previously quiescent SMBH
 (\citealt{Giannios&Metzger11}; \citealt{Zauderer+11}).  Detailed
-modeling of {\it Swift} J1644+57 showed that the CNM density was
+modeling of J1644+57 showed that the CNM density was
 significantly lower than that measured surrounding Sgr A$^{\star}$
 (\citealt{Metzger+12}; \citealt{Berger+12}).  However, a TDE jet
 injected into a denser CNM would be decelerated more rapidly,
-producing substantially different radio emission than in {\it Swift}
-J1644+57.  Variations in the properties of the CNM could thus in
+producing substantially different radio emission than in J1644+57.  Variations in the properties of the CNM could thus in
 principle help explain why most TDEs appear to be radio quiet
 (e.g.~\citealt{Bower+13}; \citealt{VanVelzen+13}).
 
-Gas that forms the CNM of a SMBH may originate from several sources
-(\citealt{Ho:2009a}): (1) wind mass loss from (predominantly evolved)
-stars; (2) star-star collisions; (3) the unbound debris from TDEs.
-Stellar wind mass loss is probably the dominant source in most cases
-insofar as collisions are relevant only in very dense stellar
-environments for young stellar populations (\citealt{Rubin&Loeb11}),
-while TDEs are estimated to provide a subdominant contribution to the
-time-averaged accretion rate of quiescent SMBHs
-(\citealt{MacLeod+13}).
+Gas comprising the CNM can in principle originate from a variety of sources: (1) wind mass loss from (predominantly evolved) stars; (2) star-star collisions; and (3) unbound debris from TDEs.  Stellar wind mass loss is probably the dominant source insofar as collisions are relevant only in very dense stellar environments for young stellar populations (\citealt{Rubin&Loeb11}), while \citet{MacLeod+13} find that TDEs contribute subdominantly to the time-averaged accretion rate of quiescent SMBHs.
 
-\citet{Ho:2009a} calculates the accretion rates onto a sample of
-early-type galaxies both by using X-ray observations to determine the
-Bondi accretion rate, and by estimating the contributions from the
-mass loss of evolved stars.  Both methods lead him to conclude that
-the available reservoir of gas is more than sufficient to power
-low-luminosity AGN, assuming the standard radiative efficiency $\eta
-\sim 0.1$ for thin disk accretion.  Indeed, there is now strong
-observational evidence that the low levels of AGN activity in
-quiescent galaxies results from accretion proceeding in a radiatively
-inefficient mode (\citealt{Yuan&Narayan14}), either due to the
-gravitationally-released energy being advected across the SMBH horizon
-(e.g.~\citealt{Narayan&Yi95}) or due to only a fraction of the gas
-inflowing on large scales ultimately reaching the SMBH
-(e.g.~\citealt{Blandford&Begelman99}; \citealt{Li+13}).
+\citet{Ho:2009a} estimates the accretion rates onto a sample of early-type galaxies both by using X-ray observations to determine the Bondi accretion rate and using estimates for the mass loss rate of evolved stars.  Both methods lead to the conclusion that the available gas reservoir is more than sufficient to power the observed low-luminosity AGN, assuming the standard $\sim$ 10 per cent radiative efficiency for thin disk accretion.  Several independent strains of evidence now suggest that low-luminosity AGN result from accretion proceeding in a radiatively inefficient mode (\citealt{Yuan&Narayan14}), due either to the advection of gravitationally-released energy across the SMBH horizon (e.g.~\citealt{Narayan&Yi95}) or due to a low efficiency for the gas inflowing on large scales ultimately reaching the SMBH (e.g.~\citealt{Blandford&Begelman99}; \citealt{Li+13}).
 
-The accretion rates of SMBHs can in principle be estimated directly by
-assuming Bondi accretion and using {\it Chandra} X-ray observations to
-estimate the gas temperature and density near the Bondi radius.  This
-technique has led to the intriguing result that the Bondi accretion
-power correlates with the AGN jet power (e.g.,
-\citealt{AllenDunn+:2006a}; \citealt{Russell+13};
-\citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
-required to inflate the observed cavities within the X-ray emitting
-gas.  It is, however, almost never possible to resolve the Bondi
-radius, thus requiring all such studies to extrapolate the observed
-gas temperature and density profiles to much smaller radial scales.
 %In fact, the temperature profile is assumed to be flat inside of the
 %Bondi radius.  In reality, the cusp in the velocity dispersion near
 %the SMBH, should cause a cusp in the gas temperature profile (assuming
@@ -227,30 +156,14 @@ gas temperature and density profiles to much smaller radial scales.
 %shocks).
 %% AG-give sense of scale.
 
-Another approach to determine the SMBH accretion rate, which we adopt
-in this paper, is to directly calculate the density, velocity and
-temperature profiles of the CNM using a physically motivated
+Another approach to determine the SMBH accretion rate, which we adopt in this paper, is to directly calculate the density, velocity and temperature profiles of the CNM using a physically motivated
 hydrodynamic model.  Mass is injected to the nuclear environment via
-stellar winds, while energy input results from a number of sources,
-such as wind shock heating and supernovae (e.g.,
-\citealt{Quataert:2004a,De-ColleGuillochon+:2012a,ShcherbakovWong+:2014a}).
-Unlike previous works, however, which focus on modeling the nuclei of
-individual galaxies, here we systematically analyze the properties of
-the CNM across a large sample of quiescent galaxies with a range of
-SMBH masses and other properties (\citealt{WangMerritt:2004a};
-hereafter WM04).  For each galaxy, stellar winds deposit mass and
-energy across a range of radii calculated directly from the observed
-{\it stellar} density profile.
+stellar winds, while energy input results from several sources including stellar winds, supernovae, and AGN feedback (e.g., \citealt{Quataert:2004a,De-ColleGuillochon+:2012a,ShcherbakovWong+:2014a}).  Unlike previous works focusing on modeling individual galaxies, here we systematically analyze the properties of the CNM across a sample of galaxies with a range of SMBH masses, stellar density profiles, and star formation histories (\citealt{WangMerritt:2004a};
+hereafter WM04).  
 
-The one-dimensional steady state flow of gas is usually characterized
-by an inflow-outflow structure, with a critical radius known as the
-``stagnation radius" $\rs$ where the radial velocity goes to zero.
-Mass loss from stars interior to the stagnation radius is accreted,
-while that outside $\rs$ is unbound in an outflow from the nucleus.
-The stagnation radius, rather than the Bondi radius, is thus
-ultimately responsible for setting the SMBH accretion rate, although
-$\rs$ can in many cases lie within a factor of few of the
-nominal Bondi radius.
+Past studies, including multi-dimensional hydrodynamics and a variety of (parameterized) physical effects, have focused on relatively massive elliptical galaxies (Ciotti refs).  A key result of this work is the periodic development of cooling instabilities, which temporarily increase the gas accretion rate before black hole feedback grows sufficiently important to halt this growth.  Here we instead focus on time-independent models, neglecting radiative cooling.  This simple approach allows us to systematically and to derive simple analytic expressions that prove useful in exploring whether cooling instabilties are always manifest, or whether other forms of non-AGN feedback can result in steady accretion.  Even if cooling instabilties develop on galactic scales, phases of stable accretion may persist on small scales.  We are thus motivated to explore whether it steady-flow is possible under any circumstances, or whether accretion is always building towards instability.
+
+In the presence of strong heating, one-dimensional steady-state flow is characterized by an inflow-outflow structure, with a critical radius known as the``stagnation radius" $\rs$ where the radial velocity passes through zero.  Mass loss from stars interior to the stagnation radius is accreted, while that outside $\rs$ is unbound in an outflow from the nucleus.  The stagnation radius, rather than the Bondi radius, thus controls the SMBH accretion rate, although $\rs$ can in many cases lie within a factor of few of the nominal Bondi radius.  In the case of weak heating, however, no stagnation radius may exist at all, i.e. the entire ISM of the galaxy is feeding the SMBH.  Another goal of this work is to assess under what conditions a stagnation radius exists, as this question is intimately tied to the one of cooling instability.  
 % Furthermore, in some cases we find that no stagnation
 % radius exists at all; this formally implies that the entire of ISM of
 % the galaxy is feeding the SMBH, potentially resulting in much higher
@@ -273,12 +186,11 @@ $\S\ref{sec:summary}$ we summarize our results.
 \section{Model}
 \label{sec:model}
 \subsection{Galaxy models}
-\citet{LauerFaber+:2007a} use Hubble WFPC2 imaging to measure the
-radial surface brightness profiles for hundreds of nearby early type galaxies. The measured surface brightness profile is generally well-fit by a ``Nuker" law parameterization:
+\citet{LauerFaber+:2007a} use Hubble Space Telescope WFPC2 imaging to measure the radial surface brightness profiles for hundreds of nearby early type galaxies. The measured brightness profile is generally well-fit by a ``Nuker" law parameterization:
 \begin{equation}
-  I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b}.
+  I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b},
 \end{equation}
-The Nuker profile is a broken power law which transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta$, at a break radius, $\rb$.  Assuming spherical symmetry, this corresponds to a stellar density $\rhostar \sim r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\sim r^{-1-\beta}$ for $r \gg \rb$, thus motivating us to adopt a broken power-law profile
+i.e., a broken power law that transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta$, at a break radius, $\rb$.  Assuming the stellar population is spherically symmetric, this corresponds to a stellar density $\rhostar \propto r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\propto r^{-1-\beta}$ for $r \gg \rb$.  To good approximation
 \begin{align}
 \rho_\star = 
 \begin{cases}
@@ -287,12 +199,12 @@ The Nuker profile is a broken power law which transitions from an inner power la
 \label{eq:rhostar}
 \end{cases}
 \end{align}
-where $\rho_\star(\rsoi)$ is the stellar density at the radius of the black hole sphere of influence, 
+where $\rho_\star(\rsoi)$ is the stellar density at the radius of the black hole sphere of influence (soi), 
 \be
-\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
+\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc}.
 \label{eq:rsoi}
 \ee
-and the final equality in (\ref{eq:rsoi}) employs a recent version of the $\Mbh-\sigma$ relationship (\citealt{Gultekin+09}),
+The second equality in (\ref{eq:rsoi}) employs the $\Mbh-\sigma$ relationship of \citet{Gultekin+09},
  \begin{align}
 M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
       km\,s^{-1}}}\right)^{5.1}M_{\odot}.
@@ -1518,6 +1430,19 @@ stagnation radius and makes use of equations~(\ref{eq:Tanalytic}) and
 (\ref{eq:rhors2}).  We thus see that the condition $v_w \gtrsim v_{\rm
   crit}$ is also the condition for local instability, although the
 prefactor may be slightly different.
+
+\subsection{TDE Jets}
+
+Plot showing final lorentz factor after the reverse shock crossing as a function of BH mass, using average star formation history.  place J1644+57 on the plot.
+
+\subsection{Jet Power Correlation}
+
+
+Accretion rates onto SMBHs can in principle be estimated directly by assuming Bondi accretion and using high resolution X-ray observations to estimate the gas temperature and density near the Bondi radius.  This technique has led to the intriguing conclusion that the Bondi accretion power correlates with the AGN jet power (e.g.,
+\citealt{AllenDunn+:2006a}; \citealt{Russell+13};
+\citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
+required to inflate the observed cavities within the X-ray emitting
+gas.  In practice is it almost never possible to resolve the Bondi radius, therefore requiring all such studies to extrapolate the observed gas temperature and density profiles to smaller radial scales.  
 
 
   \section{Summary}
