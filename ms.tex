@@ -186,12 +186,11 @@ $\S\ref{sec:summary}$ we summarize our results.
 \section{Model}
 \label{sec:model}
 \subsection{Galaxy models}
-\citet{LauerFaber+:2007a} use Hubble WFPC2 imaging to measure the
-radial surface brightness profiles for hundreds of nearby early type galaxies. The measured surface brightness profile is generally well-fit by a ``Nuker" law parameterization:
+\citet{LauerFaber+:2007a} use Hubble Space Telescope WFPC2 imaging to measure the radial surface brightness profiles for hundreds of nearby early type galaxies. The measured brightness profile is generally well-fit by a ``Nuker" law parameterization:
 \begin{equation}
-  I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b}.
+  I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b},
 \end{equation}
-The Nuker profile is a broken power law which transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta$, at a break radius, $\rb$.  Assuming spherical symmetry, this corresponds to a stellar density $\rhostar \sim r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\sim r^{-1-\beta}$ for $r \gg \rb$, thus motivating us to adopt a broken power-law profile
+i.e., a broken power law that transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta$, at a break radius, $\rb$.  Assuming the stellar population is spherically symmetric, this corresponds to a stellar density $\rhostar \propto r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\propto r^{-1-\beta}$ for $r \gg \rb$.  To good approximation
 \begin{align}
 \rho_\star = 
 \begin{cases}
@@ -200,12 +199,12 @@ The Nuker profile is a broken power law which transitions from an inner power la
 \label{eq:rhostar}
 \end{cases}
 \end{align}
-where $\rho_\star(\rsoi)$ is the stellar density at the radius of the black hole sphere of influence, 
+where $\rho_\star(\rsoi)$ is the stellar density at the radius of the black hole sphere of influence (soi), 
 \be
-\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
+\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc}.
 \label{eq:rsoi}
 \ee
-and the final equality in (\ref{eq:rsoi}) employs a recent version of the $\Mbh-\sigma$ relationship (\citealt{Gultekin+09}),
+The second equality in (\ref{eq:rsoi}) employs the $\Mbh-\sigma$ relationship of \citet{Gultekin+09},
  \begin{align}
 M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
       km\,s^{-1}}}\right)^{5.1}M_{\odot}.
