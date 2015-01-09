@@ -583,11 +583,91 @@ cons on outer grid \\
 0.1 & 300.0 & 0.8 & 200.0 & $ 5.3 \times 10^{ -3 }$ & 0.12 &  \\
 0.1 & 300.0 & 0.8 & 400.0 & $ 8.9 \times 10^{ -3 }$ & $ 4.7 \times 10^{ -2 }$ &  \\
 1 & 300.0 & 0.8 & 50.0 & $ 8.2 \times 10^{ -3 }$ & 0.19 &  \\
-1 & 300.0 & 0.8 & 200.0 & $ 3.6 \times 10^{ -2 }$ & $ 1.7 \times 10^{ -2 }$ &  \\
+1 & 300.0 & 0.8 & 200.0 & $ 3.6 \times 10^{ -2 }$ & $ 1.7 \times 10^{
+  -2 }$ &  possible issue w/ conv \\
 1 & 300.0 & 0.8 & 300.0 & $ 5.2 \times 10^{ -2 }$ & $ 9.8 \times 10^{
-  -3 }$ &  rb=400 pc was unsuccessful\\
+  -3 }$ &  possible issue w/ conv ; rb=400 pc was unsuccessful\\
 \enddata
 \end{deluxetable}
+
+\begin{table*}
+\centering
+\begin{minipage}{18cm}
+\caption{Models Evolved and Outflow
+Properties\label{t:models}\label{t:results}. The first
+six columns show model name, HMNS lifetime, stellar period, fractional
+radial resolution
+at inner boundary, and irradiation by the neutron star, respectively.
+The last eight columns show integrated properties of the outflow,
+restricted to equatorial
+ ($\theta \in [30^\circ,150^\circ]$) and polar ($\theta<30^\circ$ and
+$\theta > 150^\circ$)
+latitudes. Each group of four columns includes the mass-flux weighted
+electron fraction, entropy,
+and expansion time at a radius where the mass-flux weighted temperature is
+$5\times10^9$~K, as
+well as the net mass in unbound material crossing a surface at $10^9$~cm,
+normalized
+by the initial torus mass.}
+\begin{tabular}{lccccccccccccc}
+\hline
+{Model}&
+{$t_{\rm ns}$} &
+{$P_\star$} &
+{$\alpha$} &
+{$\Delta r_{\rm min}/R_\star$} &
+{$\star$-Irr.} &
+\multicolumn{4}{c}{Equatorial Outflow} &
+\multicolumn{4}{c}{Polar Outflow$^b$}\\
+{ } & \multicolumn{2}{c}{(ms)} &  {}  &  {}  & {} &
+{$\bar{Y}_e$} &
+{$\bar{s}$ } &
+{$t_{\rm exp}$} &
+{$M_{\rm ej,unb}/M_{\rm t0}$} &
+{$\bar{Y}_e$} &
+{$\bar{s}$ } &
+{$t_{\rm exp}$} &
+{$M_{\rm ej,unb}/M_{\rm t0}$}\\
+\multicolumn{6}{c}{} & {} & {($k$/b)} & {(ms)} & {(\%)} & {} & {($k$/b)} &
+{(ms)} & {(\%)}\\
+%}
+\hline
+t000A3      & 0        & ... & 0.03 & 5E-3 & No   & 0.18 & 18 & 27  & 2.1
+& ...  & ... & ... & 0.9 \\
+t010A3p15   & 10       & 1.5 &      &      & Yes  & 0.19 & 20 & 30  & 2.5
+& ...  & ... & ... & 1.0 \\
+t030A3p15   & 30       &     &      &      &      & 0.23 & 21 & 27  & 3.9
+& 0.50 & 45  & 7.6 & 1.3 \\
+t100A3p15   & 100      &     &      &      &      & 0.28 & 20 & 33  & 9.2
+& 0.47 & 42  & 11  & 4.0 \\
+t300A3p15   & 300      &     &      &      &      & 0.30 & 20 & 32  & 28
+& 0.44 & 38  & 17  & 8.8 \\
+tInfA3p15   & $\infty$ &     &      &      &      & 0.32 & 21 & 42  & 67
+& 0.43 & 52  & 17  & 22  \\
+\noalign{\smallskip}
+pA1p15      & $\infty$ & 1.5 & 0.01 & 5E-3 & Yes  & 0.36 & 21 & 61  & 47
+& 0.45 & 52  & 19  & 22 \\
+pA3p20      &          & 2   & 0.03 &      &      & 0.30 & 29 & 37  & 62
+& 0.37 & 62  & 15  & 17 \\
+pA3p15xs    &          & 1.5 &      &      & No   & 0.27 & 21 & 45  & 56
+& 0.35 & 61  & 15  & 23 \\
+\noalign{\smallskip}
+rA3p15r1    & $\infty$ & 1.5 & 0.03 & 1E-2 & Yes  & 0.32 & 21 & 45  & 69
+& 0.43 & 53  & 17  & 22 \\
+rA3p15r2$^a$   &       &     &      & 2E-3 &      & ... & ... & ... & ...
+& ...  & ... & ... & ... \\
+\hline
+\hline
+\multicolumn{14}{l}{$^a$ Model rA3p15r2 was evolved for a shorter time.
+See Appendix~\ref{s:neutrino_details}
+                    for details.}\\
+\multicolumn{14}{l}{$^b$ Average thermodynamic quantities are not computed
+if there is no region
+                         where the average temperature is $\sim 5\times 10^9$~K.}
+\label{table:models}
+\end{tabular}
+\end{minipage}
+\end{table*}
 
 \begin{deluxetable}{lllllll}
 \tabletypesize{\scriptsize}
@@ -670,7 +750,9 @@ useful check of the numerical results.
       orange}), and 300 km s$^{-1}$ ({\it green}).  Different
     linestyles correspond to different values of $\Mbh$, $\Mbh=10^6
     \Msun$ ({\it dot-dashed}), $\Mbh=10^7 \Msun$ ({\it solid}), and
-    $\Mbh=10^8 \Msun$ ({\it dashed}). Squares mark out the location of
+    $\Mbh=10^8 \Msun$ ({\it dashed}). Thin lines correspond to cusp
+    galaxies ($\gamma$=0.8) and thick lines correspond to core
+    galaxies ($gamma$=0.1). Squares mark out the location of
     the stagnation radius for each solution.
  }
 \end{figure}
