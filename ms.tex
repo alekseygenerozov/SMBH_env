@@ -30,7 +30,7 @@
 \newcommand{\rss}{r_{\rm ss}}
 \newcommand{\lrs}{\l_{\rs}}
 \newcommand{\lambdars}{\lambda_{\rs}}
-\newcommand{\vw}{v_w}
+\newcommand{\vw}{\tilde{v}_{w}}
 
 \newcommand{\dxdy}[2]{\frac{d #1}{d #2} }
 \newcommand{\ddr}[1]{\dxdy{#1}{r}}
@@ -41,7 +41,7 @@
 \newcommand{\dphidr}{\dxdy{\Phi}{r}}
 
 \newcommand{\ke}{\frac{v^2}{2}}
-\newcommand{\kew}{\frac{v_w^2}{2}}
+\newcommand{\kew}{\frac{\tilde{v}_{w}^2}{2}}
 
 \newcommand{\gammaf}{\frac{\gamma}{\gamma-1}}
 \newcommand{\gammafi}{\frac{\gamma-1}{\gamma}}
@@ -68,11 +68,11 @@
 \newcommand{\RateIa}{R_{\rm Ia}}
 \newcommand{\sigsoi}{\sigma_{\soi}}
 
-\newcommand{\vwO}{v_{w,0}}
+\newcommand{\vwO}{v_{w}}
 \newcommand{\kewO}{\frac{\vwO^2}{2}}
 \newcommand{\x}{\frac{r_s}{\rsoi}}
 \newcommand{\vwNorm}{\frac{\vwO}{\sigsoi}}
-\newcommand{\vwOFH}{v_{w,0,500}}
+\newcommand{\vwOFH}{v_{500}}
 \newcommand{\vwOFHexp}{\frac{\vwO}{500 \, {\rm km/s}}}
 
 \newcommand{\pyear}{{\rm yr}^{-1}}
@@ -117,7 +117,7 @@ To determine why most SMBHs appear to be inactive requires an understanding of t
 
 Knowledge of how $\dot{M}$ varies with the SMBH mass, $\Mbh$, and other properties of the
 galactic nucleus informs key questions, such as the co-evolution of SMBHs and their host galaxies with cosmic time.  SMBH growth in the low redshift universe appears to be dominated by lower mass black holes (e.g.~\citealt{Heckman+04}).  This is often
-attributed to cosmological `down sizing' (e.g, \citealt{Gallo+08}), even though the physical processes involved may be distinct from those operating at higher SMBH masses and accretion rates in quasars.
+attributed to general trend  of cosmological `down-sizing' (e.g, \citealt{Gallo+08}).  However, the physical processes involved may be distinct from those operating at higher SMBH masses and accretion rates in quasars.
 
 The accretion rates of low mass SMBHs, and their resulting X-ray luminosities $L_X$, also have implications for what observational constraints can be placed on their occupation fraction in low mass galaxies and the possible existence of intermediate mass black holes.  By combining the average relationship between $\Mbh$ and
 $L_X$ measured from a sample of high mass galaxies (\citealt{Gallo+08}) with upper limits on $L_X$ in lower mass
@@ -244,18 +244,18 @@ the mismatch between the properties of virialized gas injected locally
 by stellar winds and the mean properties of the background flow.  The
 term $\propto -q c_{s}^{2}$ acts as an important agent in stabilizing the flow to runaway cooling ($\S\ref{sec:instability}$).
 
-The term $\propto \vw^2 = \sigma(r)^2+v_{w,0}^2$ in the entropy
+The term $\propto \vw^2 = \sigma(r)^2+v_{w}^2$ in the entropy
 equation accounts for external heating sources (e.g.,
 \citealt{ShcherbakovWong+:2014a}).  The first term accounts for the
 minimum shock heating of the stellar winds due to the random movement
 of stars with respect to each other at the characteristic velocity
 $\sim \sigma = \sqrt{GM_{\rm enc}/r}$, as is present even for the low
 wind velocities $\ll \sigma$ that characterize AGB mass loss in old
-stellar populations.  The second term, $v_{w,0}^{2}$, parameterizes
+stellar populations.  The second term, $v_{w}^{2}$, parameterizes
 the contribution of additional sources of heating, such as faster main
 sequence or Wolf-Rayet winds, millisecond pulsars, supernovae, AGN
 feedback, etc.  As discussed in $\S\ref{sec:heating}$, the value of
-$v_{w,0}$ is uncertain and will in general depend on the SMBH mass and
+$v_{w}$ is uncertain and will in general depend on the SMBH mass and
 the age of the stellar population.
 
 To isolate the physics of interest, our baseline calculations neglect two potentially important effects: heat conduction and radiative cooling.  Heat transport by electron conductivity is included with an additional term to the right hand side of the entropy equation of the form  
@@ -295,7 +295,7 @@ order finite difference scheme with a third order Runge-Kutta scheme
 for time integration and artificial viscosity terms in the velocity
 and entropy equations for numerical stability
 (\citealt{Brandenburg:2003a}).  We solve the equations for different
-choices of $v_{\rm w,0} = 300, 600, 1200$ km s$^{-1}$ spanning a
+choices of $v_{w} = 300, 600, 1200$ km s$^{-1}$ spanning a
 physically plausible range.  Although we are interested in the
 steady-state intflow/outflow structure, the time-dependent equations
 are solved to avoid numerical issues that arise near the critical
@@ -313,36 +313,30 @@ constraint on the energy.  Mass and energy are conserved to $\lesssim
 \section{Analytic Results}
 \label{sec:results}
 
-We begin by describing analytic estimates of physical quantities, such as the stagnation radius $\rs$ and the mass accretion rate, the derivation of which are given in Appendix \ref{app:rs}.  Our results are expressed in terms of the SMBH mass $M_{\bullet} = 10^{8}M_{\bullet,8}M_{\odot}$ and the wind heating parameter
-(eq.~[\ref{eq:dsdt}])
-\begin{eqnarray}
-  v_{\rm w} &=& v_{\rm w,0}\left(1+\frac{\sigma^{2}}{v_{\rm w,0}^{2}}\right)^{1/2}  \nonumber \\
-  &\approx& v_{\rm w,0}\left(1+0.14 \Mbheight^{0.43}\left[\frac{v_{w,0}}{500\,\rm km\,s^{-1}}\right]^{-1}\right)^{1/2},
-\end{eqnarray}
-where the final equality makes use of $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).  
+We begin by describing analytic estimates of physical quantities, such as the stagnation radius $\rs$ and the mass accretion rate, the derivation of which are given in Appendix \ref{app:rs}.  Our results are expressed in terms of the SMBH mass $M_{\bullet}$, heating parameter $\tilde{v}_{w}$, and wind mass loss parameter $\eta$.
 
 \subsection{Flow Properties Near the Stagnation Radius}
 
 Continuity of the entropy derivative at the stagnation radius demands that the temperature at the stagnation radius is given by (eq.~[\ref{eq:first_law}])
 \begin{align}
-T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v_{w}^{2}}{2} \approx 3.7
+T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p \tilde{v}_{w}^{2}}{2} \approx 3.7
 \times 10^6\ \, v_{500}^2 \,\,{\rm K},
 \label{eq:Tanalytic}
 \end{align}
-where $v_{500} \equiv v_{\rm w}/500$ km s$^{-1}$.
+where $v_{500} \equiv \tilde{v}_{w}/500$ km s$^{-1}$.
 
 Hydrostatic equilibrium can be used to determine the location of the stagnation radius where $v = 0$ (Appendix \ref{app:rs}, eq.~\ref{eq:rs2main})
 \begin{align}
 \rs=\frac{G \Mbh}{n \vw(\rs)^2}\left(\frac{9-\Gamma}{2} \frac{\Mstar(\rs)}{\Mbh} +\frac{7}{2}\right),
 \label{eq:stag_analytic}
 \end{align}
-where $n$ is the power-law slope of the density profile at $r = r_{\rm s}$.  If the SMBH dominates the gravitational potential at the stagnation radius then $v_{w,0} \gg \sigma$ and $r_{\rm s} < r_{\rm soi}$ (eq.~[\ref{eq:rsoi}]).  In this case equation (\ref{eq:stag_analytic}) simplifies to
+where $n$ is the power-law slope of the density profile at $r = r_{\rm s}$.  If the SMBH dominates the gravitational potential at the stagnation radius then $v_{w} \gg \sigma$ and $r_{\rm s} < r_{\rm soi}$ (eq.~[\ref{eq:rsoi}]).  In this case equation (\ref{eq:stag_analytic}) simplifies to
 \begin{align}
-  &\rs=\frac{7}{2}\frac{G \Mbh}{n v_{\rm w}^{2}} \approx 6
+  &\rs=\frac{7}{2}\frac{G \Mbh}{n \tilde{v}_{w}^{2}} \approx 6
  \, \pc \,\, \Mbheight v_{500}^{-2},
   \label{eq:stag_simple}
 \end{align}
-where the numerical estimate assumes $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their eq.~6).  In the opposite limit of weak heating ($v_{\rm w,0} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all.  This makes intuitive sense: gas is injected by stars which are gravitationally bound to the black hole, so outflows only occur if the heating rate per gram $\sim v_{\rm w}^{2}$ exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
+where the numerical estimate assumes $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their eq.~6).  In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all.  This makes intuitive sense: gas is injected by stars which are gravitationally bound to the black hole, so outflows only occur if the heating rate per gram $\sim \tilde{v}_{w}^{2}$ exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
 
 
 \subsection{SMBH Accretion Rate}
@@ -359,7 +353,7 @@ The SMBH accretion rate is given by the integrated mass loss rate interior to th
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-where we have made use of equation (\ref{eq:stag_simple}), assuming that $v_{w,0} \gg \sigma$.  The resulting Eddington ratio $\eddr$ is given by 
+where we have made use of equation (\ref{eq:stag_simple}), assuming that $v_{w} \gg \sigma$.  The resulting Eddington ratio $\eddr$ is given by 
 \begin{eqnarray}
 \frac{\dot{M}}{\dot{M}_{\rm edd}} &\approx&
   \begin{cases}
@@ -370,7 +364,7 @@ where we have made use of equation (\ref{eq:stag_simple}), assuming that $v_{w,0
   \end{cases}
   \label{eq:eddr_analytic}
 \end{eqnarray}
-%To reproduce the estimated values $\dot{M}/\dot{M}_{\rm edd} \lesssim 10^{-3}$ in low-luminosity AGN or quiescent galaxies, we thus require $v_{w,0} \gtrsim 150M_{\bullet,8}^{0.5}$ 
+%To reproduce the estimated values $\dot{M}/\dot{M}_{\rm edd} \lesssim 10^{-3}$ in low-luminosity AGN or quiescent galaxies, we thus require $v_{w} \gtrsim 150M_{\bullet,8}^{0.5}$ 
 
 The gas density at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate accurately.  Using an alternative estimate of $\dot{M}$ as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$ in conjuction with equation (\ref{eq:mdot_analytic}), one finds
 \begin{align}
@@ -415,7 +409,7 @@ The above analytic results neglect the effects of heat conduction near the stagn
 \begin{align}
   \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
-T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) v_{\rm w}^{2}(1+\phi)}
+T^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}(r_{\rm s}) \tilde{v}_{w}^{2}(1+\phi)}
 \nonumber \\ &\sim {\rm min}
   \begin{cases}
   10 \eta_{0.02}^{-1}
@@ -444,7 +438,7 @@ Even in the saturated case, heat conduction is at most an order unity correction
 
 Radiative cooling, if important, qualitative alters key features of the accretion flow.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm cool} = n^{2}\Lambda \propto T^{\beta-2}$ (see below) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \in [-0.7,0.5]$.  If manifest, thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Wang+14}).  
 
-Radiative cooling can, however, be stabilized by the other sources of cooling, such as the stellar wind source term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius equals $q v_{\rm w}^{2}/2$ (neglecting conduction and radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the nominal wind heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}| =|\Lambda(T) n^2|$,
+Radiative cooling can, however, be stabilized by the other sources of cooling, such as the stellar wind source term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius equals $q \tilde{v}_{w}^{2}/2$ (neglecting conduction and radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the nominal wind heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}| =|\Lambda(T) n^2|$,
 \begin{align}
 \left.\frac{q \vw^2/2}{|\dot{q}_{\rm cool}|}\right|_{\rm r{s}} \simeq
   \begin{cases}
@@ -462,7 +456,7 @@ that results by combining equations~\eqref{eq:mdot_analytic} and~\eqref{eq:mdot_
 
 Thermal stability ($0.5 q \vw^2/|\dot{q}_{\rm cool}| > 1$; $t_{\rm cool} > t_{\rm ff}$) at the stagnation radius thus requires a critical minimum heating rate
 \begin{align}
-v_{w,0} > v_{\rm crit} \simeq
+v_{w} > v_{\rm crit} \simeq
   {\rm max}\begin{cases}
    200 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
    200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}\\
@@ -470,7 +464,7 @@ v_{w,0} > v_{\rm crit} \simeq
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $v_{w} \gtrsim v_{\rm crit} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius.  The inclusion of $\sigma$ in equation (\ref{eq:cooling2}) results because the top two lines apply only for $v_{w} > \sigma$ since their derivation assumed the existence of a stagnation radius given by equation (\ref{eq:rs_simple}).
+Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm crit} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius.  The inclusion of $\sigma$ in equation (\ref{eq:cooling2}) results because the top two lines apply only for $\tilde{v}_{w} > \sigma$ since their derivation assumed the existence of a stagnation radius given by equation (\ref{eq:rs_simple}).
 
 
 
@@ -516,7 +510,7 @@ Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $v_{w} \gtrsim
 \tablewidth{0pc}
 \tablecaption{Cusp Results
 \label{tab:sols}}
-\tablehead{\colhead{$M_{\bullet,8}$} & \colhead{$v_{w,0}$} &
+\tablehead{\colhead{$M_{\bullet,8}$} & \colhead{$v_{w}$} &
   \colhead{$\gamma$} & \colhead{$r_b$} &
   \colhead{$\dot{M}/\dot{M}_{\rm Edd}$} & \colhead{$t_{\rm
       cool}/t_{\rm ff} (r_s)$} & \colhead{comments}}
@@ -632,7 +626,7 @@ if there is no region
 \tabcolsep0.05in\footnotesize
 \tablewidth{0pc}
 \tablecaption{Core Results \label{tab:sols}}
-\tablehead{\colhead{$M_{\bullet,8}$} & \colhead{$v_{w,0}$} &
+\tablehead{\colhead{$M_{\bullet,8}$} & \colhead{$v_{w}$} &
 \colhead{$\gamma$} & \colhead{$r_b$} & \colhead{$\dot{M}/\dot{M}_{\rm
 Edd}$}  & \colhead{$t_{\rm cool}/t_{\rm ff} (r_s)$} & \colhead{comments}}
 \startdata
@@ -648,7 +642,7 @@ This section describes the results of our numerical calculations,
 which we use to assess the validity of the analytic expressions
 provided in the previous section.  Numerical solutions are calculated
 for each galaxy for three different values of the stellar wind heating
-parameter $v_{w,0}$ = 300, 600, 1200 km s$^{-1}$.
+parameter $v_{w}$ = 300, 600, 1200 km s$^{-1}$.  In cases when the stagnation radius become very large and was difficult to resolve on the grid, we conclude that such solutions will be thermally unstable and terminated their calculations (these are marked as `thermally unstable' in the tables.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$, for the cusp
@@ -675,7 +669,7 @@ Figure~\ref{fig:stag} (top panel) shows numerical results for the
 stagnation radius $r_{\rm s}$ where the radial velocity goes to zero
 (expressed in ratio to the radius of the SMBH sphere of influence
 $r_{\rm soi}$), with different colors representing different values of
-$v_{w,0}$.  Cusp and core galaxies are marked with square and
+$v_{w}$.  Cusp and core galaxies are marked with square and
 triangles, respectively.
 
 We also show the simplified analytic result corresponding to $\rs$
@@ -719,9 +713,9 @@ useful check of the numerical results.
   \caption{\label{fig:stag} \emph{Top panel:} Stagnation radius
     $r_{s}$ (in units of the radius of the sphere of influence $r_{\rm
       soi} = GM_{\bullet}/\sigma^{2}$) for galaxies in our sample as a
-    function of the ratio of the effective wind heating rate $v_{w,0}$
+    function of the ratio of the effective wind heating rate $v_{w}$
     to the stellar velocity dispersion $\sigma$.  Green, orange, and
-    blue symbols represent $v_{w,0} =$ 300, 600, and 1200 km s$^{-1}$,
+    blue symbols represent $v_{w} =$ 300, 600, and 1200 km s$^{-1}$,
     respectively.  Squares correspond to cusp galaxies, while
     triangles correspond to cores. \emph{Bottom panel}: Fractional
     difference between our numerical calculation of $r_{\rm s}/r_{\rm
@@ -757,9 +751,9 @@ closely match at $\rs$ for this $\vwO$. {\bf AG would be good to
 \section{Sources of Heating}
 \label{sec:heating}
 
-Key properties of the flow, such as the stagnation radius, the SMBH accretion rate, and the likelihood of thermal instability depend sensitively on the assumed heating rate $\propto qv_{w,0}^{2}$.  This section summarizes individual heating sources, providing estimates of the value of
+Key properties of the flow, such as the stagnation radius, the SMBH accretion rate, and the likelihood of thermal instability depend sensitively on the assumed heating rate $\propto qv_{w}^{2}$.  This section summarizes individual heating sources, providing estimates of the value of
 \begin{align}
-  v_{\rm w,0} = \sqrt{\frac{2 t_h e}{\eta \rhostar}}
+  v_{w} = \sqrt{\frac{2 t_h e}{\eta \rhostar}}
   \label{eq:vw_eff}
 \end{align}
 for each, where $e$ is volumetric heating rate.  
@@ -777,17 +771,17 @@ $\sigma$.
 Main sequence winds, though contributing a much smaller quantity of
 mass, have much higher velocities and hence contribute a
 disproportionally large share of the kinetic energy of winds.
-\citet{NaimanSoares-Furtado+:2013a} estimate that $v_{\rm w,0} \sim
+\citet{NaimanSoares-Furtado+:2013a} estimate that $v_{w} \sim
 100-150$ km s$^{-1}$ for main sequence winds assuming a relatively old
 stellar population.  On the other hand, for a very young stellar
 population of age $t_{\star} \lesssim 10^{7}$ yrs the effective wind
 heating from massive stars can be much greater, $\gtrsim 10^{3}$ km
 s$^{-1}$.  In Appendix \ref{app:windheat} we present a model for
-how $v_{\rm w,0}$ varies as a function of stellar age.
+how $v_{w}$ varies as a function of stellar age.
 
 \subsection{Type Ia Supernovae} 
 
-Type Ia supernovae (SNe Ia) represent a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each Ia supernova injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SNe rate (per stellar mass) is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm  Ia}$ produces an effective wind heating parameter (equation~[\ref{eq:vw_eff}]) \begin{align} v_{\rm w,0}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
+Type Ia supernovae (SNe Ia) represent a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each Ia supernova injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SNe rate (per stellar mass) is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm  Ia}$ produces an effective wind heating parameter (equation~[\ref{eq:vw_eff}]) \begin{align} v_{w}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
 E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
 \end{align} The thermal energy injected by a Ia SN $E_{\rm Ia} \simeq
 \epsilon_{\rm Ia} 10^{51}$ ergs depends on the efficiency $\epsilon$
@@ -810,7 +804,7 @@ approximate functional form \begin{align}
 
 From equations (\ref{eq:vw_sne}), (\ref{eq:DTD}) we thus estimate that 
   \begin{eqnarray} 
-    v_{w,0}^{\rm Ia} &\approx& 700(\epsilon_{\rm
+    v_{w}^{\rm Ia} &\approx& 700(\epsilon_{\rm
       Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{-0.56}\eta_{0.02}^{-1/2}\,{\rm km
       \,s^{-1}} \nonumber \\
 &\approx& 700(\epsilon_{\rm
@@ -820,7 +814,7 @@ From equations (\ref{eq:vw_sne}), (\ref{eq:DTD}) we thus estimate that
   \end{eqnarray}
 where the second line assumes $\eta\simeq 0.02 (\tau_{\star}/t_h)^{-1.3}$ for a single burst of star formation (\citealt{Ciotti+91}).
 
-The high value of $v_{w,0}^{\rm Ia}$ implies that Ia SNe represent an important source of CNM heating.  However, SNe can only be approximated as supplying constant heating throughout space and time if the rate of SNe is rapid compared to the inflow time at the radius of interest (\citealt{ShcherbakovWong+:2014a}).  We define the ``Ia radius"
+The high value of $v_{w}^{\rm Ia}$ implies that Ia SNe represent an important source of CNM heating.  However, SNe can only be approximated as supplying constant heating throughout space and time if the rate of SNe is rapid compared to the inflow time at the radius of interest (\citealt{ShcherbakovWong+:2014a}).  We define the ``Ia radius"
   \begin{align}
     r_{\rm Ia} \sim \left(\frac{G}{R_{\rm Ia}\sigma}\right)^{1/2} \sim
     38 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
@@ -830,21 +824,20 @@ as the location exterior of which the time interval between subsequent supernova
 dyn} \sim r/\sigma$, where we again adopt the Ia rate for an old stellar population and in the final equality we estimate the velocity dispersion using the $M_{\bullet}-\sigma$ relationship
 (equation~[\ref{eq:Msigma}]).  
 
-Assuming that $v_{\rm w,0}^{\rm Ia} \gg \sigma$ then by substituting $v_{\rm w,0}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into our expression for the stagnation radius (\ref{eq:rs_simple}), we can write
+Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting $v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into our expression for the stagnation radius (\ref{eq:rs_simple}), we can write
 \begin{eqnarray}
-\left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w,0}^{\rm Ia}} &\approx& 12.4\eta_{0.02} M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68} \nonumber \\
+\left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w}^{\rm Ia}} &\approx& 12.4\eta_{0.02} M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68} \nonumber \\
 &\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{0.38}
 \end{eqnarray}
-The fact that $r_{\rm Ia} \gg r_{\rm s}$ would appear to imply that Ia heating only represents a sources of steady heating near the stagnation radius for very massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ and/or very young populations ($\tau_{\star} \ll t_{\rm h}$).  However, this expression underestimates the importance of Ia heating, since the actual stagnation radius will be substantially larger than its value for $v_{\rm w,0}^{\rm Ia}$ if the nominal heating rate is much less than this.  In general it is reasonable to expect that the impact of Ia SN will increase for larger SMBH masses.
+The fact that $r_{\rm Ia} \gg r_{\rm s}$ would appear to imply that Ia heating only represents a sources of steady heating near the stagnation radius for very massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ and/or very young populations ($\tau_{\star} \ll t_{\rm h}$).  However, this expression underestimates the importance of Ia heating, since the actual stagnation radius will be substantially larger than its value for $v_{w}^{\rm Ia}$ if the nominal heating rate is much less than this.  In general it is reasonable to expect that the impact of Ia SN will increase for larger SMBH masses.
 
-What is the effect of the Ia radius?  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{\rm w,0}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence Ia SN can in principle dynamically clear out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Hence, even if $r_{\rm s} > r_{\rm Ia}$, the accretion rate will be limited to a value set by substituting $r_{\rm Ia}$ for $r_{\rm s}$ in derivigin equation $\ref{eq:eddr_analytic}$, i.e.  {\bf calculate:}
+What is the effect of the Ia radius?  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{w}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence Ia SN can in principle dynamically clear out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Hence, even if $r_{\rm s} > r_{\rm Ia}$, the accretion rate will be limited to a value set by substituting $r_{\rm Ia}$ for $r_{\rm s}$ in the derivation of equation $\ref{eq:eddr_analytic}$, i.e.  
 \begin{eqnarray}
-\left.\frac{\dot{M}}{\dot{M}_{\rm edd}}\right|_{\rm max} &\approx&
-  \begin{cases}
-    1.3 \times 10^{-5} M_{\bullet,8}^{0.76}
-    v_{500}^{-3.8}  \eta_{0.02}   & \text{core} \\
-    2.4 \times 10^{-5} \Mbheight^{0.48} 
-    v_{500}^{-2.4}  \eta_{0.02}   & \text{cusp}, 
+\left.\frac{\dot{M}}{\dot{M}_{\rm edd}}\right|_{\rm max} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{R_{\rm Ia}}{R_{\rm soi}}\right)^{2-\Gamma} \approx \nonumber \\
+ && \begin{cases}
+    3 \times 10^{-4} M_{\bullet,8}^{-1.26}(\tau_{\star}/t_{\rm h})^{-0.3}
+   & \text{core} \\
+    1.5 \times 10^{-4} \Mbheight^{-0.77}(\tau_{\star}/t_{\rm h})^{-0.7}   & \text{cusp}, 
   \end{cases}
   \label{eq:eddr_Ia}
 \end{eqnarray}
@@ -858,7 +851,7 @@ luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit
 volume $e \approx \bar{L}_{\rm sd}n_{\rm msp}\epsilon$ results in an
 effective heating rate (eq.~ [\ref{eq:vw_eff}])
 
-\begin{eqnarray} v_{\rm w,0}^{\rm MSP} \approx
+\begin{eqnarray} v_{w}^{\rm MSP} \approx
 30\left(\frac{\epsilon}{0.1}\right)^{1/2}\left(\frac{\bar{L}_{\rm
 sd}}{10^{34}\,{\rm erg\,s^{-1}}}\right)^{1/2} \eta_{0.02}^{-1/2}\,{\rm
 km\,s^{-1}},
@@ -876,9 +869,9 @@ stellar mass $6\times 10^{10}M_{\odot}$ (\citealt{Lorimer13}).
 The average spin-down luminosity of millisecond pulsars in the field
 is estimated to be $\bar{L}_{\rm sd} \sim 10^{34}$ erg s$^{-1}$ based
 on the ATNF radio pulsar catalog (\citealt{Manchester+05}), in which
-case $v_{\rm w,0} \lesssim 30$ km s$^{-1}$.  For higher spin-down
+case $v_{w} \lesssim 30$ km s$^{-1}$.  For higher spin-down
 luminosities, $L_{\rm sd}\simeq 10^{35}$ ergs s$^{-1}$ characteristic
-of some Fermi-detected pulsars, then the higher value of $v_{\rm w,0}
+of some Fermi-detected pulsars, then the higher value of $v_{w}
 \lesssim 300$ km s$^{-1}$ makes MSP heating in principle important
 under the optimistc assumption $\epsilon = 1$.  On the other hand, the
 binaries giving rise to MSPs may be disocciated by stellar
@@ -908,7 +901,7 @@ estimated from equation (\ref{eq:mdot_analytic}).  Then using
 equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}),
 (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation
 (\ref{eq:vw_eff}) that
-\begin{align} v_{\rm w,0}^{\rm C} \simeq
+\begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 13 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm
 km\,s^{-1}} &, \text{core}\\ 20 \eta_{0.02}^{0.5}T_{\rm
@@ -919,9 +912,9 @@ km\,s^{-1}} &, \text{cusp},
 \end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
 \epsilon/0.01 \sim 1$ is the maximum radiative efficiency for a thick
 accretion flow (e.g.~\citealt{Narayan&Yi95}).  Assuming that heating
-is dominated by Compton heating ($v_{w} = v_{\rm w,0}^{C}$) one finds
+is dominated by Compton heating ($\tilde{v}_{w} = v_{w}^{C}$) one finds
 that
-\begin{align} v_{\rm w,0}^{\rm C} \simeq
+\begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 106 \eta_{0.02}^{0.21}T_{\rm
 C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
 &, \text{core}\\ 76 \eta_{0.02}^{0.29}T_{\rm
@@ -931,7 +924,7 @@ C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
   \label{eq:vC2}
 \end{align} Unless $\eta$ is very high, we conclude that Compton
 heating is insufficient to stabilize the steady flow against cooling
-instability (e.g. $v_{\rm w,0}^{C} < v_{\rm critt}$;
+instability (e.g. $v_{w}^{C} < v_{\rm critt}$;
 eq.~[\ref{eq:cooling2}]).
 
 In contrast to radiative feedback, kinetic feedback occurs in the form
@@ -943,7 +936,7 @@ deposited uniformly out to a radius $r_{\rm heat}$ and volume $V_{\rm
 heat}$, then the local heating rate $e = \epsilon_{\rm
 j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind heating rate
 of
-\begin{eqnarray} v_{w,0}^{\bullet} &\approx& \left(\frac{2t_{\rm
+\begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{2t_{\rm
 h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
 \rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
 j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
@@ -954,7 +947,7 @@ M_{\rm enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto
 M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ for radii interior to the outer
 break radius (eq.~[\ref{eq:rhostar}]).  Thus for $r_{\rm heat} \sim
 r_{\rm s}$, even a small heating efficiency $\epsilon_{\rm j} \sim
-10^{-6}$ is sufficient for $v_{\rm w,0}^{\bullet}$ to exceed other
+10^{-6}$ is sufficient for $v_{w}^{\bullet}$ to exceed other
 sources of non-accretion powered heating.  However, if the jet
 distributes its energy on much larger scales comparable to the galaxy
 $r_{\rm heat} \sim $ kpc $\sim 10^{3}r_{\rm s}$ then the heating rate
@@ -962,15 +955,15 @@ would be much smaller.
 
 For a fixed heating radius $r_{\rm heat}$ we just see that $v_{\rm
   w,0}^{\bullet} \propto r_{\rm s}^{\beta/2} \propto
-M_{\bullet}^{1-\Gamma/2}v_{\rm w,0}^{\Gamma-2}$ is proportional to
-$v_{w,0}$ to a negative power, where the last proportionality makes
+M_{\bullet}^{1-\Gamma/2}v_{w}^{\Gamma-2}$ is proportional to
+$v_{w}$ to a negative power, where the last proportionality makes
 use of equation (\ref{eq:stag_simple}).  As in the case of Compton
 heating, SMBH kinetic heating, when dominant, may thus
 ``self-regulate".  However, unlike in the case of local stellar wind
 heating, SMBH heating may not be thermally stable, since the central
 accretion rate does not respond instantaneously to a change in the
 thermodynamic properties of the gas on larger scales.  Also note that
-$v_{\rm w,0}^{\bullet}$ is proportional to a positive power of SMBH
+$v_{w}^{\bullet}$ is proportional to a positive power of SMBH
 mass $\propto M_{\bullet}^{1(0.5)}$ for core(cusp) galaxies,
 respectively.  This is dependence may have important implications for
 the predicted dependence of X-ray luminosity on SMBH mass
@@ -992,8 +985,8 @@ which is notably independent of radius $r$.  Thus we require $\epsilon_{\rm j} \
 
 \subsection{Combined Heating Rate} 
 
-The total heating rate $\vwO = \sqrt{v_{\rm w,0}^{\star \, 2} + v_{\rm
-    w,0}^{\rm Ia \, 2} + v_{\rm w,0}^{\rm p \, 2} + v_{\rm
+The total heating rate $\vwO = \sqrt{v_{w}^{\star \, 2} + v_{\rm
+    w,0}^{\rm Ia \, 2} + v_{w}^{\rm p \, 2} + v_{\rm
     w,0}^{\bullet \, 2}}$ has
 contributions from stellar winds, supernovae, pulsars, and SMBH
 feedback. %  Since pulsar heating appears unlikely to contribute
@@ -1010,18 +1003,18 @@ galaxy mass and thus with $\Mbh$.
 % supernovae on large scales and SMBH feedback on small scales.
 We calculate the star formation history as a function of $\Mbh$ and
 the $\vwO$ for each heating source using the cosmic star formation
-histories in \citet{MosterNaab+:2013a}.  For $v_{\rm w,0}^{\rm p}$ we
+histories in \citet{MosterNaab+:2013a}.  For $v_{w}^{\rm p}$ we
 use equation~\eqref{eq:vmsp}. The star formation history simply enters
 in through $\eta$. The effective $\eta$ for a given star formation
 history will be the convolution of the star formation history with
 $\eta_{\rm imp}\simeq $ {\bf AG: should have expression for $\eta_{\rm
     Imp}$ in appendix. Have to be careful as we also have the
   simplified expression for $\eta_{\rm Imp}$} ($\eta$ in the impulsive
-limit). For $v_{\rm w,0}^{\rm Ia}$ we use
+limit). For $v_{w}^{\rm Ia}$ we use
 equation~\eqref{eq:vIa}. Besides $\eta$ there is additional dependence
 on the star formation history from the Ia rate--which is a convolution
 of the star formation history with the delay-time distribution from
-\citet{MaozMannucci+:2012a}. The calculation of $v_{\rm w,0}^{\star}$
+\citet{MaozMannucci+:2012a}. The calculation of $v_{w}^{\star}$
 is somewhat involved: we leave the detailed description for
 Appendix~\ref{app:windheat}. {\bf AG: still need a description of the
   Compton heating. In general, I struggled with the level of detail
@@ -1030,9 +1023,9 @@ Appendix~\ref{app:windheat}. {\bf AG: still need a description of the
 
 $\vwO$ from each heating source (stars, MSPs, SNe Ia, and black hole
 feedback) is plotted in as a function of $\Mbh$ in
-Figure~\ref{fig:vwSources}. $v_{\rm w,0}^{\rm p}$ is negligible across
+Figure~\ref{fig:vwSources}. $v_{w}^{\rm p}$ is negligible across
 all $\Mbh$. For $\Mbh\lsim 10^{7.5} \Msun$, have substantial recent
-star formation and $v_{\rm w,0}^{\star}$ is dominant. For $\Mbh\gsim
+star formation and $v_{w}^{\star}$ is dominant. For $\Mbh\gsim
 10^{7.5} \Msun$ , the younger stellar population with their energetic
 stellar winds is dead, and Compton heating plays an important role.
 
@@ -1050,7 +1043,7 @@ Figure~\ref{fig:eta}
   resulting from stellar winds and MSPs ({\it dashed black}) and stellar
   winds, MSPs, and black hole feedback ({\it solid black}). The heating
   will have a weak dependence on the stellar density power law slope,
-  $\Gamma$, since $v_{\rm w,0}^{\bullet \, 2}$ depends on
+  $\Gamma$, since $v_{w}^{\bullet \, 2}$ depends on
   $\Gamma$. The solid black curve corresponds to $\Gamma=0.8$
   and the dash-dotted black curve corresponds to $\Gamma=0.1$.}
 \end{figure}
@@ -1107,9 +1100,9 @@ by itself would not be able to prevent cooling instability.
 % $\Mbh$.  For $M_{\bullet} \gtrsim 1.5\times 10^8 (\tau_{\star}/t_{\rm
 %   h})^{0.5} \Msun$, SNe Ia occur sufficiently frequently within the
 % stagnation radius (i.e., $r_{\rm Ia} > r_{\rm s}$; eq.~[\ref{eq:rIa}])
-% to contribute their full heating rate.  $v_{\rm w,0}^{\rm Ia} \sim
+% to contribute their full heating rate.  $v_{w}^{\rm Ia} \sim
 % 250$ km s$^{-1}$.  On the other hand, for lower mass BHs Ia SNe are
-% infrequent, in which case main sequence stars ($v_{\rm w,0}^{\star}
+% infrequent, in which case main sequence stars ($v_{w}^{\star}
 % \simeq 100-150$ km s$^{-1}$) dominate the heating at most times of
 % interest.\footnote{Although SN Ia will still occur surrounding low
 %   mass SMBHs, if they are infrequent interior to the radius where the
@@ -1160,7 +1153,7 @@ $L_X \sim \Mbh^\alpha$, where $\alpha\simeq 0.7-0.8$
 \sim \Mbh^{1.5-2}$, such that if $L_x\sim M$, then we would have $\L_x
 \sim \Mbh^{1.5-2}$, steeper than the observed relationship.
 
-Hower, the mass accretion rate is also a sensitive function of the assumed heating rate, such that $\dot{M}\sim\vwO^{-3.8(-2.4)}$ for a core(cusp) galaxies, respectively.  Thus, only a weak positive dependence of $v_{\rm w,0} \propto M_{\bullet}^{0.25-0.3}$ would be sufficient to explain the trend in X-ray luminosity with BH masses in scenarios where $L_X \propto \dot{M}$, or a somewhat steeper dependence $v_{\rm w,0} \propto M_{\bullet}^{0.35-0.45}$ if $L_{X} \propto \dot{M}^{2}$.  What could cause this dependence?  Maybe Ia SNa...
+Hower, the mass accretion rate is also a sensitive function of the assumed heating rate, such that $\dot{M}\sim\vwO^{-3.8(-2.4)}$ for a core(cusp) galaxies, respectively.  Thus, only a weak positive dependence of $v_{w} \propto M_{\bullet}^{0.25-0.3}$ would be sufficient to explain the trend in X-ray luminosity with BH masses in scenarios where $L_X \propto \dot{M}$, or a somewhat steeper dependence $v_{w} \propto M_{\bullet}^{0.35-0.45}$ if $L_{X} \propto \dot{M}^{2}$.  What could cause this dependence?  Maybe Ia SNa...
 
 % This is shown in the top panel Figure~\ref{fig:bh_xray}. The
 % relationship from \citealt{MillerGallo+:2014a} and their detection
@@ -1178,9 +1171,9 @@ Hower, the mass accretion rate is also a sensitive function of the assumed heati
 One possible solution that the wind mass loss rate $\eta$ increases
 with $\Mbh$, as would be expected if low mass SMBH preferentially
 hosted younger stellar populations.  Another possible explanation is
-that the effective heating rate of the CNM $v_{\rm w,0}$ decreases
+that the effective heating rate of the CNM $v_{w}$ decreases
 with decreasing SMBH mass.  This could again be due to an older
-stellar population, since $v_{w,0} \propto \eta^{-1/2}$ for heating
+stellar population, since $v_{w} \propto \eta^{-1/2}$ for heating
 sources such as SN Ia and millisecond pulsars.
 {\bf AG given our new results on stellar wind heating as a function of
 Mbh. It seems like the first statement is indeed true but I suspect
@@ -1342,7 +1335,7 @@ Our analytic expression for the accretion rate (eq.~[\ref{eq:mdot_analytic}]) ca
 \end{eqnarray}
 which we have normalized in terms of the Hubble time.  
 
-{\bf BDM: ADD plot of parameter space of MBH and stellar age, showing Ia heating versus stellar heating; thermally stable versus unstable regions ($t_{\rm ff} = t_{\rm cool}/10$); as well as where $\sigma = v_{\rm w,0}^{\bullet}$ and $\sigma = v_{\rm w,0}^{\star}$.  }
+{\bf BDM: ADD plot of parameter space of MBH and stellar age, showing Ia heating versus stellar heating; thermally stable versus unstable regions ($t_{\rm ff} = t_{\rm cool}/10$); as well as where $\sigma = v_{w}^{\bullet}$ and $\sigma = v_{w}^{\star}$.  }
 
 \subsection{Cooling}
 \label{sec:cooling}
@@ -1408,8 +1401,11 @@ which we have normalized in terms of the Hubble time.
 
 \section{Discussion}
 
+\begin{itemize}
+\item{Fact that some low mass BHs appear to have nearly Eddington accretion rates, suggest an external origin - since the maximum Ia rate appears to be below this}
+\end{itemize}
 
-If cooling becomes important in the flow ($v_{w} < v_{\rm crit}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
+If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm crit}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
 practice this should could manifest as a large increase in the stagnation radius, due an effective {\it decrease} in the effective heating rate.  This global ``instability" is not a true instability insofar as the gas does not necessarily clump locally into low-T clouds.
 
 However, \citet{McCourt+12} argue that even if cooling is exactly
@@ -1423,7 +1419,7 @@ mass from the hot medium (to low-T clouds), if the cooling timescale,
 is locally shorter than the approximately 10 times the free-fall
 timescale $t_{\rm ff}$, where the last equality is evaluated at the
 stagnation radius and makes use of equations~(\ref{eq:Tanalytic}) and
-(\ref{eq:rhors2}).  We thus see that the condition $v_w \gtrsim v_{\rm
+(\ref{eq:rhors2}).  We thus see that the condition $\tilde{v}_{w} \gtrsim v_{\rm
   crit}$ is also the condition for local instability, although the
 prefactor may be slightly different.
 
@@ -1461,9 +1457,9 @@ gas.  In practice is it almost never possible to resolve the Bondi radius, there
     possible solution that the wind mass loss rate (i.e. $\eta$)
     increases with $\Mbh$, as would be expected if low mass SMBH
     preferentially hosted younger stellar populations. Another possible
-    explanation is that the effective heating rate of the CNM $v_{\rm w,0}$
+    explanation is that the effective heating rate of the CNM $v_{w}$
     decreases with decreasing SMBH mass. This could again be due to an
-    older stellar population, since $v_{\rm w,0} \propto \eta^{−1/2}$
+    older stellar population, since $v_{w} \propto \eta^{−1/2}$
     for heating sources such as SN Ia and millisecond pulsars.
   \item We compare the $\Mdot$ for each of our solution to the one
     calculated from the Bondi formula. We find that they generally to

@@ -15,18 +15,19 @@ T\dsdr =& \frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho} = \\
 \frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}  \frac{p(\rs)}{\rho(\rs)}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
  \label{eq:first_law}
 \end{align}
-where $n\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule as follows:
+where $n\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule, yielding
+%\begin{align}
+ % &\lim_{r \rightarrow \rs} A=\frac{\lim_{r \rightarrow \rs}
+  %  \frac{d}{dr}\left[q (r)\left(\ke -\gammaf
+   %     \frac{p}{\rho}+\kew\right)\right]}{\lim_{r \rightarrow \rs}
+    %\frac{d}{dr} \left(\rho v\right)}\\
+  %&=\frac{ q'(\rs) \overbrace{\left.\left(\ke
+   %     -\gammaf\frac{p}{\rho}+\kew\right)\right|_{\rs}}^0+ q(\rs)
+    %\frac{d}{dr} \left[\left(\ke -\gammaf
+     %   \frac{p}{\rho}+\kew\right)\right]_{\rs}}{\underbrace{\rho'(\rs)
+      %v(\rs)}_0 +\underbrace{v'(\rs)\rho(\rs)}_{q(\rs)}}\\
 \begin{align}
-  &\lim_{r \rightarrow \rs} A=\frac{\lim_{r \rightarrow \rs}
-    \frac{d}{dr}\left[q (r)\left(\ke -\gammaf
-        \frac{p}{\rho}+\kew\right)\right]}{\lim_{r \rightarrow \rs}
-    \frac{d}{dr} \left(\rho v\right)}\\
-  &=\frac{ q'(\rs) \overbrace{\left.\left(\ke
-        -\gammaf\frac{p}{\rho}+\kew\right)\right|_{\rs}}^0+ q(\rs)
-    \frac{d}{dr} \left[\left(\ke -\gammaf
-        \frac{p}{\rho}+\kew\right)\right]_{\rs}}{\underbrace{\rho'(\rs)
-      v(\rs)}_0 +\underbrace{v'(\rs)\rho(\rs)}_{q(\rs)}}\\
-  &= \frac{d}{dr} \left[\left(\ke -\gammaf \frac{p}{\rho}+\kew\right)\right]_{\rs}
+  \lim_{r \rightarrow \rs} A = \frac{d}{dr} \left[\left(\ke -\gammaf \frac{p}{\rho}+\kew\right)\right]_{\rs}
 \end{align}
 Now using the definition $\vw^2=\vwO^2+ G \Menc/r$, where
 $\Menc=\Mbh+\Mstar$, and assuming $\Mstar \sim r^{2-\Gamma}$, we find that
