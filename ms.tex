@@ -442,7 +442,7 @@ Even in the saturated case, heat conduction is at most an order unity correction
 \subsection{Thermal Instability}
 \label{sec:instability}
 
-Radiative cooling, if important, qualitative alters key features of the accretion flow.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm cool} = n^{2}\Lambda \propto T^{-2.7}$ (see below) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \in [-0.7,0.5]$.  If manifest, thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Wang+14}).  
+Radiative cooling, if important, qualitative alters key features of the accretion flow.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm cool} = n^{2}\Lambda \propto T^{\beta-2}$ (see below) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \in [-0.7,0.5]$.  If manifest, thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Wang+14}).  
 
 Radiative cooling can, however, be stabilized by the other sources of cooling, such as the stellar wind source term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius equals $q v_{\rm w}^{2}/2$ (neglecting conduction and radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the nominal wind heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}| =|\Lambda(T) n^2|$,
 \begin{align}
@@ -785,6 +785,71 @@ heating from massive stars can be much greater, $\gtrsim 10^{3}$ km
 s$^{-1}$.  In Appendix \ref{app:windheat} we present a model for
 how $v_{\rm w,0}$ varies as a function of stellar age.
 
+\subsection{Type Ia Supernovae} 
+
+Type Ia supernovae (SNe Ia) represent a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each Ia supernova injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SNe rate (per stellar mass) is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm  Ia}$ produces an effective wind heating parameter (equation~[\ref{eq:vw_eff}]) \begin{align} v_{\rm w,0}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
+E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
+\end{align} The thermal energy injected by a Ia SN $E_{\rm Ia} \simeq
+\epsilon_{\rm Ia} 10^{51}$ ergs depends on the efficiency $\epsilon$
+with which the initial blast wave energy is converted into bulk or turbulent
+motion instead of being lost to radiation.  \cite{Thornton+98}
+estimate a radiative efficiency $\epsilon_{\rm Ia} \sim 0.1$,
+depending weakly on surrounding density, but \citet{Sharma+14} argues
+that $\epsilon_{\rm Ia}$ can be considerably higher, $\sim 0.4$, if
+the SNe occur in a hot dilute medium, as may characterize the circumnuclear medium.  We hereafter adopt $\epsilon_{\rm Ia} = 0.4$.
+
+The Ia SN rate $\RateIa$ depends on the age of the stellar population, as it represent the convolution of the star formation rate and the Ia delay time distribution (DTD) divided by the present stellar mass.  In
+the limit of impulsive star formation, $\RateIa$ is the DTD evaluated at the time since the star formation episode.  The observationally inferred DTD (Fig. 1 of \citealt{MaozMannucci+:2012a}) has the
+approximate functional form \begin{align}
+  R_{\rm Ia} =1.7\times 10^{-14}\left(\tau_{\star}/t_{\rm
+      h}\right)^{-1.12} M_{\odot}^{-1}\,{\rm yr^{-1}}
+\label{eq:DTD}
+  \end{align}
+  where $\tau_{\star}$ is the time since star formation
+  (c.f.~\citealt{Scannapieco&Bildsten05}). 
+
+From equations (\ref{eq:vw_sne}), (\ref{eq:DTD}) we thus estimate that 
+  \begin{eqnarray} 
+    v_{w,0}^{\rm Ia} &\approx& 700(\epsilon_{\rm
+      Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{-0.56}\eta_{0.02}^{-1/2}\,{\rm km
+      \,s^{-1}} \nonumber \\
+&\approx& 700(\epsilon_{\rm
+      Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{0.09}\,{\rm km
+      \,s^{-1}},
+\label{eq:vIa}
+  \end{eqnarray}
+where the second line assumes $\eta\simeq 0.02 (\tau_{\star}/t_h)^{-1.3}$ for a single burst of star formation (\citealt{Ciotti+91}).
+
+The high value of $v_{w,0}^{\rm Ia}$ implies that Ia SNe represent an important source of CNM heating.  However, SNe can only be approximated as supplying constant heating throughout space and time if the rate of SNe is rapid compared to the inflow time at the radius of interest (\citealt{ShcherbakovWong+:2014a}).  We define the ``Ia radius"
+  \begin{align}
+    r_{\rm Ia} \sim \left(\frac{G}{R_{\rm Ia}\sigma}\right)^{1/2} \sim
+    38 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
+    \label{eq:rIa}
+  \end{align}
+as the location exterior of which the time interval between subsequent supernovae $\tau_{\rm Ia} \sim 1/M_{\rm enc}R_{\rm Ia} \sim G/r\sigma^{2}R_{\rm Ia}$ exceeds the local dynamical timescale $t_{\rm
+dyn} \sim r/\sigma$, where we again adopt the Ia rate for an old stellar population and in the final equality we estimate the velocity dispersion using the $M_{\bullet}-\sigma$ relationship
+(equation~[\ref{eq:Msigma}]).  
+
+Assuming that $v_{\rm w,0}^{\rm Ia} \gg \sigma$ then by substituting $v_{\rm w,0}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into our expression for the stagnation radius (\ref{eq:rs_simple}), we can write
+\begin{eqnarray}
+\left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w,0}^{\rm Ia}} &\approx& 12.4\eta_{0.02} M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68} \nonumber \\
+&\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{0.38}
+\end{eqnarray}
+The fact that $r_{\rm Ia} \gg r_{\rm s}$ would appear to imply that Ia heating only represents a sources of steady heating near the stagnation radius for very massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ and/or very young populations ($\tau_{\star} \ll t_{\rm h}$).  However, this expression underestimates the importance of Ia heating, since the actual stagnation radius will be substantially larger than its value for $v_{\rm w,0}^{\rm Ia}$ if the nominal heating rate is much less than this.  In general it is reasonable to expect that the impact of Ia SN will increase for larger SMBH masses.
+
+What is the effect of the Ia radius?  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{\rm w,0}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence Ia SN can in principle dynamically clear out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Hence, even if $r_{\rm s} > r_{\rm Ia}$, the accretion rate will be limited to a value set by substituting $r_{\rm Ia}$ for $r_{\rm s}$ in derivigin equation $\ref{eq:eddr_analytic}$, i.e.  {\bf calculate:}
+\begin{eqnarray}
+\left.\frac{\dot{M}}{\dot{M}_{\rm edd}}\right|_{\rm max} &\approx&
+  \begin{cases}
+    1.3 \times 10^{-5} M_{\bullet,8}^{0.76}
+    v_{500}^{-3.8}  \eta_{0.02}   & \text{core} \\
+    2.4 \times 10^{-5} \Mbheight^{0.48} 
+    v_{500}^{-2.4}  \eta_{0.02}   & \text{cusp}, 
+  \end{cases}
+  \label{eq:eddr_Ia}
+\end{eqnarray}
+
+
 \subsection{Millisecond Pulsars}
  Energy injection from millisecond pulsars (MSPs) is a potentially
 important heating source.  If the number of MSPs per unit stellar mass
@@ -818,65 +883,8 @@ of some Fermi-detected pulsars, then the higher value of $v_{\rm w,0}
 under the optimistc assumption $\epsilon = 1$.  On the other hand, the
 binaries giving rise to MSPs may be disocciated by stellar
 interactions in the dense nuclear cluster, reducing their numbers as
-compared to the field population estimate above.  We conclude that
-MSPs are unlikely to be an important source of heating, probably
-insufficient to stabilize the steady flow against cooling instability
-(e.g. $v_{\rm w,0}^{\rm MSP} < v_{\rm critt}$;
-eq.~[\ref{eq:cooling2}])
+compared to the field population estimate above.  MSPs are thus unlikely to be an important source of heating in comparison to stellar heating.
 
-\subsection{Type Ia Supernovae} 
-
-Type Ia supernovae (SNe Ia) represent a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each Ia supernova injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SNe rate (per stellar mass) is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate $E_{\rm Ia}R_{\rm  Ia}$ produces an effective wind heating parameter (equation~[\ref{eq:vw_eff}]) \begin{align} v_{\rm w,0}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
-E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
-\end{align} The thermal energy injected by a Ia SN $E_{\rm Ia} \simeq
-\epsilon_{\rm Ia} 10^{51}$ ergs depends on the efficiency $\epsilon$
-with which the initial blast wave energy is converted into bulk or turbulent
-motion instead of being lost to radiation.  \cite{Thornton+98}
-estimate a radiative efficiency $\epsilon_{\rm Ia} \sim 0.1$,
-depending weakly on surrounding density, but \citet{Sharma+14} argues
-that $\epsilon_{\rm Ia}$ can be considerably higher, $\sim 0.4$, if
-the SNe occur in a hot dilute medium, as may characterize the circumnuclear medium.
-
-The Ia SN rate $\RateIa$ depends on the age of the stellar population, as it represent the convolution of the star formation rate and the Ia delay time distribution (DTD) divided by the present stellar mass.  In
-the limit of impulsive star formation, $\RateIa$ is the DTD evaluated at the time since the star formation episode.  The observationally inferred DTD (Fig. 1 of \citealt{MaozMannucci+:2012a}) has the
-approximate functional form \begin{align}
-  R_{\rm Ia} =1.7\times 10^{-14}\left(\tau_{\star}/t_{\rm
-      h}\right)^{-1.12} M_{\odot}^{-1}\,{\rm yr^{-1}}
-\label{eq:DTD}
-  \end{align}
-  where $\tau_{\star}$ is the time since star formation
-  (c.f.~\citealt{Scannapieco&Bildsten05}). 
-
-From equations (\ref{eq:vw_sne}), (\ref{eq:DTD}) we thus estimate that 
-  \begin{eqnarray} 
-    v_{w,0}^{\rm Ia} &\approx& 700(\epsilon_{\rm
-      Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{-0.56}\eta_{0.02}^{-1/2}\,{\rm km
-      \,s^{-1}} \nonumber \\
-&\approx& 700(\epsilon_{\rm
-      Ia}/0.4)^{0.5}(\tau_{\star}/t_{\rm h})^{0.09}\,{\rm km
-      \,s^{-1}},
-\label{eq:vIa}
-  \end{eqnarray}
-where the second line assumes $\eta\simeq 0.02 (\tau_{\star}/t_h)^{-1.3}$ for a single burst of star formation (\citealt{Ciotti+91}).
-
-The high value of $v_{w,0}^{\rm Ia}$ implies that Ia SNe represent a potentially dominant source of non-AGN heating in the CNM.  However, SNe can only be approximated as being a constant heating source throughout space and time if the rate of SNe is rapid compared to the inflow time at the radius of interest (\citealt{ShcherbakovWong+:2014a}).  We define the ``Ia radius"
-  \begin{align}
-    r_{\rm Ia} \sim \left(\frac{G}{R_{\rm Ia}\sigma}\right)^{1/2} \sim
-    38 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
-    \label{eq:rIa}
-  \end{align}
-as the location exterior of which the time interval between subsequent supernovae $\tau_{\rm Ia} \sim 1/M_{\rm enc}R_{\rm Ia} \sim G/r\sigma^{2}R_{\rm Ia}$ exceeds the local dynamical timescale $t_{\rm
-dyn} \sim r/\sigma$, where we again adopt the Ia rate for an old stellar population and in the final equality we estimate the velocity dispersion using the $M_{\bullet}-\sigma$ relationship
-(equation~[\ref{eq:Msigma}]).  
-
-Assuming that $v_{\rm w,0}^{\rm Ia} \gg \sigma$ then by substituting $v_{\rm w,0}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into our expression for the stagnation radius (\ref{eq:rs_simple}), we can write
-\begin{eqnarray}
-\left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w,0}^{\rm Ia}} &\approx& 12.4\eta_{0.02} M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68} \nonumber \\
-&\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{0.38}
-\end{eqnarray}
-The fact that $r_{\rm Ia} \gg r_{\rm s}$ would appear to imply that Ia heating only represents a sources of steady heating near the stagnation radius for very massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ and/or very young populations ($\tau_{\star} \ll t_{\rm h}$).  However, this expression underestimates the importance of Ia heating, since the actual stagnation radius will be substantially larger than its value for $v_{\rm w,0}^{\rm Ia}$ if the nominal heating rate is much less than this.  In general it is reasonable to expect that the impact of Ia SN will increase for larger SMBH masses.
-
-What is the effect of the Ia radius?  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{\rm w,0}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence Ia SN can in principle periodically clear out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$. 
 
 \subsection{SMBH Feedback}
 
