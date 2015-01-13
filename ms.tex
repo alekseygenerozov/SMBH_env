@@ -207,8 +207,41 @@ M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
 \end{align}
 The use of equation (\ref{eq:Msigma}) is questionable for low mass black holes (e.g., \citealt{Greene&Ho07}), but our results are not sensitive to this assumption.  
 
-A galaxy model is fully specified by four parameters: $\Mbh$, $\Gamma$, $r_b$,
-and $\beta$.  We compute models for three different black hole masses, $\Mbh = 10^6$, $10^7$, $10^8 \Msun$.  The distribution of $\Gamma$ in the \citet{LauerFaber+:2007a} sample is bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim 0.3$ and a concentration of ``cusp" galaxies with $\Gamma \gsim 0.7$.  We bracket these possibilities by considering models with $\Gamma=0.8$ and $\Gamma=0.1$.  Since our results are most sensitive to the properties of the gas flow on radial scales $\ll r_b$, we fix $\beta = 2$ (a typical value).  However, the presence of $\rb$ is necessary for to obtain a converged steady state for some regions of our parameter space. We adopt $\rb=100$ pc for cusp galaxies ($\Gamma=0.8$), while for core galaxy models we employ the scaling relation $\rb = $, motivated again by the \citet{LauerFaber+:2007a} sample. ({\bf BDM: fill in!}).  Though simplistic, our results are not sensitive to our assumption about the value of $\rb$.
+A galaxy model is fully specified by four parameters: $\Mbh$,
+$\Gamma$, $r_b$, and $\beta$.  We compute models for three different
+black hole masses, $\Mbh = 10^6$, $10^7$, $10^8 \Msun$.  The
+distribution of $\Gamma$ in the \citet{LauerFaber+:2007a} sample is
+bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim
+0.3$ and a concentration of ``cusp" galaxies with $\Gamma \gsim 0.7$.
+We bracket these possibilities by considering models with $\Gamma=0.8$
+and $\Gamma=0.1$.  Since our results are most sensitive to the
+properties of the gas flow on radial scales $\ll r_b$, we fix $\beta =
+2$ (a typical value). In any case, the flow inside $\rb$ is
+insensitive the outer power law slope of the stellar density
+profile. However, the presence of $\rb$ is necessary for to obtain a
+converged steady state for some regions of our parameter space.  We
+consider four different values of the $\rb$: 50 pc, 100 pc, 200 pc,
+and 400 pc. These choices are motivated by the observed break radii in
+the \citet{LauerFaber+:2007a} sample. For the core galaxies
+($\Gamma$<0.3) in this sample the break radius follows the scaling
+relationship $\rb\sim 106 \, (\Mbheight)^{0.39}$ pc, with scatter of
+approximately one dex. Most the cusp ($\Gamma>0.5$) galaxies have
+$\rb$ between 100 and 1000 pc, and there is not trend with
+$\Mbh$. {\bf AG: In practice when it is clear the rb will not have a
+  significant effect on rs it may not be necessary to do runs. For
+  instance for Mbh=$10^8$ Msun, gamma=0.8, and vw0=600 km/s the
+  stagnation radius changes by only 8\%. So for cusp galaxies with
+  vw0$\gsim$600 km/s and Mbh$\lsim 10^8$ Msun it seems like it is a
+  safe bet to neglect the effect of the break radius on the
+  solution. For low heating rates it my be difficult to converged
+  solution for large values of rb=200 and 400 pc.}
+% However, the presence of $\rb$ is necessary for to obtain a
+% converged steady state for some regions of our parameter space. We
+% adopt $\rb=100$ pc for cusp galaxies ($\Gamma=0.8$), while for core
+% galaxy models we employ the scaling relation $\rb = $, motivated again
+% by the \citet{LauerFaber+:2007a} sample. ({\bf BDM: fill in!}).
+% Though simplistic, our results are not sensitive to our assumption
+% about the value of $\rb$.
 
 \subsection{Hydrodynamic Equations}
 \label{sec:hydro}
