@@ -351,7 +351,7 @@ where the numerical estimate assumes $n = 1$.  This expression is similar to tha
 
 The accretion rate onto the SMBH is given by the integrated mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
 \begin{eqnarray}
-  \dot{M} &=& \frac{\eta \Menc(\rs)}{\th} \nonumber \\
+  \dot{M} &=& \frac{\eta \Menc|_{r_{\rm s}}}{\th} \nonumber \\
 &\approx&
   \begin{cases}
     2.9 \times 10^{-5} M_{\bullet,8}^{1.76}
@@ -375,14 +375,14 @@ where we have made use of equation (\ref{eq:stag_simple}; assuming that $v_{w} \
 where $\dot{M}_{\rm edd} = 2.6M_{\bullet,8}M_{\odot}$ yr$^{-1}$  is the Eddington accretion rate, assuming a radiative efficiency of ten per cent.  Note the sensitive inverse dependence of the accretion rate on the wind heating rate.  
 %To reproduce the estimated values $\dot{M}/\dot{M}_{\rm edd} \lesssim 10^{-3}$ in low-luminosity AGN or quiescent galaxies, we thus require $v_{w} \gtrsim 150M_{\bullet,8}^{0.5}$ 
 
-The gas density at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate accurately.  Using an alternative estimate of $\dot{M}$ as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}(\rs) = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$ in conjuction with equation (\ref{eq:mdot_analytic}), one finds
+The gas density at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate accurately.  Using an alternative estimate of $\dot{M}$ as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$ in conjuction with equation (\ref{eq:mdot_analytic}), one finds
 \begin{align}
-  &\dot{M}\sim\frac{(4 \pi/3) \rs^3 \rho(\rs)}{\tff(\rs)},
+  &\dot{M}\sim\frac{(4 \pi/3) \rs^3 \rho|_{r_{\rm s}}}{\tff|_{r_{\rm s}}},
   \label{eq:mdot_gas}
 \end{align}
 from which one derives 
 \begin{align}
-  \rho(\rs)\approx
+  \rho|_{r_{\rm s}}\approx
   \begin{cases}
     5 \times 10^{-26} \Mbheight^{-0.2} v_{500}^{-0.8}  \eta_{0.02} \,
     \, {\rm g \, cm^{-3}}& \text{core},\\
@@ -395,7 +395,7 @@ again using equation (\ref{eq:rs_simple}) for the stagnation radius.
 %Note that by combining equations~\eqref{eq:mdot_analytic}
 %and~\eqref{eq:mdot_gas}, one can also write
 %\begin{align}
-%\rho(\rs)=\frac{3 q(\rs) \tff(\rs)}{2-\Gamma}.
+%\rho|_{r_{\rm s}}=\frac{3 q|_{r_{\rm s}} \tff|_{r_{\rm s}}}{2-\Gamma}.
 %\label{eq:rhors2}
 %\end{align}
 
@@ -404,7 +404,7 @@ Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) may be
   \dot{M}_{\rm B} =4\pi \lambda r_b^2 \rho(r_b) v_{\rm ff}(r_b),
 \label{eq:bondi}
 \end{align}
-where $r_b \equiv GM/c_{s}^{2}$ is the Bondi radius, $v_{\rm ff} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  By rewriting equation (\ref{eq:mdot_gas}) as $\dot{M}\simeq 4\pi \rs^2 \rho(\rs) v_{\rm ff}(\rs)/3$,
+where $r_b \equiv GM/c_{s}^{2}$ is the Bondi radius, $v_{\rm ff} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  By rewriting equation (\ref{eq:mdot_gas}) as $\dot{M}\simeq 4\pi \rs^2 \rho|_{r_{\rm s}} v_{\rm ff}|_{r_{\rm s}}/3$,
 one notices a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $\rb$ is replaced by $\rs$.  When the stagnation radius resides interior to the sphere of influence we indeed have (eq.~[\ref{eq:stag_simple}])
 \begin{align}
   \rs\approx\frac{7}{2}\frac{G \Mbh}{\vwO^2} \approx \frac{14}{3}\frac{GM_{\bullet}}{c_{s}^{2}} = \frac{14}{3}r_{\rm B},
@@ -458,7 +458,7 @@ Radiative cooling can, however, be stabilized by the other sources of cooling, i
 \end{align}
 where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs}) for the gas and stellar densities at the stagnation radius, respectively.  Here $n = \rho/\mu m_p$ is the particle number density and we have approximated the cooling function for $T < 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}$ assuming solar metallicity gas (\citealt{Draine:2011a}; Fig. 34.1).  To within a constant of order unity, equation (\ref{eq:cooling2}) also equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n kT/2)/\dot{q}_{\rm cool}$ to the free-fall time $t_{\rm ff}$ if one uses the equality 
 \begin{align}
-\rho(\rs)=\frac{3 q(\rs) \tff(\rs)}{2-\Gamma}.
+\rho|_{r_{\rm s}}=\frac{3 q|_{r_{\rm s}} \tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
 \end{align}
 that results by combining equations~\eqref{eq:mdot_analytic} and~\eqref{eq:mdot_gas}.
@@ -473,7 +473,7 @@ v_{w} > v_{\rm crit} \simeq
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm crit} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius.  The requirement that $v_{\rm w} \gtrsim \sigma$ in equation (\ref{eq:cooling2}) results because the top two lines are derived under the assumption that the stagnation radius is given by equation (\ref{eq:rs_simple}).  When $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to larger radii than predicted by by equation (\ref{eq:rs_simple}) or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
+Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm crit} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius (Fig.~\ref{fig:cooling}).  The requirement that $v_{\rm w} \gtrsim \sigma$ in equation (\ref{eq:cooling2}) results because the top two lines are derived under the assumption that the stagnation radius is given by equation (\ref{eq:rs_simple}).  When $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to larger radii than predicted by by equation (\ref{eq:rs_simple}) or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
 
 
 
@@ -490,20 +490,7 @@ Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{cooling.eps}
-  \caption{\label{fig:cooling} Ratio of heating ($H$) to cooling rate
-    ($C$) for each of our solutions (solid lines). The cooling rate is
-    calculated using the approximate (solar metallicity) cooling
-    function in Equation~(\ref{eq:cooling}). The heating rate is
-    estimated as $q \vw^2/2+q v^2/2$. The ratio is computed from
-    equation (\ref{eq:cooling}) assuming a stellar mass loss rate
-    parameter $\eta=0.02$. We also plot the ratio $\tcool/\tff$
-    vs. radius. $H/C$ is a diagnostic for global thermal stability,
-    and a solution should be stable as long as
-    $H/C\gsim1$. $\tcool/\tff$ is a diagnostic for local thermal
-    instability, solutions should be stable as long as $\tcool/t_{\rm
-      ff}\gsim$10 \citealt{McCourt+12}. Notice that for high $\vwO$
-    the two ratios coincide at $\rs$ (marked with a square for each
-    solution).}
+  \caption{\label{fig:cooling} Ratio of the rate of heating to radiative cooling, $\dot{q}_{\rm heat}/\dot{q}_{\rm cool}$, as a function of radius for each of our solutions (solid lines).  Shown for comparison with dashed lines is the ratio of the cooling to the local free-fall timescale $t_{\rm cool}/t_{\rm ff}$.  For high heating rates both ratios are approximately equal at the stagnation radius (marked with a square for each solution).  When $\dot{q}_{\rm heat}/\dot{q}_{\rm cool} \lesssim 1$ and $t_{\rm cool}/t_{\rm ff} \lesssim 10$ the flow will be susceptible to global and local thermal instability, respectively (e.g.,  \citealt{McCourt+12}).  {\bf BDM: change y axis labels to qdotheat/qdotcool, tcool/tff}.}
 \end{figure}
 
 
@@ -516,57 +503,57 @@ Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v
 \begin{table*}
 \centering
 \begin{minipage}{18cm}
-\caption{}
+\caption{Summary of Numerical Solutions}
 \begin{tabular}{lccccccccccccc}
 \hline
-{$M_{\bullet,8}$} & {$v_{w}$} & {$\gamma$} & {$r_b$} & {$\dot{M}/\dot{M}_{\rm Edd}$} & {$t_{\rm cool}/t_{\rm ff} (r_s)$} & {comments}\\
+{$M_{\bullet,8}$} & {$v_{w}$} & {$\Gamma^{(a)}$} & {$r_b$} & {$\dot{M}/\dot{M}_{\rm edd}$} & {$(t_{\rm cool}/t_{\rm ff})_{r_s}$} & {comments}\\
 \hline
-0.01 & 300.0 & 0.8 & N/A & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
+0.01 & 300 & 0.8 & N/A & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
 unresolved \\
-0.01 & 600.0 & 0.8 & N/A & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
+0.01 & 600 & 0.8 & N/A & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
 10^{ 2 }$ &  rb in fact unresolved\\
-0.01 & 1200.0 & 0.8 & N/A & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
+0.01 & 1200 & 0.8 & N/A & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
 10^{ 4 }$ &  rb in fact unresolved\\
-0.1 & 300.0 & 0.8 & 100.0 & $ 2.5 \times 10^{ -3 }$ & 0.29 & energy
+0.1 & 300 & 0.8 & 100.0 & $ 2.5 \times 10^{ -3 }$ & 0.29 & energy
 cons on outer grid \\
-0.1 & 600.0 & 0.8 & 100.0 & $ 1.8 \times 10^{ -4 }$ & 97 &  \\
-0.1 & 1200.0 & 0.8 & 100.0 & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
+0.1 & 600 & 0.8 & 100.0 & $ 1.8 \times 10^{ -4 }$ & 97 &  \\
+0.1 & 1200 & 0.8 & 100.0 & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
 10^{ 3 }$ &  energy cons on inner grid\\
-1 & 300.0 & 0.8 & 100.0 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{
+1 & 300 & 0.8 & 100.0 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{
   -2 }$ &  TI\\
-1 & 600.0 & 0.8 & 100.0 & $ 7.3 \times 10^{ -4 }$ & 21 &  \\
-1 & 1200.0 & 0.8 & 100.0 & $ 9.9 \times 10^{ -5 }$ & $ 1.5 \times 10^{
+1 & 600 & 0.8 & 100.0 & $ 7.3 \times 10^{ -4 }$ & 21 &  \\
+1 & 1200 & 0.8 & 100.0 & $ 9.9 \times 10^{ -5 }$ & $ 1.5 \times 10^{
   3 }$ &  \\
-1 & 300.0 & 0.8 & 50.0 & $ 8.2 \times 10^{ -3 }$ & 0.19 &  \\
-1 & 300.0 & 0.8 & 200.0 & $ 3.6 \times 10^{ -2 }$ & $ 1.7 \times 10^{
+1 & 300 & 0.8 & 50.0 & $ 8.2 \times 10^{ -3 }$ & 0.19 &  \\
+1 & 300 & 0.8 & 200.0 & $ 3.6 \times 10^{ -2 }$ & $ 1.7 \times 10^{
   -2 }$ &  TI/convergence \\
 %1 & 300.0 & 0.8 & 300.0 & $ 5.2 \times 10^{ -2 }$ & $ 9.8 \times 10^{
 %  -3 }$ &  TI/convergence\\
-1 & 300.0 & 0.8 & 400.0 &  &  &  TI/run unsuccessful\\
-0.1 & 300.0 & 0.8 & 50.0 & $ 2.0 \times 10^{ -3 }$ & 0.46 &  \\
-0.1 & 300.0 & 0.8 & 200.0 & $ 5.3 \times 10^{ -3 }$ & 0.12 &  TI/convergence\\
+1 & 300 & 0.8 & 400.0 &  &  &  TI/run unsuccessful\\
+0.1 & 300 & 0.8 & 50.0 & $ 2.0 \times 10^{ -3 }$ & 0.46 &  \\
+0.1 & 300 & 0.8 & 200.0 & $ 5.3 \times 10^{ -3 }$ & 0.12 &  TI/convergence\\
 %0.1 & 300.0 & 0.8 & 300.0 & $ 7.2 \times 10^{ -3 }$ & $ 6.7 \times
 %10^{ -2 }$   & TI/convergence  \\
-0.1 & 300.0 & 0.8 & 400.0 & $ 8.9 \times 10^{ -3 }$ & $ 4.7 \times
+0.1 & 300 & 0.8 & 400.0 & $ 8.9 \times 10^{ -3 }$ & $ 4.7 \times
 10^{ -2 }$ & TI/convergence \\
-0.01 & 1200.0 & 0.1 & N/A & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times
+0.01 & 1200 & 0.1 & N/A & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times
 10^{ 4 }$ &  rb is unsresolved\\
-0.1 & 1200.0 & 0.1 & N/A & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{
+0.1 & 1200 & 0.1 & N/A & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{
   3 }$ &  tried run in which rb=100 pc was resolved what would happen if rb=400 pc?\\
-1 & 1200.0 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
-1 & 1200.0 & 0.1 & 300.0 & $ 1.9 \times 10^{ -4 }$ & $ 1.3 \times 10^{
+1 & 1200 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
+1 & 1200 & 0.1 & 300.0 & $ 1.9 \times 10^{ -4 }$ & $ 1.3 \times 10^{
   2 }$ &  \\
-0.01 & 1200.0 & 0.1 & 100.0 & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times 10^{ 4 }$ &  \\
-0.1 & 1200.0 & 0.1 & 100.0 & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{ 3 }$ &  \\
-1 & 1200.0 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
-1 & 1200.0 & 0.1 & 50.0 & $ 4.9 \times 10^{ -5 }$ & $ 1.2 \times 10^{ 3 }$ &  \\
-1 & 1200.0 & 0.1 & 200.0 & $ 1.0 \times 10^{ -4 }$ & $ 3.4 \times 10^{ 2 }$ &  \\
+0.01 & 1200 & 0.1 & 100.0 & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times 10^{ 4 }$ &  \\
+0.1 & 1200& 0.1 & 100.0 & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{ 3 }$ &  \\
+1 & 1200 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
+1 & 1200 & 0.1 & 50.0 & $ 4.9 \times 10^{ -5 }$ & $ 1.2 \times 10^{ 3 }$ &  \\
+1 & 1200 & 0.1 & 200.0 & $ 1.0 \times 10^{ -4 }$ & $ 3.4 \times 10^{ 2 }$ &  \\
 %1 & 1200.0 & 0.1 & 300.0 & $ 1.9 \times 10^{ -4 }$ & $ 1.3 \times 10^{ 2 }$ &  convergence\\
-1 & 1200.0 & 0.1 & 400.0 & $ 1.8 \times 10^{ -2 }$ & 0.37 &  TI/convergence\\
-
+1 & 1200 & 0.1 & 400.0 & $ 1.8 \times 10^{ -2 }$ & 0.37 &  TI/convergence\\
 \hline
-\label{table:models}
+\label{table:models}  
 \end{tabular}
+$^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$ Break radius of stellar Nuker profile.
 \end{minipage}
 \end{table*}
 
@@ -582,16 +569,14 @@ Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$, for the cusp
 ($\Gamma=0.8$) solutions within our grid.  As expected, the gas
 density increases towards the SMBH $\rho\propto r^{-n}$ with
-$n\simeq1$.  Note that this is shallower than the $-3/2$ power law for
-Bondi accretion. However, the power law behavior does not extend
-through all radii, and the gas density profile has a break coincident
+$n\simeq1$, i.e. shallower than the $-3/2$ power law for
+Bondi accretion. This power law behavior does not extend
+through all radii, however, as the gas density profile has a break coincident
 with the location of the break in the stellar light profile ($\rb=100$
 pc). The temperature profile is relatively flat at large radii, but
 increases as $\propto 1/r^{k}$ interior to the sphere of influence,
-where $k$ is smaller than 1--the power expected for virialized gas.
-The inwardly directed velocity increases towards the hole approaching
-The inwardly directed velocity is steeper than what would be expected
-for the free-fall velocity $v \propto v_{\rm ff}\propto r^{-1/2}$.
+where $k$ is smaller than 1--the power expected for virialized gas within the black hole sphere of influence.
+The inwardly directed velocity increases towards the hole with a profile that is somewhat steeper than the local free-fall velocity $v \propto v_{\rm ff}\propto r^{-1/2}$.
 % {\bf BDM: I made this up - in general we need
 %   more explanation of what the plots are actually showing, with some
 %   physical explanation.}
@@ -599,17 +584,7 @@ for the free-fall velocity $v \propto v_{\rm ff}\propto r^{-1/2}$.
 % don't have a good physical explanation yet...
 
 
-Figure~\ref{fig:stag} (top panel) shows numerical results for the
-stagnation radius $r_{\rm s}$ where the radial velocity goes to zero
-(expressed in ratio to the radius of the SMBH sphere of influence
-$r_{\rm soi}$), with different colors representing different values of
-$v_{w}$.  Cusp and core galaxies are marked with square and
-triangles, respectively.
-
-We also show the simplified analytic result corresponding to $\rs$
-approximated from \eqref{eq:stag_simple} as a solid black line. For
-$\vwO$, we find good agreement with the analytic prediction. However,
-\eqref{eq:stag_simple} is only valid that $\Mstar(\rs) \ll \Mbh$, and
+The top panel of Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, expressed in ratio to the radius of the SMBH sphere of influence $r_{\rm soi}$, with different colors showing different values of $v_{w}$.  Cusp and core galaxies are marked with square and triangles, respectively.  Shown for comparison as a solid black line is the simplified analytic approximation for $r_{\rm s}$ from \eqref{eq:stag_simple}. For high $\vwO$ the analytic prediction agrees well with our numerical results. However, \eqref{eq:stag_simple} is only valid that $\Mstar|_{r_{\rm s}} \ll \Mbh$, and
 this approximation breaks down for small $\vwO$. In fact, $\rs$
 diverges for smaller $\vwO$. 
 
@@ -1313,13 +1288,13 @@ which we have normalized in terms of the Hubble time.
   $\lambda_R$.
 
   \begin{align}
-    \lrs\simeq\lambdars \sigma(\rs)^2 \rs^2
+    \lrs\simeq\lambdars \sigma|_{r_{\rm s}}^2 \rs^2
   \end{align}
 
   Then
 
   \begin{align}
-    \rcirc&\simeq\lambdars^2 \frac{\sigma(\rs)^2}{G \Mbh} \rs^2\\
+    \rcirc&\simeq\lambdars^2 \frac{\sigma|_{r_{\rm s}}^2}{G \Mbh} \rs^2\\
     &\simeq\lambdars^2 \frac{\rs^2}{\rsoi} \lsim \lambdars^2 \rsoi
   \end{align}
 
