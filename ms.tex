@@ -216,7 +216,7 @@ bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim
 We bracket these possibilities by considering models with $\Gamma=0.8$
 and $\Gamma=0.1$.  We fix $\beta = 2$ (a typical value) because our results are most sensitive to the
 properties of the gas flow on radial scales $\ll r_b$ and do not depend sensitively on the outer power law slope of the stellar density profile. However, the presence of $\rb$ is necessary for to obtain a converged steady state for some regions of our parameter space.  Depending on the model, we
-consider four different values of the $\rb$: 50 pc, 100 pc, 200 pc,
+consider up to four different values of the $\rb$: 50 pc, 100 pc, 200 pc,
 and 400 pc, a range motivated by the observed break radii in
 the \citet{LauerFaber+:2007a} sample. For the core galaxies ($\Gamma \le$0.3) in this sample the break radius follows the scaling relationship $\rb\sim 106 \, (\Mbheight)^{0.39}$ pc, with scatter of
 approximately one dex. Most the cusp ($\Gamma \ge0.5$) galaxies have
@@ -260,7 +260,7 @@ The source term in the continuity equation (eq.~[\ref{eq:drhodt}]),
 represents mass input from stellar winds, which we parameterize in
 terms of the fraction $\eta$ of the stellar density $\rhostar$ being
 recycled into gas on the Hubble time $\th = 1.4 \times 10^{10}$
-years.  To good approximation $\eta\simeq 0.02 (t_{\star}/t_h)^{-1.3}$ at time $t_{\star}$ following a star burst (e.g., \citealt{Ciotti+91})\footnote{\citet{Ciotti+91} give the overall mass return rate from evolved stars as a function of B-band luminosity.  Although we give the mass return rate per unit volume, our expressions are equivalent.}, although we will show later that $\eta$ can be higher if star formation is ongoing (Fig.~\ref{fig:eta}).  
+years.  To good approximation $\eta\simeq 0.02 (t_{\star}/t_h)^{-1.3}$ at time $t_{\star}$ following a star burst (e.g., \citealt{Ciotti+91})\footnote{\citet{Ciotti+91} give the overall mass return rate from evolved stars as a function of B-band luminosity.  Although we give the mass return rate per unit volume, our expressions are equivalent.}, although we will show later that $\eta$ can be significantly higher if star formation is ongoing (Fig.~\ref{fig:eta}).  
 
 Source terms $\propto q$ also appear in the momentum and entropy
 equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) because isotropic
@@ -275,9 +275,7 @@ equation accounts for external heating sources (e.g.,
 \citealt{ShcherbakovWong+:2014a}).  The first term approximates the
 minimum amount of shock heating from stellar winds due to the random movement
 of stars with respect to one another at the characteristic velocity
-$\sim \sigma = \sqrt{GM_{\rm enc}/r}$.  This heating is present even for the low
-wind velocities $\ll \sigma$ that characterize AGB mass loss in old
-stellar populations.  The second term, $v_{w}^{2}$, parameterizes
+$\sim \sigma \approx \sqrt{GM_{\rm enc}/r}$.  This heating is present even in old stellar populations for which mass and energy injection are dominated by AGB winds with low velocities $\ll \sigma$.  The second term, $v_{w}^{2}$, parameterizes
 the contribution of additional sources of heating, such as faster main
 sequence or Wolf-Rayet stellar winds, spin-down energy from millisecond pulsars, supernovae, AGN
 feedback, etc.  As discussed in $\S\ref{sec:heating}$, the value of
@@ -296,7 +294,7 @@ path for electron coulomb scattering becomes comparable to the
 temperature length scale, where $c_s \equiv (kT/\mu m_p)^{1/2}$ is the
 isothermal sound speed and $\phi \lesssim 1$ is an uncertain
 dimensionless constant (we adopt $\phi = 0.1$).  Even a weak magnetic
-field perpendicular to the flow could in principle suppress the
+field oriented perpendicular to the flow could in principle suppress the
 conductivity by greatly reducing the electron mean free path.  However, for radially-decreasing temperature profiles
 of interest, the flow is susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field geometry (\citealt{Parrish&Stone07}).
 
@@ -414,7 +412,7 @@ where the second equality makes use of equation (\ref{eq:Tanalytic}).
 
 \subsection{Importance of Heat Conduction}
 
-Our analytic results above neglect the effects of heat conduction near the stagnation radius, an assumption we now check.  The ratio of the magnitude of conductive heating to the nominal level of ``wind" heating is given by
+Our analytic results neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the nominal level of wind heating at the stagnation radius is given by
 \begin{align}
   \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
