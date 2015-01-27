@@ -818,9 +818,8 @@ km\,s^{-1}} &, \text{cusp},
   \end{cases}
   \label{eq:vC}
 \end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
-\epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency for a thick
-accretion flow (e.g.~\citealt{Narayan&Yi95}).  If heating
-were dominated by Compton heating, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation (\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
+\epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency for an advective
+accretion flow expected to produce high $T_{\rm C}$ emission (e.g.~\citealt{Narayan&Yi95}).  If heating is provided by Compton heating alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation (\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
 \begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 106 \eta_{0.02}^{0.21}T_{\rm
 C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
@@ -830,50 +829,26 @@ C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
   \end{cases}
   \label{eq:vC2}
 \end{align} 
-The fact that $v_{w}^{\rm C} \lesssim 200$ km s$^{-1}$ for $\eta \lesssim 1$ shows that Compton heating alone is insufficient to stabilize the flow against cooling
+The fact that $v_{w}^{\rm C} \lesssim 200$ km s$^{-1}$ for physically realized values of $\eta \lesssim 1$ shows that Compton heating alone is insufficient to stabilize the flow against cooling
 instability, i.e. $v_{w}^{C} < v_{\rm CI}$ (eq.~[\ref{eq:cooling2}]).
 
-In contrast to radiative feedback, kinetic feedback occurs in the form
-of an mass outflow or jet from the viscinity of the black hole, which
-deposits its energy at much larger radii.  We assume that the total
-heating rate from the SMBH is $\epsilon_{\rm j} \dot{M}c^{2}$, where
-$\epsilon_{\rm j} < 1$ is an efficiency factor.  If this energy is
-deposited uniformly out to a radius $r_{\rm heat}$ and volume $V_{\rm
-heat}$, then the local heating rate $e = \epsilon_{\rm
-j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind heating rate
-of
+Kinetic feedback occurs from an outflow of mass or energy  from the viscinity of the black hole in the form of a disk wind or jet, which deposits its energy across a much wider range of radii.  If the total outflow power is proportional to the SMBH accretion rate, $L_{\rm j} = \epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an efficiency factor.  Assuming that this energy is deposited uniformly out to a radius $r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm heat}^{3}$, then the volumetric heating rate $e = \epsilon_{\rm j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind velocity at the stagnation radius given by
 \begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{2t_{\rm
 h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
 \rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
 j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
-&\approx& c\epsilon_{\rm j}^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
+&\approx& 300\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm j}}{10^{-6}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
 heat}}\right)^{1-\Gamma/2},
 \end{eqnarray} where we have used the fact that $\dot{M} \approx \eta
 M_{\rm enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto
 M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ for radii interior to the outer
 break radius (eq.~[\ref{eq:rhostar}]).  Thus for $r_{\rm heat} \sim
-r_{\rm s}$, even a small heating efficiency $\epsilon_{\rm j} \sim
-10^{-6}$ is sufficient for $v_{w}^{\bullet}$ to exceed other
-sources of non-accretion powered heating.  However, if the jet
-distributes its energy on much larger scales comparable to the galaxy
-$r_{\rm heat} \sim $ kpc $\sim 10^{3}r_{\rm s}$ then the heating rate
-would be much smaller.
+r_{\rm s}$, even a modest heating efficiency $\epsilon_{\rm j} \gtrsim
+10^{-5}$ is sufficient for $v_{w}^{\bullet}$ to exceed other
+sources of non-accretion powered heating.  However, if the jet distributes its energy on much larger scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ kpc $\gtrsim 10^{3}r_{\rm s}$ then the heating rate would be much less significant, even for an efficient jet ($\epsilon_{\rm j} \sim 1$).
 
-For a fixed heating radius $r_{\rm heat}$ we just see that $v_{\rm
-  w,0}^{\bullet} \propto r_{\rm s}^{\beta/2} \propto
-M_{\bullet}^{1-\Gamma/2}v_{w}^{\Gamma-2}$ is proportional to
-$v_{w}$ to a negative power, where the last proportionality makes
-use of equation (\ref{eq:stag_simple}).  As in the case of Compton
-heating, SMBH kinetic heating, when dominant, may thus
-``self-regulate".  However, unlike in the case of local stellar wind
-heating, SMBH heating may not be thermally stable, since the central
-accretion rate does not respond instantaneously to a change in the
-thermodynamic properties of the gas on larger scales.  Also note that
-$v_{w}^{\bullet}$ is proportional to a positive power of SMBH
-mass $\propto M_{\bullet}^{1(0.5)}$ for core(cusp) galaxies,
-respectively.  This is dependence may have important implications for
-the predicted dependence of X-ray luminosity on SMBH mass
-($\S\ref{sec:mdot}$).
+Also note that for a fixed $r_{\rm heat}$, the effective heating rate $v_{\rm  w}^{\bullet} \propto r_{\rm s}^{1-\Gamma/2} \propto M_{\bullet}^{1-\Gamma/2}v_{w}^{\Gamma-2}$ is proportional to $v_{w}$ to a negative power (where we have used of eq.~[\ref{eq:stag_simple}]).  This shows that SMBH kinetic heating, if dominant, could thus `self-regulate' insofar as a lower heating rate results in a higher accretion rate, which in turn results in stronger jet feedback.  Importantly, however, unlike in the case of local heating sources such as stellar winds, even a dominant SMBH heating may not allow for a thermally-stable steady flow because the central accretion rate does not respond instantaneously to changes in the
+thermodynamic properties of the gas on larger scale.  We also note here that the kinetic heating rate is proportional to the SMBH mass to a positive power, $v_{w}^{\bullet} \propto M_{\bullet}^{1(0.5)}$ for core(cusp) galaxies, respectively. This dependence could have important implications for the dependence of the average nuclear X-ray luminosity of quiescent galaxies on the SMBH mass ($\S\ref{sec:mdot}$).
 
 What is a physically motivated value of the heating radius $r_{\rm
   heat}$?  \citet{Bromberg+11} show that a jet of luminosity $L_{\rm
