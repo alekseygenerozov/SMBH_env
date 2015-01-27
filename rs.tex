@@ -5,14 +5,14 @@ T\dsdr=\frac{\Q}{\rho v} \label{eq:ss_entropy}
 \end{align}
 By definition, the velocity $v$ goes to zero at the stagnation radius.  In order to avoid the entropy derivate from diverging, the numerator of (\ref{eq:ss_entropy}) must also goto zero at $r_{\rm s}$, implying that
 \begin{align}
- \frac{\gamma}{\gamma-1} \frac{p(\rs)}{\rho(\rs)}=\frac{\vw(\rs)^2}{2} \Rightarrow \frac{\kb T(\rs)}{\mu \mp}=\gammafi \frac{\vw(\rs)^2}{2} .
+ \frac{\gamma}{\gamma-1} \frac{p|_{\rs}}{\rho|_{\rs}}=\frac{\vw^{2}|_{\rs}}{2} \Rightarrow \frac{\kb T|_{\rs}}{\mu \mp}=\gammafi \frac{\vw^{2}|_{\rs}}{2} .
 \label{eq:appTanalytic}
 \end{align}
 Combining (\ref{eq:ss_entropy}) with the first law of thermodynamics,
 \begin{align}
 T\dsdr =& \frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho} = \\
 & 
-\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}  \frac{p(\rs)}{\rho(\rs)}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
+\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}  \frac{p|_{\rs}}{\rho|_{\rs}}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
  \label{eq:first_law}
 \end{align}
 where $n\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule, yielding
@@ -21,11 +21,11 @@ where $n\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right
   %  \frac{d}{dr}\left[q (r)\left(\ke -\gammaf
    %     \frac{p}{\rho}+\kew\right)\right]}{\lim_{r \rightarrow \rs}
     %\frac{d}{dr} \left(\rho v\right)}\\
-  %&=\frac{ q'(\rs) \overbrace{\left.\left(\ke
-   %     -\gammaf\frac{p}{\rho}+\kew\right)\right|_{\rs}}^0+ q(\rs)
+  %&=\frac{ q'|_{\rs} \overbrace{\left.\left(\ke
+   %     -\gammaf\frac{p}{\rho}+\kew\right)\right|_{\rs}}^0+ q|_{\rs}
     %\frac{d}{dr} \left[\left(\ke -\gammaf
-     %   \frac{p}{\rho}+\kew\right)\right]_{\rs}}{\underbrace{\rho'(\rs)
-      %v(\rs)}_0 +\underbrace{v'(\rs)\rho(\rs)}_{q(\rs)}}\\
+     %   \frac{p}{\rho}+\kew\right)\right]_{\rs}}{\underbrace{\rho'|_{\rs}
+      %v|_{\rs}}_0 +\underbrace{v'|_{\rs}\rho|_{\rs}}_{q|_{\rs}}}\\
 \begin{align}
   \lim_{r \rightarrow \rs} A = \frac{d}{dr} \left[\left(\ke -\gammaf \frac{p}{\rho}+\kew\right)\right]_{\rs}
 \end{align}
@@ -33,14 +33,14 @@ Now using the definition $\vw^2=\vwO^2+ G \Menc/r$, where
 $\Menc=\Mbh+\Mstar$, and assuming $\Mstar \sim r^{2-\Gamma}$, we find that
 \begin{align}
 \lim_{r \rightarrow \rs} A=-\gammaf
-\left.\ddr{(p/\rho)}\right|_{\rs}-\frac{G \Menc(\rs)}{2 \rs^2}+(2-\Gamma) \frac{G
-  \Mstar(\rs)}{2 \rs^2}.
+\left.\ddr{(p/\rho)}\right|_{\rs}-\frac{G \Menc|_{\rs}}{2 \rs^2}+(2-\Gamma) \frac{G
+  \Mstar|_{\rs}}{2 \rs^2}.
 \end{align}
 Substituting this expression back into equation (\ref{eq:first_law}) and using equation (\ref{eq:appTanalytic}) gives
 \begin{align}
 &\frac{\gamma+1}{\gamma-1}
-\left.\ddr{(p/\rho)}\right|_{\rs}+ \frac{\gamma-1}{\gamma} \frac{n}{\rs} \vw(\rs)^{2} = (2-\Gamma) \frac{G
-  \Mstar(\rs)}{2 \rs^2} -\frac{G \Menc(\rs)}{2 \rs^2}.  \label{eq:rs1}
+\left.\ddr{(p/\rho)}\right|_{\rs}+ \frac{\gamma-1}{\gamma} \frac{n}{\rs} \vw|_{\rs}^{2} = (2-\Gamma) \frac{G
+  \Mstar|_{\rs}}{2 \rs^2} -\frac{G \Menc|_{\rs}}{2 \rs^2}.  \label{eq:rs1}
 \end{align}
 A second equation results from evaluating the momentum equation (eq.~[\ref{eq:dvdt}]) at the stagnation point
 \begin{align}
@@ -50,7 +50,7 @@ A second equation results from evaluating the momentum equation (eq.~[\ref{eq:dv
 \end{align}
 Finally, combining equations (\ref{eq:rs1}) and (\ref{eq:HSE}) gives 
 \begin{align}
-\rs=\frac{G \Mbh}{n \vw(\rs)^2}\left(\frac{9-\Gamma}{2} \frac{\Mstar(\rs)}{\Mbh} +\frac{7}{2}\right),
+\rs=\frac{G \Mbh}{n \vw^{2}|_{\rs}}\left(\frac{9-\Gamma}{2} \frac{\Mstar|_{\rs}}{\Mbh} +\frac{7}{2}\right),
 \label{eq:rs2main}
 \end{align}
 where we have assumed $\gamma=5/3$.
@@ -58,11 +58,12 @@ where we have assumed $\gamma=5/3$.
 Defining $\eta \equiv \vwO/\sigma_{\rm soi}$, this relationship can be reparameterized as follows:
 \begin{align}
   \frac{\rs}{\rsoi}=\frac{1}{2 \zeta^2 n}\left[
-   \frac{\Mstar(\rs)}{\Mbh}\left(\frac{9-\Gamma}{2}-n\right)+\left(\frac{7}{2}-n\right)\right]
+   \frac{\Mstar|_{\rs}}{\Mbh}\left(\frac{9-\Gamma}{2}-n\right)+\left(\frac{7}{2}-n\right)\right]
 \end{align}
 
-{\bf AG: Note that I have taken sigmainf=2 G Mbh/rinf. Commented out
-  equations have sigmainf=G Mbh/rinf}. For cusp galaxies ($\Gamma\simeq1$) we have $\Mstar(\rs)/\Mbh=x$, $A=4$, and $B=7/2$ for $\gamma = 5/3$, such that 
+%{\bf AG: Note that I have taken sigmainf=2 G Mbh/rinf. Commented out
+%equations have sigmainf=G Mbh/rinf}. 
+For cusp galaxies ($\Gamma\simeq1$) we have $\Mstar|_{\rs}/\Mbh=x$, $A=4$, and $B=7/2$ for $\gamma = 5/3$, such that 
 \begin{align}
 \x=\frac{7-2n}{4\zeta^2 n+2n-8}
 %\x=\frac{7-2n}{2\zeta^2 n+2n-8}
