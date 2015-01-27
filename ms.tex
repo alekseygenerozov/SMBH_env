@@ -839,6 +839,7 @@ h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
 j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
 &\approx& 300\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm j}}{10^{-6}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
 heat}}\right)^{1-\Gamma/2},
+\label{eq:vjet}
 \end{eqnarray} where we have used the fact that $\dot{M} \approx \eta
 M_{\rm enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto
 M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ for radii interior to the outer
@@ -866,52 +867,14 @@ which is notably independent of radius $r$.  Thus we require $\epsilon_{\rm j} \
 
 \subsection{Combined Heating Rate} 
 
-The total heating rate $\vwO = \sqrt{v_{w}^{\star \, 2} + v_{\rm
-    w,0}^{\rm Ia \, 2} + v_{w}^{\rm p \, 2} + v_{\rm
-    w,0}^{\bullet \, 2}}$ has
-contributions from stellar winds, supernovae, pulsars, and SMBH
-feedback. %  Since pulsar heating appears unlikely to contribute
-% appreciably, and since SMBH heating is uncertain, we first focus on
-% heating from stellar winds and supernovae.
+The total gas heating rate $\vwO$ includes contributions from stellar winds, supernovae, pulsars, and SMBH feedback.  The strength of each heating source will depend on the SMBH mass and the star formation history in the galactic nuclear region, the latter of which will vary systematically with the galaxy mass and hence with $\Mbh$.  Qualitatively, smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget, resulting in a high heating rate of $\vwO \sim 1000 $ km s$^{-1}$.  Larger galaxies, on the other hand, will on average have older stellar populations, with their heating rates dominated by Ia supernovae (on large radial scales) and SMBH feedback.
 
-Each of these heating sources will depend on the integrated star
-formation history. This in term will will vary systematically with
-galaxy mass and thus with $\Mbh$.  
-%Qualitatively smaller galaxies willhave recent star formation and
-% energetic winds from Wolf-Rayet stars will dominate the mass
-% budget--$\vwO\gsim 1000 $ km/s.  On the other hand for larger galaxies
-% will have older populations, and heating will be dominated by Ia
-% supernovae on large scales and SMBH feedback on small scales.
-We calculate the star formation history as a function of $\Mbh$ and
-the $\vwO$ for each heating source using the cosmic star formation
-histories in \citet{MosterNaab+:2013a}.  For $v_{w}^{\rm p}$ we
-use equation~\eqref{eq:vmsp}. The star formation history simply enters
-in through $\eta$. The effective $\eta$ for a given star formation
-history will be the convolution of the star formation history with
-$\eta_{\rm imp}\simeq $ {\bf AG: should have expression for $\eta_{\rm
-    Imp}$ in appendix. Have to be careful as we also have the
-  simplified expression for $\eta_{\rm Imp}$} ($\eta$ in the impulsive
-limit). For $v_{w}^{\rm Ia}$ we use
-equation~\eqref{eq:vIa}. Besides $\eta$ there is additional dependence
-on the star formation history from the Ia rate--which is a convolution
-of the star formation history with the delay-time distribution from
-\citet{MaozMannucci+:2012a}. The calculation of $v_{w}^{\star}$
-is somewhat involved: we leave the detailed description for
-Appendix~\ref{app:windheat}. {\bf AG: still need a description of the
-  Compton heating. In general, I struggled with the level of detail
-  here. I couldn't think of a natural place to put the details for the
-  other heating sources}
+The average star formation history as a function of $\Mbh$ and the $\vwO$ for each heating source is estimated by using the average cosmic star formation histories determined by \citet{MosterNaab+:2013a}.  As described in detail in Appendix \ref{app:windheat}, the average star formation history is used to estimate the stellar wind heating $v_{\rm w}^{\star}$ and the mass input parameter $\eta$ (Fig.~\ref{fig:eta}), the latter of which affects the other sources of feedback, including AGN ($v_{\rm w}^{\bullet}$; eqs.~[\ref{eq:vC}], [\ref{eq:vjet}]), millisecond pulsars ($v_{w}^{\rm msp}$; eq.~[\ref{eq:vmsp}]), and Ia supernovae ($v_{w}^{\rm Ia}$; eq.~[\ref{eq:vIa}]), the latter of which also depends on a convolution of the star formation history and the Ia delay-time distribution (eq.~[\ref{eq:DTD}])
 
-$\vwO$ from each heating source (stars, MSPs, SNe Ia, and black hole
-feedback) is plotted in as a function of $\Mbh$ in
-Figure~\ref{fig:vwSources}. $v_{w}^{\rm p}$ is negligible across
-all $\Mbh$. For $\Mbh\lsim 10^{7.5} \Msun$, have substantial recent
-star formation and $v_{w}^{\star}$ is dominant. For $\Mbh\gsim
-10^{7.5} \Msun$ , the younger stellar population with their energetic
+Figure~\ref{fig:vwSources} shows $\vwO$ from each heating source (stars, MSPs, SNe Ia, and black hole
+feedback) as a function of black hole mass.  MSP heating is found to be negligible at all black hole masses.  The young stellar populations in galaxies with $\Mbh\lsim 10^{7.5} \Msun$ results in $v_{w}^{\star}$ being dominant.  For $\Mbh\gsim 10^{7.5} \Msun$ , the younger stellar population with their energetic
 stellar winds is dead, and Compton heating plays an important role.
 
-For reference we also plot the inferred $\eta$ for each $\Mbh$ in
-Figure~\ref{fig:eta} 
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSources.pdf}
@@ -932,7 +895,7 @@ Figure~\ref{fig:eta}
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{eta.pdf}
-\caption{\label{fig:eta} $\eta$ vs. $\Mbh$.}
+\caption{\label{fig:eta} Parameter characterizing stellar mass loss $\eta$ (eq.~[\ref{eq:q}]) as a function of black hole mass $\Mbh$, calculated for average star formation histories corresponding to galaxies with halo masses corresponding to $\Mbh$ according to the results of \citet{MosterNaab+:2013a}. }
 \end{figure}
 
 For each $\Mbh$ we may check whether the solution for corresponding
