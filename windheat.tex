@@ -64,7 +64,7 @@
 
 \subsection{Single Burst}
 
-For a stellar population that forms impulsively of age $t$, the rate of mass and energy injection per unit stellar mass are given, respectively, by 
+For a stellar population that forms impulsively, the rate of mass and energy injection per unit stellar mass at age $t$ are given, respectively, by 
 \begin{align} 
   \dot{\bar{m}}(t) &= \frac{\Delta M(t) \mu|_{M_{\rm TO}(t)}
     \left|\dot{M}_{\rm TO}(t)\right| + f_{\rm MS} \int_{m_0}^{m_{\rm
@@ -74,28 +74,30 @@ For a stellar population that forms impulsively of age $t$, the rate of mass and
   \frac{\vw^2(\Mstar, t) \dot{m}(\Mstar, t) \mu|_{\Mstar} {\rm d}\Mstar}{\bar{m}_*},
   \label{eq:edotImp}
 \end{align} 
-where the first and second terms in each expression corresponds to contributions from main sequence stars and post-main sequence (PMS) stars, respectively.  Here $ f_{\rm MS} < 1$ is an efficiency, which accounts for the efficiency with which main sequence winds thermalize their energy with the rest of the injected gas (we hereafter assume $f_{\rm MS} = 1$) and $\mu$ is the IMF, which we take to be of the Salpeter form $\mu(\Mstar)\sim M^{-2.35}$, truncated at $m_0 = 0.1 \Msun$ on the low mass end and at $100 \Msun$ on the high mass end, where $\bar{m}_*$ = 0.35 $\Msun$ is the corresponding mean stellar mass.  The turn-off mass $M_{\rm TO}$ at time $t$ is calculated according to the following functional fit
-\begin{align}
-\log(M_{\rm TO})/M_{\odot} =0.24 + 0.068 x^2-0.34 x+4.76 e^{-4.58 x},
-\end{align}
-where $x=\log(t/10^9 {\rm years})$, so designed to reproduce the results of \citet{MaederMeynet:1987a} (their Table 9) for massive stars while asymptoting to the fitting formula provided by \citet{CiottiOstriker:2007a} (their eq.~[9]) for intermediate and late times ($t \gsim 10^8$ years).
+where the first and second terms in each expression corresponds to contributions from main sequence (MS) stars and post-main sequence (PMS) stars, respectively.  Here $ f_{\rm MS} < 1$ is the efficiency with which main sequence winds thermalize their energy with the rest of the injected gas (we hereafter assume $f_{\rm MS} = 1$) and $\mu$ is the IMF, which we take to be of the Salpeter form $\mu(\Mstar)\sim M^{-2.35}$, truncated at $m_0 = 0.1 \Msun$ on the low mass end and at $100 \Msun$ on the high mass end, where $\bar{m}_*$ = 0.35 $\Msun$ is the corresponding mean stellar mass.  
 
-The mass lost in PMS winds $\Delta M(t)$ is calculating from \citet{CiottiOstriker:2007a} (their eq.~[10]) according to
+The quantity of mass lost in PMS winds $\Delta M(t)$ is estimated from the expression given by \citet{CiottiOstriker:2007a} (their eq.~[10]),
 \begin{align}
 \Delta M=
 \begin{cases}
 0.945 M_{\rm TO}-0.503 & M_{\rm TO} < 9 \Msun\\
- M_{\rm TO}-1.4 \Msun &  M_{\rm TO} \ge 9 \Msun
+ M_{\rm TO}-1.4 \Msun &  M_{\rm TO} \ge 9 \Msun,
 \end{cases}
 \end{align}
-The MS wind mass loss rate $\dot{m}(\Mstar, t)$ is calculated based on the generalization of Reimer's law given in \citet{SchroderCuntz:2005a} (their eq.~[4]):
+where $M_{\rm TO}$ is the turn-off mass, which at time $t$ is calculated as
 \begin{align}
-  \dot{m}(\Mstar)=8 \times 10^{-14} \frac{L_* r_*}{\Mstar}
+\log(M_{\rm TO})/M_{\odot} =0.24 + 0.068 x^2-0.34 x+4.76 e^{-4.58 x},
+\end{align}
+where $x=\log(t/10^9 {\rm years})$.  This functional fit is designed to reproduce the results of \citet{MaederMeynet:1987a} (their Table 9) for massive stars while asymptoting to the formula provided by \citet{CiottiOstriker:2007a} (their eq.~[9]) for intermediate and late times ($t \gsim 10^8$ years).
+
+The MS wind mass loss rate $\dot{m}(\Mstar, t)$ is calculated based on the generalization of Reimer's law given in \citet{SchroderCuntz:2005a} (their eq.~[4]) as
+\begin{align}
+  \dot{m}=8 \times 10^{-14} \frac{L_* R_*}{\Mstar}
   \left(\frac{T_{\rm eff}}{\rm 4000 K}\right)^{3.5}
   \left(1+\frac{g_{\odot}}{4300 g_*}\right) \Msun \pyear,\
 \end{align}
 where  $R_*$, $L_*$, $T_{\rm eff}$ and $g_*$ are the stellar radius,
-luminosity, effective temperature, and surface gravity, respectively, the latter normalized to its stellar value $g_{\odot}$.  The stellar radius and luminosity are estimated as 
+luminosity, effective temperature, and surface gravity, respectively, the latter normalized to its solar value $g_{\odot}$.  The stellar radius and luminosity are estimated as (\citet{Kippenhahn&Weigert90}; Figs.~22.2) 22.3)
 \begin{align}
 L_*=
 \begin{cases}
@@ -110,51 +112,23 @@ R_{\odot} (\Mstar/\Msun)^{0.57} & \Mstar > \Msun \\
 R_{\odot} (\Mstar/\Msun)^{0.8} & \Mstar \le \Msun
 \end{cases}
 \end{align}
-based on \citealt{Kippenhahn&Weigert} (their Figs.~22.2, 22.3)
+The wind velocity of main sequence winds $v_w (\Mstar, t)$ is assumed to equal 430 km s$^{-1}$, corresponding to the escape speed of the Sun; this produces an effective wind heating velocity for main sequence winds alone of $XXX$, in agreement with the value of 150 km s$^{-1}$ found by \citet{NaimanSoares-Furtado+:2013a} based on a more sophisticated population synthesis treatment. {\bf BDM: true? correct}...{\bf AG:Current just use the value for the sun~430 km/s
+  replace with the real prescription we end up using.}
 
-To get a handle on $\dot{e}_{\rm TO}(t)$, we use the results from
-\citet{VossDiehl+:2009a} who use a population synthesis code to
-simulate the mass and energy injection into the ISM from an OB
-association. For the first $\sim 10$ Myr the energy injection will
-be dominated by fast Wolf-Rayet star winds. The energy injection rate
-per massive star ($\Mstar>8 \Msun$), $\dot{\mathcal{E}} (t)$, from
-stellar winds is plotted in the top panel of their Figure 7 and is
-well fit {\bf AG: A little more detail here...} by
-
+The rate of energy input from PMS winds, $\dot{e}_{\rm TO}(t) = f_{8}\dot{\mathcal{E}}/\bar{m}_*$, is dominated by fast Wolf-Rayet winds and core-collapse supernovae from massive stars ($M_{\star} > 8M_{\odot}$), where $f_{8} =2.6 \times 10^{-3}$ is the fraction of the stellar mass with $M_{\star} > 8M_{\odot}$ for our assumed Salpeter IMF.  Here $\dot{\mathcal{E}} (t)$ is the energy injection rate per massive star, which we estimate as
 \begin{align}
-\dot{\mathcal{E}} (t)=
+\dot{\mathcal{E}} (t)=  1.3 \times 10^{36} {\rm erg\,s^{-1}}
 \begin{cases}
-  1.3 \times 10^{36} {\rm ergs/s} & t<4 \times 10^6 {\rm years}\\
-  1.3  \times 10^{36} {\rm ergs/s} \left(\frac{t}{4 \times  10^6}\right)^{-3.73} & t \ge 4 \times 10^6 {\rm years}.
+  1 & t<4 \times 10^6 {\rm yr}\\
+  \left(\frac{t}{4 \times  10^6\,{\rm yr}}\right)^{-3.73} & t \ge 4 \times 10^6 {\rm yr},
 \end{cases}
 \label{eq:voss}
 \end{align}
-
-Equation~\eqref{eq:voss} is valid only for $t \lsim 10$ Myr. For $t\gsim
-10$ Myr, $\dot{e}_{\rm TO}$ will be negligible as lower mass stars
-shed their gas is slow dust-driven winds during their post-main
-sequence evolution {\bf AG-Nick is the preceding statement accurate},
-and for our purposes the exact functional form of $\dot{e}_{\rm
-  TO}(t)$ is unimportant. So we adopt Equation~\eqref{eq:voss} for all times.
-
- $\dot{e}_{\rm TO}(t)$ is related to $\dot{\mathcal{E}}$  via 
-
-\begin{align}
-\dot{e}_{\rm TO}(t)=f_{8} \dot{\mathcal{E}} / \bar{m}_*,
-\label{eq:eto}
-\end{align}
-
-where $f_{8}$ is the fraction of the stellar population with $\Mstar>8
-\Msun$. $f_8=2.6 \times 10^{-3}$ for our assumed Salpeter IMF.
+based on the results of \citet{VossDiehl+:2009a} (their Fig.~7, top panel), who use a population synthesis code to simulate the mass and energy injection into the ISM from an OB association.  Although equation~\eqref{eq:voss} is valid only for $t \lsim 10$ Myr, in practice the precise functional form of $\dot{e}_{\rm TO}(t)$ is generally unimportant for our purposes, so we adopt equation~\eqref{eq:voss} as being valid for all times.
 
 
-We calculate the wind velocity for main sequence winds $v_w (\Mstar,
-t)$ using...{\bf AG:Current just use the value for the sun~430 km/s
-  replace with the real prescription we end up using.}
-
-The effective wind velocity in the impulsive limit may then be written
+The effective wind velocity in the limit of an impulsive star formation may then be written
 as 
-
 \begin{align}
 \bar{v}_w(t)=2 \dot{\bar{e}}(t)/\dot{\bar{m}}(t)
 \label{eq:vwImp}
@@ -164,28 +138,26 @@ while {\bf BDM: insert correct expression}
 \eta = \dot{\bar{m}}(t)
 \label{eq:vwImp}
 \end{align}
-
-We plot $\bar{v}_w$ versus time in Figure~\ref{fig:vwImp}.
+We plot $\bar{v}_w(t)$ and $\eta(t)$ in Figures~\ref{fig:vwImp} and XXX.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwImp.pdf}
 \caption{\label{fig:vwImp} The effective $\vw$ from stellar winds from
-  a stellar population formed in a starburst $t$ years ago.}
+  a stellar population of age $t$.}
 \end{figure}
 
 
 \subsection{Over Star Formation History}
-
-We can then use these integrated quantities to determine the effective
-$V_w$ for arbitrary star formation histories. For a stellar population
-with star formation rate $S(t)$ 
-
+Generalizing to an arbitrary star formation history $S(t)$, the total rate of mass and energy input can be written as
 \begin{align} 
   \dot{M}(t) &= \int_0^t S(t_1) \dot{\bar{m}}(t-t_1){\rm
       d}t_1\\
   \dot{E}(t) &= \int_0^t S(t_1) \dot{\bar{e}}(t-t_1){\rm
-      d}t_1\\
-  V_w^2(t) &=2 \dot{E}(t)/\dot{M}(t)
+      d}t_1,\\
+\end{align}
+resulting in an effective wind heating rate of
+\begin{align}
+  v_w^2(t) &=2 \dot{E}(t)/\dot{M}(t)
 \end{align}
 
 \begin{figure}
@@ -201,16 +173,10 @@ variability timescale is greater than $\sim$ twice the duration of
 high-velocity winds.}
 \end{figure}
 
-We show $V_{\rm W}$ for different star formation histories in
-Fig. \ref{NickPlot2} {\bf AG: this plot still uses the old ad hoc vw
+We estimate the stellar wind heating provided by the {\it average} star formation history of galaxies of a given mass using the results of \citet{MosterNaab+:2013a} (their eqs.~[17]-[20]) and the $M_{\bullet}-M_{\rm
+  halo}$ relation from \citet{BandaraCrampton+:2009a}.  Figure \ref{NickPlot2} shows the resulting $v_{\rm W}$ as a function of SMBH mass.  For comparison we also show cases in which the star formation rate is modulated sinuisoidally from its average value.   It seems that ``bumpy'' SF histories severely diminish $v_{\rm w}$ if the timescale for SF variability is a factor of a few or more greater than the duration of high-velocity winds (either 10 or 40 Myr). {\bf AG: this plot still uses the old ad hoc vw
   prescription? If so it would need to be fixed. In any case, we still
-  differ in detail on the vw from stars}.  In particular, we use
-Eqs. 17-20 from \citet{MosterNaab+:2013a} and the $M_{\rm BH}-M_{\rm
-  halo}$ relation from \citet{BandaraCrampton+:2009a} to define $S(t)$
-for particular galaxies.  It seems that ``bumpy'' SF histories
-severely diminish $V_{\rm w}$ if the timescale for SF variability is a
-factor of a few or more greater than the duration of high-velocity
-winds (either 10 or 40 Myr).
+  differ in detail on the vw from stars}.  
 
 %%% Local Variables: 
 %%% mode: latex
