@@ -64,50 +64,23 @@
 
 \subsection{Single Burst}
 
-The energy and mass injection from stellar winds will be the sum ofthe
-contributions from main sequence and post-main sequence (PMS) stars.
-For an impulsively formed stellar population of age $t$, the mass
-injection rate per unit stellar mass,$\dot{\bar{m}}(t)$, and  the energy
-injection rate per unit stellar mass, $\dot{\bar{e}}(t)$,  will be given by
-
+For a stellar population that forms impulsively of age $t$, the rate of mass and energy injection per unit stellar mass are given, respectively, by 
 \begin{align} 
-  \dot{\bar{m}}(t) &= \frac{\Delta M(t) \mu(M_{\rm TO}(t))
+  \dot{\bar{m}}(t) &= \frac{\Delta M(t) \mu|_{M_{\rm TO}(t)}
     \left|\dot{M}_{\rm TO}(t)\right| + f_{\rm MS} \int_{m_0}^{m_{\rm
         T}(t)}
-    \dot{m}(\Mstar, t) \mu(\Mstar) {\rm d}\Mstar }{\bar{m}_*}\\
+    \dot{m}(\Mstar, t) \mu|_{\Mstar} {\rm d}\Mstar }{\bar{m}_*}\\
   \dot{\bar{e}}(t) &=\dot{e}_{\rm TO}(t)+ f_{\rm MS} \int_{m_0}^{m_{\rm T}(t)}
-  \frac{\vw^2(\Mstar, t) \dot{m}(\Mstar, t) \mu(\Mstar) {\rm d}\Mstar}{\bar{m}_*}.
+  \frac{\vw^2(\Mstar, t) \dot{m}(\Mstar, t) \mu|_{\Mstar} {\rm d}\Mstar}{\bar{m}_*},
   \label{eq:edotImp}
 \end{align} 
-
-The first terms in each expression above correspond to the
-contributions from PMS stars, while the second terms correspond to the
-contributions from main sequence stars. The main sequence winds are a
-small fraction of the mass, and they may be not be thermalized and
-mixed with the rest of the injected gas. Thus, we include a
-thermalization efficiency, $ 0\le f_{\rm MS}\le 1$, in
-equation~\eqref{eq:edotImp}. Throughout this paper we set $f_{\rm
-  MS}=1$. 
-
-We assume a Salpeter IMF $\mu(\Mstar)\sim M^{-2.35}$, truncated at $0.1
-\Msun$ on the low mass end and at $100 \Msun$ on the high mass
-end. The corresponding mean stellar mass, $\bar{m}_*$ is 0.35 $\Msun$.
-
-For the turnoff mass, $M_{\rm TO}$, we take the following fitting
-formula 
-
+where the first and second terms in each expression corresponds to contributions from main sequence stars and post-main sequence (PMS) stars, respectively.  Here $ f_{\rm MS} < 1$ is an efficiency, which accounts for the efficiency with which main sequence winds thermalize their energy with the rest of the injected gas (we hereafter assume $f_{\rm MS} = 1$) and $\mu$ is the IMF, which we take to be of the Salpeter form $\mu(\Mstar)\sim M^{-2.35}$, truncated at $m_0 = 0.1 \Msun$ on the low mass end and at $100 \Msun$ on the high mass end, where $\bar{m}_*$ = 0.35 $\Msun$ is the corresponding mean stellar mass.  The turn-off mass $M_{\rm TO}$ at time $t$ is calculated according to the following functional fit
 \begin{align}
-\log(M_{\rm TO})=0.24 + 0.068 x^2-0.34 x+4.76 e^{-4.58 x},
+\log(M_{\rm TO})/M_{\odot} =0.24 + 0.068 x^2-0.34 x+4.76 e^{-4.58 x},
 \end{align}
+where $x=\log(t/10^9 {\rm years})$, so designed to reproduce the results of \citet{MaederMeynet:1987a} (their Table 9) for massive stars while asymptoting to the fitting formula provided by \citet{CiottiOstriker:2007a} (their eq.~[9]) for intermediate and late times ($t \gsim 10^8$ years).
 
-where $x=\log(t/10^9 {\rm years})$ and $M_{\rm TO}$ is in units
-$\Msun$. This fit is designed to reproduce the results in 
-Table 9 of \citet{MaederMeynet:1987a} and then asymptotes to the fit
-for $M_{\rm TO}$ given in equation (9) of \citet{CiottiOstriker:2007a}
-for intermediate and late times ($t \gsim 10^8$ years).
-
-For $\Delta M(t)$ we use equation (10) from \citet{CiottiOstriker:2007a}
-
+The mass lost in PMS winds $\Delta M(t)$ is calculating from \citet{CiottiOstriker:2007a} (their eq.~[10]) according to
 \begin{align}
 \Delta M=
 \begin{cases}
@@ -115,27 +88,14 @@ For $\Delta M(t)$ we use equation (10) from \citet{CiottiOstriker:2007a}
  M_{\rm TO}-1.4 \Msun &  M_{\rm TO} \ge 9 \Msun
 \end{cases}
 \end{align}
-
-To estimate the mass loss from main sequence stars
-$\dot{m}(\Mstar, t)$,
-we use equation 4 \citet{SchroderCuntz:2005a}\footnote{This
-  prescription is a generalization of the Reimers' mass loss law. This
-expression is derived assuming the stellar wind results from the
-turbulent overflow of moaterial in the chromosphere or underneath it.} {\bf AG:
-  unfortunately this is not really meant for MS stars...}
-
+The MS wind mass loss rate $\dot{m}(\Mstar, t)$ is calculated based on the generalization of Reimer's law given in \citet{SchroderCuntz:2005a} (their eq.~[4]):
 \begin{align}
   \dot{m}(\Mstar)=8 \times 10^{-14} \frac{L_* r_*}{\Mstar}
   \left(\frac{T_{\rm eff}}{\rm 4000 K}\right)^{3.5}
   \left(1+\frac{g_{\odot}}{4300 g_*}\right) \Msun \pyear,\
 \end{align}
-
 where  $R_*$, $L_*$, $T_{\rm eff}$ and $g_*$ are the stellar radius,
-luminosity, effective and surface gravity respectively. $g_{\odot}$ is
-the stellar surface gravity. To calculate $R_*$ and $L_*$ we use the
-following scaling relations (taken from Kippenhann and Weygert Figures
-22.2 and 22.3).
-
+luminosity, effective temperature, and surface gravity, respectively, the latter normalized to its stellar value $g_{\odot}$.  The stellar radius and luminosity are estimated as 
 \begin{align}
 L_*=
 \begin{cases}
@@ -143,15 +103,14 @@ L_{\odot} (\Mstar/\Msun)^{3.2} & \Mstar > \Msun \\
 L_{\odot} (\Mstar/\Msun)^{2.5} & \Mstar \le \Msun
 \end{cases}
 \end{align}
-
 \begin{align}
-r_*=
+R_*=
 \begin{cases}
 R_{\odot} (\Mstar/\Msun)^{0.57} & \Mstar > \Msun \\
 R_{\odot} (\Mstar/\Msun)^{0.8} & \Mstar \le \Msun
 \end{cases}
 \end{align}
-
+based on \citealt{Kippenhahn&Weigert} (their Figs.~22.2, 22.3)
 
 To get a handle on $\dot{e}_{\rm TO}(t)$, we use the results from
 \citet{VossDiehl+:2009a} who use a population synthesis code to

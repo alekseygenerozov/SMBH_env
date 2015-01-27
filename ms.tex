@@ -465,7 +465,7 @@ that results by combining equations~\eqref{eq:mdot_analytic} and~\eqref{eq:mdot_
 
 Thermal stability ($\dot{q}_{\rm heat} > \dot{q}_{\rm cool}$; $t_{\rm cool} > t_{\rm ff}$) at the stagnation radius thus requires a critical minimum heating rate
 \begin{align}
-v_{w} > v_{\rm crit} \simeq
+v_{w} > v_{\rm CI} \simeq
   {\rm max}\begin{cases}
    200 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
    200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}\\
@@ -473,7 +473,7 @@ v_{w} > v_{\rm crit} \simeq
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm crit} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius (Fig.~\ref{fig:cooling}).  The requirement that $v_{\rm w} \gtrsim \sigma$ in equation (\ref{eq:cooling2}) results because the top two lines are derived under the assumption that the stagnation radius is given by equation (\ref{eq:rs_simple}).  When $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to larger radii than predicted by by equation (\ref{eq:rs_simple}) or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
+Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius (Fig.~\ref{fig:cooling}).  The requirement that $v_{\rm w} \gtrsim \sigma$ in equation (\ref{eq:cooling2}) results because the top two lines are derived under the assumption that the stagnation radius is given by equation (\ref{eq:rs_simple}).  When $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to larger radii than predicted by by equation (\ref{eq:rs_simple}) or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
 
 
 
@@ -699,7 +699,7 @@ motion instead of being lost to radiation.  \cite{Thornton+98}
 estimate a radiative efficiency $\epsilon_{\rm Ia} \sim 0.1$,
 depending weakly on surrounding density, but \citet{Sharma+14} argues
 that $\epsilon_{\rm Ia}$ can be considerably higher, $\sim 0.4$, if
-the SNe occur in a hot dilute medium, as may characterize the circumnuclear medium.  We hereafter adopt $\epsilon_{\rm Ia} = 0.4$.
+the SNe occur in a hot dilute medium, as may characterize the circumnuclear medium.  Hereafter we adopt $\epsilon_{\rm Ia} = 0.4$ as fiducial.
 
 The Ia SN rate $\RateIa$ depends on the age of the stellar population, as it represent the convolution of the star formation rate and the Ia delay time distribution (DTD) divided by the present stellar mass.  In
 the limit of impulsive star formation, $\RateIa$ is the DTD evaluated at the time since the star formation episode.  The observationally inferred DTD (Fig. 1 of \citealt{MaozMannucci+:2012a}) has the
@@ -729,27 +729,29 @@ The high value of $v_{w}^{\rm Ia}$ implies that Ia SNe represent an important so
     38 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
     \label{eq:rIa}
   \end{align}
-as the location exterior of which the time interval between subsequent supernovae $\tau_{\rm Ia} \sim 1/M_{\rm enc}R_{\rm Ia} \sim G/r\sigma^{2}R_{\rm Ia}$ exceeds the local dynamical timescale $t_{\rm
+as the location exterior of which the time interval between subsequent supernovae $\tau_{\rm Ia} \sim (M_{\rm enc}R_{\rm Ia})^{-1} \sim G/(r\sigma^{2}R_{\rm Ia})$ exceeds the local dynamical timescale $t_{\rm
 dyn} \sim r/\sigma$, where we again adopt the Ia rate for an old stellar population and in the final equality we estimate the velocity dispersion using the $M_{\bullet}-\sigma$ relationship
 (equation~[\ref{eq:Msigma}]).  
 
-Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting $v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into our expression for the stagnation radius (\ref{eq:rs_simple}), we can write
+Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting $v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into equation (\ref{eq:rs_simple}) for the stagnation radius, we find that
 \begin{eqnarray}
 \left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w}^{\rm Ia}} &\approx& 12.4\eta_{0.02} M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{1.68} \nonumber \\
 &\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{0.38}
+\label{eq:rIars}
 \end{eqnarray}
-The fact that $r_{\rm Ia} \gg r_{\rm s}$ would appear to imply that Ia heating only represents a sources of steady heating near the stagnation radius for very massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ and/or very young populations ($\tau_{\star} \ll t_{\rm h}$).  However, this expression underestimates the importance of Ia heating, since the actual stagnation radius will be substantially larger than its value for $v_{w}^{\rm Ia}$ if the nominal heating rate is much less than this.  In general it is reasonable to expect that the impact of Ia SN will increase for larger SMBH masses.
+The fact that $r_{\rm Ia} \gg r_{\rm s}$ appears to imply that Ia heating can only be approximated as a steady heating source near the stagnation radius for extremely massive SMBHs $M_{\bullet} \gtrsim 10^9 \Msun$ or very young populations ($\tau_{\star} \ll t_{\rm h}$).  However, equation (\ref{eq:rIars}) may underestimate the importance of Ia heating because $r_{\rm Ia}/r_{\rm s}$ will be substantially smaller than its value estimated using $v_{w}^{\rm Ia}$ if the nominal heating rate (without Ia contribution) is much less than this.  Nevertheless, the impact of Ia SN is clearly greater for larger SMBH masses for which $r_{\rm Ia} \lesssim r_{\rm s}$.
 
-What is the effect of the Ia radius?  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \approx M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{w}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence Ia SN can in principle dynamically clear out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Hence, even if $r_{\rm s} > r_{\rm Ia}$, the accretion rate will be limited to a value set by substituting $r_{\rm Ia}$ for $r_{\rm s}$ in the derivation of equation $\ref{eq:eddr_analytic}$, i.e.  
+What is the effect of the Ia radius?  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \sim M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{w}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence Ia SN can in principle dynamically clear out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Thus, even in cases when $r_{\rm s} > r_{\rm Ia}$, the SMBH accretion rate is limited to the value set by substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}]) for $r_{\rm s}$ in the derivation of equation $\ref{eq:eddr_analytic}$, i.e.  
 \begin{eqnarray}
 \left.\frac{\dot{M}}{\dot{M}_{\rm edd}}\right|_{\rm max} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{R_{\rm Ia}}{R_{\rm soi}}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
     3 \times 10^{-4} M_{\bullet,8}^{-1.26}(\tau_{\star}/t_{\rm h})^{-0.3}
    & \text{core} \\
-    1.5 \times 10^{-4} \Mbheight^{-0.77}(\tau_{\star}/t_{\rm h})^{-0.7}   & \text{cusp}, 
+    1.5 \times 10^{-4} \Mbheight^{-0.77}(\tau_{\star}/t_{\rm h})^{-0.7}   & \text{cusp}.
   \end{cases}
   \label{eq:eddr_Ia}
 \end{eqnarray}
+{\bf BDM: check!}
 
 
 \subsection{Millisecond Pulsars}
@@ -757,17 +759,15 @@ What is the effect of the Ia radius?  Between subsequent supernovae, stars relea
 important heating source.  If the number of MSPs per unit stellar mass
 is $n_{\rm msp}$ and each contributes on average a spin-down
 luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit
-volume $e \approx \bar{L}_{\rm sd}n_{\rm msp}\epsilon$ results in an
+volume $e \approx \bar{L}_{\rm sd}n_{\rm msp}\epsilon_{\rm msp}$ results in an
 effective heating rate (eq.~ [\ref{eq:vw_eff}])
-
 \begin{eqnarray} v_{w}^{\rm MSP} \approx
-30\left(\frac{\epsilon}{0.1}\right)^{1/2}\left(\frac{\bar{L}_{\rm
+30\left(\frac{\epsilon_{\rm msp}}{0.1}\right)^{1/2}\left(\frac{\bar{L}_{\rm
 sd}}{10^{34}\,{\rm erg\,s^{-1}}}\right)^{1/2} \eta_{0.02}^{-1/2}\,{\rm
 km\,s^{-1}},
  \label{eq:vmsp}
   \end{eqnarray} 
-
-where $\epsilon$ is the thermalization efficiency of
+where $\epsilon_{\rm msp}$ is the thermalization efficiency of
 the wind, normalized to a value $\epsilon \lesssim 0.1$ inferred based
 on modeling the insterstellar mediums of globular clusters
 \citep{NaimanSoares-Furtado+:2013a}.  The above estimate adopts a
@@ -782,7 +782,7 @@ case $v_{w} \lesssim 30$ km s$^{-1}$.  For higher spin-down
 luminosities, $L_{\rm sd}\simeq 10^{35}$ ergs s$^{-1}$ characteristic
 of some Fermi-detected pulsars, then the higher value of $v_{w}
 \lesssim 300$ km s$^{-1}$ makes MSP heating in principle important
-under the optimistc assumption $\epsilon = 1$.  On the other hand, the
+under the optimistc assumption $\epsilon_{\rm msp} = 1$.  On the other hand, the
 binaries giving rise to MSPs may be disocciated by stellar
 interactions in the dense nuclear cluster, reducing their numbers as
 compared to the field population estimate above.  MSPs are thus unlikely to be an important source of heating in comparison to stellar heating.
@@ -790,26 +790,25 @@ compared to the field population estimate above.  MSPs are thus unlikely to be a
 
 \subsection{SMBH Feedback}
 
-Feedback from accretion onto the SMBH represents an important source of heating which is, however, the most difficult to quantify.  A key difference between AGN heating and other sources discussed thus far is its likely dependence on the mass accretion rate $\dot{M}$, which is itself a function of the heating rate (eq.~[\ref{eq:mdot_analytic}]).  
+Feedback from accretion onto the SMBH represents an important source of heating which, however, is also the most difficult to quantify.  A key difference between AGN heating and the other sources discussed thus far is its dependence on the SMBH accretion rate $\dot{M}$, which is itself a function of the heating rate (eq.~[\ref{eq:mdot_analytic}]).  
 
-There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating (e.g.,~\citealt{Gan+14}), which provides a volumetric heating rate (\citealt{Gan+14})
+There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating, which provides a volumetric heating rate (\citealt{Gan+14})
 \be
 \dot{e}_{\rm C} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
 \ee
-where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$.  
-
+where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$ (\citealt{Gan+14}).  
 
 {\bf AG: Note that I obtain Compton heating which is a factor of 2
   higher--although power law dependences look right to me. Note that
   the Compton heating will depend on radius--I use rs in my own
-  estimate. }
-We estimate the importance of Compton heating by assuming the SMBH
-radiates with a luminosity $L = \epsilon \dot{M}c^{2}$, where
-$\epsilon$ is the radiative efficiency and where $\dot{M}$ is
+  estimate.  BDM: if so, the please update the numbers!  }
+The importance of Compton heating can be estimated by assuming the SMBH
+radiates with a luminosity $L = \epsilon_{\rm rad} \dot{M}c^{2}$, where
+$\epsilon_{\rm rad}$ is the radiative efficiency and where $\dot{M}$ is
 estimated from equation (\ref{eq:mdot_analytic}).  Then using
 equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}),
 (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation
-(\ref{eq:vw_eff}) that
+(\ref{eq:vw_eff}) that the effective Compton heating rate at the stagnation radius is given by
 \begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 13 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm
@@ -819,10 +818,9 @@ km\,s^{-1}} &, \text{cusp},
   \end{cases}
   \label{eq:vC}
 \end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
-\epsilon/0.01 \sim 1$ is the maximum radiative efficiency for a thick
-accretion flow (e.g.~\citealt{Narayan&Yi95}).  Assuming that heating
-is dominated by Compton heating ($\tilde{v}_{w} = v_{w}^{C}$) one finds
-that
+\epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency for a thick
+accretion flow (e.g.~\citealt{Narayan&Yi95}).  If heating
+were dominated by Compton heating, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation (\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
 \begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 106 \eta_{0.02}^{0.21}T_{\rm
 C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
@@ -831,10 +829,9 @@ C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
 &, \text{cusp},
   \end{cases}
   \label{eq:vC2}
-\end{align} Unless $\eta$ is very high, we conclude that Compton
-heating is insufficient to stabilize the steady flow against cooling
-instability (e.g. $v_{w}^{C} < v_{\rm critt}$;
-eq.~[\ref{eq:cooling2}]).
+\end{align} 
+The fact that $v_{w}^{\rm C} \lesssim 200$ km s$^{-1}$ for $\eta \lesssim 1$ shows that Compton heating alone is insufficient to stabilize the flow against cooling
+instability, i.e. $v_{w}^{C} < v_{\rm CI}$ (eq.~[\ref{eq:cooling2}]).
 
 In contrast to radiative feedback, kinetic feedback occurs in the form
 of an mass outflow or jet from the viscinity of the black hole, which
@@ -1315,7 +1312,7 @@ which we have normalized in terms of the Hubble time.
 \item{Fact that some low mass BHs appear to have nearly Eddington accretion rates, suggest an external origin - since the maximum Ia rate appears to be below this}
 \end{itemize}
 
-If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm crit}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
+If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm CI}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
 practice this should could manifest as a large increase in the stagnation radius, due an effective {\it decrease} in the effective heating rate.  This global ``instability" is not a true instability insofar as the gas does not necessarily clump locally into low-T clouds.
 
 However, \citet{McCourt+12} argue that even if cooling is exactly
