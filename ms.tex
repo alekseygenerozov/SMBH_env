@@ -669,7 +669,7 @@ for each, where $e$ is volumetric heating rate.
 
 Energy and mass input to the CNM by stellar winds is the sum of contributions from main sequence and post-main sequence stars.  At early times following star formation, energy input is dominated by core collapse supernovae and by the fast outflows of Wolf-Rayet stars, while at later times energy input is dominated by main sequence winds.  Mass input is also dominated by massive stars for very young stellar populations, but for most stellar ages mass input is dominated by the slow AGB winds of low mass stars.  
 
-Appendix \ref{app:windheat} provides a calculation of wind heating rate from stellar winds, $v_{\rm w}^{\star}$, and the mass loss parameter, $\eta$ (eq.~[\ref{eq:q}]), as a function of age $\tau_{\star}$ of a stellar population which is formed impulsively (Figs.~\ref{fig:vwimp}, \ref{fig:etaImp}).  At very early times after the starburst ($\tau_{\star} \lesssim 10^{7}$), the wind heating rate exceeds 1000 km s$^{-1}$, while at much later times ($\tau_{\star} \sim t_{\rm h}$) stellar wind heating is much lower, $v_{\rm w} \sim 50 $ km s$^{-1}$ (see also \citealt{NaimanSoares-Furtado+:2013a}).  As we describe in $\S$, the net heating rate produced by stellar winds in the case of quasi-continuous star formation, as representative of the average star formation history of low mass galaxies, can also be significant, $v_{\rm w}^{\star} \gtrsim 1000$ km s$^{-1}$.  Thus stellar winds contribute a potentialy important source of energy as well as mass for the CNM.
+Appendix \ref{app:windheat} provides a calculation of wind heating rate from stellar winds, $v_{\rm w}^{\star}$, and the mass loss parameter, $\eta$ (eq.~[\ref{eq:q}]), as a function of age $\tau_{\star}$ of a stellar population which is formed impulsively (Figs.~\ref{fig:vwimp}, \ref{fig:etaImp}).  At very early times after the starburst ($\tau_{\star} \lesssim 10^{7}$), the wind heating rate exceeds 1000 km s$^{-1}$, while at much later times ($\tau_{\star} \sim t_{\rm h}$) stellar wind heating dominated by main sequence winds is much lower, $v_{\rm w} \sim 50-100 $ km s$^{-1}$ (see also \citealt{NaimanSoares-Furtado+:2013a}).  As we describe in $\S$, the net heating rate produced by stellar winds in the case of quasi-continuous star formation, as representative of the average star formation history of low mass galaxies, can also be significant, $v_{\rm w}^{\star} \gtrsim 1000$ km s$^{-1}$.  Thus stellar winds contribute a potentialy important source of energy as well as mass for the CNM.
 
 \subsection{Type Ia Supernovae} 
 
@@ -848,7 +848,7 @@ Writing $L_{\rm j} = \epsilon_{\rm j}\dot{M}c^{2}$ and approximating $M_{\rm g} 
 \end{equation}
 which is notably independent of radius $r$.  Thus we require $\epsilon_{\rm j} \gtrsim 10^{-12}$ for the jet to escape, and if it escapes it is free to travel a long distance. 
 
-\subsection{Combined Heating Rate} 
+\subsection{Combined Heating Rate for Representative Star Formation History} 
 
 The total gas heating rate $\vwO$ includes contributions from stellar winds, supernovae, pulsars, and SMBH feedback.  The strength of each heating source will depend on the SMBH mass and the star formation history in the galactic nuclear region, the latter of which will vary systematically with the galaxy mass and hence with $\Mbh$.  Qualitatively, smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget, resulting in a high heating rate of $\vwO \sim 1000 $ km s$^{-1}$.  Larger galaxies, on the other hand, will on average have older stellar populations, with their heating rates dominated by Ia supernovae (on large radial scales) and SMBH feedback.
 
@@ -869,17 +869,14 @@ stellar winds is dead, and Compton heating plays an important role.
 \caption{\label{fig:eta} Parameter  $\eta$ characterizing stellar mass loss rate (eq.~[\ref{eq:q}]) as a function of black hole mass $\Mbh$, calculated for average star formation histories from \citet{MosterNaab+:2013a} for galaxies with halo masses corresponding to $\Mbh$. }
 \end{figure}
 
-For each $\Mbh$ we may check whether the solution for corresponding
-$\vwO$ and $\eta$ would be thermally stable, using
-equation~\eqref{eq:cooling2} {\bf: AG--double check that this is
-  equivalent to what I did.}
+Figure~\ref{fig:cooling2} shows the ratio of heating to radiative cooling at the stagnation radius (eq.~[\ref{eq:cooling2}]) as a function of SMBH mass, using our total heating rate from Figure \ref{fig:vWsources}.  The combined heating rate from stellar winds and Compton heating is insufficient to prevent thermal instability for the high $\Mbh$.  However, if Ia supernovae are included in the schematic way described above, the flow again becomes thermally stable for $\Mbh \gtrsim XXXX$.
 
-The combined heating rate from stellar winds and Compton heating is
-insufficient to prevent thermal instability for the high $\Mbh$.  This
-is shown in Figure~\ref{fig:cooling2}, which shows the heating over
-cooling rate at $\rs$ as a function of $\Mbh$. For $\Mbh\gsim 10^8
-\Msun$, the cooling rate will exceed the cooling rate at $\rs$ and
-and the gas would be thermally unstable.
+
+%Although, in principle the Ia contribution to the heating is
+%substantial, in practice Ia's occur too infrequently to be a steady
+%contribution to the heating rate on small scales (e.g. $r_{\rm Ia} >
+%r_{\rm s}$ as shown in Figure~\ref{fig:rs_rIa}). Thus, SNe Ia heating
+%by itself would not be able to prevent cooling instability.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{cooling2.pdf}
@@ -890,11 +887,6 @@ and the gas would be thermally unstable.
   $\eta$ in Figures~\ref{fig:vwSources} and~\ref{fig:eta}}
 \end{figure}
 
-Although, in principle the Ia contribution to the heating is
-substantial, in practice Ia's occur too infrequently to be a steady
-contribution to the heating rate on small scales (e.g. $r_{\rm Ia} >
-r_{\rm s}$ as shown in Figure~\ref{fig:rs_rIa}). Thus, SNe Ia heating
-by itself would not be able to prevent cooling instability.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{rs_rIa.pdf}
@@ -927,8 +919,6 @@ by itself would not be able to prevent cooling instability.
 % ($\tage \lsim 10^7$ years), $\vwO\simeq 1000$ km s$^{-1}$ due to
 % contributions from line driven winds from high mass main sequence
 % stars.
-{\bf AG: We should mention that regime with stellar wind heating only
-  is likely to be thermally unstable.}
 
  %  \begin{figure}
 %     \includegraphics[width=\columnwidth]{vw-contour.eps}
