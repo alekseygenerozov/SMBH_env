@@ -516,7 +516,7 @@ unresolved \\
 cons on outer grid \\
 0.1 & 600 & 0.8 & 100.0 & $ 1.8 \times 10^{ -4 }$ & 97 &  \\
 0.1 & 1200 & 0.8 & 100.0 & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
-10^{ 3 }$ &  energy cons on inner grid\\
+10^{ 3 }$ &  \\
 1 & 300 & 0.8 & 100.0 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{
   -2 }$ &  TI\\
 1 & 600 & 0.8 & 100.0 & $ 7.3 \times 10^{ -4 }$ & 21 &  \\
@@ -538,9 +538,6 @@ cons on outer grid \\
 10^{ 4 }$ &  rb is unsresolved\\
 0.1 & 1200 & 0.1 & N/A & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{
   3 }$ &  tried run in which rb=100 pc was resolved what would happen if rb=400 pc?\\
-1 & 1200 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
-1 & 1200 & 0.1 & 300.0 & $ 1.9 \times 10^{ -4 }$ & $ 1.3 \times 10^{
-  2 }$ &  \\
 0.01 & 1200 & 0.1 & 100.0 & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times 10^{ 4 }$ &  \\
 0.1 & 1200& 0.1 & 100.0 & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{ 3 }$ &  \\
 1 & 1200 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
@@ -728,13 +725,16 @@ What is the effect of the Ia radius?  Between subsequent supernovae, stars relea
 \begin{eqnarray}
 \left.\frac{\dot{M}}{\dot{M}_{\rm edd}}\right|_{\rm max} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{R_{\rm Ia}}{R_{\rm soi}}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
-    3 \times 10^{-4} M_{\bullet,8}^{-1.26}(\tau_{\star}/t_{\rm h})^{-0.3}
+    4.5 \times 10^{-4} M_{\bullet,8}^{-1.33}(\tau_{\star}/t_{\rm h})^{1.1}
    & \text{core} \\
-    1.5 \times 10^{-4} \Mbheight^{-0.77}(\tau_{\star}/t_{\rm h})^{-0.7}   & \text{cusp}.
+    2.2 \times 10^{-4} \Mbheight^{-0.84}(\tau_{\star}/t_{\rm h})^{0.7}   & \text{cusp}.
   \end{cases}
   \label{eq:eddr_Ia}
 \end{eqnarray}
-{\bf BDM: check!}
+{\bf AG: Fixed this expression. I will check again! Ia accretion rate should
+  increase with time, as in the burst limit the Ia rate would decline
+  with time, so the Ia radius would move outwards (need more volume to
+  get a supernova per dynamical time.}
 
 
 \subsection{Millisecond Pulsars}
@@ -781,10 +781,9 @@ There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback
 \ee
 where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$ (\citealt{Gan+14}).  
 
-{\bf AG: Note that I obtain Compton heating which is a factor of 2
-  higher--although power law dependences look right to me. Note that
-  the Compton heating will depend on radius--I use rs in my own
-  estimate.  BDM: if so, the please update the numbers!  }
+{\bf AG: Note that the Compton heating will depend on the distance of
+  the hole as $1/r^2$ so Compton heating will be stronger closer to the
+  black hole! }
 The importance of Compton heating can be estimated by assuming the SMBH
 radiates with a luminosity $L = \epsilon_{\rm rad} \dot{M}c^{2}$, where
 $\epsilon_{\rm rad}$ is the radiative efficiency and where $\dot{M}$ is
@@ -793,16 +792,19 @@ equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}),
 (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation
 (\ref{eq:vw_eff}) that the effective Compton heating rate at the stagnation radius is given by
 \begin{align} v_{w}^{\rm C} \simeq
-  \begin{cases} 13 \eta_{0.02}^{0.5}T_{\rm
+  \begin{cases} 29 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm
-km\,s^{-1}} &, \text{core}\\ 20 \eta_{0.02}^{0.5}T_{\rm
+km\,s^{-1}} &, \text{core}\\ 50 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.24}v_{500}^{-0.7}\,{\rm
 km\,s^{-1}} &, \text{cusp},
   \end{cases}
   \label{eq:vC}
 \end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
-\epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency for an advective
-accretion flow expected to produce high $T_{\rm C}$ emission (e.g.~\citealt{Narayan&Yi95}).  If heating is provided by Compton heating alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation (\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
+\epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency
+for an advective accretion flow expected to produce high $T_{\rm C}$
+emission (e.g.~\citealt{Narayan&Yi95}).  If heating is provided by
+Compton heating alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation
+(\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
 \begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 106 \eta_{0.02}^{0.21}T_{\rm
 C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
