@@ -579,19 +579,28 @@ The inwardly directed velocity increases towards the hole with a profile that is
 % don't have a good physical explanation yet...
 
 
-The top panel of Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, expressed in ratio to the radius of the SMBH sphere of influence $r_{\rm soi}$, with different colors showing different values of $v_{w}$.  Cusp and core galaxies are marked with square and triangles, respectively.  Shown for comparison as a solid black line is the simplified analytic approximation for $r_{\rm s}$ from \eqref{eq:stag_simple}. For high $\vwO$ the analytic prediction agrees well with our numerical results. However, \eqref{eq:stag_simple} is only valid that $\Mstar|_{r_{\rm s}} \ll \Mbh$, and
-this approximation breaks down for small $\vwO$. In fact, $\rs$
-diverges for smaller $\vwO$. 
+Figure~\ref{fig:stag} shows our results for the
+stagnation radius $r_{\rm s}$, expressed in ratio to the radius of the
+SMBH sphere of influence $r_{\rm soi}$, with different colors showing
+different values of $v_{w}$.  Cusp and core galaxies are marked with
+square and triangles, respectively.  
 
-{\bf AG perhaps it would be better to solve the implicit equation for
-  rs/rsoi, and plot this in the top panel--assuming a fixed n of say
-  1}. We may also compare our numerical results $r_{\rm s}/r_{\rm
+ We may also compare our numerical results $r_{\rm s}/r_{\rm
   soi}$ an be compared directly to our analytic estimate in equation
-\ref{eq:stag_analytic}.  The bottom panel of Figure \ref{fig:stag}
-shows the fractional difference between our numerical and analytic
-results for $r_{\rm s}/r_{\rm soi}$.  The good agreement provides a
-useful check of the numerical results.
+\ref{eq:stag_analytic}.  The solid and dashed black curves in  Figure
+\ref{fig:stag} show the analytic results for $r_{\rm s}/r_{\rm soi}$.
+The good agreement provides a useful check of the numerical
+results. Note that the analytic curves implicitly assume a density
+slope, $n$ at $\rs$, which we have fixed to be 1 (0.5) for the solid
+(dashed) curve. For small $\vw/\sigma$ this assumption breaks down.
 
+For $\vw/\sigma \gg 1$ the value $\rs/\rinf$ does not depend on break
+radius, $r_b$. On the other hand for $\vw/\sigma \simeq 1$, $\rb$ does
+have an effect. Notice that near where the solid analytic curve
+diverges there are three green square, one over the other. These
+points correspond to models with the same $\Mbh (10^7 \Msun)$, $\vw
+(300 {\rm km/s})$, and $\Gamma (0.8)$, but different values of the
+break radius: from top to bottom 50 pc, 100 pc, and 400 pc.  
 %% AG: Describe conservation checks to additionally validate the results.
 
 \begin{figure}
@@ -621,10 +630,10 @@ useful check of the numerical results.
     to the stellar velocity dispersion $\sigma$.  Green, orange, and
     blue symbols represent $v_{w} =$ 300, 600, and 1200 km s$^{-1}$,
     respectively.  Squares correspond to cusp galaxies, while
-    triangles correspond to cores. \emph{Bottom panel}: Fractional
-    difference between our numerical calculation of $r_{\rm s}/r_{\rm
-      soi}$ and the analytic result in
-    equation~(\ref{eq:stag_analytic}). }
+    triangles correspond to cores. The black curves correspond to the
+    analytic prediction from Equation~\eqref{stag_analytic}. The solid
+    (dashed) curve is the correponds to $\Gamma=0.8$ and $n=1$
+    ($\Gamma=0.1$ and $n=0.5$.}
 \end{figure}
 
 
@@ -863,8 +872,28 @@ stellar winds is dead, and Compton heating plays an important role.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSources.pdf}
-\caption{\label{fig:vwSources} Sources contributing to the heating rate of the CNM, $\vwO$, including stellar wind heating ({\it solid blue}), Ia supernovae ({\it dashed red}), millisecond pulsars ({\it solid orange}).  Each heating source varies with black hole mass $\Mbh$ due to the different average star formation history of galaxies of a given halo mass (see Appendix~\ref{app:windheat} for the detailed description).   We assume a stellar density power law slope of $\Gamma = 0.8$ in calculating $v_{w}^{\bullet \, 2}$ although the dependence on $\Gamma$ is weak {\bf BDM: just pick a value of Gamma!}.  The Ia heating rate is shown as a solid above the critical black hole mass for which $r_{\rm Ia} < r_{\rm s}$ (Fig.~\ref{fig:rs_rIa}), since this represents the condition for SN Ia to be well-approximated a continuously heating source. }
+\caption{\label{fig:vwSources} {\emph Top Panel:}Sources contributing
+  to the heating rate of the CNM, $\vwO$, including stellar wind
+  heating ({\it orange}), Ia supernovae ({\it green}), millisecond
+  pulsars ({\it blue}), and compton heating (\it pink).  Each heating
+  source varies with black hole mass $\Mbh$ due to the different
+  average star formation history of galaxies of a given halo mass (see
+  Appendix~\ref{app:windheat} for the detailed description). The total
+  heating rate is shown in black. To account for the non-steady nature
+  of the Ia heating we multiply the Ia heating by $e^{-\rs/\rIa}$, so
+  the contribution that the heating contribiution from Ia supernovae
+  will be suppressed if the time between successive supernovae is much
+  greater than the dynamical time at $\rs$. {\emph Bottom panel} The
+  ratio of the heating ($\dot{q}_{\rm heat}$) to the cooling rate
+  ($\dot{q}_{\rm cool}$) at $\rs$ from the total heating rate in the
+  top panel. Above $\Mbh\simeq 5\times 10^7 \Msun$ $\dot{q}_{\rm
+    heat}(\rs)<\dot{q}_{\rm cool}(\rs)$ and a thermal instability
+  would arise. The thermally unstable region is marked in red in the
+  bottom panel. All curves become dashed in the thermally unstable
+  region of parameter space: we expect our model to break down in this
+  regime as the steady-state assumption would be violated.}
 \end{figure}
+
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{eta.pdf}
