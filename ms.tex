@@ -1165,6 +1165,38 @@ new gridded approach.}
 %   we choose the $\vwO=200$ km/s solution.  {\bf BDM: if possible, add actual x-ray data from Gallo+08!}}
 % \end{figure}
 
+\subsection{X-ray Diagnostics of SMBH Occupation}
+\label{sec:occ}
+The free-free emission from steady state gas flows in low mass galactic nuclei may serve as useful diagnostics of the presence or absence of a SMBH.  We focus primarily on low-mass galaxies in this subsection, both because this is the portion of parameter space in which gas inflow will generally proceed in a steady-state fashion, and because of recent observations suggesting that a nontrivial fraction of these galaxies may lack nuclear SMBHs.  If this absence is confirmed, it could have implications for galaxy evolution, SMBH recoil distributions, and SMBH seed formation models.
+
+Assuming that the stagnation radius is interior to the sphere of influence ($r_{\rm s} < r_{\rm soi}$), we can approximate the gas temperature as 
+\begin{equation}
+T \approx \frac{\mu m_{\rm p}}{2\gamma k_{\rm B}} \left(\tilde{v}_{\rm w}^2 + 2GM_\bullet/r \right).
+\end{equation}
+In the absence of a central SMBH, we can expect to see an exponential cutoff in the free-free X-ray spectrum at energies above
+\begin{equation}
+E_{\rm cut} = 0.78~{\rm keV}~\mu^{-1} v_{500}^2,
+\end{equation}
+assuming $\gamma = 5/3$.  This cutoff will therefore be located in the portion of the soft X-ray covered by {\it Chandra}'s ACIS spectrometer.  By writing the free-free emissivity as 
+\begin{equation}
+\varepsilon_{\nu}^{\rm ff} = 6.8\times10^{-39} \frac{\rm erg}{\rm s~cm^3~Hz} Z^2n_{\rm e}n_{\rm i}T^{-1/2}\bar{g}_{\rm ff}\exp\left(\frac{-h\nu}{k_{\rm B}T}\right),
+\end{equation}
+where $Z$ is the atomic number of the ions, $n_{\rm e}$ and $n_{\rm i}$ are respectively the electron and ion number density, and $\bar{g}_{\rm ff}$ is the Gaunt factor.  In the following we set $n_{\rm e}=Y_{\rm e}n_{\rm i}$, and approximate
+\begin{equation}
+n_{\rm i} \approx \frac{\dot{M}}{4\pi r_{\rm s}^2 \mu m_{\rm p}}\sqrt{ \frac{r_{\rm s}}{GM_\bullet} } \left( \frac{r}{r_{\rm s}} \right)^{-n}.
+\end{equation}
+We now write the total spectral luminosity density seen in unresolved X-ray observations above the cutoff energy as 
+\begin{align}
+L_{\nu}^{\rm ff} =& \int_0^{r_{\rm s}} 4\pi r^2 \varepsilon_{\nu}^{\rm ff}{\rm d}r \\
+\approx & 3.42\times 10^{8} \left(\frac{\dot{M}}{10^{-5}M_\odot/{\rm s}} \right)^2 \left(\frac{r_{\rm s}}{10^{-2}~{\rm pc}} \right)^{1/2} \left( \frac{M_\bullet}{10^6M_\odot} \right)^{-3/2}   \notag \\
+& \times \bar{Z}^2 \bar{g}_{\rm ff} Y_{\rm e} \Gamma(7/2-2n) {\rm W/Hz} \notag \\
+\approx & 1.41 \times 10^9 \frac{\rm W}{\rm Hz} \left(\frac{\dot{M}}{10^{-5}M_\odot/{\rm s}} \right)^2 \left(\frac{r_{\rm s}}{10^{-2}~{\rm pc}} \right)^{-1}  \bar{Z}^2 \bar{g}_{\rm ff} Y_{\rm e} 
+\end{align}
+The second line of this equation makes the approximation that $GM_\bullet/r$ dominates $\tilde{v}_{\rm w}^2$ throughout the integrand, which will be true for energies modestly higher than $E_{\rm cut}$.  The lower (upper) endpoint for this integral are arbitrary so long as it is somewhat less (greater) than the radius at which the observed frequency $\nu$ sees its exponential free-free cutoff.  The final line of this equation sets $n=1$.
+
+In general, these ``cut-off'' X-ray luminosities are quite small, and even {\it Chandra} would have little hope of detecting them in any but the nearest dwarf galaxies (e.g. the Magellanic clouds).  However, if source confusion is not present, this technique could test for the presence of IMBHs in very nearby dwarf galaxies, or more speculatively Galactic star clusters.
+
+
 \section{Discussion}
 \label{sec:discussion}
 
