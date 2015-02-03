@@ -506,15 +506,15 @@ Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v
 \hline
 {$M_{\bullet,8}$} & {$v_{w}$} & {$\Gamma^{(a)}$} & {$r_b$} & {$\dot{M}/\dot{M}_{\rm edd}$} & {$(t_{\rm cool}/t_{\rm ff})_{r_s}$} & {comments}\\
 \hline
-0.01 & 300 & 0.8 & N/A & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
+0.01 & 300 & 0.8 & U & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
 unresolved \\
-0.01 & 600 & 0.8 & N/A & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
-10^{ 2 }$ &  rb in fact unresolved\\
-0.01 & 1200 & 0.8 & N/A & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
-10^{ 4 }$ &  rb in fact unresolved\\
+0.01 & 600 & 0.8 & U & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
+10^{ 2 }$ &  \\
+0.01 & 1200 & 0.8 & U & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
+10^{ 4 }$ &  \\
 0.1 & 300 & 0.8 & 100.0 & $ 2.5 \times 10^{ -3 }$ & 0.29 & \\
 0.1 & 600 & 0.8 & 100.0 & $ 1.8 \times 10^{ -4 }$ & 97 &  \\
-0.1 & 1200 & 0.8 & 100.0 & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
+0.1 & 1200 & 0.8 & U & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
 10^{ 3 }$ &  \\
 1 & 300 & 0.8 & 100.0 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{
   -2 }$ &  TI\\
@@ -547,7 +547,9 @@ unresolved \\
 \hline
 \label{table:models}  
 \end{tabular}
-$^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$ Break radius of stellar Nuker profile.
+$^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$
+Break radius of stellar Nuker profile.  For profiles marked U, the
+break radius is not resolved on the grid.
 \end{minipage}
 \end{table*}
 
@@ -1307,13 +1309,34 @@ Plot showing final lorentz factor after the reverse shock crossing as a function
 
 \subsection{Jet Power Correlation}
 
-
-Accretion rates onto SMBHs can in principle be estimated directly by assuming Bondi accretion and using high resolution X-ray observations to estimate the gas temperature and density near the Bondi radius.  This technique has led to the intriguing conclusion that the Bondi accretion power correlates with the AGN jet power (e.g.,
+Accretion rates onto SMBHs can in principle be estimated directly by
+assuming Bondi accretion and using high resolution X-ray observations
+to estimate the gas temperature and density near the Bondi radius.
+This technique has led to the intriguing conclusion that the Bondi
+accretion power correlates with the AGN jet power (e.g.,
 \citealt{AllenDunn+:2006a}; \citealt{Russell+13};
 \citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
 required to inflate the observed cavities within the X-ray emitting
-gas.  In practice is it almost never possible to resolve the Bondi radius, therefore requiring all such studies to extrapolate the observed gas temperature and density profiles to smaller radial scales.  
+gas.  In practice is it almost never possible to resolve the Bondi
+radius, therefore requiring all such studies to extrapolate the
+observed gas temperature and density profiles to smaller radial
+scales.
 
+\subsection{Nuclear Star Clusters}
+Do nuclear star clusters in other galaxies look like scaled up/down
+versions of the one in our own galaxy? If so this would imply a radial
+gradient in the average of the stellar population which would imply a
+heating which would be dependent on radius.
+
+\subsection{SFR-AGN connection}
+In fact it seems like the star formation rate may trace AGN
+episodes. See e.g. http://arxiv.org/pdf/1501.07602.pdf. 
+
+\subsection{Type II Supernovae}
+Type II supernovae should provide some heating as well for younger
+stellar populations...In fact at least on large scales they may be the
+dominant source of heating on timescales of 10-40 Myr. 
+  
 
   \section{Summary}
   \label{sec:summary}
