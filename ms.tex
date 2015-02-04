@@ -506,17 +506,16 @@ Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v
 \hline
 {$M_{\bullet,8}$} & {$v_{w}$} & {$\Gamma^{(a)}$} & {$r_b$} & {$\dot{M}/\dot{M}_{\rm edd}$} & {$(t_{\rm cool}/t_{\rm ff})_{r_s}$} & {comments}\\
 \hline
-0.01 & 300 & 0.8 & N/A & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
+0.01 & 300 & 0.8 & U & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
 unresolved \\
-0.01 & 600 & 0.8 & N/A & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
-10^{ 2 }$ &  rb in fact unresolved\\
-0.01 & 1200 & 0.8 & N/A & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
-10^{ 4 }$ &  rb in fact unresolved\\
-0.1 & 300 & 0.8 & 100.0 & $ 2.5 \times 10^{ -3 }$ & 0.29 & energy
-cons on outer grid \\
+0.01 & 600 & 0.8 & U & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
+10^{ 2 }$ &  \\
+0.01 & 1200 & 0.8 & U & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
+10^{ 4 }$ &  \\
+0.1 & 300 & 0.8 & 100.0 & $ 2.5 \times 10^{ -3 }$ & 0.29 & \\
 0.1 & 600 & 0.8 & 100.0 & $ 1.8 \times 10^{ -4 }$ & 97 &  \\
-0.1 & 1200 & 0.8 & 100.0 & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
-10^{ 3 }$ &  energy cons on inner grid\\
+0.1 & 1200 & 0.8 & U & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
+10^{ 3 }$ &  \\
 1 & 300 & 0.8 & 100.0 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{
   -2 }$ &  TI\\
 1 & 600 & 0.8 & 100.0 & $ 7.3 \times 10^{ -4 }$ & 21 &  \\
@@ -534,13 +533,10 @@ cons on outer grid \\
 %10^{ -2 }$   & TI/convergence  \\
 0.1 & 300 & 0.8 & 400.0 & $ 8.9 \times 10^{ -3 }$ & $ 4.7 \times
 10^{ -2 }$ & TI/convergence \\
-0.01 & 1200 & 0.1 & N/A & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times
-10^{ 4 }$ &  rb is unsresolved\\
-0.1 & 1200 & 0.1 & N/A & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{
+0.01 & 1200 & 0.1 & U & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times
+10^{ 4 }$ &  \\
+0.1 & 1200 & 0.1 & U & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{
   3 }$ &  tried run in which rb=100 pc was resolved what would happen if rb=400 pc?\\
-1 & 1200 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
-1 & 1200 & 0.1 & 300.0 & $ 1.9 \times 10^{ -4 }$ & $ 1.3 \times 10^{
-  2 }$ &  \\
 0.01 & 1200 & 0.1 & 100.0 & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times 10^{ 4 }$ &  \\
 0.1 & 1200& 0.1 & 100.0 & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{ 3 }$ &  \\
 1 & 1200 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
@@ -551,7 +547,9 @@ cons on outer grid \\
 \hline
 \label{table:models}  
 \end{tabular}
-$^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$ Break radius of stellar Nuker profile.
+$^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$
+Break radius of stellar Nuker profile.  For profiles marked U, the
+break radius is not resolved on the grid.
 \end{minipage}
 \end{table*}
 
@@ -582,19 +580,28 @@ The inwardly directed velocity increases towards the hole with a profile that is
 % don't have a good physical explanation yet...
 
 
-The top panel of Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, expressed in ratio to the radius of the SMBH sphere of influence $r_{\rm soi}$, with different colors showing different values of $v_{w}$.  Cusp and core galaxies are marked with square and triangles, respectively.  Shown for comparison as a solid black line is the simplified analytic approximation for $r_{\rm s}$ from \eqref{eq:stag_simple}. For high $\vwO$ the analytic prediction agrees well with our numerical results. However, \eqref{eq:stag_simple} is only valid that $\Mstar|_{r_{\rm s}} \ll \Mbh$, and
-this approximation breaks down for small $\vwO$. In fact, $\rs$
-diverges for smaller $\vwO$. 
+Figure~\ref{fig:stag} shows our results for the
+stagnation radius $r_{\rm s}$, expressed in ratio to the radius of the
+SMBH sphere of influence $r_{\rm soi}$, with different colors showing
+different values of $v_{w}$.  Cusp and core galaxies are marked with
+square and triangles, respectively.  
 
-{\bf AG perhaps it would be better to solve the implicit equation for
-  rs/rsoi, and plot this in the top panel--assuming a fixed n of say
-  1}. We may also compare our numerical results $r_{\rm s}/r_{\rm
+ We may also compare our numerical results $r_{\rm s}/r_{\rm
   soi}$ an be compared directly to our analytic estimate in equation
-\ref{eq:stag_analytic}.  The bottom panel of Figure \ref{fig:stag}
-shows the fractional difference between our numerical and analytic
-results for $r_{\rm s}/r_{\rm soi}$.  The good agreement provides a
-useful check of the numerical results.
+\ref{eq:stag_analytic}.  The solid and dashed black curves in  Figure
+\ref{fig:stag} show the analytic results for $r_{\rm s}/r_{\rm soi}$.
+The good agreement provides a useful check of the numerical
+results. Note that the analytic curves implicitly assume a density
+slope, $n$ at $\rs$, which we have fixed to be 1 (0.5) for the solid
+(dashed) curve. For small $\vw/\sigma$ this assumption breaks down.
 
+For $\vw/\sigma \gg 1$ the value $\rs/\rsoi$ does not depend on break
+radius, $r_b$. On the other hand for $\vw/\sigma \simeq 1$, $\rb$ does
+have an effect. Notice that near where the solid analytic curve
+diverges there are three green square, one over the other. These
+points correspond to models with the same $\Mbh (10^7 \Msun)$, $\vw
+(300 {\rm km/s})$, and $\Gamma (0.8)$, but different values of the
+break radius: from top to bottom 50 pc, 100 pc, and 400 pc.  
 %% AG: Describe conservation checks to additionally validate the results.
 
 \begin{figure}
@@ -624,10 +631,10 @@ useful check of the numerical results.
     to the stellar velocity dispersion $\sigma$.  Green, orange, and
     blue symbols represent $v_{w} =$ 300, 600, and 1200 km s$^{-1}$,
     respectively.  Squares correspond to cusp galaxies, while
-    triangles correspond to cores. \emph{Bottom panel}: Fractional
-    difference between our numerical calculation of $r_{\rm s}/r_{\rm
-      soi}$ and the analytic result in
-    equation~(\ref{eq:stag_analytic}). }
+    triangles correspond to cores. The black curves correspond to the
+    analytic prediction from Equation~\eqref{stag_analytic}. The solid
+    (dashed) curve is the correponds to $\Gamma=0.8$ and $n=1$
+    ($\Gamma=0.1$ and $n=0.5$.}
 \end{figure}
 
 
@@ -728,13 +735,16 @@ What is the effect of the Ia radius?  Between subsequent supernovae, stars relea
 \begin{eqnarray}
 \left.\frac{\dot{M}}{\dot{M}_{\rm edd}}\right|_{\rm max} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{R_{\rm Ia}}{R_{\rm soi}}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
-    3 \times 10^{-4} M_{\bullet,8}^{-1.26}(\tau_{\star}/t_{\rm h})^{-0.3}
+    4.5 \times 10^{-4} M_{\bullet,8}^{-1.33}(\tau_{\star}/t_{\rm h})^{-0.2}
    & \text{core} \\
-    1.5 \times 10^{-4} \Mbheight^{-0.77}(\tau_{\star}/t_{\rm h})^{-0.7}   & \text{cusp}.
+    2.2 \times 10^{-4} \Mbheight^{-0.84}(\tau_{\star}/t_{\rm h})^{-0.6}   & \text{cusp}.
   \end{cases}
   \label{eq:eddr_Ia}
 \end{eqnarray}
-{\bf BDM: check!}
+{\bf AG: Changed this expression somewhat from that of BDM (slightly
+  different scaling relations were used?). I will
+  check again! Note that the time dependence of eta~t$^{-1.3}$ is
+  folded in above.}
 
 
 \subsection{Millisecond Pulsars}
@@ -781,10 +791,9 @@ There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback
 \ee
 where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$ (\citealt{Gan+14}).  
 
-{\bf AG: Note that I obtain Compton heating which is a factor of 2
-  higher--although power law dependences look right to me. Note that
-  the Compton heating will depend on radius--I use rs in my own
-  estimate.  BDM: if so, the please update the numbers!  }
+{\bf AG: Note that the Compton heating will depend on the distance of
+  the hole as $1/r^2$ so Compton heating will be stronger closer to the
+  black hole! }
 The importance of Compton heating can be estimated by assuming the SMBH
 radiates with a luminosity $L = \epsilon_{\rm rad} \dot{M}c^{2}$, where
 $\epsilon_{\rm rad}$ is the radiative efficiency and where $\dot{M}$ is
@@ -793,16 +802,19 @@ equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}),
 (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation
 (\ref{eq:vw_eff}) that the effective Compton heating rate at the stagnation radius is given by
 \begin{align} v_{w}^{\rm C} \simeq
-  \begin{cases} 13 \eta_{0.02}^{0.5}T_{\rm
+  \begin{cases} 29 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm
-km\,s^{-1}} &, \text{core}\\ 20 \eta_{0.02}^{0.5}T_{\rm
+km\,s^{-1}} &, \text{core}\\ 50 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.24}v_{500}^{-0.7}\,{\rm
 km\,s^{-1}} &, \text{cusp},
   \end{cases}
   \label{eq:vC}
 \end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
-\epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency for an advective
-accretion flow expected to produce high $T_{\rm C}$ emission (e.g.~\citealt{Narayan&Yi95}).  If heating is provided by Compton heating alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation (\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
+\epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency
+for an advective accretion flow expected to produce high $T_{\rm C}$
+emission (e.g.~\citealt{Narayan&Yi95}).  If heating is provided by
+Compton heating alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation
+(\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
 \begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 106 \eta_{0.02}^{0.21}T_{\rm
 C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
@@ -861,8 +873,28 @@ stellar winds is dead, and Compton heating plays an important role.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSources.pdf}
-\caption{\label{fig:vwSources} Sources contributing to the heating rate of the CNM, $\vwO$, including stellar wind heating ({\it solid blue}), Ia supernovae ({\it dashed red}), millisecond pulsars ({\it solid orange}).  Each heating source varies with black hole mass $\Mbh$ due to the different average star formation history of galaxies of a given halo mass (see Appendix~\ref{app:windheat} for the detailed description).   We assume a stellar density power law slope of $\Gamma = 0.8$ in calculating $v_{w}^{\bullet \, 2}$ although the dependence on $\Gamma$ is weak {\bf BDM: just pick a value of Gamma!}.  The Ia heating rate is shown as a solid above the critical black hole mass for which $r_{\rm Ia} < r_{\rm s}$ (Fig.~\ref{fig:rs_rIa}), since this represents the condition for SN Ia to be well-approximated a continuously heating source. }
+\caption{\label{fig:vwSources} {\emph Top Panel:}Sources contributing
+  to the heating rate of the CNM, $\vwO$, including stellar wind
+  heating ({\it orange}), Ia supernovae ({\it green}), millisecond
+  pulsars ({\it blue}), and compton heating (\it pink).  Each heating
+  source varies with black hole mass $\Mbh$ due to the different
+  average star formation history of galaxies of a given halo mass (see
+  Appendix~\ref{app:windheat} for the detailed description). The total
+  heating rate is shown in black. To account for the non-steady nature
+  of the Ia heating we multiply the Ia heating by $e^{-\rs/\rIa}$, so
+  the contribution that the heating contribiution from Ia supernovae
+  will be suppressed if the time between successive supernovae is much
+  greater than the dynamical time at $\rs$. {\emph Bottom panel} The
+  ratio of the heating ($\dot{q}_{\rm heat}$) to the cooling rate
+  ($\dot{q}_{\rm cool}$) at $\rs$ from the total heating rate in the
+  top panel. Above $\Mbh\simeq 5\times 10^7 \Msun$ $\dot{q}_{\rm
+    heat}(\rs)<\dot{q}_{\rm cool}(\rs)$ and a thermal instability
+  would arise. The thermally unstable region is marked in red in the
+  bottom panel. All curves become dashed in the thermally unstable
+  region of parameter space: we expect our model to break down in this
+  regime as the steady-state assumption would be violated.}
 \end{figure}
+
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{eta.pdf}
@@ -1123,6 +1155,83 @@ new gridded approach.}
 %   we choose the $\vwO=200$ km/s solution.  {\bf BDM: if possible, add actual x-ray data from Gallo+08!}}
 % \end{figure}
 
+\subsection{X-ray Diagnostics of SMBH Occupation}
+\label{sec:occ}
+The free-free emission from steady state gas flows in low mass
+galactic nuclei may serve as useful diagnostics of the presence or
+absence of a SMBH.  We focus primarily on low-mass galaxies in this
+subsection, both because this is the portion of parameter space in
+which gas inflow will generally proceed in a steady-state fashion, and
+because of recent observations suggesting that a nontrivial fraction
+of these galaxies may lack nuclear SMBHs.  If this absence is
+confirmed, it could have implications for galaxy evolution, SMBH
+recoil distributions, and SMBH seed formation models.
+
+We can approximate the gas temperature as 
+
+\begin{equation}
+% T \approx \frac{\mu m_{\rm p} (\gamma-1)}{2\gamma k_{\rm B}}
+% \left(\tilde{v}_{\rm w}^2 + GM_\bullet/r \right).
+ \kb T \approx 2.1\times 10^{-25} \left(\tilde{v}_{\rm w}^2 + GM_\bullet/r
+ \right) {\rm [cgs]}.
+\end{equation}
+
+In the absence of a central SMBH, we can expect to see an exponential
+cutoff in the free-free X-ray spectrum at energies above
+
+\begin{equation}
+E_{\rm cut} = 0.32~{\rm keV} v_{500}^2,
+\end{equation}
+
+assuming $\gamma = 5/3$.  This cutoff will therefore be located in the
+portion of the soft X-ray covered by {\it Chandra}'s ACIS
+spectrometer.  By writing the free-free emissivity as
+
+\begin{equation} 
+\varepsilon_{\nu}^{\rm ff} = 6.8\times10^{-38}
+\frac{\rm erg}{\rm s~cm^3~Hz} Z^2n_{\rm e}n_{\rm
+i}T^{-1/2}\bar{g}_{\rm ff}\exp\left(\frac{-h\nu}{k_{\rm B}T}\right),
+\end{equation}
+
+where $Z$ is the atomic number of the ions, $n_{\rm e}$ and $n_{\rm
+  i}$ are respectively the electron and ion number density, and
+$\bar{g}_{\rm ff}$ is the Gaunt factor.  In the following we set
+$n_{\rm e}=Y_{\rm e}n_{\rm i}$, and approximate
+\begin{equation}
+n_{\rm i} \approx \frac{\dot{M}}{(4\pi/3) \rs^2 \mu \mp}\sqrt{ \frac{r_{\rm s}}{ 2 G \Mbh} } \left( \frac{r}{\rs} \right)^{-n}.
+\end{equation}
+
+We now write the total spectral luminosity density seen in unresolved
+X-ray observations above the cutoff energy as
+
+\begin{align}
+ L_{\nu}^{\rm ff} =& \int_0^{r_{\rm s}} 4\pi r^2 \varepsilon_{\nu}^{\rm ff}{\rm d}r \\
+\approx & 2.8\times 10^{16} \, {\rm ergs \, s^{-1}
+  \, Hz^{-1}} \left(\frac{\dot{M}}{10^{-5}M_\odot/{\rm
+      year}} \right)^2 \left(\frac{\rs}{10^{-2}~{\rm pc}} \right)^{-1}
+   \notag \\
+& \times \left(\frac{h \nu}{0.5~{\rm keV}}\right)^{-3/2} \bar{Z}^2 \bar{g}_{\rm ff} Y_{\rm e} \notag \\
+\approx & 3.9\times 10^{14} {\rm ergs~s^{-1}~Hz^{-1}}
+\eta^2 \left(\frac{\Mbh}{10^{6}~{\Msun}} \right)^{1.96} \notag\\&\times
+\left(\frac{h \nu}{0.5~{\rm keV}}\right)^{-3/2} v_{500}^{-2.8} \bar{Z}^2 \bar{g}_{\rm ff} Y_{\rm e} 
+\end{align}
+
+The second line of this equation makes the approximation that
+$GM_\bullet/r$ dominates $\tilde{v}_{\rm w}^2$ throughout the
+integrand, which will be true for energies modestly higher than
+$E_{\rm cut}$.  The lower (upper) endpoint for this integral are
+arbitrary so long as it is somewhat less (greater) than the radius at
+which the observed frequency $\nu$ sees its exponential free-free
+cutoff. We have also set $n=1$.
+
+In general, these ``cut-off'' X-ray luminosities are quite small, and
+even {\it Chandra} would have little hope of detecting them in any but
+the nearest dwarf galaxies (e.g. the Magellanic clouds).  However, if
+source confusion is not present, this technique could test for the
+presence of IMBHs in very nearby dwarf galaxies, or more speculatively
+Galactic star clusters.
+
+
 \section{Discussion}
 \label{sec:discussion}
 
@@ -1235,13 +1344,34 @@ Plot showing final lorentz factor after the reverse shock crossing as a function
 
 \subsection{Jet Power Correlation}
 
-
-Accretion rates onto SMBHs can in principle be estimated directly by assuming Bondi accretion and using high resolution X-ray observations to estimate the gas temperature and density near the Bondi radius.  This technique has led to the intriguing conclusion that the Bondi accretion power correlates with the AGN jet power (e.g.,
+Accretion rates onto SMBHs can in principle be estimated directly by
+assuming Bondi accretion and using high resolution X-ray observations
+to estimate the gas temperature and density near the Bondi radius.
+This technique has led to the intriguing conclusion that the Bondi
+accretion power correlates with the AGN jet power (e.g.,
 \citealt{AllenDunn+:2006a}; \citealt{Russell+13};
 \citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
 required to inflate the observed cavities within the X-ray emitting
-gas.  In practice is it almost never possible to resolve the Bondi radius, therefore requiring all such studies to extrapolate the observed gas temperature and density profiles to smaller radial scales.  
+gas.  In practice is it almost never possible to resolve the Bondi
+radius, therefore requiring all such studies to extrapolate the
+observed gas temperature and density profiles to smaller radial
+scales.
 
+\subsection{Nuclear Star Clusters}
+Do nuclear star clusters in other galaxies look like scaled up/down
+versions of the one in our own galaxy? If so this would imply a radial
+gradient in the average of the stellar population which would imply a
+heating which would be dependent on radius.
+
+\subsection{SFR-AGN connection}
+In fact it seems like the star formation rate may trace AGN
+episodes. See e.g. http://arxiv.org/pdf/1501.07602.pdf. 
+
+\subsection{Type II Supernovae}
+Type II supernovae should provide some heating as well for younger
+stellar populations...In fact at least on large scales they may be the
+dominant source of heating on timescales of 10-40 Myr. 
+  
 
   \section{Summary}
   \label{sec:summary}
