@@ -473,6 +473,17 @@ v_{w} > v_{\rm CI} \simeq
 \end{align}
 Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius (Fig.~\ref{fig:cooling}).  The requirement that $v_{\rm w} \gtrsim \sigma$ in equation (\ref{eq:cooling2}) results because the top two lines are derived under the assumption that the stagnation radius is given by equation (\ref{eq:rs_simple}).  When $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to larger radii than predicted by by equation (\ref{eq:rs_simple}) or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
 
+The condition (\ref{eq:cooling2}) in conjunction with equation (\ref{eq:mdot_analytic}) also implies a maximum accretion rate for a thermally stable flow, which is given by
+\begin{align}
+\frac{\dot{M}_{\rm max}}{\dot{M}_{\rm edd}} \simeq
+  {\rm min}\begin{cases}
+   4\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.34} &, \text{core}\\
+   2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.29}    &, \text{cusp}\\
+\eta M_{\bullet}/\dot{M}_{\rm edd}t_{\rm h} \approx 5.5\times 10^{-5}\eta_{0.02}&, v_{\rm CL} < \sigma
+  \end{cases}
+  \label{eq:Mdotmax}
+\end{align}
+
 
 
 % For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta$ such that $H/C >$1 at all radii.  Roughly speaking, this is the maximum $\eta$ for which it would be safe to ignore cooling.  If cooling is important, the CNM is likely to be thermally unstable, resulting in the formation of a cold medium that could substantially enhance the rate of accretion onto the SMBH.  
