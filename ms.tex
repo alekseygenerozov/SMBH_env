@@ -394,7 +394,7 @@ where the second equality makes use of equation (\ref{eq:Tanalytic}).  {\bf BDM:
 \subsection{Importance of Heat Conduction}
 \label{sec:conductivity}
 
-Our analytic results neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the nominal level of wind heating at the stagnation radius is given by
+Our analytic results neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the nominal external (``wind") heating rate at the stagnation radius is given by
 \begin{align}
   \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
@@ -425,27 +425,27 @@ Even in the saturated case, heat conduction is at most an order unity correction
 \subsection{Thermal Instability}
 \label{sec:instability}
 
-Radiative cooling, if important, qualitative alters key features of the accretion flow.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm cool} = n^{2}\Lambda \propto T^{-2.7}$ is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \sim -0.7$ is the cooling function (see below).  Thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
+If important, radiative cooling qualitative alters key features of the accretion flow.  Radiative cooling is usually of greatest important near the stagnation radius, where the gas is in nearly hydrostatic balance.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdotrad}]) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \sim -0.7$ is the cooling function (see below).  Thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
 
-Radiative cooling can, however, be stabilized by the other sources of cooling, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius is balanced by wind heating $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$ (neglecting radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the external (``wind") heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}| =|\Lambda(T) n^2|$,
+Radiative cooling can, however, be stabilized by the other sources of cooling, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius is balanced by wind heating $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$ (neglecting radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the external (``wind") heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}| =|\Lambda(T) n^2|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
-\left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm cool}|}\right|_{\rm r_{\rm s}} \simeq
+\left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm rad}|}\right|_{\rm r_{\rm s}} \simeq
   \begin{cases}
    590 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.76}v_{500}^{7.2}  &, \text{core}\\
    210 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.48}v_{500}^{5.8}  &, \text{cusp},     
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs}) for the gas and stellar densities at the stagnation radius, respectively.  Here $n = \rho/\mu m_p$ is the particle number density and we have approximated the cooling function for $T < 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}$ assuming solar metallicity gas (\citealt{Draine:2011a}; Fig. 34.1).  To within a constant of order unity, equation (\ref{eq:cooling2}) also equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n kT/2)/\dot{q}_{\rm cool}$ to the free-fall time $t_{\rm ff}$ if one uses the equality 
+where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs}) for the gas and stellar densities at the stagnation radius, respectively.  We have approximated the cooling function for $T < 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}$ assuming solar metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  To within a constant of order unity, equation (\ref{eq:cooling2}) also equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n kT/2)/\dot{q}_{\rm rad}$ to the free-fall time $t_{\rm ff}$ if one uses the equality 
 \begin{align}
 \rho|_{r_{\rm s}}=\frac{3 q|_{r_{\rm s}} \tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
 \end{align}
 that results by combining equations~\eqref{eq:mdot_analytic} and~\eqref{eq:mdot_gas}.
 
-Thermal stability ($\dot{q}_{\rm heat} > \dot{q}_{\rm cool}$; $t_{\rm cool} > t_{\rm ff}$) at the stagnation radius thus requires a critical minimum heating rate
+Thermal stability ($\dot{q}_{\rm heat} > |\dot{q}_{\rm rad}|$; $t_{\rm cool} > t_{\rm ff}$) at the stagnation radius thus requires a critical minimum heating rate
 \begin{align}
-v_{w} > v_{\rm CI} \simeq
+v_{w} > v_{\rm TI} \simeq
   {\rm max}\begin{cases}
    200 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
    200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}\\
@@ -453,7 +453,7 @@ v_{w} > v_{\rm CI} \simeq
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally a condition for stability at all radii, not just at the stagnation radius (Fig.~\ref{fig:cooling}).  The requirement that $v_{\rm w} \gtrsim \sigma$ in equation (\ref{eq:cooling2}) results because the top two lines are derived under the assumption that the stagnation radius is given by equation (\ref{eq:rs_simple}).  When $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to larger radii than predicted by by equation (\ref{eq:rs_simple}) or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
+Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally produces stability at all radii, not just at the stagnation radius (Fig.~\ref{fig:cooling}).  The stability requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines of equation (\ref{eq:cooling2}) are derived using equation (\ref{eq:rs_simple}) for the stagnation radius.  However, when $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to much larger radii or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
 
 The condition (\ref{eq:cooling2}) in conjunction with equation (\ref{eq:mdot_analytic}) also implies a maximum accretion rate for a thermally stable flow, which is given by
 \begin{align}
