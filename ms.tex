@@ -229,9 +229,9 @@ Following \citet{Quataert:2004a} (see also \citealt{HolzerAxford:1970a,De-ColleG
 \label{eq:dsdt}
 \end{align}
 where $p$ and $s$ are the pressure and specific entropy, respectively, and $M_{\rm enc} = M_{\star}(r) + \Mbh$ is the
-enclosed mass.  We assume an ideal gas equation of state with $p = \rho kT/\mu m_p$ with $\mu = 0.62$  and $\gamma = 5/3$. 
+enclosed mass.  We adopt an ideal gas equation of state with $p = \rho kT/\mu m_p$ with $\mu = 0.62$  and $\gamma = 5/3$. 
 
-The source term in the continuity equation (eq.~[\ref{eq:drhodt}]),
+The source term in equation (\ref{eq:drhodt}),
 \begin{align}
   q=\frac{\eta \rhostar}{\th},
 \label{eq:q}
@@ -239,11 +239,10 @@ The source term in the continuity equation (eq.~[\ref{eq:drhodt}]),
 represents mass input from stellar winds, which we parameterize in
 terms of the fraction $\eta$ of the stellar density $\rhostar$ being
 recycled into gas on the Hubble time $\th = 1.4 \times 10^{10}$
-years.  To good approximation $\eta\simeq 0.02 (t_{\star}/t_h)^{-1.3}$ at time $t_{\star}$ following a star burst (e.g., \citealt{Ciotti+91})\footnote{\citet{Ciotti+91} give the overall mass return rate from evolved stars as a function of B-band luminosity.  Although we give the mass return rate per unit volume, our expressions are equivalent.}, although we will show later that $\eta$ can be significantly higher if star formation is ongoing (Fig.~\ref{fig:eta}).  
+yr.  To good approximation $\eta\simeq 0.02 (t_{\star}/t_h)^{-1.3}$ at time $t_{\star}$ following an impulsive star burst (e.g., \citealt{Ciotti+91})\footnote{\citet{Ciotti+91} give the mass return rate from evolved stars as a function of B-band luminosity instead of volumetrically, but our expressions are equivalent.}, although $\eta$ is significantly higher for continuous star formation histories (Fig.~\ref{fig:eta}).  
 
 Source terms $\propto q$ also appear in the momentum and entropy
-equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) because isotropic
-mass injection in the SMBH rest frame represents a source of momentum
+equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) because the isotropic injection of mass represents, in the SMBH rest frame, a source of momentum
 and energy relative to the mean flow.  Physically, these result from
 the mismatch between the properties of virialized gas injected locally
 by stellar winds and the mean properties of the background flow.  The
@@ -253,15 +252,13 @@ The term $\propto \vw^2 = \sigma(r)^2+v_{w}^2$ in the entropy
 equation accounts for external heating sources (e.g.,
 \citealt{ShcherbakovWong+:2014a}).  The first term approximates the
 minimum amount of shock heating from stellar winds due to the random movement
-of stars with respect to one another at the characteristic velocity
-$\sim \sigma \approx \sqrt{GM_{\rm enc}/r}$.  This heating is present even in old stellar populations for which mass and energy injection are dominated by AGB winds with low velocities $\ll \sigma$.  The second term, $v_{w}^{2}$, parameterizes
-the contribution of additional sources of heating, such as faster main
+of stars with respect to one another at the characteristic velocity of $\sigma \approx \sqrt{GM_{\rm enc}/r}$.  This heating is present even in old stellar populations for which mass and energy injection are dominated by AGB winds with low velocities $\ll \sigma$.  The second term, $v_{w}^{2}$, parameterizes all additional sources of heating, including faster main
 sequence or Wolf-Rayet stellar winds, spin-down energy from millisecond pulsars, supernovae, AGN
-feedback, etc.  As discussed in $\S\ref{sec:heating}$, the value of
-$v_{w}$ is uncertain and will in general depend on the SMBH mass and
+feedback, etc.  As will be discussed in $\S\ref{sec:heating}$, the value of
+$v_{w}$ will in general depend on the SMBH mass and
 the age of the stellar population.
 
-To isolate the physics of interest, our baseline calculations neglect two potentially important effects: heat conduction and radiative cooling.  Heat transport by electron conductivity results in an an additional term on the right hand side of the entropy equation of the form  
+To isolate the physics of interest, our baseline calculations neglect two potentially important effects: heat conduction and radiative cooling.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
 \be \dot{q}_{\rm cond} = \nabla\cdot(\kappa \nabla T), \ee
 where $\kappa_{\rm
   eff}=\kappa_{\rm spitz}/(1+\psi)$ (\citealt{DaltonBalbus:1993a}) is
@@ -269,16 +266,16 @@ the conducitivity and $\kappa_{\rm spitz} = \kappa_0 T^{5/2}$ is the
 classical \citet{Spitzer62} value ($\kappa_0\simeq 2\times 10^{-6}$ in
 cgs units).  The flux limitor $\psi = \kappa_{\rm spitz} \nabla
 T/(5\phi \rho c_s^3)$ saturates the conductive flux if the mean free
-path for electron coulomb scattering becomes comparable to the
+path for electron coulomb scattering exceeds the
 temperature length scale, where $c_s \equiv (kT/\mu m_p)^{1/2}$ is the
 isothermal sound speed and $\phi \lesssim 1$ is an uncertain
 dimensionless constant (we adopt $\phi = 0.1$).  Even a weak magnetic
-field oriented perpendicular to the flow could in principle suppress the
+field that is oriented perpendicular to the flow could suppress the
 conductivity by greatly reducing the electron mean free path.  However, for radially-decreasing temperature profiles
-of interest, the flow is susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field geometry (\citealt{Parrish&Stone07}).
+of interest, the flow is susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field geometry (\citealt{Parrish&Stone07}).  We show later in $\S\ref{sec:conductivity}$ that neglecting conductivity results in at most only order-unity corrections to the key properties of solutions calculated assuming its presence.
 
-Radiative cooling is also not included in our baseline calculations.  Across much of the parameter space radiative cooling is subdominant compared to other sources of cooling.  Radiative cooling becomes important when $\vwO$ is low and/or $\eta$ is high, but once important it leads to thermal instabilities (e.g.~\citealt{McCourt+12}) which our 1D
-time-independent model cannot account for self-consistently anyways.  Indeed, one of the main goals of this work is to use our analytic and numerical solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities will develop ($\S\ref{sec:cooling}$).
+We also neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low and/or stellar mass loss rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instabilities (e.g.~\citealt{McCourt+12}) that our 1D
+time-independent model cannot account for self-consistently anyways.  A main goal of this work is to use analytic and numerical solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:cooling}$).
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
@@ -287,7 +284,7 @@ and entropy equations for numerical stability
 (\citealt{Brandenburg:2003a}).  We assume different
 choices of $v_{w} = 300, 600, 1200$ km s$^{-1}$ spanning a
 physically plausible range of heating rates.  Although we are interested in the
-steady-state inflow/outflow structure (assuming it exists), the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic
+steady-state inflow/outflow solution (assuming one exists), the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic
 inflow on small radial scales and a possible supersonic outflow on large scales.
 
 We assess the accuracy of our numerical solutions by checking that mass is conserved across the grid, in addition to the integral constraint on the energy (Bernoulli integral).  Mass and energy are conserved to $\lesssim
@@ -390,6 +387,7 @@ one notices a similarity between equation (\ref{eq:mdot_gas}) and the Bondi form
 where the second equality makes use of equation (\ref{eq:Tanalytic}). 
 
 \subsection{Importance of Heat Conduction}
+\label{sec:conductivity}
 
 Our analytic results neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the nominal level of wind heating at the stagnation radius is given by
 \begin{align}
