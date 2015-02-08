@@ -274,7 +274,12 @@ field that is oriented perpendicular to the flow could suppress the
 conductivity by greatly reducing the electron mean free path.  However, for radially-decreasing temperature profiles
 of interest, the flow is susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field geometry (\citealt{Parrish&Stone07}).  We show later in $\S\ref{sec:conductivity}$ that neglecting conductivity results in at most only order-unity corrections to the key properties of solutions calculated assuming its presence.
 
-We also neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low and/or stellar mass loss rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instabilities (e.g.~\citealt{McCourt+12}) that our 1D
+Radiative cooling contributes an additional term to equation (\ref{eq:dsdt}) of the form
+\be
+\dot{q}_{\rm rad} = -\Lambda(T)n^{2},
+\label{eq:qdot_rad}
+\ee
+where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low and/or stellar mass loss rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instabilities (e.g.~\citealt{McCourt+12}) that our 1D
 time-independent model cannot account for self-consistently anyways.  A main goal of this work is to use analytic and numerical solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:cooling}$).
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
