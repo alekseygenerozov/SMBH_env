@@ -306,7 +306,7 @@ We begin by describing analytic estimates of physical quantities, such as the st
 
 Continuity of the entropy derivative at the stagnation radius where $v = 0$ requires that the temperature at the stagnation radius is given by (eq.~[\ref{eq:first_law}])
 \begin{align}
-T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p \tilde{v}_{w}^{2}}{2} \approx 3.7
+T \simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p \tilde{v}_{w}^{2}}{2k} \approx 3.7
 \times 10^6\ \, v_{500}^2 \,\,{\rm K},
 \label{eq:Tanalytic}
 \end{align}
@@ -315,15 +315,17 @@ where $v_{500} \equiv \tilde{v}_{w}/(500$ km s$^{-1}$).  Hydrostatic equilibrium
 \rs=\frac{G \Mbh}{n \vw^{2}|_{\rs}}\left(\frac{9-\Gamma}{2} \frac{M_{\star}|_{\rs}}{\Mbh} +\frac{7}{2}\right),
 \label{eq:stag_analytic}
 \end{align}
-where $n$ is the power-law slope of the density profile at $r = r_{\rm s}$.  
+where $n \equiv -d{\rm ln}\rho/d{\rm ln\,r}|_{r_{\rm s}}$ is the density power-law slope at $r = r_{\rm s}$.  
 
-If the SMBH dominates the gravitational potential at the stagnation radius then $v_{w} \gg \sigma$ and hence the stagnation radius resides well inside the sphere of influence, i.e.~$r_{\rm s} < r_{\rm soi}$ (eq.~[\ref{eq:rsoi}]).  In this case equation (\ref{eq:stag_analytic}) simplifies to
+If the SMBH dominates the gravitational potential at the stagnation radius, then $v_{w} \gg \sigma$ and hence the stagnation radius resides well inside the sphere of influence ($r_{\rm s} < r_{\rm soi}$; eq.~[\ref{eq:rsoi}]).  In this limit equation (\ref{eq:stag_analytic}) simplifies to
 \begin{align}
   &\rs=\frac{7}{2}\frac{G \Mbh}{n \tilde{v}_{w}^{2}} \approx 6
  \, \pc \,\, \Mbheight v_{500}^{-2},
   \label{eq:stag_simple}
 \end{align}
-where the numerical estimate assumes $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on heuristic grounds (their eq.~6).  In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all.  This result makes intuitive sense: gas is supplied by stars which are gravitationally bound to the black hole, so outflows occur only if the specific heating rate $\sim \tilde{v}_{w}^{2}$ exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
+where for the numerical estimate we adopt $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on more heuristic grounds (their eq.~6).  
+
+In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all (formally implying that the entire ISM of the galaxy is accreting).  This result makes intuitive sense: gas is supplied to the nuclear by stars which are gravitationally bound to the black hole, so outflows are possible only if the specific heating rate $\sim \tilde{v}_{w}^{2}$ exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
 
 
 \subsection{SMBH Accretion Rate}
@@ -340,12 +342,12 @@ The accretion rate onto the SMBH is given by the integrated mass loss rate inter
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-where we have made use of equation (\ref{eq:stag_simple}; assuming that $v_{w} \gg \sigma$) and have divided our results into core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  The resulting Eddington ratio $\eddr$ is given by 
+where we have made use of equation (\ref{eq:stag_simple}), i.e. assuming that $v_{w} \gg \sigma$, and we have divided our results into core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  The resulting Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ is given by 
 \begin{eqnarray}
 \frac{\dot{M}}{\dot{M}_{\rm edd}} &\approx&
   \begin{cases}
     1.3 \times 10^{-5} M_{\bullet,8}^{0.76}
-    v_{500}^{-3.8}  \eta_{0.02}   & \text{core} \\
+    v_{500}^{-3.8}  \eta_{0.02}   & \text{core}, \\
     2.4 \times 10^{-5} \Mbheight^{0.48} 
     v_{500}^{-2.4}  \eta_{0.02}   & \text{cusp}, 
   \end{cases}
@@ -354,22 +356,21 @@ where we have made use of equation (\ref{eq:stag_simple}; assuming that $v_{w} \
 where $\dot{M}_{\rm edd} = 2.6M_{\bullet,8}M_{\odot}$ yr$^{-1}$  is the Eddington accretion rate, assuming a radiative efficiency of ten per cent.  Note the sensitive inverse dependence of the accretion rate on the wind heating rate.  
 %To reproduce the estimated values $\dot{M}/\dot{M}_{\rm edd} \lesssim 10^{-3}$ in low-luminosity AGN or quiescent galaxies, we thus require $v_{w} \gtrsim 150M_{\bullet,8}^{0.5}$ 
 
-The gas density at the stagnation radius $\rho(r_{\rm s})$ is more challenging to estimate accurately.  Using an alternative estimate of $\dot{M}$ as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$ in conjuction with equation (\ref{eq:mdot_analytic}), one finds
+The gas density at the stagnation radius $\rho|_{r_{\rm s}}$ is more challenging to estimate accurately.  Using an alternative estimate of $\dot{M}$ as the gaseous mass within the stagnation radius divided by the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm s}^{3}/GM_{\bullet})^{1/2}$,
 \begin{align}
   &\dot{M}\sim\frac{(4 \pi/3) \rs^3 \rho|_{r_{\rm s}}}{\tff|_{r_{\rm s}}},
   \label{eq:mdot_gas}
 \end{align}
-from which one derives 
+ in conjuction with equations (\ref{eq:mdot_analytic}) and (\ref{eq:rs_simple}), one derives
 \begin{align}
   \rho|_{r_{\rm s}}\approx
   \begin{cases}
     5 \times 10^{-26} \Mbheight^{-0.2} v_{500}^{-0.8}  \eta_{0.02} \,
     \, {\rm g \, cm^{-3}}& \text{core},\\
-    9 \times 10^{-26}  \Mbheight^{-0.5} v_{500}^{0.6}  \eta_{0.02} \,\, {\rm g \,cm^{-3}} & \text{cusp},
+    9 \times 10^{-26}  \Mbheight^{-0.5} v_{500}^{0.6}  \eta_{0.02} \,\, {\rm g \,cm^{-3}} & \text{cusp}.
   \end{cases}
   \label{eq:rhors}
 \end{align}
-again using equation (\ref{eq:rs_simple}) for the stagnation radius.  
 
 %Note that by combining equations~\eqref{eq:mdot_analytic}
 %and~\eqref{eq:mdot_gas}, one can also write
@@ -378,18 +379,17 @@ again using equation (\ref{eq:rs_simple}) for the stagnation radius.
 %\label{eq:rhors2}
 %\end{align}
 
-Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) may be compared to the traditional Bondi rate for accretion onto a point source from an external medium of specified density and temperature (\citealt{Bondi52}):
+Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) can be compared to the traditional Bondi rate for accretion onto a point source from an external medium of specified density and temperature (\citealt{Bondi52}):
 \begin{align}
-  \dot{M}_{\rm B} =4\pi \lambda r_b^2 \rho(r_b) v_{\rm ff}(r_b),
+  \dot{M}_{\rm B} =4\pi \lambda r_{\rm B}^2 \rho|_{r_{\rm B}}v_{\rm ff}|_{r_{\rm B}},
 \label{eq:bondi}
 \end{align}
-where $r_b \equiv GM/c_{s}^{2}$ is the Bondi radius, $v_{\rm ff} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  By rewriting equation (\ref{eq:mdot_gas}) as $\dot{M}\simeq 4\pi \rs^2 \rho|_{r_{\rm s}} v_{\rm ff}|_{r_{\rm s}}/3$,
-one notices a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $\rb$ is replaced by $\rs$.  When the stagnation radius resides interior to the sphere of influence we indeed have (eq.~[\ref{eq:stag_simple}])
+where $r_{\rm B} \equiv GM/c_{\rm s,ad}^{2}$ is the Bondi radius, $c_{\rm s,ad} = \sqrt{\gamma kT/\mu m_p}$ is the adiabatic sound speed, $v_{\rm ff}|_{r_{\rm B}} = r_{\rm B}/t_{\rm ff}|_{r_{\rm B}} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  One observes a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $R_{\rm B}$ is replaced by $\rs$.  When the stagnation radius resides interior to the sphere of influence we indeed have (eq.~[\ref{eq:stag_simple}])
 \begin{align}
-  \rs\approx\frac{7}{2}\frac{G \Mbh}{\vwO^2} \approx \frac{14}{3}\frac{GM_{\bullet}}{c_{s}^{2}} = \frac{14}{3}r_{\rm B},
+  \rs\approx\frac{7}{2}\frac{G \Mbh}{n \vwO^2} \approx \frac{7}{6n}r_{\rm B},
   \label{eq:rs_simple}
 \end{align}
-where the second equality makes use of equation (\ref{eq:Tanalytic}). 
+where the second equality makes use of equation (\ref{eq:Tanalytic}).  {\bf BDM: please check, as I found something different than what was here before}.   
 
 \subsection{Importance of Heat Conduction}
 \label{sec:conductivity}
