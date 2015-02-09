@@ -480,9 +480,23 @@ Substituting condition (\ref{eq:cooling2}) into our analytic expression (\ref{eq
   %\label{eq:cooling}
 %\end{align}
 
+
 \begin{figure}
-  \includegraphics[width=\columnwidth]{cooling.eps}
-  \caption{\label{fig:cooling} Ratio of the rate of heating to radiative cooling, $\dot{q}_{\rm heat}/\dot{q}_{\rm cool}$, as a function of radius for each of our solutions (solid lines).  Shown for comparison with dashed lines is the ratio of the cooling to the local free-fall timescale $t_{\rm cool}/t_{\rm ff}$.  For high heating rates both ratios are approximately equal at the stagnation radius (marked with a square for each solution).  When $\dot{q}_{\rm heat}/\dot{q}_{\rm cool} \lesssim 1$ and $t_{\rm cool}/t_{\rm ff} \lesssim 10$ the flow will be susceptible to global and local thermal instability, respectively (e.g.,  \citealt{McCourt+12}).  {\bf BDM: change y axis labels to qdotheat/qdotcool, tcool/tff}.}
+  \includegraphics[width=\columnwidth]{profiles.eps}
+  \caption{\label{fig:profiles}Radial profiles of the CNM density
+    ({\it top}), temperature ({\it middle}), velocity ({\it bottom}),
+    and interior X-ray luminosity ({\it bottom}) calculated for a
+    sample of galaxies within our grid.  Different colors
+    denote different values of the effective wind heating rate,
+    $\vwO=1200$ km s$^{-1}$ ({\it blue}), $\vwO$=600 km s$^{-1}$ ({\it
+      orange}), and 300 km s$^{-1}$ ({\it green}).  Different
+    linestyles correspond to different values of $\Mbh$, $\Mbh=10^6
+    \Msun$ ({\it dot-dashed}), $\Mbh=10^7 \Msun$ ({\it solid}), and
+    $\Mbh=10^8 \Msun$ ({\it dashed}). Thin lines correspond to cusp
+    galaxies ($\Gamma$=0.8) and thick lines correspond to core
+    galaxies ($Gamma$=0.1). Squares mark out the location of
+    the stagnation radius for each solution.
+ }
 \end{figure}
 
 
@@ -572,7 +586,7 @@ $^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$ Break radius 
 %\end{minipage}
 %\end{table*}
 
-This section describes the results of our numerical calculations, which we use to study the range of plausible CNM properties and to assess the validity of the analytic expressions provided in the previous section.  Our results are summarized in Table \ref{table:models} and Figure XXX.  Cases for which $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|_{r_{\rm s}} < 1$ are marked as `thermally unstable', as are cases for which the stagnation radius become very large and could not be resolved, resulting in their calculations being terminated.  
+The results of our numerical calculations are uses to study the range of plausible CNM properties and to assess the validity of the analytic expressions provided in the previous section.  Our results are summarized in Table \ref{table:models} and Figure XXX.  Cases for which $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{\rm s}} < 1$ are marked as `thermally unstable', as are cases for which the stagnation radius become very large and could not be resolved, resulting in their calculations being terminated.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$, for the cusp
@@ -584,7 +598,7 @@ through all radii, however, as the gas density profile has a break coincident
 with the location of the break in the stellar light profile ($\rb=100$
 pc). The temperature profile is relatively flat at large radii, but
 increases as $\propto 1/r^{k}$ interior to the sphere of influence,
-where $k$ is smaller than 1--the power expected for virialized gas within the black hole sphere of influence.
+where $k\lesssim 1$, somewhat shallower than expected for virialized gas within the black hole sphere of influence.
 The inwardly directed velocity increases towards the hole with a profile that is somewhat steeper than the local free-fall velocity $v \propto v_{\rm ff}\propto r^{-1/2}$.
 % {\bf BDM: I made this up - in general we need
 %   more explanation of what the plots are actually showing, with some
@@ -593,62 +607,28 @@ The inwardly directed velocity increases towards the hole with a profile that is
 % don't have a good physical explanation yet...
 
 
-Figure~\ref{fig:stag} shows our results for the
-stagnation radius $r_{\rm s}$, expressed in ratio to the radius of the
-SMBH sphere of influence $r_{\rm soi}$, with different colors showing
-different values of $v_{w}$.  Cusp and core galaxies are marked with
-square and triangles, respectively.  
-
- We may also compare our numerical results $r_{\rm s}/r_{\rm
-  soi}$ an be compared directly to our analytic estimate in equation
-\ref{eq:stag_analytic}.  The solid and dashed black curves in  Figure
-\ref{fig:stag} show the analytic results for $r_{\rm s}/r_{\rm soi}$.
-The good agreement provides a useful check of the numerical
-results. Note that the analytic curves implicitly assume a density
-slope, $n$ at $\rs$, which we have fixed to be 1 (0.5) for the solid
-(dashed) curve. For small $\vw/\sigma$ this assumption breaks down.
-
-For $\vw/\sigma \gg 1$ the value $\rs/\rsoi$ does not depend on break
-radius, $r_b$. On the other hand for $\vw/\sigma \simeq 1$, $\rb$ does
-have an effect. Notice that near where the solid analytic curve
-diverges there are three green square, one over the other. These
-points correspond to models with the same $\Mbh (10^7 \Msun)$, $\vw
-(300 {\rm km/s})$, and $\Gamma (0.8)$, but different values of the
-break radius: from top to bottom 50 pc, 100 pc, and 400 pc.  
+Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, expressed in ratio to sphere of influence radius $r_{\rm soi}$, with different colors showing different values of $v_{w}$.  Cusp and core galaxies are marked with square and triangles, respectively.  Shown for comparison are our analytic results (eq.~[\ref{eq:rs2main}]) with solid and dashed lines for cusp and core galaxies, respectively.  Our analytic estimates provide reasonably accurate fits to the numerical results for $v_{\rm w} \gtrsim \sigma$, but for low $v_{\rm w}$ they break down as the stagnation radius diverges to large radii.  For $v_{w} \gg \sigma$ the value $\rs/\rsoi$ does not depend sensitively on break radius $r_{b}$, but the latter has a greater influence when $v_{w} \lesssim \sigma$.  The three green squares located at the same value of $\vw =300 {\rm km/s}$, close to where the solid analytic line diverges, correspond to models with the same black hole masses $\Mbh = 10^7 \Msun=$ but different values of the break radius: $r_{b} = $ 50, 100, and 400 pc (from top to bottom).  
 %% AG: Describe conservation checks to additionally validate the results.
-
-\begin{figure}
-  \includegraphics[width=\columnwidth]{profiles.eps}
-  \caption{\label{fig:profiles}Radial profiles of the CNM density
-    ({\it top}), temperature ({\it middle}), velocity ({\it bottom}),
-    and interior X-ray luminosity ({\it bottom}) calculated for a
-    sample of galaxies within our grid.  Different colors
-    denote different values of the effective wind heating rate,
-    $\vwO=1200$ km s$^{-1}$ ({\it blue}), $\vwO$=600 km s$^{-1}$ ({\it
-      orange}), and 300 km s$^{-1}$ ({\it green}).  Different
-    linestyles correspond to different values of $\Mbh$, $\Mbh=10^6
-    \Msun$ ({\it dot-dashed}), $\Mbh=10^7 \Msun$ ({\it solid}), and
-    $\Mbh=10^8 \Msun$ ({\it dashed}). Thin lines correspond to cusp
-    galaxies ($\Gamma$=0.8) and thick lines correspond to core
-    galaxies ($Gamma$=0.1). Squares mark out the location of
-    the stagnation radius for each solution.
- }
-\end{figure}
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{rs.eps}
   \caption{\label{fig:stag} \emph{Top panel:} Stagnation radius
-    $r_{s}$ (in units of the radius of the sphere of influence $r_{\rm
-      soi} = GM_{\bullet}/\sigma^{2}$) for galaxies in our sample as a
+    $r_{s}$ in units of the sphere of influence radius $r_{\rm
+      soi}$ (eq.~[\ref{eq:rsoi}]) for galaxies in our sample as a
     function of the ratio of the effective wind heating rate $v_{w}$
     to the stellar velocity dispersion $\sigma$.  Green, orange, and
-    blue symbols represent $v_{w} =$ 300, 600, and 1200 km s$^{-1}$,
-    respectively.  Squares correspond to cusp galaxies, while
-    triangles correspond to cores. The black curves correspond to the
-    analytic prediction from Equation~\eqref{stag_analytic}. The solid
-    (dashed) curve is the correponds to $\Gamma=0.8$ and $n=1$
-    ($\Gamma=0.1$ and $n=0.5$.}
+    blue symbols correspond to different values of $v_{w} =$ 300, 600, and 1200 km s$^{-1}$,
+    respectively.  Squares correspond to cusp galaxies ($\Gamma = 0.8$), while
+    triangles correspond to cores ($\Gamma = 0.1$). The black curves correspond to the
+    analytic prediction from equation (\ref{eq:rs2main}), with solid and dashed curves calculated for parameters $\{\Gamma=0.8, n=1\}$ and $\{\Gamma=0.1,n=0.5\}$, respectively.  {\bf BDM: is the x axis here $v_{w}$ or $\vw$ !!?}}
 \end{figure}
+
+
+\begin{figure}
+  \includegraphics[width=\columnwidth]{cooling.eps}
+  \caption{\label{fig:cooling} Ratio of the rate of heating to radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$, as a function of radius (solid lines) for each of our solutions shown in Figure \ref{fig:profiles}.  Dashed lines show for comparison the ratio of the cooling to the free-fall timescale $t_{\rm cool}/t_{\rm ff}$.  For high heating rates both ratios are approximately equal at the stagnation radius (marked as squares).  When $\dot{q}_{\rm heat}/\dot{q}_{\rm cool} \lesssim 1$ and/or $t_{\rm cool}/t_{\rm ff} \lesssim 10$, the flow is susceptible thermal instabilities.  {\bf BDM: change y axis labels to qdotheat/qdotcool, tcool/tff}.}
+\end{figure}
+
 
 
 Fig.~\ref{fig:cooling} shows $H/C=\frac{1}{2} (q \vw^2+q
