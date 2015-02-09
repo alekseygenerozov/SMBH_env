@@ -279,8 +279,8 @@ Radiative cooling contributes an additional term to equation (\ref{eq:dsdt}) of 
 \dot{q}_{\rm rad} = -\Lambda(T)n^{2},
 \label{eq:qdot_rad}
 \ee
-where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low and/or stellar mass loss rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instabilities (e.g.~\citealt{McCourt+12}) that our 1D
-time-independent model cannot account for self-consistently anyways.  A main goal of this work is to use analytic and numerical solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:cooling}$).
+where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low and/or stellar mass loss rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instability (e.g.~\citealt{McCourt+12}) that our 1D
+time-independent model cannot account for anyways.  A main goal of this work is to use analytic and numerical solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:cooling}$).
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
@@ -317,10 +317,10 @@ where $v_{500} \equiv \tilde{v}_{w}/(500$ km s$^{-1}$).  Hydrostatic equilibrium
 \end{align}
 where $n \equiv -d{\rm ln}\rho/d{\rm ln\,r}|_{r_{\rm s}}$ is the density power-law slope at $r = r_{\rm s}$.  
 
-If the SMBH dominates the gravitational potential at the stagnation radius, then $v_{w} \gg \sigma$ and hence the stagnation radius resides well inside the sphere of influence ($r_{\rm s} < r_{\rm soi}$; eq.~[\ref{eq:rsoi}]).  In this limit equation (\ref{eq:stag_analytic}) simplifies to
+If the SMBH dominates the gravitational potential at the stagnation radius, then $v_{w} \gtrsim \sigma$ and hence the stagnation radius resides well inside the sphere of influence ($r_{\rm s} < r_{\rm soi}$; eq.~[\ref{eq:rsoi}]).  In this limit equation (\ref{eq:stag_analytic}) simplifies to
 \begin{align}
   &\rs=\frac{7}{2}\frac{G \Mbh}{n \tilde{v}_{w}^{2}} \approx 6
- \, \pc \,\, \Mbheight v_{500}^{-2},
+ \, \pc \,\, \Mbheight v_{500}^{-2}\,\,\,\,(v_{\rm w} \gtrsim \sigma),
   \label{eq:stag_simple}
 \end{align}
 where for the numerical estimate we adopt $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on more heuristic grounds (their eq.~6).  
@@ -384,7 +384,7 @@ Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) can be
   \dot{M}_{\rm B} =4\pi \lambda r_{\rm B}^2 \rho|_{r_{\rm B}}v_{\rm ff}|_{r_{\rm B}},
 \label{eq:bondi}
 \end{align}
-where $r_{\rm B} \equiv GM/c_{\rm s,ad}^{2}$ is the Bondi radius, $c_{\rm s,ad} = \sqrt{\gamma kT/\mu m_p}$ is the adiabatic sound speed, $v_{\rm ff}|_{r_{\rm B}} = r_{\rm B}/t_{\rm ff}|_{r_{\rm B}} = (GM_{\bullet}/r)^{1/2}$ and $\lambda$ is a parameter of order unity.  One observes a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $R_{\rm B}$ is replaced by $\rs$.  When the stagnation radius resides interior to the sphere of influence we indeed have (eq.~[\ref{eq:stag_simple}])
+where $r_{\rm B} \equiv GM/c_{\rm s,ad}^{2}$ is the Bondi radius, $c_{\rm s,ad} = \sqrt{\gamma kT/\mu m_p}$ is the adiabatic sound speed, $v_{\rm ff}|_{r_{\rm B}} = r_{\rm B}/t_{\rm ff}|_{r_{\rm B}} = (GM_{\bullet}/r_{\rm B})^{1/2}$ and $\lambda$ is a parameter of order unity.  One observes a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $R_{\rm B}$ is replaced by $\rs$.  When the stagnation radius resides interior to the sphere of influence we indeed have (eq.~[\ref{eq:stag_simple}])
 \begin{align}
   \rs\approx\frac{7}{2}\frac{G \Mbh}{n \vwO^2} \approx \frac{7}{6n}r_{\rm B},
   \label{eq:rs_simple}
@@ -411,7 +411,7 @@ M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
 \end{align}
 where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim 1/r_{\rm s}^{2}$, $\nabla \sim 1/r_{\rm s}$.  Because the stagnation radius is usually well inside the break radius, we have approximated the stellar density as (eq.~[\ref{eq:rhostar}])
 \begin{eqnarray}
-  \rho_{\star}(r_{\rm s}) &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
+  \rho_{\star}|_{r_{\rm s}} &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
  &\approx& \begin{cases}
     9.4 \times 10^{-19}M_{\bullet,8}^{-1.2}v_{500}^{2.2}\,{\rm g\,cm^{-3}}
     & \text{core} \\
@@ -427,7 +427,7 @@ Even in the saturated case, heat conduction is at most an order unity correction
 
 If important, radiative cooling qualitative alters key features of the accretion flow.  Radiative cooling is usually of greatest important near the stagnation radius, where the gas is in nearly hydrostatic balance.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdotrad}]) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \sim -0.7$ is the cooling function (see below).  Thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
 
-Radiative cooling can, however, be stabilized by the other sources of cooling, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius is balanced by wind heating $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$ (neglecting radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the external (``wind") heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}| =|\Lambda(T) n^2|$ (eq.~[\ref{eq:qdot_rad}]),
+Radiative cooling can, however, be stabilized by the other sources of cooling, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius is balanced by wind heating $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$ (neglecting radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the external (``wind") heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
 \left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm rad}|}\right|_{\rm r_{\rm s}} \simeq
   \begin{cases}
@@ -441,7 +441,7 @@ where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs}) for the g
 \rho|_{r_{\rm s}}=\frac{3 q|_{r_{\rm s}} \tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
 \end{align}
-that results by combining equations~\eqref{eq:mdot_analytic} and~\eqref{eq:mdot_gas}.
+that results by combining equations (\ref{eq:Tanalytic}), \eqref{eq:mdot_analytic}, and~\eqref{eq:mdot_gas}.
 
 Thermal stability ($\dot{q}_{\rm heat} > |\dot{q}_{\rm rad}|$; $t_{\rm cool} > t_{\rm ff}$) at the stagnation radius thus requires a critical minimum heating rate
 \begin{align}
@@ -451,17 +451,18 @@ v_{w} > v_{\rm TI} \simeq
    200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}\\
 \sigma,     
   \end{cases}
-  \label{eq:cooling2}
+  \label{eq:cooling3}
 \end{align}
-Our numerical results in $\S\ref{sec:numerical}$ will demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally produces stability at all radii, not just at the stagnation radius (Fig.~\ref{fig:cooling}).  The stability requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines of equation (\ref{eq:cooling2}) are derived using equation (\ref{eq:rs_simple}) for the stagnation radius.  However, when $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to much larger radii or may not exist at all, resulting in much higher gas densities and inevitable cooling instability.  
+The stability requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines of equation (\ref{eq:cooling3}) are derived using equation (\ref{eq:rs_simple}) for the stagnation radius.  However, when $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to much larger radii or may not exist at all, resulting in much higher gas densities and inevitable cooling instability. 
+%Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally sufficient for stability at all radii (Fig.~\ref{fig:cooling}).   
 
-The condition (\ref{eq:cooling2}) in conjunction with equation (\ref{eq:mdot_analytic}) also implies a maximum accretion rate for a thermally stable flow, which is given by
+Substituting condition (\ref{eq:cooling2}) into our analytic expression (\ref{eq:eddr_analytic}) for $\dot{M}(v_{\rm w})$ shows a thermally stable flow possesses a maximum accretion rate, which is given by
 \begin{align}
-\frac{\dot{M}_{\rm max}}{\dot{M}_{\rm edd}} \simeq
+\frac{\dot{M}_{\rm max,TI}}{\dot{M}_{\rm edd}} \simeq
   {\rm min}\begin{cases}
    4\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.34} &, \text{core}\\
    2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.29}    &, \text{cusp}\\
-\eta M_{\bullet}/\dot{M}_{\rm edd}t_{\rm h} \approx 5.5\times 10^{-5}\eta_{0.02}&, v_{\rm CL} < \sigma
+\eta M_{\bullet}/\dot{M}_{\rm edd}t_{\rm h} \approx 5.5\times 10^{-5}\eta_{0.02}&, v_{\rm TI} < \sigma.
   \end{cases}
   \label{eq:Mdotmax}
 \end{align}
@@ -494,90 +495,84 @@ The condition (\ref{eq:cooling2}) in conjunction with equation (\ref{eq:mdot_ana
 \begin{table*}
 \centering
 \begin{minipage}{18cm}
-\caption{Summary of Numerical Solutions (without cooling or conductivity)}
+\caption{Summary of Numerical Solutions}
 \begin{tabular}{lccccccccccccc}
 \hline
-{$M_{\bullet,8}$} & {$v_{w}$} & {$\Gamma^{(a)}$} & {$r_b$} &
-{$\dot{M}/\dot{M}_{\rm edd} \eta$} & {$(t_{\rm cool}/t_{\rm ff})_{r_s} \eta^{-1}$} & {comments}\\
+{$M_{\bullet,8}$} & {$v_{w}$} & {$\Gamma^{(a)}$} & {$r_b^{(b)}$} &
+{$\left(\frac{\dot{M}}{\dot{M}_{\rm edd}}\frac{0.04}{\eta}\right)_{r_{s}}$} & {$\left(\frac{t_{\rm cool}}{t_{\rm ff}}\frac{0.04}{\eta}\right)_{r_s}$$^{(c)}$} & TI?$^{(d)}$ & {comments}\\
 \hline
-0.01 & 300 & 0.8 & U & $ 3.2 \times 10^{ -4 }$ & 4.7 & rb in fact
+0.01 & 300 & 0.8 & $>$XXX & $ 3.2 \times 10^{ -4 }$ & 4.7 & N & rb in fact
 unresolved \\
-0.01 & 600 & 0.8 & U & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
-10^{ 2 }$ &  \\
-0.01 & 1200 & 0.8 & U & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
-10^{ 4 }$ &  \\
-0.1 & 300 & 0.8 & 100.0 & $ 2.5 \times 10^{ -3 }$ & 0.29 & \\
-0.1 & 600 & 0.8 & 100.0 & $ 1.8 \times 10^{ -4 }$ & 97 &  \\
-0.1 & 1200 & 0.8 & U & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
-10^{ 3 }$ &  \\
-1 & 300 & 0.8 & 100.0 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{
-  -2 }$ &  TI\\
-1 & 600 & 0.8 & 100.0 & $ 7.3 \times 10^{ -4 }$ & 21 &  \\
-1 & 1200 & 0.8 & 100.0 & $ 9.9 \times 10^{ -5 }$ & $ 1.5 \times 10^{
-  3 }$ &  \\
-1 & 300 & 0.8 & 50.0 & $ 8.2 \times 10^{ -3 }$ & 0.19 &  \\
-1 & 300 & 0.8 & 200.0 & $ 3.6 \times 10^{ -2 }$ & $ 1.7 \times 10^{
-  -2 }$ &  TI/convergence \\
+0.01 & 600 & 0.8 & $>$XXX & $ 5.5 \times 10^{ -5 }$ & $ 3.2 \times
+10^{ 2 }$ & N & \\
+0.01 & 1200 & 0.8 & $>$XXX & $ 9.4 \times 10^{ -6 }$ & $ 1.5 \times
+10^{ 4 }$ &  N &\\
+0.1 & 300 & 0.8 & 100 & $ 2.5 \times 10^{ -3 }$ & 0.29 & N &\\
+0.1 & 600 & 0.8 & 100 & $ 1.8 \times 10^{ -4 }$ & 97 &N  & \\
+0.1 & 1200 & 0.8 & $>$ & $ 3.1 \times 10^{ -5 }$ & $ 4.8 \times
+10^{ 3 }$ & N & \\
+\hline
+1 & 300 & 0.8 & 100 & $ 1.6 \times 10^{ -2 }$ & $ 5.6 \times 10^{
+  -2 }$ & Y  & \\
+1 & 600 & 0.8 & 100 & $ 7.3 \times 10^{ -4 }$ & 21 & N & \\
+1 & 1200 & 0.8 & 100 & $ 9.9 \times 10^{ -5 }$ & $ 1.5 \times 10^{
+  3 }$ & N &  \\
+1 & 300 & 0.8 & 50 & $ 8.2 \times 10^{ -3 }$ & 0.19 & N & \\
+1$\dagger$ & 300 & 0.8 & 50 & $ 9.1 \times 10^{ -4 }$ & 5.6 & N & \\
+1 & 300 & 0.8 & 200 & $ 3.6 \times 10^{ -2 }$ & $ 1.7 \times 10^{
+  -2 }$ &Y & TI/convergence \\
 %1 & 300.0 & 0.8 & 300.0 & $ 5.2 \times 10^{ -2 }$ & $ 9.8 \times 10^{
 %  -3 }$ &  TI/convergence\\
-1 & 300 & 0.8 & 400.0 &  &  &  TI/run unsuccessful\\
-0.1 & 300 & 0.8 & 50.0 & $ 2.0 \times 10^{ -3 }$ & 0.46 &  \\
-0.1 & 300 & 0.8 & 200.0 & $ 5.3 \times 10^{ -3 }$ & 0.12 &  TI/convergence\\
+1 & 300 & 0.8 & 400 &  &  & Y & TI/run unsuccessful\\
+0.1 & 300 & 0.8 & 50 & $ 2.0 \times 10^{ -3 }$ & 0.46 & N &\\
+0.1 & 300 & 0.8 & 200 & $ 5.3 \times 10^{ -3 }$ & 0.12 & Y & TI/convergence\\
 %0.1 & 300.0 & 0.8 & 300.0 & $ 7.2 \times 10^{ -3 }$ & $ 6.7 \times
 %10^{ -2 }$   & TI/convergence  \\
-0.1 & 300 & 0.8 & 400.0 & $ 8.9 \times 10^{ -3 }$ & $ 4.7 \times
-10^{ -2 }$ & TI/convergence \\
+0.1 & 300 & 0.8 & 400 & $ 8.9 \times 10^{ -3 }$ & $ 4.7 \times
+10^{ -2 }$ & Y &TI/convergence \\
 0.01 & 1200 & 0.1 & U & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times
-10^{ 4 }$ &  \\
+10^{ 4 }$ & N & \\
 0.1 & 1200 & 0.1 & U & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{
-  3 }$ &  tried run in which rb=100 pc was resolved what would happen if rb=400 pc?\\
-0.01 & 1200 & 0.1 & 100.0 & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times 10^{ 4 }$ &  \\
-0.1 & 1200& 0.1 & 100.0 & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{ 3 }$ &  \\
-1 & 1200 & 0.1 & 100.0 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ &  \\
-1 & 1200 & 0.1 & 50.0 & $ 4.9 \times 10^{ -5 }$ & $ 1.2 \times 10^{ 3 }$ &  \\
-1 & 1200 & 0.1 & 200.0 & $ 1.0 \times 10^{ -4 }$ & $ 3.4 \times 10^{ 2 }$ &  \\
+  3 }$ & N & tried run in which rb=100 pc was resolved what would happen if rb=400 pc?\\
+0.01 & 1200 & 0.1 & 100 & $ 1.5 \times 10^{ -6 }$ & $ 4.1 \times 10^{ 4 }$ &N  &\\
+0.1 & 1200& 0.1 & 100 & $ 9.5 \times 10^{ -6 }$ & $ 5.7 \times 10^{ 3 }$ &N&  \\
+1 & 1200 & 0.1 & 100 & $ 6.0 \times 10^{ -5 }$ & $ 8.6 \times 10^{ 2 }$ & N& \\
+1 & 1200 & 0.1 & 50 & $ 4.9 \times 10^{ -5 }$ & $ 1.2 \times 10^{ 3 }$ &N  &\\
+1 & 1200 & 0.1 & 200 & $ 1.0 \times 10^{ -4 }$ & $ 3.4 \times 10^{ 2 }$ &N&  \\
 %1 & 1200.0 & 0.1 & 300.0 & $ 1.9 \times 10^{ -4 }$ & $ 1.3 \times 10^{ 2 }$ &  convergence\\
-1 & 1200 & 0.1 & 400.0 & $ 1.8 \times 10^{ -2 }$ & 0.37 &  TI/convergence\\
+1 & 1200 & 0.1 & 400 & $ 1.8 \times 10^{ -2 }$ & 0.37 & Y &TI/convergence\\
 \hline
 \label{table:models}  
 \end{tabular}
-$^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$
-Break radius of stellar Nuker profile.  For profiles marked U, the
-break radius is not resolved on the grid.
+$^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$ Break radius of stellar Nuker profile.  $^{(c)}$Ratio of cooling timescale to free-fall timescale at stagnation radius.  $^{(d)}$ Is solution thermally unstable?  $\dagger$Calculated including radiative cooling, assuming $\eta = 0.04$.  {\bf BDM: (1) remove comments column, (2) update numbers assuming eta = 0.04, (3) make sure all combinations of vw and mbh are included}
 \end{minipage}
 \end{table*}
 
-\begin{table*}
-\centering
-\begin{minipage}{18cm}
-\caption{Comparison of numerical solutions with and without
-  cooling. We have chosen $\eta=0.04$, which one would expect for 
-  the average star formation history for $\Mbh=10^8\Msun$ 
-  (see Figures~\ref{fig:eta} {\bf AG-cite star formation history
-    figure once it is made.}). Note that we have deliberately chosen a solution
-  near our thermal stability threshold where cooling is beginning
-  to become important.
-}
-\begin{tabular}{lccccccccccccc}
-\hline
-{$M_{\bullet,8}$} & {$v_{w}$} & {$\Gamma$} & {$r_b$} & {$\eta$} &
-{$\dot{M}/\dot{M}_{\rm edd}$} & {$(t_{\rm cool}/t_{\rm ff})_{r_s}$} & {comments}\\
-\hline
-1 & 300 & 0.8 & 50.0 & 0.04 & $ 3.3 \times 10^{ -4 }$ & 4.6 &  \\
-1 & 300 & 0.8 & 50.0 & 0.04 & $ 9.1 \times 10^{ -4 }$ & 5.6 & \\
-\hline
-\label{table:models}  
-\end{tabular}
-\end{minipage}
-\end{table*}
+%\begin{table*}
+%\centering
+%\begin{minipage}{18cm}
+%\caption{Comparison of numerical solutions with and without
+ % cooling. We have chosen $\eta=0.04$, which one would expect for 
+  %the average star formation history for $\Mbh=10^8\Msun$ 
+ % (see Figures~\ref{fig:eta} {\bf AG-cite star formation history
+  %  figure once it is made.}). Note that we have deliberately chosen a solution
+  %near our thermal stability threshold where cooling is beginning
+  %to become important.
+%}
+%\begin{tabular}{lccccccccccccc}
+%\hline
+%{$M_{\bullet,8}$} & {$v_{w}$} & {$\Gamma$} & {$r_b$} & {$\eta$} &
+%{$\dot{M}/\dot{M}_{\rm edd}$} & {$(t_{\rm cool}/t_{\rm ff})_{r_s}$} & {comments}\\
+%\hline
+%1 & 300 & 0.8 & 50.0 & 0.04 & $ 3.3 \times 10^{ -4 }$ & 4.6 &  \\
+%1 & 300 & 0.8 & 50.0 & 0.04 & $ 9.1 \times 10^{ -4 }$ & 5.6 & \\
+%\hline
+%\label{table:models}  
+%\end{tabular}
+%\end{minipage}
+%\end{table*}
 
-
-
-This section describes the results of our numerical calculations,
-which we use to assess the validity of the analytic expressions
-provided in the previous section.  Numerical solutions are calculated
-for each galaxy for three different values of the stellar wind heating
-parameter $v_{w}$ = 300, 600, 1200 km s$^{-1}$.  In cases when the stagnation radius become very large and was difficult to resolve on the grid, we conclude that such solutions will be thermally unstable and terminated their calculations (these are marked as `thermally unstable' in the tables.  
+This section describes the results of our numerical calculations, which we use to study the range of plausible CNM properties and to assess the validity of the analytic expressions provided in the previous section.  Our results are summarized in Table \ref{table:models} and Figure XXX.  Cases for which $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|_{r_{\rm s}} < 1$ are marked as `thermally unstable', as are cases for which the stagnation radius become very large and could not be resolved, resulting in their calculations being terminated.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$, for the cusp
