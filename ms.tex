@@ -606,8 +606,7 @@ The inwardly directed velocity increases towards the hole with a profile that is
 % AG -- things are not quite approaching Bondi on the inner grid. I
 % don't have a good physical explanation yet...
 
-
-Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, expressed in ratio to sphere of influence radius $r_{\rm soi}$, with different colors showing different values of $v_{w}$.  Cusp and core galaxies are marked with square and triangles, respectively.  Shown for comparison are our analytic results (eq.~[\ref{eq:rs2main}]) with solid and dashed lines for cusp and core galaxies, respectively.  Our analytic estimates provide reasonably accurate fits to the numerical results for $v_{\rm w} \gtrsim \sigma$, but for low $v_{\rm w}$ they break down as the stagnation radius diverges to large radii.  For $v_{w} \gg \sigma$ the value $\rs/\rsoi$ does not depend sensitively on break radius $r_{b}$, but the latter has a greater influence when $v_{w} \lesssim \sigma$.  The three green squares located at the same value of $\vw =300 {\rm km/s}$, close to where the solid analytic line diverges, correspond to models with the same black hole masses $\Mbh = 10^7 \Msun=$ but different values of the break radius: $r_{b} = $ 50, 100, and 400 pc (from top to bottom).  
+Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, expressed in ratio to sphere of influence radius $r_{\rm soi}$, with different colors showing different values of $v_{w}$.  Cusp and core galaxies are marked with square and triangles, respectively.  Shown for comparison are our analytic results (eq.~[\ref{eq:rs2main}]) with solid and dashed lines for cusp and core galaxies, respectively.  Our analytic estimates provide accurate fits to the numerical results for $v_{\rm w} \gtrsim \sigma$, but they break down for low $v_{\rm w}$ as the stagnation radius diverges to large radii.  For $v_{w} \gg \sigma$ the ratio $\rs/\rsoi$ does not depend sensitively on break radius $r_{b}$, but the latter has a greater influence when $v_{w} \lesssim \sigma$.  The three vertically-aligned green squares located at the same value of $v_{w}/\sigma$ close to where the solid analytic line diverges correspond to models with the same black hole mass ($\Mbh = 10^7 \Msun$) and heating rate ($v_w = 300$ km s$^{-1}$) but different values of the break radius: $r_{b} = $ 50, 100, and 400 pc (from top to bottom).  
 %% AG: Describe conservation checks to additionally validate the results.
 
 \begin{figure}
@@ -620,7 +619,7 @@ Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, e
     blue symbols correspond to different values of $v_{w} =$ 300, 600, and 1200 km s$^{-1}$,
     respectively.  Squares correspond to cusp galaxies ($\Gamma = 0.8$), while
     triangles correspond to cores ($\Gamma = 0.1$). The black curves correspond to the
-    analytic prediction from equation (\ref{eq:rs2main}), with solid and dashed curves calculated for parameters $\{\Gamma=0.8, n=1\}$ and $\{\Gamma=0.1,n=0.5\}$, respectively.  {\bf BDM: is the x axis here $v_{w}$ or $\vw$ !!?}}
+    analytic prediction from equation (\ref{eq:rs2main}), with solid and dashed curves calculated for parameters $\{\Gamma=0.8, n=1\}$ and $\{\Gamma=0.1,n=0.5\}$, respectively.  {\bf BDM: is the x axis here $v_{w}$ or $\vw$ !!?  fold $\eta$ into the y axis. }}
 \end{figure}
 
 
@@ -630,30 +629,7 @@ Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, e
 \end{figure}
 
 
-
-Fig.~\ref{fig:cooling} shows $H/C=\frac{1}{2} (q \vw^2+q
-v^2)/\left|\Lambda(T) n^2\right|$ and $\tcool/\tff$
-as a function of radius for all of our solutions. {\bf BDM: change
-  plots}, with different colors denoting different values of $\vwO$.
-For our highest heating rates we observe that cooling is unimportant
-for all solutions across all radii--neither the local nor the global
-thermal instability would be present. However,  for our smallest value
-of $\vwO$=300 km s$^{-1}$ with $\Mbh=10^8 \Msun$, the solution would be
-thermally unstable as $H/C<1$ and $\tcool/\tff<10$. Note that the
-precise region of the parameter space which would be thermally
-unstable would depend on the value of $\eta$--in
-Fig.~\pageref{fig:cooling} we have chosen $\eta=0.02$, which would be
-appropriate for a stellar population with $\tage\simeq \th$. This
-value is on the low end of what we would physically expect for
-$\eta$. 
-
-For $\vwO=1200$ km s$^{-1}$ and $\vwO=600$ km s$^{-1}$, we have
-$H/C\simeq\tcool/\tff$ at $\rs$ as expected. However, the two ratios
-diverge away from $\rs$, as equation~\eqref{eq:rhors2} is not a good
-approximation away from $\rs$. Similarly, it is poorer approximation
-for $\vwO=300$ km s$^{-1}$. Hence, $H/C$ and $\tcool/\tff$ do not
-closely match at $\rs$ for this $\vwO$. {\bf AG would be good to
-  clarify the physics here a little more.}
+Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of radius for our fiducial solutions shown in Figure \ref{fig:profiles}.  For high heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling is unimportant across all radii, while for $v_{w} = 300$ km s$^{-1}$ we see that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| < 1$ and $\tcool/\tff \lesssim 1,$ depending on the wind mass loss parameter $\eta$.  Note that the ratio $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ at the stagnation radius deviates from its minimum value across the entire grid by less than a factor of two; thus the ratio of $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ indeed represents a useful proxy for the presence of thermal instabilty across the entire grid.  Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$ near the stagnation radius.  However, the two ratios diverge from each other at low heating ($v_{w} \lesssim 300$ km s$^{-1}$) because equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the gas density, which is greater in a subsonic inflow (weak heating) instead of a supersonic outflow (strong heating).  
 
 \section{Sources of Heating}
 \label{sec:heating}
