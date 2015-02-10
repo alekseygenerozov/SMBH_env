@@ -425,9 +425,9 @@ where we have assumed that the stagnation radius is well inside the Nuker break 
 \subsection{Thermal Instability}
 \label{sec:instability}
 
-If radiative cooling becomes important, it can qualitatively alter key features of the accretion flow.  Radiative cooling usually has its greatest impact near or external to the stagnation radius, where the gas resides in near hydrostatic balance.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdotrad}]) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \sim -0.7$ is the cooling function (see below).  Thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
+Radiative cooling usually has its greatest impact near or external to the stagnation radius, where the gas resides in near hydrostatic balance.  If radiative cooling becomes important, it can qualitatively alter key features of the accretion flow. Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdot_rad}]) is thermally unstable, where $\Lambda(T) \propto T^{-0.7}$ (see below).  Thermal instability can lead to enhanced star formation and temporarily increases the black hole accretion rate; when coupled to feed-back processes, the latter can lead to time-dependent (e.g. limit cycle) behavior which is inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
 
-Radiative cooling can, however, be stabilized by the other sources of cooling, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius is balanced by wind heating $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$ (neglecting radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the external (``wind") heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}|$ (eq.~[\ref{eq:qdot_rad}]),
+Radiative cooling can, however, be stabilized if other sources of cooling dominate over it, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]).  Neglecting radiative cooling, this term is balanced at the stagnation radius by the wind heating term, $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$.  Thermal stability near the stagnation radius can thus be assessed by the ratio of wind heating to radiative cooling $|\dot{q}_{\rm cool}|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
 \left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm rad}|}\right|_{\rm r_{\rm s}} \simeq
   \begin{cases}
@@ -438,7 +438,7 @@ Radiative cooling can, however, be stabilized by the other sources of cooling, i
 \end{align}
 where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs}) for the gas and stellar densities at the stagnation radius, respectively.  We have approximated the cooling function for $T < 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}$ assuming solar metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  To within a constant of order unity, equation (\ref{eq:cooling2}) also equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n kT/2)/\dot{q}_{\rm rad}$ to the free-fall time $t_{\rm ff}$ if one uses the equality 
 \begin{align}
-\rho|_{r_{\rm s}}=\frac{3 q|_{r_{\rm s}} \tff|_{r_{\rm s}}}{2-\Gamma}.
+\rho|_{r_{\rm s}}=\frac{3 q\tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
 \end{align}
 that results by combining equations (\ref{eq:Tanalytic}), \eqref{eq:mdot_analytic}, and~\eqref{eq:mdot_gas}.
