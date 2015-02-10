@@ -425,7 +425,7 @@ where we have assumed that the stagnation radius is well inside the Nuker break 
 \subsection{Thermal Instability}
 \label{sec:instability}
 
-Radiative cooling usually has its greatest impact near or external to the stagnation radius, where the gas resides in near hydrostatic balance.  If radiative cooling becomes important, it can qualitatively alter key features of the accretion flow. Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdot_rad}]) is thermally unstable, where $\Lambda(T) \propto T^{-0.7}$ (see below).  Thermal instability can lead to enhanced star formation and temporarily increases the black hole accretion rate; when coupled to feed-back processes, the latter can lead to time-dependent (e.g. limit cycle) behavior which is inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
+Radiative cooling usually has its greatest impact near or external to the stagnation radius, where the gas resides in near hydrostatic balance.  If radiative cooling becomes important, it can qualitatively alter key features of the accretion flow. Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdot_rad}]) is thermally unstable, where $\Lambda(T) \propto T^{-0.7}$ (see below).  Thermal instability can lead to enhanced star formation and temporarily increases the black hole accretion rate; when coupled to feed-back processes, the latter can lead to time-dependent (e.g. limit cycle) behavior which is inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Yuan&Li11}, \citealt{Gan+14}).  
 
 Radiative cooling can, however, be stabilized if other sources of cooling dominate over it, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]).  Neglecting radiative cooling, this term is balanced at the stagnation radius by the wind heating term, $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$.  Thermal stability near the stagnation radius can thus be assessed by the ratio of wind heating to radiative cooling $|\dot{q}_{\rm cool}|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
@@ -754,17 +754,14 @@ compared to the field population estimate above.  MSPs are thus unlikely to be a
 
 \subsection{SMBH Feedback}
 
-Feedback from accretion onto the SMBH represents an important source of heating which, however, is also the most difficult to quantify.  A key difference between AGN heating and the other sources discussed thus far is its dependence on the SMBH accretion rate $\dot{M}$, which is itself a function of the heating rate (eq.~[\ref{eq:mdot_analytic}]).  
+Feedback from accretion onto the SMBH represents an important source of heating which, however, is also the most difficult to quantify (e.g., \citealt{Brighenti&Mathews03}, \citealt{DiMatteo+05}; \citealt{Kurosawa&Proga09}; \citealt{Fabian12} for a recent review).  A key difference between AGN heating and the other sources discussed thus far is its dependence on the SMBH accretion rate $\dot{M}$, which is itself a function of the heating rate (eq.~[\ref{eq:mdot_analytic}]).  
 
-There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating, which provides a volumetric heating rate (\citealt{Gan+14})
+There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating (e.g., \citealt{Sazonov+04}, \citealt{Ciotti+10}), which provides a volumetric heating rate (\citealt{Gan+14})
 \be
 \dot{e}_{\rm C} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
 \ee
-where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$ (\citealt{Gan+14}).  
+where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$ (e.g., \citealt{Ho99}, \citealt{Eracleous+10}).  
 
-{\bf AG: Note that the Compton heating will depend on the distance of
-  the hole as $1/r^2$ so Compton heating will be stronger closer to the
-  black hole! }
 The importance of Compton heating can be estimated by assuming the SMBH
 radiates with a luminosity $L = \epsilon_{\rm rad} \dot{M}c^{2}$, where
 $\epsilon_{\rm rad}$ is the radiative efficiency and where $\dot{M}$ is
@@ -804,7 +801,7 @@ i.e. $v_{w}^{C} < v_{\rm CI}$ (eq.~[\ref{eq:cooling2}]).
 
 Kinetic feedback occurs from an outflow of mass or energy from the
 viscinity of the black hole in the form of a disk wind or jet, which
-deposits its energy across a much wider range of radii.  If the total
+deposits its energy across a much wider range of radii (e.g.~\citealt{McNamara&Nulsen07}; \citealt{Novak+11}; \citealt{Gaspari+12}).  If the total
 outflow power is proportional to the SMBH accretion rate, $L_{\rm j} =
 \epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an
 efficiency factor.  Assuming that this energy is deposited uniformly
@@ -1338,6 +1335,7 @@ which we have normalized in terms of the Hubble time.
 
 \begin{itemize}
 \item{Fact that some low mass BHs appear to have nearly Eddington accretion rates, suggest an external origin - since the maximum Ia rate appears to be below this}
+\item{Growth of low mass BHS, e.g. \citealt{Kauffmann&Heckman09}}
 \end{itemize}
 
 If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm CI}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
