@@ -95,7 +95,7 @@
 
 
 \begin{document}
-\title{The Circumnuclear Media and Accetion Rates of Quiescent Supermassive Black Holes}
+\title{Circumnuclear Media and Accetion Rates of Quiescent Supermassive Black Holes}
 \maketitle
 
 \begin{abstract}
@@ -279,15 +279,15 @@ isothermal sound speed and $\phi \lesssim 1$ is an uncertain
 dimensionless constant (we adopt $\phi = 0.1$).  Even a weak magnetic
 field that is oriented perpendicular to the flow could suppress the
 conductivity by greatly reducing the electron mean free path.  However, for radially-decreasing temperature profiles
-of interest, the flow is susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field geometry (\citealt{Parrish&Stone07}).  We show later in $\S\ref{sec:conductivity}$ that neglecting conductivity results in at most only order-unity corrections to the key properties of solutions calculated assuming its presence.
+of interest, the flow is susceptible to the magneto-thermal instability (\citealt{Balbus01}), the non-linear evolution of which is believed to result in a radially-directed field geometry (\citealt{Parrish&Stone07}).  We show later in $\S\ref{sec:conductivity}$ that neglecting conductivity results in at most only order-unity errors in the key properties of the solutions.
 
 Radiative cooling contributes an additional term to equation (\ref{eq:dsdt}) of the form
 \be
 \dot{q}_{\rm rad} = -\Lambda(T)n^{2},
 \label{eq:qdot_rad}
 \ee
-where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low and/or stellar mass loss rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instability (e.g.~\citealt{McCourt+12}) that our 1D
-time-independent model cannot account for anyways.  A main goal of this work is to use analytic and numerical solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:cooling}$).
+where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low or if the mass return rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instability (e.g.~\citealt{McCourt+12}) that cannot be accounted for by our 1D
+time-independent model.  A main goal of this work is to use solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:cooling}$).
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
@@ -332,7 +332,7 @@ If the SMBH dominates the gravitational potential at the stagnation radius, then
 \end{align}
 where for the numerical estimate we adopt $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on more heuristic grounds (their eq.~6).  
 
-In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all (formally implying that the entire ISM of the galaxy is accreting).  This result makes intuitive sense: gas is supplied to the nuclear by stars which are gravitationally bound to the black hole, so outflows are possible only if the specific heating rate $\sim \tilde{v}_{w}^{2}$ exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
+In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all, formally implying that the entire ISM of the galaxy is accreting.  This result makes intuitive sense: gas is supplied to the nuclear by stars which are gravitationally bound to the black hole, so outflows are possible only if the specific heating rate $\sim v_{w}^{2}$ significantly exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
 
 
 \subsection{SMBH Accretion Rate}
@@ -349,7 +349,7 @@ The accretion rate onto the SMBH is given by the integrated mass loss rate inter
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-where we have made use of equation (\ref{eq:stag_simple}), i.e. assuming that $v_{w} \gg \sigma$, and we have divided our results into core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  The resulting Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ is given by 
+where we have assumed $v_{w} \gg \sigma$ by adopting equation (\ref{eq:stag_simple}) for $r_s$, and we have divided our results into core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  The resulting Eddington ratio is given by 
 \begin{eqnarray}
 \frac{\dot{M}}{\dot{M}_{\rm edd}} &\approx&
   \begin{cases}
@@ -391,7 +391,7 @@ Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) can be
   \dot{M}_{\rm B} =4\pi \lambda r_{\rm B}^2 \rho|_{r_{\rm B}}v_{\rm ff}|_{r_{\rm B}},
 \label{eq:bondi}
 \end{align}
-where $r_{\rm B} \equiv GM/c_{\rm s,ad}^{2}$ is the Bondi radius, $c_{\rm s,ad} = \sqrt{\gamma kT/\mu m_p}$ is the adiabatic sound speed, $v_{\rm ff}|_{r_{\rm B}} = r_{\rm B}/t_{\rm ff}|_{r_{\rm B}} = (GM_{\bullet}/r_{\rm B})^{1/2}$ and $\lambda$ is a parameter of order unity.  One observes a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $R_{\rm B}$ is replaced by $\rs$.  When the stagnation radius resides interior to the sphere of influence we indeed have (eq.~[\ref{eq:stag_simple}])
+where $r_{\rm B} \equiv GM/c_{\rm s,ad}^{2}$ is the Bondi radius, $c_{\rm s,ad} = \sqrt{\gamma kT/\mu m_p}$ is the adiabatic sound speed, $v_{\rm ff}|_{r_{\rm B}} = r_{\rm B}/t_{\rm ff}|_{r_{\rm B}} = (GM_{\bullet}/r_{\rm B})^{1/2}$ and $\lambda$ is a parameter of order unity.  One observes a similarity between equation (\ref{eq:mdot_gas}) and the Bondi formula (eq.~[\ref{eq:bondi}]) if $r_{\rm B}$ is replaced by $\rs$.  Indeed, when the stagnation radius resides interior to the sphere of influence we find that (eq.~[\ref{eq:stag_simple}])
 \begin{align}
   \rs\approx\frac{7}{2}\frac{G \Mbh}{n \vwO^2} \approx \frac{7}{6n}r_{\rm B},
   \label{eq:rs_simple}
@@ -401,7 +401,7 @@ where the second equality makes use of equation (\ref{eq:Tanalytic}).  {\bf BDM:
 \subsection{Importance of Heat Conduction}
 \label{sec:conductivity}
 
-Our analytic results neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the nominal external (``wind") heating rate at the stagnation radius is given by
+Our analytic derviations neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the external heating rate at the stagnation radius is given by
 \begin{align}
   \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
@@ -414,9 +414,9 @@ M_{\bullet,8}^{-0.8} v_{500}^{6.8} &  \text{unsaturated (core)}\\
 M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
   1.0(\phi/0.1)/(2-\Gamma) & \text{saturated},
   \end{cases}
- \label{eq:rhors}
+ \label{eq:conduction}
 \end{align}
-where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim 1/r_{\rm s}^{2}$, $\nabla \sim 1/r_{\rm s}$.  Because the stagnation radius is usually well inside the break radius, we have approximated the stellar density as (eq.~[\ref{eq:rhostar}])
+where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim 1/r_{\rm s}^{2}$, $\nabla \sim 1/r_{\rm s}$.  We have approximated the stellar density profile as (eq.~[\ref{eq:rhostar}])
 \begin{eqnarray}
   \rho_{\star}|_{r_{\rm s}} &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
  &\approx& \begin{cases}
@@ -427,12 +427,12 @@ where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:
   \end{cases}
   \label{eq:rhostarrs}
 \end{eqnarray}
-Even in the saturated case, heat conduction is at most an order unity correction for expected values of the saturation parameter $\phi < 0.1$, justifying its neglect in our analysis.  
+where we have assumed that the stagnation radius is well inside the Nuker break radius.  Equation (\ref{eq:conduction}) shows that even in the saturated case, neglecting heat conduction results in at most an order unity error in the entropy source term for expected values of the saturation parameter $\phi < 0.1$, justifying its neglect in our analysis.  Numerical experiments including conductivity are seen confirm this ($\S\ref{sec:numerical}$). 
 
 \subsection{Thermal Instability}
 \label{sec:instability}
 
-If important, radiative cooling qualitative alters key features of the accretion flow.  Radiative cooling is usually of greatest important near the stagnation radius, where the gas is in nearly hydrostatic balance.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdotrad}]) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \sim -0.7$ is the cooling function (see below).  Thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
+If radiative cooling becomes important, it can qualitatively alter key features of the accretion flow.  Radiative cooling usually has its greatest impact near or external to the stagnation radius, where the gas resides in near hydrostatic balance.  Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdotrad}]) is thermally unstable, where $\Lambda(T) \propto T^{-\beta}$ with $\beta \sim -0.7$ is the cooling function (see below).  Thermal instability leads to initially higher black hole accretion rates and enhanced star formation which, when coupled to the flow by feed-back processes, can lead to limit cycle behavior inconsistent with our assumption of steady flow (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Gan+14}).  
 
 Radiative cooling can, however, be stabilized by the other sources of cooling, in particular the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]), which at the stagnation radius is balanced by wind heating $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$ (neglecting radiative cooling).  Thermal stability at the stagnation radius can thus be assessed by comparing the external (``wind") heating rate to the rate of radiative cooling $|\dot{q}_{\rm cool}|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
