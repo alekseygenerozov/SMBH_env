@@ -711,9 +711,9 @@ Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting $v_{w}^{\rm Ia}$ 
 &\approx& 12.4M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4)^{-1}(\tau_{\star}/t_{\rm h})^{0.38}
 \label{eq:rIars}
 \end{eqnarray}
-If $r_{\rm Ia} \gg r_{\rm s}$, then Ia heating can only be approximated as a steady heating source near the stagnation radius for extremely massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or in the case of a very young stellar population ($\tau_{\star} \ll t_{\rm h}$).  On the other hand, equation (\ref{eq:rIars}) may underestimate the importance of Ia heating because $r_{\rm Ia}/r_{\rm s}$ will be substantially smaller than its value estimated using $v_{w}^{\rm Ia}$ if the heating rate without SN Ia is less than this.  
+If $r_{\rm Ia} \gg r_{\rm s}$, then Ia heating can only be approximated as a steady heating source near the stagnation radius for extremely massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or in the case of a very young stellar population ($\tau_{\star} \ll t_{\rm h}$).  On the other hand, equation (\ref{eq:rIars}) may underestimate the importance of Ia heating because $r_{\rm Ia}/r_{\rm s}$ will be substantially smaller than its value estimated using $v_{w}^{\rm Ia}$ if the heating rate excluding SN Ia is less than this.  
 
-Even if SN Ia are rare near the stagnation radius, they may cap the SMBH accretion rate by periodically blowing gas out of the nucleus of low mass galaxies.  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \sim M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{w}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence, SN Ia are in principle capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$, especially for low mass BHs with $\sigma \ll v^{\rm Ia}_{w}$.  Thus, even in cases when $r_{\rm s} > r_{\rm Ia}$, the accretion rate is limited to the value, 
+Even if SN Ia are rare near the stagnation radius, they may cap the SMBH accretion rate by periodically blowing gas out of the nucleus of low mass galaxies.  Between subsequent supernovae, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$ interior to the Ia radius, which is gravitationally bound to the SMBH by an energy $E_{\rm bind} \sim M_{\rm g}\sigma^{2}$.  Thus, according to the above definitions, $E_{\rm Ia}/E_{\rm bind} \sim (v_{w}^{\rm Ia})^{2}/2\sigma^{2} \gtrsim 1$.  Hence, SN Ia are in principle capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$, at least for low mass BHs with $\sigma \ll v^{\rm Ia}_{w}$.  Thus, even in cases when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the accretion rate is limited to a maximum value, 
 \begin{eqnarray}
 \frac{\dot{M}_{\rm Ia}}{\dot{M}_{\rm edd}} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{R_{\rm Ia}}{R_{\rm soi}}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
@@ -723,30 +723,27 @@ Even if SN Ia are rare near the stagnation radius, they may cap the SMBH accreti
   \end{cases}
   \label{eq:eddr_Ia}
 \end{eqnarray}
-obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}]) for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$ (eq.~[$\ref{eq:eddr_analytic}$]).  Note that $\dot{M}_{\rm max,Ia}$ usually exceeds the maximum accretion rate for a thermally stable flow $\dot{M}_{\rm max,TI}$ (eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe Ia cannot alone prevent cooling instabilities in low mass galaxies.  Also note that this maximum Ia accretion rate only applies if the gas within the CNM is supplied by local stellar mass loss, since the quantity of gaseous mass can be much greater if is fed externally, e.g. due to a galactic merger. 
+obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}]) for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$ (eq.~[$\ref{eq:eddr_analytic}$]).  Note that $\dot{M}_{\rm Ia}$ usually exceeds the maximum accretion rate for a thermally stable flow $\dot{M}_{\rm TI}$ (eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe Ia cannot alone prevent cooling instabilities in the nuclei of low mass galaxies.  Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
 
 
 
 \subsection{Millisecond Pulsars}
- Energy injection from millisecond pulsars (MSPs) is a potentially
+ Energy injection from the spin-down of millisecond pulsars (MSPs) is a potentially
 important heating source.  If the number of MSPs per unit stellar mass
 is $n_{\rm msp}$ and each contributes on average a spin-down
 luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit
 volume $e \approx \bar{L}_{\rm sd}n_{\rm msp}\epsilon_{\rm msp}$ results in an
 effective heating rate (eq.~ [\ref{eq:vw_eff}]) of 
-\begin{eqnarray} v_{w}^{\rm MSP} \approx
+\begin{eqnarray} v_{w}^{\rm MSP} \sim
 30\left(\frac{\epsilon_{\rm msp}}{0.1}\right)^{1/2}\left(\frac{\bar{L}_{\rm
 sd}}{10^{34}\,{\rm erg\,s^{-1}}}\right)^{1/2} \eta_{0.02}^{-1/2}\,{\rm
 km\,s^{-1}},
  \label{eq:vmsp}
   \end{eqnarray} 
 where $\epsilon_{\rm msp}$ is the thermalization efficiency of
-the wind, normalized to a value $\epsilon \lesssim 0.1$ inferred based
-on modeling the insterstellar mediums of globular clusters
-\citep{NaimanSoares-Furtado+:2013a}.  The above estimate adopts a
-pulsar density $n_{\rm msp}\simeq3 \times 10^{-40} $ MSPs g$^{-1}$
-motivated by the $\sim 30,000$ estimated MSPs in the Milky Way of
-stellar mass $6\times 10^{10}M_{\odot}$ (\citealt{Lorimer13}).
+the wind, normalized to a value $\lesssim 0.1$ based on that inferred by modeling the interstellar media of globular clusters
+\citep{NaimanSoares-Furtado+:2013a}.  Our numerical estimate assumes a
+pulsar density $n_{\rm msp} \sim 3 \times 10^{-40} $ MSPs g$^{-1}$, calculated from the estimated $\sim 30,000$ MSPs in the Milky Way (\citealt{Lorimer13}) of stellar mass $\approx 6\times 10^{10}M_{\odot}$.
 
 The average spin-down luminosity of millisecond pulsars in the field
 is estimated to be $\bar{L}_{\rm sd} \sim 10^{34}$ erg s$^{-1}$ based
@@ -755,10 +752,8 @@ case $v_{w}^{\rm MSP} \lesssim 30$ km s$^{-1}$.  For higher spin-down
 luminosities, $L_{\rm sd}\simeq 10^{35}$ ergs s$^{-1}$ characteristic
 of some Fermi-detected pulsars, then the higher value of $v_{w}^{\rm MSP}
 \lesssim 300$ km s$^{-1}$ makes MSP heating in principle important
-under the optimistc assumption $\epsilon_{\rm msp} = 1$.  On the other hand, the
-binaries giving rise to MSPs may be disocciated by stellar
-interactions in the dense nuclear cluster, reducing their numbers as
-compared to the field population estimate above.  MSPs are thus unlikely to be an important source of heating in comparison to stellar heating.
+under the optimistc assumption $\epsilon_{\rm msp} = 1$.  However, the
+stellar binaries giving rise to MSPs may be disassociated by stellar interactions in the dense nuclear cluster, reducing the numbers of MSPs as compared to the field population estimate above.  MSPs are thus unlikely to be an important source of heating.
 
 
 \subsection{SMBH Feedback}
