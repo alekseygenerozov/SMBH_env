@@ -760,6 +760,8 @@ stellar binaries giving rise to MSPs may be disassociated by stellar interaction
 
 Feedback from accretion onto the SMBH represents an important source of heating which, however, is also the most difficult to quantify (e.g., \citealt{Brighenti&Mathews03}, \citealt{DiMatteo+05}; \citealt{Kurosawa&Proga09}; \citealt{Fabian12} for a recent review).  A key difference between AGN heating and the other sources discussed thus far is its dependence on the SMBH accretion rate $\dot{M}$, which is itself a function of the heating rate (eq.~[\ref{eq:mdot_analytic}]).  
 
+\subsubsection{Compton Heating}
+
 There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating (e.g., \citealt{Sazonov+04}, \citealt{Ciotti+10}), which provides a volumetric heating rate (\citealt{Gan+14})
 \be
 \dot{e} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
@@ -803,17 +805,16 @@ realized values of $\eta \lesssim 1$ shows that Compton heating alone
 is insufficient to stabilize the flow against cooling instability,
 i.e. $v_{w}^{C} < v_{\rm CI}$ (eq.~[\ref{eq:cooling2}]).
 
-Kinetic feedback occurs from an outflow of mass or energy from the
-viscinity of the black hole in the form of a disk wind or jet, which
-deposits its energy across a much wider range of radii (e.g.~\citealt{McNamara&Nulsen07}; \citealt{Novak+11}; \citealt{Gaspari+12}).  If the total
-outflow power is proportional to the SMBH accretion rate, $L_{\rm j} =
-\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an
-efficiency factor.  Assuming that this energy is deposited uniformly
-out to a radius $r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm
+
+\subsubsection{Kinetic Feedback}
+
+Kinetic feedback results from outflows of energy or momentum from near the black hole in the form of a disk wind or jet, which deposits its energy across a potentially much larger range of radii (e.g.~\citealt{McNamara&Nulsen07}; \citealt{Novak+11}; \citealt{Gaspari+12}).  
+
+Assume that the jet or disk outflow power is proportional to the SMBH accretion rate, $L_{\rm j} =
+\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an efficiency factor.  If this energy is deposited as heat uniformly interior to a radius $r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm
 heat}^{3}$, then the volumetric heating rate $e = \epsilon_{\rm
 j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind velocity at
 the stagnation radius given by
-
 \begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{2t_{\rm
 h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
 \rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
@@ -822,18 +823,12 @@ j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
 heat}}\right)^{1-\Gamma/2},
 \label{eq:vjet}
 \end{eqnarray} 
-
-where we have used the fact that $\dot{M} \approx \eta M_{\rm
-enc}(r_{\rm s})/t_{\rm h}$ and that $M_{\rm enc}(r) \propto
-M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ for radii interior to the outer
-break radius (eq.~[\ref{eq:rhostar}]).  Thus for $r_{\rm heat} \sim
-r_{\rm s}$, even a modest heating efficiency $\epsilon_{\rm j} \gtrsim
+where we have used the facts that $\dot{M} = \eta M_{\rm
+enc}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\rm enc}(r) \propto
+M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ (eq.~[\ref{eq:rhostar}]).  If the outflow deposits much of its energy close to the sphere of influence, $r_{\rm heat} \sim
+r_{\rm s}$, then even a small heating efficiency $\epsilon_{\rm j} \gtrsim
 10^{-5}$ is sufficient for $v_{w}^{\bullet}$ to exceed other sources
-of non-accretion powered heating.  However, if the jet distributes its
-energy on much larger scales comparable to the size of the galaxy,
-i.e. $r_{\rm heat} \gtrsim $ kpc $\gtrsim 10^{3}r_{\rm s}$ then the
-heating rate would be much less significant, even for an efficient jet
-($\epsilon_{\rm j} \sim 1$).
+of non-accretion powered heating.  However, if the disk outflow instead distributes energy over much larger scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ kpc $\sim 10^{3}r_{\rm s}$, then even for an efficient jet ($\epsilon_{\rm j} \sim 1$) the heating from kinetic feedback is unimportant compared to other local sources.
 
 Also note that for a fixed $r_{\rm heat}$, the effective heating rate
 $v_{\rm w}^{\bullet} \propto r_{\rm s}^{1-\Gamma/2} \propto
