@@ -125,15 +125,10 @@ R_{\odot} (\Mstar/\Msun)^{0.57} & \Mstar > \Msun \\
 R_{\odot} (\Mstar/\Msun)^{0.8} & \Mstar \le \Msun
 \end{cases}
 \end{align}
-The wind velocity of main sequence winds $v_w (\Mstar, t)$ is assumed
-to equal 430 km s$^{-1}$, corresponding to the escape speed of the
-Sun; this produces an effective wind heating velocity for main
-sequence winds alone of $XXX$, in agreement with the value of 150 km
-s$^{-1}$ found by \citet{NaimanSoares-Furtado+:2013a} based on a more
-sophisticated population synthesis treatment. {\bf BDM: true?
-  correct}...{\bf AG: Wind velocity should depend on stellar
-  properties like escape speed. But choose normalization so that we
-  get the correct vw for the sun.}
+The wind velocity of main sequence winds is assumed
+to equal $v_w (\Mstar, t) = v_{w,\odot}(M_{\star}/M_{\odot})^{1/2}(R_{\star}/R_{\odot})^{-1/2}$, i.e.~scaling as the stellar escape velocity and normalized to the velocity of the solar wind $v_{w,\odot} = 430$ km s$^{-1}$; this produces an effective wind heating velocity for main
+sequence winds alone of $\sim 100$ km s$^{-1}$ for $\tau_{\star} \sim t_{\rm h}$, close to the value found by \citet{NaimanSoares-Furtado+:2013a} for globular clusters based on a more
+sophisticated population synthesis treatment. 
 
 The rate of energy input from PMS winds, $\dot{e}_{\rm TO}(t) = f_{8}\dot{\mathcal{E}}/\bar{m}_*$, is dominated by fast Wolf-Rayet winds and core-collapse supernovae from massive stars ($M_{\star} > 8M_{\odot}$), where $f_{8} =2.6 \times 10^{-3}$ is the fraction of the stellar mass with $M_{\star} > 8M_{\odot}$ for our assumed Salpeter IMF.  Here $\dot{\mathcal{E}} (t)$ is the energy injection rate per massive star, which we estimate as
 \begin{align}
@@ -171,7 +166,7 @@ We plot $\bar{v}_w(t)$ and $\eta(t)$ in Figures~\ref{fig:vwImp} and~\ref{fig:eta
 \begin{figure}
 \includegraphics[width=\columnwidth]{etaImp.pdf}
 \caption{\label{fig:etaImp} The mass loss parameter, $\eta$ (eq.~[\ref{eq:q}]), resulting from stellar winds from
-  a stellar population of age $\tau_{\star}$.}
+  a stellar population of age $\tau_{\star}$  {\bf BDM: combine with above figure into one}.}
 \end{figure}
 
 
