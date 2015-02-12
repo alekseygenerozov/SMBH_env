@@ -649,10 +649,10 @@ Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have that $\dot{q}_{\rm
 
 Key properties of the flow, such as the SMBH accretion rate and the likelihood of thermal instability depend sensitively on the assumed heating rate $\propto qv_{w}^{2}$.  This section summarizes individual heating sources, providing estimates of the value of
 \begin{align}
-  v_{w} = \sqrt{\frac{2 t_h e}{\eta \rhostar}}
+  v_{w} = \sqrt{\frac{2 t_h \dot{e}}{\eta \rhostar}}
   \label{eq:vw_eff}
 \end{align}
-for each, where $e$ is volumetric heating rate.  
+for each, where $\dot{e}$ is volumetric heating rate.  
 
 \subsection{Stellar winds} 
 
@@ -732,7 +732,7 @@ obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}]) for $r_{\r
 important heating source.  If the number of MSPs per unit stellar mass
 is $n_{\rm msp}$ and each contributes on average a spin-down
 luminosity $\bar{L}_{\rm sd}$, then the resulting heating per unit
-volume $e \approx \bar{L}_{\rm sd}n_{\rm msp}\epsilon_{\rm msp}$ results in an
+volume $\dot{e} \approx \bar{L}_{\rm sd}n_{\rm msp}\epsilon_{\rm msp}$ results in an
 effective heating rate (eq.~ [\ref{eq:vw_eff}]) of 
 \begin{eqnarray} v_{w}^{\rm MSP} \sim
 30\left(\frac{\epsilon_{\rm msp}}{0.1}\right)^{1/2}\left(\frac{\bar{L}_{\rm
@@ -762,7 +762,7 @@ Feedback from accretion onto the SMBH represents an important source of heating 
 
 There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating (e.g., \citealt{Sazonov+04}, \citealt{Ciotti+10}), which provides a volumetric heating rate (\citealt{Gan+14})
 \be
-\dot{e}_{\rm C} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
+\dot{e} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
 \ee
 where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$ (e.g., \citealt{Ho99}, \citealt{Eracleous+10}).  
 
@@ -784,10 +784,10 @@ km\,s^{-1}} &, \text{cusp},
 \end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
 \epsilon_{\rm rad}/0.01 \sim 1$ is the maximum radiative efficiency
 for an advective accretion flow expected to produce high $T_{\rm C}$
-emission (e.g.~\citealt{Narayan&Yi95}).  If heating is provided by
-Compton heating alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation
-(\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
+emission (e.g.~\citealt{Narayan&Yi95}).  Note that, unlike stellar wind heating, Compton heating depends on radius as $v_{w}^{\rm C}(r) \propto (n^{2}\xi/\rho_{\star})^{1/2} \propto r^{(\Gamma-n-1)/2}$, i.e. $\propto r^{-0.6}$ and $\propto r^{-0.7}$ for core ($\Gamma = 0.8$; n = 1) and cusp ($\Gamma = 0.1$; n = 0.5) galaxies, respectively.
 
+If heating is provided by Compton heating alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then equation
+(\ref{eq:vC}) can be solved for $\tilde{v}_{\rm w}$ to find
 \begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 106 \eta_{0.02}^{0.21}T_{\rm
 C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
