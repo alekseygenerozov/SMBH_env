@@ -808,13 +808,12 @@ i.e. $v_{w}^{C} < v_{\rm CI}$ (eq.~[\ref{eq:cooling2}]).
 
 \subsubsection{Kinetic Feedback}
 
-Kinetic feedback results from outflows of energy or momentum from near the black hole in the form of a disk wind or jet, which deposits its energy across a potentially much larger range of radii (e.g.~\citealt{McNamara&Nulsen07}; \citealt{Novak+11}; \citealt{Gaspari+12}).  
+Kinetic feedback results from outflows of energy or momentum in the form of a disk wind or jet from close to the black hole, which deposits its energy over much larger radial scales (e.g.~\citealt{McNamara&Nulsen07}; \citealt{Novak+11}; \citealt{Gaspari+12}).  
 
-Assume that the jet or disk outflow power is proportional to the SMBH accretion rate, $L_{\rm j} =
-\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an efficiency factor.  If this energy is deposited as heat uniformly interior to a radius $r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm
-heat}^{3}$, then the volumetric heating rate $e = \epsilon_{\rm
-j}\dot{M}c^{2}/V_{\rm heat}$ results in an effective wind velocity at
-the stagnation radius given by
+Assume that the outflow power is proportional to the SMBH accretion rate, $L_{\rm j} =
+\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is an efficiency factor, and that this energy is deposited as heat uniformly interior to a radius $r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm
+heat}^{3}$.  The resulting volumetric heating rate $\dot{e} = \epsilon_{\rm
+j}\dot{M}c^{2}/V_{\rm heat}$ near the stagnation radius produces an effective wind velocity given by
 \begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{2t_{\rm
 h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
 \rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
@@ -823,12 +822,10 @@ j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
 heat}}\right)^{1-\Gamma/2},
 \label{eq:vjet}
 \end{eqnarray} 
-where we have used the facts that $\dot{M} = \eta M_{\rm
-enc}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\rm enc}(r) \propto
-M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ (eq.~[\ref{eq:rhostar}]).  If the outflow deposits much of its energy close to the sphere of influence, $r_{\rm heat} \sim
-r_{\rm s}$, then even a small heating efficiency $\epsilon_{\rm j} \gtrsim
+where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\star}(r) \propto
+M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ (eq.~[\ref{eq:rhostar}]).  If most of the outflow energy is released close to the stagnation ardius, $r_{\rm heat} \sim r_{\rm s}$, then even a small heating efficiency $\epsilon_{\rm j} \gtrsim
 10^{-5}$ is sufficient for $v_{w}^{\bullet}$ to exceed other sources
-of non-accretion powered heating.  However, if the disk outflow instead distributes energy over much larger scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ kpc $\sim 10^{3}r_{\rm s}$, then even for an efficient jet ($\epsilon_{\rm j} \sim 1$) the heating from kinetic feedback is unimportant compared to other local sources.
+of non-accretion powered heating.  However, if the disk outflow instead distributes energy over much larger scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then even for an efficient jet, kinetic feedback is unimportant.
 
 Also note that for a fixed $r_{\rm heat}$, the effective heating rate
 $v_{\rm w}^{\bullet} \propto r_{\rm s}^{1-\Gamma/2} \propto
@@ -874,13 +871,14 @@ escapes it is free to travel a long distance.
 \subsection{Combined Heating Rate for Representative Star Formation History} 
 \label{sec:combined}
 
-The total gas heating rate $\vwO$ includes contributions from stellar winds, supernovae, pulsars, and SMBH feedback.  The strength of each heating source will depend on the SMBH mass and the star formation history in the galactic nuclear region, the latter of which will vary systematically with the galaxy mass and hence with $\Mbh$.  Qualitatively, smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget, resulting in a high heating rate of $\vwO \sim 1000 $ km s$^{-1}$.  Larger galaxies, on the other hand, will on average have older stellar populations, with their heating rates dominated by Ia supernovae (on large radial scales) and SMBH feedback.
+The total gas heating rate, $\vwO$, includes contributions from stellar winds, supernovae, pulsars, and SMBH feedback.  The strength of each heating source will depend explicitely on the SMBH mass and the star formation history in the galactic nuclear region, the latter of which will also vary systematically with the galaxy mass and hence with $\Mbh$.  
 
-The average star formation history as a function of $\Mbh$ and the $\vwO$ for each heating source is estimated by using the average cosmic star formation histories determined by \citet{MosterNaab+:2013a}.  As described in detail in Appendix \ref{app:windheat}, the average star formation history is used to estimate the stellar wind heating $v_{\rm w}^{\star}$ and the mass input parameter $\eta$ (Fig.~\ref{fig:eta}), the latter of which affects the other sources of feedback, including AGN ($v_{\rm w}^{\bullet}$; eqs.~[\ref{eq:vC}], [\ref{eq:vjet}]), millisecond pulsars ($v_{w}^{\rm msp}$; eq.~[\ref{eq:vmsp}]), and Ia supernovae ($v_{w}^{\rm Ia}$; eq.~[\ref{eq:vIa}]), the latter of which also depends on a convolution of the star formation history and the Ia delay-time distribution (eq.~[\ref{eq:DTD}])
+Figure X show the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for a black hole of mass $M_{\bullet} = 10^{XX}M_{\odot}$.  These heating rates are calculated using the stellar wind heating $v_{\rm w}^{\star}$ (Figure ) and mass return parameter $\eta$ (Fig.~\ref{fig:eta}), the latter of which affects the other sources of feedback, including AGN ($v_{\rm w}^{\bullet}$; eqs.~[\ref{eq:vC}], [\ref{eq:vjet}]), millisecond pulsars ($v_{w}^{\rm msp}$; eq.~[\ref{eq:vmsp}]), and Ia supernovae ($v_{w}^{\rm Ia}$; eq.~[\ref{eq:vIa}]).  The Ia heating rate also depends on a convolution of the star formation history and the Ia delay-time distribution (eq.~[\ref{eq:DTD}]).  At early times ($\tau_{\star} \lesssim XXX$), stellar wind heating dominates, but at later times Compton heating dominates.   MSP heating is again found to be negligible at all black hole masses.  Epochs of thermally-unstable accretion are shown as a dashed line, indicating that Compton heating becomes important only during the phase of unstable accretion.  
 
-Figure~\ref{fig:vwSources} shows $\vwO$ from each heating source (stars, MSPs, SNe Ia, and black hole
-feedback) as a function of black hole mass.  MSP heating is found to be negligible at all black hole masses.  The young stellar populations in galaxies with $\Mbh\lsim 10^{7.5} \Msun$ results in $v_{w}^{\star}$ being dominant.  For $\Mbh\gsim 10^{7.5} \Msun$ , the younger stellar population with their energetic
-stellar winds is dead, and Compton heating plays an important role.
+From Figure X we conclude that thermally unstable accretion is the norm.  However, a single burst of star formation does not describe the average star formation histories of most galaxies.  Qualitatively, smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget, resulting in a high heating rate of $\vwO \sim 1000 $ km s$^{-1}$.  Massive galaxies, on the other hand, will on average have older stellar populations, with their heating rates dominated by Ia supernovae (on large radial scales) and SMBH feedback.  The average value of $\vwO$ is estimated as a function of SMBH mass for each heating source by calculating its value using the average cosmic star formation histories of \citet{MosterNaab+:2013a}.  Appendix \ref{app:windheat} describes how the average star formation history is used to determine the stellar wind heating $v_{\rm w}^{\star}$ and mass return parameter $\eta$ (Fig.~\ref{fig:eta}).
+
+Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating source (stars, MSPs, SNe Ia, and black hole
+feedback).  MSP heating is again found to be negligible at all black hole masses.  The young stellar populations in galaxies with $\Mbh\lsim 10^{7.5} \Msun$ results in $v_{w}^{\star}$ being dominant.  For $\Mbh\gsim 10^{7.5} \Msun$, the lack of younger stellar populations reduces the role of stellar wind heating, but Compton heating plays an important role.
 
 
 \begin{figure}
