@@ -887,26 +887,42 @@ the star formation hstory in the galactic nuclear region, the latter
 of which will also vary systematically with the galaxy mass and hence
 with $\Mbh$.
 
-Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a
-function of time $\tau_{\star}$ after a burst of star formation for a
-black hole masses of $\Mbh = 10^{6} \Msun$.  These heating
-rates are calculated using the stellar wind heating $v_{\rm
-  w}^{\star}$ (Fig.~\ref{fig:vwImp}) and mass return parameter $\eta$
-(Fig.~\ref{fig:eta}), the latter of which affects the other sources of
-feedback, including AGN ($v_{\rm w}^{\bullet}$; eqs.~[\ref{eq:vC}],
-[\ref{eq:vjet}]), millisecond pulsars ($v_{w}^{\rm msp}$;
-eq.~[\ref{eq:vmsp}]), and Ia supernovae ($v_{w}^{\rm Ia}$;
-eq.~[\ref{eq:vIa}]).  The Ia heating rate also depends on a
-convolution of the star formation history and the Ia delay-time
-distribution (eq.~[\ref{eq:DTD}]).  At very early times ($\tau_{\star}
-\lesssim XXX$), stellar wind heating dominates, but at later times
-Compton heating dominates.  MSP heating is again found to be
-negligible at all black hole masses.  Epochs of thermally-unstable
-accretion are shown as a dashed line, indicating that Compton heating
-becomes important only during the phase of unstable accretion.
+Figure~\ref{fig:vwSourcesImp} shows the contributions of various
+heating sources as a function of time $\tau_{\star}$ after a burst of
+star formation for a black hole masses of $\Mbh = 10^{6} \Msun$ (top
+panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The stellar wind
+heating is calculated as described in appendix~\ref{app:windheat}. The
+and Ia heating ($v_{w}^{\rm Ia}$) and compton heating ($v_{\rm
+  w}^{\bullet}$) are calculated using equations~\eqref{eq:vIa}
+and~\eqref{eq:vC} respectively. Both heating sources depend on the
+value of the mass return parameter, $\eta$. We have plotted this for a
+burst of star formation Figure~\ref{fig:etaImp}.  The Ia heating rate
+also depends be a convolution of the delay time distribution
+(eq. [\ref{eq:DTD}]) and the star formation history. This convolution
+reduces to the delay time distribution itself for a burst of star
+formation. To account for the non-steady nature of the Ia heating we
+multiply the Ia heating by $e^{-\rs/\rIa}$, where $\rIa$ is the radius
+where the time between subsequent supernovae is equal to the local
+dynamical time. The heating contribiution from
+Ia supernovae will be suppressed if the time between successive
+supernovae is much greater than the dynamical time at $\rs$. Note that
+both $v_{\rm w}^{\bullet}$ and $v_{\rm w}^{\rm Ia}$ depend on the
+total heating rate (all of the heating sources added in quadrature),
+and so we have to solve a system of impllicit eqautions for these.
+The MSP contribution is negligible for both cases and is not plotted.
 
-From Figure~\ref{fig:vwSourcesImp} we conclude that thermally unstable accretion is the
-norm.  However, a single burst of star formation does not describe the
+The overall heating rate declines with time and after some time the
+flow would become thermally unstable. The epoch when this occurs is
+shown by dashed lines in Figure~\ref{fig:vwSourcesImp}. In calculating
+this transition we have not included the compton heating. However,
+this would not be able stabilize flow as it would not respond
+immediately to cooling instabilities. Thus, if Compton
+heating is the dominant source of heating we do not expect a steady,
+thermally stable flow. Thermal instability is the norm in the burst
+limit except for very early times ($\lsim 10^7$ years) and small
+$\Mbh$ ($\Mbh\simeq 10^6 \Msun$).
+
+However, a single burst of star formation does not describe the
 average star formation histories of most galaxies.  Qualitatively,
 smaller galaxies will on average have more recent star formation,
 resulting in energetic young stellar winds and supernovae which
