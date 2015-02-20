@@ -25,7 +25,7 @@
 
 \newcommand{\Mdot}{\dot{M}}
 \newcommand{\eddr}{\dot{M}/\dot{M}_{\rm Edd}}
-\newcommand{\Mdote}{\dot{M}_{\rm Edd}}
+\newcommand{\MdotEdd}{\dot{M}_{\rm Edd}}
 \newcommand{\Mdotb}{\dot{M}_{\rm bondi}}
 
 \newcommand\lsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
@@ -636,7 +636,16 @@ Figure~\ref{fig:stag} shows our results for the stagnation radius $r_{\rm s}$, e
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{cooling.eps}
-  \caption{\label{fig:cooling} Ratio of the rate of heating to radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$, as a function of radius (solid lines) for each of our solutions shown in Figure \ref{fig:profiles}.  Dashed lines show for comparison the ratio of the cooling to the free-fall timescale $t_{\rm cool}/t_{\rm ff}$.  For high heating rates both ratios are approximately equal at the stagnation radius (marked as squares).  When $\dot{q}_{\rm heat}/\dot{q}_{\rm cool} \lesssim 1$ and/or $t_{\rm cool}/t_{\rm ff} \lesssim 10$, the flow is susceptible thermal instabilities.  {\bf BDM: change y axis labels to qdotheat/qdotrad, tcool/tff}.}
+  \caption{\label{fig:cooling} Ratio of the rate of heating to
+radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$, as a
+function of radius (solid lines) for each of our solutions shown in
+Figure \ref{fig:profiles}.  Dashed lines show for comparison the ratio
+of the cooling to the free-fall timescale $t_{\rm cool}/t_{\rm ff}$.
+For high heating rates both ratios are approximately equal at the
+stagnation radius (marked as squares).  When $\dot{q}_{\rm
+heat}/\dot{q}_{\rm cool} \lesssim 1$ and/or $t_{\rm cool}/t_{\rm ff}
+\lesssim 10$, the flow is susceptible thermal instabilities.  {\bf
+BDM: change y axis labels to qdotheat/qdotrad, tcool/tff}.}
 \end{figure}
 
 
@@ -871,14 +880,59 @@ escapes it is free to travel a long distance.
 \subsection{Combined Heating Rate for Representative Star Formation History} 
 \label{sec:combined}
 
-The total gas heating rate, $\vwO$, includes contributions from stellar winds, supernovae, pulsars, and SMBH feedback.  The strength of each heating source will depend explicitely on the SMBH mass and the star formation history in the galactic nuclear region, the latter of which will also vary systematically with the galaxy mass and hence with $\Mbh$.  
+The total gas heating rate, $\vwO$, includes contributions from
+stellar winds, supernovae, pulsars, and SMBH feedback.  The strength
+of each heating source will depend explicitely on the SMBH mass and
+the star formation hstory in the galactic nuclear region, the latter
+of which will also vary systematically with the galaxy mass and hence
+with $\Mbh$.
 
-Figure X show the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for a black hole of mass $M_{\bullet} = 10^{XX}M_{\odot}$.  These heating rates are calculated using the stellar wind heating $v_{\rm w}^{\star}$ (Fig.~\ref{fig:vwImp}) and mass return parameter $\eta$ (Fig.~\ref{fig:eta}), the latter of which affects the other sources of feedback, including AGN ($v_{\rm w}^{\bullet}$; eqs.~[\ref{eq:vC}], [\ref{eq:vjet}]), millisecond pulsars ($v_{w}^{\rm msp}$; eq.~[\ref{eq:vmsp}]), and Ia supernovae ($v_{w}^{\rm Ia}$; eq.~[\ref{eq:vIa}]).  The Ia heating rate also depends on a convolution of the star formation history and the Ia delay-time distribution (eq.~[\ref{eq:DTD}]).  At early times ($\tau_{\star} \lesssim XXX$), stellar wind heating dominates, but at later times Compton heating dominates.   MSP heating is again found to be negligible at all black hole masses.  Epochs of thermally-unstable accretion are shown as a dashed line, indicating that Compton heating becomes important only during the phase of unstable accretion.  
+Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a
+function of time $\tau_{\star}$ after a burst of star formation for a
+black hole masses of $\Mbh = 10^{6} \Msun$.  These heating
+rates are calculated using the stellar wind heating $v_{\rm
+  w}^{\star}$ (Fig.~\ref{fig:vwImp}) and mass return parameter $\eta$
+(Fig.~\ref{fig:eta}), the latter of which affects the other sources of
+feedback, including AGN ($v_{\rm w}^{\bullet}$; eqs.~[\ref{eq:vC}],
+[\ref{eq:vjet}]), millisecond pulsars ($v_{w}^{\rm msp}$;
+eq.~[\ref{eq:vmsp}]), and Ia supernovae ($v_{w}^{\rm Ia}$;
+eq.~[\ref{eq:vIa}]).  The Ia heating rate also depends on a
+convolution of the star formation history and the Ia delay-time
+distribution (eq.~[\ref{eq:DTD}]).  At very early times ($\tau_{\star}
+\lesssim XXX$), stellar wind heating dominates, but at later times
+Compton heating dominates.  MSP heating is again found to be
+negligible at all black hole masses.  Epochs of thermally-unstable
+accretion are shown as a dashed line, indicating that Compton heating
+becomes important only during the phase of unstable accretion.
 
-From Figure X we conclude that thermally unstable accretion is the norm.  However, a single burst of star formation does not describe the average star formation histories of most galaxies.  Qualitatively, smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget, resulting in a high heating rate of $\vwO \sim 1000 $ km s$^{-1}$.  Massive galaxies, on the other hand, will on average have older stellar populations, with their heating rates dominated by Ia supernovae (on large radial scales) and SMBH feedback.  The average value of $\vwO$ is estimated as a function of SMBH mass for each heating source by calculating its value using the average cosmic star formation histories of \citet{MosterNaab+:2013a}.  Appendix \ref{app:windheat} describes how the average star formation history is used to determine the stellar wind heating $v_{\rm w}^{\star}$ and mass return parameter $\eta$ (Fig.~\ref{fig:eta}).
+From Figure~\ref{fig:vwSourcesImp} we conclude that thermally unstable accretion is the
+norm.  However, a single burst of star formation does not describe the
+average star formation histories of most galaxies.  Qualitatively,
+smaller galaxies will on average have more recent star formation,
+resulting in energetic young stellar winds and supernovae which
+dominate the energy budget, resulting in a high heating rate of $\vwO
+\sim 1000 $ km s$^{-1}$.  Massive galaxies, on the other hand, will on
+average have older stellar populations, with their heating rates
+dominated by Ia supernovae (on large radial scales) and SMBH feedback.
+The average value of $\vwO$ is estimated as a function of SMBH mass
+for each heating source by calculating its value using the average
+cosmic star formation histories of \citet{MosterNaab+:2013a}.
+Appendix \ref{app:windheat} describes how the average star formation
+history is used to determine the stellar wind heating $v_{\rm
+  w}^{\star}$ and mass return parameter $\eta$ (Fig.~\ref{fig:eta}).
 
-Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating source (stars, MSPs, SNe Ia, and black hole
-feedback).  MSP heating is again found to be negligible at all black hole masses.  The young stellar populations in galaxies with $\Mbh\lsim 10^{7.5} \Msun$ results in $v_{w}^{\star}$ being dominant.  For $\Mbh\gsim 10^{7.5} \Msun$, the lack of younger stellar populations reduces the role of stellar wind heating, but Compton heating plays an important role.
+Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating
+source (stars, MSPs, SNe Ia, and black hole feedback).  MSP heating is
+again found to be negligible at all black hole masses.  The young
+stellar populations in galaxies with $\Mbh\lsim 10^{7.5} \Msun$
+results in $v_{w}^{\star}$ being dominant.  For $\Mbh\gsim 10^{7.5}
+\Msun$, the lack of younger stellar populations reduces the role of
+stellar wind heating, but Compton heating plays an important role.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{vwSourcesImp.pdf}
+\caption{\label{fig:vwSourcesImp} Blah Blah}
+\end{figure}
 
 
 \begin{figure}
@@ -908,7 +962,15 @@ feedback).  MSP heating is again found to be negligible at all black hole masses
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{eta.pdf}
-\caption{\label{fig:eta} Parameter  $\eta$ characterizing stellar mass loss rate (eq.~[\ref{eq:q}]) as a function of black hole mass $\Mbh$, calculated for average star formation histories from \citet{MosterNaab+:2013a} for galaxies with halo masses corresponding to $\Mbh$. }
+\caption{\label{fig:eta} Parameter $\eta$ characterizing stellar mass
+  loss rate (eq.~[\ref{eq:q}]) as a function of black hole mass
+  $\Mbh$, calculated for average star formation histories from
+  \citet{MosterNaab+:2013a}  Note that the star
+  formation histories in \citet{MosterNaab+:2013a} are in terms of
+  halo mass and for each $\Mbh$ we assign the halo mass,
+  whose star formation history would produce a bulge consistent with
+  the $\Mbh-M_{\rm bulge}$ relationship from
+  \citet{McConnellMa:2013a}.}
 \end{figure}
 
 Figure~\ref{fig:cooling2} shows the ratio of heating to radiative
@@ -1006,7 +1068,42 @@ $L_X \sim \Mbh^\alpha$, where $\alpha\simeq 0.7-0.8$
 \sim \Mbh^{1.5-2}$, such that if $L_x\sim M$, then we would have $\L_x
 \sim \Mbh^{1.5-2}$, steeper than the observed relationship.
 
-Hower, the mass accretion rate is also a sensitive function of the assumed heating rate, such that $\dot{M}\sim\vwO^{-3.8(-2.4)}$ for a core(cusp) galaxies, respectively.  Thus, only a weak positive dependence of $v_{w} \propto M_{\bullet}^{0.25-0.3}$ would be sufficient to explain the trend in X-ray luminosity with BH masses in scenarios where $L_X \propto \dot{M}$, or a somewhat steeper dependence $v_{w} \propto M_{\bullet}^{0.35-0.45}$ if $L_{X} \propto \dot{M}^{2}$.  What could cause this dependence?  Maybe Ia SNa...
+Figure~\ref{fig:miller} shows our predicted ${\rm L_{X}/L_{edd}}$ for
+core (blue) and cusp (green) galaxies superimposed with x-ray
+measurements (red stars), upper limits (red triangles) from
+\citet{Miller+15}.  For our theoretical predictions $L_X=\epsilon
+\Mdot c^2$, where $\epsilon$ is and efficiency factor and $\Mdot$ is
+calculated using Equation~\eqref{eq:mdot_analytic}, with the value of
+the wind heating parameter, $\vw$, and the mass return parameter,
+$\eta$ set by the average star formation history for each $\Mbh$ (see
+the black lines in Figures~\ref{fig:vwSource} and~\ref{fig:eta}). We
+try two different prescriptions for $\epsilon$: 
+$\epsilon=10^{-4}$ in the left-hand panel and $\epsilon=10^{-1}
+\Mdot/0.01 \MdotEdd$ right-hand panel.  
+
+\begin{figure*}
+\includegraphics[width=\textwidth]{miller.pdf}
+\caption{\label{fig:miller} $\epsilon_X \Mdot c^2/L_{edd}$ predicted
+  from our models compared to $L_X/L_{Edd}$ values (red stars) and
+  upper limits (red triangles) from \citet{Miller+15}.
+  $\epsilon_X=10^{-4}$ in the left-hand panel and $\epsilon_X=0.1
+  \frac{\Mdot}{0.01 \MdotEdd}$ in the right-hand panel. The green and
+  blue curves represent our predictions for core ($\Gamma=0.1$, blue)
+  and cusp ($\Gamma=0.8$) galaxies respectively. They are calculated
+  from equation~\eqref{eq:mdot_analytic}. The wind heating
+  parameter, $v_w$ and mass return parameter, $\eta$, calculated for
+  the average star formation histories in \citet{MosterNaab+:2013a}
+  (the black lines in Figures~\ref{fig:vwSources}
+  and~\ref{fig:eta}). Note that the star formation histories in
+  \citet{MosterNaab+:2013a} are in terms of halo mass and for each
+  $\Mbh$ we assign the halo mass, whose star formation history would
+  produce a bulge consistent with the $\Mbh-M_{\rm bulge}$
+  relationship from \citet{McConnellMa:2013a}.  We also show upper
+  limits $\epsilon_X \Mdot c^2/L_{edd}$ from thermal stability
+  (purple) and Ia supernovae (orange).}
+\end{figure*}
+
+% Hower, the mass accretion rate is also a sensitive function of the assumed heating rate, such that $\dot{M}\sim\vwO^{-3.8(-2.4)}$ for a core(cusp) galaxies, respectively.  Thus, only a weak positive dependence of $v_{w} \propto M_{\bullet}^{0.25-0.3}$ would be sufficient to explain the trend in X-ray luminosity with BH masses in scenarios where $L_X \propto \dot{M}$, or a somewhat steeper dependence $v_{w} \propto M_{\bullet}^{0.35-0.45}$ if $L_{X} \propto \dot{M}^{2}$.  What could cause this dependence?  Maybe Ia SNa...
 
 % This is shown in the top panel Figure~\ref{fig:bh_xray}. The
 % relationship from \citealt{Miller+15} and their detection
@@ -1021,16 +1118,16 @@ Hower, the mass accretion rate is also a sensitive function of the assumed heati
 % \citealt{Miller+15}.
 
 
-One possible solution that the wind mass loss rate $\eta$ increases
-with $\Mbh$, as would be expected if low mass SMBH preferentially
-hosted younger stellar populations.  Another possible explanation is
-that the effective heating rate of the CNM $v_{w}$ decreases
-with decreasing SMBH mass.  This could again be due to an older
-stellar population, since $v_{w} \propto \eta^{-1/2}$ for heating
-sources such as SN Ia and millisecond pulsars.
-{\bf AG given our new results on stellar wind heating as a function of
-Mbh. It seems like the first statement is indeed true but I suspect
-vwO actually increases for low Mbh and that this effect actually dominates.}
+% One possible solution that the wind mass loss rate $\eta$ increases
+% with $\Mbh$, as would be expected if low mass SMBH preferentially
+% hosted younger stellar populations.  Another possible explanation is
+% that the effective heating rate of the CNM $v_{w}$ decreases
+% with decreasing SMBH mass.  This could again be due to an older
+% stellar population, since $v_{w} \propto \eta^{-1/2}$ for heating
+% sources such as SN Ia and millisecond pulsars.
+% {\bf AG given our new results on stellar wind heating as a function of
+% Mbh. It seems like the first statement is indeed true but I suspect
+% vwO actually increases for low Mbh and that this effect actually dominates.}
 %, or it could be due to the fact that Ia occur too infrequently inside
 %the stagnation radius for low mass black holes.
 %AG-We now think that SNe Ia would become important only at the
