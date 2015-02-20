@@ -355,12 +355,16 @@ where $v_{500} \equiv \tilde{v}_{w}/(500$ km s$^{-1}$).  Hydrostatic equilibrium
 where $n \equiv -d{\rm ln}\rho/d{\rm ln\,r}|_{r_{\rm s}}$ is the density power-law slope at $r = r_{\rm s}$.  
 
 If the SMBH dominates the gravitational potential at the stagnation radius, then $v_{w} \gtrsim \sigma$ and hence the stagnation radius resides well inside the sphere of influence ($r_{\rm s} < r_{\rm soi}$; eq.~[\ref{eq:rsoi}]).  In this limit, equation (\ref{eq:stag_analytic}) simplifies to
-\begin{align}
-  &\rs=\frac{7}{2}\frac{G \Mbh}{n \tilde{v}_{w}^{2}} \approx 6
- \, \pc \,\, \Mbheight v_{500}^{-2}\,\,\,\,(v_{\rm w} \gtrsim \sigma),
+\begin{eqnarray}
+  &\rs \underset{v_w \gtrsim \sigma}\approx \frac{7}{2}\frac{G \Mbh}{n \tilde{v}_{w}^{2}} \approx \begin{cases}
+    12
+ \, \pc \,\, \Mbheight v_{500}^{-2}\, \pyear& \text{core} \\
+    6
+ \, \pc \,\, \Mbheight v_{500}^{-2} \, \pyear  & \text{cusp}, 
+  \end{cases}
   \label{eq:stag_simple}
-\end{align}
-where for the numerical estimate we adopt a typical value of $n = 1$.  This expression is similar to that obtained by \citet{Volonteri+11} on more heuristic grounds (their eq.~6).  
+\end{eqnarray}
+where for the numerical estimate we adopt values of $n \approx 1$ and $n \approx 0.5$ for core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies, respectively, so chosen to match the results of our numerical calculations (Fig.~\ref{fig:stag}).  This expression is similar to that obtained by \citet{Volonteri+11} on more heuristic grounds (their eq.~6).  {\bf BDM: all analytic expressions have to be updated in core case to reflect this larger rs}
 
 In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all, formally implying that the entire ISM of the galaxy is accreting.  This result makes intuitive sense: gas is supplied to the nuclear by stars which are gravitationally bound to the black hole, so outflows are possible only if the specific heating rate $\sim v_{w}^{2}$ significantly exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
 
@@ -379,7 +383,7 @@ The accretion rate onto the SMBH is given by the integrated mass loss rate inter
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-where we have assumed $v_{w} \gg \sigma$ by adopting equation (\ref{eq:stag_simple}) for $r_s$, and we have divided our results into core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  The resulting Eddington ratio is given by 
+where we have assumed $v_{w} \gg \sigma$ by adopting equation (\ref{eq:stag_simple}) for $r_s$.  The resulting Eddington ratio is given by 
 \begin{eqnarray}
 \frac{\dot{M}}{\dot{M}_{\rm edd}} &\approx&
   \begin{cases}
@@ -680,7 +684,7 @@ BDM: change y axis labels to qdotheat/qdotrad, tcool/tff}.}
 \end{figure}
 
 
-Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of radius for our fiducial solutions shown in Figure \ref{fig:profiles}.  For high heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling is unimportant across all radii, while for $v_{w} = 300$ km s$^{-1}$ we see that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| < 1$ and $\tcool/\tff \lesssim 1,$ depending on the wind mass loss parameter $\eta$.  At the stagnation radius, the ratio $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ reaches a value that lies within a factor of two of its minimum across the entire grid;  thus, the value of $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ provides a diagnostic of thermal instabilty for the entire solution.  
+Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of radius for our fiducial solutions shown in Figure \ref{fig:profiles}.  For high heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling is unimportant across all radii, while for $v_{w} = 300$ km s$^{-1}$ we see that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ and $\tcool/\tff$ can be less than unity, depending on the wind mass loss parameter $\eta$.  At the stagnation radius, the ratio $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ reaches a value that lies within a factor of two of its minimum across the entire grid;  thus, the value of $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ provides a diagnostic of thermal instabilty for the entire solution.  
 
 Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$ near the stagnation radius.  However, the two ratios diverge from each other at low heating ($v_{w} \lesssim 300$ km s$^{-1}$) because equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the true gas density, which is greater in a subsonic inflow (weak heating) than in a supersonic outflow (strong heating).  
 
