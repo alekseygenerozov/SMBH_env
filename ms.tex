@@ -100,7 +100,7 @@
 \maketitle
 
 \begin{abstract}
-We calculate steady-state, one-dimensional hydrodynamic profiles of hot gas in the nuclei of nominally quiescent galaxies for a range of central black hole mass $M_{\bullet}$, parameterized gas heating rate, and observationally-motivated stellar density profiles.  Mass is supplied to the circumnuclear medium by stellar winds, while gas is heated primarily by stellar winds, supernovae, and black hole feedback.  Analytic estimates are provided for the stagnation radius (where the radial velocity of the gas passes through zero) and the black hole mass accretion rate, $\dot{M}$, as a function of black hole mass and the gas heating efficiency, the latter of which is related to the star-formation history.  We assess the conditions under which radiative instabilities develop, separately in the case of a single burst of star formation and in the case of the average star formation history of galaxies hosting a given black hole mass.  The nuclear X-ray luminosities of a sample of quiescent black holes are combined with our results for $\dot{M}$ and an estimate of the radiative efficiency of the accretion flow to conclude that quiescent black holes in the local universe are consistent with accreting in a locally thermally-stable state.  The maximum accretion rate of a thermally-stable flow is, however, too low to explain the accretion rates and short growth time of low mass black holes in the local universe.  The latter must instead result from gas being fed in from large radii, either due to galaxy mergers associated with hierarchical growth or thermal instabilities on larger (galactic) scales.  We briefly discuss implications of our results for the use of an assumed $\dot{M}-M_{\bullet}$ relationship to constrain the occupation fraction of SMBHs in low mass galaxies and the diversity of circumnuclear environments encountered by the jetted outflows from tidal disruption events.
+We calculate steady-state, one-dimensional hydrodynamic profiles of hot gas in the nuclei of nominally quiescent galaxies for a range of central black hole mass $M_{\bullet}$, parameterized gas heating rate, and observationally-motivated stellar density profiles.  Mass is supplied to the circumnuclear medium by stellar winds, while gas is heated primarily by stellar winds, supernovae, and black hole feedback.  Analytic estimates are provided for the stagnation radius (where the radial velocity of the gas passes through zero) and the black hole mass accretion rate, $\dot{M}$, as a function of black hole mass and the gas heating efficiency, the latter of which is related to the star-formation history.  We assess the conditions under which radiative instabilities develop, separately in the case of a single burst of star formation and in the case of the average star formation history of galaxies hosting a given black hole mass. The nuclear X-ray luminosities of a sample of quiescent black holes are combined with our results for $\dot{M}$ and an estimate of the radiative efficiency of the accretion flow to conclude that quiescent black holes in the local universe are consistent with accreting in a locally thermally-stable state.  The maximum accretion rate of a thermally-stable flow is, however, too low to explain the accretion rates and short growth time of low mass black holes in the local universe.  The latter must instead result from gas being fed in from large radii, either due to galaxy mergers associated with hierarchical growth or thermal instabilities on larger (galactic) scales.  We briefly discuss implications of our results for the use of an assumed $\dot{M}-M_{\bullet}$ relationship to constrain the occupation fraction of SMBHs in low mass galaxies and the diversity of circumnuclear environments encountered by the jetted outflows from tidal disruption events.
 \end{abstract}
 
 \begin{keywords}
@@ -506,7 +506,7 @@ The existence of a minimum heating rate for thermal stability (eq.~[\ref{eq:cool
   {\rm min}\begin{cases}
    4\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.34} &, \text{core}\\
    2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.29}    &, \text{cusp}\\
-\eta M_{\bullet}/\dot{M}_{\rm edd}t_{\rm h} \approx 5.5\times 10^{-5}\eta_{0.02}&, v_{\rm TI} < \sigma,
+\eta M_{\bullet}/\dot{M}_{\rm edd}t_{\rm h} \approx 6. 6\times 10^{-5}\eta_{0.02}&, v_{\rm TI} < \sigma,
   \end{cases}
   \label{eq:Mdotmax}
 \end{align}
@@ -1398,7 +1398,37 @@ Our analytic expression for the accretion rate (eq.~[\ref{eq:mdot_analytic}]) ca
 \end{eqnarray}
 which we have normalized in terms of the Hubble time.  
 
-{\bf BDM: ADD plot of parameter space of MBH and stellar age, showing Ia heating versus stellar heating; thermally stable versus unstable regions ($t_{\rm ff} = t_{\rm cool}/10$); as well as where $\sigma = v_{w}^{\bullet}$ and $\sigma = v_{w}^{\star}$.  }
+There is a maximum accretion rate for a thermally stable flow
+(eqn. [\ref{eq:Mdotmax}]). This gives a lower bound on the growth
+time from thermally stable accretion
+
+\begin{align}
+  t_{\rm growth}/t_{\rm h} \gsim
+  \rm{max}\begin{cases}
+    9 \eta_{0.02}^{-0.47} \Mbh^{-0.34} &, \text{core}\\
+    15 \eta_{0.02}^{-0.59} \Mbh^{-0.29} &, \text{cusp}\\
+    50  \eta_{0.02}^{-1} &, v_{\rm TI} < \sigma
+  \end{cases}
+  \label{eq:tgrow_min}
+\end{align}
+
+In Figure~\ref{fig:bh_growth} we plot the growth times for core and
+cusp galaxies, with parameters chosen for the average star formation
+history at each $\Mbh$ (see Figure~\ref{fig:vwSources}
+and~\ref{fig:eta}). Core and cusp galaxies are shown in green and blue
+respectively.  We also plot the maximum growth time for thermal
+instability from equation~\eqref{eq:tgrow_min} in purple.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{bh_growth.eps}
+\caption{\label{fig:bh_growth} Growth times $\Mdot/\MdotEdd$ in units
+  of the Hubble time $\th$ for core ($\Gamma=0.1$, blue) and cusp
+  ($\Gamma=0.8$, green). These are calculated from
+  equation~\ref{eq:tgrow_analytic} with parameters chosen for the
+  average star formation history at each $\Mbh$. We also plot a lower
+  bound on growth time for a themally stable flow (purple) from
+  equation~\eqref{eq:tgrow_min}.}
+\end{figure}
 
 \subsection{Cooling}
 \label{sec:cooling}
