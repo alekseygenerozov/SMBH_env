@@ -295,7 +295,7 @@ feedback, etc.  As will be discussed in $\S\ref{sec:heating}$, the value of
 $v_{w}$ will in general depend on the SMBH mass and
 the age of the stellar population.  We further assume that $v_w$ is constant with radius, i.e. that the volumetric heating rate is proportional to the local stellar density.
 
-To isolate the physics of interest, our baseline calculations neglect two potentially important effects: heat conduction and radiative cooling.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
+To isolate the physics of interest, our baseline calculations neglects three potentially important effects: heat conduction, radiative cooling, and rotation.  Our justification for neglecting rotation will be discussed further in $\S\ref{sec:rotation}$.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
 \be \dot{q}_{\rm cond} = \nabla\cdot(\kappa \nabla T), \ee
 where $\kappa_{\rm
   eff}=\kappa_{\rm spitz}/(1+\psi)$ (\citealt{DaltonBalbus:1993a}) is
@@ -433,7 +433,7 @@ One observes a similarity between equation (\ref{eq:mdot_gas}) and the Bondi for
 \end{align}
 where the second equality makes use of equation (\ref{eq:Tanalytic}).  {\bf BDM: please check, as I found something different than what was here before}.   
 
-\subsection{Importance of Heat Conduction}
+\subsection{Heat Conduction}
 \label{sec:conductivity}
 
 Our analytic derviations neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the external heating rate at the stagnation radius is given by
@@ -543,8 +543,23 @@ which is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v
  }
 \end{figure}
 
+  \subsection{Angular Momentum}
+  \label{sec:ang}
 
-%\input{figures/eta_tab.tex}
+Our spherically symmetric model neglects the effects of angular momentum on the gas evolution.  However, all galaxies possess some net rotation, resulting in centrifugal forces becoming important at some radius $r_{\rm circ} = l_{r_{s}}^{2}/(GM_{\bullet})$, where $l_{r_{s}} = r_{s}\langle V_{\phi}\rangle |_{r_s}$ is the specific angular momentum of stars near the stagnation radius, from which most of the accreted mass originates, and $\langle v_{\phi}\rangle$ is their average azimuthal velocity.    
+
+Using two-dimensional kinematic data, \citet{EmsellemCappellari+:2007a} measure the ratio of ordered to random motion in a sample of early type galaxies, which they quantify at each galactic radius $R$ by the parameter
+  \begin{align}
+    \lambda_R=\frac{\langle R|V|\rangle}{\langle R\sqrt{V^2+\sigma^2}\rangle} \underset{R \ll r_{\rm soi}}\sim \frac{V_{\phi}}{\sigma},
+  \end{align}
+where $\sigma$ is the velocity dispersion and the brackets indicate a luminosity-weighted average.  The circularization radius of the accretion flow can be written in terms of $\lambda_R$ as
+\be
+\frac{r_{\rm circ}}{r_{s}} \approx \frac{r_{s}}{r_{\rm soi}}\lambda_{R}^{2} \lesssim \lambda_{R}^{2},
+\label{eq:rcirc}
+\ee
+where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$ for the thermally-stable solutions of interest.
+
+\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R < 0.1$ on scales less that 10 per cent of the galaxy radius, in which case equation (\ref{eq:rcirc}) shows that $r_{\rm circ} \lesssim 0.01r_{s}$.  Since this location lies well inside the inner sonic point of the flow, we conclude that angular momentum will only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow, justifying its neglect in calculating quantities such as the mass accretion rate.
 
 
 \section{Numerical Results}
@@ -1388,65 +1403,6 @@ which we have normalized in terms of the Hubble time.
 
 \subsection{Cooling}
 \label{sec:cooling}
-
-  \subsection{Angular Momentum}
-  \label{sec:ang}
-  Our models are spherically symmetric and do not include the effects of
-  the gas' angular momentum. However, galaxies will in general have some
-  net rotation, and the gas will generally have some non-zero angular
-  momentum. At some radius, $\rcirc$, the specific angular momentum of
-  the gas will equal the specific angular momentum of a circular
-  orbit. Inside of this radius our assumptions of no rotation and
-  spherical symmetry will break down. But if $\rcirc$ is inside of the
-  inner sonic point of the flow, the region where angular momentum
-  becomes important will be causally disconnected from the rest of the
-  flow, and we would be justified in neglecting angular momentum (at
-  least on large scales).
-
-  $\rcirc$ depends on the gas injection radius. The largest
-  injection radius is $\rs$. Let $\lrs$ be the gas specific angular
-  momentum at $\rs$, then 
-
-  \begin{align}
-    \rcirc=\frac{\lrs}{G \Mbh}
-  \end{align}
-
-  \citet{EmsellemCappellari+:2007a} used two-dimensional kinematic
-  data to measure the ratio of ordered to random motion in a sample of
-  early type galaxies. More precisely, they measure
-
-  \begin{align}
-    \lambda_R=\frac{\left<R|V|\right>}{\left<R\sqrt{V^2+\sigma^2}\right>}
-  \end{align}
-
-  Where $R$ is the distance is the distance from the galactic center, $V$ is
-  the mean stellar velocity, and $\sigma$ is the velocity
-  dispersion. The brackets represent a luminosity weighted average.
-
-  We may rewrite the specific angular momentum at $\rs$ in terms of
-  $\lambda_R$.
-
-  \begin{align}
-    \lrs\simeq\lambdars \sigma|_{r_{\rm s}}^2 \rs^2
-  \end{align}
-
-  Then
-
-  \begin{align}
-    \rcirc&\simeq\lambdars^2 \frac{\sigma|_{r_{\rm s}}^2}{G \Mbh} \rs^2\\
-    &\simeq\lambdars^2 \frac{\rs^2}{\rsoi} \lsim \lambdars^2 \rsoi
-  \end{align}
-
-  The inner sonic point, $\rss$ general occurs at $\simeq 1\%$ of
-  $\rsoi$. {\bf AG need to explain this somehow. Also, note in our
-    simulations the inner sonic point is not properly resolved.}
-  So if $\lambdars\lsim 0.1$, $\rcirc<\rss$. In Fig. 2 of
-  \citet{EmsellemCappellari+:2007a} $\lambda_R$ is plotted as function
-  of radius for a sample of early type galaxies. On scales of $\sim 0.1
-  R_e$ $\lambda_R$ is either less than 0.1 or rapidly declining for most
-  of their sample %%need to be clearer on rapidly declining also compare
-  %% this scale to the sphere of influence scale.
-  This suggests that angular momentum should generally be unimportant.
 
 \section{Discussion}
 
