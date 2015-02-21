@@ -79,8 +79,8 @@ contributions from main sequence (MS) stars and post-main sequence
 (PMS) stars, respectively.  Here $ f_{\rm MS} < 1$ is the efficiency
 with which main sequence winds thermalize their energy with the rest
 of the injected gas (we hereafter assume $f_{\rm MS} = 1$) and $\mu$
-is the IMF, which we take to be of the Salpeter form $\mu(\Mstar)\sim
-M^{-2.35}$, truncated at $m_0 = 0.1 \Msun$ on the low mass end and at
+is the IMF, which we take to be of the Salpeter form $\mu|_{\Mstar} \propto
+M_{\star}^{-2.35}$, truncated at $m_0 = 0.1 \Msun$ on the low mass end and at
 $100 \Msun$ on the high mass end, where $\bar{m}_*$ = 0.35 $\Msun$ is
 the corresponding mean stellar mass.
 
@@ -92,7 +92,7 @@ The quantity of mass lost in PMS winds $\Delta M(t)$ is estimated from the expre
  M_{\rm TO}-1.4 \Msun &  M_{\rm TO} \ge 9 \Msun,
 \end{cases}
 \end{align}
-where $M_{\rm TO}$ is the turn-off mass, which at time $t$ is calculated as
+where $M_{\rm TO}$ is the turn-off mass, which at time $t < t_{\rm h}$ is calculated as
 \begin{align}
 \log(M_{\rm TO})/M_{\odot} =0.24 + 0.068 x^2-0.34 x+4.76 e^{-4.58 x},
 \end{align}
@@ -100,8 +100,7 @@ where $x=\log(t/10^9 {\rm years})$.  This functional fit is designed
 to reproduce the results of \citet{MaederMeynet:1987a} (their Table 9)
 for massive stars while asymptoting to the formula provided by
 \citet{CiottiOstriker:2007a} (their eq.~[9]) for intermediate and late
-times ($t \gsim 10^8$ years). {\bf AG: Mathematical aside--this
-  expression divereges for $t \gg t_{\rm hubble}$}
+times ($t \gsim 10^8$ years).
 
 The MS wind mass loss rate $\dot{m}(\Mstar, t)$ is calculated based on the generalization of Reimer's law given in \citet{SchroderCuntz:2005a} (their eq.~[4]) as
 \begin{align}
@@ -148,25 +147,17 @@ as
 \bar{v}_w(t)=2 \dot{\bar{e}}(t)/\dot{\bar{m}}(t)
 \label{eq:vwImp}
 \end{align}
-while {\bf AG: eta expression is now fixed--note that
-  $\dot{\bar{m}}(t)$ is the mass injection rate per stellar mass, so
-  that eta is dimensionless as it should be }
+while 
 \begin{align}
 \eta = \dot{\bar{m}}(t) \th
 \label{eq:vwImp}
 \end{align}
-We plot $\bar{v}_w(t)$ and $\eta(t)$ in Figures~\ref{fig:vwImp} and~\ref{fig:etaImp}.
+ Figur~\ref{fig:vwImp} shows the values of $\bar{v}_w(t)$ and $\eta(t)$ as a function of stellar age, $\tau_{\star}$.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwImp.pdf}
-\caption{\label{fig:vwImp} The effective heating rate, $\vw^{\star}$, from stellar winds from
-  a stellar population of age $\tau_{\star}$.}
-\end{figure}
-
-\begin{figure}
 \includegraphics[width=\columnwidth]{etaImp.pdf}
-\caption{\label{fig:etaImp} The mass loss parameter, $\eta$ (eq.~[\ref{eq:q}]), resulting from stellar winds from
-  a stellar population of age $\tau_{\star}$  {\bf BDM: combine with above figure into one}.}
+\caption{\label{fig:vwImp} Effective heating rate, $v_w^{\star}$, and mass loss parameter, $\eta$ (eq.~[\ref{eq:q}]), resulting from stellar winds from a stellar population of age $\tau_{\star}$.}
 \end{figure}
 
 
