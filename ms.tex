@@ -216,7 +216,7 @@ $r_{\rm b}$ & outer break radius of stellar density profile \\
 \begin{equation}
   I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b},
 \end{equation}
-i.e., a broken power law that transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta$, at a break radius, $\rb$.  Assuming the stellar population is spherically symmetric, this corresponds to a stellar density $\rhostar \propto r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\propto r^{-1-\beta}$ for $r \gg \rb$.  To good approximation
+i.e., a broken power law that transitions from an inner power law slope, $\Gamma$, to an outer power law slope, $\beta > \Gamma$, at a break radius, $\rb$.  Assuming the stellar population is spherically symmetric, this corresponds to a stellar density $\rhostar \propto r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\propto r^{-1-\beta}$ for $r \gg \rb$.  To good approximation
 \begin{align}
 \rho_\star = 
 \begin{cases}
@@ -325,9 +325,8 @@ for time integration and artificial viscosity terms in the velocity
 and entropy equations for numerical stability
 (\citealt{Brandenburg:2003a}).  We assume different
 choices of $v_{w} = 300, 600, 1200$ km s$^{-1}$ spanning a
-physically plausible range of heating rates.  Although we are interested in the
-steady-state inflow/outflow solution (assuming one exists), the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic
-inflow on small radial scales and a possible supersonic outflow on large scales.
+physically plausible range of heating rates.  Although we are interested in the steady-state inflow/outflow solution (assuming one exists), the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic
+inflow on small radial scales and a possible supersonic outflow on large scales.  Also note that our solutions can be scaled to any value of the mass input parameter, $\eta$, since the mass and energy source terms scale linearly with $\rho$ or $\rho_{\star}$; however, the precise value of $\eta$ must be specified when cooling or thermal conduction are included, since these scale as gas density {\it squared}. 
 
 We assess the accuracy of our numerical solutions by checking that mass is conserved across the grid, in addition to the integral constraint on the energy (Bernoulli integral).  Mass and energy are conserved to $\lesssim
 40$ per cent for all solutions presented in this paper.  {\bf BDM:
@@ -373,7 +372,7 @@ In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radiu
 
 The accretion rate onto the SMBH is given by the integrated mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
 \begin{eqnarray}
-  \dot{M} &=& \frac{\eta \Menc|_{r_{\rm s}}}{\th} \nonumber \\
+  \dot{M} &=& 4\pi \int_{0}^{r_{s}}q r^{2}dr = \frac{\eta \Menc|_{r_{\rm s}}}{\th} \nonumber \\
 &\approx&
   \begin{cases}
     2.9 \times 10^{-5} M_{\bullet,8}^{1.76}
