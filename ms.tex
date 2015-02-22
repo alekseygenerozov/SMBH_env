@@ -1150,12 +1150,7 @@ stellar wind heating, but Compton heating plays an important role.
 \caption{\label{fig:eta} Parameter $\eta$ characterizing stellar mass
   loss rate (eq.~[\ref{eq:q}]) as a function of black hole mass
   $\Mbh$, calculated for average star formation histories from
-  \citet{MosterNaab+:2013a}  Note that the star
-  formation histories in \citet{MosterNaab+:2013a} are in terms of
-  halo mass and for each $\Mbh$ we assign the halo mass,
-  whose star formation history would produce a bulge consistent with
-  the $\Mbh-M_{\rm bulge}$ relationship from
-  \citet{McConnellMa:2013a}.}
+  \citet{MosterNaab+:2013a} (see appendix~\ref{app:windheat} for details).}
 \end{figure}
 
 The bottom panel of Figure~\ref{fig:vwSources} shows the ratio of
@@ -1194,10 +1189,8 @@ the flow}?
     referring to the first part of the equation here--I use the
     appropriate convolution the Ia rate here}. $\rs$ is calculated
   using the equation~\eqref{eq:stag_simple} and the $\vwO$
-  corresponding to each $\Mbh$--see Figure~\ref{fig:vwSources}. For
-  the blue curve we use the total $\vwO$ from stars, MSP, and
-  black hole feedback (e.g. the solid black curve in
-  Figure~\ref{fig:vwSources}).}
+  corresponding to each $\Mbh$--see the black line
+  Figure~\ref{fig:vwSources}.}
 \end{figure}
 
 % Figure~\ref{fig:vweff} shows an estimate of how the combined heating
@@ -1256,18 +1249,25 @@ $L_X \sim \Mbh^\alpha$, where $\alpha\simeq 0.7-0.8$
 \sim \Mbh^{1.5-2}$, such that if $L_x\sim M$, then we would have $\L_x
 \sim \Mbh^{1.5-2}$, steeper than the observed relationship.
 
-Figure~\ref{fig:miller} shows our predicted ${\rm L_{X}/L_{edd}}$ for
-core (blue) and cusp (green) galaxies superimposed with x-ray
-measurements (red stars), upper limits (red triangles) from
-\citet{Miller+15}.  For our theoretical predictions $L_X=\epsilon
-\Mdot c^2$, where $\epsilon$ is and efficiency factor and $\Mdot$ is
-calculated using Equation~\eqref{eq:mdot_analytic}, with the value of
-the wind heating parameter, $\vw$, and the mass return parameter,
-$\eta$ set by the average star formation history for each $\Mbh$ (see
-the black lines in Figures~\ref{fig:vwSources} and~\ref{fig:eta}). We
-try two different prescriptions for $\epsilon$: 
-$\epsilon=10^{-4}$ in the left-hand panel and $\epsilon=10^{-1}
-\Mdot/0.01 \MdotEdd$ right-hand panel.  
+This is shown Figure~\ref{fig:miller} shows our predicted ${\rm
+  L_{X}/L_{\rm edd}=\epsilon_X \Mdot c^2}$ for core (blue) and cusp
+  (green) galaxies superimposed with x-ray measurements (red stars),
+  upper limits (red triangles) from \citet{Miller+15}. $\epsilon_X$ is
+  an efficiency factor and $\Mdot$ is calculated using
+  Equation~\eqref{eq:mdot_analytic}, with parameters consistent with
+  the average star formation history for each $\Mbh$ (see the black
+  lines in Figures~\ref{fig:vwSources} and~\ref{fig:eta}). Our
+  predicted trend in  $L_{X}/L_{\rm edd}$ is steeper than the 
+  trend found in \citet{Miller+14} (black line). Note that we try two 
+  different prescriptions for $\epsilon_X$: $\epsilon_X=10^{-4}$ in
+  the left-hand panel and $\epsilon_X=10^{-1} \Mdot/0.01 \MdotEdd$
+  right-hand panel. In either case our predicted trend in $
+  L_{X}/L_{\rm edd}$ is opposite the observationally inferred
+  one. {\bf AG-Need a bit more discussion here.} We note that in the
+  right hand panel the observed galaxies are below the upper limits
+  from Ia supernovae and thermal instability and so may be accreting
+  in a thermally stable state {\bf AG-but it does not mean that they
+    actually are}. 
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{miller.pdf}
@@ -1438,19 +1438,7 @@ new gridded approach.}
 % $L_x \propto M_{\rm gal}^{2}$, whereas \citealt{Miller+15} finds
 % that $L_x \propto M_{\rm gal}^{0.7-0.8}$. 
 
-% \begin{figure}
-% \includegraphics[width=\columnwidth]{bh_xray.eps}
-% \caption{\label{fig:bh_xray} X-ray luminosity plotted as a function of
-%   stellar mass for our solutions (points), the trend of nuclear x-ray
-%   luminosity with stellar mass (black line) and the detection upper
-%   limit (blue line) from Fig. 1 of \citealt{Miller+15}. In
-%   the top panel we take the X-ray luminosity to be $\epsilon_1 \Mdot
-%   c^2$, with $\epsilon_1=5\times 10^{-7}$ chosen to make our
-%   luminosities comparable to those observed. In the bottom panel, we
-%   take the accretion power to be quadratic in $\Mdot$. $L_x=\epsilon_2
-%   \eddr \Mdot c^2$ with $\epsilon2$=$2\times10^{-4}$. For each galaxy
-%   we choose the $\vwO=200$ km/s solution.  {\bf BDM: if possible, add actual x-ray data from Gallo+08!}}
-% \end{figure}
+
 
 \subsection{X-ray Diagnostics of SMBH Occupation}
 \label{sec:occ}
