@@ -268,12 +268,8 @@ This paper is organized as followed.  In $\S\ref{sec:model}$ we
 describe our model, including the sample of galaxies used in our
 analysis ($\S\ref{sec:gal_model}$) and our numerical procedure for
 calculating the steady-state hydrodynamic profile of the CNM
-($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe our
-results.  In $\S\ref{sec:applications}$ we describe applicaiton of our
-results, including a comparison of our gas profiles to those inferred
-from {\it Chandra} observations and to the measured $L_X-\Mbh$
-relationship.  In $\S\ref{sec:discussion}$ we discuss our results.  In
-$\S\ref{sec:summary}$ we summarize our results.  Table \ref{table:definitions} provides the definitions of commonly used variables.
+($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe some
+analytic results, while in $\S\ref{sec:numerical}$ we describe our numerical results.  In $\S\ref{sec:discussion}$ we discuss the implications of our results, to topics including...   In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table \ref{table:definitions} provides the definitions of commonly used variables.  Appendix \ref{app:rs} provides useful analytic results, while Appendix \ref{app:windheat} describes our method for calculating stellar wind heating and mass input in detail.  
 
 
 \begin{table*}
@@ -1166,35 +1162,18 @@ Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating source (s
 %   \end{figure}
 
 
-\section{Applications}
-\label{sec:applications}
+
+\section{Discussion}
+\label{sec:discussion}
 
 \subsection{Nuclear X-ray Luminosities of Quiescent Galaxies}
 \label{sec:mdot}
 
-Figure \ref{fig:vwSources} shows that the average heating rate is relatively constant with SMBH mass.  For fixed wind heating $\dot{M}/\dot{M}_{\rm edd}$ increases with SMBH mass $\propto M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  This appears in contradiction with the nuclear X-ray luminosities of quiescent galaxies, which though showing broad scatter instead obey $L_X \sim \Mbh^\alpha$, where $\alpha\simeq 0.7-0.8$ \citep{Pellegrini10, Miller+15}.  Our model instead predicts that $\Mdot
-\sim \Mbh^{1.5-2}$, such that if $L_x\sim M$, then we would have $\L_x
-\sim \Mbh^{1.5-2}$, steeper than the observed relationship.
+Figure \ref{fig:vwSources} shows that the CNM heating rate is on average approximately constant with SMBH mass, except for the largest black holes with $M_{\bullet} \gtrsim 5\times 10^{8}M_{\odot}$.  For fixed wind heating $\dot{M}/\dot{M}_{\rm edd}$ increases with SMBH mass $\propto M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  This appears in contradiction with the nuclear X-ray luminosities of quiescent galaxies, which (though showing broad scatter) instead on average obey $\langle L_X/L_{\rm edd}\rangle \sim \Mbh^\alpha$, where $\alpha\simeq -0.25$ \citep{Pellegrini10, Miller+15}.  Figure~\ref{fig:miller} shows our predicted value of $\langle L_{X}/L_{\rm edd} \rangle =\epsilon_X \Mdot c^2$ as a function of black hole mass for core (blue) and cusp (green) galaxies.  The left panel assumes a constant low radiative efficiency $\epsilon_X = 10^{-4}$ typical of those  estimated for low luminosity AGN (e.g., \citealt{DiMatteo+00}, \citealt{Ho:2009a}) and SgrA* (e.g., \citealt{Quataert+99}, \citealt{Quataert:2004a}), while the right panel shows an efficiency of $\epsilon_X= \dot{M}/\dot{M}_{\rm edd}$ that depends on the Eddington ratio in the way predicted by simple models for radiatively inefficient accretion flows (\citealt{Narayan&Yi95}).  Superimposed with the theoretical curves are symbols showing X-ray measurements (red stars) and upper limits (red triangles) from \citet{Miller+15}, along with the best power-law fit (red line; {\bf BDM: change to this!}) and the approximate X-ray detection threshold (gray line).  Finally, shown with purple and orange lines are the maximum accretion rates for thermally stable accretion (eq.~[\ref{eq:Mdotmax}]) and set by Ia blow-out (eq.~[\ref{eq:eddr_Ia}]), as well as the maximum accretion rate allowed by Compton heating (eq.~[\ref{eq:MdotC}]).  
 
-This is shown Figure~\ref{fig:miller} shows our predicted ${\rm
-  L_{X}/L_{\rm edd}=\epsilon_X \Mdot c^2}$ for core (blue) and cusp
-  (green) galaxies superimposed with x-ray measurements (red stars),
-  upper limits (red triangles) from \citet{Miller+15}. $\epsilon_X$ is
-  an efficiency factor and $\Mdot$ is calculated using
-  Equation~\eqref{eq:mdot_analytic}, with parameters consistent with
-  the average star formation history for each $\Mbh$ (see the black
-  lines in Figures~\ref{fig:vwSources} and~\ref{fig:eta}). Our
-  predicted trend in  $L_{X}/L_{\rm edd}$ is steeper than the 
-  trend found in \citet{Miller+15} (black line). Note that we try two 
-  different prescriptions for $\epsilon_X$: $\epsilon_X=10^{-4}$ in
-  the left-hand panel and $\epsilon_X=10^{-1} \Mdot/0.01 \MdotEdd$
-  right-hand panel. In either case our predicted trend in $
-  L_{X}/L_{\rm edd}$ is opposite the observationally inferred
-  one. {\bf AG-Need a bit more discussion here.} We note that in the
-  right hand panel the observed galaxies are below the upper limits
-  from Ia supernovae and thermal instability and so may be accreting
-  in a thermally stable state {\bf AG-but it does not mean that they
-    actually are}. 
+For either of our assumptions about radiative efficiency our predicted trend in $\langle L_{X}/L_{\rm edd}\rangle$ for core and cusp galaxies is opposite the observationally inferred one.  However, the observed $\langle L_{X}/L_{\rm edd}\rangle$ do imply the accretion rates of observed galaxies are below the maximum ones for thermally stable accretion if $\epsilon_X \lesssim 10^{-4}$.  This suggests that most nearby galaxies are consistent with accreting in a thermally stable steady state, even if our estimate of their predicted heating does not match the observed trend with $M_{\bullet}$ perfectly.  On the other hand if $\epsilon_{X} \sim 10^{-5}$ then the trend would be consistent with the accretion rate set by Ia blow-out.  Also note that in the case of $\dot{M}-$dependent radiative efficiency ($\epsilon_X = \dot{M}/\dot{M}_{\rm edd}$), the predicted branches of  $\langle L_{X}/L_{\rm edd}\rangle$ decreases with decreasing $M_{\bullet}$, calling into question attempts to extrapolate the $\langle L_{X} \rangle - M_{\bullet}$ relationship to low $M_{\bullet}$ in order to constrain the occupation fraction of black holes in the lowest mass galaxies (\citealt{Miller+15}).
+
+\subsection{Demographics of SMBHs}
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{miller.pdf}
@@ -1216,6 +1195,121 @@ This is shown Figure~\ref{fig:miller} shows our predicted ${\rm
 \end{figure*}
 
 This appears to be in contradiction with the general down sizing trend observed for SMBH accretion in the local universe (e.g.~\citealt{Heckman+04}; \citealt{Gallo+08})
+
+
+Our analytic expression for the accretion rate (eq.~[\ref{eq:mdot_analytic}]) can be translated into the growth time of the SMBH $t_{\rm grow} \equiv M_{\bullet}/\dot{M}$,
+\begin{eqnarray}
+  t_{\rm growth}/t_{\rm h} \approx 
+  \begin{cases}
+    250 M_{\bullet,8}^{-0.76}
+    v_{500}^{3.8}   \eta_{0.02}  & \text{core} \\
+    140 \Mbheight^{-0.48}
+    v_{500}^{2.4}   \eta_{0.02}  & \text{cusp}, 
+  \end{cases}
+  \label{eq:tgrow_analytic}
+\end{eqnarray}
+which we have normalized in terms of the Hubble time.  
+
+There is a maximum accretion rate for a thermally stable flow
+(eqn. [\ref{eq:Mdotmax}]). This gives a lower bound on the growth
+time from thermally stable accretion
+
+\begin{align}
+  t_{\rm growth}/t_{\rm h} \gsim
+  \rm{max}\begin{cases}
+    9 \eta_{0.02}^{-0.47} \Mbh^{-0.34} &, \text{core}\\
+    15 \eta_{0.02}^{-0.59} \Mbh^{-0.29} &, \text{cusp}\\
+    50  \eta_{0.02}^{-1} &, v_{\rm TI} < \sigma
+  \end{cases}
+  \label{eq:tgrow_min}
+\end{align}
+
+In Figure~\ref{fig:bh_growth} we plot the growth times for core and
+cusp galaxies, with parameters chosen for the average star formation
+history at each $\Mbh$ (see Figure~\ref{fig:vwSources}
+and~\ref{fig:eta}). Core and cusp galaxies are shown in green and blue
+respectively.  We also plot the maximum growth time for thermal
+instability from equation~\eqref{eq:tgrow_min} in purple.
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{bh_growth.eps}
+\caption{\label{fig:bh_growth} Growth times $\Mdot/\MdotEdd$ in units
+  of the Hubble time $\th$ for core ($\Gamma=0.1$, blue) and cusp
+  ($\Gamma=0.8$, green). These are calculated from
+  equation~\ref{eq:tgrow_analytic} with parameters chosen for the
+  average star formation history at each $\Mbh$. We also plot a lower
+  bound on growth time for a themally stable flow (purple) from
+  equation~\eqref{eq:tgrow_min}.}
+\end{figure}
+
+
+\begin{itemize}
+\item{Fact that some low mass BHs appear to have nearly Eddington accretion rates, suggest an external origin - since the maximum Ia rate appears to be below this}
+\item{Growth of low mass BHS, e.g. \citealt{Kauffmann&Heckman09}}
+\end{itemize}
+
+If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm CI}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
+practice this should could manifest as a large increase in the stagnation radius, due an effective {\it decrease} in the effective heating rate.  This global ``instability" is not a true instability insofar as the gas does not necessarily clump locally into low-T clouds.
+
+However, \citet{McCourt+12} argue that even if cooling is exactly
+balanced by heating everywhere, there is still a local thermal
+instability that operates to turn hot gas into cold clouds.  However,
+this local instability only causes a significant local drop-out of
+mass from the hot medium (to low-T clouds), if the cooling timescale,
+\begin{align}
+\frac{\tcool}{\tff} &\equiv \frac{3\rho k T/2 \mu \mp}{\dot{q}_{\rm cool}} \approx \frac{9}{5} \left. \frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rs}
+\end{align} 
+is locally shorter than the approximately 10 times the free-fall
+timescale $t_{\rm ff}$, where the last equality is evaluated at the
+stagnation radius and makes use of equations~(\ref{eq:Tanalytic}) and
+(\ref{eq:rhors2}).  We thus see that the condition $\tilde{v}_{w} \gtrsim v_{\rm
+  crit}$ is also the condition for local instability, although the
+prefactor may be slightly different.
+
+\subsection{TDE Jets}
+
+Plot showing final lorentz factor after the reverse shock crossing as a function of BH mass, using average star formation history.  place J1644+57 on the plot.
+
+\subsection{Jet Feedback}
+
+We also note
+here that the kinetic heating rate is proportional to the SMBH mass to
+a positive power, $v_{w}^{\bullet} \propto M_{\bullet}^{1(0.5)}$ for
+core(cusp) galaxies, respectively. This dependence could have
+important implications for the dependence of the average nuclear X-ray
+luminosity of quiescent galaxies on the SMBH mass
+($\S\ref{sec:mdot}$).
+
+\subsection{Jet Power Correlation}
+
+Accretion rates onto SMBHs can in principle be estimated directly by
+assuming Bondi accretion and using high resolution X-ray observations
+to estimate the gas temperature and density near the Bondi radius.
+This technique has led to the intriguing conclusion that the Bondi
+accretion power correlates with the AGN jet power (e.g.,
+\citealt{AllenDunn+:2006a}; \citealt{Russell+13};
+\citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
+required to inflate the observed cavities within the X-ray emitting
+gas.  In practice is it almost never possible to resolve the Bondi
+radius, therefore requiring all such studies to extrapolate the
+observed gas temperature and density profiles to smaller radial
+scales.
+
+\subsection{Nuclear Star Clusters}
+Do nuclear star clusters in other galaxies look like scaled up/down
+versions of the one in our own galaxy? If so this would imply a radial
+gradient in the average of the stellar population which would imply a
+heating which would be dependent on radius.
+
+\subsection{SFR-AGN connection}
+In fact it seems like the star formation rate may trace AGN
+episodes. See e.g. http://arxiv.org/pdf/1501.07602.pdf. 
+
+\subsection{Type II Supernovae}
+Type II supernovae should provide some heating as well for younger
+stellar populations...In fact at least on large scales they may be the
+dominant source of heating on timescales of 10-40 Myr. 
+  
 
 % Hower, the mass accretion rate is also a sensitive function of the assumed heating rate, such that $\dot{M}\sim\vwO^{-3.8(-2.4)}$ for a core(cusp) galaxies, respectively.  Thus, only a weak positive dependence of $v_{w} \propto M_{\bullet}^{0.25-0.3}$ would be sufficient to explain the trend in X-ray luminosity with BH masses in scenarios where $L_X \propto \dot{M}$, or a somewhat steeper dependence $v_{w} \propto M_{\bullet}^{0.35-0.45}$ if $L_{X} \propto \dot{M}^{2}$.  What could cause this dependence?  Maybe Ia SNa...
 
@@ -1251,10 +1345,6 @@ This appears to be in contradiction with the general down sizing trend observed 
 
 %% AG:  Also want to include a plot of x-ray luminosity (less abstract than the accretion rate). 
 
-\subsection{Comparison to Observations}
-{\bf AG: I do want some discussion of reproducing the density profiles
-for individual observations, but I am not sure how to do it with our
-new gridded approach.  BDM: too bad!}
 % \subsubsection{Comparison to measured temperature and density profiles}
 % \citet{AllenDunn+:2006a} use {\it Chandra} X-ray observations to infer the radial temperature and density profiles in the nuclei of nine nearby X-ray luminous elliptical galaxies.  \citet{RussellMcNamara+:2013a} performed a similar analysis with a somewhat enlarged galaxy sample.  Interestingly, these works find a correlation between the accretion rate inferred assuming Bondi accretion and the AGN jet power, which is estimated by the PdV work required to inflate observed cavities in the X-ray emitting gas.  
 % % At some point it would be useful to describe the differences between
@@ -1353,7 +1443,49 @@ new gridded approach.  BDM: too bad!}
 % $L_x \propto M_{\rm gal}^{2}$, whereas \citealt{Miller+15} finds
 % that $L_x \propto M_{\rm gal}^{0.7-0.8}$. 
 
+\section{Conclusions}
+\label{sec:conclusions}
+  We have calculated steady-state models for circumnuclear medium of a
+  sample of early type galaxies, assuming that gas is supplied
+  entirely by stellar wind mass loss and heated by shocked stellar
+  winds and SNe Ia. We may use these profiles to calculate an $\Mdot$
+  onto each of sample galaxy's SMBH, and get the scaling of $\Mdot$
+  with $\Mbh$. We may then compare our results with observed trends of
+  nuclear x-ray luminosity. Our main conclusions may be summarized as
+  follows.
 
+  \begin{enumerate}
+  %Younger population=>higher accretion rate; generally higher eta and
+  %lower vw except for very young stellar populations.
+  \item We find that $\eddr \propto \Mbh^{\alpha}$, where the value of
+    $\alpha$ depends on the slope of the stellar density profile
+    ($\alpha\simeq0.5,1$ for cusp and core galaxies
+    respectively). {\bf AG-these explanations are prehistoric and need
+      to be modified. Actually this entire summary needs to be
+      revamped, but this can wait until we are closer to completion.}
+    One possible solution that the wind mass loss rate (i.e. $\eta$)
+    increases with $\Mbh$, as would be expected if low mass SMBH
+    preferentially hosted younger stellar populations. Another
+    possible explanation is that the effective heating rate of the CNM
+    $v_{w}$ decreases with decreasing SMBH mass. This could again be
+    due to an older stellar population, since $v_{w} \propto
+    \eta^{−1/2}$ for heating sources such as SN Ia and millisecond
+    pulsars.
+  \item We compare the $\Mdot$ for each of our solution to the one
+    calculated from the Bondi formula. We find that they generally to
+    a factor of a few. In our model the accretion rate is determined
+    from the gas properties at the stagnation radius, $\rs$, which
+    agrees with the Bondi radius, $\rb$, within a factor of a
+    few. Thus, use of the Bondi formula is a good approximation.
+  \item We compare our solutions for density and temperature to those
+    inferred from Chandra x-ray observations by \citet{AllenDunn+:2006a}
+    and \citet{RussellMcNamara+:2013a} for a handful of galaxies in
+    which our sample overlap with theirs. In general, we cannot match
+    the observed gas density slope on large scales. 
+  \end{enumerate}
+  
+
+\section{Death Row}
 
 \subsection{X-ray Diagnostics of SMBH Occupation}
 \label{sec:occ}
@@ -1432,170 +1564,8 @@ presence of IMBHs in very nearby dwarf galaxies, or more speculatively
 Galactic star clusters.
 
 
-\section{Discussion}
-\label{sec:discussion}
 
-\subsection{Demographics of SMBHs}
 
-Our analytic expression for the accretion rate (eq.~[\ref{eq:mdot_analytic}]) can be translated into the growth time of the SMBH $t_{\rm grow} \equiv M_{\bullet}/\dot{M}$,
-\begin{eqnarray}
-  t_{\rm growth}/t_{\rm h} \approx 
-  \begin{cases}
-    250 M_{\bullet,8}^{-0.76}
-    v_{500}^{3.8}   \eta_{0.02}  & \text{core} \\
-    140 \Mbheight^{-0.48}
-    v_{500}^{2.4}   \eta_{0.02}  & \text{cusp}, 
-  \end{cases}
-  \label{eq:tgrow_analytic}
-\end{eqnarray}
-which we have normalized in terms of the Hubble time.  
-
-There is a maximum accretion rate for a thermally stable flow
-(eqn. [\ref{eq:Mdotmax}]). This gives a lower bound on the growth
-time from thermally stable accretion
-
-\begin{align}
-  t_{\rm growth}/t_{\rm h} \gsim
-  \rm{max}\begin{cases}
-    9 \eta_{0.02}^{-0.47} \Mbh^{-0.34} &, \text{core}\\
-    15 \eta_{0.02}^{-0.59} \Mbh^{-0.29} &, \text{cusp}\\
-    50  \eta_{0.02}^{-1} &, v_{\rm TI} < \sigma
-  \end{cases}
-  \label{eq:tgrow_min}
-\end{align}
-
-In Figure~\ref{fig:bh_growth} we plot the growth times for core and
-cusp galaxies, with parameters chosen for the average star formation
-history at each $\Mbh$ (see Figure~\ref{fig:vwSources}
-and~\ref{fig:eta}). Core and cusp galaxies are shown in green and blue
-respectively.  We also plot the maximum growth time for thermal
-instability from equation~\eqref{eq:tgrow_min} in purple.
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{bh_growth.eps}
-\caption{\label{fig:bh_growth} Growth times $\Mdot/\MdotEdd$ in units
-  of the Hubble time $\th$ for core ($\Gamma=0.1$, blue) and cusp
-  ($\Gamma=0.8$, green). These are calculated from
-  equation~\ref{eq:tgrow_analytic} with parameters chosen for the
-  average star formation history at each $\Mbh$. We also plot a lower
-  bound on growth time for a themally stable flow (purple) from
-  equation~\eqref{eq:tgrow_min}.}
-\end{figure}
-
-\subsection{Cooling}
-\label{sec:cooling}
-
-\section{Discussion}
-
-\begin{itemize}
-\item{Fact that some low mass BHs appear to have nearly Eddington accretion rates, suggest an external origin - since the maximum Ia rate appears to be below this}
-\item{Growth of low mass BHS, e.g. \citealt{Kauffmann&Heckman09}}
-\end{itemize}
-
-If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm CI}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
-practice this should could manifest as a large increase in the stagnation radius, due an effective {\it decrease} in the effective heating rate.  This global ``instability" is not a true instability insofar as the gas does not necessarily clump locally into low-T clouds.
-
-However, \citet{McCourt+12} argue that even if cooling is exactly
-balanced by heating everywhere, there is still a local thermal
-instability that operates to turn hot gas into cold clouds.  However,
-this local instability only causes a significant local drop-out of
-mass from the hot medium (to low-T clouds), if the cooling timescale,
-\begin{align}
-\frac{\tcool}{\tff} &\equiv \frac{3\rho k T/2 \mu \mp}{\dot{q}_{\rm cool}} \approx \frac{9}{5} \left. \frac{q \vw^2/2}{\dot{q}_{\rm cool}}\right|_{\rs}
-\end{align} 
-is locally shorter than the approximately 10 times the free-fall
-timescale $t_{\rm ff}$, where the last equality is evaluated at the
-stagnation radius and makes use of equations~(\ref{eq:Tanalytic}) and
-(\ref{eq:rhors2}).  We thus see that the condition $\tilde{v}_{w} \gtrsim v_{\rm
-  crit}$ is also the condition for local instability, although the
-prefactor may be slightly different.
-
-\subsection{TDE Jets}
-
-Plot showing final lorentz factor after the reverse shock crossing as a function of BH mass, using average star formation history.  place J1644+57 on the plot.
-
-\subsection{Jet Feedback}
-
-We also note
-here that the kinetic heating rate is proportional to the SMBH mass to
-a positive power, $v_{w}^{\bullet} \propto M_{\bullet}^{1(0.5)}$ for
-core(cusp) galaxies, respectively. This dependence could have
-important implications for the dependence of the average nuclear X-ray
-luminosity of quiescent galaxies on the SMBH mass
-($\S\ref{sec:mdot}$).
-
-\subsection{Jet Power Correlation}
-
-Accretion rates onto SMBHs can in principle be estimated directly by
-assuming Bondi accretion and using high resolution X-ray observations
-to estimate the gas temperature and density near the Bondi radius.
-This technique has led to the intriguing conclusion that the Bondi
-accretion power correlates with the AGN jet power (e.g.,
-\citealt{AllenDunn+:2006a}; \citealt{Russell+13};
-\citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
-required to inflate the observed cavities within the X-ray emitting
-gas.  In practice is it almost never possible to resolve the Bondi
-radius, therefore requiring all such studies to extrapolate the
-observed gas temperature and density profiles to smaller radial
-scales.
-
-\subsection{Nuclear Star Clusters}
-Do nuclear star clusters in other galaxies look like scaled up/down
-versions of the one in our own galaxy? If so this would imply a radial
-gradient in the average of the stellar population which would imply a
-heating which would be dependent on radius.
-
-\subsection{SFR-AGN connection}
-In fact it seems like the star formation rate may trace AGN
-episodes. See e.g. http://arxiv.org/pdf/1501.07602.pdf. 
-
-\subsection{Type II Supernovae}
-Type II supernovae should provide some heating as well for younger
-stellar populations...In fact at least on large scales they may be the
-dominant source of heating on timescales of 10-40 Myr. 
-  
-
-  \section{Summary}
-  \label{sec:summary}
-  We have calculated steady-state models for circumnuclear medium of a
-  sample of early type galaxies, assuming that gas is supplied
-  entirely by stellar wind mass loss and heated by shocked stellar
-  winds and SNe Ia. We may use these profiles to calculate an $\Mdot$
-  onto each of sample galaxy's SMBH, and get the scaling of $\Mdot$
-  with $\Mbh$. We may then compare our results with observed trends of
-  nuclear x-ray luminosity. Our main conclusions may be summarized as
-  follows.
-
-  \begin{enumerate}
-  %Younger population=>higher accretion rate; generally higher eta and
-  %lower vw except for very young stellar populations.
-  \item We find that $\eddr \propto \Mbh^{\alpha}$, where the value of
-    $\alpha$ depends on the slope of the stellar density profile
-    ($\alpha\simeq0.5,1$ for cusp and core galaxies
-    respectively). {\bf AG-these explanations are prehistoric and need
-      to be modified. Actually this entire summary needs to be
-      revamped, but this can wait until we are closer to completion.}
-    One possible solution that the wind mass loss rate (i.e. $\eta$)
-    increases with $\Mbh$, as would be expected if low mass SMBH
-    preferentially hosted younger stellar populations. Another
-    possible explanation is that the effective heating rate of the CNM
-    $v_{w}$ decreases with decreasing SMBH mass. This could again be
-    due to an older stellar population, since $v_{w} \propto
-    \eta^{−1/2}$ for heating sources such as SN Ia and millisecond
-    pulsars.
-  \item We compare the $\Mdot$ for each of our solution to the one
-    calculated from the Bondi formula. We find that they generally to
-    a factor of a few. In our model the accretion rate is determined
-    from the gas properties at the stagnation radius, $\rs$, which
-    agrees with the Bondi radius, $\rb$, within a factor of a
-    few. Thus, use of the Bondi formula is a good approximation.
-  \item We compare our solutions for density and temperature to those
-    inferred from Chandra x-ray observations by \citet{AllenDunn+:2006a}
-    and \citet{RussellMcNamara+:2013a} for a handful of galaxies in
-    which our sample overlap with theirs. In general, we cannot match
-    the observed gas density slope on large scales. 
-  \end{enumerate}
-  
   \clearpage
   \appendix
   \section{Analytic Expression for the stagnation radius}
