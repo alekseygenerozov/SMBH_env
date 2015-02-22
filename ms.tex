@@ -1001,7 +1001,17 @@ C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
   \end{cases}
   \label{eq:vC2}
 \end{align} 
-Compton heating can thus be significant in young stellar populations with relatively high mass loss rates, e.g. $v_{w}^{\rm C} \gtrsim 300$ km s$^{-1}$ for $\eta \gtrsim 1$.  
+Compton heating can thus be significant in young stellar populations with relatively high mass loss rates, e.g. $v_{w}^{\rm C} \gtrsim 300$ km s$^{-1}$ for $\eta \gtrsim 1$.  The mass accretion rate corresponding to the state where Compton heating limits the average accretion rate is given by substituting equation (\ref{eq:vC2}) into equation (\ref{eq:eddr_analytic}):
+\begin{align}
+\frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
+\begin{cases} 1.3\times 10^{-3} \eta_{0.02}^{0.20}T_{\rm
+C,9}^{-0.8}\epsilon_{-2}^{-0.8} M_{\bullet,8}^{0.15}
+&, \text{core}\\ 6\times 10^{-4} \eta_{0.02}^{0.30}T_{\rm
+C,9}^{-0.7}\epsilon_{-2}^{-0.7} M_{\bullet,8}^{0.14}
+&, \text{cusp},
+  \end{cases}
+  \label{eq:MdotC}
+\end{align}
 
 
 \subsubsection{Kinetic Feedback}
@@ -1038,7 +1048,7 @@ independent of $r$.  A jet with power sufficient to appreciably heat the CNM on 
 
 For a fixed $r_{\rm heat}$, the effective heating rate from kinetic outflows $v_{\rm w}^{\bullet} \propto r_{\rm s}^{1-\Gamma/2} \propto M_{\bullet}^{1-\Gamma/2}v_{w}^{\Gamma-2}$ is proportional to $v_{w}$
 to a negative power (where we have used of eq.~[\ref{eq:stag_simple}]).  Thus, as in the case of Compton heating, kinetic heating could in principle  `self-regulate' insofar as a lower heating rate results in a higher accretion rate, which in turn results in stronger jet feedback.  
-However, although both radiative and kinetic feed-back process seem capable of producing sufficient heating to offset radiative cooling and prevent instability (e.g., $v_w \gtrsim v_{\rm TI}$; eq.~[\ref{eq:cooling3}]), this is somewhat deceptive because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scale.  Thus, even if the AGN heating balances cooling on average, the flow may still experience limit cycle behavior in this case (\citealt{Yuan&Li11}).   
+However, although both radiative and kinetic feed-back process seem capable of producing sufficient heating to offset radiative cooling and prevent instability (e.g., $v_w \gtrsim v_{\rm TI}$; eq.~[\ref{eq:cooling3}]), this is somewhat misleading because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scale.  Thus, even if the AGN heating balances cooling on average, the flow may still experience limit cycle behavior in this case (\citealt{Yuan&Li11}).   
 
 
 \subsection{Combined Heating Rate} 
@@ -1051,40 +1061,24 @@ The total gas heating rate,
 \ee
 includes contributions from stellar winds, supernovae, pulsars, and radiative SMBH feedback (we neglect kinetic SMBH feedback for the moment, given its uncertain efficacy).  The strength of each heating source depends explicitly on the SMBH mass and the stellar population in the galactic nuclear region.  The latter could best be described by a single star burst formation in the past, or by a more continuous star formation history that itself varies systematically with the galaxy mass and hence $\Mbh$.
 
+\subsubsection{Single Starburst}
+
 Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass input due to stellar winds is calculated as described in Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\bullet}$) are calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC} respectively using the mass input parameter from stellar winds, $\eta$ (Fig.~\ref{fig:vwImp}).  SN Ia heating also depends on a convolution of the delay time distribution (DTD; eq. [\ref{eq:DTD}]) and the star formation history, which reduces to the DTD itself for a single star burst.  We crudely account for the expected reduction in Ia heating efficiency due to the non-steady nature of the SN Ia by attenuating the Ia heating rate by a factor $e^{-\rs/\rIa}$, that reduces to zero when the stagnation radius exceeds the radius, $r_{\rm Ia}$, at which the time between subsequent supernovae is equal to the local dynamical time (eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\bullet}$ and $v_{\rm w}^{\rm Ia}$ also depend on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us to solve an implicit equation.  Heating from MSPs is found to be negligible compared to other sources of heating for fiducial parameters and hence is not plotted for clarity.  
 
 Figure~\ref{fig:vwSourcesImp} shows that for low mass black holes, stellar heating is the most important on timescales less than a few tens of millions of years.  Compton heating comes to dominate at later times due to the high stellar mass loss rates coupled with the higher accretion rates that accompany an overall decrease in the heating rate.  For higher mass black holes, Compton heating dominates at all epochs.  Because the total heating rate declines with time, after some point the flow becomes thermally unstable near the stagnation radius, and hence across all radii.  The epoch after this occurs according to the criterion $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \lesssim 1$ (eq.~[\ref{eq:cooling3}]) are shown as dashed lines in Figure~\ref{fig:vwSourcesImp}.  This transition is calculated not include Compton heating, since the latter cannot truly stabilize flow due to its inability to respond instantaneously to local changes in the thermal properties of the gas.  We thus see that thermally unstable flow is the norm in the single starburst case, except at very early times ($\lsim 10^7$ years) for small $\Mbh\simeq 10^6 \Msun$.
 
-However, a single burst of star formation does not describe the
-average star formation histories of most galaxies.  Qualitatively,
-smaller galaxies will on average have more recent star formation,
-resulting in energetic young stellar winds and supernovae which
-dominate the energy budget, resulting in a high heating rate of $\vwO
-\sim 1000 $ km s$^{-1}$.  Massive galaxies, on the other hand, will on
-average have older stellar populations, with their heating rates
-dominated by Ia supernovae (on large radial scales) and SMBH feedback.
-The average value of $\vwO$ is estimated as a function of SMBH mass
-for each heating source by calculating its value using the average
-cosmic star formation histories of \citet{MosterNaab+:2013a}.
-Appendix \ref{app:windheat} describes how the average star formation
-history is used to determine the stellar wind heating $v_{\rm
-  w}^{\star}$ and mass return parameter $\eta$ (Fig.~\ref{fig:eta}).
+\subsubsection{Continuous Star Formation History}
 
-Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating
-source (stars, MSPs, SNe Ia, and black hole feedback).  MSP heating is
-again found to be negligible at all black hole masses.  The young
-stellar populations in galaxies with $\Mbh\lsim 5\times 10^{8} \Msun$
-results in $v_{w}^{\star}$ being dominant.  For $\Mbh\gsim 5\times 10^{8}
-\Msun$, the lack of younger stellar populations reduces the role of
-stellar wind heating, but Compton heating plays an important role.
+A single burst of star formation does not describe the average star formation histories of most galaxies.  Qualitatively,
+smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget, resulting in a high heating rate of $\vwO \sim 1000 $ km s$^{-1}$.  Massive galaxies, on the other hand, will on average have older stellar populations, with their heating rates dominated by Ia supernovae (on large radial scales) and SMBH feedback.  We estimate the average value of $\vwO$ as a function of SMBH mass for each heating source by calculating its value using the average cosmic star formation histories of \citet{MosterNaab+:2013a}.
+Appendix \ref{app:windheat} describes how the average star formation history is used to determine the stellar wind heating $v_{\rm  w}^{\star}$ and mass return parameter $\eta$ (Fig.~\ref{fig:eta}).
+
+Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating source (stars, MSPs, SNe Ia, and black hole feedback) calculated for the average star formation history of galaxies containing a given black hole mass.  MSP heating is
+again found to be negligible.  The younger stellar populations characterizing galaxies with $\Mbh\lsim 5\times 10^{8} \Msun$ results in stellar wind heating being dominant.  For $\Mbh\gsim 5\times 10^{8} \Msun$, the lack of younger stellar populations reduces the role of stellar wind heating, with Compton heating playing a more important role.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSourcesImp.pdf}
-\caption{\label{fig:vwSourcesImp} Most important sources of heating
-  after a burst of star formation for $\Mbh=10^6 \Msun$ (top panel)
-  and $\Mbh= 10^8 \Msun$ (bottom panel). We also show the velocity
-  dispersion from the $\Mbh-\sigma$ relationship as a horizontal gray line
-  \citep{Gultekin+09}.}
+\caption{\label{fig:vwSourcesImp} Different sources contributing to the gas heating rate in galactic nuclei at time $\tau_{\star}$ after a single burst of star formation.  Top and bottom panels show cases for black hole masses of $\Mbh=10^6 \Msun$ and $\Mbh= 10^8 \Msun$, respectively.  Solid and dashed lines show the ranges of $\tau_{\star}$ for which the accretion flow is thermally stable and unstable, respectively, according to the ratio of $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ near the stagnation radius (eq.~[\ref{eq:cooling3}]).   Also shown with horizontal gray lines are the velocity dispersions according to $\Mbh-\sigma$ \citep{Gultekin+09}.}
 \end{figure}
 
 
