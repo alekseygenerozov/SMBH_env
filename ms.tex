@@ -898,7 +898,6 @@ for the stagnation radius, we find that
   &\approx& 12 M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4) (\tau_{\star}/t_{\rm h})^{0.74}
 \label{eq:rIars}
 \end{eqnarray}
-{\bf AG-Note the different scaling relations here.}
 If $r_{\rm Ia} \gg r_{\rm s}$, then Ia heating can only be
 approximated as a steady heating source near the stagnation radius for
 extremely massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or in
@@ -922,7 +921,7 @@ capable of dynamically clearing out gas from radii $\sim r_{\rm Ia}
 that the stagnation radius formally exceeds $r_{\rm Ia}$, the
 accretion rate is limited to a maximum value,
 \begin{eqnarray}
-\frac{\dot{M}_{\rm Ia}}{\dot{M}_{\rm edd}} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{R_{\rm Ia}}{R_{\rm soi}}\right)^{2-\Gamma} \approx \nonumber \\
+\frac{\dot{M}_{\rm Ia}}{\dot{M}_{\rm edd}} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{R_{\rm Ia}}{R_{\rm soi}g}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
     4.5 \times 10^{-4} M_{\bullet,8}^{-1.33}(\tau_{\star}/t_{\rm h})^{-0.2}
    & \text{core} \\
@@ -1042,50 +1041,19 @@ to a negative power (where we have used of eq.~[\ref{eq:stag_simple}]).  Thus, a
 However, although both radiative and kinetic feed-back process seem capable of producing sufficient heating to offset radiative cooling and prevent instability (e.g., $v_w \gtrsim v_{\rm TI}$; eq.~[\ref{eq:cooling3}]), this is somewhat deceptive because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scale.  Thus, even if the AGN heating balances cooling on average, the flow may still experience limit cycle behavior in this case (\citealt{Yuan&Li11}).   
 
 
-\subsection{Combined Heating Rate for Representative Star Formation History} 
+\subsection{Combined Heating Rate} 
 \label{sec:combined}
 
-The total gas heating rate, $\vwO$, includes contributions from
-stellar winds, supernovae, pulsars, and SMBH feedback.  The strength
-of each heating source will depend explicitely on the SMBH mass and
-the star formation hstory in the galactic nuclear region, the latter
-of which will also vary systematically with the galaxy mass and hence
-with $\Mbh$.
+The total gas heating rate, 
+\be
+\vwO = \sqrt{(v_{w}^{\star})^{2} + (v_{w}^{\rm MSP})^{2} + (v_{w}^{\rm Ia})^{2} + (v_{w}^{\bullet})^{2}},
+\label{eq:vtot}
+\ee
+includes contributions from stellar winds, supernovae, pulsars, and radiative SMBH feedback (we neglect kinetic SMBH feedback for the moment, given its uncertain efficacy).  The strength of each heating source depends explicitly on the SMBH mass and the stellar population in the galactic nuclear region.  The latter could best be described by a single star burst formation in the past, or by a more continuous star formation history that itself varies systematically with the galaxy mass and hence $\Mbh$.
 
-Figure~\ref{fig:vwSourcesImp} shows the contributions of various
-heating sources as a function of time $\tau_{\star}$ after a burst of
-star formation for a black hole masses of $\Mbh = 10^{6} \Msun$ (top
-panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The stellar wind
-heating is calculated as described in appendix~\ref{app:windheat}. The
-and Ia heating ($v_{w}^{\rm Ia}$) and compton heating ($v_{\rm
-  w}^{\bullet}$) are calculated using equations~\eqref{eq:vIa}
-and~\eqref{eq:vC} respectively. Both heating sources depend on the
-value of the mass return parameter, $\eta$. We have plotted this for a
-burst of star formation in Figure~\ref{fig:vwImp}.  The Ia heating rate
-also depends be a convolution of the delay time distribution
-(eq. [\ref{eq:DTD}]) and the star formation history. This convolution
-reduces to the delay time distribution itself for a burst of star
-formation. To account for the non-steady nature of the Ia heating we
-multiply the Ia heating by $e^{-\rs/\rIa}$, where $\rIa$ is the radius
-where the time between subsequent supernovae is equal to the local
-dynamical time. The heating contribiution from
-Ia supernovae will be suppressed if the time between successive
-supernovae is much greater than the dynamical time at $\rs$. Note that
-both $v_{\rm w}^{\bullet}$ and $v_{\rm w}^{\rm Ia}$ depend on the
-total heating rate (all of the heating sources added in quadrature),
-and so we have to solve a system of impllicit eqautions for these.
-The MSP contribution is negligible for both cases and is not plotted.
+Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass input due to stellar winds is calculated as described in Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\bullet}$) are calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC} respectively using the mass input parameter from stellar winds, $\eta$ (Fig.~\ref{fig:vwImp}).  SN Ia heating also depends on a convolution of the delay time distribution (DTD; eq. [\ref{eq:DTD}]) and the star formation history, which reduces to the DTD itself for a single star burst.  We crudely account for the expected reduction in Ia heating efficiency due to the non-steady nature of the SN Ia by attenuating the Ia heating rate by a factor $e^{-\rs/\rIa}$, that reduces to zero when the stagnation radius exceeds the radius, $r_{\rm Ia}$, at which the time between subsequent supernovae is equal to the local dynamical time (eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\bullet}$ and $v_{\rm w}^{\rm Ia}$ also depend on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us to solve an implicit equation.  Heating from MSPs is found to be negligible compared to other sources of heating for fiducial parameters and hence is not plotted for clarity.  
 
-The overall heating rate declines with time and after some time the
-flow would become thermally unstable. The epoch when this occurs is
-shown by dashed lines in Figure~\ref{fig:vwSourcesImp}. In calculating
-this transition we have not included the compton heating. However,
-this would not be able stabilize flow as it would not respond
-immediately to cooling instabilities. Thus, if Compton
-heating is the dominant source of heating we do not expect a steady,
-thermally stable flow. Thermal instability is the norm in the burst
-limit except for very early times ($\lsim 10^7$ years) and small
-$\Mbh$ ($\Mbh\simeq 10^6 \Msun$).
+Figure~\ref{fig:vwSourcesImp} shows that for low mass black holes, stellar heating is the most important on timescales less than a few tens of millions of years.  Compton heating comes to dominate at later times due to the high stellar mass loss rates coupled with the higher accretion rates that accompany an overall decrease in the heating rate.  For higher mass black holes, Compton heating dominates at all epochs.  Because the total heating rate declines with time, after some point the flow becomes thermally unstable near the stagnation radius, and hence across all radii.  The epoch after this occurs according to the criterion $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \lesssim 1$ (eq.~[\ref{eq:cooling3}]) are shown as dashed lines in Figure~\ref{fig:vwSourcesImp}.  This transition is calculated not include Compton heating, since the latter cannot truly stabilize flow due to its inability to respond instantaneously to local changes in the thermal properties of the gas.  We thus see that thermally unstable flow is the norm in the single starburst case, except at very early times ($\lsim 10^7$ years) for small $\Mbh\simeq 10^6 \Msun$.
 
 However, a single burst of star formation does not describe the
 average star formation histories of most galaxies.  Qualitatively,
