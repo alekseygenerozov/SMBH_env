@@ -1071,10 +1071,10 @@ Figure~\ref{fig:vwSourcesImp} shows that for low mass black holes, stellar heati
 
 A single burst of star formation does not describe the average star formation histories of most galaxies.  Qualitatively,
 smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget, resulting in a high heating rate of $\vwO \sim 1000 $ km s$^{-1}$.  Massive galaxies, on the other hand, will on average have older stellar populations, with their heating rates dominated by Ia supernovae (on large radial scales) and SMBH feedback.  We estimate the average value of $\vwO$ as a function of SMBH mass for each heating source by calculating its value using the average cosmic star formation histories of \citet{MosterNaab+:2013a}.
-Appendix \ref{app:windheat} describes how the average star formation history is used to determine the stellar wind heating $v_{\rm  w}^{\star}$ and mass return parameter $\eta$ (Fig.~\ref{fig:eta}).
+Appendix \ref{app:windheat} describes how the average star formation history is used to determine the stellar wind heating $v_{\rm  w}^{\star}$ and mass return parameter $\eta$ (Fig.~\ref{fig:eta}).  Star formation histories are also convolved with the Ia DTD distribution to determine the SN Ia heating.  
 
 Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating source (stars, MSPs, SNe Ia, and black hole feedback) calculated for the average star formation history of galaxies containing a given black hole mass.  MSP heating is
-again found to be negligible.  The younger stellar populations characterizing galaxies with $\Mbh\lsim 5\times 10^{8} \Msun$ results in stellar wind heating being dominant.  For $\Mbh\gsim 5\times 10^{8} \Msun$, the lack of younger stellar populations reduces the role of stellar wind heating, with Compton heating playing a more important role.
+again found to be negligible.  The younger stellar populations characterizing galaxies with $\Mbh\lsim 5\times 10^{8} \Msun$ results in stellar wind and Ia heating being dominant.  For $\Mbh\gsim 5\times 10^{8} \Msun$, the lack of younger stellar populations reduces the role of stellar wind heating, with Compton heating playing a more important role.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSourcesImp.pdf}
@@ -1084,26 +1084,12 @@ again found to be negligible.  The younger stellar populations characterizing ga
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSources.pdf}
-\caption{\label{fig:vwSources} {\emph Top Panel:}Sources contributing
-  to the heating rate of the CNM, $\vwO$, including stellar wind
-  heating ({\it orange}), Ia supernovae ({\it green}), millisecond
-  pulsars ({\it blue}), and compton heating ({\it pink}).  Each heating
-  source varies with black hole mass $\Mbh$ due to the different
+\caption{\label{fig:vwSources} {it Top Panel:} Sources contributing   to the heating rate of the CNM, $\vwO$, including stellar wind heating ({\it orange}), Ia supernovae ({\it green}), millisecond pulsars ({\it blue}), and compton heating ({\it pink}).  Each heating source varies with black hole mass $\Mbh$ due to the different
   average star formation history of galaxies of a given halo mass (see
   Appendix~\ref{app:windheat} for the detailed description). The total
-  heating rate is shown in black. To account for the non-steady nature
-  of the Ia heating we multiply the Ia heating by $e^{-\rs/\rIa}$, so
-  the contribution that the heating contribiution from Ia supernovae
-  will be suppressed if the time between successive supernovae is much
-  greater than the dynamical time at $\rs$. {\emph Bottom panel} The
-  ratio of the heating ($\dot{q}_{\rm heat}$) to the cooling rate
-  ($\dot{q}_{\rm cool}$) at $\rs$ from the total heating rate in the
-  top panel. Above $\Mbh\simeq 5\times 10^7 \Msun$ $\dot{q}_{\rm
-    heat}(\rs)<\dot{q}_{\rm cool}(\rs)$ and a thermal instability
-  would arise. The thermally unstable region is marked in red in the
-  bottom panel. All curves become dashed in the thermally unstable
-  region of parameter space: we expect our model to break down in this
-  regime as the steady-state assumption would be violated.}
+  heating rate is shown in black. {\it Bottom Panel:} The
+  ratio of the total heating rate ($\dot{q}_{\rm heat} \propto v_{w}^{2}$) from the top panel to the radiating cooling rate
+  ($|\dot{q}_{\rm rad}|$) at the stagnation radius.  Dashed lines and red color show the thermally unstable region defined by $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| < 1$, for which the assumption of steady-state flow would be violated.  {\bf BDM: remove the red - its tacky and will vary based on core/cusp.  Draw a dashed line across at heating ratio of 1.  change y axis labels!  move stars label in top panel}}
 \end{figure}
 
 
