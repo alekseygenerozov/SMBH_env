@@ -645,20 +645,20 @@ which is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v
   \subsection{Angular Momentum}
   \label{sec:ang}
 
-Our spherically symmetric model neglects the effects of angular momentum on the gas evolution.  However, all galaxies possess some net rotation, resulting in centrifugal forces becoming important at some radius $r_{\rm circ} = l_{r_{s}}^{2}/(GM_{\bullet})$, where $l_{r_{s}} = r_{s}\langle V_{\phi}\rangle |_{r_s}$ is the specific angular momentum of stars near the stagnation radius, from which most of the accreted mass originates, and $\langle v_{\phi}\rangle$ is their average azimuthal velocity.    
+Our spherically symmetric model neglects the effects of angular momentum on the gas evolution.  However, all galaxies possess some net rotation, resulting in centrifugal forces becoming important at some radius $r_{\rm circ} = l_{r_{s}}^{2}/(GM_{\bullet})$.  Here $l_{r_{s}} = \langle r V_{\phi}\rangle |_{r_s}$ is the stellar specific angular momentum near the stagnation radius, from which most of the accreted mass originates, where $V_{\phi}$ is the stellar azimuthal velocity.    
 
-Using two-dimensional kinematic data, \citet{EmsellemCappellari+:2007a} measure the ratio of ordered to random motion in a sample of early type galaxies, which they quantify at each galactic radius $R$ by the parameter
+\citet{EmsellemCappellari+:2007a} use two-dimensional kinematic data to measure the ratio of ordered to random motion in a sample of early type galaxies, which they quantify at each galactic radius $R$ by the parameter
   \begin{align}
-    \lambda_R=\frac{\langle R|V|\rangle}{\langle R\sqrt{V^2+\sigma^2}\rangle} \underset{R \ll r_{\rm soi}}\sim \frac{V_{\phi}}{\sigma},
+    \lambda_R \equiv \frac{\langle r|V|\rangle}{\langle R\sqrt{V^2+\sigma^2}\rangle} \underset{R \ll r_{\rm soi}}\sim \frac{V_{\phi}}{\sigma},
   \end{align}
 where $\sigma$ is the velocity dispersion and the brackets indicate a luminosity-weighted average.  The circularization radius of the accretion flow can be written in terms of $\lambda_R$ as
 \be
 \frac{r_{\rm circ}}{r_{s}} \approx \frac{r_{s}}{r_{\rm soi}}\lambda_{R}^{2} \lesssim \lambda_{R}^{2},
 \label{eq:rcirc}
 \ee
-where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$ for the thermally-stable solutions of interest.
+where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$, as satisfied for thermally-stable solutions of interest.
 
-\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R < 0.1$ on scales less that 10 per cent of the galaxy radius, in which case equation (\ref{eq:rcirc}) shows that $r_{\rm circ} \lesssim 0.01r_{s}$.  Since this location lies well inside the inner sonic point of the flow, we conclude that angular momentum will only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow, justifying its neglect in calculating quantities such as the mass accretion rate.
+\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales less that 10 per cent of the galaxy half-light radius and that $\lambda_R$ is a decreasing function of $R$, in which case from equation (\ref{eq:rcirc}) we conclude that $r_{\rm circ} \lesssim 0.01r_{s}$.  This location lies well inside the inner sonic point of the flow, suggesting that angular momentum is only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow.  To first order we are thus justifying in neglecting its effects on our quantities such as the mass accretion rate.
 
 
 \section{Numerical Results}
