@@ -645,7 +645,7 @@ which is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v
   \subsection{Angular Momentum}
   \label{sec:ang}
 
-Our spherically symmetric model neglects the effects of angular momentum on the gas evolution.  However, all galaxies possess some net rotation, resulting in centrifugal forces becoming important at some radius $r_{\rm circ} = l_{r_{s}}^{2}/(GM_{\bullet})$.  Here $l_{r_{s}} = \langle r V_{\phi}\rangle |_{r_s}$ is the stellar specific angular momentum near the stagnation radius, from which most of the accreted mass originates, where $V_{\phi}$ is the stellar azimuthal velocity.    
+Our spherically symmetric model neglects the effects of angular momentum on the gas evolution.  However, all galaxies possess some net rotation, resulting in centrifugal forces becoming important at some radius $r_{\rm circ} = l^{2}_{r_{s}}/(GM_{\bullet})$.  Here $l_{r_{s}} = \langle r V_{\phi}\rangle |_{r_s}$ is the stellar specific angular momentum near the stagnation radius, from which most of the accreted mass originates, where $V_{\phi}$ is the stellar azimuthal velocity.    
 
 \citet{EmsellemCappellari+:2007a} use two-dimensional kinematic data to measure the ratio of ordered to random motion in a sample of early type galaxies, which they quantify at each galactic radius $R$ by the parameter
   \begin{align}
@@ -658,7 +658,7 @@ where $\sigma$ is the velocity dispersion and the brackets indicate a luminosity
 \ee
 where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$, as satisfied for thermally-stable solutions of interest.
 
-\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales less that 10 per cent of the galaxy half-light radius and that $\lambda_R$ is a decreasing function of $R$, in which case from equation (\ref{eq:rcirc}) we conclude that $r_{\rm circ} \lesssim 0.01r_{s}$.  This location lies well inside the inner sonic point of the flow, suggesting that angular momentum is only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow.  To first order we are thus justifying in neglecting its effects on our quantities such as the mass accretion rate.
+\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales less that 10 per cent of the galaxy half-light radius and that $\lambda_R$ is a decreasing function of $R$.  From equation (\ref{eq:rcirc}) we conclude that $r_{\rm circ} \lesssim 0.01r_{s}$, a location well inside the inner sonic point of the flow (typically located at $\sim 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  This suggests that angular momentum is only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow.  To first order we are thus justifying in neglecting its effects on our quantities such as the mass accretion rate.
 
 
 \section{Numerical Results}
@@ -669,47 +669,50 @@ where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ a
 %\centering
 \begin{minipage}{18cm}
 \caption{Summary of Numerical Solutions}
-\begin{tabular}{lccccccccccccc}
+\begin{tabular}{lccccccccc}
   \hline
-  {$M_{\bullet}$} & {$v_{w}$} & {$\Gamma^{(a)}$} & {$r_b^{(b)}$} &
-  {$\left(\frac{\dot{M}}{\dot{M}_{\rm edd}}\frac{0.04}{\eta}\right)_{r_{s}}^{(c)}$} & {$\left(\frac{t_{\rm cool}}{t_{\rm ff}}\frac{0.04}{\eta}\right)_{r_s}^{(d)}$}  \\
+  {$M_{\bullet}$} & {$v_{w}$} & {$r_b^{(b)}$} &  {$\left(\frac{\dot{M}}{\dot{M}_{\rm edd}}\frac{0.04}{\eta}\right)_{r_{s}}^{(c)}$} & {$\left(\frac{t_{\rm cool}}{t_{\rm ff}}\frac{0.04}{\eta}\right)_{r_s}^{(d)}$}  \\
   \hline
-  $    10^{ 6 }$ & 300 & 0.8 & 100 & $ 1.3 \times 10^{ -5 }$ & $ 1.1 \times 10^{ 2 }$ \\
-  $    10^{ 6 }$ & 600 & 0.8 & 100 & $ 2.2 \times 10^{ -6 }$ & $ 8.1 \times 10^{ 3 }$ \\
-  $    10^{ 6 }$ & 1200 & 0.8 & 100 & $ 3.8 \times 10^{ -7 }$ & $ 3.7 \times 10^{ 5 }$ \\
-  $    10^{ 7 }$ & 300 & 0.8 & 100 & $ 1.0 \times 10^{ -4 }$ & 6.5 \\
-  $    10^{ 7 }$ & 600 & 0.8 & 100 & $ 7.2 \times 10^{ -6 }$ & $ 2.4 \times 10^{ 3 }$ \\
-  $    10^{ 7 }$ & 1200 & 0.8 & 100 & $ 1.3 \times 10^{ -6 }$ & $ 1.2 \times 10^{ 5 }$ \\
-  $    10^{ 8 }$ & 300 & 0.8 & 100 & $ 6.6 \times 10^{ -4 }$ & $\mathbf{1.4}$ \\
-  $    10^{ 8 }$ & 600 & 0.8 & 100 & $ 2.9 \times 10^{ -5 }$ & $ 5.3 \times 10^{ 2 }$ \\
-  $    10^{ 8 }$ & 1200 & 0.8 & 100 & $ 4.0 \times 10^{ -6 }$ & $ 3.8 \times 10^{ 4 }$ \\
-  $    10^{ 7 }$ & 300 & 0.8 & 25 & $ 7.8 \times 10^{ -5 }$ & 17 \\
-  $    10^{ 7 }$ & 300 & 0.8 & 50 & $ 7.9 \times 10^{ -5 }$ & 12 \\
-  $    10^{ 7 }$ & 300 & 0.8 & 200 & $ 1.2 \times 10^{ -4 }$ & $\mathbf{4.7}$ \\
-  $    10^{ 7 }$ & 300 & 0.8 & 400 & $ 3.6 \times 10^{ -4 }$ & $\mathbf{1.2}$ \\
-  $    10^{ 8 }$ & 300 & 0.8 & 25 & $ 1.9 \times 10^{ -4 }$ & 12 \\
-  $    10^{ 8 }$ & 300 & 0.8 & 50 & $ 3.3 \times 10^{ -4 }$ &
+ & & & $\Gamma^{(a)} = 0.8$ & & & & & \\
+\hline
+  $    10^{ 6 }$ & 300 & 100 & $ 1.3 \times 10^{ -5 }$ & $ 1.1 \times 10^{ 2 }$ \\
+  $    10^{ 6 }$ & 600  & 100 & $ 2.2 \times 10^{ -6 }$ & $ 8.1 \times 10^{ 3 }$ \\
+  $    10^{ 6 }$ & 1200  & 100 & $ 3.8 \times 10^{ -7 }$ & $ 3.7 \times 10^{ 5 }$ \\
+  $    10^{ 7 }$ & 300 & 100 & $ 1.0 \times 10^{ -4 }$ & 6.5 \\
+  $    10^{ 7 }$ & 600  & 100 & $ 7.2 \times 10^{ -6 }$ & $ 2.4 \times 10^{ 3 }$ \\
+  $    10^{ 7 }$ & 1200  & 100 & $ 1.3 \times 10^{ -6 }$ & $ 1.2 \times 10^{ 5 }$ \\
+  $    10^{ 8 }$ & 300 & 100 & $ 6.6 \times 10^{ -4 }$ & $\mathbf{1.4}$ \\
+  $    10^{ 8 }$ & 600  & 100 & $ 2.9 \times 10^{ -5 }$ & $ 5.3 \times 10^{ 2 }$ \\
+  $    10^{ 8 }$ & 1200  & 100 & $ 4.0 \times 10^{ -6 }$ & $ 3.8 \times 10^{ 4 }$ \\
+  $    10^{ 7 }$ & 300  & 25 & $ 7.8 \times 10^{ -5 }$ & 17 \\
+  $    10^{ 7 }$ & 300  & 50 & $ 7.9 \times 10^{ -5 }$ & 12 \\
+  $    10^{ 7 }$ & 300  & 200 & $ 1.2 \times 10^{ -4 }$ & $\mathbf{4.7}$ \\
+  $    10^{ 7 }$ & 300  & 400 & $ 3.6 \times 10^{ -4 }$ & $\mathbf{1.2}$ \\
+  $    10^{ 8 }$ & 300  & 25 & $ 1.9 \times 10^{ -4 }$ & 12 \\
+  $    10^{ 8 }$ & 300  & 50 & $ 3.3 \times 10^{ -4 }$ &
   $\mathbf{4.6}$ \\
-  $    10^{ 8 \dagger}$ & 300 & 0.8 & 50 & $ 9.1 \times 10^{ -4 }$ &
+  $    10^{ 8 \dagger}$ & 300  & 50 & $ 9.1 \times 10^{ -4 }$ &
   $\mathbf{5.6}$ \\
-  $    10^{ 8 }$ & 300 & 0.8 & 200 & $ 1.4 \times 10^{ -3 }$ &
+  $    10^{ 8 }$ & 300 & 200 & $ 1.4 \times 10^{ -3 }$ &
   $\mathbf{0.43}$ \\
   \hline
-  $    10^{ 6 }$ & 1200 & 0.1 & 100 & $ 5.9 \times 10^{ -8 }$ & $ 1.0 \times 10^{ 6 }$ \\
-  $    10^{ 7 }$ & 1200 & 0.1 & 100 & $ 5.1 \times 10^{ -7 }$ & $ 9.4 \times 10^{ 4 }$ \\
-  $    10^{ 8 }$ & 1200 & 0.1 & 100 & $ 2.4 \times 10^{ -6 }$ & $ 2.1 \times 10^{ 4 }$ \\
-  $    10^{ 8 }$ & 1200 & 0.1 & 50 & $ 2.0 \times 10^{ -6 }$ & $ 3.1 \times 10^{ 4 }$ \\
-  $    10^{ 8 }$ & 1200 & 0.1 & 200 & $ 4.2 \times 10^{ -6 }$ & $ 8.4 \times 10^{ 3 }$ \\
-  $    10^{ 8 }$ & 1200 & 0.1 & 400 & $ 1.2 \times 10^{ -3 }$ & $\mathbf{4.6}$ \\
-  $    10^{ 8 }$ & 600 & 0.1 & 100 & $ 8.0 \times 10^{ -4 }$ & $\mathbf{1.6}$ \\
-  $    10^{ 6 }$ & 600 & 0.1 & 25 & $ 1.6 \times 10^{ -6 }$ & $ 1.6 \times 10^{ 3 }$ \\
-  $    10^{ 6 }$ & 600 & 0.1 & 50 & $ 1.7 \times 10^{ -5 }$ & $\mathbf{33}$ \\
-  $    10^{ 7 }$ & 600 & 0.1 & 25 & $ 8.5 \times 10^{ -6 }$ & $ 4.6 \times 10^{ 2 }$ \\
-  $    10^{ 7 }$ & 600 & 0.1 & 50 & $ 4.5 \times 10^{ -5 }$ & $\mathbf{21}$ \\
-  $    10^{ 8 }$ & 600 & 0.1 & 25 & $ 2.3 \times 10^{ -5 }$ & $ 2.8 \times 10^{ 2 }$ \\
-  $    10^{ 8 }$ & 600 & 0.1 & 50 & $ 6.0 \times 10^{ -5 }$ & 56 \\
+ & & & $\Gamma = 0.1$ & & & & & & \\
   \hline
-
+  $    10^{ 6 }$ & 1200  & 100 & $ 5.9 \times 10^{ -8 }$ & $ 1.0 \times 10^{ 6 }$ \\
+  $    10^{ 7 }$ & 1200  & 100 & $ 5.1 \times 10^{ -7 }$ & $ 9.4 \times 10^{ 4 }$ \\
+  $    10^{ 8 }$ & 1200 & 100 & $ 2.4 \times 10^{ -6 }$ & $ 2.1 \times 10^{ 4 }$ \\
+  $    10^{ 8 }$ & 1200  & 50 & $ 2.0 \times 10^{ -6 }$ & $ 3.1 \times 10^{ 4 }$ \\
+  $    10^{ 8 }$ & 1200  & 200 & $ 4.2 \times 10^{ -6 }$ & $ 8.4 \times 10^{ 3 }$ \\
+  $    10^{ 8 }$ & 1200  & 400 & $ 1.2 \times 10^{ -3 }$ & $\mathbf{4.6}$ \\
+  $    10^{ 8 }$ & 600  & 100 & $ 8.0 \times 10^{ -4 }$ & $\mathbf{1.6}$ \\
+  $    10^{ 6 }$ & 600  & 25 & $ 1.6 \times 10^{ -6 }$ & $ 1.6 \times 10^{ 3 }$ \\
+  $    10^{ 6 }$ & 600  & 50 & $ 1.7 \times 10^{ -5 }$ & $\mathbf{33}$ \\
+  $    10^{ 7 }$ & 600  & 25 & $ 8.5 \times 10^{ -6 }$ & $ 4.6 \times 10^{ 2 }$ \\
+  $    10^{ 7 }$ & 600  & 50 & $ 4.5 \times 10^{ -5 }$ & $\mathbf{21}$ \\
+  $    10^{ 8 }$ & 600  & 25 & $ 2.3 \times 10^{ -5 }$ & $ 2.8 \times 10^{ 2 }$ \\
+  $    10^{ 8 }$ & 600  & 50 & $ 6.0 \times 10^{ -5 }$ & 56 \\
+  $    10^{ 8 }$ & 300  & 50 & $ 6.0 \times 10^{ -5 }$ & 56 \\
+  \hline
 \label{table:models}  
 \end{tabular}
 \begin{tablenotes}
@@ -760,7 +763,7 @@ text.
 Our numerical results, summarized in Table \ref{table:models} and Figure XXX, allow us to study a range of CNM properties and to assess the validity of the analytic estimates from the previous section.  Cases for which $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)< 1$ at the stagnation radius are marked as `thermally unstable', as are cases for which the stagnation radius diverges and hence could not be resolved, resulting in their calculations being terminated.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
-temperature $T(r)$, and radial velocity $|v(r)|$, for the cusp
+temperature $T(r)$, and radial velocity $|v(r)|$ (expressed in units of the sound speed), for the cusp
 ($\Gamma=0.8$) solutions within our grid.  As expected, the gas
 density increases towards the SMBH $\rho\propto r^{-n}$ with
 $n\simeq1$, i.e. shallower than the $-3/2$ power law for
@@ -770,7 +773,7 @@ with the location of the break in the stellar light profile ($\rb=100$
 pc). The temperature profile is relatively flat at large radii, but
 increases as $\propto 1/r^{k}$ interior to the sphere of influence,
 where $k\lesssim 1$, somewhat shallower than expected for virialized gas within the black hole sphere of influence.
-The inwardly directed velocity increases towards the hole with a profile that is somewhat steeper than the local free-fall velocity $v \propto v_{\rm ff}\propto r^{-1/2}$.
+The inwardly directed velocity increases towards the hole with a profile that is somewhat steeper than the local free-fall velocity $v \propto v_{\rm ff}\propto r^{-1/2}$.  The flow near the stagnation radius is subsonic, but becomes supersonic at two critical points, one located at small radii, $r \lesssim 0.1r_{\rm s}$, and the other located at large radii, $r \gtrsim 10^{3}r_{\rm s}$.  In many cases the supersonic transition is instigated by the transition to a steeper stellar density prorfile exterior to the outer Nuker break radius, making our solutions near $r_{\rm s}$ also potentially sensitive to the break radius value.
 % {\bf BDM: I made this up - in general we need
 %   more explanation of what the plots are actually showing, with some
 %   physical explanation.}
