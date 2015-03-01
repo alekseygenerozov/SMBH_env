@@ -1176,13 +1176,22 @@ Realistic variations (``burstiness") in the star formation history will result i
 
 
 
+
 \section{Discussion}
 \label{sec:discussion}
 
 \subsection{Black Hole Accretion Rates}
 
-Figure \ref{fig:vwSources} shows that the heating associated with the average star formation history of a galaxy is approximately constant with SMBH mass, except for the largest black holes with $M_{\bullet} \gtrsim 5\times 10^{8}M_{\odot}$.  For a fixed wind heating parameter, the Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ increases $\propto M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  Figure \ref{fig:bh_growth} displays this dependence more directly, with solid lines showing the accretion rate as calculated from equation (\ref{eq:eddr}) using the wind heating rate calculated for each black hole mass (Fig.~\ref{fig:mdot_mass}).  This average accretion rate increases from $\dot{M} \sim 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ for low-mass black holes ($M_{\bullet} \sim 10^{6}M_{\odot}$) to $\dot{M} \sim 10^{-4}M_{\odot}$ yr$^{-1}$ for $M_{\bullet} \sim 10^{9}M_{\sun}$.  These accretion rates fall below the maximum thermally stable accretion rate $\dot{M}_{\rm TI}$ (yellow lines), except for the highest black hole masses $\sim 10^{9}M_{\odot}$, for which the average older stellar population supplies insufficient stellar wind heating while Ia supernovae are too rare near the stagnation radius to provide effective heating.  
+Figure \ref{fig:vwSources} shows that the heating associated with the average star formation history of a galaxy is approximately constant with SMBH mass, except for the largest black holes with $M_{\bullet} \gtrsim 5\times 10^{8}M_{\odot}$.  For a fixed wind heating parameter, the Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ increases $\propto M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  
 
+Figure \ref{fig:bh_growth} (top panel) shows with solid lines the accretion rate as a function of black hole mass for the average star formation heating, calculated from equation (\ref{eq:eddr_analytic}) using our results for the total wind heating (Fig.~\ref{fig:mdot_mass}).  This average accretion rate increases from $\dot{M} \sim 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ for low-mass black holes ($M_{\bullet} \sim 10^{6}M_{\odot}$) to $\dot{M} \sim 10^{-4}M_{\odot}$ yr$^{-1}$ for $M_{\bullet} \sim 10^{9}M_{\sun}$.  These fall below the maximum thermally stable accretion rate $\dot{M}_{\rm TI}$ (yellow lines), except at the highest black hole masses $\sim 10^{9}M_{\odot}$, for which the older stellar population supplies insufficient stellar wind heating and SN Ia are too rare near the stagnation radius.  In fact, for these highest mass black holes, the maximum accretion rate set by SN Ia blow-out (green lines; eq.~[\ref{eq:eddr_Ia}]) could cap the accretion rate below the thermally-unstable value, provided that the Ia heating efficiency is sufficiently high that $v_{\rm w}^{\rm Ia} \gg \sqrt{2}\sigma \sim 400$ km s$^{-1}$ (see discussion just preceeding eq.~[\ref{eq:eddr_Ia}]).  For lower mass black holes, the maximum Ia accretion rate is significantly higher and cannot prevent thermally unstable flows, i.e. $\dot{M}_{\rm Ia} > \dot{M}_{\rm TI}$.  Finally, also shown for comparison in Figure \ref{fig:bh_growth} (top panel) is the accretion rate onto SgrA* estimated by \citet{Quataert04} and the upper limit onto NGC3115 set by \citealt{Shcherbakov+14}.
+
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{mdot_sfr.pdf}
+\caption{\label{fig:bh_growth} {\it Top panel:} Critical values of the black hole accretion rate $\dot{M}$ in Eddington units as a function of black hole mass $M_{\bullet}$, shown separately for core ($\Gamma=0.1$, solid lines) and cusp galaxies ($\Gamma=0.8$, dot-dashed lines).  Black lines show the accretion rate calculated from equation (\ref{eq:eddr_analytic}) using the stellar wind calculated for the average star formation histories for each galaxy mass (Fig.~\ref{fig:vwSources}).  Green lines show the maximum accretion set by Ia supernovae blow-out (\ref{eq:eddr_Ia}).  Red lines show the Compton-regulated accretion rate (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum accretion rate for a thermally stable flow near the stagnation radius (eq.~[\ref{eq:Mdotmax}]).  {\bf BDM: add SgrA* numbers derived by quataert, NGC3115 from Roman} {\it Bottom panel:} Growth times $\Mbh/\Mdot$ in units
+  of the Hubble time $\th$ for each of the accretion rates shown in the top panel.}
+\end{figure}
 
 \subsection{Nuclear X-ray Luminosities}
 \label{sec:mdot}
@@ -1224,17 +1233,11 @@ Also clear from our results are that black holes accreting in AGN phase cannot b
 
 \subsection{Steady Accretion versus Cyclic Outbursts}
 
+Figure \ref{fig:bh_growth} shows that across all black hole masses, Compton heating alone cannot prevent thermal instabilities ($\dot{M}_{\rm C} > \dot{M}_{\rm TI}$), as will described more below.  
+
 GALEX observations have shown that a small fraction of early-type galaxies in the local universe have undergone recent ($< 1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).  
 
 \subsection{Demographics of SMBHs}
-
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{mdot_sfr.pdf}
-\caption{\label{fig:bh_growth} {\it Top panel:} Critical values of the black hole accretion rate $\dot{M}$ in Eddington units as a function of black hole mass $M_{\bullet}$, shown separately for core ($\Gamma=0.1$, solid lines) and cusp galaxies ($\Gamma=0.8$, dot-dashed lines).  Black lines show the accretion rate calculated from equation (\ref{eq:eddr_analytic}) using the stellar wind calculated for the average star formation histories for each galaxy mass (Fig.~\ref{fig:vwSources}).  Green lines show the maximum accretion set by Ia supernovae blow-out (\ref{eq:eddr_Ia}).  Red lines show the Compton-regulated accretion rate (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum accretion rate for a thermally stable flow near the stagnation radius (eq.~[\ref{eq:Mdotmax}]).  {\it Bottom panel:} Growth times $\Mbh/\Mdot$ in units
-  of the Hubble time $\th$ for each of the accretion rates shown in the top panel.}
-\end{figure}
-
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{miller.pdf}
@@ -1316,6 +1319,8 @@ stagnation radius and makes use of equations~(\ref{eq:Tanalytic}) and
 prefactor may be slightly different.
 
 \subsection{TDE Jets}
+
+Our results on SMBH accretion rates.  
 
 Plot showing final lorentz factor after the reverse shock crossing as a function of BH mass, using average star formation history.  place J1644+57 on the plot.
 
