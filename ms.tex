@@ -1091,7 +1091,7 @@ For low mass black holes, stellar heating is the most important on timescales of
 A single burst of star formation does not describe the average star formation histories of most galaxies.  Qualitatively,
 smaller galaxies will on average have more recent star formation, resulting in energetic young stellar winds and supernovae which dominate the energy budget.  Massive galaxies, on the other hand, will on average possess older stellar populations, with their heating rates dominated by SN Ia (on large radial scales) and SMBH feedback.  We estimate the average value of $\vwO$ as a function of SMBH mass for each heating source by calculating its value using the average cosmic star formation histories of \citet{MosterNaab+:2013a}.  Appendix \ref{app:windheat} describes how the average star formation history is used to determine the stellar wind heating $v_{\rm  w}^{\star}$ and mass return parameter $\eta$ as a function of $M_{\bullet}$ (Fig.~\ref{fig:eta}; top panel).  Star formation histories are also convolved with the Ia DTD distribution to determine the SN Ia heating.  
 
-Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating source (stars, MSPs, SNe Ia, and black hole feedback) calculated for the average star formation history of galaxies containing a given black hole mass.  Again, Ia heating is suppressed in low mass galaxies because the Ia radius exceeds the nominal stagnation radius, with $r_{\rm Ia}/r_{\rm s}$ shown in Fig. ~\ref{fig:eta} (bottom panel).  MSP heating is again found to be negligible for all black hole masses.  The younger stellar populations characterizing galaxies with $\Mbh\lsim 5\times 10^{8} \Msun$ results in stellar wind and Ia heating being dominant, with $v_{w}^{\star} \sim 1000$ km s$^{-1}$ and $v_w^{\rm Ia} \sim 500$ km s$^{-1}$, respectively.  Only for the most massive galaxies $\Mbh\gsim 5\times 10^{8} \Msun$ does the lack of younger stellar populations significantly reduces the role of stellar wind heating.   Solid and dashed lines again show black hole masses for which the flow is thermally stable and thermally unstable, respectively, with $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ as a function of $M_{\bullet}$ shown in the bottom panel.  Strikingly, {\it we find that galactic nuclei experiencing the same average star formation history as their host galaxies produce thermally stable flows across most black hole masses}.  
+Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating source (stars, MSPs, SNe Ia, and black hole feedback) calculated for the average star formation history of galaxies containing a given black hole mass.  Again, Ia heating is suppressed in low mass galaxies because the Ia radius exceeds the nominal stagnation radius (bottom panel).  MSP heating is again found to be negligible for all black hole masses.  The younger stellar populations characterizing galaxies with $\Mbh\lsim 5\times 10^{8} \Msun$ results in stellar wind and Ia heating being dominant, with $v_{w}^{\star} \sim 1000$ km s$^{-1}$ and $v_w^{\rm Ia} \sim 500$ km s$^{-1}$, respectively.  Only for the most massive galaxies $\Mbh\gsim 5\times 10^{8} \Msun$ does the lack of younger stellar populations significantly reduces the role of stellar wind heating.   Solid and dashed lines again show black hole masses for which the flow is thermally stable and thermally unstable, respectively, with $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ as a function of $M_{\bullet}$ shown in the bottom panel.  Strikingly, {\it we find that galactic nuclei experiencing the same average star formation history as their host galaxies produce thermally stable flows across most black hole masses}.  
 
 Realistic variations (``burstiness") in the star formation history will result in lower heating rates.  Figure \ref{app:windheat}  shows the heating rate as a function of average black hole mass also for cases in which the current ($z = 0$) star formation is suppressed by a factor $\epsilon_{\rm burst}$ from its average $z = 0$ value for a characteristic timescale $\tau_{\rm var}$ (for details, see Appendix \ref{fig:}).  For low values of $\tau_{\rm var} \lesssim 10^{7}$ yr we see that $v_{w}^{\star}$ is reduced by at most a factor of $\sim 2$ from its average value, even for very small values of $\epsilon_{\rm burst}=$... , while for $\tau_{\rm var} \gtrsim 10^{8}$ yr, wind heating is reduced significantly.  We conclude that variations in the nuclear star formation rate on timescales short compared to the dynamical timescale of the galaxy are unlikely to significantly affect our results.  {\bf BDM: augment/fix this - its just schematic till nick provides his figure}
 
@@ -1102,22 +1102,21 @@ Realistic variations (``burstiness") in the star formation history will result i
 
 
 \begin{figure}
+\includegraphics[width=\columnwidth]{vwSources.pdf}
+\caption{\label{fig:vwSources} {it Top Panel:} Sources contributing to the total heating rate of the CNM, $\vwO$ ({\it black}), including stellar wind heating ({\it orange}), Ia supernovae ({\it green}), millisecond pulsars ({\it blue}), and compton heating ({\it pink}).  Each heating source varies with black hole mass $\Mbh$ calculated for average star formation histories from
+  \citet{MosterNaab+:2013a} (see Appendix~\ref{app:windheat} for details).  {\it Bottom Panel:} The
+  ratio of the total heating rate ($\dot{q}_{\rm heat} \propto v_{w}^{2}$) from the top panel to the radiating cooling rate
+  ($|\dot{q}_{\rm rad}|$) at the stagnation radius.  Dashed lines and red color show the thermally unstable region defined by $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| < 1$, for which the assumption of steady-state flow would be violated.  {\bf BDM: remove the red - its tacky and will vary based on core/cusp.  Draw a dashed line across at heating ratio of 1.  change y axis labels!  move stars label in top panel}}
+\end{figure}
+
+
+\begin{figure}
 \includegraphics[width=\columnwidth]{eta.pdf}
 \includegraphics[width=\columnwidth]{rs_rIa.pdf}
 \caption{\label{fig:eta} {\it Top panel:} Parameter $\eta$ characterizing stellar mass
   loss rate (eq.~[\ref{eq:q}]) as a function of black hole mass
   $\Mbh$, calculated for average star formation histories from
   \citet{MosterNaab+:2013a} (see Appendix~\ref{app:windheat} for details).  {\it Bottom panel:} Ratio of Ia radius to stagnation radius as a function of $\Mbh$.  The Ia radius calculated from equation~\eqref{eq:rIa} based on convolving the average star formation histories with the SN Ia DTD.  The stagnation radius is calculated from \eqref{eq:stag_simple} using the total heating rate for each $\Mbh$ shown in the top panel. }
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{vwSources.pdf}
-\caption{\label{fig:vwSources} {it Top Panel:} Sources contributing   to the heating rate of the CNM, $\vwO$, including stellar wind heating ({\it orange}), Ia supernovae ({\it green}), millisecond pulsars ({\it blue}), and compton heating ({\it pink}).  Each heating source varies with black hole mass $\Mbh$ due to the different
-  average star formation history of galaxies of a given halo mass (see
-  Appendix~\ref{app:windheat} for the detailed description). The total
-  heating rate is shown in black. {\it Bottom Panel:} The
-  ratio of the total heating rate ($\dot{q}_{\rm heat} \propto v_{w}^{2}$) from the top panel to the radiating cooling rate
-  ($|\dot{q}_{\rm rad}|$) at the stagnation radius.  Dashed lines and red color show the thermally unstable region defined by $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| < 1$, for which the assumption of steady-state flow would be violated.  {\bf BDM: remove the red - its tacky and will vary based on core/cusp.  Draw a dashed line across at heating ratio of 1.  change y axis labels!  move stars label in top panel}}
 \end{figure}
 
 
@@ -1182,7 +1181,11 @@ Realistic variations (``burstiness") in the star formation history will result i
 \subsection{Nuclear X-ray Luminosities}
 \label{sec:mdot}
 
-The X-ray luminosities of galactic nuclei provide a powerful diagnostic of the SMBH accretion rates and how they vary across different galaxy properties and SMBH masses (e.g.,  \citealt{Ho08}  and references therein).  Figure \ref{fig:vwSources} shows that the heating associated with the average star formation history of a galaxy is approximately constant with SMBH mass, except for the largest black holes with $M_{\bullet} \gtrsim 5\times 10^{8}M_{\odot}$.  For a fixed wind heating parameter, the Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ increases $\propto M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  This dependence, shown directly in Figure XXX, appears to contradict the observed behavior of the nuclear X-ray luminosities of quiescent galaxies, which (though showing several orders of magnitude scatter) instead on average obey $\langle L_X/L_{\rm edd}\rangle \sim \Mbh^\alpha$, where $\alpha \in [-0.4,-0.2]$ \citep{Zhang+09, Pellegrini10, Gallo+10, Miller+15}.   
+The X-ray luminosities of galactic nuclei provide a powerful diagnostic of the SMBH accretion rates and how they vary across different galaxy properties and SMBH masses (e.g.,  \citealt{Ho08}  and references therein).  Figure \ref{fig:vwSources} shows that the heating associated with the average star formation history of a galaxy is approximately constant with SMBH mass, except for the largest black holes with $M_{\bullet} \gtrsim 5\times 10^{8}M_{\odot}$.  For a fixed wind heating parameter, the Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ increases $\propto M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  
+
+This dependence is shown more directly in Figure \ref{fig:bh_growth}, where we plot the 
+
+appears to contradict the observed behavior of the nuclear X-ray luminosities of quiescent galaxies, which (though showing several orders of magnitude scatter) instead on average obey $\langle L_X/L_{\rm edd}\rangle \sim \Mbh^\alpha$, where $\alpha \in [-0.4,-0.2]$ \citep{Zhang+09, Pellegrini10, Gallo+10, Miller+15}.   
 
 Figure~\ref{fig:miller} shows our predictions for $\langle L_{X} \rangle =\epsilon_X \epsilon_{\rm bol} \dot{M} c^2$ in Eddington units as a function of black hole mass for core (blue) and cusp (green) galaxies, where $\epsilon_{\rm bol} = L_{X}/L_{\rm bol}= 0.1$ is the assumed bolometric correction appropriate for low luminosity AGN (\citealt{Ho08}).  The left panel is calculated assuming a constant low value for the radiative efficiency $\epsilon_X = 10^{-4}$, typical of those estimated for low luminosity AGN (e.g., \citealt{Ho:2009a}) and SgrA* (e.g.,
 \citealt{Quataert+99}).  The luminosity shown in the right
@@ -1221,6 +1224,14 @@ Also clear from our results are that black holes accreting in AGN phase cannot b
 GALEX observations have shown that a small fraction of early-type galaxies in the local universe have undergone recent ($< 1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).  
 
 \subsection{Demographics of SMBHs}
+
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{mdot_sfr.pdf}
+\caption{\label{fig:bh_growth} {\it Top panel:} Various critical values of the black hole accretion rate $\dot{M}$ in Eddington units as a function of black hole mass $M_{\bullet}$, shown separately for core ($\Gamma=0.1$, solid lines) and cusp galaxies ($\Gamma=0.8$, dot-dashed lines).  Black lines show the accretion rate calculated from equation (\ref{eq:eddr}), according to the total stellar wind heating due to the average star formation histories from \citet{MosterNaab+:2013a} (see Appendix~\ref{app:windheat} for details).  Green lines show the maximum accretion set by Ia supernovae blow-out (\ref{eq:eddr_Ia}).  Red lines show the Compton-regulated accretion rate (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum accretion rate for a thermally stable flow near the stagnation radius (eq.~[\ref{eq:Mdotmax}]).  {\it Bottom panel:} Growth times $\Mbh/\Mdot$ in units
+  of the Hubble time $\th$ for each of the accretion rates shown in the top panel.}
+\end{figure}
+
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{miller.pdf}
@@ -1277,18 +1288,6 @@ history at each $\Mbh$ (see Figure~\ref{fig:vwSources}
 and~\ref{fig:eta}). Core and cusp galaxies are shown in green and blue
 respectively.  We also plot the maximum growth time for thermal
 instability from equation~\eqref{eq:tgrow_min} in purple.
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{mdot_sfr.pdf}
-\caption{\label{fig:bh_growth} {\it Bottom panel:} Growth times $\Mbh/\Mdot$ in units
-  of the Hubble time $\th$ for core ($\Gamma=0.1$, solid black) and
-  cusp galaxies ($\Gamma=0.8$, dash-dotted black). These are calculated from
-  equation~\ref{eq:tgrow_analytic} with parameters chosen for the
-  average star formation history at each $\Mbh$. We also plot a lower
-  bound on growth time for a themally stable flow (yellow) from
-  equation~\eqref{eq:tgrow_min}.}
-\end{figure}
-
 
 \begin{itemize}
 \item{Fact that some low mass BHs appear to have nearly Eddington accretion rates, suggest an external origin - since the maximum Ia rate appears to be below this}
