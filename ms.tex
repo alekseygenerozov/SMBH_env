@@ -1042,7 +1042,7 @@ heat}^{3}$.  The resulting volumetric heating rate $\dot{e} = \epsilon_{\rm
 j}\dot{M}c^{2}/V_{\rm heat}$ near the stagnation radius results in a heating parameter given by
 \begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{2t_{\rm
 h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
-\rho_{\star}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
+\rho_{\star}|_{r_{s}}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
 j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
 &\approx& 300\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm j}}{10^{-6}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
 heat}}\right)^{1-\Gamma/2},
@@ -1181,6 +1181,7 @@ Realistic variations (``burstiness") in the star formation history will result i
 \label{sec:discussion}
 
 \subsection{Black Hole Accretion Rates}
+\label{sec:mdot}
 
 Figure \ref{fig:vwSources} shows that the heating associated with the average star formation history of a galaxy is approximately constant with SMBH mass, except for the largest black holes with $M_{\bullet} \gtrsim 5\times 10^{8}M_{\odot}$.  For a fixed wind heating parameter, the Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ increases $\propto M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  
 
@@ -1196,7 +1197,7 @@ Shown also for comparison in Figure \ref{fig:bh_growth} (top panel) is the accre
 \end{figure}
 
 \subsection{Nuclear X-ray Luminosities}
-\label{sec:mdot}
+\label{sec:Lx}
 
 The unresolved core X-ray luminosities of galactic nuclei provide a powerful diagnostic of the SMBH accretion rates and how they vary across different galaxy properties and SMBH masses (e.g.,  \citealt{Ho08}  and references therein).  Figure~\ref{fig:miller} shows our predictions for $\langle L_{X} \rangle =\epsilon_X \epsilon_{\rm bol} \dot{M} c^2$ in Eddington units as a function of black hole mass, where $\epsilon_{\rm bol} = 0.1$ is the approximate bolometric correction at X-ray energies appropriate for low luminosity AGN (\citealt{Ho08}).  We have averaged the accretion rate used in calculating $\langle L_X \rangle$ between the values for galaxies with core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) stellar density profiles using the average value of the inner density slope $\Gamma$ as a function of black hole mass as fit from the \citet{LauerFaber+:2007a} galaxy sample, an exercise that results in the relationship $\Gamma = ...$. {\bf BDM: fill in}   
 
@@ -1239,6 +1240,7 @@ The cyclic model predicts that high $L_{X}$ nuclei should be more common in gala
 
 
 \subsection{Local Growth Time of SMBHs }
+\label{sec:growth}
 
 Low-mass SMBHs in the local universe ($M_{\bullet} \lesssim 3\times 10^{7}M_{\odot}$) are observed to be growing on a timescale comparable to the age of the universe, while the most massive SMBHs with $M_{\bullet} \gtrsim 10^{9}M_{\odot}$ possess local growth times which are more than 2 orders of magnitude longer (\citealt{Heckman+04}; \citealt{Kauffmann&Heckman09}).  
 
@@ -1246,41 +1248,26 @@ The bottom panel of Figure~\ref{fig:bh_growth} shows the SMBH growth time, $t_{\
 
 Gas blow-out by SN Ia cannot prevent the growth of low-mass black holes, as indicated by the low growth times $\ll t_{\rm h}$ allowed by Ia heating (green lines), although Ia heating could play in principle a role in capping the growth rate of $\gtrsim 10^{8}M_{\odot}$ black holes, again depending on the efficiency of Ia heating.   
 
-
-If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm CI}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
-practice this should could manifest as a large increase in the stagnation radius, due an effective {\it decrease} in the effective heating rate.  This global ``instability" is not a true instability insofar as the gas does not necessarily clump locally into low-T clouds.
-
 \subsection{TDE Jets}
+\label{sec:TDE}
 
 Our results also have implications for the environments encountered by relativistic jets from TDEs.  For low-mass SMBHs  $M_{\bullet} \lesssim 10^{7}M_{\odot}$, characterizing those responsible for {\it Swift} J1644+57 (\citealt{Bloom:2011aa}), we predict gas densities of a $n \sim 0.3-3$ cm$^{-3}$ on radial scales of 0.3 pc for wind heating rates within the physically expected range $v_{\rm w} \sim 500-1000$ km s$^{-1}$ (Fig.~\ref{fig:profiles}).  These values are within the range estimated by modeling the radioa afterglow of {\it Swift} J1644+57 (\citealt{Metzger+12}, \citealt{Berger+12}).  In fact, the flattening of the density profile inferred by \citet{Berger+12} on radii scales $r \gtrsim 0.4$ pc (their Fig.~6) looks similar to that seen in our calculations of the gas density profile for core galaxies (Fig.~\ref{fig:profiles}, solid line).  The CNM density of the host of {\it Swift} J1644+57 was a factor of 30 times lower than that inferred by \citet{Quataert:2004a} for SgrA*, a fact we attribute to...{\bf BDM: whats going on?}  The implications of our models for CNM profiles for the diversity of radio emission from TDE jets will be explored further in future work.  
 
-\subsection{Jet Feedback}
+\subsection{Regulation by Kinetic Outflow Feedback}
+\label{sec:kinetic}
 
-We also note
-here that the kinetic heating rate is proportional to the SMBH mass to
-a positive power, $v_{w}^{\bullet} \propto M_{\bullet}^{1(0.5)}$ for
-core(cusp) galaxies, respectively. This dependence could have
-important implications for the dependence of the average nuclear X-ray
-luminosity of quiescent galaxies on the SMBH mass
-($\S\ref{sec:mdot}$).
+We focused on Compton radiative feedback in this paper, since its efficacy was straightforward to calculate in terms of the properties of the accretion flow.  However, if kinetic outflow feedback from the jet or accretion disk could is important, this could also have some influence on limiting the accretion rate, especially onto high mass black holes.  The effective wind heating velocity due to kinetic heating rate is proportional to the SMBH mass to a positive power, $v_{w}^{\bullet} \propto M_{\bullet}^{0.33(0.28)}$ for core(cusp) galaxies, respectively (eq.~[\ref{eq:vjet}]).  Coupled with the dependence of accretion rate on wind heating, $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{0.76(0.48)}v_{w}^{-3.8(-2.4)}$ (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]), SMBH heating of the formed we have adopted would lead to an Eddington ratio dependence $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{-0.5(-0.2)}$.  This prediction of an increasing Eddington ratio is in better with the observed dependence of $\langle L_{X}/L_{\rm edd} \rangle$ in elliptical galaxies (Fig.~\ref{fig:miller}), suggesting a possible explanation of stable accretion maintained by kinetic feedback as an alternative explanation for X-ray luminosities of elliptical galaxies.  On the other hand, our assumption that outflows heat the gas uniformly in volume is arbitrary and would need to more rigorously justified by numerical studies of how jets or disk outflows couple energy to their gaseous environment (Refs).  
 
-\subsection{Jet Power Correlation}
+%\subsection{Jet Power Correlation}
 
-Accretion rates onto SMBHs can in principle be estimated directly by
-assuming Bondi accretion and using high resolution X-ray observations
-to estimate the gas temperature and density near the Bondi radius.
-This technique has led to the intriguing conclusion that the Bondi
-accretion power correlates with the AGN jet power (e.g.,
-\citealt{AllenDunn+:2006a}; \citealt{Russell+13};
-\citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
-required to inflate the observed cavities within the X-ray emitting
-gas.  In practice is it almost never possible to resolve the Bondi
-radius, therefore requiring all such studies to extrapolate the
-observed gas temperature and density profiles to smaller radial
-scales.
+%Accretion rates onto SMBHs can in principle be estimated directly by assuming Bondi accretion and using high resolution X-ray observations to estimate the gas temperature and density near the Bondi radius.
+%This technique has led to the intriguing conclusion that the Bondi accretion power correlates with the AGN jet power (e.g.,
+%\citealt{AllenDunn+:2006a}; \citealt{Russell+13}; \citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
+%required to inflate the observed cavities within the X-ray emitting gas.  In practice is it almost never possible to resolve the Bondi radius, therefore requiring all such studies to extrapolate the observed gas temperature and density profiles to smaller radial scales.
 
 \subsection{Nuclear Star Clusters}
 
+Our results could in principle also have implications for nuclear star clusters or globular clusters.  {\bf BDM :Do we really want to talk about this?  or is this an apology? I will let Aleksey fill in his ideas...}
 
   
 
@@ -1444,6 +1431,10 @@ stagnation radius and makes use of equations~(\ref{eq:Tanalytic}) and
 (\ref{eq:rhors2}).  We thus see that the condition $\tilde{v}_{w} \gtrsim v_{\rm
   crit}$ is also the condition for local instability, although the
 prefactor may be slightly different.
+
+
+If cooling becomes important in the flow ($\tilde{v}_{w} < v_{\rm CI}$), it may lead to thermal instabilities.  There are two kinds of ``instabilities", global and local.  The global instability is simply that, if cooling becomes very rapid, the gas loses thermal pressure and starts to inflow faster, i.e. the entire CNM accretes.  In
+practice this should could manifest as a large increase in the stagnation radius, due an effective {\it decrease} in the effective heating rate.  This global ``instability" is not a true instability insofar as the gas does not necessarily clump locally into low-T clouds.
 
 
   We have calculated steady-state models for circumnuclear medium of a
