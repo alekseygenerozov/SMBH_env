@@ -166,41 +166,44 @@ while
 Generalizing to an arbitrary star formation history $S(t)$, the total rate of mass and energy input can be written as
 \begin{align} 
   \dot{M}(t) &= \int_0^t S(t_1) \dot{\bar{m}}(t-t_1){\rm
-      d}t_1\\
+      d}t_1 \label{eq:MDotSFH}\\
   \dot{E}(t) &= \int_0^t S(t_1) \dot{\bar{e}}(t-t_1){\rm
-      d}t_1,\\
+      d}t_1, \label{eq:EDotSFH}
 \end{align}
 resulting in a wind heating parameter of 
 \begin{align}
   v_w^2(t) &=2 \dot{E}(t)/\dot{M}(t).
 \end{align}
-
 The mass return parameter will be
-
 \begin{align}
 \eta = \frac{\dot{M}(t)}{\int_0^t S(t_1) {\rm d}t_1} \th
 \end{align}
-
-% \begin{figure}
-% \includegraphics[width=\columnwidth]{vw.pdf}
-% \caption{\label{NickPlot2} Effective wind velocities $V_{\rm w}$ for
-% different $S(t)$.  The yellow and orange curves are the Moster SF
-% histories, with and without Type II SNe, respectively.  The red,
-% purple, and blue curves are Moster SFs convolved with a $\sin^2(t)$
-% function normalized to $10^7$, $10^8$, and $10^9$ yr fluctuations,
-% respectively.  These solid curves lack SN, but the dashed purple curve
-% possesses it.  Effective $V_{\rm w}$ is strongly diminished when the
-% variability timescale is greater than $\sim$ twice the duration of
-% high-velocity winds.}
-% \end{figure}
-
+ \begin{figure}
+ \includegraphics[width=\columnwidth]{NickPlot2.pdf}
+ \caption{\label{NickPlot2} Effective wind velocities for
+ nonstandard star formation histories.  The black curve shows, for reference, $v_{\rm w}$ calculated using the halo-averaged $S(t)$.  Other colors show the effective wind velocities $\mathcal{V}_{\rm w}$ computed using convolved star formation histories $\mathcal{S}(t)$.  The purple curve shows a recent drop in the star formation rate, i.e. $t_{\rm scale}=10^6~{\rm yr}$.  The blue and red curves show $t_{\rm scale}=10^7~{\rm yr}$ and $t_{\rm scale}=10^8~{\rm yr}$, respectively; longer scale times look quite similar to the red curves.  Dashed, dotted, and dot-dashed line styles show star formation rates that have declined to fractions $\epsilon = 0.001$, $\epsilon = 0.1$, and $\epsilon = 0.3$ of their halo-averaged values, respectively. }
+ \end{figure}
 We estimate the stellar wind heating provided by the {\it average}
 star formation history of galaxies of a given $\Mbh$ using the results
-of \citet{MosterNaab+:2013a} (their eqs.~[17]-[20]).  Note that the
+of \citet[eqs.~17-20]{MosterNaab+:2013a}.  Note that the
 star formation histories in \citet{MosterNaab+:2013a} are in terms of
 halo mass. For a given $\Mbh$ we assign the halo mass whose star
 formation history would produce a bulge consistent with the
-$\Mbh-M_{\rm bulge}$ relationship from \citet{McConnellMa:2013a}.
+$\Mbh-M_{\rm bulge}$ relationship from \citet{McConnellMa:2013a}.  A slight complication occurs for the largest mass halos, where much of the $z=0$ stellar mass has been acquired through accretion of satellite halos rather than {\it in situ} star formation.  To accomodate this, we use analytic fits for mass accretion histories $A(t)$, also taken from \citet[eqs.~21-23]{MosterNaab+:2013a}, and replace $S(t) \rightarrow S(t)+A(t)$ in Eqs. \ref{eq:MDotSFH} and \ref{eq:EDotSFH}. 
+
+Figure \ref{NickPlot2} shows how the wind heating varies as star formation histories deviate from their halo-averaged values.  In particular, we show
+\begin{align} 
+  \dot{\mathcal{M}}(t) &= \int_0^t \mathcal{S}(t_1) \dot{\bar{m}}(t-t_1){\rm
+      d}t_1\\
+  \dot{\mathcal{E}}(t) &= \int_0^t \mathcal{S}(t_1) \dot{\bar{e}}(t-t_1){\rm
+      d}t_1,\\
+  \mathcal{V}_w^2(t) &=2 \dot{\mathcal{E}}(t)/\dot{\mathcal{M}}(t).
+\end{align}
+In these equations, 
+\begin{equation}
+\mathcal{S}(t) = S(t) \times \left(\frac{2}{\pi}(1-\epsilon)\arctan(t/t_{\rm scale}) + \epsilon \right).
+\end{equation}
+This function convolves the recent ($z \approx 0$) halo-averaged star formation history with local variation to give a more pessimistic estimate for the value of $\tilde{v}_{\rm w}$.  In particular, replacing $S(t)$ with $\mathcal{S}(t)$ reduces the recent star formation rate to a fraction $\epsilon$ of its halo-averaged value, and does so for a characteristic time $t_{\rm scale}$ into the past.  As we can see in Fig. \ref{NickPlot2}, this dramatically lowers the effective wind speed when both $t_{\rm scale} \gtrsim 10^7 ~{\rm yr}$ and $\epsilon \lesssim 0.1$, but otherwise has too modest of an effect to change the thermal stability properties of the flow (although the location of $r_{\rm s}$ and the value of $\dot{M}$ may change significantly).
 
  % Figure \ref{NickPlot2} shows the resulting $v_{\rm W}$ as a function of SMBH mass.  For comparison we also show cases in which the star formation rate is modulated sinuisoidally from its average value.   It seems that ``bumpy'' SF histories severely diminish $v_{\rm w}$ if the timescale for SF variability is a factor of a few or more greater than the duration of high-velocity winds (either 10 or 40 Myr). {\bf AG: this plot still uses the old ad hoc vw
   % prescription? If so it would need to be fixed. In any case, we still
