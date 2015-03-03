@@ -3,7 +3,7 @@ Here we derive an analytic expression for the steady-state stagnation radius $r_
 \begin{align}
 T\dsdr=\frac{\Q}{\rho v} \label{eq:ss_entropy}
 \end{align}
-By definition, the velocity $v$ goes to zero at the stagnation radius.  In order to avoid the entropy derivate from diverging, the numerator of (\ref{eq:ss_entropy}) must also goto zero at $r_{\rm s}$, implying that
+By definition, the velocity $v$ goes to zero at the stagnation radius.  In order to avoid the entropy derivate from diverging, the numerator of (\ref{eq:ss_entropy}) must also go to zero at $r_{\rm s}$, implying that
 \begin{align}
  \frac{\gamma}{\gamma-1} \frac{p|_{\rs}}{\rho|_{\rs}}=\frac{\vw^{2}|_{\rs}}{2} \Rightarrow \frac{\kb T|_{\rs}}{\mu \mp}=\gammafi \frac{\vw^{2}|_{\rs}}{2} .
 \label{eq:appTanalytic}
@@ -13,7 +13,7 @@ Combining (\ref{eq:ss_entropy}) with the first law of thermodynamics,
 T\dsdr =& \frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho} = \\
 & 
 \frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{\densSlope}{\rs}  \frac{p|_{\rs}}{\rho|_{\rs}}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
- \label{eq:first_law}
+% \label{eq:first_law}
 \end{align}
 where $\densSlope\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule, yielding
 %\begin{align}
