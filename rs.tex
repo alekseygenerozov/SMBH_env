@@ -12,10 +12,10 @@ Combining (\ref{eq:ss_entropy}) with the first law of thermodynamics,
 \begin{align}
 T\dsdr =& \frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho} = \\
 & 
-\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{n}{\rs}  \frac{p|_{\rs}}{\rho|_{\rs}}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
+\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{\densSlope}{\rs}  \frac{p|_{\rs}}{\rho|_{\rs}}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
  \label{eq:first_law}
 \end{align}
-where $n\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule, yielding
+where $\densSlope\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule, yielding
 %\begin{align}
  % &\lim_{r \rightarrow \rs} A=\frac{\lim_{r \rightarrow \rs}
   %  \frac{d}{dr}\left[q (r)\left(\ke -\gammaf
@@ -39,51 +39,65 @@ $\Menc=\Mbh+\Mstar$, and assuming $\Mstar \sim r^{2-\Gamma}$, we find that
 Substituting this expression back into equation (\ref{eq:first_law}) and using equation (\ref{eq:appTanalytic}) gives
 \begin{align}
 &\frac{\gamma+1}{\gamma-1}
-\left.\ddr{(p/\rho)}\right|_{\rs}+ \frac{\gamma-1}{\gamma} \frac{n}{\rs} \vw|_{\rs}^{2} = (2-\Gamma) \frac{G
+\left.\ddr{(p/\rho)}\right|_{\rs}+ \frac{\gamma-1}{\gamma} \frac{\densSlope}{\rs} \vw|_{\rs}^{2} = (2-\Gamma) \frac{G
   \Mstar|_{\rs}}{2 \rs^2} -\frac{G \Menc|_{\rs}}{2 \rs^2}.  \label{eq:rs1}
 \end{align}
 A second equation results from evaluating the momentum equation (eq.~[\ref{eq:dvdt}]) at the stagnation point
 \begin{align}
 &\frac{1}{\rho}\dpdr=- \frac{G\Menc}{\rs^2} \Rightarrow
 &\ddr{(p/\rho)}+\frac{p}{\rho}
-\underbrace{\frac{d\log(\rho)}{dr}}_{-n/r} = -\frac{G \Menc}{\rs^2} \label{eq:HSE}
+\underbrace{\frac{d\log(\rho)}{dr}}_{-\densSlope/r} = -\frac{G \Menc}{\rs^2} \label{eq:HSE}
 \end{align}
 Finally, combining equations (\ref{eq:rs1}) and (\ref{eq:HSE}) gives 
+
 \begin{align}
-\rs=\frac{G \Mbh}{n \vw^{2}|_{\rs}}\left(\frac{9-\Gamma-2n}{2} \frac{\Mstar|_{\rs}}{\Mbh} +\frac{7}{2}-n\right),
-\label{eq:rs2main}
+\rs=\frac{G \Mbh}{\densSlope \vw^{2}|_{\rs}}\left(\frac{9-\Gamma}{2}
+  \frac{M_{\star}|_{\rs}}{\Mbh} +\frac{7}{2}\right),
 \end{align}
 where we have assumed $\gamma=5/3$.
 
-Defining $\eta \equiv \vwO/\sigma_{\rm soi}$, this relationship can be reparameterized as follows:
+In terms of just the additional wind heating parameter, $v_w$,
+
 \begin{align}
-  \frac{\rs}{\rsoi}=\frac{1}{2 \zeta^2 n}\left[
-   \frac{\Mstar|_{\rs}}{\Mbh}\left(\frac{9-\Gamma}{2}-n\right)+\left(\frac{7}{2}-n\right)\right]
+\rs=\frac{G \Mbh}{\densSlope v_w^{2}|_{\rs}}\left[\left(\frac{9-\Gamma}{2} -\densSlope\right) \frac{\Mstar|_{\rs}}{\Mbh} +\frac{7}{2}-\densSlope\right].
+\label{eq:rs2main}
+\end{align}
+
+
+Defining $\eta \equiv \vwO/\sigma_{\rm soi}$, this relationship can be
+reparameterized as follows:
+\begin{align}
+  \frac{\rs}{\rsoi}=\frac{1}{2 \zeta^2 \densSlope}\left[
+    \frac{\Mstar|_{\rs}}{\Mbh}\left(\frac{9-\Gamma}{2}-\densSlope\right)+\left(\frac{7}{2}-\densSlope\right)\right]
 \end{align}
 
 %{\bf AG: Note that I have taken sigmainf=2 G Mbh/rinf. Commented out
 %equations have sigmainf=G Mbh/rinf}. 
 For cusp galaxies ($\Gamma\simeq1$) we have $\Mstar|_{\rs}/\Mbh=x$, $A=4$, and $B=7/2$ for $\gamma = 5/3$, such that 
 \begin{align}
-\x=\frac{7-2n}{4\zeta^2 n+2n-8}
-%\x=\frac{7-2n}{2\zeta^2 n+2n-8}
+\x=\frac{7-2\densSlope}{4\zeta^2 \densSlope+2\densSlope-8}
+%\x=\frac{7-2\densSlope}{2\zeta^2 \densSlope+2\densSlope-8}
 \end{align}
-In the limit of zero wind heating $\eta \rightarrow 0$, no solution for $r_{\rm s}$ exists unless the gas density profile at the stagnation radius is steep, 3.5 $<$ n $<$ 4.  
+In the limit of zero wind heating $\eta \rightarrow 0$, no solution
+for $r_{\rm s}$ exists unless the gas density profile at the
+stagnation radius is steep, 3.5 $<\densSlope<$ 4.
 
 For core galaxies ($\Gamma \simeq 0$) with $\Mstar/\Mbh=x^2$, A=9/2,
 and B=7/2, the stagnation radius instead obeys a quadratic equation
 \begin{align}
-\x=\frac{\zeta^2 n \pm \sqrt{\zeta^4 n^2 - \left(\frac{9}{2}-n\right)
-    \left(\frac{7}{2}-n\right)}}{\left(\frac{9}{2}-n\right)}
-%\x=\frac{\zeta^2 n \pm \sqrt{\zeta^4 n^2 - 4 \left(\frac{9}{2}-n\right)
-%\left(\frac{7}{2}-n\right)}}{2 \left(\frac{9}{2}-n\right)}
+\x=\frac{\zeta^2 \densSlope \pm \sqrt{\zeta^4 \densSlope^2 - \left(\frac{9}{2}-\densSlope\right)
+    \left(\frac{7}{2}-\densSlope\right)}}{\left(\frac{9}{2}-\densSlope\right)}
+%\x=\frac{\zeta^2 \densSlope \pm \sqrt{\zeta^4 \densSlope^2 - 4 \left(\frac{9}{2}-\densSlope\right)
+%\left(\frac{7}{2}-\densSlope\right)}}{2 \left(\frac{9}{2}-\densSlope\right)}
 \label{eq:rstag}
 \end{align}
-In this case no solution exists in the zero heating limit ($\zeta \rightarrow 0$) unless $3.5<n<4.5$.
+In this case no solution exists in the zero heating limit ($\zeta
+\rightarrow 0$) unless $3.5<\densSlope<4.5$.
 
-When $\Mstar << \Mbh$ at the stagnation radius, the relationship between $\rs$ and $\vw$ is greatly simplified. 
+When $\Mstar << \Mbh$ at the stagnation radius, the relationship
+between $\rs$ and $\vw$ is greatly simplified.
 \begin{align}
-\rs=\frac{7}{2}\frac{G \Mbh}{n \vw^2},
+\rs=\frac{7}{2}\frac{G \Mbh}{\densSlope \vw^2},
 \end{align}
 where the pre-factor on the right-hand side corresponds to
 $\gamma=5/3$ and $\Gamma=1$ or 0.  
@@ -93,4 +107,4 @@ $\gamma=5/3$ and $\Gamma=1$ or 0.
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "ms"
-%%% End:
+%%% Ennd:
