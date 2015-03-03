@@ -590,18 +590,24 @@ Our analytic derviations neglect the effects of heat conduction, an assumption w
 \begin{align}
   \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
-T|_{r_{\rm s}}^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}|_{r_{\rm s}} \tilde{v}_{w}^{2}(1+\phi)}
+T|_{r_{\rm s}}^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}|_{r_{\rm s}}
+\tilde{v}_{w}^{2}}
+ \left(\frac{1}{1+\frac{\kappa_0 T^{7/2}|_{r_{\rm s}}}{5 \rs
+    \phi \rho c_s^3}}\right)
 \nonumber \\ &\sim {\rm min}
   \begin{cases}
-  10 \eta_{0.02}^{-1}
+  20 \eta_{0.02}^{-1}
 M_{\bullet,8}^{-0.8} v_{500}^{6.8} &  \text{unsaturated (core)}\\
- 10 \eta_{0.02}^{-1}
+ 20 \eta_{0.02}^{-1}
 M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
-  1.0(\phi/0.1)/(2-\Gamma) & \text{saturated},
+  2 \phi & \text{saturated},
   \end{cases}
  \label{eq:conduction}
 \end{align}
-where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim 1/r_{\rm s}^{2}$, $\nabla \sim 1/r_{\rm s}$.  We have approximated the stellar density profile as (eq.~[\ref{eq:rhostar}])
+where the second equality makes use of equations (\ref{eq:Tanalytic}),
+(\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim
+1/r_{\rm s}^{2}$, $\nabla \sim 1/r_{\rm s}$.  We have approximated the
+stellar density profile as (eq.~[\ref{eq:rhostar}])
 \begin{eqnarray}
   \rho_{\star}|_{r_{\rm s}} &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
  &\approx& \begin{cases}
@@ -612,25 +618,62 @@ where the second equality makes use of equations (\ref{eq:Tanalytic}), (\ref{eq:
   \end{cases}
   \label{eq:rhostarrs}
 \end{eqnarray}
-where the stagnation radius is assume to reside well inside the Nuker break radius.  Equation (\ref{eq:conduction}) shows that even in the case of saturated conduction, the neglect of heat conduction results in at most an order unity correction for expected values of the saturation parameter $\phi < 0.1$, justifying its neglect in our analysis.  Numerical experiments including conductivity confirm this ($\S\ref{sec:numerical}$). 
+where the stagnation radius is assume to reside well inside the Nuker
+break radius.  Equation (\ref{eq:conduction}) shows that even in the
+case of saturated conduction, the neglect of heat conduction results
+in at most an order unity correction for expected values of the
+saturation parameter $\phi < 0.1$, justifying its neglect in our
+analysis.  Numerical experiments including conductivity confirm this
+($\S\ref{sec:numerical}$). {\bf AG: If we make this statement then we
+  should be sure to include the numerical experiments. The original
+  formula was not correct for the saturated case. The numerical values
+also changed somewhat. I would appreciate it if someone could double
+check this. Also note that there is a weak core/cusp dependence in the
+saturated case which I have chosen not to include.}
+
+
+
 
 \subsection{Thermal Instability}
 \label{sec:instability}
 
-Radiative cooling usually has its greatest impact near or external to the stagnation radius, where the gas resides in near hydrostatic balance.  If radiative cooling becomes important, it can qualitatively alter key features of the accretion flow. Initially hydrostatic gas that cools at constant pressure $P \propto nT$ at the rate $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$ (eq.~[\ref{eq:qdot_rad}]; see below) is thermally unstable (\citealt{McCourt+12} and references therein), potentially resulting in the formation of a multi-phase medium and enhanced star formation.  Even if the hot plasma of the CNM does not condense into cold clouds, the loss of pressure can temporarily increase the black hole accretion rate; when coupled to feed-back processes, the latter can lead to time-dependent (e.g. limit cycle) behavior (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10}; \citealt{Yuan&Li11}, \citealt{Gan+14}), which is also inconsistent with our assumption of a steady, single-phase flow.  
+Radiative cooling usually has its greatest impact near or external to
+the stagnation radius, where the gas resides in near hydrostatic
+balance.  If radiative cooling becomes important, it can qualitatively
+alter key features of the accretion flow. Initially hydrostatic gas
+that cools at constant pressure $P \propto nT$ at the rate
+$\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$
+(eq.~[\ref{eq:qdot_rad}]; see below) is thermally unstable
+(\citealt{McCourt+12} and references therein), potentially resulting
+in the formation of a multi-phase medium and enhanced star formation.
+Even if the hot plasma of the CNM does not condense into cold clouds,
+the loss of pressure can temporarily increase the black hole accretion
+rate; when coupled to feed-back processes, the latter can lead to
+time-dependent (e.g. limit cycle) behavior
+(e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10};
+\citealt{Yuan&Li11}, \citealt{Gan+14}), which is also inconsistent
+with our assumption of a steady, single-phase flow.
 
 Radiative cooling can, however, be stabilized if it is overwhelmed by other sources of cooling, namely the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]).  Neglecting radiative cooling, this term is balanced at the stagnation radius by the wind heating term, $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$.  Thermal stability near the stagnation radius can thus be assessed by comparing the ratio of wind heating to radiative cooling $|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
 \left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm rad}|}\right|_{\rm r_{\rm s}} \simeq
   \begin{cases}
-   590 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.76}v_{500}^{7.2}  &, \text{core}\\
-   210 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.48}v_{500}^{5.8}  &, \text{cusp},     
+   430 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.76}v_{500}^{7.2}  &, \text{core}\\
+   840 \eta_{0.02}^{-1} M_{\bullet,8}^{-0.48}v_{500}^{5.8}  &, \text{cusp},     
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs}) for the gas and stellar densities at the stagnation radius, respectively.  We have approximated the cooling function for $T < 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}$ assuming solar metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  
+where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs})
+for the gas and stellar densities at the stagnation radius,
+respectively.  We have approximated the cooling function for $T <
+2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
+  \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$ assuming solar
+metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).
 
-To within a constant of order unity, equation (\ref{eq:cooling2}) also equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n kT/2)/\dot{q}_{\rm rad}$ to the free-fall time $t_{\rm ff}$ at the stagnation radius, as can be derived using the equality 
+To within a constant of order unity, equation (\ref{eq:cooling2}) also
+equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n
+kT/2)/\dot{q}_{\rm rad}$ to the free-fall time $t_{\rm ff}$ at the
+stagnation radius, as can be derived using the equality
 \begin{align}
 \rho|_{r_{\rm s}}=\frac{3 q\tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
@@ -661,7 +704,7 @@ The existence of a minimum heating rate for thermal stability (eq.~[\ref{eq:cool
 \begin{align}
 \frac{\dot{M}_{\rm TI}}{\dot{M}_{\rm edd}} \simeq
   {\rm min}\begin{cases}
-   4\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.34} &, \text{core}\\
+   6\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.34} &, \text{core}\\
    2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.29}    &, \text{cusp}\\
 \eta M_{\bullet}/\dot{M}_{\rm edd}t_{\rm h} \approx 6. 6\times 10^{-5}\eta_{0.02}&, v_{\rm TI} < \sigma,
   \end{cases}
@@ -869,8 +912,8 @@ radius inwards, decreasing the SMBH accretion rate.
     galaxies ($\Gamma = 0.8$), while triangles correspond to cores
     ($\Gamma = 0.1$). The black curves correspond to the analytic
     prediction from equation (\ref{eq:rs2main}), with solid and dashed
-    curves calculated for parameters $\{\Gamma=0.8, \densSlope=1\}$ and
-    $\{\Gamma=0.1,\densSlope=0.5\}$, respectively. }
+    curves calculated for parameters $\{\Gamma=0.8, \densSlope\simeq1\}$ and
+    $\{\Gamma=0.1,\densSlope\simeq0.6\}$, respectively. }
 \end{figure}
 
 
@@ -988,13 +1031,23 @@ Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting
 $v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into equation (\ref{eq:rs_simple})
 for the stagnation radius, we find that
 
-\begin{eqnarray}
-  \left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w}^{\rm Ia}}
-  &\approx& 12\eta_{0.02}^{-1} M_{\bullet,8}^{-1.1}(\epsilon_{\rm
-    Ia}/0.4) (\tau_{\star}/t_{\rm h})^{-0.56} \nonumber \\
-  &\approx& 12 M_{\bullet,8}^{-1.1}(\epsilon_{\rm Ia}/0.4) (\tau_{\star}/t_{\rm h})^{0.74}
+\begin{align}
+  \left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w}^{\rm Ia}}&\approx
+  \begin{cases}
+    8\, \eta_{0.02}^{-1} M_{\bullet,8}^{-1.1}(\epsilon_{\rm
+     Ia}/0.4) (\tau_{\star}/t_{\rm h})^{-0.56}  & {\rm core}\\
+    17\, \eta_{0.02}^{-1} M_{\bullet,8}^{-1.1}(\epsilon_{\rm
+     Ia}/0.4) (\tau_{\star}/t_{\rm h})^{-0.56} &{\rm cusp}\\
+   \end{cases} \nonumber\\
+ &\approx 
+ \begin{cases}
+    8\, \eta_{0.02}^{-1} M_{\bullet,8}^{-1.1}(\epsilon_{\rm
+     Ia}/0.4) (\tau_{\star}/t_{\rm h})^{0.74}  & {\rm core}\\
+    17\, \eta_{0.02}^{-1} M_{\bullet,8}^{-1.1}(\epsilon_{\rm
+     Ia}/0.4) (\tau_{\star}/t_{\rm h})^{0.74} &{\rm cusp}\\
+   \end{cases}
 \label{eq:rIars}
-\end{eqnarray}
+\end{align}
 If $r_{\rm Ia} \gg r_{\rm s}$, then Ia heating can only be
 approximated as a steady heating source near the stagnation radius for
 extremely massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or in
@@ -1062,9 +1115,9 @@ Feedback from accretion onto the SMBH represents an important source of heating 
 \subsubsection{Compton Heating}
 
 There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating (e.g., \citealt{Sazonov+04}, \citealt{Ciotti+10}), which provides a volumetric heating rate (\citealt{Gan+14})
-\be
+\begin{align}
 \dot{e} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
-\ee
+\end{align}
 where $\xi = L/n r^{2}$ is the ionization parameter and $L$ is the SMBH luminosity with Compton temperature $T_{\rm C} \sim 10^{9}$ K $\gg T$ (e.g., \citealt{Ho99}, \citealt{Eracleous+10}).  
 
 The importance of Compton heating can be estimated by assuming the SMBH
@@ -1075,9 +1128,9 @@ equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}),
 (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation
 (\ref{eq:vw_eff}) that the effective heating rate at the stagnation radius is given by
 \begin{align} v_{w}^{\rm C} \simeq
-  \begin{cases} 29 \eta_{0.02}^{0.5}T_{\rm
+  \begin{cases} 27 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.38}v_{500}^{-1.4}\,{\rm
-km\,s^{-1}} &, \text{core}\\ 50 \eta_{0.02}^{0.5}T_{\rm
+km\,s^{-1}} &, \text{core}\\ 30 \eta_{0.02}^{0.5}T_{\rm
 C,9}^{0.5}\epsilon_{-2}^{0.5} M_{\bullet,8}^{0.24}v_{500}^{-0.7}\,{\rm
 km\,s^{-1}} &, \text{cusp},
   \end{cases}
@@ -1088,9 +1141,9 @@ for an advective accretion flow expected to produce high $T_{\rm C}$
 emission (e.g.~\citealt{Narayan&Yi95}).  We caveat that, unlike
 stellar wind heating, Compton heating depends on radius, scaling as
 $v_{w}^{\rm C}(r) \propto (n^{2}\xi/\rho_{\star})^{1/2} \propto
-r^{(\Gamma-\densSlope-1)/2}$, i.e. $\propto r^{-0.6}$ and $\propto r^{-0.7}$
-for core ($\Gamma = 0.8$; $\densSlope = 1$) and cusp ($\Gamma = 0.1$;
-$\densSlope = 0.5$) galaxies, respectively.  The assumption of our model that the heating
+r^{(\Gamma-\densSlope-1)/2}$, i.e. $\propto r^{-0.6}$ and $\propto r^{-0.75}$
+for core ($\Gamma = 0.8$; $\densSlope \simeq 1$) and cusp ($\Gamma = 0.1$;
+$\densSlope \simeq 0.6$) galaxies, respectively.  The assumption of our model that the heating
 parameter be constant with radius is not satisfied, but this radial
 variation is sufficiently weak that it should not significantly alter
 our conclusions.
@@ -1100,7 +1153,7 @@ If Compton heating acts alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then solving eq
 \begin{align} v_{w}^{\rm C} \simeq
   \begin{cases} 150 \eta_{0.02}^{0.21}T_{\rm
 C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
-&, \text{core}\\ 130 \eta_{0.02}^{0.29}T_{\rm
+&, \text{core}\\ 96 \eta_{0.02}^{0.29}T_{\rm
 C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
 &, \text{cusp},
   \end{cases}
@@ -1109,25 +1162,26 @@ C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
 Compton heating can thus be significant in young stellar populations with relatively high mass loss rates, e.g. $v_{w}^{\rm C} \gtrsim 300$ km s$^{-1}$ for $\eta \gtrsim 1$.  The mass accretion rate corresponding to the state where Compton heating limits the average accretion rate is given by substituting equation (\ref{eq:vC2}) into equation (\ref{eq:eddr_analytic}):
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
-\begin{cases} 1.3\times 10^{-3} \eta_{0.02}^{0.20}T_{\rm
+\begin{cases} 3\times 10^{-3} \eta_{0.02}^{0.20}T_{\rm
 C,9}^{-0.8}\epsilon_{-2}^{-0.8} M_{\bullet,8}^{0.15}
-&, \text{core}\\ 6\times 10^{-4} \eta_{0.02}^{0.30}T_{\rm
+&, \text{core}\\ 8\times 10^{-4} \eta_{0.02}^{0.30}T_{\rm
 C,9}^{-0.7}\epsilon_{-2}^{-0.7} M_{\bullet,8}^{0.14}
 &, \text{cusp},
   \end{cases}
   \label{eq:MdotCa}
 \end{align}
-If the accretion luminosity $\epsilon = \dot{M}/\dot{M}_{\rm edd}$ depends on the Eddington ratio as predicted by some models for radiatively inefficient accretion flows (\citealt{Narayan&Yi95}; \citealt{Narayan+98}), then the Compton-limited accretion rate becomes
+If the accretion luminosity $\epsilon = 0.1 \dot{M}/\dot{M}_{\rm edd}$ depends on the Eddington ratio as predicted by some models for radiatively inefficient accretion flows (\citealt{Narayan&Yi95}; \citealt{Narayan+98}), then the Compton-limited accretion rate becomes
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
-\begin{cases} 3\times 10^{-3} \eta_{0.02}^{0.11}T_{\rm
+\begin{cases} 1.4\times 10^{-2} \eta_{0.02}^{0.11}T_{\rm
 C,9}^{-0.44}M_{\bullet,8}^{0.08}
-&, \text{core}\\ 2\times 10^{-3} \eta_{0.02}^{0.18}T_{\rm
+&, \text{core}\\ 6\times 10^{-3} \eta_{0.02}^{0.18}T_{\rm
 C,9}^{-0.4} M_{\bullet,8}^{0.08}
 &, \text{cusp}.
   \end{cases}
   \label{eq:MdotC}
 \end{align}
+{\bf AG: Note that I have included the bolometric correction for now.}
 
 
 \subsubsection{Kinetic Feedback}
