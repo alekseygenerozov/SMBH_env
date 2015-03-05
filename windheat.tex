@@ -194,11 +194,30 @@ slight complication occurs for the largest mass halos, where much of
 the $z=0$ stellar mass has been acquired through accretion of
 satellite halos rather than {\it in situ} star formation.  To
 accomodate this, we use analytic fits for mass accretion histories
-$A(t)$, also taken from \citet[eqs.~21-23]{MosterNaab+:2013a}, and
-replace $S(t) \rightarrow S(t)+A(t)$ in Eqs. \ref{eq:MDotSFH} and
-\ref{eq:EDotSFH} {\bf AG: this description is incorrect...we in fact
-  asssume that the stars are accreted in major mergers, which is
-  actually quite unrealistic.}. 
+$A(t)$, also taken from \citet[eqs.~21-23]{MosterNaab+:2013a}. We
+assume that accreted systems will have the same star formation history
+as the host up until the moment of accretion. To find the total mass
+(energy) injection including the contributions of accreted stars we
+convolve the specific mass (energy) injection rate with the accretion
+history $A(t)$.  The total mass ($\Mdot'(t)$) and energy
+($\dot{E}'(t)$) rates will be given by
+
+\begin{align}
+\Mdot '(t)&=\Mdot(t)+\int_{0}^{t} A(t_{\rm acc}) \frac{\Mdot(t_{\rm acc})}
+{\int_{0}^{t_{\rm acc}} S(t_1) dt_1} {\rm dt_{ acc}}.\\
+\dot{E}'(t)&=\dot{E}(t)+\int_{0}^{t} A(t_{\rm acc}) \frac{\dot{E}(t_{\rm acc})}
+{\int_{0}^{t_{\rm acc}} S(t') dt_1} {\rm dt_{acc}}.
+\end{align}
+
+The corresponding wind heating parameter $v_w'$ and mass return
+parameter, $\eta'$, will be given by
+
+\begin{align}
+\eta'&=\frac{\Mdot'(t)}{\int_0^t S(t_1) {\rm d}t_1+\int_0^t A(t_1) {\rm
+    d}t_1} \th\\
+v_w'&=2 \frac{\dot{E}'(t)}{\Mdot'(t)}
+\end{align}
+
 
 Figure \ref{NickPlot2} shows how the wind heating varies as star formation histories deviate from their halo-averaged values.  In particular, we show
 \begin{align} 
