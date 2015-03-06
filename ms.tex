@@ -476,7 +476,7 @@ radius, then $v_{w} \gtrsim \sigma$ and hence the stagnation radius
 resides well inside the sphere of influence ($r_{\rm s} < r_{\rm
   soi}$; eq.~[\ref{eq:rsoi}]).  In this limit, equation
 (\ref{eq:stag_analytic}) simplifies to
-\begin{eqnarray}
+\begin{align}
   &\rs \underset{v_w \gtrsim \sigma}\approx \left(\frac{7}{2}-\densSlope\right)\frac{G \Mbh}{\densSlope v_w^2} \approx \begin{cases}
     9
  \, \pc \,\, \Mbheight v_{500}^{-2}\, \pyear& \text{core} \\
@@ -484,7 +484,7 @@ resides well inside the sphere of influence ($r_{\rm s} < r_{\rm
  \, \pc \,\, \Mbheight v_{500}^{-2} \, \pyear  & \text{cusp}, 
   \end{cases}
   \label{eq:stag_simple}
-\end{eqnarray}
+\end{align}
 where we have used equation~\eqref{eq:densSlope} to estimate
 $\densSlope$: $\densSlope\approx 1$ and $\densSlope \approx 0.6$ for
 core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  This
@@ -1555,20 +1555,26 @@ A more readily addressable test is whether a steady-state accretion
 picture is capable of explaining the large scatter of typically 2-3
 orders of magnitude in the observed distribution of $L_{X}/L_{\rm
   edd}$ at fixed $M_{\bullet}$.  Scatter is expected to result from at
-least two effects: (1) the order of magnitude difference between
-$\dot{M}$ for core and cusp galaxies at fixed $v_w$ and $M_{\bullet}$
-(Fig.~\ref{fig:bh_growth}) leads to a similar scatter of $\dot{M}$ due
-to the variation in the Nuker stellar density profile $\Gamma$ at
-fixed $M_{\bullet}$; (2) the strong sensitivity of the accretion rate
+least two effects: (1) the strong sensitivity of the accretion rate
 to the stellar wind velocity, $\dot{M}/\dot{M}_{\rm edd} \propto
 v_{w}^{-3.8(-2.4)}$ for core(cusp) galaxies, respectively
 (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]) in
 combination with the significant dependence of $v_w$ on stochastic
-intermittency in the star formation history (Fig.~NICK).  The
+intermittency in the star formation history (Fig.~NICK) (2) The
+scatter introduced in using scaling relationships ($\Mbh-\sigma$) 
+and ($\Mbh-L_{\rm bulge}$) to measure $\Mbh$ as \citet{Miller+2015} do.  The
 combination of (1) and (2) is capable of explaining much of the
 observed sample, especially considering that scatter in $L_{\rm X}$
 due to variations in $\dot{M}$ is exacerbated by the expectation that
-$\epsilon_{X} \propto \dot{M}$ for radiatively inefficient flows {\bf
+$\epsilon_{X} \propto \dot{M}$ for radiatively inefficient flows. At a
+wind heating parameter there is an order of magnitude difference between
+$\dot{M}$ for core and cusp galaxies at fixed $v_w$ and $M_{\bullet}$
+(Fig.~\ref{fig:bh_growth}) which could also lead to scatter of $\dot{M}$ due
+to the variation in the Nuker stellar density profile $\Gamma$ at
+fixed $M_{\bullet}$. However, the \citet{Pellegrini10} find that the
+scatter in $L_X$ is similar if one just looks at core/cusp galaxies separately.
+
+{\bf
   AG Challenge: Scatter in $L_X$ is similar for cores and cusps in Perllegrini}.
 
 It is also possible that many of the nuclei from the \citet{Miller+15}
