@@ -328,12 +328,12 @@ i.e., a broken power law that transitions from an inner power law slope, $\Gamma
 \begin{align}
 \rho_\star = 
 \begin{cases}
-\rho_\star(\rsoi) \left(r/\rsoi\right)^{-1-\Gamma} & r \leq r_b\\
-\rho_\star(r_b) \left(r/r_b\right)^{-1-\beta} & r > r_b,
+\rho_\star|_{\rsoi} \left(r/\rsoi\right)^{-1-\Gamma} & r \leq r_b\\
+\rho_\star|_{r_b} \left(r/r_b\right)^{-1-\beta} & r > r_b,
 \label{eq:rhostar}
 \end{cases}
 \end{align}
-where $\rho_\star(\rsoi)$ is the stellar density at the radius of the black hole sphere of influence (soi), 
+where $\rho_\star|_{\rsoi}$ is the stellar density at the radius of the black hole sphere of influence (soi), 
 \be
 \rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
 \label{eq:rsoi}
@@ -403,7 +403,7 @@ feedback, etc.  As will be discussed in $\S\ref{sec:heating}$, the value of
 $v_{w}$ will in general depend on the SMBH mass and
 the age of the stellar population.  We further assume that $v_w$ is constant with radius, i.e. that the volumetric heating rate is proportional to the local stellar density.
 
-To isolate the physics of interest, our baseline calculations neglects three potentially important effects: heat conduction, radiative cooling, and rotation.  Our justification for neglecting rotation will be discussed further in $\S\ref{sec:rotation}$.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
+To isolate the physics of interest, our baseline calculations neglects three potentially important effects: heat conduction, radiative cooling, and rotation.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
 \be \dot{q}_{\rm cond} = \nabla\cdot(\kappa \nabla T), \ee
 where $\kappa_{\rm
   eff}=\kappa_{\rm spitz}/(1+\psi)$ (\citealt{DaltonBalbus:1993a}) is
@@ -434,7 +434,7 @@ and entropy equations for numerical stability
 (\citealt{Brandenburg:2003a}).  We assume different
 choices of $v_{w} = 300, 600, 1200$ km s$^{-1}$ spanning a
 physically plausible range of heating rates.  Although we are interested in the steady-state inflow/outflow solution (assuming one exists), the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic
-inflow on small radial scales and a possible supersonic outflow on large scales.  Also note that our solutions can be scaled to any value of the mass input parameter, $\eta$, since the mass and energy source terms scale linearly with $\rho$ or $\rho_{\star}$; however, the precise value of $\eta$ must be specified when cooling or thermal conduction are included, since these scale as gas density {\it squared}.  We check the accuracy of our numerical solutions by confirming that mass is conserved across the grid, in addition to the integral constraint on the energy (Bernoulli integral). 
+inflow on small radial scales and a possible supersonic outflow on large scales.  Also note that our solutions can be scaled to any value of the mass input parameter, $\eta$, since the mass and energy source terms scale linearly with $\rho$ or $\rho_{\star}$; however, the precise value of $\eta$ must be specified when cooling or thermal conduction are included, since these scale as gas density to a different power.  We check the accuracy of our numerical solutions by confirming that mass is conserved across the grid, in addition to the integral constraint on the energy (Bernoulli integral). 
 
 
 
@@ -470,7 +470,7 @@ If the SMBH dominates the gravitational potential at the stagnation radius, then
   \label{eq:stag_simple}
 \end{eqnarray}
 {\bf AG: missing a minus n here...}
-where for the numerical estimate we adopt values of $n \approx 1$ and $n \approx 0.5$ for core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies, respectively, so chosen to match the results of our numerical calculations (Fig.~\ref{fig:stag}).  This expression is similar to that obtained by \citet{Volonteri+11} on more heuristic grounds (their eq.~6).  {\bf BDM: all analytic expressions have to be updated in core case to reflect this larger rs}
+where for the numerical estimate we adopt values of $n \approx 1$ and $n \approx 0.5$ for core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies, respectively, so chosen to match the results of our numerical calculations (Fig.~\ref{fig:stag}).  This expression is similar to that obtained by \citet{Volonteri+11} on more heuristic grounds (their eq.~6). 
 
 In the opposite limit of weak heating ($v_{w} \ll \sigma$), the stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not exist at all, formally implying that the entire ISM of the galaxy is accreting.  This result makes intuitive sense: gas is supplied to the nuclear by stars which are gravitationally bound to the black hole, so outflows are possible only if the specific heating rate $\sim v_{w}^{2}$ significantly exceeds the specific gravitational binding energy $\sim \sigma^{2}$.
 
@@ -600,7 +600,7 @@ so equation (\ref{eq:cooling2}) represents a good proxy for
 instability in this case as well.
 
 Thermal stability ($\dot{q}_{\rm heat} > |\dot{q}_{\rm rad}|$; $t_{\rm
-  cool} > t_{\rm ff}$) at the stagnation radius thus requires a
+  cool} > t_{\rm ff}$) near the stagnation radius thus requires a
 critical minimum heating rate
 \begin{align}
 v_{w} > v_{\rm TI} \simeq
@@ -611,7 +611,7 @@ v_{w} > v_{\rm TI} \simeq
   \end{cases}
   \label{eq:cooling3}
 \end{align}
-The requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines are derived using equation (\ref{eq:rs_simple}) for $r_s$.  However, when $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to very large radii, or may not exist at all, resulting in much higher gas densities and inevitable cooling instability. 
+The requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines are derived using equation (\ref{eq:rs_simple}) for $r_s$.  However, when $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to very large radii, or may not exist at all (see also Fig.~\ref{fig:stag}), resulting in much higher gas densities and inevitable cooling instability. 
 %Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally sufficient for stability at all radii (Fig.~\ref{fig:cooling}).   
 
 The existence of a minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) implies a corresponding maximum accretion rate,
@@ -671,9 +671,9 @@ where $\sigma$ is the velocity dispersion and the brackets indicate a luminosity
 \frac{r_{\rm circ}}{r_{s}} \approx \frac{r_{s}}{r_{\rm soi}}\lambda_{R}^{2} \lesssim \lambda_{R}^{2},
 \label{eq:rcirc}
 \ee
-where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$, as satisfied for thermally-stable solutions of interest.
+where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$, a condition which is satisfied for the thermally-stable solutions of interest.
 
-\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales less that 10 per cent of the galaxy half-light radius and that $\lambda_R$ is a decreasing function of $R$.  From equation (\ref{eq:rcirc}) we conclude that $r_{\rm circ} \lesssim 0.01r_{s}$, a location well inside the inner sonic point of the flow (typically located at $\sim 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  This suggests that angular momentum is only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow.  We are thus justifying in neglecting the effects of rotation in calculating the mass accretion rate.
+\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales $<$ 10 per cent of the galaxy half-light radius and that $\lambda_R$ is with $R$ interior to this point.  From equation (\ref{eq:rcirc}) we thus conclude that $r_{\rm circ} \lesssim 0.01r_{s}$, i.e.~that gas will circularize well inside the inner sonic point of the flow (typically located at $\sim 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  Angular momentum should only become dynamically important for thermally stable flows in a region that is causally disconnected from the outer part of the flow where the mass accretion rate is determined.
 
 
 \section{Numerical Results}
@@ -769,7 +769,7 @@ text.  $\dagger$Calculated with full radiative cooling included, assuming mass l
 %\end{minipage}
 %\end{table*}
 
-Our numerical results, summarized in Table \ref{table:models} and Figure XXX, allow us to study a range of CNM properties and to assess the validity of the analytic estimates from the previous section.  Cases for which $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|< 1$ at the stagnation radius are marked as `thermally unstable', as are cases for which the stagnation radius diverges and hence could not be resolved, resulting in their calculations being terminated.  
+Our numerical results, summarized in Table \ref{table:models}, allow us to study a range of CNM properties and to assess the validity of the analytic estimates from the previous section.  Cases for which $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|< 1$ at the stagnation radius are marked as `thermally unstable', as are cases for which the stagnation radius diverges and hence could not be resolved, resulting in their calculations being terminated.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$ (expressed in units of the sound speed), for the cusp
