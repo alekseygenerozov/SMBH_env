@@ -288,7 +288,8 @@ $\tilde{v}_{w}$ & Total heating parameter, including minimum heating rate from s
 $v_{w}$ & Total heating parameter, excluding heating rate from stellar velocity dispersion \\
 $r_{s}$ & Stagnation radius (where radial velocity goes to zero) \\
 $r_{\rm soi}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
-$r_{\rm b}$ & outer break radius of stellar density profile \\  
+$r_{\rm b}$ & outer break radius of stellar density profile \\ 
+$r_{\rm Ia}$ & radius exterior to which Ia SN are infrequent compared to the dynamical/inflow timescale (eq.~[\ref{eq:rIa}]) \\ 
 $\rho_{\star}(r)$ & 3D radial stellar density profile \\
 $\rho(r)$ & gas density of CNM \\
 $M_{\star}(r)$ & total enclosed stellar mass inside radius $r$ \\
@@ -303,7 +304,7 @@ $\dot{M}_{\rm Ia}$ & maximum mass accretion rate as limited by SN Ia blow-out (e
 $\dot{M}_{\rm C}$ & equilibrium accretion rate set by Compton heating (eq.~[\ref{eq:MdotC}]) \\
 $\dot{M}_{\rm TI}$ & maximum accretion rate for thermally stable accretion (eq.~[\ref{eq:Mdotmax}]) \\
 $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ & ratio of external heating (stellar winds, SN Ia, MSPs) to radiative cooling (eq.~[\ref{eq:cooling2}]) \\
-$r_{\rm Ia}$ & radius exterior to which Ia SN are infrequent compared to the dynamical/inflow timescale (eq.~[\ref{eq:rIa}]) \\
+$t_{\rm h}$ & Hubble timescale \\
 \hline
 \label{table:definitions}  
 \end{tabular}
@@ -344,7 +345,7 @@ M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
       km\,s^{-1}}}\right)^{5.1}M_{\odot}.
 \label{eq:Msigma}
 \end{align}
-The use of equation (\ref{eq:Msigma}) is questionable for low mass black holes (e.g., \citealt{Greene&Ho07}), but our results are not overly sensitive to this assumption.  
+Though of questionable validity for low mass black holes (e.g., \citealt{Greene&Ho07}), we adopt equation (\ref{eq:Msigma}) for lack of a better alternative.
 
 A galaxy model is fully specified by four parameters: $\Mbh$,
 $\Gamma$, $r_b$, and $\beta$.  We compute models for three different
@@ -425,7 +426,7 @@ Radiative cooling contributes an additional term to equation (\ref{eq:dsdt}) of 
 \label{eq:qdot_rad}
 \ee
 where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low or if the mass return rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instability (e.g.~\citealt{McCourt+12}; $\S\ref{sec:instability}$) that cannot be accounted for by our 1D
-time-independent model.  A main goal of this work is to use solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:cooling}$).
+time-independent model.  A main goal of this work is to use solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:instability}$).
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
@@ -434,11 +435,7 @@ and entropy equations for numerical stability
 (\citealt{Brandenburg:2003a}).  We assume different
 choices of $v_{w} = 300, 600, 1200$ km s$^{-1}$ spanning a
 physically plausible range of heating rates.  Although we are interested in the steady-state inflow/outflow solution (assuming one exists), the time-dependent equations are solved to avoid numerical issues that arise near the critical sonic points, of which there are up to two because of the supersonic
-inflow on small radial scales and a possible supersonic outflow on large scales.  Also note that our solutions can be scaled to any value of the mass input parameter, $\eta$, since the mass and energy source terms scale linearly with $\rho$ or $\rho_{\star}$; however, the precise value of $\eta$ must be specified when cooling or thermal conduction are included, since these scale as gas density {\it squared}. 
-
-We assess the accuracy of our numerical solutions by checking that mass is conserved across the grid, in addition to the integral constraint on the energy (Bernoulli integral).  Mass and energy are conserved to $\lesssim
-40$ per cent for all solutions presented in this paper.  {\bf BDM:
-  more details...}
+inflow on small radial scales and a possible supersonic outflow on large scales.  Also note that our solutions can be scaled to any value of the mass input parameter, $\eta$, since the mass and energy source terms scale linearly with $\rho$ or $\rho_{\star}$; however, the precise value of $\eta$ must be specified when cooling or thermal conduction are included, since these scale as gas density {\it squared}.  We check the accuracy of our numerical solutions by confirming that mass is conserved across the grid, in addition to the integral constraint on the energy (Bernoulli integral). 
 
 
 
@@ -591,7 +588,7 @@ Radiative cooling can, however, be stabilized if it is overwhelmed by other sour
 \end{align}
 where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs}) for the gas and stellar densities at the stagnation radius, respectively.  We have approximated the cooling function for $T < 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}$ assuming solar metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  
 
-To within a constant of order unity, equation (\ref{eq:cooling2}) also equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n kT/2)/\dot{q}_{\rm rad}$ to the free-fall time $t_{\rm ff}$ at the stagnation radius, as can be derived using the equality 
+To within a constant of order unity, equation (\ref{eq:cooling2}) also equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n kT/2\mu )/\dot{q}_{\rm rad}$ to the free-fall time $t_{\rm ff}$ at the stagnation radius, as can be derived using the equality 
 \begin{align}
 \rho|_{r_{\rm s}}=\frac{3 q\tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
@@ -662,7 +659,7 @@ which is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v
 \end{figure}
 
   \subsection{Angular Momentum}
-  \label{sec:ang}
+  \label{sec:rotation}
 
 Our spherically symmetric model neglects the effects of angular momentum on the gas evolution.  However, all galaxies possess some net rotation, resulting in centrifugal forces becoming important at some radius $r_{\rm circ} = l^{2}_{r_{s}}/(GM_{\bullet})$.  Here $l_{r_{s}} = \langle r V_{\phi}\rangle |_{r_s}$ is the stellar specific angular momentum near the stagnation radius, from which most of the accreted mass originates, where $V_{\phi}$ is the stellar azimuthal velocity.    
 
@@ -677,7 +674,7 @@ where $\sigma$ is the velocity dispersion and the brackets indicate a luminosity
 \ee
 where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$, as satisfied for thermally-stable solutions of interest.
 
-\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales less that 10 per cent of the galaxy half-light radius and that $\lambda_R$ is a decreasing function of $R$.  From equation (\ref{eq:rcirc}) we conclude that $r_{\rm circ} \lesssim 0.01r_{s}$, a location well inside the inner sonic point of the flow (typically located at $\sim 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  This suggests that angular momentum is only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow.  To first order we are thus justifying in neglecting its effects on our quantities such as the mass accretion rate.
+\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales less that 10 per cent of the galaxy half-light radius and that $\lambda_R$ is a decreasing function of $R$.  From equation (\ref{eq:rcirc}) we conclude that $r_{\rm circ} \lesssim 0.01r_{s}$, a location well inside the inner sonic point of the flow (typically located at $\sim 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  This suggests that angular momentum is only becomes important for thermally stable flows in a region that is causally disconnected from the rest of the flow.  We are thus justifying in neglecting the effects of rotation in calculating the mass accretion rate.
 
 
 \section{Numerical Results}
