@@ -934,14 +934,16 @@ If $r_{\rm Ia} \gg r_{\rm s}$, then Ia heating can only be
 approximated as a steady heating source near the stagnation radius for
 extremely massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or in
 the case of a very young stellar population ($\tau_{\star} \ll t_{\rm
-h}$).  On the other hand, equation (\ref{eq:rIars}) may underestimate
-the importance of Ia heating because $r_{\rm Ia}/r_{\rm s}$ will be
-substantially smaller than its value estimated using $v_{w}^{\rm Ia}$
-if the heating rate excluding SN Ia is less than this.
+h}$).  
+
+%On the other hand, equation (\ref{eq:rIars}) may underestimate
+%the importance of Ia heating because $r_{\rm Ia}/r_{\rm s}$ will be
+%substantially smaller than its value estimated using $v_{w}^{\rm Ia}$
+%if the heating rate excluding SN Ia is less than this.
 
 Even if SN Ia are rare near the stagnation radius, they may cap the
 SMBH accretion rate by periodically blowing gas out of the nucleus of
-low mass galaxies.  Between subsequent supernovae, stars release a
+low mass galaxies.  Between successive supernovae, stars release a
 gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$
 interior to the Ia radius, which is gravitationally bound to the SMBH
 by an energy $E_{\rm bind} \sim M_{\rm g}\sigma^{2}$.  Thus, according
@@ -1089,10 +1091,7 @@ Approximating $M_{\rm g} \sim \dot{M}t_{\rm ff}$, the ratio of the jet escape ti
 \ee
 independent of $r$.  A jet with power sufficient to appreciably heat the CNM on radial scales $\sim r_{\rm s}$ ($\epsilon_{j} \gtrsim 10^{-6}$) also necessarily has sufficient power to escape the nucler region and propagate to much larger radii.  Slower outflows from the accretion disk, instead of a collimated relativistic jet, may provide a more promising source of feedback in these systems (e.g.~\citealt{Li+13}).    
 
-For a fixed $r_{\rm heat}$, the effective heating rate from kinetic outflows $v_{\rm w}^{\bullet} \propto r_{\rm s}^{1-\Gamma/2} \propto M_{\bullet}^{1-\Gamma/2}v_{w}^{\Gamma-2}$ is proportional to $v_{w}$
-to a negative power (where we have used of eq.~[\ref{eq:stag_simple}]).  Thus, as in the case of Compton heating, kinetic heating could in principle  `self-regulate' insofar as a lower heating rate results in a higher accretion rate, which in turn results in stronger jet feedback.  
-However, although both radiative and kinetic feed-back process seem capable of producing sufficient heating to offset radiative cooling and prevent instability (e.g., $v_w \gtrsim v_{\rm TI}$; eq.~[\ref{eq:cooling3}]), this is somewhat misleading because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scale.  Thus, even if the AGN heating balances cooling on average, the flow may still experience limit cycle behavior in this case (\citealt{Yuan&Li11}).   
-
+As in the case of Compton heating, kinetic heating could in principle  `self-regulate' the accretion flow insofar as a lower heating rate results in a higher accretion rate (eq.~[\ref{eq:vjet}]), which in turn may create stronger jet feedback.  However, as it is not possible to make concrete predictions for such a process given the uncertainty in the efficiency of jet heating, we defer a more detailed discussion of the possible role of kinetic feedback to $\S\ref{sec:heating}$.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSourcesImp.pdf}
@@ -1530,6 +1529,11 @@ assumption that outflows heat the gas uniformly in volume is arbitrary
 and would need to more rigorously justified by numerical studies of
 how jets or disk outflows couple energy to their gaseous environment
 (Refs).
+
+For a fixed $r_{\rm heat}$, the effective heating rate from kinetic outflows $v_{\rm w}^{\bullet} \propto r_{\rm s}^{1-\Gamma/2} \propto M_{\bullet}^{1-\Gamma/2}v_{w}^{\Gamma-2}$ is proportional to $v_{w}$
+to a negative power (where we have used of eq.~[\ref{eq:stag_simple}]).  Thus, as in the case of Compton heating, kinetic heating could in principle  `self-regulate' insofar as a lower heating rate results in a higher accretion rate, which in turn results in stronger jet feedback.  
+However, although both radiative and kinetic feed-back process seem capable of producing sufficient heating to offset radiative cooling and prevent instability (e.g., $v_w \gtrsim v_{\rm TI}$; eq.~[\ref{eq:cooling3}]), this is somewhat misleading because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scale.  Thus, even if the AGN heating balances cooling on average, the flow may still experience limit cycle behavior in this case (\citealt{Yuan&Li11}).   
+
 
 {\bf AG Challenge: Except in the most massive systems the jet duty
   cycle is rather low (0.001-0.01). The jets tend to overheat the gas,
