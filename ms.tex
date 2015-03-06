@@ -404,7 +404,9 @@ $v_{w}$ will in general depend on the SMBH mass and
 the age of the stellar population.  We further assume that $v_w$ is constant with radius, i.e. that the volumetric heating rate is proportional to the local stellar density.
 
 To isolate the physics of interest, our baseline calculations neglects three potentially important effects: heat conduction, radiative cooling, and rotation.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
-\be \dot{q}_{\rm cond} = \nabla\cdot(\kappa \nabla T), \ee
+\be \dot{q}_{\rm cond} = \nabla\cdot(\kappa \nabla T),
+\label{eq:qdotcond}
+ \ee
 where $\kappa_{\rm
   eff}=\kappa_{\rm spitz}/(1+\psi)$ (\citealt{DaltonBalbus:1993a}) is
 the conducitivity and $\kappa_{\rm spitz} = \kappa_0 T^{5/2}$ is the
@@ -543,7 +545,7 @@ where the second equality makes use of equation (\ref{eq:Tanalytic}).
 \subsection{Heat Conduction}
 \label{sec:conductivity}
 
-Our analytic derviations neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate to the external heating rate at the stagnation radius is given by
+Our analytic derviations neglect the effects of heat conduction, an assumption we now check.  The ratio of the magnitude of the conductive heating rate (eq.~[\ref{eq:qdotcond}]) to the external heating rate at the stagnation radius is given by
 \begin{align}
   \left.\frac{\nabla\cdot(\kappa \nabla T)}{q v_{\rm
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
