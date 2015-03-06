@@ -256,7 +256,7 @@ an outflow from the nucleus.  The stagnation radius, rather than the
 Bondi radius, thus controls the SMBH accretion rate (although we will
 show that $\rs$ can in many cases lie within a factor of few of the
 nominal Bondi radius).  In the case of sufficiently weak heating,
-however, no stagnation radius may exist at all, i.e. the entire ISM of
+however, no stagnation radius may exist at all, i.e. in principle the entire ISM of
 the galaxy is feeding the SMBH.  Another goal of this work is to
 assess under what conditions a stagnation radius exists, as this
 question is intimately tied to that of cooling instability.
@@ -271,7 +271,7 @@ describe our model, including the sample of galaxies used in our
 analysis ($\S\ref{sec:gal_model}$) and our numerical procedure for
 calculating the steady-state hydrodynamic profile of the CNM
 ($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe some
-analytic results, while in $\S\ref{sec:numerical}$ we describe our numerical results.  In $\S\ref{sec:discussion}$ we discuss the implications of our results, to topics including...   In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table \ref{table:definitions} provides the definitions of commonly used variables.  Appendix \ref{app:rs} provides useful analytic results, while Appendix \ref{app:windheat} describes our method for calculating stellar wind heating and mass input in detail.  
+analytic results, while in $\S\ref{sec:numerical}$ we describe our numerical results.  In $\S\ref{sec:discussion}$ we discuss the implications of our results, to topics including...   In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table \ref{table:definitions} provides the definitions of commonly used variables.  Appendix \ref{app:rs} provides useful analytic results, while Appendix \ref{app:windheat} describes our method for calculating stellar wind heating and mass input in greater detail.  
 
 
 \begin{table*}
@@ -289,6 +289,21 @@ $v_{w}$ & Total heating parameter, excluding heating rate from stellar velocity 
 $r_{s}$ & Stagnation radius (where radial velocity goes to zero) \\
 $r_{\rm soi}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
 $r_{\rm b}$ & outer break radius of stellar density profile \\  
+$\rho_{\star}(r)$ & 3D radial stellar density profile \\
+$\rho(r)$ & gas density of CNM \\
+$M_{\star}(r)$ & total enclosed stellar mass inside radius $r$ \\
+$M_{\rm enc}(r)$ & total encolsed mass inside radius $r$ (SMBH + stars) \\
+$q(r)$ & mass source term due to stellar winds (eq.~[\ref{eq:q}]) \\
+$\eta$ & parameter setting normalization of mass input from stellar winds (eq.~[\ref{eq:q}]) \\
+$\tau_{\star}$ & age of stellar population, in case of a single burst of star formation \\
+$\Gamma$ & power-law slope of radial stellar density profile interior to the break radius \\
+$\sigma(r)$ & stellar velocity dispersion \\
+$\dot{M}$ & mass accretion rate \\
+$\dot{M}_{\rm Ia}$ & maximum mass accretion rate as limited by SN Ia blow-out (eq.~[\ref{eq:eddr_Ia}]) \\
+$\dot{M}_{\rm C}$ & equilibrium accretion rate set by Compton heating (eq.~[\ref{eq:MdotC}]) \\
+$\dot{M}_{\rm TI}$ & maximum accretion rate for thermally stable accretion (eq.~[\ref{eq:Mdotmax}]) \\
+$\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ & ratio of external heating (stellar winds, SN Ia, MSPs) to radiative cooling (eq.~[\ref{eq:cooling2}]) \\
+$r_{\rm Ia}$ & radius exterior to which Ia SN are infrequent compared to the dynamical/inflow timescale (eq.~[\ref{eq:rIa}]) \\
 \hline
 \label{table:definitions}  
 \end{tabular}
