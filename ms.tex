@@ -699,7 +699,14 @@ time-dependent (e.g. limit cycle) behavior
 \citealt{Yuan&Li11}, \citealt{Gan+14}), which is also inconsistent
 with our assumption of a steady, single-phase flow.
 
-Radiative cooling can, however, be stabilized if it is overwhelmed by other sources of cooling, namely the term $\propto -q c_{s}^{2} \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]).  Neglecting radiative cooling, this term is balanced at the stagnation radius by the wind heating term, $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$.  Thermal stability near the stagnation radius can thus be assessed by comparing the ratio of wind heating to radiative cooling $|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:qdot_rad}]),
+Radiative cooling can, however, be stabilized if it is overwhelmed by
+other sources of cooling, namely the term $\propto -q c_{s}^{2}
+\propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]).
+Neglecting radiative cooling, this term is balanced at the stagnation
+radius by the wind heating term, $\dot{q}_{\rm heat} = q
+\tilde{v}_{w}^{2}/2$.  Thermal stability near the stagnation radius
+can thus be assessed by comparing the ratio of wind heating to
+radiative cooling $|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
 \left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm rad}|}\right|_{\rm r_{\rm s}} \simeq
   \begin{cases}
@@ -997,11 +1004,60 @@ heat}/\dot{q}_{\rm rad} \lesssim 1$ and/or $t_{\rm cool}/t_{\rm ff}
 \end{figure}
 
 
-Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of radius for our fiducial solutions shown in Figure \ref{fig:profiles}.  For high heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling is unimportant across all radii, while for $v_{w} = 300$ km s$^{-1}$ we see that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ and $\tcool/\tff$ can be less than unity, depending on the wind mass loss parameter $\eta$.  At the stagnation radius, the ratio $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ reaches a value that lies within a factor of two of its minimum across the entire grid;  thus, the value of $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ provides a diagnostic of thermal instabilty for the entire solution.  
+Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative
+cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$
+(eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of
+radius for our fiducial solutions shown in Figure \ref{fig:profiles}.
+For high heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling
+is unimportant across all radii, while for $v_{w} = 300$ km s$^{-1}$
+we see that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ and $\tcool/\tff$
+can be less than unity, depending on the wind mass loss parameter
+$\eta$.  At the stagnation radius, the ratio $\dot{q}_{\rm
+  heat}/|\dot{q}_{\rm rad}|$ reaches a value that lies within a factor
+of two of its minimum across the entire grid; thus, the value of
+$(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ provides a
+diagnostic of thermal instabilty for the entire solution.
 
-Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$ near the stagnation radius.  However, the two ratios diverge from each other at low heating ($v_{w} \lesssim 300$ km s$^{-1}$) because equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the true gas density, which is greater in a subsonic inflow (weak heating) than in a supersonic outflow (strong heating).  
+Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have that
+$\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$
+near the stagnation radius.  However, the two ratios diverge from each
+other at low heating ($v_{w} \lesssim 300$ km s$^{-1}$) because
+equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the true
+gas density, which is greater in a subsonic inflow (weak heating) than
+in a supersonic outflow (strong heating).
 
-In addition to our standard set of solutions neglecting thermal conduction and cooling, we explore a few test simulations including these effects, as marked in Table \ref{table:models}.  {\bf BDM: EXPAND!!!!  Explain that they don't matter.}
+In addition to our standard set of solutions neglecting thermal
+conduction and cooling, we explore a few test simulations including
+these effects, as marked in Table \ref{table:models}. For solutions we
+with large wind heating parameters ($\vwO \gsim 1200 km/s$ km/s), we
+expect radiative cooling to have virtually no effect on the solution
+for reasonable values of the mass return parameter.  For cusp galaxies
+Thermally stable solutions are possible for values of the wind heating
+parameter as low as $\vwO=300$ km/s. However, this will be dependent
+on the value of the mass return parameter (and thus on the age of the
+stellar population) and on the break radius, $\rb$. For $\vwO\simeq
+300$ km/s, solutions with large $\rb$ will have large stagnation radii
+and thus larger densities. Thus, solution with $v_w$=300 km/s
+$\rb\gsim 100$ pc, would be thermally unstable.  The picture is
+qualitatively similar for core galaxies. However, the stagnation
+radius ``runs away'' to large radii at much smaller values of the wind
+heating paramter ($\vwO\simeq 600 km/s$). Thus, thermal instability
+sets in for higher values of $\vwO$ for core galaxies.
+
+In practice we expect that the effective wind heating will
+be or order $\sim 1000$ km/s if heating is dominated by young
+stars as would be the case for small black holes. This region of
+parameter space should be thermally stable. For higher mass
+black holes heating would be dominated by the supernovae and black
+hole feedback and would be comparable to the stellar velocity
+dispersion of the galaxy. Since core galaxies dominate for large
+$\Mbh$ we expect this region of parameter space to be thermally unstable.
+
+From our analytic results (see equation~\eqref{eq:conduction}) and
+direct numerical experiments, we expect that thermal conduction would
+introduce at most order unity changes in our solutions. The conductive
+heating flux saturates, so that at the stagnation radius the
+conductive heating rate is comparable to the external heating rate.
 
 \section{Sources of Heating}
 \label{sec:heating}
@@ -1395,7 +1451,9 @@ heating.  %Solid and dashed lines again show black hole masses for which the flo
 Strikingly, {\it we find that galactic nuclei experiencing the same
   average star formation history as their host galaxies produce
   thermally stable flows across almost all black hole masses}.  One exception may occur for the highest mass black holes, for which the total heating velocity is comparable to the stellar velocity dispersion and thermal stability for the average star formation history is marginal ($\S\ref{sec:mdot}$).
-
+{\bf AG: I wouldn't put too much stock in this since for higher masses
+vw is comparable to sigma, and thus rs should run away to large
+radii. This is especially true for core galaxies.}
 
 Realistic variations (``burstiness") in the star formation history
 will often result in lower heating rates.  Figure \ref{NickPlot2}
