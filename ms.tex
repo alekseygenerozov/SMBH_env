@@ -435,8 +435,14 @@ The source term in equation (\ref{eq:drhodt}),
 \end{align}
 represents mass input from stellar winds, which we parameterize in
 terms of the fraction $\eta$ of the stellar density $\rhostar$ being
-recycled into gas on the Hubble time $\th = 1.4 \times 10^{10}$
-yr.  To good approximation $\eta\simeq 0.02 (\tau_{\star}/t_h)^{-1.3}$ at time $\tau_{\star}$ following an impulsive star burst (e.g., \citealt{Ciotti+91})\footnote{\citet{Ciotti+91} give the mass return rate from evolved stars as a function of B-band luminosity instead of volumetrically, but our expressions are equivalent.}, although $\eta$ is significantly higher for continuous star formation histories (Fig.~\ref{fig:eta}).  
+recycled into gas on the Hubble time $\th = 1.4 \times 10^{10}$ yr.
+To good approximation $\eta\simeq 0.02 (\tau_{\star}/t_h)^{-1.3}$ at
+time $\tau_{\star}$ following an impulsive star burst (e.g.,
+\citealt{Ciotti+91})\footnote{\citet{Ciotti+91} give the mass return
+  rate from evolved stars as a function of B-band luminosity instead
+  of volumetrically, but our expressions are equivalent.}, although
+$\eta$ is significantly higher for continuous star formation histories
+(bottom panel of Fig.~\ref{fig:vwSources}).
 
 Source terms $\propto q$ also appear in the momentum and entropy
 equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) because the isotropic injection of mass represents, in the SMBH rest frame, a source of momentum
@@ -669,10 +675,14 @@ stellar density profile as (eq.~[\ref{eq:rhostar}])
   \label{eq:rhostarrs}
 \end{eqnarray}
 where the stagnation radius is assume to reside well inside the Nuker
-break radius and for clarity we have not distinguished between cusp and core galaxies.  Equation (\ref{eq:conduction}) shows that even in the
-case of saturated conduction, the neglect of heat conduction results
-in at most an order unity correction for expected values of the
-saturation parameter $\phi < 0.1$, justifying its neglect in our
+break radius and for clarity we have not distinguished between cusp
+and core galaxies.  Equation (\ref{eq:conduction}) shows that even in
+the case of saturated conduction, the neglect of heat conduction
+results in at most an order unity correction for expected {\bf (AG:
+  this sounds a bit too sharp perhaps replace with the word
+  plausible. Perhaps we should also mention the phi=1 solutions have
+  acausal conductivity (perhaps they are unphysical?).} values of
+the saturation parameter $\phi < 0.1$, justifying its neglect in our
 analysis.  Numerical experiments including conductivity confirm this
 ($\S\ref{sec:numerical}$).
 
@@ -800,20 +810,47 @@ which is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v
   \subsection{Angular Momentum}
   \label{sec:rotation}
 
-Our spherically symmetric model neglects the effects of angular momentum on the gas evolution.  However, all galaxies possess some net rotation, resulting in centrifugal forces becoming important at some radius $r_{\rm circ} = l^{2}_{r_{s}}/(GM_{\bullet})$.  Here $l_{r_{s}} = \langle r V_{\phi}\rangle |_{r_s}$ is the stellar specific angular momentum near the stagnation radius, from which most of the accreted mass originates, where $V_{\phi}$ is the stellar azimuthal velocity.    
+  Our spherically symmetric model neglects the effects of angular
+  momentum on the gas evolution.  However, all galaxies possess some
+  net rotation, resulting in centrifugal forces becoming important at
+  some radius $r_{\rm circ} = l^{2}_{r_{s}}/(GM_{\bullet})$.  Here
+  $l_{r_{s}} = \langle r V_{\phi}\rangle |_{r_s}$ is the stellar
+  specific angular momentum near the stagnation radius, from which
+  most of the accreted mass originates, where $V_{\phi}$ is the
+  stellar azimuthal velocity.
 
-\citet{EmsellemCappellari+:2007a} use two-dimensional kinematic data to measure the ratio of ordered to random motion in a sample of early type galaxies, which they quantify at each galactic radius $R$ by the parameter
+  \citet{EmsellemCappellari+:2007a} use two-dimensional kinematic data
+  to measure the ratio of ordered to random motion in a sample of
+  early type galaxies, which they quantify at each galactic radius $R$
+  by the parameter
   \begin{align}
     \lambda_R \equiv \frac{\langle r|V|\rangle}{\langle R\sqrt{V^2+\sigma^2}\rangle} \underset{R \ll r_{\rm soi}}\sim \frac{V_{\phi}}{\sigma},
   \end{align}
-where $\sigma$ is the velocity dispersion and the brackets indicate a luminosity-weighted average.  The circularization radius of the accretion flow can be written in terms of $\lambda_R$ as
+
+  where $\sigma$ is the velocity dispersion and the brackets indicate
+  a luminosity-weighted average.  The circularization radius of the
+  accretion flow can be written in terms of $\lambda_R$ as
+
 \begin{equation}
 \frac{r_{\rm circ}}{r_{s}} \approx \frac{r_{s}}{r_{\rm soi}}\lambda_{R}^{2} \lesssim \lambda_{R}^{2},
 \label{eq:rcirc}
 \end{equation}
-where we have used the definition $r_{\rm soi} \equiv GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed that $r_{\rm s} \lesssim r_{\rm soi}$, a condition which is satisfied for the thermally-stable solutions of interest.
 
-\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$ is generally $< 0.1$ on radial scales $<$ 10 per cent of the galaxy half-light radius and that $\lambda_R$ is with $R$ interior to this point.  From equation (\ref{eq:rcirc}) we thus conclude that $r_{\rm circ} \lesssim 0.01r_{s}$, i.e.~that gas will circularize well inside the inner sonic point of the flow (typically located at $\sim 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  Angular momentum should only become dynamically important for thermally stable flows in a region that is causally disconnected from the outer part of the flow where the mass accretion rate is determined.
+where we have used the definition $r_{\rm soi} \equiv
+GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed
+that $r_{\rm s} \lesssim r_{\rm soi}$, a condition which is satisfied
+for the thermally-stable solutions of interest.
+
+\citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$
+is generally $< 0.1$ on radial scales $<$ 10 per cent of the galaxy
+half-light radius and that $\lambda_R$ is with $R$ interior to this
+point.  From equation (\ref{eq:rcirc}) we thus conclude that $r_{\rm
+  circ} \lesssim 0.01r_{s}$, i.e.~that gas will circularize well
+inside the inner sonic point of the flow (typically located at $r\lsim
+0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  Angular momentum should only
+become dynamically important for thermally stable flows in a region
+that is causally disconnected from the outer part of the flow where
+the mass accretion rate is determined.
 
 
 \section{Numerical Results}
@@ -854,7 +891,9 @@ $    10^{ 8 }$ & 300 & 0.8 & 25 & 1.3 & $ 9.4 \times 10^{ -4 }$ & $\mathbf{1}$ \
 ...$^{\dagger}$ & ... & 0.8 & 100 & 3.3 & $ 2.8 \times 10^{ -3 }$ & $\mathbf{2.8}$\\
 ... & 600 & 0.8 & 25 & 0.26 & $ 1.3 \times 10^{ -4 }$ & $ 1.1 \times 10^{ 2 }$ \\
 ... & ... & 0.8 & 100 & 0.28 & $ 1.5 \times 10^{ -4 }$ & 76 \\
-...$^{\dagger}$ & ... & 0.8 & 100 & 0.29 & $ 1.5 \times 10^{ -4 }$ & 70 \\
+...$^{\dagger}$ & ... & 0.8 & 100 & 0.29 & $ 1.5 \times 10^{ -4 }$ &
+70 \\
+...$^{\ddagger}$ & ... & 0.8 & 100 & 0.31 & $ 1.6 \times 10^{ -4 }$ & 73 \\
 ... & ... & 0.8 & 200 & 0.3 & $ 1.5 \times 10^{ -4 }$ & 67 \\
 ... & ... & 0.8 & 400 & 0.31 & $ 1.6 \times 10^{ -4 }$ & 58 \\
 ... & 1200 & 0.8 & 100 & $ 5.4 \times 10^{ -2 }$ & $ 2.0 \times 10^{
@@ -885,12 +924,17 @@ $    10^{ 8 }$ & 600 & 0.1 & 25 & 0.39 & $ 1.1 \times 10^{ -4 }$ & 31 \\
 \label{table:models}  
 \end{tabular}
 \begin{tablenotes}
-\item $^{(a)}$ Inner power-law index of stellar Nuker profile.  $^{(b)}$
-Break radius of stellar Nuker profile.  $^{(c)}$Accretion rate in
-Eddington units, normalized to a stellar mass input parameter $\eta =
-0.2$.  $^{(d)}$Ratio of cooling timescale to free-fall timescale at
-stagnation radius.  Thermally unstable solutions are shown in bold
-text.  $\dagger$Calculated with full radiative cooling included, assuming mass loss parameter $\eta = $? 
+\item $^{(a)}$ Inner power-law index of stellar Nuker profile.
+  $^{(b)}$ Break radius of stellar Nuker profile.  $^{(c)}$Accretion
+  rate in Eddington units, normalized to a stellar mass input
+  parameter $\eta = 0.2$.  $^{(d)}$Ratio of cooling timescale to
+  free-fall timescale at stagnation radius.  Thermally unstable
+  solutions are shown in bold text.  $\dagger$Calculated with
+  radiative cooling included, assuming mass loss parameter $\eta =
+  0.2$.  $\ddagger$Calculated with radiative cooling and conductivity
+  included, assuming mass loss parameter $\eta = 0.2$ and conductivity
+  saturatioon parameter $\phi=0.1$ (recall that we assume that the
+  conductive heat flux saturates to $F_{\rm cond}=5\phi \rho c_s^3$). 
 \end{tablenotes}
 \end{minipage}
 \end{threeparttable}
@@ -1461,7 +1505,7 @@ vw is comparable to sigma, and thus rs should run away to large
 radii. This is especially true for core galaxies.}
 
 Realistic variations (``burstiness") in the star formation history
-will often result in lower heating rates.  Figure \ref{NickPlot2}
+will often result in lower heating rates.  Figure \ref{fig:NickPlot2}
 shows the heating rate as a function of average black hole mass for
 non-fiducial cases in which the current ($z = 0$) star formation is
 suppressed by a factor $\zeta$ from its average $z = 0$ value, for a
@@ -1699,7 +1743,7 @@ of early-type galaxies in the local universe have undergone recent ($<
 1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).  If such
 cyclic behavior also occurs on small, parsec scales (e.g.) then the
 large scatter in the accretion rates and hence X-ray luminosities
-shown in Fig \ref{fig:Miller} could also be understood by the wide
+shown in Fig \ref{fig:miller} could also be understood by the wide
 range of gas masses experienced over the course of a cyclic episode
 between instabilities and periodic nuclear outbursts
 (e.g.~\citealt{Ciotti+10}).  In support of this possibility, we find
@@ -2027,11 +2071,12 @@ Our results could in principle also have implications for nuclear star clusters 
 We have calculated steady-state models for circumnuclear medium of
 quiescent galaxies, assuming that gas is supplied entirely by stellar
 wind mass loss and heated by shocked stellar winds, supernovae and
-black hole feedback. We compute profile for a range of different black
-hole masses, heating rates, and stellar density profiles and use these
-profiles to calculate an $\Mdot$ onto each galaxy's SMBH, and get the
-scaling of $\Mdot$ with $\Mbh$. We may then compare our results with
-observed trends of Our main conclusions may be summarized as follows.
+black hole feedback. We compute profiles for a range of different
+black hole masses, heating rates, and stellar density profiles and use
+these profiles to calculate an $\Mdot$ onto each galaxy's SMBH, and
+get the scaling of $\Mdot$ with $\Mbh$. We may then compare our
+results with observed trends of nuclear x-ray luminosity with galaxy
+properties. Our main conclusions may be summarized as follows.
 
   \begin{enumerate}
   %Younger population=>higher accretion rate; generally higher eta and
@@ -2043,14 +2088,14 @@ observed trends of Our main conclusions may be summarized as follows.
     tension observations of nuclear X-ray luminosity which suggest
     that $\eddr$ increases towards smaller $\Mbh$
     \citep{Miller+15}. However, it is important to note that the
-    inflow rate on large scale (which we calculate) may differ from
+    inflow rate on large scales (which we calculate) may differ from
     the actual accretion rate as outflows could occur on small
     scales. The outflow rate would depend on the angular momentum of
     the infalling gas and thus the angular momentum of stars in the
     nucleus. The in turn would vary systematically with $\Mbh$.
   \item We expect within scatter in nuclear x-ray luminosities at
     fixed $\Mbh$ from (1) stochastic variation in star formation
-    history from galay to galaxy (2) Variations in small scale outflow
+    history from galaxy to galaxy (2) Variations in small scale outflow
     rates due to variations between galactic nuclear angular momenta.
     These variations alone could explain much of the 2-4 orders of
     magnitude of scatter of nuclear x-ray luminosity at fixed $\Mbh$ 
@@ -2067,7 +2112,7 @@ observed trends of Our main conclusions may be summarized as follows.
     to constrain the occupation fraction of black holes in low mass
     galaxies (\citealt{Miller+15}).
   \item Low mass AGN have growth times comparable to the Hubble time
-    \citet{Heckman+04}. We have shown that this would require accretion
+    (\citet{Heckman+04}). We have shown that this would require accretion
     rates not consistent with steady-state thermally stable accretion
     of stellar wind material, and is driven by an external supply of gas.
   \item We compare the $\Mdot$ for each of our solution to the one
