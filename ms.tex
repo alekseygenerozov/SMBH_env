@@ -182,7 +182,7 @@ quiescent SMBHs would have implications for a variety of observations,
 such as constraints on the occupation fraction of SMBHs in low mass
 galaxies.  \citet{Miller+15} use the average relationship between the
 nuclear X-ray luminosities, $L_{X}$, of a sample of elliptical
-galaxies and the black hole mass to infer tentative evidence for a
+galaxies and their associated SMBH masses to infer tentative evidence for a
 SMBH occupation fraction less than unity in galaxies with stellar
 masses $M_{\star} \lesssim 10^{10}M_{\odot}$ ($M_{\bullet} \lesssim
 10^{7}M_{\odot}$).  This method relies on extrapolating a power-law
@@ -222,7 +222,7 @@ for very young stellar populations (\citealt{Rubin&Loeb11}), while
 \citet{MacLeod+13} find that TDEs contribute subdominantly to the
 time-averaged accretion rate of quiescent SMBHs.
 
-\citet{Ho:2009a} estimates the SMBH accretion rates in a sample of
+\citet{Ho:2009a} determines the SMBH accretion rates in a sample of
 early-type galaxies using X-ray observations to determine the
 Bondi accretion rate and based on estimates for the mass loss rate of
 evolved stars.  Both methods lead to the conclusion that the available
@@ -260,7 +260,7 @@ massive elliptical galaxies (e.g.~\citealt{Ciotti&Ostriker07};
 \citealt{Ciotti+10}).  A key finding of these works is the periodic
 development of cooling instabilities on galactic scales, which
 temporarily increase the gas accretion rate towards the nucleus until
-feedback becomes sufficiently effective to shut off the flow and halt
+feedback becomes effective to shut off the flow and halt
 SMBH growth.  Here we instead focus on time-independent models,
 neglecting radiative cooling.  This approach allows us to
 systematically explore the relevant parameter space and to derive
@@ -268,7 +268,7 @@ simple analytic expressions that prove useful in exploring whether
 cooling instabilties manifest across the expected range of galaxy
 properties, or whether other (non-AGN) forms of feedback can result in
 steady accretion.  Even if cooling instabilties develop on galactic
-scales over longer timescales, e.g. $\sim$ Gyr, a state of
+scales over longer $\sim$ Gyr timescales, a state of
 quasi-steady accretion may exist between these inflow events on
 smaller radial scales comparable to the sphere of influence.  We are
 thus motivated to explore whether steady flow is achieved within the
@@ -298,7 +298,7 @@ describe our model, including the sample of galaxies used in our
 analysis ($\S\ref{sec:gal_model}$) and our numerical procedure for
 calculating the steady-state hydrodynamic profile of the CNM
 ($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe some
-analytic results, while in $\S\ref{sec:numerical}$ we describe our numerical results.  In $\S\ref{sec:discussion}$ we discuss the implications of our results, to topics including...   In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table \ref{table:definitions} provides the definitions of commonly used variables.  Appendix \ref{app:rs} provides useful analytic results, while Appendix \ref{app:windheat} describes our method for calculating stellar wind heating and mass input in greater detail.  
+analytic results, while in $\S\ref{sec:numerical}$ we describe our numerical results.  In $\S\ref{sec:discussion}$ we discuss the implications of our results, to topics including...   In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table \ref{table:definitions} provides the definitions of commonly used variables.  Appendices \ref{app:rs} and XXX provides useful analytic results, while Appendix \ref{app:windheat} describes our method for calculating stellar wind heating and mass input in greater detail.  
 
 
 \begin{table*}
@@ -492,7 +492,7 @@ Radiative cooling contributes an additional term to equation (\ref{eq:dsdt}) of 
 \dot{q}_{\rm rad} = -\Lambda(T)n^{2},
 \label{eq:qdot_rad}
 \end{equation}
-where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low or if the mass return rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instability (e.g.~\citealt{McCourt+12}; $\S\ref{sec:instability}$) that cannot be accounted for by our 1D
+where $n = \rho/\mu m_p$ is the gas number density and $\Lambda(T)$ is the cooling function.  We neglect radiative cooling in our baseline calculations, despite the fact that this is not justified when the wind heating $\vwO$ is low or if the mass return rate $\eta$ is high.  However, once radiative cooling becomes important compared to other sources of heating and cooling, its presence leads to thermal instability (e.g.~\citealt{McCourt+12}) that cannot be accounted for by our 1D
 time-independent model.  A main goal of this work is to use solutions neglecting radiation to ascertain over what range of physical conditions cooling instabilities are most likely to develop ($\S\ref{sec:instability}$).
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
@@ -516,8 +516,7 @@ We first describe analytic estimates of physical quantities, such as the stagnat
 Continuity of the entropy derivative at the stagnation radius where $v = 0$ requires that the temperature at this location be given by (eq.~[\ref{eq:first_law}])
 \begin{align}
 T|_{r_{s}}& = \frac{\gamma-1}{\gamma}\frac{\mu m_p
-  \tilde{v}_{w}^{2}}{2k} \nonumber\\
- &\approx \frac{2}{5} \frac{7-2\nu}{7} \frac{\mu m_p
+  \tilde{v}_{w}^{2}}{2k} \approx \frac{2}{5} \frac{7-2\nu}{7} \frac{\mu m_p
    v_{w}^{2}}{2k}\nonumber\\ 
  &\approx
  \begin{cases}
@@ -570,7 +569,7 @@ accreting.  This result makes intuitive sense: gas is supplied to the
 nuclear by stars which are gravitationally bound to the black hole, so
 outflows are possible only if the specific heating rate $\sim
 v_{w}^{2}$ significantly exceeds the specific gravitational binding
-energy $\sim \sigma^{2}$.
+energy $\sim \sigma^{2}$.  In fact, for core galaxies the specific heating rate necessary to produce an unbound outflow can greatly exceed $\sigma^{2}$ due to the additional gravitational potential of stars outside the sphere of influence (Appendix XXX).  
 
 
 \subsection{SMBH Accretion Rate}
@@ -612,7 +611,7 @@ The gas density at the stagnation radius $\rho|_{r_{\rm s}}$ is more challenging
   \begin{cases}
     6 \times 10^{-26} \Mbheight^{-0.2} v_{500}^{-0.8}  \eta_{0.02} \,
     \, {\rm g \, cm^{-3}}& \text{core},\\
-    10 \times 10^{-26}  \Mbheight^{-0.5} v_{500}^{0.6}  \eta_{0.02} \,\, {\rm g \,cm^{-3}} & \text{cusp}.
+    1.0 \times 10^{-25}  \Mbheight^{-0.5} v_{500}^{0.6}  \eta_{0.02} \,\, {\rm g \,cm^{-3}} & \text{cusp}.
   \end{cases}
   \label{eq:rhors}
 \end{align}
@@ -678,10 +677,7 @@ where the stagnation radius is assume to reside well inside the Nuker
 break radius and for clarity we have not distinguished between cusp
 and core galaxies.  Equation (\ref{eq:conduction}) shows that even in
 the case of saturated conduction, the neglect of heat conduction
-results in at most an order unity correction for expected {\bf (AG:
-  this sounds a bit too sharp perhaps replace with the word
-  plausible. Perhaps we should also mention the phi=1 solutions have
-  acausal conductivity (perhaps they are unphysical?).} values of
+results in at most an order unity correction for plausible, causal values of
 the saturation parameter $\phi < 0.1$, justifying its neglect in our
 analysis.  Numerical experiments including conductivity confirm this
 ($\S\ref{sec:numerical}$).
@@ -725,7 +721,6 @@ radiative cooling $|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:qdot_rad}]),
   \end{cases}
   \label{eq:cooling2}
 \end{align}
-
 where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs})
 for the gas and stellar densities at the stagnation radius,
 respectively.  We have approximated the cooling function for $T <
@@ -757,11 +752,11 @@ v_{w} > v_{\rm TI} \simeq
   {\rm max}\begin{cases}
    200 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
    200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}\\
-\sigma,     
+f(r_b/r_{\rm soi})\sigma,     
   \end{cases}
   \label{eq:cooling3}
 \end{align}
-The requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines are derived using equation (\ref{eq:rs_simple}) for $r_s$.  However, when $v_{\rm w} \lesssim \sigma$ the stagnation radius moves to very large radii, or may not exist at all (see also Fig.~\ref{fig:stag}), resulting in much higher gas densities and inevitable cooling instability. 
+The requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines are derived using equation (\ref{eq:rs_simple}) for $r_s$.  However, when $v_{\rm w} \lesssim f(r_b/r_{\rm soi})\sigma$ the stagnation radius moves to very large radii, or may not exist at all (see also Fig.~\ref{fig:stag}), resulting in much higher gas densities and inevitable cooling instability.  The dimensionless function f is approximately unity for cusp galaxies, but increases $\propto (r_b/r_{\rm soi})^{1/2}$ for core galaxies (Fig.~XXX).  
 %Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally sufficient for stability at all radii (Fig.~\ref{fig:cooling}).   
 
 The existence of a minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) implies a corresponding maximum accretion rate,
@@ -826,7 +821,6 @@ which is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v
   \begin{align}
     \lambda_R \equiv \frac{\langle r|V|\rangle}{\langle R\sqrt{V^2+\sigma^2}\rangle} \underset{R \ll r_{\rm soi}}\sim \frac{V_{\phi}}{\sigma},
   \end{align}
-
   where $\sigma$ is the velocity dispersion and the brackets indicate
   a luminosity-weighted average.  The circularization radius of the
   accretion flow can be written in terms of $\lambda_R$ as
@@ -835,7 +829,6 @@ which is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v
 \frac{r_{\rm circ}}{r_{s}} \approx \frac{r_{s}}{r_{\rm soi}}\lambda_{R}^{2} \lesssim \lambda_{R}^{2},
 \label{eq:rcirc}
 \end{equation}
-
 where we have used the definition $r_{\rm soi} \equiv
 GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed
 that $r_{\rm s} \lesssim r_{\rm soi}$, a condition which is satisfied
@@ -843,8 +836,7 @@ for the thermally-stable solutions of interest.
 
 \citet{EmsellemCappellari+:2007a} (their Fig.~2) find that $\lambda_R$
 is generally $< 0.1$ on radial scales $<$ 10 per cent of the galaxy
-half-light radius and that $\lambda_R$ is with $R$ interior to this
-point.  From equation (\ref{eq:rcirc}) we thus conclude that $r_{\rm
+half-light radius and that $\lambda_R$ decreases with decreasing $R$ interior to this point.  From equation (\ref{eq:rcirc}) we thus conclude that $r_{\rm
   circ} \lesssim 0.01r_{s}$, i.e.~that gas will circularize well
 inside the inner sonic point of the flow (typically located at $r\lsim
 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  Angular momentum should only
