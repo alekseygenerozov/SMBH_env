@@ -1,0 +1,93 @@
+We assume that the stellar density profile follows a broken power law
+with the stellar density $\rhostar\sim r^{-1-\Gamma}= r^{-\delta}$ inside of the
+break radius $\rb$, where ($0<\Gamma<1$). We derive an expression for
+the specific enthalpy of the gas, $\ke +\gammaf \frac{p}{\rho}$ as a
+function of $\zeta=v_w/\sigma$, $x=r/r_s$, and $r_s/\rsoi$. We show
+that if the break radius, $\rb$ goes to infinity this quantity
+necessarily goes to infinity as the potential well becomes infinitely
+deep, hence a break radius is necessary for an outflow to be possible.
+
+Consider the steady state energy conservation equation. {\bf AG perhaps
+  put a brief explanation of how this relates to the steady state
+  entropy equation via laws of thermodynamics?.}
+
+\begin{align}
+\frac{1}{r^2} \frac{d}{dr} \left(r^2 \rho v \left(\frac{v^2}{2} + \Phi
+    + \gammaf \frac{p}{\rho}\right) \right) = q \kew + q \Phi
+\label{eq:enCons}
+\end{align}
+
+Where $\kew=v_w^2+\sigma^2\simeq v_w^2+\frac{G M_{\rm enc}(r)}{r}$ and
+$\Menc$ is the sum of the black hole mass and the stellar mass.
+
+Now integrate both sides with respect from r to the stagnation radius 
+
+\begin{align}
+  r^2 \rho v \left(\ke+\Phi+\gammaf \frac{p}{\rho} \right)= \int_{\rs}^{r}
+    r^2 \left(q \kew + q\Phi\right) dr
+    \label{eq:enConsInt}
+\end{align}
+
+We know $f\equiv r^2 \rho v$ from the steady state mass conservation
+equation. 
+
+\begin{align}
+ \frac{1}{r^2} \frac{d}{dr} \left(r^2 \rho v\right) = q 
+\end{align}
+
+Where q is the rate of the mass injection per volume, which is
+proportional to the stellar density. Let $x=r/\rs$ and $q_o= q
+(\rs)$. Then $q=q_o x^{-\delta}$. 
+
+Then one obtains for the mass flux, $f$ 
+
+\begin{align}
+ f(x)=q_o \rs^3 \left[\frac{x^{3-\delta}-1}{3-\delta}\right]
+ \label{eq:massFlux}
+\end{align}
+
+The gravitational potential $\Phi$ is given by
+
+\begin{align}
+\Phi= -\frac{G \Menc}{r} - 4 \pi G \int_{r}^{\rs} \rhostar(dr') r'
+dr'.
+\label{eq:Phi}
+\end{align}
+
+Note our unconventional choice of gauge: the upper limit of the
+integral on the right hand side is $\rs$ whereas conventionally the
+upper limit is taken to be $\infty$. This means that our definition
+will not give $\Phi=0$ in the limit $r\rightarrow\infty$. However,
+our result for the enthalpy $\ke + \gammaf \frac{p}{\rho}$ will be
+gauge invariant. 
+
+Using equations~\eqref{eq:enConsInt},~\eqref{eq:massFlux},
+and~\eqref{eq:Phi}, we may obtain an expression for the enthalpy,
+$\ke+\gammaf \frac{p}{\rho}$ of the gas inside of the break radius
+$\rb$. 
+
+\begin{align}
+&\frac{v^2}{2}+\gammaf \frac{p}{\rho} = \frac{G \Mbh}{x \rs} + \frac{G
+  M_\star}{x \rs} - U_o \frac{x^{2-\delta}-1}{2-\delta}\nonumber\\
+&-U_o\left[\frac{1}{2-\delta}-\frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{(5-2\delta)(2-\delta)}\right]\nonumber\\
+&+\frac{v_w^2}{2}-\frac{G \Mbh}{2 r_s} \frac{3-\delta}{2-\delta}\frac{x^{2-\delta}-1}{x^{3-\delta}-1} -\frac{G M_\star}{2 r_s} \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{5-2\delta},
+\end{align}
+
+where $U_o=4 \pi G \rhostar(\rs) \rs^2$.  We may rewrite this as 
+
+\begin{multline}
+  \frac{v^2}{2}+\gammaf \frac{p}{\rho}=\frac{G \Mbh}{\rs}
+  \biggl[\zeta^2 w^{\frac{1}{3 -\delta}}+\frac{1}{x}+\frac{w}{x}
+-\frac{1}{2} \frac{3-\delta}{2-\delta} \frac{x^{2 -\delta}-1}{x^{3-\delta}-1}\\
+  -w (3 -\delta) \left(-\frac{3-\delta}{(5-2\delta)(2-\delta)}\frac{x^{5 -2 \delta}-1}{ \left(x^{3-\delta}-1\right)}\right)\\
+  -\frac{w (3
+    -\delta) x^{2 -\delta}}{2
+    -\delta}-\frac{w (3 -\delta) \left(x^{5
+        -2 \delta}-1\right)}{2 (5 -2 \delta)
+    \left(x^{3 -\delta}-1\right)}
+  \biggr]
+\end{multline}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "ms"
+%%% End: 
