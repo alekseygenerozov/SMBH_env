@@ -298,7 +298,15 @@ describe our model, including the sample of galaxies used in our
 analysis ($\S\ref{sec:gal_model}$) and our numerical procedure for
 calculating the steady-state hydrodynamic profile of the CNM
 ($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe some
-analytic results, while in $\S\ref{sec:numerical}$ we describe our numerical results.  In $\S\ref{sec:discussion}$ we discuss the implications of our results, to topics including...   In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table \ref{table:definitions} provides the definitions of commonly used variables.  Appendices \ref{app:rs} and XXX provides useful analytic results, while Appendix \ref{app:windheat} describes our method for calculating stellar wind heating and mass input in greater detail.  
+analytic results, while in $\S\ref{sec:numerical}$ we describe our
+numerical results.  In $\S\ref{sec:discussion}$ we discuss the
+implications of our results, to topics including...  In
+$\S\ref{sec:conclusions}$ we summarize our conclusions.  Table
+\ref{table:definitions} provides the definitions of commonly used
+variables.  Appendices \ref{app:rs} and \ref{app:be} provides useful
+analytic results, while Appendix \ref{app:windheat} describes our
+method for calculating stellar wind heating and mass input in greater
+detail.
 
 
 \begin{table*}
@@ -569,7 +577,10 @@ accreting.  This result makes intuitive sense: gas is supplied to the
 nuclear by stars which are gravitationally bound to the black hole, so
 outflows are possible only if the specific heating rate $\sim
 v_{w}^{2}$ significantly exceeds the specific gravitational binding
-energy $\sim \sigma^{2}$.  In fact, for core galaxies the specific heating rate necessary to produce an unbound outflow can greatly exceed $\sigma^{2}$ due to the additional gravitational potential of stars outside the sphere of influence (Appendix XXX).  
+energy $\sim \sigma^{2}$.  In fact, for core galaxies the specific
+heating rate necessary to produce an unbound outflow can greatly
+exceed $\sigma^{2}$ due to the additional gravitational potential of
+stars outside the sphere of influence (Appendix~\ref{app:be}).
 
 
 \subsection{SMBH Accretion Rate}
@@ -756,7 +767,14 @@ f(r_b/r_{\rm soi})\sigma,
   \end{cases}
   \label{eq:cooling3}
 \end{align}
-The requirement $v_{\rm w} \gtrsim \sigma$ results because the top two lines are derived using equation (\ref{eq:rs_simple}) for $r_s$.  However, when $v_{\rm w} \lesssim f(r_b/r_{\rm soi})\sigma$ the stagnation radius moves to very large radii, or may not exist at all (see also Fig.~\ref{fig:stag}), resulting in much higher gas densities and inevitable cooling instability.  The dimensionless function f is approximately unity for cusp galaxies, but increases $\propto (r_b/r_{\rm soi})^{1/2}$ for core galaxies (Fig.~XXX).  
+The requirement $v_{\rm w} \gtrsim \sigma$ results because the top two
+lines are derived using equation (\ref{eq:rs_simple}) for $r_s$.
+However, when $v_{\rm w} \lesssim f(r_b/r_{\rm soi})\sigma$ the
+stagnation radius moves to very large radii, or may not exist at all
+(see also Fig.~\ref{fig:stag}), resulting in much higher gas densities
+and inevitable cooling instability.  The dimensionless function f is
+approximately unity for cusp galaxies, but increases $\propto
+(r_b/r_{\rm soi})^{1/2}$ for core galaxies (Fig.~\ref{fig:vwCrit}).  
 %Our numerical results in $\S\ref{sec:numerical}$ demonstrate that $\tilde{v}_{w} \gtrsim v_{\rm CI} \sim 200-300$ km s$^{-1}$ is generally sufficient for stability at all radii (Fig.~\ref{fig:cooling}).   
 
 The existence of a minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) implies a corresponding maximum accretion rate,
@@ -1339,9 +1357,20 @@ Approximating $M_{\rm g} \sim \dot{M}t_{\rm ff}$, the ratio of the jet escape ti
 \begin{equation}
 \frac{t_{\rm jet}}{t_{\rm dyn}} \sim 7\times 10^{-3}M_{\bullet,8}^{0.13}\left(\frac{\epsilon_{\rm j}}{10^{-6}}\right)^{-1/3},
 \end{equation}
-independent of $r$.  A jet with power sufficient to appreciably heat the CNM on radial scales $\sim r_{\rm s}$ ($\epsilon_{j} \gtrsim 10^{-6}$) also necessarily has sufficient power to escape the nucler region and propagate to much larger radii.  Slower outflows from the accretion disk, instead of a collimated relativistic jet, may provide a more promising source of feedback in these systems (e.g.~\citealt{Li+13}).    
+independent of $r$.  A jet with power sufficient to appreciably heat
+the CNM on radial scales $\sim r_{\rm s}$ ($\epsilon_{j} \gtrsim
+10^{-6}$) also necessarily has sufficient power to escape the nucler
+region and propagate to much larger radii.  Slower outflows from the
+accretion disk, instead of a collimated relativistic jet, may provide
+a more promising source of feedback in these systems
+(e.g.~\citealt{Li+13}).
 
-As in the case of Compton heating, kinetic heating could in principle  `self-regulate' the accretion flow insofar as a lower heating rate results in a higher accretion rate (eq.~[\ref{eq:vjet}]), which in turn may create stronger jet feedback.  However, given the uncertainty in the efficiency of jet heating, we defer a more detailed discussion to $\S\ref{sec:kinetic}$.
+As in the case of Compton heating, kinetic heating could in principle
+`self-regulate' the accretion flow insofar as a lower heating rate
+results in a higher accretion rate (eq.~[\ref{eq:vjet}]), which in
+turn may create stronger jet feedback.  However, given the uncertainty
+in the efficiency of jet heating, we defer a more detailed discussion
+to $\S\ref{sec:kinetic}$.
 
 
 \begin{figure}
@@ -1645,12 +1674,47 @@ inefficient flows {\bf AG: Don't forget differences in eta}.
 
 It is also possible that many of the galactic nuclei from the \citet{Miller+15} sample are not accreting in a steady fashion.  The efficiency assumed in the right panel of Figure \ref{fig:miller} in some ways represents a maximum value, since it does not take into suppression of the accretion rate due to disk outflows on small scales.  If the actual X-ray efficiency is lower than assumed, then many of the detections in the case of low SMBH masses, $M_{\bullet} \lesssim 10^{8}M_{\odot}$, would lie even further above above the predicted average value for stable accretion (black line).  These galaxies either experience significantly lower levels of heating than average galaxies of their mass, or that they are not accreting stably at all.  Indeed, for the lowest mass holes, $M_{\bullet} \lesssim 10^{8}M_{\odot}$, $L_{\rm X}$ nearly exceeds that predicted for the maximum thermally-stable accretion rate, $\dot{M}_{\rm TI}$ (yellow line).  It is not surprising that this sample is more likely to be thermally unstable as compared to an average galaxy with this black hole mass, because the \citet{Miller+15} sample includes only early-type galaxies with on averager older stellar populations.  
 
-Figure \ref{fig:bh_growth} (top panel) also shows that across all black hole masses, Compton heating also cannot prevent average accretion rates which are thermally unstable, i.e. $\dot{M}_{\rm C} > \dot{M}_{\rm TI}$.  In the case of thermal instabilities, nuclear gas may undergo cyclic oscillations of rapid cooling and high accretion rates, followed by quiescent
-periods once gas has been consumed and/or AGN feedback becomes effective.  Such cycles are proposed to occur on large scales and long timescales in elliptical galaxies (\citealt{Ciotti+10}), an idea possibly supported by, e.g., GALEX observations showing that a small fraction of early-type galaxies in the local universe have undergone recent ($< 1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).  Similiar cyclic AGN activity have been proposed to occur on the smaller scale of the sphere of influence (e.g.~\citealt{Yuan&Li11}, \citealt{Cuarda+15}).  
+Figure \ref{fig:bh_growth} (top panel) also shows that across all
+black hole masses, Compton heating also cannot prevent average
+accretion rates which are thermally unstable, i.e. $\dot{M}_{\rm C} >
+\dot{M}_{\rm TI}$.  In the case of thermal instabilities, nuclear gas
+may undergo cyclic oscillations of rapid cooling and high accretion
+rates, followed by quiescent periods once gas has been consumed and/or
+AGN feedback becomes effective.  Such cycles are proposed to occur on
+large scales and long timescales in elliptical galaxies
+(\citealt{Ciotti+10}), an idea possibly supported by, e.g., GALEX
+observations showing that a small fraction of early-type galaxies in
+the local universe have undergone recent ($< 1-2$ Gyr old) star
+formation episodes (\citealt{Donas+07}).  Similiar cyclic AGN activity
+have been proposed to occur on the smaller scale of the sphere of
+influence (e.g.~\citealt{Yuan&Li11}, \citealt{Cuarda+15}).
 
-If such cyclic outbursts also manifest on the properties of gas on small, parsec scales, then the large scatter in the accretion rates and hence X-ray luminosities in Fig \ref{fig:miller} could result from the wide range of inflow rates experienced over the course of a cyclic episode between instabilities and periodic nuclear outbursts (e.g.~\citealt{Ciotti+10}).  Due to their deeper potential well, we find that core galaxies are more likely to possess higher accretion rates and potentially be thermally unstable for a fixed wind heating rate than cusp galaxies (Fig.~XXX).  This could help explain why core galaxies show a wide range of nuclear radio and X-ray luminosities (suggesting cyclic accretion episodes), while cusp galaxies are confined below a threshold (e.g., \citealt{Bender+89,   Pellegrini99, Capetti&Balmaverde05}), consistent with thermally-stable, steady-state picture.
+If such cyclic outbursts also manifest on the properties of gas on
+small, parsec scales, then the large scatter in the accretion rates
+and hence X-ray luminosities in Fig \ref{fig:miller} could result from
+the wide range of inflow rates experienced over the course of a cyclic
+episode between instabilities and periodic nuclear outbursts
+(e.g.~\citealt{Ciotti+10}).  Due to their deeper potential well, we
+find that core galaxies are more likely to possess higher accretion
+rates and potentially be thermally unstable for a fixed wind heating
+rate than cusp galaxies (Fig.~XXX).  This could help explain why core
+galaxies show a wide range of nuclear radio and X-ray luminosities
+(suggesting cyclic accretion episodes), while cusp galaxies are
+confined below a threshold (e.g., \citealt{Bender+89, Pellegrini99,
+  Capetti&Balmaverde05}), consistent with thermally-stable,
+steady-state picture. ({\bf AG: This picture may be dubious...Review
+  the literature but I think that the higher upper bound for cores is
+  just due to a mass selection effect.})
 
-If the galaxies with measured $L_{\rm X}$ at low $M_{\bullet}$ in Fig \ref{fig:miller} represent thermally-unstable galaxies, then many of the upper limits may correspond to a separate ``thermally stable" population, for instance including SgrA*.  The possibility of a mixed population of stable versus unstable galaxies calls into question the use of simple extrapolations of power-law fits to the $L_{\rm X}(M_{\bullet}$) relationship to low $M_{\bullet}$ to constrain the occupation fraction of black holes in low mass galaxies (\citealt{Miller+15}).
+If the galaxies with measured $L_{\rm X}$ at low $M_{\bullet}$ in Fig
+\ref{fig:miller} represent thermally-unstable galaxies, then many of
+the upper limits may correspond to a separate ``thermally stable"
+population, for instance including SgrA*.  The possibility of a mixed
+population of stable versus unstable galaxies calls into question the
+use of simple extrapolations of power-law fits to the $L_{\rm
+  X}(M_{\bullet}$) relationship to low $M_{\bullet}$ to constrain the
+occupation fraction of black holes in low mass galaxies
+(\citealt{Miller+15}).
 
 %The cyclic model predicts that high $L_{X}$ nuclei should be more
 %common in galaxies with younger stellar ages, a result which appears
@@ -1887,7 +1951,7 @@ Our results could in principle also have implications for nuclear star clusters 
 % %Note currently I reverse-engineer the stellar mass from the black
 % %hole mass inferred from M-sigma; however, it would be better to use
 % %the tabulated black hole mass from the Mbh-Mbulge relation.
-% Fig. 1 of \citealt{Miller+15} plots the observed
+% Fig.1 of \citealt{Miller+15} plots the observed
 % relationship of unresolved x-ray luminosity versus galactic stellar
 % mass for a sample of quiescent galaxies. We may construct a similar
 % relationship with our own sample using the inferred accretion rates
