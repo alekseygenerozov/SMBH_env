@@ -557,11 +557,12 @@ Hydrostatic equilibrium furthermore determines the value of the stagnation radiu
 \label{eq:stag_analytic}
 \end{align}
 
-If the SMBH dominates the gravitational potential at the stagnation
-radius, then $v_{w} \gtrsim \sigma$ and hence the stagnation radius
-resides well inside the sphere of influence ($r_{\rm s} < r_{\rm
-  soi}$; eq.~[\ref{eq:rsoi}]).  In this limit, equation
-(\ref{eq:stag_analytic}) simplifies to
+If the stagnation radius is well inside the influence radius, $\rsoi$,
+then $\Mstar/\Mbh|_{\rs}\ll1$. Also, equation~\eqref{eq:rsRinf}
+implies that $v_w\gg \sigma_0$, since
+$\rs/\rsoi=\frac{k(\Gamma)}{3\zeta^2}$, where
+$\zeta=\sqrt{\frac{v_w^2+\sigma_0^2}{\sigma_0^2}}$ and $k(\Gamma)$ is
+of order unity then equation~\eqref{eq:stag_analytic} simplifies to
 \begin{align}
   &\rs \underset{v_w \gtrsim \sigma}\approx
   \left(\frac{13+8\Gamma}{4+2\Gamma}-\densSlope
@@ -578,17 +579,18 @@ core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  This
 expression is similar to that obtained by \citet{Volonteri+11} on more
 heuristic grounds (their eq.~6). 
 
-In the opposite limit of weak heating ($v_{w} \ll \sigma$), the
-stagnation radius moves to large radii $\gg r_{\rm soi}$ or may not
-exist at all, formally implying that the entire ISM of the galaxy is
+In the opposite limit of weak heating ($v_{w} \ll \sigma_0$),
+the stagnation radius moves towards the break radius, $\rb$ in the
+stellar density profile, formally implying that almost entire ISM of the galaxy is
 accreting.  This result makes intuitive sense: gas is supplied to the
 nuclear by stars which are gravitationally bound to the black hole, so
 outflows are possible only if the specific heating rate $\sim
 v_{w}^{2}$ significantly exceeds the specific gravitational binding
-energy $\sim \sigma^{2}$.  In fact, for core galaxies the specific
-heating rate necessary to produce an unbound outflow can greatly
-exceed $\sigma^{2}$ due to the additional gravitational potential of
-stars outside the sphere of influence (Appendix~\ref{app:be}).
+energy.
+%   In fact, for core galaxies the specific
+% heating rate necessary to produce an unbound outflow can greatly
+% exceed $\sigma^{2}$ due to the additional gravitational potential of
+% stars outside the sphere of influence (Appendix~\ref{app:be}).
 
 
 \subsection{SMBH Accretion Rate}
