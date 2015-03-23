@@ -532,8 +532,8 @@ We first describe analytic estimates of physical quantities, such as the stagnat
 Continuity of the entropy derivative at the stagnation radius where $v = 0$ requires that the temperature at this location be given by (eq.~[\ref{eq:first_law}])
 \begin{align}
 T|_{r_{s}}& = \frac{\gamma-1}{\gamma}\frac{\mu m_p
-  \tilde{v}_{w}^{2}}{2k} \approx \frac{2}{5} \frac{7}{7-2\nu} \frac{\mu m_p
-   v_{w}^{2}}{2k}\nonumber\\ 
+  \tilde{v}_{w}^{2}}{2k} \approx \frac{\gamma-1}{\gamma}\frac{\mu
+  m_p v_w^2}{2k} \frac{3+8\Gamma}{3+8\Gamma-6\nu} \nonumber\\ 
  &\approx
  \begin{cases}
   4.5\times 10^6\ \, v_{500}^2 \,\,{\rm K} & \text{core} \\
@@ -542,7 +542,7 @@ T|_{r_{s}}& = \frac{\gamma-1}{\gamma}\frac{\mu m_p
 \label{eq:Tanalytic}
 \end{align}
 where we have assumed $\gamma=5/3$, $v_{500} \equiv v_{w}/(500$ km
-s$^{-1}$) and $\densSlope \equiv -d{\rm ln}\rho/d{\rm ln\,r}|_{r_{\rm
+s$^{-1}$), $v_w\gg\sigma_0$,  and $\densSlope \equiv -d{\rm ln}\rho/d{\rm ln\,r}|_{r_{\rm
     s}}$ is the density power-law slope at $r = r_{\rm s}$.
 Empirically, we find that
 \begin{align}
@@ -552,9 +552,8 @@ Empirically, we find that
 
 Hydrostatic equilibrium furthermore determines the value of the stagnation radius (Appendix \ref{app:rs}, eq.~\ref{eq:rs2main})
 \begin{align}
-  \rs=\frac{G \Mbh}{\densSlope
-    v_w^{2}|_{\rs}}\left[\left(\frac{9-\Gamma}{2} -\densSlope\right)
-    \frac{\Mstar|_{\rs}}{\Mbh} +\frac{7}{2}-\densSlope\right].
+ \rs=\frac{G \Mbh}{\densSlope (v_w^{2}+\sigma_0^2)}\left[2
+    \frac{\Mstar|_{\rs}}{\Mbh} +\frac{13+ 8\Gamma}{4+2\Gamma}-\densSlope \frac{3}{2+\Gamma}\right].  
 \label{eq:stag_analytic}
 \end{align}
 
@@ -564,11 +563,12 @@ resides well inside the sphere of influence ($r_{\rm s} < r_{\rm
   soi}$; eq.~[\ref{eq:rsoi}]).  In this limit, equation
 (\ref{eq:stag_analytic}) simplifies to
 \begin{align}
-  &\rs \underset{v_w \gtrsim \sigma}\approx \left(\frac{7}{2}-\densSlope\right)\frac{G \Mbh}{\densSlope v_w^2} \approx \begin{cases}
-    9
- \, \pc \,\, \Mbheight v_{500}^{-2}\, \pyear& \text{core} \\
-    4
- \, \pc \,\, \Mbheight v_{500}^{-2} \, \pyear  & \text{cusp}, 
+  &\rs \underset{v_w \gtrsim \sigma}\approx
+  \left(\frac{13+8\Gamma}{4+2\Gamma}-\densSlope
+    \frac{3}{2+\Gamma}\right)\frac{G \Mbh}{\densSlope v_w^2}
+  \approx \begin{cases} 9
+    \, \pc \,\, \Mbheight v_{500}^{-2}\, \pyear& \text{core} \\
+    4 \, \pc \,\, \Mbheight v_{500}^{-2} \, \pyear & \text{cusp},
   \end{cases}
   \label{eq:stag_simple}
 \end{align}
