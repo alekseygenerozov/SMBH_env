@@ -92,29 +92,46 @@ where $U_o=4 \pi G \rhostar(\rs) \rs^2$.  We may rewrite this as
 \label{eq:enthAnal}
 \end{multline}
 
-Recall that $\rs$ the stagnation radius, $x\equiv r/\rs$, $\zeta=\sqrt{(v_w^2+\sigma_0^2)/\sigma_0}$, $w\equiv (\rs/\rsoi)^{3\delta}$, and
+Recall that $\rs$ the stagnation radius, $x\equiv r/\rs$, $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$, $w\equiv (\rs/\rsoi)^{3\delta}$, and
 $\delta$ is the power law slope of the stellar density profile inside
 of the break radius, $\rb$.
 
-For a given $\zeta$ we define a critical $\rs/\rsoi=min{
-  \frac{frac{7}{2}-\densSlope}{\densSlope \zeta^2, 1}}$ for thermal stability, 
-where the first term in the brackets corresponds to twice the value
-predicted by equation~\eqref{eq:rsRinf}, in the limit the stellar mass
-as $\rs$ is small compared to $\Mbh$. This prescription is somehwat
-ad hoc, but...{\bf AG--some motivation...}
+For sufficiently large radii ($x$), the expression above always
+becomes negative, which means that a break in the stellar density
+profile is necessary in order to obtain an outflow. For a given
+$\rb/\rsoi$ there is a critical $\zeta$, $\zeta_{c}$, such that if
+$\zeta>\zeta_c$, an outflow will be possible from any
+radius. On the other hand if $\zeta<\zeta_c$, then there is a
+minimum radius from which an outflow is possible, so that we have a
+constraint on $\rs/\rsoi$. 
 
-Then from equation~\eqref{eq:enthAnal} we may obtain the critical
-wind heating parameter $v_{w, \rm crit}/\sigma_{\rm inf}$ for thermal stability as
-a function of $\rb/\rsoi$. This is shown in Fig.~\ref{fig:vwCrit}
+For cusp galaxies ($\Gamma$=0.8), $\zeta_c\simeq \sqrt 2$
+($v_w\simeq\sigma_0$).  On the other hand for core galaxies
+($\Gamma$=0.1) we find $\zeta_c\simeq (\rb/\rsoi)^{0.45}$. We also
+find that for core galaxies for $\zeta<\zeta_c$, there is a minimum
+for $\rs/\rsoi$, $\left(\rs/\rsoi\right)_{\rm min}$--if $\rs/\rsoi$ were
+less than this value the gas enthalpy would become negative inside of
+the break radius which is clearly unphysical.  This may be roughly
+approximated using (see Fig.~\ref{fig:rbRinf})
+
+\begin{align}
+&\left.\frac{\rs}{\rsoi}\right|_{\rm min}=\frac{\rb}{\rsoi} \frac{\sqrt{\zeta_c-\zeta}}{\sqrt{\zeta_c-1}}\nonumber\\
+&\zeta_c\simeq \frac{\rb}{\rsoi}^{0.45}
+\label{eq:rsRinfCrit}
+\end{align}
+
 
 \begin{figure}
-\includegraphics[width=\columnwidth]{vwCrit.pdf}
-\caption{\label{fig:vwCrit} Critical heating rate required for thermal
-  stability normalized to the velocity dispersion at the sphere
-  influence radius, $\sigma_{\rm soi}$ versus $\rb/\rsoi$, the ratio
-  of the break radius in the stellar density profile to the sphere of
-  influence radius. We assume a core stellar dnsity profile inside of
-  $\rb$, so that $\rhostar\sim r^{-1-\Gamma}$ with $\Gamma=0.1$.}
+\includegraphics[width=\columnwidth]{rbRinf.pdf}
+\caption{\label{fig:rbRinf} Mininmum value for ratio of the stagnation
+  radius to the influence radius, $\rs/\rsoi$ for core galaxies
+  ($\Gamma=0.1$) derived by requiring enthalpy of the gas to remain
+  positive out to the break radius $\rb$. The solid lines correspond
+  to the constraint computed numerically from
+  equation~\eqref{eq:enthAnal}, while the dashed line correspond the
+  results of the fitting formula equation~\eqref{eq:rsRinfCrit}. The
+  x-intercept of each curve corresponds to the critical $\zeta$,
+  $\zeta_c$ above which an outflow is possible from any radius}
 \end{figure}
 
 
