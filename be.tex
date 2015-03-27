@@ -64,14 +64,18 @@ gauge invariant.
 Using equations~\eqref{eq:enConsInt},~\eqref{eq:massFlux},
 and~\eqref{eq:Phi}, we may obtain an expression for the enthalpy,
 $\ke+\gammaf \frac{p}{\rho}$ of the gas inside of the break radius
-$\rb$. {\bf AG: 2s with question marks would not be included if the $G
-\Mstar/r$ }
+$\rb$. 
 
 \begin{align}
-&\frac{v^2}{2}+\gammaf \frac{p}{\rho} = \frac{G \Mbh}{x \rs} + \frac{G
-  M_\star}{x \rs} - U_o \frac{x^{2-\delta}-1}{2-\delta}\nonumber\\
-&-U_o\left[\frac{1}{2-\delta}-\frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{(5-2\delta)(2-\delta)}\right]\nonumber\\
-&+\frac{v_w^2}{2}-\frac{G \Mbh}{2 r_s} \frac{3-\delta}{2-\delta}\frac{x^{2-\delta}-1}{x^{3-\delta}-1} -\frac{G M_\star}{2? r_s} \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{5-2\delta},
+  &\frac{v^2}{2}+\gammaf \frac{p}{\rho} = \frac{G \Mbh}{x \rs} +
+  \frac{G
+    M_\star}{x \rs} - U_o \frac{x^{2-\delta}-1}{2-\delta}\nonumber\\
+  &-U_o\left[\frac{1}{2-\delta}-\frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{(5-2\delta)(2-\delta)}\right]\nonumber\\
+  &+\frac{v_w^2}{2}+\frac{\sigma_0^2}{2}- \frac{G \Mbh}{r_s}
+  \frac{1-2\delta}{2(\delta+1)} \frac{3-\delta}{2-\delta}\frac{x^{2-\delta}-1}{x^{3-\delta}-1}
+  \nonumber\\
+  &-\frac{G M_\star}{r_s}
+  \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{5-2\delta},
 \end{align}
 
 where $U_o=4 \pi G \rhostar(\rs) \rs^2$.  We may rewrite this as 
@@ -80,17 +84,15 @@ where $U_o=4 \pi G \rhostar(\rs) \rs^2$.  We may rewrite this as
   \frac{v^2}{2}+\gammaf \frac{p}{\rho}
 =\frac{G \Mbh}{\rs} 
 \biggl[
-  \zeta^2 w^{\frac{1}{3 -\delta}}+\frac{1}{x}+\frac{w}{x}
-  -\frac{1}{2} \frac{3-\delta}{2-\delta} \frac{x^{2  -\delta}-1}{x^{3-\delta}-1}\\
+  \frac{3}{2} \zeta^2 w^{\frac{1}{3 -\delta}}+\frac{1}{x}+\frac{w}{x}
+  -\frac{(1-2\delta)(3-\delta)}{2(\delta+1)(2-\delta)}  \frac{x^{2  -\delta}-1}{x^{3-\delta}-1}\\
   -w \frac{3 -\delta}{2 -\delta} x^{2 -\delta}
-  -w \frac{(2-\delta)(3-\delta)-2?(3-\beta)^{2}}{(5-2\delta)(2-\delta)} \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}
+  -w \frac{(2-\delta)(3-\delta)-(3-\delta)^{2}}{(5-2\delta)(2-\delta)} \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}
 \biggr].
 \label{eq:enthAnal}
 \end{multline}
 
-Recall that $\rs$ the stagnation radius, $x\equiv r/\rs$, $\zeta$ is
-the ratio of the extra heating rate to the stellar velocity in of the
-influence radius $\rsoi$, $w\equiv (\rs/\rsoi)^{3\delta}$, and
+Recall that $\rs$ the stagnation radius, $x\equiv r/\rs$, $\zeta=\sqrt{(v_w^2+\sigma_0^2)/\sigma_0}$, $w\equiv (\rs/\rsoi)^{3\delta}$, and
 $\delta$ is the power law slope of the stellar density profile inside
 of the break radius, $\rb$.
 
