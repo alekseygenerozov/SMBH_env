@@ -321,7 +321,10 @@ detail.
 $M_{\bullet}$ & Black hole mass \\
 $\tilde{v}_{w}$ & Total heating parameter, including minimum heating
 rate from stellar and black hole velocity dispersion \\
-$v_{w}$ & Total heating parameter, excluding heating rate from velocity dispersion \\
+$v_{w}$ & Total heating parameter, excluding heating rate from
+velocity dispersion \\
+$\sigma_0$ & Stellar velocity dispersion--assumed to be constant.\\
+$\zeta$ & $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$\\
 $r_{s}$ & Stagnation radius (where gas radial velocity goes to zero) \\
 $r_{\rm soi}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
 $r_{\rm b}$ & outer break radius of stellar density profile \\ 
@@ -333,15 +336,18 @@ $M_{\rm enc}(r)$ & total enclosed mass inside radius $r$ (SMBH + stars) \\
 $q(r)$ & mass source term due to stellar winds (eq.~[\ref{eq:q}]) \\
 $\eta$ & parameter setting normalization of mass input from stellar winds (eq.~[\ref{eq:q}]) \\
 $\tau_{\star}$ & age of stellar population, in case of a single burst of star formation \\
-$\Gamma$ & power-law slope of radial stellar density profile interior to the break radius \\
-$\sigma(r)$ & stellar velocity dispersion \\
+$\Gamma$ & power-law slope of radial stellar surface brightness
+profile interior to the break radius \\
+$\delta$ & power-law slope of the 3d stellar density profile inside of
+the break radius. $\delta=\Gamma+1$.\\
 $\dot{M}$ & mass accretion rate \\
 $\dot{M}_{\rm Ia}$ & maximum mass accretion rate as limited by SN Ia blow-out (eq.~[\ref{eq:eddr_Ia}]) \\
 $\dot{M}_{\rm C}$ & equilibrium accretion rate set by Compton heating (eq.~[\ref{eq:MdotC}]) \\
 $\dot{M}_{\rm TI}$ & maximum accretion rate for thermally stable accretion (eq.~[\ref{eq:Mdotmax}]) \\
 $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ & ratio of external heating (stellar winds, SN Ia, MSPs) to radiative cooling (eq.~[\ref{eq:cooling2}]) \\
 $t_{\rm h}$ & Hubble timescale \\
-$\nu$ & gas density power-law slope at the stagnation radius (eq.~[\ref{eq:densSlope}]) \\
+$\nu$ & gas density power-law slope at the stagnation radius
+(eq.~[\ref{eq:densSlope}]) \\
 \hline
 \label{table:definitions}  
 \end{tabular}
@@ -1909,6 +1915,32 @@ properties. Our main conclusions may be summarized as follows.
   \begin{enumerate}
   %Younger population=>higher accretion rate; generally higher eta and
   %lower vw except for very young stellar populations.
+  \item The gas will be divided between an accretion flow and an
+    outward flow at the stagnation radius, $\rs$. In a steady state
+    the gas inflow rate towards the hole will be proportional to the
+    stellar mass enclosed inside of $\rs$. 
+  \item The location of the stagnation radius and thus the accretion
+    rate is quite sensitive to the effective heating rate of the
+    gas. In our model gas is supplied by stellar winds and the kinetic
+    energy of the winds is thermalized as the winds
+    collide. Supernovae and AGN feedback may provide additional
+    sources of heating. Each source of heating is related to the star
+    formation history of the galaxy.  For example, a galaxy with star
+    formation within the last $\sim10^7$ years would have mass
+    injection from very fast stellar winds ($w_w\simeq 1000$ km/s). In
+    contrast, an older population would have heating only from AGN
+    feedback and supernovae.
+  
+    Quantitatively $\rs\sim v_w^{-2}$, which implies $\Mdot\sim
+    v_w^{-3.8 (-2.4)}$ for core (cusp galaxies). However, $\Mdot$ may
+    increase more rapidly for small $v_w$ for two reasons. (1) When
+    $v_w$ becomes comparable to the stellar velocity dispersion, the
+    gas inside of the break radius inside of the break radius inside
+    of the stellar density profile is bound and cannot move
+    outflow. (2) For $v_w\simeq200 $ km/s the gas may become thermally
+    unstable and there may be a cycle of alternating high and low
+    accretion rates onto the BH as described in...{\bf AG: Fill in} 
+
   \item We find that for $\Mbh\gsim 10^6 \Msun$ and $\Mbh\lsim 10^8
     \Msun$, $\eddr \propto \Mbh^{\alpha}$ with $\alpha\lsim
     0.5 \, (0.8)$ for core (cusp) galaxies, 
@@ -1922,7 +1954,7 @@ properties. Our main conclusions may be summarized as follows.
     scales. The outflow rate would depend on the angular momentum of
     the infalling gas and thus the angular momentum of stars in the
     nucleus. The in turn would vary systematically with $\Mbh$.
-  \item We expect within scatter in nuclear x-ray luminosities at
+  \item We expect scatter in nuclear x-ray luminosities at
     fixed $\Mbh$ from (1) stochastic variation in star formation
     history from galaxy to galaxy (2) Variations in small scale outflow
     rates due to variations between galactic nuclear angular

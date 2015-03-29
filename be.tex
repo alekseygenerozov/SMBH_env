@@ -1,6 +1,6 @@
 We derive an expression for the bernoulli parameter of the gas, $\ke
 +\gammaf \frac{p}{\rho}+\Phi$, assuming that the stellar density
-profile $\rhostar\sim r^{\delta}$ inside of the break radius $\rb$. 
+profile $\rhostar\sim r^{-1-\Gamma}=r^{-\delta}$ inside of the break radius $\rb$
 
 Consider the steady state energy conservation equation. {\bf AG perhaps
   put a brief explanation of how this relates to the steady state
@@ -12,10 +12,13 @@ Consider the steady state energy conservation equation. {\bf AG perhaps
 \label{eq:enCons}
 \end{align}
 
-Where $\vw^2=v_w^2+\sigma^2= v_w^2+\frac{3}{\Gamma+2}\frac{G
-  \Mbh}{r}+\sigma_0^2$.
+Where $\vw^2=\sigma^2+v_w^2= \frac{3}{1+\delta}\frac{G
+  \Mbh}{r}+\sigma_0^2+v_w^2$. The first term to the black hole
+velocity dispersion, the second term corresponds to the velocity
+dispersion of stars which we rake to be constant, and $v_w$
+corresponds to any additional heating.
 
-Now integrate both sides with respect from r to the stagnation radius 
+Now integrate both sides of equation~\eqref{eq:enCons} with respect from r to the stagnation radius $\rs$.
 
 \begin{align}
   r^2 \rho v \left(\ke+\Phi+\gammaf \frac{p}{\rho} \right)= \int_{\rs}^{r}
@@ -32,9 +35,7 @@ equation.
 
 Where q is the rate of the mass injection per volume, which is
 proportional to the stellar density. Let $x=r/\rs$ and $q_o= q
-(\rs)$. Then $q=q_o x^{-\delta}$. 
-
-Then one obtains for the mass flux, $f=r^2 \rho v$,
+(\rs)$. Then $q=q_o x^{-\delta}$. Thus,
 
 \begin{align}
  f(x)=q_o \rs^3 \left[\frac{x^{3-\delta}-1}{3-\delta}\right].
@@ -89,7 +90,7 @@ where $U_o=4 \pi G \rhostar(\rs) \rs^2$.  We may rewrite this as
 \label{eq:enthAnal}
 \end{multline}
 
-Recall that $\rs$ the stagnation radius, $x\equiv r/\rs$, $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$, $w\equiv (\rs/\rsoi)^{3\delta}$, and
+Recall that $\rs$ is the stagnation radius, $x\equiv r/\rs$, $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$, $w\equiv (\rs/\rsoi)^{3\delta}$, and
 $\delta$ is the power law slope of the stellar density profile inside
 of the break radius, $\rb$.
 
@@ -100,16 +101,17 @@ of the break radius, $\rb$.
  that if $\zeta>\zeta_c$, an outflow will be possible from any
 radius, since the Bernoulli parameter will be positive inside of the
 break radius. On the other hand if $\zeta<\zeta_c$, then there is a
-minimum value of $(\rs/\rsoi)_{\rm min}$. If we have had
+minimum value of $\rs/\rsoi$, $(\rs/\rsoi)_{\rm min}$. If we have had
 $\rs/\rsoi<(\rs/\rsoi)_{\rm min}$, then the Bernoulli parameter would
 become negative inside of $\rb$ and no outflow would be possible.
 
 For cusp galaxies ($\Gamma$=0.8), $\zeta_c\simeq \sqrt 2$
 ($v_w\simeq\sigma_0$).  On the other hand for core galaxies
-($\Gamma$=0.1) we find $\zeta_c\simeq (\rb/\rsoi)^{0.45}$, see the top
-panel of Fig.~\ref{fig:zetaCrit}. For values of $\zeta<\zeta_c$, the
-stagnation radius rapidly approaches the break radius as shown in the
-bottom panel of Fig.~\ref{fig:zetaCrit}.
+($\Gamma$=0.1, $\delta$=1.1) we find $\zeta_c\simeq
+(\rb/\rsoi)^{0.44}$, see the top panel of Fig.~\ref{fig:zetaCrit}. For
+values of $\zeta<\zeta_c$, the stagnation radius rapidly approaches
+the break radius as shown in the bottom panel of
+Fig.~\ref{fig:zetaCrit}.
 % We also find that for core galaxies for $\zeta<\zeta_c$, there is a minimum
 % for $\rs/\rsoi$, $\left(\rs/\rsoi\right)_{\rm min}$--if $\rs/\rsoi$ were
 % less than this value the gas enthalpy would become negative inside of
