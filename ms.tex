@@ -1284,7 +1284,10 @@ Feedback from accretion onto the SMBH represents an important source of heating 
 
 \subsubsection{Compton Heating}
 
-There are two types of SMBH feedback: kinetic and radiative.  Radiative feedback is potentially effective even in low luminosity AGN via Compton heating (e.g., \citealt{Sazonov+04}, \citealt{Ciotti+10}), which provides a volumetric heating rate (\citealt{Gan+14})
+There are two types of SMBH feedback: kinetic and radiative.
+Radiative feedback is potentially effective even in low luminosity AGN
+via Compton heating (e.g., \citealt{Sazonov+04}, \citealt{Ciotti+10}),
+which provides a volumetric heating rate (\citealt{Gan+14})
 \begin{align}
 \dot{e} = 4.1\times 10^{-35}n^{2}\xi T_{\rm C}\,{\rm erg\,cm^{-3}\,s^{-1}},
 \end{align}
@@ -1306,32 +1309,38 @@ km\,s^{-1}} &, \text{cusp},
   \end{cases}
   \label{eq:vC}
 \end{align} where $T_{C,9} = T_{C}/10^{9}$ K and $\epsilon_{-2} =
-\epsilon/0.01 \sim 1$.  We caveat that, unlike
-stellar wind heating, Compton heating depends on radius, scaling as
-$v_{w}^{\rm C}(r) \propto (n^{2}\xi/\rho_{\star})^{1/2} \propto
-r^{(\Gamma-\densSlope-1)/2}$, i.e. $\propto r^{-0.6}$ and $\propto r^{-0.75}$
-for core ($\Gamma = 0.8$; $\densSlope \simeq 1$) and cusp ($\Gamma = 0.1$;
-$\densSlope \simeq 0.6$) galaxies, respectively.  Our model's assumption that the heating
-parameter be radially constant is not satisfied, but this variation is sufficiently weak that it should not significantly alter
-our conclusions.
+\epsilon/0.01 \sim 1$.  We caveat that, unlike stellar wind heating,
+Compton heating depends on radius, scaling as $v_{w}^{\rm C}(r)
+\propto (n^{2}\xi/\rho_{\star})^{1/2} \propto
+r^{(\Gamma-\densSlope-1)/2}$, i.e. $\propto r^{-0.6}$ and $\propto
+r^{-0.75}$ for core ($\Gamma = 0.8$; $\densSlope \simeq 1$) and cusp
+($\Gamma = 0.1$; $\densSlope \simeq 0.6$) galaxies, respectively.  Our
+model's assumption that the heating parameter be radially constant is
+not satisfied, but this variation is sufficiently weak that it should
+not significantly alter our conclusions.
 
-If Compton heating acts alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then solving equation
-(\ref{eq:vC}) for $\tilde{v}_{\rm w}$ yields
+If Compton heating acts alone, i.e. $\tilde{v}_{w} = v_{w}^{C}$, then
+solving equation (\ref{eq:vC}) for $\tilde{v}_{\rm w}$ yields
 \begin{align} v_{w}^{\rm C} \simeq
-  \begin{cases} 160 \eta_{0.02}^{0.23}T_{\rm
-C,9}^{0.12}\epsilon_{-2}^{0.23} M_{\bullet,8}^{0.18}\,{\rm km\,s^{-1}}
-&, \text{core}\\ 90 \eta_{0.02}^{0.34}T_{\rm
-C,9}^{0.17}\epsilon_{-2}^{0.34} M_{\bullet,8}^{0.17}\,{\rm km\,s^{-1}}
+  \begin{cases} 140 \eta_{0.02}^{0.21}T_{\rm
+C,9}^{0.21}\epsilon_{-2}^{0.21} M_{\bullet,8}^{0.16}\,{\rm km\,s^{-1}}
+&, \text{core}\\ 95 \eta_{0.02}^{0.34}T_{\rm
+C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
 &, \text{cusp},
   \end{cases}
   \label{eq:vC2}
 \end{align} 
-Compton heating can thus be significant in young stellar populations with relatively high mass loss rates, e.g. $v_{w}^{\rm C} \gtrsim 300$ km s$^{-1}$ for $\eta \gtrsim 1$.  The mass accretion rate corresponding to the state where Compton heating limits the average accretion rate is given by substituting equation (\ref{eq:vC2}) into equation (\ref{eq:eddr_analytic}):
+Compton heating can thus be significant in young stellar populations
+with relatively high mass loss rates, e.g. $v_{w}^{\rm C} \gtrsim 300$
+km s$^{-1}$ for $\eta \gtrsim 1$.  The mass accretion rate
+corresponding to the state where Compton heating limits the average
+accretion rate is given by substituting equation (\ref{eq:vC2}) into
+equation (\ref{eq:eddr_analytic}):
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
-\begin{cases} 3\times 10^{-3} \eta_{0.02}^{0.20}T_{\rm
-C,9}^{-0.8}\epsilon_{-2}^{-0.8} M_{\bullet,8}^{0.15}
-&, \text{core}\\ 8\times 10^{-4} \eta_{0.02}^{0.30}T_{\rm
+\begin{cases} 2\times 10^{-3} \eta_{0.02}^{0.2}T_{\rm
+C,9}^{-0.8}\epsilon_{-2}^{-0.8} M_{\bullet,8}^{0.16}
+&, \text{core}\\ 8\times 10^{-4} \eta_{0.02}^{0.3}T_{\rm
 C,9}^{-0.7}\epsilon_{-2}^{-0.7} M_{\bullet,8}^{0.14}
 &, \text{cusp},
   \end{cases}
@@ -1343,9 +1352,9 @@ radiatively inefficient accretion flows (\citealt{Narayan&Yi95};
 \citealt{Narayan+98}; \citealt{XieYuan:2012a}), then the Compton-limited accretion rate becomes
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
-\begin{cases} 1.8\times 10^{-2} \eta_{0.02}^{0.12}T_{\rm
+\begin{cases} 1.7\times 10^{-2} \eta_{0.02}^{0.12}T_{\rm
 C,9}^{-0.44}M_{\bullet,8}^{0.09}
-&, \text{core}\\ 8.7\times 10^{-4} \eta_{0.02}^{0.17}T_{\rm
+&, \text{core}\\ 8.6\times 10^{-4} \eta_{0.02}^{0.17}T_{\rm
 C,9}^{-0.4} M_{\bullet,8}^{0.08}
 &, \text{cusp}.
   \end{cases}
