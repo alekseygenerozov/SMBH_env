@@ -323,7 +323,7 @@ rate from stellar and black hole velocity dispersion \\
 $v_{w}$ & Total heating parameter, excluding heating rate from
 velocity dispersion \\
 $\sigma_0$ & Stellar velocity dispersion--assumed to be radially constant.\\
-$\zeta$ & $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$\\
+$\zeta$ & $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$ (eq.~[\ref{eq:zetacrit}])\\
 $r_{s}$ & Stagnation radius (where gas radial velocity goes to zero) \\
 $r_{\rm soi}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
 $r_{\rm b}$ & outer break radius of stellar density profile \\ 
@@ -712,7 +712,7 @@ $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$
 in the formation of a multi-phase medium and enhanced star formation.
 Even if the hot plasma of the CNM does not condense into cold clouds,
 the loss of pressure can temporarily increase the black hole accretion
-rate; when coupled to feed-back processes, the latter can lead to
+rate.  When coupled to feed-back processes, the latter can lead to
 time-dependent (e.g. limit cycle) behavior
 (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10};
 \citealt{Yuan&Li11}, \citealt{Gan+14}), which is also inconsistent
@@ -757,29 +757,33 @@ develops in a hydrostatic atmosphere if $t_{\rm cool} \ll t_{\rm ff}$,
 so equation (\ref{eq:cooling2}) represents a good proxy for
 instability in this case as well.
 
-Thermal stability ($\dot{q}_{\rm heat} > |\dot{q}_{\rm rad}|$; $t_{\rm
-  cool} > t_{\rm ff}$) near the stagnation radius thus requires a
+Based on our numerical results and the recent work of \citet{McCourt+10}) we define thermal stability according to the criterion $\dot{q}_{\rm heat} > 10|\dot{q}_{\rm rad}|$ ($t_{\rm
+  cool} > 10t_{\rm ff}$) being satisfied near the stagnation radius {\bf BDM: decide here}.  This condition translates into a
 critical minimum heating rate
 \begin{align}
 v_{w} > v_{\rm TI} \simeq
   {\rm max}\begin{cases}
    200 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
-   200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}   
+   200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}  \\
+\sigma_0(\zeta_c^{2}-1)^{1/2} \approx \sigma_0(r_{b}/r_{\rm soi})^{0.5(1-\Gamma)}, 
   \end{cases}
   \label{eq:cooling3}
 \end{align}
+where the final condition corresponds to the low wind heating limit (eq.~[\ref{eq:zetacrit}]), for which the stagnation radius moves out to the break radius $r_b$, resulting in thermal instability.  
 
-The existence of a minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) implies a corresponding maximum accretion rate,
+The minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) corresponds to maximum thermally-stable accretion rate,
 \begin{align}
 \frac{\dot{M}_{\rm TI}}{\dot{M}_{\rm edd}} \simeq
   {\rm min}\begin{cases}
    5\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.36} &, \text{core}\\
-   2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.28}    &, \text{cusp}
+3\times 10^{-6}\eta_{0.02}M_{\bullet,8}^{-0.38}\\
+   2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.28}    &, \text{cusp}\\
+2.5\times 10^{-4}\eta_{0.02}
   \end{cases}
   \label{eq:Mdotmax}
 \end{align}
-which is derived using equation (\ref{eq:eddr_analytic}) to calculate
-$\dot{M}(v_{\rm TI})$.
+where the first line for each case is derived using equation (\ref{eq:eddr_analytic}) to calculate
+$\dot{M}(v_{\rm TI})$, whereas the second line corresponds to the low wind heating limit and is calculated for core galaxies using the empirical correlation $r_{b}/r_{\rm soi} \approx 7.6M_{\bullet,8}^{0.2}$ which follows from equation (\ref{eq:rsoi}) and the results of \citet{LauerFaber+:2007a}.  
 
 
 
@@ -865,7 +869,7 @@ the mass accretion rate is determined.
 \caption{Summary of Numerical Solutions}
 \begin{tabular}{lccccccccc}
   \hline
-  {$M_{\bullet}$} & {$v_{w}$} & {$r_b^{(b)}$} &  $\Gamma$ &  $r_{\rm
+  {$M_{\bullet}$} & {$v_{w}$} & {$r_b^{(b)}$} &  $r_{\rm
     s}/r_{\rm soi}$ &  {$\left(\frac{\dot{M}}{\dot{M}_{\rm
           edd}}\frac{0.2}{\eta}\right)_{r_{s}}^{(c)}$} &
   {$\left(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|\frac{0.2}{\eta}\right)_{r_s}^{(d)}$} & Issues? \\
