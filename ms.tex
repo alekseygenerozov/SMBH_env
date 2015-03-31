@@ -476,7 +476,7 @@ velocity of
 where the first term is the velocity dispersion of the power law stellar density profile in the SMBH potential.  The second term, $\sigma_0\approx 3 \sigma^2$ is a constant, motivated by the observed velocity dispersion outside of the SMBH sphere of influence \citep{ChaeBernardi+:2014a}, where $\sigma$ is the velocity dispersion in the $\Mbh-\sigma$
 relation (eq.~[\ref{eq:Msigma}]).  The second component of the total heating, $v_{w}^{2}$, parameterizes all additional sources of energy input, including faster winds from young stars, millisecond pulsars, supernovae, AGN feedback, etc.  We assume that $v_w$ is constant with radius, i.e. that the volumetric heating rate is proportional to the local stellar density.  The value of $v_w$ will in general depend on the SMBH mass and the age of the stellar population ($\S\ref{sec:heating}$).  
 
-To isolate the physics of interest, our baseline calculations neglects three potentially important effects: heat conduction, radiative cooling, and rotation.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
+To isolate the physics of greatest interest, our baseline calculations neglects three potentially important effects: heat conduction, radiative cooling, and rotation.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
 \begin{equation}
 \dot{q}_{\rm cond} = \nabla\cdot(\kappa \nabla T),
 \label{eq:qdotcond}
@@ -547,20 +547,14 @@ Hydrostatic equilibrium furthermore determines the value of the stagnation radiu
   \rs&=\frac{G \Mbh}{\densSlope \vw^2}\left[\frac{13+ 8\Gamma}{4+2\Gamma}\right]\nonumber\\
   &=\frac{G \Mbh}{\densSlope (v_w^{2}+\sigma_0^2)}\left[4
     \frac{\Mstar|_{\rs}}{\Mbh} +\frac{13+
-      8\Gamma}{4+2\Gamma}-\densSlope \frac{3}{2+\Gamma}\right]. 
+      8\Gamma}{4+2\Gamma}- \frac{3\nu}{2+\Gamma}\right]. 
 \label{eq:stag_analytic}
 \end{align}
-
-If the stagnation radius is well inside the influence radius, $\rsoi$,
-then $\Mstar/\Mbh|_{\rs}\ll1$. Also, equation~\eqref{eq:rsRinf}
-implies that $v_w\gg \sigma_0$, since
-$\rs/\rsoi=\frac{k(\Gamma)}{3\zeta^2}$, where
-$\zeta=\sqrt{\frac{v_w^2+\sigma_0^2}{\sigma_0^2}}$ and $k(\Gamma)$ is
-of order unity then equation~\eqref{eq:stag_analytic} simplifies to
+For low heating rates $v_w \ll \sigma_0$, the stagnation radius resides well inside the SMBH sphere of influence.  In this case $\Mstar|_{\rs}/\Mbh \ll1$, such that equation~\eqref{eq:stag_analytic} simplifies to
 \begin{align}
   &\rs \underset{v_w \gtrsim \sigma_0}\approx
-  \left(\frac{13+8\Gamma}{4+2\Gamma}-\densSlope
-    \frac{3}{2+\Gamma}\right)\frac{G \Mbh}{\densSlope v_w^2}\nonumber\\
+  \left(\frac{13+8\Gamma}{4+2\Gamma}-
+    \frac{3\nu}{2+\Gamma}\right)\frac{G \Mbh}{\nu v_w^2}\nonumber\\
   &\approx \begin{cases} 8
     \, \pc \,\, \Mbheight v_{500}^{-2}\, \pyear& \text{core} \\
     4 \, \pc \,\, \Mbheight v_{500}^{-2} \, \pyear & \text{cusp},
@@ -568,30 +562,17 @@ of order unity then equation~\eqref{eq:stag_analytic} simplifies to
   \label{eq:stag_simple}
 \end{align}
 where we have used equation~\eqref{eq:densSlope} to estimate
-$\densSlope$: $\densSlope\approx 1$ and $\densSlope \approx 0.6$ for
-core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) galaxies.  This
+$\densSlope$ separately for
+core ($\Gamma = 0.1$; $\densSlope\approx 1$) and cusp ($\Gamma = 0.8$; $\densSlope \approx 0.6$) galaxies.  This
 expression is similar to that obtained by \citet{Volonteri+11} on more
 heuristic grounds (their eq.~6). 
 
-In the opposite limit of weak heating ($v_w\lsim \sigma_0$) the
-stagnation radius moves towards the break radius, $\rb$ in the stellar
-density profile, formally implying that almost entire ISM of the
-galaxy is accreting.  This result makes intuitive sense: gas is
-supplied to the nuclear by stars which are gravitationally bound to
-the black hole, so outflows are possible only if the specific heating
-rate $\sim v_{w}^{2}$ significantly exceeds the specific gravitational
-binding energy. 
-
-More precisely we find that there is a critical $\zeta_c$
-($\zeta\equiv \sqrt{v_w^2+\sigma_0^2}/\sigma_0$), such that if
-$\zeta\lsim\zeta_c$, then $\rs\simeq\rb$. For $\rb\gsim\rsoi$ we find 
-
-\begin{align}
-\zeta_c\simeq \left(\frac{\rb}{\rsoi}\right)^{0.5(1-\Gamma)},
-\end{align}
-
-as described in Appendix~\ref{app:be}. 
-
+In the opposite limit of weak heating ($v_w\lsim \sigma_0$) the stagnation radius moves to large radii, approaching the break radius $\rb$ in the stellar density profile, formally implying that almost entire ISM of the galaxy is accreting.  In particular, in Appendix \ref{app:be} we show that $\rs \Rightarrow \rb$ for heating below a critical threshold
+\be
+\zeta\equiv \frac{\sqrt{v_w^2+\sigma_0^2}}{\sigma_0} < \zeta_c \approx \left(\frac{\rb}{\rsoi}\right)^{0.5(1-\Gamma)}.
+\label{eq:zetacrit}
+\ee
+This result makes intuitive sense: gas is supplied to the nuclear by stars which are gravitationally bound to the black hole, so outflows are possible only if the specific heating rate $\sim v_{w}^{2}$ significantly exceeds the specific gravitational binding energy.  Condition (\ref{eq:zetacrit}) approximately corresponds to the condition that the wind heating parameter be less than the escape speed from the break radius, $v_{\rm esc} \sim (GM_{\star}|_{r_{\rm b}}/r_b)^{1/2}$, where $M_{\star} \propto r^{2-\Gamma}$.
 
 \subsection{SMBH Accretion Rate}
 
