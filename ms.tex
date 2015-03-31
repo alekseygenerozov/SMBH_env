@@ -576,9 +576,9 @@ This result makes intuitive sense: gas is supplied to the nuclear by stars which
 
 \subsection{SMBH Accretion Rate}
 
-The accretion rate onto the SMBH is given by the integrated mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
+The accretion rate onto the SMBH is given by the total mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
 \begin{eqnarray}
-  \dot{M} &=& 4\pi \int_{0}^{r_{s}}q r^{2}dr = \frac{\eta \Menc|_{r_{\rm s}}}{\th} \nonumber \\
+  \dot{M} &=& 4\pi \int_{0}^{r_{s}}q r^{2}dr = \frac{\eta M_{\star}|_{r_{\rm s}}}{\th} \nonumber \\
 &\approx&
   \begin{cases}
     4.5 \times 10^{-5} M_{\bullet,8}^{1.76}
@@ -601,7 +601,7 @@ where we have assumed $v_{w} \gg \sigma$ by adopting equation (\ref{eq:stag_simp
 \end{eqnarray}
 where $\dot{M}_{\rm edd} = 2.6M_{\bullet,8}M_{\odot}$ yr$^{-1}$ is the
 Eddington accretion rate, assuming a radiative efficiency of ten per
-cent.  Note the sensitive inverse dependence of the accretion rate on
+cent.  Note the sensitive dependence of the accretion rate on
 the wind heating rate.
 %To reproduce the estimated values $\dot{M}/\dot{M}_{\rm edd} \lesssim 10^{-3}$ in low-luminosity AGN or quiescent galaxies, we thus require $v_{w} \gtrsim 150M_{\bullet,8}^{0.5}$ 
 
@@ -632,7 +632,7 @@ the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm
 %\label{eq:rhors2}
 %\end{align}
 
-Our expression for the mass accretion rate (eq.~[\ref{eq:mdot_analytic}]) can be compared to the traditional Bondi rate for accretion onto a point source from an external medium of specified density and temperature (\citealt{Bondi52}):
+Our expression for $\dot{M}$ (eq.~[\ref{eq:mdot_analytic}]) is usefully compared to the Bondi rate for accretion onto a point source from an external medium of specified density and temperature (\citealt{Bondi52}):
 \begin{align}
   \dot{M}_{\rm B} =4\pi \lambda r_{\rm B}^2 \rho|_{r_{\rm B}}v_{\rm ff}|_{r_{\rm B}},
 \label{eq:bondi}
@@ -643,10 +643,7 @@ speed, $v_{\rm ff}|_{r_{\rm B}} = r_{\rm B}/t_{\rm ff}|_{r_{\rm B}} =
 (GM_{\bullet}/r_{\rm B})^{1/2}$ and $\lambda$ is a parameter of order
 unity.
 
-One observes a similarity between equation (\ref{eq:mdot_gas}) and the
-Bondi formula (eq.~[\ref{eq:bondi}]) if $r_{\rm B}$ is replaced by
-$\rs$.  Indeed, when the stagnation radius resides interior to the
-sphere of influence we find that (eq.~[\ref{eq:stag_simple}])
+Equation (\ref{eq:mdot_gas}) closely resembles the Bondi formula (eq.~[\ref{eq:bondi}]) provided that $r_{\rm B}$ is replaced by $\rs$.  Indeed, for $r_{s} < r_{\rm soi}$ we have that (eq.~[\ref{eq:stag_simple}])
 \begin{align}
   \rs\approx\frac{13+8\Gamma}{4+2\Gamma}\frac{G \Mbh}{\densSlope
     \vw^2} \approx \frac{13+8\Gamma}{12+6\Gamma}r_{\rm B},
@@ -666,8 +663,8 @@ the stagnation radius is given by
 w}^{2}/2}\right|_{r_{\rm s}} &\sim \frac{2t_{\rm h}\kappa_0
 T|_{r_{\rm s}}^{7/2}}{r_{\rm s}^{2}\eta \rho_{\star}|_{r_{\rm s}}
 \tilde{v}_{w}^{2}}
- \left(\frac{1}{1+\frac{\kappa_0 T^{7/2}|_{r_{\rm s}}}{5 \rs
-    \phi \rho c_s^3}}\right)
+ \left(1+\frac{\kappa_0 T^{7/2}|_{r_{\rm s}}}{5 \rs
+    \phi \rho c_s^3}\right)^{-1}
 \nonumber \\ &\sim {\rm min}
   \begin{cases}
   20 \eta_{0.02}^{-1}
@@ -679,9 +676,9 @@ M_{\bullet,8}^{-0.5} v_{500}^{5.4} &  \text{unsaturated (cusp)}\\
  \label{eq:conduction}
 \end{align}
 where the second equality makes use of equations (\ref{eq:Tanalytic}),
-(\ref{eq:stag_simple}), and we have approximated $\nabla^{2} \sim
-1/r_{\rm s}^{2}$, $\nabla \sim 1/r_{\rm s}$.  We have approximated the
-stellar density profile as (eq.~[\ref{eq:rhostar}])
+(\ref{eq:stag_simple}), and we have made the approximations $\nabla^{2} \sim
+1/r_{\rm s}^{2}$, $\nabla \sim 1/r_{\rm s}$.  The
+stellar density profile is approximated as (eq.~[\ref{eq:rhostar}])
 \begin{eqnarray}
   \rho_{\star}|_{r_{\rm s}} &\simeq& \frac{M_{\bullet}(2-\Gamma)}{4\pi r_{\rm soi}^{3}}\left(\frac{r_{\rm s}}{r_{\rm soi}}\right)^{-1-\Gamma} \nonumber \\
  &\approx& \begin{cases}
@@ -693,12 +690,9 @@ stellar density profile as (eq.~[\ref{eq:rhostar}])
   \label{eq:rhostarrs}
 \end{eqnarray}
 where the stagnation radius is assume to reside well inside the Nuker
-break radius and for clarity we have not distinguished between cusp
-and core galaxies.  Equation (\ref{eq:conduction}) shows that even in
-the case of saturated conduction, the neglect of heat conduction
+break radius.  Equation (\ref{eq:conduction}) shows that, even when conduction is saturated, our neglect of heat conduction
 results in at most an order unity correction for plausible, causal values of
-the saturation parameter $\phi < 0.1$, justifying its neglect in our
-analysis.  Numerical experiments including conductivity confirm this
+the saturation parameter $\phi < 0.1$.  Numerical experiments which include conductive heating confirm this
 ($\S\ref{sec:numerical}$).
 
 
