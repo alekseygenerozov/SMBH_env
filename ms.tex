@@ -1362,8 +1362,8 @@ a more promising source of feedback in these systems
 As in the case of Compton heating, kinetic heating could in principle
 `self-regulate' the accretion flow insofar as a lower heating rate
 results in a higher accretion rate (eq.~[\ref{eq:vjet}]), which in
-turn may create stronger jet feedback.  However, given the uncertainty
-in the efficiency of jet heating, we defer a more detailed discussion
+turn may create stronger kinetic feedback.  However, given the uncertainty
+in the efficiency of kinetic heating, we defer a more detailed discussion
 to $\S\ref{sec:kinetic}$.
 
 
@@ -1427,7 +1427,9 @@ includes contributions from stellar winds, supernovae, pulsars, and radiative SM
 
 \subsubsection{Single Starburst}
 
-Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass input parameters due to stellar winds, $v_{w}^{\star}(\tau_{\star})$ and $\eta(\tau_{\star})$, are calculated as described in Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\rm C}$) are calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC} respectively, also making use of $\eta(\tau_{\star})$ from stellar winds.  SN Ia heating depends also on a convolution of the DTD (eq. [\ref{eq:DTD}]) and the star formation history, which reduces to the DTD itself for a single star burst.  We crudely account for the expected suppression of SN Ia heating resulting from its non-steady nature by attenuating $v_{w}^{\rm Ia}$ by a factor $e^{-\rs/\rIa}$, where $r_{\rm Ia}$ is the radius exterior to which the time between subsequent supernovae exceeds the local dynamical time (eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and $v_{\rm w}^{\rm Ia}$ also depend on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us to simultaneously solve a series of implicit equations to determine each heating rate.  Heating from MSPs is found to be negligibly small for fiducial parameters and hence is not shown, while kinetic feedback is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).  
+Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass input parameters due to stellar winds, $v_{w}^{\star}(\tau_{\star})$ and $\eta(\tau_{\star})$, are calculated as described in Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\rm C}$) are calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC} respectively, also making use of $\eta(\tau_{\star})$ from stellar winds.  SN Ia heating depends also on a convolution of the DTD (eq. [\ref{eq:DTD}]) and the star formation history, which reduces to the DTD itself for a single star burst.  {\bf BDM: do we even include Ia heating?} 
+
+We crudely account for the expected suppression of SN Ia heating resulting from its non-steady nature by attenuating $v_{w}^{\rm Ia}$ by a factor $e^{-\rs/\rIa}$, where $r_{\rm Ia}$ is the radius exterior to which the time between subsequent supernovae exceeds the local dynamical time (eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and $v_{\rm w}^{\rm Ia}$ also depend on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us to simultaneously solve a series of implicit equations to determine each heating rate.  Heating from MSPs is found to be negligibly small for fiducial parameters and hence is not shown, while kinetic feedback is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).  
 
 For low-mass black holes, stellar winds are the most important source of heating on
 timescales of less than a few tens of millions of years.  Compton
