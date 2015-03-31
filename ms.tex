@@ -968,7 +968,7 @@ $    10^{ 8 }$ & 600 & 25 & 0.27 & $ 5.7 \times 10^{ -5 }$ & $ 1.0 \times 10^{ 2
 %\end{minipage}
 %\end{table*}
 
-Our numerical results, summarized in Table \ref{table:models}, allow us to study a range of CNM properties and to assess the validity of the analytic estimates from the previous section.  Cases for which $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|< 1$ at the stagnation radius are marked as `thermally unstable', as are cases for which the stagnation radius diverges and hence could not be resolved, resulting in their calculations being terminated.  
+Our numerical results, summarized in Table \ref{table:models}, allow us to study a range of CNM properties and to assess the validity of the analytic estimates from the previous section.  Cases for which $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|< 10$ {\bf BDM: correct?} at the stagnation radius are marked as `thermally unstable', as are cases for which the stagnation radius diverges and hence could not be resolved, resulting in their calculations being terminated.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
 temperature $T(r)$, and radial velocity $|v(r)|$ (expressed in units of the sound speed), for the cusp
@@ -988,27 +988,16 @@ The inwardly directed velocity increases towards the hole with a profile that is
 % AG -- things are not quite approaching Bondi on the inner grid. I
 % don't have a good physical explanation yet...
 
-Figure~\ref{fig:stag} shows our results for the stagnation radius
-$r_{\rm s}$, expressed in ratio to sphere of influence radius $r_{\rm
+Figure~\ref{fig:stag} shows our calculation of the stagnation radius $r_{\rm s}/r_{\rm
   soi}$, with different colors showing different values of $v_{w}$.
 Cusp and core galaxies are marked with square and triangles,
 respectively.  Shown for comparison are our analytic results
 (eq.~[\ref{eq:rs2main}]) with solid and dashed lines for cusp and core
 galaxies, respectively, calculated assuming $\densSlope = 1$ and
-$\densSlope= 0.6$, respectively (eq.~[\ref{eq:densSlope}]).  Our analytic estimates are found to
-provide accurate fits to the numerical results for $v_{\rm w} \gtrsim
-\sigma$, but the assumptions leading to these estimates become invalid
-for low $v_{\rm w}$ as the stagnation radius diverges to large radii.
-For $v_{w} \gg \sigma$ the ratio $\rs/\rsoi$ does not depend
-sensitively on break radius $r_{b}$, but the latter has a greater
-influence when $v_{w} \lesssim \sigma$.  The three green squares which
-are vertically aligned at the same value of $v_{w}/\sigma$ (close to
-where the analytic estimate diverges) correspond to models with the
-same black hole mass ($\Mbh = 10^7 \Msun$) and heating rate ($v_w =
-300$ km s$^{-1}$) but different values of the break radius: $r_{b} = $
-50, 100, and 400 pc (from top to bottom).  As $r_{\rm b} \rightarrow
-r_{s}$, the effects of the break radius is to the push the stagnation
-radius inwards, decreasing the SMBH accretion rate.
+$\densSlope= 0.6$, respectively (eq.~[\ref{eq:densSlope}]).  
+
+Our analytic estimates accurately reproduce the numerical results in the high heating limit $v_{\rm w} \gg
+\sigma_0$ ($r_{\rm s} \lesssim r_{\rm soi}$).  However, for sufficiently low $v_{\rm w}/\sigma_0$ the stagnation radius exceeds the analytic estimate, approaching the stellar break radius $r_b \gg r_{\rm soi}$.  This divergence occurs approximately when $\zeta = \sqrt{v_w^{2}+\sigma_0^{2}}/\sigma_0 < \zeta_c \propto (r_b/r_{\rm soi})^{0.5(\Gamma-1)}$ (eq.~[\ref{eq:zetacrit}], Appendix \ref{app:be}), and hence occurs at a higher value of $v_w/\sigma_0$ in the case of a core galaxies ($\Gamma = 0.8$) with large break radii.  This behavior explains the three core galaxies shown as green squares, which are vertically aligned at the same value of $v_{w}/\sigma$ (close to where the analytic estimate diverges) correspond to models with the same black hole mass ($\Mbh = 10^7 \Msun$) and heating rate ($v_w = 300$ km s$^{-1}$) but different values of the break radius: $r_{b} = $ 50, 100, and 400 pc (from top to bottom).  
 
  Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for each of our numerical solutions in Eddington units for different values of $\vwO =$ 300, 600 and 1200 km s$^{-1}$, and for both core ($\Gamma$=0.1) and cusp galaxies ($\Gamma$=0.8).  Shown for comparison is our analytic estimate of $\dot{M}/\dot{M}_{\rm edd}$ from equation (\ref{eq:eddr_analytic}).  For high wind velocities ($v_{w} \gg \sigma$) the stagnation lies well inside the black hole sphere of influence and our analytic estimate provides a good fit to the numerical results.  However, for low wind velocities and/or high $M_{\bullet}$ (large $\sigma$), the numerical accretion rate considerably exceeds the analytic estimate as the stagnation radius diverges to large radii (Fig.~\ref{fig:stag}).  
 %% AG: Describe conservation checks to additionally validate the results.
