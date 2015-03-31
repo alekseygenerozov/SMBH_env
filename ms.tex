@@ -283,8 +283,8 @@ velocity passes through zero.  Mass loss from stars interior to the
 stagnation radius is accreted, while that outside $\rs$ is unbound in
 an outflow from the nucleus.  The stagnation radius, rather than the
 Bondi radius, thus controls the SMBH accretion rate (although we will
-show that $\rs$ can in many cases lie within a factor of few of the
-nominal Bondi radius).  When heating is sufficiently weak, however, no stagnation radius may exist at all, i.e. the entire ISM of the galaxy is flowing towards the SMBH.  A key goal of this work is to
+show that $\rs$ can in many cases reside near the
+nominal Bondi radius).  When heating is sufficiently weak, however, no stagnation radius may exist at all, i.e. the entire ISM of the galaxy is flowing towards the SMBH.  A goal of this work is to
 assess under what conditions a stagnation radius exists, as this
 question is intimately tied to that of cooling instability.
 % Furthermore, in some cases we find that no stagnation
@@ -300,8 +300,7 @@ calculating the steady-state hydrodynamic profile of the CNM
 ($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe some
 analytic results, while in $\S\ref{sec:numerical}$ we describe our
 numerical results.  In $\S\ref{sec:discussion}$ we discuss the
-implications of our results, to topics including...  In
-$\S\ref{sec:conclusions}$ we summarize our conclusions.  Table
+implications of our results, to topics including the nuclear X-ray luminosities of quiescent black holes, jetted TDEs, and the growth time of SMBHs.  In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table
 \ref{table:definitions} provides the definitions of commonly used
 variables.  Appendices \ref{app:rs} and \ref{app:be} provides useful
 analytic results, while Appendix \ref{app:windheat} describes our
@@ -323,7 +322,7 @@ $\tilde{v}_{w}$ & Total heating parameter, including minimum heating
 rate from stellar and black hole velocity dispersion \\
 $v_{w}$ & Total heating parameter, excluding heating rate from
 velocity dispersion \\
-$\sigma_0$ & Stellar velocity dispersion--assumed to be constant.\\
+$\sigma_0$ & Stellar velocity dispersion--assumed to be radially constant.\\
 $\zeta$ & $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$\\
 $r_{s}$ & Stagnation radius (where gas radial velocity goes to zero) \\
 $r_{\rm soi}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
@@ -470,25 +469,12 @@ accounts for external heating sources (e.g.,
 \citealt{ShcherbakovWong+:2014a}).  The first term approximates the
 minimum amount of shock heating from stellar winds due to the random
 movement of stars with respect to one another at the characteristic
-velocity of $\sigma \approx \sqrt{\frac{3 G \Mbh}{(\Gamma+2)
-    r}+\sigma_0^2}$, where $\sigma_0$ is a constant. The first term
-corresponds to the velocity dispersion of a power law stellar density
-profile with slope $-1-\Gamma$ in the presence of black hole. The
-second term represents the observed constant velocity dispersion at
-radii outside of the black hole sphere of influence
-\citep{ChaeBernardi+:2014a}. For a given $\Mbh$, we take
-$\sigma_0^2\approx 3 \sigma_{\Mbh}^2$, where $\sigma_{\Mbh}$ is the
-velocity dispersion from the \citet{McConnellMa+:2011a} $\Mbh-\sigma$
-relation.  This heating is present even in old stellar populations for
-which mass and energy injection are dominated by AGB winds with low
-velocities $\ll \sigma$.  The second term, $v_{w}^{2}$, parameterizes
-all additional sources of heating, including faster main sequence or
-Wolf-Rayet stellar winds, spin-down energy from millisecond pulsars,
-supernovae, AGN feedback, etc.  As will be discussed in
-$\S\ref{sec:heating}$, the value of $v_{w}$ will in general depend on
-the SMBH mass and the age of the stellar population.  We further
-assume that $v_w$ is constant with radius, i.e. that the volumetric
-heating rate is proportional to the local stellar density.
+velocity of 
+\be\sigma \approx \sqrt{\frac{3 G \Mbh}{(\Gamma+2)
+    r}+\sigma_0^2},
+\ee
+where the first term is the velocity dispersion of the power law stellar density profile in the SMBH potential.  The second term, $\sigma_0\approx 3 \sigma^2$ is a constant, motivated by the observed velocity dispersion outside of the SMBH sphere of influence \citep{ChaeBernardi+:2014a}, where $\sigma$ is the velocity dispersion in the $\Mbh-\sigma$
+relation (eq.~[\ref{eq:Msigma}]).  The second component of the total heating, $v_{w}^{2}$, parameterizes all additional sources of energy input, including faster winds from young stars, millisecond pulsars, supernovae, AGN feedback, etc.  We assume that $v_w$ is constant with radius, i.e. that the volumetric heating rate is proportional to the local stellar density.  The value of $v_w$ will in general depend on the SMBH mass and the age of the stellar population ($\S\ref{sec:heating}$).  
 
 To isolate the physics of interest, our baseline calculations neglects three potentially important effects: heat conduction, radiative cooling, and rotation.  Electron heat conduction results in an an additional term on the right hand side of the entropy equation of the form:  
 \begin{equation}
