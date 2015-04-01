@@ -1779,7 +1779,7 @@ galaxies (Fig.~\ref{fig:profiles}, solid line).  To obtain such a flattening on 
 \subsection{Regulation by Kinetic Outflow Feedback}
 \label{sec:kinetic}
 
-Our analysis of black hole feedback has focused on Compton heating instead of kinetic feedback, since the efficacy of radiative feedback is relatively straightforward to calculate given the properties of the accretion flow.  However, if kinetic feedback instead dominates, this could play an important role in regulating SMBH growth.  Our simple parameterization of kinetic feedback (eq.~[\ref{eq:vjet}]) predicts an effectic wind velocity which increases with SMBH mass as $v_{w}^{\bullet} \propto M_{\bullet}^{0.33(0.28)}$ for core(cusp) galaxies, respectively.  Coupled with the dependence of the SMBH accretion rate on the wind heating, $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{0.76(0.48)}v_{w}^{-3.8(-2.4)}$
+Our analysis of black hole feedback has focused on Compton heating instead of kinetic feedback, since the efficacy of radiative feedback is relatively straightforward to calculate given the properties of the accretion flow.  However, if kinetic feedback instead dominates, this could play an important role in regulating the accretion.  Our simple parameterization of kinetic feedback (eq.~[\ref{eq:vjet}]) predicts an effectic wind velocity which increases with SMBH mass as $v_{w}^{\bullet} \propto M_{\bullet}^{0.33(0.28)}$ for core(cusp) galaxies, respectively.  Coupled with the dependence of the SMBH accretion rate on the wind heating, $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{0.76(0.48)}v_{w}^{-3.8(-2.4)}$
 (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]), kinetic feedback of the form we have adopted leads to an Eddington ratio dependence on SMBH mass of $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{-0.5(-0.2)}$.  
 
 This prediction is in better with the observed dependence of $\langle L_{X}/L_{\rm edd} \rangle$ in elliptical galaxies (Fig.~\ref{fig:miller}, green line), hinting that accretion regulation by kinetic feedback may serve as an alternative explanation for X-ray luminosities of elliptical galaxies.  However, our assumption that kinetic outflows heat the gas uniformly in volume is somewhat arbitrary and would need to more rigorously justified by numerical studies of how jets or disk outflows couple energy to their gaseous environment.  It is furthermore unclear whether our steady-state model can be applied at all, because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scales.
@@ -1812,33 +1812,23 @@ We have calculated steady-state models for the hot gaseous circumnuclear media o
   %Younger population=>higher accretion rate; generally higher eta and
   %lower vw except for very young stellar populations.
   \item A stagnation radius, $\rs$, divides the nuclear gas between an accretion flow and an
-    outward wind. In a steady state the gas inflow rate towards the black hole will be proportional to the
+    outward wind. In a steady state the gas inflow rate towards the black hole is proportional to the
     stellar mass enclosed inside of $\rs$.  In the limit of strong heating, the stagnation radius is close to the Bondi radius (eq.~[\ref{eq:rbondi}]).  
-  \item The location of the stagnation radius, and thus the SMBH accretion rate, is extremely sensitive to the effective heating rate of the gas.  Stellar wind heating, supernovae, and AGN feedback depend on the SMBH mass as well as the star
-    formation history in the galactic nucleus.  For example, a recent burst of star formation within the last $\sim 10$ Myr results in both mass and energy injection being dominated by the fast stellar winds of young stars ($v_w \sim 1000$ km s$^{-1}$). By contrast, when star formation is relegated to the distant pass, mass input becomes dominated by old stars while heating is dominated by AGN feedback and supernovae.  For nuclei with ongoing, continuous star formation, energy input is usually dominated by the youngest stars, while mass input is dominated by the old stellar population.  
+  \item The location of the stagnation radius, and thus the SMBH accretion rate, is sensitive to the effective heating rate of the gas.  Stellar wind heating, supernovae, and AGN feedback depend on the SMBH mass as well as the star
+    formation history in the galactic nucleus.  A recent burst of star formation within the last $\sim 10$ Myr results in mass and energy injection both being dominated by fast stellar winds from young stars ($v_w \sim 1000$ km s$^{-1}$). If star formation is instead relegated to the distant past, mass input becomes dominated by old stars while heating is dominated by AGN feedback and supernovae.  For nuclei with ongoing, continuous star formation, energy input is usually dominated by the youngest stars, while mass input is dominated by the old stellar population (Appendix \ref{app:windheat}).  
   
-    Quantitatively $\rs\propto v_w^{-2}$, which implies that $\Mdot\sim
-    v_w^{-3.8 (-2.4)}$ for core (cusp galaxies).   However, $\Mdot$ may increase more rapidly for small $v_w$ for two reasons: (1) when $v_w$ becomes comparable to the stellar velocity dispersion ($\zeta < \zeta_c$; eq.~$[\ref{eq:zetacrit}]$), the
-    gas inside of the break radius inside of the break radius inside
-    of the stellar density profile is bound and cannot move
-    outflow. (2) For $v_w\simeq200 $ km/s the gas may become thermally
-    unstable and there may be a cycle of alternating high and low
-    accretion rates onto the BH as described in...{\bf AG: Fill in} 
+Quantitatively $\rs\propto v_w^{-2}$, which implies that $\Mdot\sim v_w^{-3.8 (-2.4)}$ for core (cusp) galaxies.   However, $\Mdot$ will increase even more rapidly with decreasing $v_w$ for two reasons: (1) when $v_w$ becomes comparable to the stellar velocity dispersion ($\zeta < \zeta_c$; eq.~$[\ref{eq:zetacrit}]$), gas remains bound to the stellar bulge and cannot flow out (Appendix \ref{app:be}).  (2) For sufficiently low $v_w$ the gas near the stagnation radius becomes thermally unstable, potentially resulting in cycles of alternating high and low accretion states ($\S\ref{sec:cycle}$; e.g.,\citealt{Ciotti+10}).
 
-  \item We find that galaxies with $\Mbh\gsim 10^6 \Msun$ and
-    $\Mbh\lsim 10^8$ following average star formation histories
-    measured in cosmological simulations \citep{MosterNaab+:2013a}
-    have sufficient recent star formation to have an effective
-    $v_w\simeq 1000$ km/s. $\eddr \propto \Mbh^{\alpha}$ with
-    $\alpha\lsim 0.5 \, (0.8)$ for core (cusp) galaxies This is in
-    tension observations of nuclear X-ray luminosity which suggest
-    that $\eddr$ increases towards smaller $\Mbh$
-    \citep{Miller+15}. However, it is important to note that the
-    inflow rate on large scales (which we calculate) may differ from
-    the actual accretion rate as outflows could occur on small
-    scales. The outflow rate would depend on the angular momentum of
-    the infalling gas and thus the angular momentum of stars in the
-    nucleus. The in turn would vary systematically with $\Mbh$.
+  \item Galaxies with $10^{6}M_{\odot} \lesssim \Mbh \lesssim 10^8 \Msun$ with star formation histories matching the average values derived from the cosmological simulations of \citet{MosterNaab+:2013a} possess an effective heating rate 
+    $v_w\sim 1000$ km s$^{-1}$, relatively independent of SMBH mass (Fig.~\ref{fig:vwSources}).  This results in a prediction for the average Eddington ratio $\eddr \propto \Mbh^{\alpha}$ with $\alpha\lsim 0.5 \, (0.8)$ for core (cusp) galaxies which is tension with the trend of measured nuclear X-ray luminosities of early-type galaxies (e.g., \citealt{Miller+15}), which instead find that $\eddr$ increases towards smaller $\Mbh$.  However, high X-ray radiative efficiencies are required for these galaxies to be consistent with thermally-stable accretion, instead suggesting that (at least at low black hole masses), the possibility of two branches of accretion states.  
+
+
+%However, it is important to note that the
+ %   inflow rate on large scales (which we calculate) may differ from
+  %  the actual accretion rate as outflows could occur on small
+   % scales. The outflow rate would depend on the angular momentum of
+    %the infalling gas and thus the angular momentum of stars in the
+    %nucleus. The in turn would vary systematically with $\Mbh$.
 
     For $\Mbh\gsim 10^8 \Msun$, the flow from stellar winds onto the
     BH is more susceptible to thermal instability due to the lower
