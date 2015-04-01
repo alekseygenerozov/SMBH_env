@@ -647,7 +647,7 @@ Equation (\ref{eq:mdot_gas}) closely resembles the Bondi formula (eq.~[\ref{eq:b
 \begin{align}
   \rs\approx\frac{13+8\Gamma}{4+2\Gamma}\frac{G \Mbh}{\densSlope
     \vw^2} \approx \frac{13+8\Gamma}{12+6\Gamma}r_{\rm B},
-  \label{eq:rs_simple}
+  \label{eq:rbondi}
 \end{align}
 where the second equality makes use of equation (\ref{eq:Tanalytic}).  
 
@@ -1806,23 +1806,19 @@ This prediction is in better with the observed dependence of $\langle L_{X}/L_{\
 \section{Conclusions}
 \label{sec:conclusions}
 
-We have calculated steady-state models for the hot gaseous circumnuclear media of quiescent galaxies, under the assumption that gas is supplied exclusively by stellar wind mass loss and heated by shocked stellar winds, supernovae and black hole feedback.  We compute solutions for a range of different black hole masses, heating rates, and stellar density profiles.  Our numerical results (Table \ref{table:models}) are used to verify and calibrate analytic relationships (Appendix \ref{app:rs}, \ref{app:be}), which are in turn used to calculate the black hole accretion rate and how it varies with $\Mbh$ and the galaxy's star formation history.  Our results for $\dot{M}(\Mbh)$ are compared with observed trends of the nuclear X-ray luminosities of quiescent SMBHs and low luminosity AGN, as well as to address other key questions, such as the thermal stability of their accretion flows.  Our conclusions may be summarized as follows.
+We have calculated steady-state models for the hot gaseous circumnuclear media of quiescent galaxies, under the assumption that gas is supplied exclusively by stellar wind mass loss and heated by shocked stellar winds, supernovae and black hole feedback.  We compute solutions for a range of different black hole masses, heating rates, and observationally-motivated stellar density profiles.  Our numerical results (Table \ref{table:models}) are used to verify and calibrate analytic relationships (Appendix \ref{app:rs}, \ref{app:be}).  The latter are in turn used to explore systematically how the SMBH accretion rate varies with black hole mass and the galaxy's star formation history.  Our results for $\dot{M}(\Mbh)$ are compared with observed trends of the nuclear X-ray luminosities of quiescent SMBHs and low luminosity AGN, and used to address other key questions, such as the thermal stability of their accretion flows.  Our conclusions may be summarized as follows.
 
   \begin{enumerate}
   %Younger population=>higher accretion rate; generally higher eta and
   %lower vw except for very young stellar populations.
-  \item The stagnation radius, $\rs$, divides the nuclear gas between an accretion flow and an
+  \item A stagnation radius, $\rs$, divides the nuclear gas between an accretion flow and an
     outward wind. In a steady state the gas inflow rate towards the black hole will be proportional to the
-    stellar mass enclosed inside of $\rs$. 
-  \item The location of the stagnation radius and thus the accretion
-    rate is very sensitive to the effective heating rate of the
-    gas.  Stellar wind heating, supernovae, and AGN feedback depend on the black hole mass as well as the star
-    formation history of the galaxy.  For example, for a galaxy with star formation within the last $\sim10^7$ years, both mass and energy injection are dominated by fast stellar winds from young stars ($w_w\simeq 1000$ km/s). In contrast, a galaxy with star formation relegated to the distant pass would have mass input dominated by old stars and heating dominated by AGN feedback and supernovae.  The energy input for galaxies with ongoing, continuous star formation is usually dominated by the youngest stars, while mass input is dominated by the old stellar poupation.  
+    stellar mass enclosed inside of $\rs$.  In the limit of strong heating, the stagnation radius is close to the Bondi radius (eq.~[\ref{eq:rbondi}]).  
+  \item The location of the stagnation radius, and thus the SMBH accretion rate, is extremely sensitive to the effective heating rate of the gas.  Stellar wind heating, supernovae, and AGN feedback depend on the SMBH mass as well as the star
+    formation history in the galactic nucleus.  For example, a recent burst of star formation within the last $\sim 10$ Myr results in both mass and energy injection being dominated by the fast stellar winds of young stars ($v_w \sim 1000$ km s$^{-1}$). By contrast, when star formation is relegated to the distant pass, mass input becomes dominated by old stars while heating is dominated by AGN feedback and supernovae.  For nuclei with ongoing, continuous star formation, energy input is usually dominated by the youngest stars, while mass input is dominated by the old stellar population.  
   
-    Quantitatively $\rs\sim v_w^{-2}$, which implies $\Mdot\sim
-    v_w^{-3.8 (-2.4)}$ for core (cusp galaxies). However, $\Mdot$ may
-    increase more rapidly for small $v_w$ for two reasons. (1) When
-    $v_w$ becomes comparable to the stellar velocity dispersion, the
+    Quantitatively $\rs\propto v_w^{-2}$, which implies that $\Mdot\sim
+    v_w^{-3.8 (-2.4)}$ for core (cusp galaxies).   However, $\Mdot$ may increase more rapidly for small $v_w$ for two reasons: (1) when $v_w$ becomes comparable to the stellar velocity dispersion ($\zeta < \zeta_c$; eq.~$[\ref{eq:zetacrit}]$), the
     gas inside of the break radius inside of the break radius inside
     of the stellar density profile is bound and cannot move
     outflow. (2) For $v_w\simeq200 $ km/s the gas may become thermally
