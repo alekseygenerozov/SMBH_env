@@ -283,10 +283,12 @@ velocity passes through zero.  Mass loss from stars interior to the
 stagnation radius is accreted, while that outside $\rs$ is unbound in
 an outflow from the nucleus.  The stagnation radius, rather than the
 Bondi radius, thus controls the SMBH accretion rate (although we will
-show that $\rs$ can in many cases reside near the
-nominal Bondi radius).  When heating is sufficiently weak, however, no stagnation radius may exist at all, i.e. the entire ISM of the galaxy is flowing towards the SMBH.  A goal of this work is to
-assess under what conditions a stagnation radius exists, as this
-question is intimately tied to that of cooling instability.
+show that $\rs$ can in many cases resides near the nominal Bondi
+radius).  When heating is sufficiently weak, however, the stagnation
+radius may not exist at all, i.e. the entire ISM of the galaxy is flowing
+towards the SMBH.  A goal of this work is to assess under what
+conditions a stagnation radius exists, as this question is intimately
+tied to that of cooling instability.
 % Furthermore, in some cases we find that no stagnation
 % radius exists at all; this formally implies that the entire of ISM of
 % the galaxy is feeding the SMBH, potentially resulting in much higher
@@ -300,12 +302,15 @@ calculating the steady-state hydrodynamic profile of the CNM
 ($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe some
 analytic results, while in $\S\ref{sec:numerical}$ we describe our
 numerical results.  In $\S\ref{sec:discussion}$ we discuss the
-implications of our results, to topics including the nuclear X-ray luminosities of quiescent black holes, jetted TDEs, and the growth time of SMBHs.  In $\S\ref{sec:conclusions}$ we summarize our conclusions.  Table
-\ref{table:definitions} provides the definitions of commonly used
-variables.  Appendices \ref{app:rs} and \ref{app:be} provides useful
-analytic results, while Appendix \ref{app:windheat} describes our
-method for calculating stellar wind heating and mass input in greater
-detail.
+implications of our results, to topics including the nuclear X-ray
+luminosities of quiescent black holes, jetted TDEs, and the growth
+time of SMBHs.  In $\S\ref{sec:conclusions}$ we summarize our
+conclusions.  Table \ref{table:definitions} provides the definitions
+of commonly used variables.  Appendices \ref{app:rs} and \ref{app:be}
+provide useful analytic results for the stagnation radius and the
+Bernoulli parameter of the flow, while Appendix
+\ref{app:windheat} describes our method for calculating stellar wind
+heating and mass input in greater detail.
 
 
 \begin{table*}
@@ -422,7 +427,8 @@ sample.\footnote{For the core galaxies the break radius follows the
 practice we calculate solutions for a range of $\rb$ only in cases
 when its precise value is expected to have a significant affect on the
 solution, in particular for high SMBH masses and low heating rates,
-for which the stagnation radius approaches large radii.
+for which the stagnation radius approaches large radii. {\bf AG
+  describe unphysically large rb for the case of cores.}
 
 
 \subsection{Hydrodynamic Equations}
@@ -517,7 +523,11 @@ inflow on small radial scales and a possible supersonic outflow on large scales.
 \section{Analytic Results}
 \label{sec:results}
 
-We first describe analytic estimates of physical quantities, such as the stagnation radius $\rs$ and the mass accretion rate, the detailed derivation of which are given in Appendix \ref{app:rs}.  Our results are expressed in terms of the SMBH mass $M_{\bullet}$, total heating rate $\tilde{v}_{w}$, and wind mass loss parameter $\eta$.
+We first describe analytic estimates of physical quantities, such as
+the stagnation radius $\rs$ and the mass accretion rate, the detailed
+derivation of which are given in Appendix \ref{app:rs}.  Our results
+are expressed in terms of the SMBH mass $M_{\bullet}$, total heating
+rate $\tilde{v}_{w}$, and wind mass loss parameter $\eta$.
 
 \subsection{Flow Properties Near the Stagnation Radius}
 
@@ -525,7 +535,7 @@ Continuity of the entropy derivative at the stagnation radius where $v = 0$ requ
 \begin{align}
 T|_{r_{s}}& = \frac{\gamma-1}{\gamma}\frac{\mu m_p
   \tilde{v}_{w}^{2}}{2k} \approx \frac{\gamma-1}{\gamma}\frac{\mu
-  m_p v_w^2}{2k} \frac{3+8\Gamma}{3+8\Gamma-6\nu} \nonumber\\ 
+  m_p v_w^2}{2k} \frac{13+8\Gamma}{13+8\Gamma-6\nu} \nonumber\\ 
  &\approx
  \begin{cases}
   5.0\times 10^6\ \, v_{500}^2 \,\,{\rm K} & \text{core} \\
@@ -782,21 +792,12 @@ The minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) corresp
   \end{cases}
   \label{eq:Mdotmax}
 \end{align}
-where the first line for each case is derived using equation (\ref{eq:eddr_analytic}) to calculate
-$\dot{M}(v_{\rm TI})$, whereas the second line corresponds to the low wind heating limit and is calculated for core galaxies using the empirical correlation $r_{b}/r_{\rm soi} \approx 7.6M_{\bullet,8}^{0.2}$ which follows from equation (\ref{eq:rsoi}) and the results of \citet{LauerFaber+:2007a}.  
-
-
-
-% For each of our galaxies Table \ref{tab:eta} provides the maximum value of $\eta$ such that $H/C >$1 at all radii.  Roughly speaking, this is the maximum $\eta$ for which it would be safe to ignore cooling.  If cooling is important, the CNM is likely to be thermally unstable, resulting in the formation of a cold medium that could substantially enhance the rate of accretion onto the SMBH.  
-
-%\begin{align}
- % \Lambda(T)\simeq
-  %\begin{cases}
-   % 2.3 \times 10^{-24} \left(T/10^6 \text{K}\right)^{0.5} $erg cm$^3 $s$^{-1}& \text{if } T \gsim 2 \times 10^7 \text{K} \\
-   % 1.1 \times 10^{-22} \left(T/10^6 \text{K}\right)^{-0.7}  $erg cm$^3 $s$^{-1}& \text{if } T \lsim 2 \times 10^7 \text{K}     
-  %\end{cases}
-  %\label{eq:cooling}
-%\end{align}
+where the first line for each case is derived using equation
+(\ref{eq:eddr_analytic}) to calculate $\dot{M}(v_{\rm TI})$, whereas
+the second line corresponds to the low wind heating limit and is
+calculated for core galaxies using the empirical correlation
+$r_{b}/r_{\rm soi} \approx 7.6M_{\bullet,8}^{-0.2}$ which follows from
+equation (\ref{eq:rsoi}) and the results of \citet{LauerFaber+:2007a}.
 
 
 \begin{figure}
@@ -974,50 +975,113 @@ $    10^{ 8 }$ & 600 & 25 & 0.27 & $ 5.7 \times 10^{ -5 }$ & $ 1.0 \times 10^{ 2
 %\end{minipage}
 %\end{table*}
 
-Our numerical results, summarized in Table \ref{table:models}, allow us to study a range of CNM properties and to assess the validity of the analytic estimates from the previous section.  Cases for which $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|< 10$ {\bf BDM: correct?} at the stagnation radius are marked as `thermally unstable', as are cases for which the stagnation radius diverges and hence could not be resolved, resulting in their calculations being terminated.  
+Our numerical results, summarized in Table \ref{table:models}, allow
+us to study a range of CNM properties and to assess the validity of
+the analytic estimates from the previous section.  
+
+We include a few solutions with cooling (marked with a $\dagger$) and
+conductivity (marked with a $\ddagger$) Table \ref{table:models} to
+assess whether it is valid to neglect these effects. As expected
+solutions for which $\dot{q}_{\rm heat}/\dot{q}_{\rm rad}\gg 1$ are
+unaffected when radiative cooling is included (see the solution with
+$\Mbh=10^{8} \Msun, v_w=600 {\rm km/s and} \gamma=0.8$. However, we
+find that as we decrease the heating further, to cooling begins to
+become more important (see $\Mbh=10^{8} \Msun, v_w=450 {\rm km/s and}
+\gamma=0.8$). Overall, we find radiative cooling has negligible effect
+on cusp solutions $v_w\geq 600 km/s$ in and core solutions with
+$v_w=1200$ km/s {\bf AG for the purposes of description it may be
+  simpler to just rerun all of our models with radiative cooling}. 
+
+We re-ran all cusps ($\Gamma=0.8$) with $v_w=300$ km/s and
+all cores ($\Gamma=0.1$) with $v_w=600 $ km/s with radiative cooling
+for three different values of the mass input parameter $\eta$--0.02,
+0.2, and 0.6.  Note that $\eta=0.02$ is the minimum expected physical
+mass input parameter. Solutions which were unstable for all values of
+$\eta$ are marked with a $\mathbf{TI}$ {\bf solution that were
+  unstable for only some choices of eta}.
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
-temperature $T(r)$, and radial velocity $|v(r)|$ (expressed in units of the sound speed), for the cusp
-($\Gamma=0.8$) solutions within our grid.  As expected, the gas
-density increases towards the SMBH $\rho\propto r^{-\densSlope}$ with
-$\densSlope\simeq1$, i.e. shallower than the $-3/2$ power law for
-Bondi accretion. This power law behavior does not extend
-through all radii, however, as the gas density profile has a break coincident
-with the location of the break in the stellar light profile ($\rb=100$
-pc). The temperature profile is relatively flat at large radii, but
-increases as $\propto 1/r^{k}$ interior to the sphere of influence,
-where $k\lesssim 1$, somewhat shallower than expected for virialized gas within the black hole sphere of influence.
-The inwardly directed velocity increases towards the hole with a profile that is somewhat steeper than the local free-fall velocity $v \propto v_{\rm ff}\propto r^{-1/2}$.  The flow near the stagnation radius is subsonic, but becomes supersonic at two critical points, one located at small radii, $r \lesssim 0.1r_{\rm s}$, and the other located at large radii, $r \gtrsim 10^{3}r_{\rm s}$.  In many cases the supersonic transition is instigated by the transition to a steeper stellar density profile exterior to the outer Nuker break radius, making our solutions near $r_{\rm s}$ also potentially sensitive to the break radius value.
-% {\bf BDM: I made this up - in general we need
-%   more explanation of what the plots are actually showing, with some
-%   physical explanation.}
-% AG -- things are not quite approaching Bondi on the inner grid. I
-% don't have a good physical explanation yet...
+temperature $T(r)$, and radial velocity $|v(r)|$ (expressed in units
+of the sound speed), for the cusp ($\Gamma=0.8$) solutions within our
+grid.  As expected, the gas density increases towards the SMBH
+$\rho\propto r^{-\densSlope}$ with $\densSlope\simeq1$, i.e. shallower
+than the $-3/2$ power law for Bondi accretion. This power law behavior
+does not extend through all radii, however, as the gas density profile
+has a break coincident with the location of the break in the stellar
+light profile ($\rb=100$ pc). The temperature profile is relatively
+flat at large radii, but increases as $\propto 1/r^{k}$ interior to
+the sphere of influence, where $k\lesssim 1$, somewhat shallower than
+expected for virialized gas within the black hole sphere of influence.
+The inwardly directed velocity increases towards the hole with a
+profile that is somewhat steeper than the local free-fall velocity $v
+\propto v_{\rm ff}\propto r^{-1/2}$.  The flow near the stagnation
+radius is subsonic, but becomes supersonic at two critical points, one
+located at small radii, $r \lesssim 0.1r_{\rm s}$, and the other
+located at large radii, $r \gtrsim 10^{3}r_{\rm s}$.  In many cases
+the supersonic transition is instigated by the transition to a steeper
+stellar density profile exterior to the outer Nuker break radius,
+making our solutions near $r_{\rm s}$ also potentially sensitive to
+the break radius value.
 
-Figure~\ref{fig:stag} shows our calculation of the stagnation radius $r_{\rm s}/r_{\rm
-  soi}$ as a function of the wind heating parameter $\zeta = \sqrt{v_w^{2}+\sigma_0^{2}}/\sigma_0$, with different colors showing different values of $v_{w}$.  Cusp and core galaxies are marked with square and triangles,
-respectively.  Shown for comparison are our analytic results
-(eq.~[\ref{eq:rs2main}]) with solid and dashed lines for cusp and core
-galaxies, respectively, calculated assuming $\densSlope = 1$ and
-$\densSlope= 0.6$, respectively (eq.~[\ref{eq:densSlope}]).  
+Figure~\ref{fig:stag} shows our calculation of the stagnation radius
+$r_{\rm s}/r_{\rm soi}$ as a function of the wind heating parameter
+$\zeta = \sqrt{v_w^{2}+\sigma_0^{2}}/\sigma_0$, with different colors
+showing different values of $v_{w}$.  Cusp and core galaxies are
+marked with square and triangles, respectively.  Shown for comparison
+are our analytic results (eq.~[\ref{eq:rs2main}]) with solid and
+dashed lines for cusp and core galaxies, respectively, calculated
+assuming $\densSlope = 1$ and $\densSlope= 0.6$, respectively
+(eq.~[\ref{eq:densSlope}]).
 
-Our analytic estimates accurately reproduce the numerical results in the high heating limit $\zeta \gg 1$ ($v_w \gg \sigma_0$; $r_{\rm s} \lesssim r_{\rm soi}$).  However, for sufficiently low heating the stagnation radius diverges above the analytic estimate, approaching the stellar break radius $r_b \gg r_{\rm soi}$.  This divergence occurs approximately when $\zeta = \sqrt{v_w^{2}+\sigma_0^{2}}/\sigma_0 < \zeta_c \propto (r_b/r_{\rm soi})^{0.5(\Gamma-1)}$ (eq.~[\ref{eq:zetacrit}], Appendix \ref{app:be}), and hence occurs at a higher value of $\zeta$ in the case of core galaxies ($\Gamma = 0.8$) with large break radii.  This behavior explains the three core galaxies shown as green squares, which are vertically aligned at the same value of $\zeta$ close to where the analytic estimate diverges; these correspond to models with the same black hole mass ($\Mbh = 10^7 \Msun$) and heating rate ($v_w = 300$ km s$^{-1}$) but different values of the break radius: $r_{b} = $ 50, 100, and 400 pc (from top to bottom) corresponding to successively larger values of $\zeta_c$.  
+Our analytic estimates accurately reproduce the numerical results in
+the high heating limit $\zeta \gg 1$ ($v_w \gg \sigma_0$; $r_{\rm s}
+\lesssim r_{\rm soi}$).  However, for sufficiently low heating the
+stagnation radius diverges above the analytic estimate, approaching
+the stellar break radius $r_b \gg r_{\rm soi}$.  This divergence
+occurs approximately when $\zeta =
+\sqrt{v_w^{2}+\sigma_0^{2}}/\sigma_0 < \zeta_c \propto (r_b/r_{\rm
+  soi})^{0.5(\Gamma-1)}$ (eq.~[\ref{eq:zetacrit}], Appendix
+\ref{app:be}), and hence occurs at a higher value of $\zeta$ in the
+case of core galaxies ($\Gamma = 0.8$) with large break radii. 
 
- Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for each of our numerical solutions in Eddington units for different values of $\vwO =$ 300, 600 and 1200 km s$^{-1}$, and for both core ($\Gamma$=0.1) and cusp galaxies ($\Gamma$=0.8).  Shown for comparison is our analytic estimate of $\dot{M}/\dot{M}_{\rm edd}$ from equation (\ref{eq:eddr_analytic}).  For high wind velocities ($v_{w} \gg \sigma$) the stagnation lies well inside the black hole sphere of influence and our analytic estimate provides a good fit to the numerical results.  However, for low wind velocities and/or high $M_{\bullet}$ (large $\sigma$), the numerical accretion rate considerably exceeds the analytic estimate as the stagnation radius diverges to large radii (Fig.~\ref{fig:stag}).  
-%% AG: Describe conservation checks to additionally validate the results.
+As $\zeta$ approached $\zeta_c$, the results the location of the
+stagnation radius will depend on the location of the break radius
+$\rb$.  This explains the behavior of the two core galaxies, shown as
+orange triangles vertically aligned at the same value of
+$\zeta$. These correspond to models with the same black hole mass
+($\Mbh = 10^8 \Msun$) and heating rate ($v_w = 600$ km s$^{-1}$) but
+different values of the break radius: $r_{b} =$ 25, 50 pc (from top to
+bottom). {\bf AG still needs work}
+
+Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for each of
+our numerical solutions in Eddington units for different values of
+$\vwO =$ 300, 600 and 1200 km s$^{-1}$, and for both core
+($\Gamma$=0.1) and cusp galaxies ($\Gamma$=0.8).  Shown for comparison
+is our analytic estimate of $\dot{M}/\dot{M}_{\rm edd}$ from equation
+(\ref{eq:eddr_analytic}).  For high wind velocities ($v_{w} \gg
+\sigma$) the stagnation lies well inside the black hole sphere of
+influence and our analytic estimate provides a good fit to the
+numerical results.  However, for low wind velocities and/or high
+$M_{\bullet}$ (large $\sigma$), the numerical accretion rate
+considerably exceeds the analytic estimate as the stagnation radius
+diverges to large radii (Fig.~\ref{fig:stag}).
+
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{rs.eps}
-  \caption{\label{fig:stag} Stagnation radius
-    $r_{s}$ in units of the sphere of influence radius $r_{\rm soi}$
-    (eq.~[\ref{eq:rsoi}]) for galaxies in our sample as a function of the stellar wind heating parameter $\zeta \equiv \sqrt{v_w^{2} + \sigma_0^{2}}/\sigma_0$.  Green, orange, and blue
-    symbols correspond to different values of $v_{w} =$ 300, 600, and
-    1200 km s$^{-1}$, respectively.  Squares correspond to cusp
-    galaxies ($\Gamma = 0.8$), while triangles correspond to cores
-    ($\Gamma = 0.1$). The black curves correspond to the analytic
-    prediction from equation (\ref{eq:rs2main}), with solid and dashed
-    curves calculated for parameters $\{\Gamma=0.8, \densSlope\simeq1\}$ and
-    $\{\Gamma=0.1,\densSlope\simeq0.6\}$, respectively. }
+  \caption{\label{fig:stag} Stagnation radius $r_{s}$ in units of the
+    sphere of influence radius $r_{\rm soi}$ (eq.~[\ref{eq:rsoi}]) for
+    galaxies in our sample as a function of the stellar wind heating
+    parameter $\zeta \equiv \sqrt{v_w^{2} + \sigma_0^{2}}/\sigma_0$.
+    Green, orange, and blue symbols correspond to different values of
+    $v_{w} =$ 300, 600, and 1200 km s$^{-1}$, respectively.  Squares
+    correspond to cusp galaxies ($\Gamma = 0.8$), while triangles
+    correspond to cores ($\Gamma = 0.1$). Green crosses correspond to
+    cusp solutions which would be thermally unstable. The black curves correspond
+    to the analytic prediction from equation (\ref{eq:rs2main}), with
+    solid and dashed curves calculated for parameters $\{\Gamma=0.8,
+    \densSlope\simeq1\}$ and $\{\Gamma=0.1,\densSlope\simeq0.6\}$,
+    respectively. }
 \end{figure}
 
 
