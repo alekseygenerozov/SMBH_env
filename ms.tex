@@ -624,7 +624,7 @@ the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm
   &\dot{M}\sim\frac{(4 \pi/3) \rs^3 \rho|_{r_{\rm s}}}{\tff|_{r_{\rm s}}},
   \label{eq:mdot_gas}
 \end{align}
- in conjunction with equations (\ref{eq:mdot_analytic}) and (\ref{eq:rs_simple}), one derives
+ in conjunction with equations (\ref{eq:mdot_analytic}) and (\ref{eq:stag_simple}), one derives
 \begin{align}
   \rho|_{r_{\rm s}}\approx
   \begin{cases}
@@ -1077,11 +1077,11 @@ diverges to large radii (Fig.~\ref{fig:stag}).
     $v_{w} =$ 300, 600, and 1200 km s$^{-1}$, respectively.  Squares
     correspond to cusp galaxies ($\Gamma = 0.8$), while triangles
     correspond to cores ($\Gamma = 0.1$). Green crosses correspond to
-    cusp solutions which would be thermally unstable. The black curves correspond
-    to the analytic prediction from equation (\ref{eq:rs2main}), with
-    solid and dashed curves calculated for parameters $\{\Gamma=0.8,
-    \densSlope\simeq1\}$ and $\{\Gamma=0.1,\densSlope\simeq0.6\}$,
-    respectively. }
+    cusp solutions which would be thermally unstable. The black curves
+    correspond to the analytic prediction from equation
+    (\ref{eq:rs2main}), with solid and dashed curves calculated for
+    parameters $\{\Gamma=0.8, \densSlope\simeq1\}$ and
+    $\{\Gamma=0.1,\densSlope\simeq0.6\}$, respectively. }
 \end{figure}
 
 
@@ -1215,7 +1215,7 @@ evolution time of the flow at the radius of interest
   $M_{\bullet}-\sigma$ relationship (eq.~[\ref{eq:Msigma}]).
 
 Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting
-$v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into equation (\ref{eq:rs_simple})
+$v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into equation (\ref{eq:stag_simple})
 for the stagnation radius, we find that
 
 \begin{align}
@@ -1320,7 +1320,7 @@ The importance of Compton heating can be estimated by assuming the SMBH
 radiates with a luminosity $L = \epsilon \dot{M}c^{2}$, where
 $\epsilon$ is the radiative efficiency and where $\dot{M}$ is
 estimated from equation (\ref{eq:mdot_analytic}).  Then using
-equations (\ref{eq:rs_simple}), (\ref{eq:mdot_analytic}),
+equations (\ref{eq:stag_simple}), (\ref{eq:mdot_analytic}),
 (\ref{eq:rhors}), (\ref{eq:rhostarrs}) we calculate that from equation
 (\ref{eq:vw_eff}) that the effective heating rate at the stagnation radius is given by
 \begin{align} v_{w}^{\rm C} \simeq
@@ -1843,8 +1843,20 @@ galaxies (Fig.~\ref{fig:profiles}, solid line).  To obtain such a flattening on 
 \subsection{Regulation by Kinetic Outflow Feedback}
 \label{sec:kinetic}
 
-Our analysis of black hole feedback has focused on Compton heating instead of kinetic feedback, since the efficacy of radiative feedback is relatively straightforward to calculate given the properties of the accretion flow.  However, if kinetic feedback instead dominates, this could play an important role in regulating the accretion.  Our simple parameterization of kinetic feedback (eq.~[\ref{eq:vjet}]) predicts an effectic wind velocity which increases with SMBH mass as $v_{w}^{\bullet} \propto M_{\bullet}^{0.33(0.28)}$ for core(cusp) galaxies, respectively.  Coupled with the dependence of the SMBH accretion rate on the wind heating, $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{0.76(0.48)}v_{w}^{-3.8(-2.4)}$
-(Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]), kinetic feedback of the form we have adopted leads to an Eddington ratio dependence on SMBH mass of $\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{-0.5(-0.2)}$.  
+Our analysis of black hole feedback has focused on Compton heating
+instead of kinetic feedback, since the efficacy of radiative feedback
+is relatively straightforward to calculate given the properties of the
+accretion flow.  However, if kinetic feedback instead dominates, this
+could play an important role in regulating the accretion.  Our simple
+parameterization of kinetic feedback (eq.~[\ref{eq:vjet}]) predicts an
+effectic wind velocity which increases with SMBH mass as
+$v_{w}^{\bullet} \propto M_{\bullet}^{0.33(0.28)}$ for core(cusp)
+galaxies, respectively.  Coupled with the dependence of the SMBH
+accretion rate on the wind heating, $\dot{M}/\dot{M}_{\rm edd} \propto
+M_{\bullet}^{0.76(0.48)}v_{w}^{-3.8(-2.4)}$ (Fig.~\ref{fig:mdot_mass};
+eq.~[\ref{eq:eddr_analytic}]), kinetic feedback of the form we have
+adopted leads to an Eddington ratio dependence on SMBH mass of
+$\dot{M}/\dot{M}_{\rm edd} \propto M_{\bullet}^{-0.5(-0.2)}$.
 
 This prediction is in better with the observed dependence of $\langle L_{X}/L_{\rm edd} \rangle$ in elliptical galaxies (Fig.~\ref{fig:miller}, green line), hinting that accretion regulation by kinetic feedback may serve as an alternative explanation for X-ray luminosities of elliptical galaxies.  However, our assumption that kinetic outflows heat the gas uniformly in volume is somewhat arbitrary and would need to more rigorously justified by numerical studies of how jets or disk outflows couple energy to their gaseous environment.  It is furthermore unclear whether our steady-state model can be applied at all, because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scales.
 
