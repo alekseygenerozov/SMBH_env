@@ -1,117 +1,63 @@
-We derive an expression for the bernoulli parameter of the gas, $\ke
-+\gammaf \frac{p}{\rho}+\Phi$, assuming that the stellar density
-profile $\rhostar\sim r^{-1-\Gamma}=r^{-\delta}$ inside of the break radius $\rb$
+Here we derive an expression for the Bernoulli parameter, 
+\be
+\mathcal{B} \equiv \ke
++\gammaf \frac{p}{\rho}+\Phi,
+\ee
+assuming a stellar density profile $\rhostar\sim r^{-1-\Gamma}=r^{-\delta}$ characteristic of that inside the break radius $\rb$.
 
-Consider the steady state energy conservation equation. {\bf AG perhaps
-  put a brief explanation of how this relates to the steady state
-  entropy equation via laws of thermodynamics?.}
-
+Basic manipulation of the equations of hydrodynamics (eqs.~[\ref{eq:drhodt}]-[\ref{eq:dsdt}]) results in the following relationship between the Bernoulli parameter and the net heating rate $\propto q \vw^{2}$,
 \begin{align}
-\frac{1}{r^2} \frac{d}{dr} \left(r^2 \rho v \left(\frac{v^2}{2} + \Phi
-    + \gammaf \frac{p}{\rho}\right) \right) = q \kew + q \Phi,
+\frac{1}{r^2} \frac{d}{dr} \left(r^2 \rho v \mathcal{B} \right) = q \kew + q \Phi = \frac{3}{1+\delta}\frac{G
+  \Mbh}{r}+\sigma_0^2+v_w^2 + q \Phi,
 \label{eq:enCons}
 \end{align}
+where the first and second terms on the right hand side correspond, respectively, to the black hole and stellar contributions to the velocity dispersion.
 
-Where $\vw^2=\sigma^2+v_w^2= \frac{3}{1+\delta}\frac{G
-  \Mbh}{r}+\sigma_0^2+v_w^2$. The first term to the black hole
-velocity dispersion, the second term corresponds to the velocity
-dispersion of stars which we rake to be constant, and $v_w$
-corresponds to any additional heating.
-
-Now integrate both sides of equation~\eqref{eq:enCons} with respect from r to the stagnation radius $\rs$.
-
+Integrating both sides of equation~\eqref{eq:enCons} from the stagnation radius $r = \rs$ outwards,
 \begin{align}
   r^2 \rho v \left(\ke+\Phi+\gammaf \frac{p}{\rho} \right)= \int_{\rs}^{r}
     r^2 \left(q \kew + q\Phi\right) dr
     \label{eq:enConsInt}
 \end{align}
-
-We know $f\equiv r^2 \rho v$ from the steady state mass conservation
-equation. 
-
-\begin{align}
- \frac{1}{r^2} \frac{d}{dr} \left(r^2 \rho v\right) = q 
-\end{align}
-
-Where q is the rate of the mass injection per volume, which is
-proportional to the stellar density. Let $x=r/\rs$ and $q_o= q
-(\rs)$. Then $q=q_o x^{-\delta}$. Thus,
-
-\begin{align}
- f(x)=q_o \rs^3 \left[\frac{x^{3-\delta}-1}{3-\delta}\right].
+From mass continuity (eq.~[\ref{eq:drhodt}]) the mass flux can be written
+\be
+ f\equiv r^2 \rho v = q_o \rs^3 \left[\frac{x^{3-\delta}-1}{3-\delta}\right],
  \label{eq:massFlux}
-\end{align}
-
-The gravitational potential $\Phi$ is given by
-
+\ee
+where $x \equiv r/\rs$ and we have used the fact that the mass source term $q = q_o x^{-\delta}$ is proportional to the stellar density.  Likewise, the gravitational potential $\Phi$ is given by
 \begin{align}
-\Phi&= -\frac{G \Menc}{r} - 4 \pi G \int_{r}^{\infty} \rhostar(r') r'
-dr'.\nonumber\\
-&\simeq -\frac{G \Menc}{r} -4 \pi G \int_{r}^{\rb} \rhostar(r') r' dr'
+\Phi \simeq -\frac{G \Menc}{r} -4 \pi G \int_{r}^{\rb} \rhostar(r') r' dr',
 \label{eq:Phi}
 \end{align}
+where by truncating the integral at $r = \rb$ we are neglecting the contribution to the potential of the stars outside of the break radius.
 
-Where in the scond line we have neglected the contribution of the
-stars outside of the break radius, $\rb$, to the gravitational potential.
-
-% Note our unconventional choice of gauge: the upper limit of the
-% integral on the right hand side is $\rs$ whereas conventionally the
-% upper limit is taken to be $\infty$. This means that our definition
-% will not give $\Phi=0$ in the limit $r\rightarrow\infty$. However,
-% our result for the enthalpy $\ke + \gammaf \frac{p}{\rho}$ will be
-% gauge invariant. 
-
-Using equations~\eqref{eq:enConsInt},~\eqref{eq:massFlux},
-and~\eqref{eq:Phi}, we may obtain an expression for the Bernoulli
-parameter of the gas, $\ke+\gammaf \frac{p}{\rho} +\Phi$ of the gas inside
-of the break radius $\rb$.
-
+Combining equations~\eqref{eq:enConsInt} and \eqref{eq:massFlux} with the result of equation \eqref{eq:Phi}, we obtain 
 \begin{align}
-  &\frac{v^2}{2}+\gammaf \frac{p}{\rho} +\Phi = \nonumber\\
-  &-U_o\left[\frac{\rs/\rb}{2-\delta}-\frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{(5-2\delta)(2-\delta)}\right]\nonumber\\
+  &\mathcal{B} = -U_o\left[\frac{\rs/\rb}{2-\delta}-\frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{(5-2\delta)(2-\delta)}\right]\nonumber\\
   &+\frac{v_w^2}{2}+\frac{\sigma_0^2}{2}- \frac{G \Mbh}{r_s}
   \frac{1-2\delta}{2(\delta+1)} \frac{3-\delta}{2-\delta}\frac{x^{2-\delta}-1}{x^{3-\delta}-1}
   \nonumber\\
   &-\frac{G M_\star}{r_s}
   \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{5-2\delta},
 \end{align}
-
 where $U_o=4 \pi G \rhostar(\rs) \rs^2$.  We may rewrite this as 
 
 \begin{multline}
-  \frac{v^2}{2}+\gammaf \frac{p}{\rho}+\Phi
-=\frac{G \Mbh}{\rs} 
+  \mathcal{B} =\frac{G \Mbh}{\rs} 
 \biggl[
   \frac{3}{2} \zeta^2 w^{\frac{1}{3 -\delta}}
   -\frac{(1-2\delta)(3-\delta)}{2(\delta+1)(2-\delta)}  \frac{x^{2  -\delta}-1}{x^{3-\delta}-1}\\
   -\frac{\rb}{\rsoi} w^{\frac{\delta-1}{3-\delta}} \frac{3 -\delta}{2 -\delta} 
   -w \frac{(2-\delta)(3-\delta)-(3-\delta)^{2}}{(5-2\delta)(2-\delta)} \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}
-\biggr].
+\biggr],
 \label{eq:enthAnal}
 \end{multline}
-
-Recall that $\rs$ is the stagnation radius, $x\equiv r/\rs$, $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$, $w\equiv (\rs/\rsoi)^{3\delta}$, and
+where $\zeta \equiv \sqrt{v_w^2+\sigma_0^2}/\sigma_0$ and $w\equiv (\rs/\rsoi)^{3\delta}$, and
 $\delta$ is the power law slope of the stellar density profile inside
 of the break radius, $\rb$.
 
-% For sufficiently large radii ($x$), the expression above always
-% becomes negative, which means that a break in the stellar density
-% profile is necessary in order to obtain an outflow.
- For a given $\rb/\rsoi$ there is a critical $\zeta$, $\zeta_{c}$, such
- that if $\zeta>\zeta_c$, an outflow will be possible from any
-radius, since the Bernoulli parameter will be positive inside of the
-break radius. On the other hand if $\zeta<\zeta_c$, then there is a
-minimum value of $\rs/\rsoi$, $(\rs/\rsoi)_{\rm min}$. If we have had
-$\rs/\rsoi<(\rs/\rsoi)_{\rm min}$, then the Bernoulli parameter would
-become negative inside of $\rb$ and no outflow would be possible.
-
-For cusp galaxies ($\Gamma$=0.8), $\zeta_c\simeq \sqrt 2$
-($v_w\simeq\sigma_0$).  On the other hand for core galaxies
-($\Gamma$=0, $\delta$=1) we find $\zeta_c\simeq
-(\rb/\rsoi)^{0.5}$. More generally, we find $\zeta_c\sim
-(\rb/\rsoi)^{0.5(1-\Gamma)}$ for $\rb\gsim\rsoi$ (see the top panel of
-Fig.~\ref{fig:zetaCrit}).  For values of $\zeta<\zeta_c$, the
-stagnation radius rapidly approaches the break radius as shown in the
+When the rate of external heating is high, we have $\mathcal{B} > 0$ at all radii, requiring an outflow.  As heating ($\zeta$) is decreased, there exists a critical value of $\zeta = \zeta_{c}$ below which $\mathcal{B}$ first becomes negative.  If $\zeta<\zeta_c$, then there is a minimum value of $\rs/\rsoi$, $(\rs/\rsoi)_{\rm min}$, above which we have $\mathcal{B} > 0$ at the break radius, allowing an outflow with positive kinetic energy at infinity.  The value of $\zeta_c$ is an increasing function of $r_{b}/r_{\rm soi}$ since a greater heating rate is required to unbind gas from a deeper stellar potential (Fig.~\ref{fig:zetaCrit}).  Specifically, we find $\zeta_c\sim (\rb/\rsoi)^{0.5(1-\Gamma)}$ for $\rb\gsim\rsoi$ (see the top panel of
+Fig.~\ref{fig:zetaCrit}). Likewise $(r_{\rm s}/r_{b})_{\rm min}$ is an increasing function of $\zeta/\zeta_{c}$, approaching unity for $\zeta < 0.5\zeta_c$ {\bf BDM: put in the right numbers here}.  For values of $\zeta<\zeta_c$, the stagnation radius rapidly approaches the break radius as shown in the
 bottom panel of Fig.~\ref{fig:zetaCrit}.
 
 \begin{figure}
