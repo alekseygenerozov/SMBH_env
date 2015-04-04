@@ -40,8 +40,7 @@ Combining equations~\eqref{eq:enConsInt} and \eqref{eq:massFlux} with the result
   &-\frac{G M_\star}{r_s}
   \frac{x^{5-2\delta}-1}{x^{3-\delta}-1}\frac{3-\delta}{5-2\delta},
 \end{align}
-where $U_o=4 \pi G \rhostar(\rs) \rs^2$.  We may rewrite this as 
-
+where $U_o=4 \pi G \rhostar|_{\rs} \rs^2$.  This can be rewritten as
 \begin{multline}
   \mathcal{B} =\frac{G \Mbh}{\rs} 
 \biggl[
@@ -56,7 +55,9 @@ where $\zeta \equiv \sqrt{v_w^2+\sigma_0^2}/\sigma_0$ and $w\equiv (\rs/\rsoi)^{
 $\delta$ is the power law slope of the stellar density profile inside
 of the break radius, $\rb$.
 
-When the rate of external heating is high, we have $\mathcal{B} > 0$ at all radii, requiring an outflow.  As heating ($\zeta$) is decreased, there exists a critical value of $\zeta = \zeta_{c}$ below which $\mathcal{B}$ first becomes negative.  If $\zeta<\zeta_c$, then there is a minimum value of $\rs/\rsoi$, $(\rs/\rsoi)_{\rm min}$, above which we have $\mathcal{B} > 0$ at the break radius, allowing an outflow with positive kinetic energy at infinity.  The value of $\zeta_c$ is an increasing function of $r_{b}/r_{\rm soi}$ since a greater heating rate is required to unbind gas from a deeper stellar potential (Fig.~\ref{fig:zetaCrit}).  Specifically, we find $\zeta_c\sim (\rb/\rsoi)^{0.5(1-\Gamma)}$ for $\rb\gsim\rsoi$ (see the top panel of
+When the rate of external heating is high ($\zeta \gg 1$), we have $\mathcal{B} > 0$ at all radii, requiring an outflow.  As $\zeta$ is decreased, there exists a critical value of $\zeta = \zeta_{c}$ below which $\mathcal{B}$ becomes negative near the stagnation radius.  If $\zeta<\zeta_c$, then there is a minimum value of $\rs/\rsoi$, $(\rs/\rsoi)_{\rm min}$, above which we have $\mathcal{B} > 0$ at the break radius, allowing an outflow with positive kinetic energy at infinity.  
+
+The value of $\zeta_c$ is an increasing function of $r_{b}/r_{\rm soi}$ and is larger for core galaxies than cusp galaxies, since a greater heating rate is required to unbind gas from a deeper stellar potential (Fig.~\ref{fig:zetaCrit}).  Specifically, we find $\zeta_c\sim (\rb/\rsoi)^{0.5(1-\Gamma)}$ for $\rb\gsim\rsoi$ (see the top panel of
 Fig.~\ref{fig:zetaCrit}). Likewise $(r_{\rm s}/r_{b})_{\rm min}$ is an increasing function of $\zeta/\zeta_{c}$, approaching unity for $\zeta < 0.5\zeta_c$ {\bf BDM: put in the right numbers here}.  For values of $\zeta<\zeta_c$, the stagnation radius rapidly approaches the break radius as shown in the
 bottom panel of Fig.~\ref{fig:zetaCrit}.
 
