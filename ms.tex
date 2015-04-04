@@ -992,7 +992,7 @@ the break radius value.
 
 Figure~\ref{fig:stag} shows our calculation of the stagnation radius
 $r_{\rm s}/r_{\rm soi}$ as a function of the wind heating parameter
-$\zeta = \sqrt{v_w^{2}+\sigma_0^{2}}/\sigma_0$, with different colors
+$\zeta = \sqrt{1+(v_w/\sigma_0)^{2}}$, with different colors
 showing different values of $v_{w}$.  Cusp and core galaxies are
 marked with square and triangles, respectively.  Shown for comparison
 are our analytic results (eq.~[\ref{eq:rs2main}]) with solid and
@@ -1005,20 +1005,14 @@ the high heating limit $\zeta \gg 1$ ($v_w \gg \sigma_0$; $r_{\rm s}
 \lesssim r_{\rm soi}$).  However, for sufficiently low heating the
 stagnation radius diverges above the analytic estimate, approaching
 the stellar break radius $r_b \gg r_{\rm soi}$.  This divergence
-occurs approximately when $\zeta =
-\sqrt{v_w^{2}+\sigma_0^{2}}/\sigma_0 < \zeta_c \propto (r_b/r_{\rm
-  soi})^{0.5(\Gamma-1)}$ (eq.~[\ref{eq:zetacrit}], Appendix
-\ref{app:be}), and hence occurs at a higher value of $\zeta$ in the
-case of core galaxies ($\Gamma = 0.8$) with large break radii. 
-
-As $\zeta$ approached $\zeta_c$, the results the location of the
-stagnation radius will depend on the location of the break radius
-$\rb$.  This explains the behavior of the two core galaxies, shown as
+occurs approximately when $\zeta < \zeta_c \propto (r_b/r_{\rm
+  soi})^{0.5(\Gamma-1)}$ (eq.~[\ref{eq:zetacrit}]), which in Appendix
+\ref{app:be} is shown to coincide with the critical heating below which the Bernoulli parameter of the gas decreases below unity near the stagnation radius.  This divergence of the stagnation radius to large radii hence occurs at a higher value of $\zeta$ in core galaxies ($\Gamma = 0.8$) with large break radii.  This dependence explains the behavior of the two core galaxies, shown as
 orange triangles vertically aligned at the same value of
 $\zeta$. These correspond to models with the same black hole mass
 ($\Mbh = 10^8 \Msun$) and heating rate ($v_w = 600$ km s$^{-1}$) but
 different values of the break radius: $r_{b} =$ 25, 50 pc (from top to
-bottom). {\bf AG still needs work}
+bottom). {\bf AG still needs work.  BDM: what work? this looks sufficient to me}
 
 Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for each of
 our numerical solutions in Eddington units for different values of
