@@ -285,7 +285,7 @@ tied to that of cooling instability.
 
 
 This paper is organized as followed.  In $\S\ref{sec:model}$ we
-describe our model, including the sample of galaxies used in our
+describe our model, including the sample of galaxy properties used in our
 analysis ($\S\ref{sec:gal_model}$) and our numerical procedure for
 calculating the steady-state hydrodynamic profile of the CNM
 ($\S\ref{sec:hydro}$).  In $\S\ref{sec:results}$ we describe some
@@ -311,14 +311,14 @@ heating and mass input in greater detail.
 \hline
 {Variable} & {Definition} \\
 \hline
-$M_{\bullet}$ & Black hole mass \\
-$\tilde{v}_{w}$ & Total heating parameter, including minimum heating
+$M_{\bullet}$ & black hole mass \\
+$\tilde{v}_{w}$ & total heating parameter, including minimum heating
 rate from stellar and black hole velocity dispersion \\
-$v_{w}$ & Total heating parameter, excluding heating rate from
+$v_{w}$ & total heating parameter, excluding heating rate from
 velocity dispersion \\
-$\sigma_0$ & Stellar velocity dispersion--assumed to be radially constant.\\
-$\zeta$ & $\zeta=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$ (eq.~[\ref{eq:zetacrit}])\\
-$r_{s}$ & Stagnation radius (where gas radial velocity goes to zero) \\
+$\sigma_0$ & stellar velocity dispersion--assumed to be radially constant.\\
+$\zeta$ & heating parameter, $\zeta \equiv \sqrt{1 + (v_w/\sigma_0)^2}$ (eq.~[\ref{eq:zetacrit}])\\
+$r_{s}$ & stagnation radius (where gas radial velocity goes to zero) \\
 $r_{\rm soi}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
 $r_{\rm b}$ & outer break radius of stellar density profile \\ 
 $r_{\rm Ia}$ & radius interior to which Ia SN are infrequent compared to the dynamical/inflow timescale (eq.~[\ref{eq:rIa}]) \\ 
@@ -335,7 +335,7 @@ $\delta$ & power-law slope of the 3d stellar density profile inside of
 the break radius. $\delta=\Gamma+1$.\\
 $\dot{M}$ & mass accretion rate \\
 $\dot{M}_{\rm Ia}$ & maximum mass accretion rate as limited by SN Ia (eq.~[\ref{eq:eddr_Ia}]) \\
-$\dot{M}_{\rm C}$ & equilibrium accretion rate set by Compton heating (eq.~[\ref{eq:MdotC}]) \\
+$\dot{M}_{\rm C}$ & `equilibrium' accretion rate set by Compton heating (eq.~[\ref{eq:MdotC}]) \\
 $\dot{M}_{\rm TI}$ & maximum accretion rate for thermally stable accretion (eq.~[\ref{eq:Mdotmax}]) \\
 $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ & ratio of external heating (stellar winds, SN Ia, MSPs) to radiative cooling (eq.~[\ref{eq:cooling2}]) \\
 $t_{\rm h}$ & Hubble timescale \\
@@ -344,9 +344,8 @@ $\nu$ & gas density power-law slope at the stagnation radius
 \hline
 \label{table:definitions}  
 \end{tabular}
-\begin{tablenotes}
-\item{$^{(a)}FILL IN$}
-\end{tablenotes}
+%\begin{tablenotes}
+%\end{tablenotes}
 \end{minipage}
 \end{threeparttable}
 
@@ -568,7 +567,7 @@ heuristic grounds (their eq.~6).
 
 In the opposite limit of weak heating ($v_w\lsim \sigma_0$) the stagnation radius moves to large radii, approaching the break radius $\rb$ in the stellar density profile, formally implying that almost entire ISM of the galaxy is accreting.  In particular, in Appendix \ref{app:be} we show that $\rs \Rightarrow \rb$ for heating below a critical threshold
 \be
-\zeta\equiv \frac{\sqrt{v_w^2+\sigma_0^2}}{\sigma_0} < \zeta_c \approx \left(\frac{\rb}{\rsoi}\right)^{0.5(1-\Gamma)}.
+\zeta\equiv \sqrt{1 + \frac{v_w}{\sigma_0}^2} < \zeta_c \approx \left(\frac{\rb}{\rsoi}\right)^{0.5(1-\Gamma)}.
 \label{eq:zetacrit}
 \ee
 This result makes intuitive sense: gas is supplied to the nuclear by stars which are gravitationally bound to the black hole, so outflows are possible only if the specific heating rate $\sim v_{w}^{2}$ significantly exceeds the specific gravitational binding energy.  Condition (\ref{eq:zetacrit}) approximately corresponds to the condition that the wind heating parameter be less than the escape speed from the break radius, $v_{\rm esc} \sim (GM_{\star}|_{r_{\rm b}}/r_b)^{1/2}$, where $M_{\star} \propto r^{2-\Gamma}$.
@@ -691,7 +690,7 @@ stellar density profile is approximated as (eq.~[\ref{eq:rhostar}])
 where the stagnation radius is assume to reside well inside the Nuker
 break radius.  Equation (\ref{eq:conduction}) shows that, even when conduction is saturated, our neglect of heat conduction
 results in at most an order unity correction for plausible, causal values of
-the saturation parameter $\phi < 0.1$.  Numerical experiments which include conductive heating confirm this
+the saturation parameter $\phi < 0.1$.  Our numerical experiments which include conductive heating confirm this
 ($\S\ref{sec:numerical}$).
 
 
@@ -717,10 +716,10 @@ time-dependent (e.g. limit cycle) behavior
 \citealt{Yuan&Li11}, \citealt{Gan+14}), which is also inconsistent
 with our assumption of a steady, single-phase flow.
 
-Radiative cooling can, however, be stabilized if it is overwhelmed by
-other sources of cooling, namely the term $\propto -q c_{s}^{2}
+Cooling instability can, however, be prevented if destabilizing radiation is overwhelmed by
+other sources of cooling, namely the stabilizing term $\propto -q c_{s}^{2}
 \propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]).
-Neglecting radiative cooling, this term is balanced at the stagnation
+Neglecting radiative cooling to first order, this term is balanced at the stagnation
 radius by the wind heating term, $\dot{q}_{\rm heat} = q
 \tilde{v}_{w}^{2}/2$.  Thermal stability near the stagnation radius
 can thus be assessed by comparing the ratio of wind heating to
@@ -786,7 +785,7 @@ where the first line for each case is derived using equation
 the second line corresponds to the low wind heating limit and is
 calculated for core galaxies using the empirical correlation
 $r_{b}/r_{\rm soi} \approx 7.6M_{\bullet,8}^{-0.2}$ which follows from
-equation (\ref{eq:rsoi}) and the results of \citet{LauerFaber+:2007a}.
+equation (\ref{eq:rsoi}) and the $r_b-M_{\bullet}$ correlation derived from the results of \citet{LauerFaber+:2007a}.
 
 
 \begin{figure}
