@@ -1319,22 +1319,19 @@ C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
 \end{align} 
 Compton heating can thus be significant in young stellar populations
 with relatively high mass loss rates, e.g. $v_{w}^{\rm C} \gtrsim 300$
-km s$^{-1}$ for $\eta \gtrsim 1$.  The mass accretion rate
-corresponding to the state where Compton heating limits the average
-accretion rate is given by substituting equation (\ref{eq:vC2}) into
-equation (\ref{eq:eddr_analytic}):
+km s$^{-1}$ for $\eta \gtrsim 1$.  The accretion rate
+corresponding to a state in which Compton heating self-regulates the accretion flow is given by substituting equation (\ref{eq:vC2}) into equation (\ref{eq:eddr_analytic}):
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
 \begin{cases} 2\times 10^{-3} \eta_{0.02}^{0.2}T_{\rm
 C,9}^{-0.8}\epsilon_{-2}^{-0.8} M_{\bullet,8}^{0.16}
 &, \text{core}\\ 8\times 10^{-4} \eta_{0.02}^{0.3}T_{\rm
 C,9}^{-0.7}\epsilon_{-2}^{-0.7} M_{\bullet,8}^{0.14}
-&, \text{cusp},
+&, \text{cusp}.
   \end{cases}
   \label{eq:MdotCa}
 \end{align}
-If the accretion luminosity $\epsilon = 10 \dot{M}/\dot{M}_{\rm edd}$
-depends on the Eddington ratio as predicted by some models for
+If the accretion luminosity $\epsilon = 10 \dot{M}/\dot{M}_{\rm edd}$ depends on the Eddington ratio as predicted by some models for
 radiatively inefficient accretion flows (\citealt{Narayan&Yi95};
 \citealt{Narayan+98}; \citealt{XieYuan:2012a}), then the Compton-limited accretion rate becomes
 \begin{align}
@@ -1347,6 +1344,7 @@ C,9}^{-0.4} M_{\bullet,8}^{0.08}
   \end{cases}
   \label{eq:MdotC}
 \end{align}
+We note that accretion is unlikely to be steady in cases where AGN heating dominates, due to the inherent delay between black hole feedback and the structure of the accretion flow on larger scales.  
 %{\bf  Total efficiency is 10 (mdot/MdotEdd). Everywhere.}
 
 
@@ -1368,13 +1366,13 @@ heat}}\right)^{1-\Gamma/2},
 \end{eqnarray} 
 where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\star}(r) \propto
 M_{\bullet}(r/r_{\rm soi})^{2-\Gamma}$ (eq.~[\ref{eq:rhostar}]).  If the bulk of the outflow energy is released near the stagnation radius, then even a small heating efficiency $\epsilon_{\rm j} \gtrsim
-10^{-5}$ is sufficient for $v_{w}^{\bullet}$ to exceed other sources of non-accretion powered heating.  However, if this energy is instead deposited over much larger physical scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then kinetic feedback is unimportant, even for a powerful jet with $\epsilon_{\rm j} \sim 1$.  
+10^{-5}$ is sufficient for $v_{w}^{\bullet}$ to exceed other sources of non-accretion powered heating.  However, if this energy is instead deposited over much larger physical scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then kinetic feedback is unimportant, even for a powerful jet with $\epsilon_{\rm j} \sim 0.1$.  
 
-Using the results of \citet{Bromberg+11}, the time required for a jet of luminosity $L_{\rm
+The time required for a jet of luminosity $L_{\rm
   j}$ and half opening angle $\theta_{\rm j} = 0.1$ (characteristic of
-AGN jets) to propagate through a gaseous mass $M_{\rm g}$ of radius $r$ is estimated to be
+AGN jets) to propagate through a gaseous mass $M_{\rm g}$ of radius $r$ is estimated from \citet{Bromberg+11} to be 
 \begin{eqnarray}
-t_{\rm jet} &\sim& 4000\,{\rm yr}\left(\frac{{L}_{\rm j}}{10^{40}\,\rm erg\,s^{-1}}\right)^{-1/3}\left(\frac{r}{\rm pc}\right)^{2/3}\left(\frac{M_{\rm g}}{10^{8}M_{\odot}}\right)^{1/3} 
+t_{\rm jet} \sim 4000\,{\rm yr}\left(\frac{{L}_{\rm j}}{10^{40}\,\rm erg\,s^{-1}}\right)^{-1/3}\left(\frac{r}{\rm pc}\right)^{2/3}\left(\frac{M_{\rm g}}{10^{8}M_{\odot}}\right)^{1/3} 
 \end{eqnarray}
 Approximating $M_{\rm g} \sim \dot{M}t_{\rm ff}$, the ratio of the jet escape timescale to the dynamical timescale $t_{\rm dyn} \sim r/\sigma$ is given by
 \begin{equation}
@@ -1456,9 +1454,9 @@ includes contributions from stellar winds, supernovae, pulsars, and radiative SM
 
 \subsubsection{Single Starburst}
 
-Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass input parameters due to stellar winds, $v_{w}^{\star}(\tau_{\star})$ and $\eta(\tau_{\star})$, are calculated as described in Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\rm C}$) are calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC} respectively, also making use of $\eta(\tau_{\star})$ from stellar winds.  SN Ia heating depends also on a convolution of the DTD (eq. [\ref{eq:DTD}]) and the star formation history, which reduces to the DTD itself for a single star burst.  {\bf BDM: do we even include Ia heating?} 
+Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass input parameters due to stellar winds, $v_{w}^{\star}(\tau_{\star})$ and $\eta(\tau_{\star})$, are calculated as described in Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\rm C}$) are calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC} respectively, also making use of $\eta(\tau_{\star})$ from stellar winds.  SN Ia heating depends also on a convolution of the DTD (eq. [\ref{eq:DTD}]) and the star formation history, which reduces to the DTD itself for a single star burst.  
 
-We crudely account for the expected suppression of SN Ia heating resulting from its non-steady nature by attenuating $v_{w}^{\rm Ia}$ by a factor $e^{-\rs/\rIa}$, where $r_{\rm Ia}$ is the radius exterior to which the time between subsequent supernovae exceeds the local dynamical time (eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and $v_{\rm w}^{\rm Ia}$ also depend on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us to simultaneously solve a series of implicit equations to determine each heating rate.  Heating from MSPs is found to be negligibly small for fiducial parameters and hence is not shown, while kinetic feedback is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).  
+We crudely account for the expected suppression of SN Ia heating resulting from its non-steady nature by setting $v_{w}^{\rm Ia} = 0$ when the stagnation radius (calculated excluding Ia heating) exceeds the Ia radius $r_{\rm Ia}$ exterior to which the interval between subsequent supernovae exceeds the local dynamical time (eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and $v_{\rm w}^{\rm Ia}$ also depend on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us to simultaneously solve a series of implicit equations to determine each heating rate.  Heating from MSPs is found to be negligibly small for fiducial parameters and hence is not shown, while kinetic feedback is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).  
 
 For low-mass black holes, stellar winds are the most important source of heating on
 timescales of less than a few tens of millions of years.  Compton
@@ -1519,7 +1517,7 @@ will often result in lower heating rates.  Figure \ref{fig:NickPlot2}
 shows the heating rate as a function of average black hole mass for
 non-fiducial cases in which the current ($z = 0$) star formation is
 suppressed by a factor $\iota$ from its average $z = 0$ value, for a
-characteristic timescale $t_{\rm scale}$ (for details, see Appendix
+characteristic timescale $\delta t_{\star}$ (for details, see Appendix
 \ref{app:windheat}).  For $t_{\rm scale} \lesssim 10^{7}$ yr, we see
 that $v_{\rm w}^{\star}$ is reduced by at most a factor of $\approx 2$
 from its average value, even for huge drops in the star formation rate
