@@ -1447,25 +1447,48 @@ includes contributions from stellar winds, supernovae, pulsars, and radiative SM
 
 \subsubsection{Single Starburst}
 
-Figure~\ref{fig:vwSourcesImp} shows the contributions of various heating sources as a function of time $\tau_{\star}$ after a burst of star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass input parameters due to stellar winds, $v_{w}^{\star}(\tau_{\star})$ and $\eta(\tau_{\star})$, are calculated as described in Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\rm C}$) are calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC} respectively, also making use of $\eta(\tau_{\star})$ from stellar winds.  SN Ia heating depends also on a convolution of the DTD (eq. [\ref{eq:DTD}]) and the star formation history, which reduces to the DTD itself for a single star burst.  
+Figure~\ref{fig:vwSourcesImp} shows the contributions of various
+heating sources as a function of time $\tau_{\star}$ after a burst of
+star formation for black holes of mass $\Mbh = 10^{6} \Msun$ (top
+panel) and $\Mbh = 10^{8} \Msun$ (bottom panel). The heating and mass
+input parameters due to stellar winds, $v_{w}^{\star}(\tau_{\star})$
+and $\eta(\tau_{\star})$, are calculated as described in
+Appendix~\ref{app:windheat} (Fig.~\ref{fig:vwImp}).  The heating from
+SN Ia ($v_{w}^{\rm Ia}$) and Compton heating ($v_{\rm w}^{\rm C}$) are
+calculated from equations~\eqref{eq:vIa} and~\eqref{eq:vC}
+respectively, also making use of $\eta(\tau_{\star})$ from stellar
+winds.  SN Ia heating depends also on a convolution of the DTD
+(eq. [\ref{eq:DTD}]) and the star formation history, which reduces to
+the DTD itself for a single star burst.
 
-We crudely account for the expected suppression of SN Ia heating resulting from its non-steady nature by setting $v_{w}^{\rm Ia} = 0$ when the stagnation radius (calculated excluding Ia heating) exceeds the Ia radius $r_{\rm Ia}$ exterior to which the interval between subsequent supernovae exceeds the local dynamical time (eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and $v_{\rm w}^{\rm Ia}$ also depend on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us to simultaneously solve a series of implicit equations to determine each heating rate.  Heating from MSPs is found to be negligibly small for fiducial parameters and hence is not shown, while kinetic feedback is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).  
+We crudely account for the expected suppression of SN Ia heating
+resulting from its non-steady nature by setting $v_{w}^{\rm Ia} = 0$
+when the stagnation radius (calculated excluding Ia heating) exceeds
+the Ia radius $r_{\rm Ia}$ exterior to which the interval between
+subsequent supernovae exceeds the local dynamical time
+(eq.~[\ref{eq:rIa}]) {\bf AG have not yet done this in the impulsive limit}.  Finally, note that $v_{\rm w}^{\rm C}$ and
+depends on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us
+to simultaneously solve a series of implicit equations to determine
+each heating rate.  Heating from MSPs is found to be negligibly small
+for fiducial parameters and hence is not shown, while kinetic feedback
+is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).
 
-For low-mass black holes, stellar winds are the most important source of heating on
-timescales of $\tau_{\star} \lesssim $ few $10^{7}$ years.  Compton
-heating comes to dominate at later times due to the higher accretion
-rates that accompany the overall decrease in the heating rate, coupled
-with the persistently high mass loss rates and gas densities associated with a relatively young
-stellar population.  Compton heating dominates at all epochs for
-higher mass black holes, with stellar winds and Ia SN competing for
-the most significant non-AGN heating source.  As the total heating
-rate declines with time, after some point the flow becomes thermally
-unstable according to the criterion $(\dot{q}_{\rm heat}/|\dot{q}_{\rm
-  rad}|)_{r_{s}} \lesssim 10$ (eq.~[\ref{eq:cooling3}]) {\bf BDM: correct?}, as shown by
-dashed lines in Fig.~\ref{fig:vwSourcesImp}.  The thermal stability threshold is
-calculated neglecting Compton heating because SMBH feedback may not be
-capable of truly stabilizing the flow given its inability to respond
-instantaneously to local changes in the properties of the gas.
+For low-mass black holes, stellar winds are the most important source
+of heating on timescales of $\tau_{\star} \lesssim $ few $10^{7}$
+years.  Compton heating comes to dominate at later times due to the
+higher accretion rates that accompany the overall decrease in the
+heating rate, coupled with the persistently high mass loss rates and
+gas densities associated with a relatively young stellar population.
+Compton heating dominates at all epochs for higher mass black holes,
+with stellar winds and Ia SN competing for the most significant
+non-AGN heating source.  As the total heating rate declines with time,
+after some point the flow becomes thermally unstable according to the
+criterion $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}} \lesssim
+10$ (eq.~[\ref{eq:cooling3}]) {\bf BDM: correct?}, as shown by dashed
+lines in Fig.~\ref{fig:vwSourcesImp}.  The thermal stability threshold
+is calculated neglecting Compton heating because SMBH feedback may not
+be capable of truly stabilizing the flow given its inability to
+respond instantaneously to local changes in the properties of the gas.
 Thermally unstable flow is seen to be the norm in the single starburst
 case, except at very early times, $\tau_{\star} \lesssim 1-3 \times
 10^7$ yr.
@@ -1699,11 +1722,25 @@ black hole masses.  When thermal instabilities become manifest, nuclear gas may 
 AGN feedback becomes effective.  Such cycles are seen in numerical simulations of elliptical galaxies on 
 large scales and long timescales (\citealt{Ciotti+10}), an idea which supported by observations showing that a fraction of early-type galaxies in the local universe have undergone recent ($< 1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).  
 
-Similar cyclic AGN activity could occur on the smaller radial scale of the sphere of influence (e.g.~\citealt{Yuan&Li11}, \citealt{Cuadra+15}).  In this case the large scatter in the X-ray luminosities shown in Fig \ref{fig:miller} could result from
-the wide range of inflow rates experienced over the course of a cyclic episode between instabilities and periodic nuclear outbursts.  Due to their deeper potential wells, we find that core galaxies are more likely to possess higher accretion
-rates and potentially be thermally unstable for a fixed wind heating rate than cusp galaxies.  This could help explain why core galaxies show a wide range of nuclear radio and X-ray luminosities (suggesting cyclic accretion episodes), while cusp galaxies are confined below a threshold (e.g., \citealt{Bender+89, Pellegrini99,   Capetti&Balmaverde05}), consistent with thermally-stable, steady-state picture. ({\bf AG: This picture may be dubious...Review
+Similar cyclic AGN activity could occur on the smaller radial scale of
+the sphere of influence (e.g.~\citealt{Yuan&Li11},
+\citealt{Cuadra+15}).  In this case the large scatter in the X-ray
+luminosities shown in Fig \ref{fig:miller} could result from the wide
+range of inflow rates experienced over the course of a cyclic episode
+between instabilities and periodic nuclear outbursts.  Due to their
+deeper potential wells {\bf AG: Cores don't necessarily have deeper
+  potential wells overall}, we find that core
+galaxies are more likely to possess higher accretion rates and
+potentially be thermally unstable for a fixed wind heating rate than
+cusp galaxies.  This could help explain why core galaxies show a wide
+range of nuclear radio and X-ray luminosities (suggesting cyclic
+accretion episodes), while cusp galaxies are confined below a
+threshold (e.g., \citealt{Bender+89, Pellegrini99,
+  Capetti&Balmaverde05}), consistent with thermally-stable,
+steady-state picture. ({\bf AG: This picture may be dubious...Review
   the literature but I think that the higher upper bound for cores is
-  just due to a mass selection effect.  BDM: The ghost of Balmaverde disagrees.})
+  just due to a mass selection effect.  BDM: The ghost of Balmaverde
+  disagrees.})
 
 If the galaxies for which $L_{\rm X}$ is measured at low $M_{\bullet}$ in Fig
 \ref{fig:miller} indeed represent thermally-unstable galaxies, then a fraction of the upper limits may contribute to a separate thermally stable population, for instance including SgrA*.  However, the possibility of a mixed population of stable versus unstable galaxies calls into question the use of simple extrapolations of power-law fits to the $L_{\rm X}(M_{\bullet}$) relationship to low $M_{\bullet}$ to constrain the occupation fraction of black holes in low mass galaxies (\citealt{Miller+15}).
