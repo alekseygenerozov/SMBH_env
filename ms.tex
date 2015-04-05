@@ -438,7 +438,7 @@ equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) because the isotropic injec
 and energy relative to the mean flow.  Physically, these result from
 the mismatch between the properties of virialized gas injected locally
 by stellar winds and the mean properties of the background flow.  The
-term $\propto -q c_{s}^{2}$ is important because it acts to potentially stabilize the flow to runaway cooling ($\S\ref{sec:instability}$).
+term $\propto -q c_{s}^{2}$ is important because it acts to potentially stabilize the flow against runaway cooling ($\S\ref{sec:instability}$).
 
 The term $\propto \vw^2 = \sigma(r)^2+v_{w}^2$ in the entropy equation
 accounts for external heating sources (e.g.,
@@ -586,8 +586,8 @@ cent.  Note the sensitive dependence of the accretion rate on
 the wind heating rate.
 %To reproduce the estimated values $\dot{M}/\dot{M}_{\rm edd} \lesssim 10^{-3}$ in low-luminosity AGN or quiescent galaxies, we thus require $v_{w} \gtrsim 150M_{\bullet,8}^{0.5}$ 
 
-The gas density at the stagnation radius $\rho|_{r_{\rm s}}$ is more
-challenging to estimate accurately.  Using an alternative estimate of
+The gas density at the stagnation radius, $\rho|_{r_{\rm s}}$, is more
+challenging to estimate accurately.  By using an alternative estimate of
 $\dot{M}$ as the gaseous mass within the stagnation radius divided by
 the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm
   s}^{3}/GM_{\bullet})^{1/2}$,
@@ -595,7 +595,7 @@ the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm
   &\dot{M}\sim\frac{(4 \pi/3) \rs^3 \rho|_{r_{\rm s}}}{\tff|_{r_{\rm s}}},
   \label{eq:mdot_gas}
 \end{align}
- in conjunction with equations (\ref{eq:mdot_analytic}) and (\ref{eq:stag_simple}), one derives
+ in conjunction with eqs. (\ref{eq:mdot_analytic}) and (\ref{eq:stag_simple}), we find that
 \begin{align}
   \rho|_{r_{\rm s}}\approx
   \begin{cases}
@@ -613,7 +613,7 @@ the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm
 %\label{eq:rhors2}
 %\end{align}
 
-Our expression for $\dot{M}$ (eq.~[\ref{eq:mdot_analytic}]) is usefully compared to the Bondi rate for accretion onto a point source from an external medium of specified density and temperature (\citealt{Bondi52}):
+It is useful to compare our expression for $\dot{M}$ (eq.~[\ref{eq:mdot_analytic}]) to the standard Bondi rate for accretion onto a point source from an external medium of specified density and temperature (\citealt{Bondi52}):
 \begin{align}
   \dot{M}_{\rm B} =4\pi \lambda r_{\rm B}^2 \rho|_{r_{\rm B}}v_{\rm ff}|_{r_{\rm B}},
 \label{eq:bondi}
@@ -693,19 +693,18 @@ $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$
 in the formation of a multi-phase medium and enhanced star formation.
 Even if the hot plasma of the CNM does not condense into cold clouds,
 the loss of pressure can temporarily increase the black hole accretion
-rate.  When coupled to feed-back processes, the latter can lead to
-time-dependent (e.g. limit cycle) behavior
+rate.  When coupled to feed-back processes which result from such enhanced accretion, this can lead to
+time-dependent limit cycle behavior
 (e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10};
 \citealt{Yuan&Li11}, \citealt{Gan+14}), which is also inconsistent
 with our assumption of a steady, single-phase flow.
 
-Cooling instability can, however, be prevented if destabilizing radiation is overwhelmed by
-other sources of cooling, namely the stabilizing term $\propto -q c_{s}^{2}
-\propto -qT$ in the entropy equation (eq.~[\ref{eq:dsdt}]).
+Cooling instability can, however, be prevented if destabilizing radiative cooling ($\dot{q}_{\rm rad} \propto T^{-2.7}$) is overwhelmed by
+other sources of cooling, namely the {\it stabilizing} term $\propto -q c_{s}^{2}
+\propto -T$ in the entropy equation (eq.~[\ref{eq:dsdt}]).
 Neglecting radiative cooling to first order, this term is balanced at the stagnation
-radius by the wind heating term, $\dot{q}_{\rm heat} = q
-\tilde{v}_{w}^{2}/2$.  Thermal stability near the stagnation radius
-can thus be assessed by comparing the ratio of wind heating to
+radius by the external heating term, $\dot{q}_{\rm heat} = q
+\tilde{v}_{w}^{2}/2$.  We assess thermal stability near the stagnation radius by comparing the ratio of external heating to
 radiative cooling $|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
 \left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm rad}|}\right|_{\rm r_{\rm s}} \simeq
@@ -719,7 +718,7 @@ where we have used equations (\ref{eq:rhors}) and (\ref{eq:rhostarrs})
 for the gas and stellar densities at the stagnation radius,
 respectively.  We have approximated the cooling function for $T <
 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
-  \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$ assuming solar
+  \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$, which assumes solar
 metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).
 
 To within a constant of order unity, equation (\ref{eq:cooling2}) also
@@ -738,35 +737,35 @@ develops in a hydrostatic atmosphere if $t_{\rm cool} \ll t_{\rm ff}$,
 so equation (\ref{eq:cooling2}) represents a good proxy for
 instability in this case as well.
 
-Based on our numerical results and the recent work of \citet{McCourt+12}) we define thermal stability according to the criterion $\dot{q}_{\rm heat} > 10|\dot{q}_{\rm rad}|$ ($t_{\rm
-  cool} > 10t_{\rm ff}$) being satisfied near the stagnation radius {\bf BDM: decide here}.  This condition translates into a
+Based on our numerical results (\ref{sec:numerical}) and the work of \citet{McCourt+12}) we define thermally stable flows according to the criterion $\dot{q}_{\rm heat} > 10|\dot{q}_{\rm rad}|$ ($t_{\rm
+  cool} > 10t_{\rm ff}$) being satisfied near the stagnation radius.  This condition translates into a
 critical minimum heating rate
 \begin{align}
 v_{w} > v_{\rm TI} \simeq
   {\rm max}\begin{cases}
    200 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
    200 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}  \\
-\sigma_0(\zeta_c^{2}-1)^{1/2} \approx \sigma_0(r_{b}/r_{\rm soi})^{0.5(1-\Gamma)}, 
+\approx \sigma_0(r_{b}/r_{\rm soi})^{0.5(1-\Gamma)} &, \zeta \ll \zeta_c, 
   \end{cases}
   \label{eq:cooling3}
 \end{align}
-where the final condition corresponds to the low wind heating limit (eq.~[\ref{eq:zetacrit}]), for which the stagnation radius moves out to the break radius $r_b$, resulting in thermal instability.  
+where the final condition corresponds to the low wind heating limit ($\zeta \ll \zeta_c$; eq.~[\ref{eq:zetacrit}]), for which our numerical and analytic results show that the stagnation radius moves out to the break radius $r_b$; the quasi-hydrostatic structure that develops in this case greatly increases the gas density, resulting in thermal instability.  
 
 The minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) corresponds to maximum thermally-stable accretion rate,
 \begin{align}
 \frac{\dot{M}_{\rm TI}}{\dot{M}_{\rm edd}} \simeq
   {\rm min}\begin{cases}
-   5\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.36} &, \text{core}\\
-3\times 10^{-6}\eta_{0.02}M_{\bullet,8}^{-0.38}\\
-   2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.28}    &, \text{cusp}\\
-2.5\times 10^{-4}\eta_{0.02}
+   5\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.36} &, \text{core}, \zeta > \zeta_c\\
+3\times 10^{-6}\eta_{0.02}M_{\bullet,8}^{-0.38} &, \text{core}, \zeta < \zeta_c \\
+   2\times 10^{-4} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.28}    &, \text{cusp}, \zeta > \zeta_c\\
+2.5\times 10^{-4}\eta_{0.02}&, \text{cusp}, \zeta < \zeta_c
   \end{cases}
   \label{eq:Mdotmax}
 \end{align}
 where the first line for each case is derived using equation
 (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v_{\rm TI})$, whereas
-the second line corresponds to the low wind heating limit and is
-calculated for core galaxies using the empirical correlation
+the second line corresponds to the low wind heating limit $\zeta \ll \zeta_c$.  $\zeta_c$ is
+calculated using the empirical correlation for core galaxies
 $r_{b}/r_{\rm soi} \approx 7.6M_{\bullet,8}^{-0.2}$ which follows from
 equation (\ref{eq:rsoi}) and the $r_b-M_{\bullet}$ correlation derived from the results of \citet{LauerFaber+:2007a}.
 
