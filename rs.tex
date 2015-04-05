@@ -1,22 +1,18 @@
-Here we derive an analytic expression for the steady-state stagnation
-radius $\rs$.  The steady-state entropy equation
-(eq.~[\ref{eq:dsdt}]) can be manipulated to read
+Here we derive an analytic expression for the time-independent stagnation radius, $\rs$.  In steady-state, the requirement that the net heating rate on the right hand side of the entropy equation (eq.~[\ref{eq:dsdt}]) 
+%\begin{align}
+%T\dsdr=\frac{q}{\rho v}\left(\frac{v^{2}}{2} + \frac{\vw^{2}}{2} - \frac{\gamma}{\gamma-1}\frac{p}{\rho}\right) \label{eq:ss_entropy}
+%\end{align}
+must equal zero at the stagnation radius (where $v = 0$) fixes the temperature at $\rs$:
 \begin{align}
-T\dsdr=\frac{\Q}{\rho v} \label{eq:ss_entropy}
-\end{align}
-By definition, the velocity $v$ goes to zero at the stagnation radius.  In order to avoid the entropy derivate from diverging, the numerator of (\ref{eq:ss_entropy}) must also goto zero at $r_{\rm s}$, implying that
-\begin{align}
- \frac{\gamma}{\gamma-1} \frac{p|_{\rs}}{\rho|_{\rs}}=\frac{\vw^{2}|_{\rs}}{2} \Rightarrow \frac{\kb T|_{\rs}}{\mu \mp}=\gammafi \frac{\vw^{2}|_{\rs}}{2} .
+ \frac{\gamma}{\gamma-1} \left.\frac{p}{\rho}\right|_{\rs}=\frac{\vw^{2}|_{\rs}}{2} \Rightarrow \frac{\kb T|_{\rs}}{\mu \mp}=\gammafi \frac{\vw^{2}|_{\rs}}{2} .
 \label{eq:appTanalytic}
 \end{align}
-Combining (\ref{eq:ss_entropy}) with the first law of thermodynamics,
+Combining (eq.~[\ref{eq:dsdt}]) with the first law of thermodynamics,
 \begin{align}
-T\dsdr =& \frac{1}{\gamma-1}\ddr{(p/\rho)}-\frac{p}{\rho^2}\ddr{\rho} = \\
-& 
-\frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{\densSlope}{\rs}  \frac{p|_{\rs}}{\rho|_{\rs}}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
+T\left.\dsdr\right|_{\rs} = \frac{1}{\gamma-1}\left.\ddr{(p/\rho)}\right|_{\rs}+\frac{\densSlope}{\rs}  \left.\frac{p}{\rho}\right|_{\rs}=\left.\underbrace{\frac{\Q}{\rho  v}}_{A}\right|_{\rs}, 
  \label{eq:first_law}
 \end{align}
-where $\densSlope\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on the right can be evaluated using L'Hopital's rule, yielding
+where $\densSlope\equiv -\left.d\ln\rho/d\ln r\right|_{\rs}$.  The right side can be evaluated using L'Hopital's rule, yielding
 %\begin{align}
  % &\lim_{r \rightarrow \rs} A=\frac{\lim_{r \rightarrow \rs}
   %  \frac{d}{dr}\left[q (r)\left(\ke -\gammaf
@@ -28,87 +24,39 @@ where $\densSlope\equiv -\left.d\log(\rho)/d\log(r)\right|_{\rs}$.  The term on 
      %   \frac{p}{\rho}+\kew\right)\right]_{\rs}}{\underbrace{\rho'|_{\rs}
       %v|_{\rs}}_0 +\underbrace{v'|_{\rs}\rho|_{\rs}}_{q|_{\rs}}}\\
 \begin{align}
-  \lim_{r \rightarrow \rs} A = \frac{d}{dr} \left[\left(\ke -\gammaf \frac{p}{\rho}+\kew\right)\right]_{\rs}
+  \lim_{r \rightarrow \rs} A &=& \frac{d}{dr} \left[\left(\ke -\gammaf \frac{p}{\rho}+\kew\right)\right]_{\rs} \nonumber \\
+&\approx& -\gammaf
+\left.\ddr{(p/\rho)}\right|_{\rs}-\frac{3}{2(2+\Gamma)} \frac{G \Mbh}{\rs^2},
 \end{align}
-Now using the definition $\vw^2=\vwO^2+ \frac{3}{2+\Gamma} \frac{G \Mbh}{r} +
-\sigma_0^2$, where $\Menc=\Mbh+\Mstar$, and assuming $\Mstar \sim
-r^{2-\Gamma}$, we find that
-\begin{align}
-\lim_{r \rightarrow \rs} A=-\gammaf
-\left.\ddr{(p/\rho)}\right|_{\rs}-\frac{3}{2(2+\Gamma)} \frac{G \Mbh}{\rs^2}
-\end{align}
-Substituting this expression back into equation (\ref{eq:first_law}) and using equation (\ref{eq:appTanalytic}) gives
+where we have used the definition $\vw^2=\vwO^2+ \frac{3}{2+\Gamma} \frac{G \Mbh}{r} +
+\sigma_0^2$ (eq.~[\ref{eq:sigmarel}]).  Substituting this expression back into equation (\ref{eq:first_law}) and using equation (\ref{eq:appTanalytic}) gives
 \begin{align}
 &\frac{\gamma+1}{\gamma-1}
 \left.\ddr{(p/\rho)}\right|_{\rs}+ \frac{\gamma-1}{\gamma} \frac{\densSlope}{\rs} \frac{\vw|_{\rs}^{2}}{2} = -\frac{G
   \Mstar|_{\rs}}{2 \rs^2} -\frac{3}{2+\Gamma} \frac{G \Mbh}{2 \rs^2}.  \label{eq:rs1}
 \end{align}
-A second equation results from evaluating the momentum equation (eq.~[\ref{eq:dvdt}]) at the stagnation point
+Combining this with condition of hydrostatic equilibrium (eq.~[\ref{eq:dvdt}]) at the stagnation point,
 \begin{align}
-&\frac{1}{\rho}\dpdr=- \frac{G\Menc}{\rs^2} \Rightarrow
-&\ddr{(p/\rho)}+\frac{p}{\rho}
-\underbrace{\frac{d\log(\rho)}{dr}}_{-\densSlope/r} = -\frac{G \Menc}{\rs^2} \label{eq:HSE}
+\frac{1}{\rho}\left.\dpdr\right|_{\rs}=- \frac{G\Menc}{\rs^2} \Rightarrow
+\left.\ddr{(p/\rho)}\right|_{\rs} +\frac{p}{\rho}
+\underbrace{\frac{d\ln(\rho)}{dr}}_{-\densSlope/r} = -\frac{G \Menc}{\rs^2}, \label{eq:HSE}
 \end{align}
-Finally, combining equations (\ref{eq:rs1}) and (\ref{eq:HSE}) gives 
-
+results in the following expression for the stagnation radius:
 \begin{align}
 \rs=\frac{G \Mbh}{\densSlope \vw^{2}|_{\rs}}\left(4
-  \frac{M_{\star}|_{\rs}}{\Mbh} +\frac{13+ 8\Gamma}{4+2\Gamma}\right),
-\end{align}
-where we have assumed $\gamma=5/3$.
-
-In terms of just the additional wind heating parameter, $v_w$,
-
-\begin{align}
-  \rs=\frac{G \Mbh}{\densSlope (v_w^{2}+\sigma_0^2)}\left[4
-    \frac{\Mstar|_{\rs}}{\Mbh} +\frac{13+ 8\Gamma}{4+2\Gamma}-\densSlope \frac{3}{2+\Gamma}\right].
+  \frac{M_{\star}|_{\rs}}{\Mbh} +\frac{13+ 8\Gamma}{4+2\Gamma}\right) \nonumber \\
+=\frac{G \Mbh}{\densSlope (v_w^{2}+\sigma_0^2)}\left[4
+    \frac{\Mstar|_{\rs}}{\Mbh} +\frac{13+ 8\Gamma}{4+2\Gamma}-\frac{3\nu }{2+\Gamma}\right]
 \label{eq:rs2main}
 \end{align}
-
-Note that $\rsoi=\frac{3 G \Mbh}{\sigma_0^2}$. Defining $\zeta \equiv
-\sqrt{\frac{v_w^2+\sigma_0^2}{\sigma_0^2}}$, this relationship can be reparameterized as
-follows:
+where we have assumed $\gamma=5/3$.  This relationship can be reparameterized as
 \begin{align}
   %=\frac{1}{2 \zeta^2 \densSlope}\left[
   %   \frac{\Mstar|_{\rs}}{\Mbh}\left(\frac{9-\Gamma}{2}-\densSlope\right)+\left(\frac{7}{2}-\densSlope\right)\right]
-  \frac{\rs}{\rsoi}=\frac{1}{3\nu \zeta^2} \left[4\frac{\Mstar|_{\rs}}{\Mbh} +\frac{13+8\Gamma}{4+2\Gamma}-\densSlope \frac{3}{2+\Gamma}\right]
+  \frac{\rs}{\rsoi}=\frac{1}{3\nu \zeta^2} \left[4\frac{\Mstar|_{\rs}}{\Mbh} +\frac{13+8\Gamma}{4+2\Gamma}- \frac{3\nu }{2+\Gamma}\right],
   \label{eq:rsRinf}
 \end{align}
-
-{\bf AG: I gutted the next bit which solves the above for gamma=1 and
-  gamma=0. It would need to be revised anyways and does not add too much.}
-%{\bf AG: Note that I have taken sigmainf=2 G Mbh/rinf. Commented out
-%equations have sigmainf=G Mbh/rinf}. 
-% For cusp galaxies ($\Gamma\simeq1$) we have $\Mstar|_{\rs}/\Mbh=x$, $A=4$, and $B=7/2$ for $\gamma = 5/3$, such that 
-% \begin{align}
-% \x=\frac{7-2\densSlope}{4\zeta^2 \densSlope+2\densSlope-8}
-% %\x=\frac{7-2\densSlope}{2\zeta^2 \densSlope+2\densSlope-8}
-% \end{align}
-% In the limit of zero wind heating $\eta \rightarrow 0$, no solution
-% for $r_{\rm s}$ exists unless the gas density profile at the
-% stagnation radius is steep, 3.5 $<\densSlope<$ 4.
-
-% For core galaxies ($\Gamma \simeq 0$) with $\Mstar/\Mbh=x^2$, A=9/2,
-% and B=7/2, the stagnation radius instead obeys a quadratic equation
-% \begin{align}
-% \x=\frac{\zeta^2 \densSlope \pm \sqrt{\zeta^4 \densSlope^2 - \left(\frac{9}{2}-\densSlope\right)
-%     \left(\frac{7}{2}-\densSlope\right)}}{\left(\frac{9}{2}-\densSlope\right)}
-% %\x=\frac{\zeta^2 \densSlope \pm \sqrt{\zeta^4 \densSlope^2 - 4 \left(\frac{9}{2}-\densSlope\right)
-% %\left(\frac{7}{2}-\densSlope\right)}}{2 \left(\frac{9}{2}-\densSlope\right)}
-% \label{eq:rstag}
-% \end{align}
-% In this case no solution exists in the zero heating limit ($\zeta
-% \rightarrow 0$) unless $3.5<\densSlope<4.5$.
-
-When $\Mstar << \Mbh$ at the stagnation radius, the relationship
-between $\rs$ and $\vw$ is simplified.
-
+where $\rsoi=3 G \Mbh/\sigma_0^2$ and we have defined $\zeta \equiv \sqrt{1 + (v_w/\sigma_0)^2}$.  Because $M_{\star}|_{\rs} = M_{\bullet}(r_{\rm s}/r_{\rm soi})^{2-\Gamma}$, in general equation (\ref{eq:rsRinf}) represents a non-integer polynomial to be solved for $r_{\rm s}/r_{\rm soi}$.  However, when $\Mstar|_{\rs} << \Mbh$ or equivalently $\rs \ll r_{\rm soi}$, equation (\ref{eq:rsRinf}) simplifies considerably:
 \begin{align}
 \rs=\frac{13+8\Gamma}{4+2\Gamma} \frac{G \Mbh}{\densSlope \vw^2}.
 \end{align}
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "ms"
-%%% End:
