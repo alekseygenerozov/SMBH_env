@@ -912,7 +912,9 @@ the mass accretion rate is determined.
 \begin{threeparttable}
 %\centering
 \begin{minipage}{18cm}
-\caption{Summary of Numerical Solutions}
+  \caption{Summary of Numerical Solutions {\bf AG make sure the
+      headings are consistent. Mark solutions which are unstable for
+      some values of eta.}}
 \begin{tabular}{lccccccccc}
   \hline
   {$M_{\bullet}$} & {$v_{w}$} & {$r_b^{(b)}$} &   $r_{\rm s}/r_{\rm soi}$ &  {$\left(\frac{\dot{M}}{\dot{M}_{\rm edd}}\frac{\eta}{0.2}\right)_{r_{s}}^{(c)}$} &
@@ -1276,9 +1278,24 @@ Hence, for low mass BHs with $\sigma_0 \ll \mathcal{F}v^{\rm Ia}_{w}/2$, SN Ia a
   \end{cases}
   \label{eq:eddr_Ia}
 \end{eqnarray}
-obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}]) for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$ (eq.~[$\ref{eq:eddr_analytic}$]).  Note, however, that for low mass SMBHs, $\dot{M}_{\rm Ia}$ generally exceeds the maximum accretion rate for a thermally stable flow $\dot{M}_{\rm TI}$ (eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe Ia cannot alone prevent cooling instabilities in the nuclei of low mass galaxies.  
+obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}])
+for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$
+(eq.~[$\ref{eq:eddr_analytic}$]).  Note, however, that for low mass
+SMBHs, $\dot{M}_{\rm Ia}$ generally exceeds the maximum accretion rate
+for a thermally stable flow $\dot{M}_{\rm TI}$
+(eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe
+Ia cannot alone prevent cooling instabilities in the nuclei of low
+mass galaxies {\bf AG--careful one needs a separate criterion for
+  thermal stability when heating is dominated by the Ias}. 
 
-The deep gravitational potential wells of high mass galaxies $\sigma_0 \gg f v^{\rm Ia}_{w}$ prevent SN Ia from dynamically clearing out gas in these systems.  Equation (\ref{eq:eddr_Ia}) nevertheless represents a cap on the accretion rate in practice because if other source of heating are ineffective, then the Ia heating rate (eq.~[\ref{eq:vIa}]) is usually sufficiently high to prevent the stagnation radius (calculated including the heating from SN Ia) from substantially exceeding $r_{\rm Ia}$.
+The deep gravitational potential wells of high mass galaxies $\sigma_0
+\gg f v^{\rm Ia}_{w}$ prevent SN Ia from dynamically clearing out gas
+in these systems.  Equation (\ref{eq:eddr_Ia}) nevertheless represents
+a cap on the accretion rate in practice because if other source of
+heating are ineffective, then the Ia heating rate (eq.~[\ref{eq:vIa}])
+is usually sufficiently high to prevent the stagnation radius
+(calculated including the heating from SN Ia) from substantially
+exceeding $r_{\rm Ia}$.
 
 %Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
 
@@ -1530,17 +1547,30 @@ each heating rate.  Heating from MSPs is found to be negligibly small
 for fiducial parameters and hence is not shown, while kinetic feedback
 is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).
 
-For low-mass black holes (Fig.~\ref{fig:vwSourcesImp}, top panel), stellar winds are the most important source
-of heating on timescales of $\tau_{\star} \lesssim 10^{7}$
-years.  Compton heating comes to dominate at later times due to the
-higher accretion rates that accompany the overall decrease in the
-heating rate, coupled with the persistently high mass loss rates and
-gas densities associated with a relatively young stellar population.  Interestingly, Ia SN dominate the heating briefly around 10$^{9}$ yr due to a window of time in which $r_Ia < \rs$.  For high-mass black holes (Fig.~\ref{fig:vwSourcesImp}, bottom panel), Compton heating dominates at all epochs, while SN Ia  dominate after 10$^{8}$ yr.  
+For low-mass black holes (Fig.~\ref{fig:vwSourcesImp}, top panel),
+stellar winds are the most important source of heating on timescales
+of $\tau_{\star} \lesssim 10^{7}$ years.  Compton heating comes to
+dominate at later times due to the higher accretion rates that
+accompany the overall decrease in the heating rate, coupled with the
+persistently high mass loss rates and gas densities associated with a
+relatively young stellar population.  Interestingly, Ia SN dominate
+the heating briefly around 10$^{9}$ yr due to a window of time in
+which $r_{ \rm Ia} < \rs$.  For high-mass black holes
+(Fig.~\ref{fig:vwSourcesImp}, bottom panel), Compton heating dominates
+at all epochs, while SN Ia dominate after 10$^{8}$ yr.
 
-As the total heating rate declines with time, after some point the flow becomes thermally unstable according to the
-criterion $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}} \lesssim 10$ (eq.~[\ref{eq:cooling3}]), as shown by dashed
-lines in Fig.~\ref{fig:vwSourcesImp}.  Compton heating is neglected in calculating thermal stability because unlike local stellar feedback mechanisms, SMBH feedback may not be capable of truly stabilizing the flow given its inability to
-respond instantaneously to local changes in the properties of the gas.  Thermally unstable flow is present throughout the single starburst case except at very early times, $\tau_{\star} \lesssim 10^7$ yr, and at late times $\tau_{\star} \gtrsim 10^{8}$ yr in the high $M_{\bullet}$ case.
+As the total heating rate declines with time, after some point the
+flow becomes thermally unstable according to the criterion
+$(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}} \lesssim 10$
+(eq.~[\ref{eq:cooling3}]), as shown by dashed lines in
+Fig.~\ref{fig:vwSourcesImp}.  Compton heating is neglected in
+calculating thermal stability because unlike local stellar feedback
+mechanisms, SMBH feedback may not be capable of truly stabilizing the
+flow given its inability to respond instantaneously to local changes
+in the properties of the gas.  Thermally unstable flow is present
+throughout the single starburst case except at very early times,
+$\tau_{\star} \lesssim 10^7$ yr, and at late times $\tau_{\star}
+\gtrsim 10^{8}$ yr in the high $M_{\bullet}$ case.
 
 \subsubsection{Continuous Star Formation History}
 A single burst of star formation does not describe the typical star
@@ -1571,19 +1601,19 @@ We must caveat, however, that for high $M_{\bullet}$ the total effective wind ve
 
 Realistic variations (``burstiness") in the star formation history
 will also often result in lower heating rates (Appendix
-\ref{app:windheat}).  Figure \ref{fig:NickPlot2}
-shows the heating rate as a function of average black hole mass for
-non-fiducial cases in which the current ($z = 0$) star formation is
-suppressed by a factor $\iota$ from its average $z = 0$ value, for a
-characteristic timescale $\delta t_{\star}$.  For $\delta t_{\star} \lesssim 10^{7}$ yr, we see
-that $v_{\rm w}^{\star}$ is reduced by at most a factor of $\approx 2$
-from its average value, even for huge drops in the star formation rate
-($\iota \sim 10^{-3}$).  However, burstiness in the star formation
-history over longer timescales can suppress heating more
-significantly.  When $\delta t_{\star} \gtrsim 10^8~{\rm yr}$, $v_{\rm
-  w}^\star$ becomes very sensitive to $\iota$: at $\iota=0.1$, $v_{\rm
-  w}^\star \approx 500~{\rm km~s}^{-1}$ in most galaxies, but for
-smaller $\iota$, $v_{\rm w}^\star \approx 200~{\rm km~s}^{-1}$ (an
+\ref{app:windheat}).  Figure \ref{fig:NickPlot2} shows the heating
+rate as a function of average black hole mass for non-fiducial cases
+in which the current ($z = 0$) star formation is suppressed by a
+factor $\iota$ from its average $z = 0$ value, for a characteristic
+timescale $\delta t_{\star}$.  For $\delta t_{\star} \lesssim 10^{7}$
+yr, we see that $v_{\rm w}^{\star}$ is reduced by at most a factor of
+$\approx 2$ from its average value, even for huge drops in the star
+formation rate ($\iota \sim 10^{-3}$).  However, burstiness in the
+star formation history over longer timescales can suppress heating
+more significantly.  When $\delta t_{\star} \gtrsim 10^8~{\rm yr}$,
+$v_{\rm w}^\star$ becomes very sensitive to $\iota$: at $\iota=0.1$,
+$v_{\rm w}^\star \approx 500~{\rm km~s}^{-1}$ in most galaxies, but
+for smaller $\iota$, $v_{\rm w}^\star \approx 200~{\rm km~s}^{-1}$ (an
 exception to this is in galactic nuclei with $M_\bullet \gtrsim
 5\times 10^8~M_\odot$, where heating is stabilized by SN Ia).  Our use
 of average cosmic star formation histories is appropriate provided
@@ -1641,10 +1671,12 @@ using our results for the total wind heating
 (Fig.~\ref{fig:mdot_mass}).  This average accretion rate increases
 from $\dot{M} \sim 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ for low-mass
 black holes ($M_{\bullet} \sim 10^{6}M_{\odot}$) to $\dot{M} \sim
-10^{-4}M_{\odot}$ yr$^{-1}$ for $M_{\bullet} \sim 10^{9}M_{\sun}$.
+10^{-4}M_{\odot}$ yr$^{-1}$ for $M_{\bullet} \sim 10^{8}M_{\sun}$.
 These fall below the maximum thermally stable accretion rate,
-$\dot{M}_{\rm TI}$ (yellow lines), although they become closer at the highest
-black hole masses $\sim 10^{9}M_{\odot}$.  
+$\dot{M}_{\rm TI}$ (yellow lines).
+% , although they become closer at the highest
+% black hole masses $\sim 10^{9}M_{\odot}$. 
+
 
 For low mass black holes, blow out from SN Ia radius caps the SMBH
 accretion rate at a value $\dot{M}_{\rm Ia} \sim
@@ -1805,18 +1837,40 @@ somewhat greater in the $\epsilon_X= (\epsilon_{\rm
 \subsection{Steady Accretion versus Cyclic Outbursts}
 \label{sec:cycle}
 
-It is also possible that many of the
-\citet{Miller+15} sample of galactic nuclei are not accreting in steady state.  The
-value of the X-ray efficiency assumed in the right panel of Figure \ref{fig:miller} represents a maximum value, since it does not account for suppression of the SMBH accretion rate due to outflows from the accretion disk on small
-radial scales (e.g., \citealt{Blandford&Begelman99}).  If the actual radiative efficiency is lower than our fiducial assumption, then many of the X-ray detections would lie above the predicted value of $\langle L_X \rangle$ for stable accretion (black line).  In this case the X-ray detected galaxies either experience less heating than average galaxies of the same mass, or they are not accreting stably at all.  {\bf BDM: we may need to remove - why did this change so much?} Indeed, for $M_{\bullet} \lesssim
-10^{8}M_{\odot}$, $L_{\rm X}$ nearly exceeds that predicted for the
-maximum thermally-stable accretion rate, $\dot{M}_{\rm TI}$ (yellow
-line).  Since the \citet{Miller+15} sample includes only early-type galaxies with older stellar populations than the average for their black hole mass, it would not be too surprising if many of these galaxies were thermally unstable.
+It is also possible that many of the \citet{Miller+15} sample of
+galactic nuclei are not accreting in steady state.  The value of the
+X-ray efficiency assumed in the right panel of Figure \ref{fig:miller}
+represents a maximum value, since it does not account for suppression
+of the SMBH accretion rate due to outflows from the accretion disk on
+small radial scales (e.g., \citealt{Blandford&Begelman99}).  If the
+actual radiative efficiency is lower than our fiducial assumption,
+then many of the X-ray detections would lie above the predicted value
+of $\langle L_X \rangle$ for stable accretion (black line).  In this
+case the X-ray detected galaxies either experience less heating than
+average galaxies of the same mass, or they are not accreting stably at
+all.  {\bf BDM: we may need to remove - why did this change so much?}
+Indeed, for $M_{\bullet} \lesssim 10^{8}M_{\odot}$, $L_{\rm X}$ nearly
+exceeds that predicted for the maximum thermally-stable accretion
+rate, $\dot{M}_{\rm TI}$ (yellow line).  Since the \citet{Miller+15}
+sample includes only early-type galaxies with older stellar
+populations than the average for their black hole mass, it would not
+be too surprising if many of these galaxies were thermally unstable.
 
-Figure \ref{fig:bh_growth} (top panel) also shows that $\dot{M}_{\rm C} >
-\dot{M}_{\rm TI}$ across all black hole masses.  Thus, even if Compton heating could act to stabilize the flow (which, as already mentioned, is unlikely), for fiducial parameters it is insufficient to produce a thermally stable accretion rate given conditions corresponding to the average star formation history.  When thermal instabilities become manifest, nuclear gas may undergo cyclic oscillations of rapid cooling and high accretion rates, followed by quiescent periods once gas has been consumed and/or
-AGN feedback becomes effective.  Such cycles are seen in numerical simulations of elliptical galaxies on 
-large scales and long timescales (\citealt{Ciotti+10}), an idea which is supported by observations showing that a fraction of early-type galaxies in the local universe have undergone recent ($< 1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).  
+Figure \ref{fig:bh_growth} (top panel) also shows that $\dot{M}_{\rm
+  C} > \dot{M}_{\rm TI}$ across all black hole masses.  Thus, even if
+Compton heating could act to stabilize the flow (which, as already
+mentioned, is unlikely), for fiducial parameters it is insufficient to
+produce a thermally stable accretion rate given conditions
+corresponding to the average star formation history.  When thermal
+instabilities become manifest, nuclear gas may undergo cyclic
+oscillations of rapid cooling and high accretion rates, followed by
+quiescent periods once gas has been consumed and/or AGN feedback
+becomes effective.  Such cycles are seen in numerical simulations of
+elliptical galaxies on large scales and long timescales
+(\citealt{Ciotti+10}), an idea which is supported by observations
+showing that a fraction of early-type galaxies in the local universe
+have undergone recent ($< 1-2$ Gyr old) star formation episodes
+(\citealt{Donas+07}).
 
 Similar cyclic AGN activity could occur on the smaller radial scale of
 the sphere of influence (e.g.~\citealt{Yuan&Li11},
@@ -2078,6 +2132,7 @@ Quantitatively $\rs\propto v_w^{-2}$, which implies that $\Mdot\sim v_w^{-3.8 (-
       history for galaxies as a whole.
     \item Furthermore, there could be a radial gradient in the star
       formation history within a given bulge... 
+     {\bf AG this section needs to be finished...}
     \end{enumerate}
   
 
