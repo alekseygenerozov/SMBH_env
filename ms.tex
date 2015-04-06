@@ -1189,6 +1189,7 @@ by an energy $E_{\rm bind} \sim M_{\rm g}\sigma_0^{2}\mathcal{F}^{2}$, where typ
 \lesssim$ few.  From the above definitions we find that 
 \be
 \frac{E_{\rm Ia}}{E_{\rm bind}} \sim \frac{(v_{w}^{\rm Ia})^{2}}{2\mathcal{F}^{2}\sigma_0^{2}}.  
+\label{eq:blowout}
 \ee
 Hence, for low mass BHs with $\sigma_0 \ll \mathcal{F}v^{\rm Ia}_{w}/2$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Even when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is still potentially limited to a value
 \begin{eqnarray}
@@ -1519,36 +1520,6 @@ fiducial volumetric averages, taken from \citet{MosterNaab+:2013a}.
 \subsection{Black Hole Accretion Rates}
 \label{sec:mdot}
 
-Figure \ref{fig:vwSources} shows that the heating associated with the
-average star formation history of a galaxy is approximately constant
-with SMBH mass, except for the largest black holes with $M_{\bullet}
-\gtrsim 5\times 10^{8}M_{\odot}$.  For a fixed wind heating parameter,
-the Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ increases $\propto
-M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively
-(Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).
-
-Figure \ref{fig:bh_growth} (top panel) shows with solid lines the
-accretion rate as a function of black hole mass for the average star
-formation heating, calculated from equation (\ref{eq:eddr_analytic})
-using our results for the total wind heating
-(Fig.~\ref{fig:mdot_mass}).  This average accretion rate increases
-from $\dot{M} \sim 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ for low-mass
-black holes ($M_{\bullet} \sim 10^{6}M_{\odot}$) to $\dot{M} \sim
-10^{-4}M_{\odot}$ yr$^{-1}$ for $M_{\bullet} \sim 10^{9}M_{\sun}$.
-These fall below the maximum thermally stable accretion rate,
-$\dot{M}_{\rm TI}$ (yellow lines), except at the highest
-black hole masses $\sim 10^{9}M_{\odot}$.  
-
-For low mass black holes, blow out from near the SN Ia radius caps the SMBH accretion rate at a value $\dot{M}_{\rm Ia} \sim 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ (green lines; eq.~[\ref{eq:eddr_Ia}]), which is however not low enough to prevent otherwise thermally-unstable flow at smaller radii (see discussion following eq.~[\ref{eq:eddr_Ia}]).  For higher mass black holes the stagnation resides close to the Ia radius, but the energy released by a single Ia is insufficient to unbind gas from the stellar bulge (although Ia heating contributes to the steady heating rate).   
-
-%For these highest mass
-%black holes, the maximum accretion rate as set by the SN Ia
-%radius (green lines; eq.~[\ref{eq:eddr_Ia}]) could instead cap the
-%accretion rate close to the thermally-unstable value (see discussion following eq.~[\ref{eq:eddr_Ia}]).  For lower mass black holes, the maximum accretion rate set by SNe Ia is significantly higher and cannot
-%also prevent the development of thermally unstable flows,
-%i.e. $\dot{M}_{\rm Ia} \gg \dot{M}_{\rm TI}$.
-
-Shown also for comparison in Figure \ref{fig:bh_growth} (top panel) is the accretion rate onto SgrA* calculated by \citet{Quataert:2004a}, as well as the range of $\dot{M}$ for the low-luminosity AGN NGC3115 derived through detailed modeling by \citealt{ShcherbakovWong+:2014a} (who find a range of accretion rates depending on the assumed model for thermal conductivity, although they do not include saturation of the conductive flux as considered in this work).  The SgrA* rate exceeds our estimate of $\dot{M}$ due to the average star formation history for the same $M_{\bullet}$ by almost two orders of magnitude.  This discrepancy can be understood by the fact that star formation in the central parsec of the Milky Way is not in steady-state: feedback is instead dominated by the stellar winds from the ring of young massive stars of mass $\sim 10^{4}M_{\odot}$ and estimated age $\sim 10$ Myr (e.g., \citealt{Schodel+07}).  Such a star formation history is better described by our `star burst' scenario, for which the value of $\eta \sim 100$ at $\tau_{\star} = 10^{7}$ yr (Fig.~\ref{fig:vwImp}) is a factor of $\sim 100$ times higher than the value of $\eta \sim 1$ predicted in the average SFH case (Fig.~\ref{fig:vwSources}, bottom panel).
 
 
 \begin{figure}
@@ -1573,6 +1544,38 @@ Shown also for comparison in Figure \ref{fig:bh_growth} (top panel) is the accre
   in units of the Hubble time $\th$ for each of the accretion rates
   shown in the top panel.}
 \end{figure}
+
+Figure \ref{fig:vwSources} shows that the heating associated with the
+average star formation history of a galaxy is approximately constant
+with SMBH mass, except for the largest black holes with $M_{\bullet}
+\gtrsim 5\times 10^{8}M_{\odot}$.  For a fixed wind heating parameter,
+the Eddington ratio $\dot{M}/\dot{M}_{\rm edd}$ increases $\propto
+M_{\bullet}^{0.5(0.8)}$ for core(cusp) galaxies, respectively
+(Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).
+
+Figure \ref{fig:bh_growth} (top panel) shows with solid lines the
+accretion rate as a function of black hole mass for the average star
+formation heating, calculated from equation (\ref{eq:eddr_analytic})
+using our results for the total wind heating
+(Fig.~\ref{fig:mdot_mass}).  This average accretion rate increases
+from $\dot{M} \sim 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ for low-mass
+black holes ($M_{\bullet} \sim 10^{6}M_{\odot}$) to $\dot{M} \sim
+10^{-4}M_{\odot}$ yr$^{-1}$ for $M_{\bullet} \sim 10^{9}M_{\sun}$.
+These fall below the maximum thermally stable accretion rate,
+$\dot{M}_{\rm TI}$ (yellow lines), although they become closer at the highest
+black hole masses $\sim 10^{9}M_{\odot}$.  
+
+For low mass black holes, blow out from SN Ia radius caps the SMBH accretion rate at a value $\dot{M}_{\rm Ia} \sim 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ (green lines; eq.~[\ref{eq:eddr_Ia}]), which is however not low enough to prevent otherwise thermally-unstable flow at smaller radii (see discussion following eq.~[\ref{eq:eddr_Ia}]).  On the other hand, for higher $M_{\bullet}$ the stagnation resides close to the Ia radius so Ia heating contributes to the steady gas heating rate, however the energy released by a single Ia is insufficient to unbind gas from the stellar bulge (eq.~[\ref{eq:blowout}]). 
+
+%For these highest mass
+%black holes, the maximum accretion rate as set by the SN Ia
+%radius (green lines; eq.~[\ref{eq:eddr_Ia}]) could instead cap the
+%accretion rate close to the thermally-unstable value (see discussion following eq.~[\ref{eq:eddr_Ia}]).  For lower mass black holes, the maximum accretion rate set by SNe Ia is significantly higher and cannot
+%also prevent the development of thermally unstable flows,
+%i.e. $\dot{M}_{\rm Ia} \gg \dot{M}_{\rm TI}$.
+
+Shown also for comparison in Figure \ref{fig:bh_growth} (top panel) is the accretion rate onto SgrA* calculated by \citet{Quataert:2004a}.  Also show is the range of $\dot{M}$ for the low-luminosity AGN NGC3115 derived through detailed modeling by \citealt{ShcherbakovWong+:2014a}, who find a range of accretion rates depending on the assumed model for thermal conductivity (although we expect this range would be smaller had they included saturation of the conductive flux).  The SgrA* rate exceeds our estimate of $\dot{M}$ due to the average star formation history for the same $M_{\bullet}$ by almost two orders of magnitude.  This discrepancy can be understood by the fact that star formation in the central parsec of the Milky Way cannot be described as steady-state: feedback is instead dominated by the stellar winds from the ring of young massive stars of mass $\sim 10^{4}M_{\odot}$ and estimated age $\sim 10$ Myr (e.g., \citealt{Schodel+07}).  Such a star formation history is better described by our `star burst' scenario, for which the value of $\eta \sim 100$ at $\tau_{\star} = 10^{7}$ yr (Fig.~\ref{fig:vwImp}) is a factor of $\sim 100$ times higher than the value of $\eta \sim 1$ predicted in the average SFH case (Fig.~\ref{fig:vwSources}, bottom panel).
+
 
 \subsection{Nuclear X-ray Luminosities}
 \label{sec:Lx}
