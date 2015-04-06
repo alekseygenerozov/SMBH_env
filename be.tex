@@ -7,7 +7,7 @@ as a function of radius $x \equiv r/\rs$.  Straightforward manipulation of the h
 \end{align}
 which upon integration from the stagnation radius $r = \rs$ outwards,
 \begin{align}
-  r^2 \rho v(\mathcal{B} - \mathcal{B}|_{\rs})= \int_{\rs}^{r}
+  r^2 \rho v\mathcal{B} = \int_{\rs}^{r}
     r^2 \left(\frac{3}{1+\delta}\frac{G
   \Mbh}{r}+\sigma_0^2+v_w^2 + q \Phi\right) dr,
     \label{eq:enConsInt}
@@ -50,24 +50,16 @@ where $U_o=4 \pi G \rhostar|_{\rs} \rs^2$.  This can be rewritten as
 where $\zeta \equiv \sqrt{1 + (v_w/\sigma_0)^2}$ and $w\equiv
 (\rs/\rsoi)^{3\delta}$.
 
-Analysis of equation (\ref{eq:enthAnal}) results in the following interpretation of the behavior of the Bernoulli integral as a function of the heating rate.  When the rate of external heating is high ($\zeta \gg 1$), then $\mathcal{B} > 0$ at all radii, requiring an outflow with positive kinetic energy at infinity.  However, as $\zeta$ is decreased, there exists a critical value of $\zeta = \zeta_{c}$ below which $\mathcal{B}$ becomes negative; this occurs first near the stagnation radius and then the region where $\mathcal{B} < 0$ grows to larger radii as $\zeta$ is reduced further.  If $\zeta$ is just less than $\zeta_c$, then we can have still $\mathcal{B} > 0$ at the break radius, allowing an outflow with positive asymptotic kinetic energy, but only if $\rs$ exceeds a minimum value, $r_{\rm s,min}$.  
+Analysis of equation (\ref{eq:enthAnal}) results in the following interpretation of the behavior of the Bernoulli integral as a function of the heating rate.  When the rate of external heating is high ($\zeta \gg 1$), then $\mathcal{B} > 0$ at all radii, requiring an outflow with positive kinetic energy at infinity.  However, as $\zeta$ is decreased, there exists a critical value of $\zeta = \zeta_{c}$ below which $\mathcal{B}$ becomes negative near the break radius for some value of $\rs$.  When $\zeta$ is moderately less than $\zeta_c$, then we can have still $\mathcal{B} > 0$ at the break radius, but only if $\rs$ exceeds a minimum value, $r_{\rm s,min}$, which increases from 0 when $\zeta = \zeta_c$ to $\sim r_{b}$ as $\zeta$ is decreased well below $\zeta_c$.
 
 The critical heating value $\zeta_c$ is an increasing function of $r_{b}/r_{\rm soi}$ and is larger for core galaxies than cusp galaxies, since a greater heating rate is required to unbind gas from a deeper stellar potential (Fig.~\ref{fig:zetaCrit}).  Specifically, we find $\zeta_c\sim (\rb/\rsoi)^{0.5(1-\Gamma)}$ for $\rb\gsim\rsoi$ (see the top panel of Fig.~\ref{fig:zetaCrit} for the case of core galaxies). Likewise the minimum $r_{\rm s,min}/r_{b}$ is an increasing function of $\zeta/\zeta_{c}$, approaching unity for $\zeta < 0.86\zeta_c$, as shown in the bottom panel of Fig.~\ref{fig:zetaCrit}.  As $\zeta \rightarrow 0.86\zeta_c$ our numerical simulations show that that the stagnation radius diverges from its value predicted by equations (\ref{eq:stag_analytic}) and (\ref{eq:densSlope}) and moves out to the break radius.  
 
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{zetaCrit.pdf}
-\caption{\label{fig:zetaCrit} {\emph Top panel:} Critical
-  $\zeta_c=\sqrt{v_w^2+\sigma_0^2}/\sigma_0$ for core ($\Gamma=0.1$)
-  galaxies. If $\zeta<\zeta_c$ outflows are only possible if the ratio
-  of the stagnation radius to the influence radius exceeds a minimum
-  value. Plotted as a function of the ratio of the break radius to the
-  influence radius ($\rb/\rsoi$) {\emph Bottom Panel:} Mininmum value
-  for ratio of the stagnation radius to the break radius, $\rs/\rb$
-  for core galaxies ($\Gamma=0.1$) derived by requiring the Bernoulli
-  parameter of the gas to remain positive out to the break radius
-  $\rb$. This is calculated numerically from
-  equation~\eqref{eq:enthAnal}.}
+\caption{\label{fig:zetaCrit} {\emph Top panel:} Critical value $\zeta_c$ of the wind heating parameter
+  $\zeta \equiv \sqrt{1+(v_w/\sigma_0)^2}$ above which the Bernoulli parameter of the flow $\mathcal{B}$ is positive near the break radius for some value of $\rs$, calculated for core ($\Gamma=0.1$)
+  galaxies using equation~\eqref{eq:enthAnal}.. {\emph Bottom Panel:} Minimum value of the stagnation radius for which $\mathcal{B} > 0$ at the break radius as a function of $\zeta/\zeta_c < 1$, again calculated for core galaxies ($\Gamma=0.1$).}
 \end{figure}
 
 
