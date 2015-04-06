@@ -44,15 +44,10 @@ for massive stars while asymptoting to the formula provided by
 \citet{CiottiOstriker:2007a} (their eq.~[9]) for intermediate and late
 times ($t \gsim 10^8$ years).
 
-{\bf AG: Go back to the old mass loss prescription ASAP so that we don't
-  violate mass conservation!}
 The MS wind mass loss rate $\dot{m}(\Mstar, t)$ is calculated based on
-the generalization of Reimer's law given in
-\citet{SchroderCuntz:2005a} (their eq.~[4]) as
+the generalization of Reimer's law
 \begin{align}
-  \dot{m}=8 \times 10^{-14} \frac{L_* R_*}{\Mstar}
-  \left(\frac{T_{\rm eff}}{\rm 4000 K}\right)^{3.5}
-  \left(1+\frac{g_{\odot}}{4300 g_*}\right) \Msun \pyear,\
+  \dot{m}=4 \times 10^{-13} \frac{L_* R_*}{\Mstar} \Msun \pyear,\
 \end{align}
 where  $R_*$, $L_*$, $T_{\rm eff}$ and $g_*$ are the stellar radius,
 luminosity, effective temperature, and surface gravity, respectively, the latter normalized to its solar value $g_{\odot}$.  The stellar radius and luminosity are estimated as (\citet{Kippenhahn&Weigert90}; Figs.~22.2) 22.3)
@@ -70,25 +65,46 @@ R_{\odot} (\Mstar/\Msun)^{0.57} & \Mstar > \Msun \\
 R_{\odot} (\Mstar/\Msun)^{0.8} & \Mstar \le \Msun
 \end{cases}
 \end{align}
-The wind velocity of main sequence winds is assumed
-to equal $v_w (\Mstar, t) = v_{w,\odot}(M_{\star}/M_{\odot})^{1/2}(R_{\star}/R_{\odot})^{-1/2}$, i.e.~scaling as the stellar escape velocity and normalized to the velocity of the solar wind $v_{w,\odot} = 430$ km s$^{-1}$; this produces an effective wind heating velocity for main
-sequence winds alone of $\sim 100$ km s$^{-1}$ for $\tau_{\star} \sim t_{\rm h}$, close to the value found by \citet{NaimanSoares-Furtado+:2013a} for globular clusters based on a more
-sophisticated population synthesis treatment. 
+The wind velocity of main sequence winds is assumed to equal $v_w
+(\Mstar, t) =
+v_{w,\odot}(M_{\star}/M_{\odot})^{1/2}(R_{\star}/R_{\odot})^{-1/2}$,
+i.e.~scaling as the stellar escape velocity and normalized to the
+velocity of the solar wind $v_{w,\odot} = 430$ km s$^{-1}$; this
+produces an effective wind heating velocity for main sequence winds
+alone of $\sim 100$ km s$^{-1}$ for $\tau_{\star} \sim t_{\rm h}$,
+close to the value found by \citet{NaimanSoares-Furtado+:2013a} for
+globular clusters based on a more sophisticated population synthesis
+treatment.
 
-The rate of energy input from PMS winds, $\dot{e}_{\rm TO}(t) = f_{8}\dot{\mathcal{E}}/\bar{m}_*$, is dominated by fast Wolf-Rayet winds and core-collapse supernovae from massive stars ($M_{\star} > 8M_{\odot}$), where $f_{8} =2.6 \times 10^{-3}$ is the fraction of the stellar mass with $M_{\star} > 8M_{\odot}$ for our assumed Salpeter IMF.  Here $\dot{\mathcal{E}} (t)$ is the energy injection rate per massive star, which we estimate as
+The rate of energy input from PMS winds, $\dot{e}_{\rm TO}(t) =
+f_{8}\dot{\mathcal{E}}/\bar{m}_*$, is dominated by fast Wolf-Rayet
+winds and core-collapse supernovae from massive stars ($M_{\star} >
+8M_{\odot}$), where $f_{8} =2.6 \times 10^{-3}$ is the fraction of the
+stellar mass with $M_{\star} > 8M_{\odot}$ for our assumed Salpeter
+IMF.  Here $\dot{\mathcal{E}} (t)$ is the energy injection rate per
+massive star, which we estimate as
 \begin{align}
 \dot{\mathcal{E}} (t)=  1.3 \times 10^{36} {\rm erg\,s^{-1}}
 \begin{cases}
   1 & t<4 \times 10^6 {\rm yr}\\
-  \left(\frac{t}{4 \times  10^6\,{\rm yr}}\right)^{-3.73} & t \ge 4 \times 10^6 {\rm yr},
+  \left(\frac{t}{4 \times  10^6\,{\rm yr}}\right)^{-3.73} &  4\times
+  10^{6} {\rm yr}  \le t \le 10^{8} {\rm yr}
+  \times 10^6 {\rm yr},\\
+  0 & t > 10^8 {\rm yr}
 \end{cases}
 \label{eq:voss}
 \end{align}
-based on the results of \citet{VossDiehl+:2009a} (their Fig.~7, top panel), who use a population synthesis code to simulate the mass and energy injection into the ISM from an OB association.  Although equation~\eqref{eq:voss} is valid only for $t \lsim 10$ Myr, in practice the precise functional form of $\dot{e}_{\rm TO}(t)$ is generally unimportant for our purposes, so we adopt equation~\eqref{eq:voss} as being valid for all times.
+based on the results of \citet{VossDiehl+:2009a} (their Fig.~7, top
+panel), who use a population synthesis code to simulate the mass and
+energy injection into the ISM from an OB association.  Although
+equation~\eqref{eq:voss} is valid only for $t \lsim 10$ Myr, in
+practice the precise functional form of $\dot{e}_{\rm TO}(t)$ is
+generally unimportant for our purposes, so we adopt
+equation~\eqref{eq:voss} as being valid for all times. 
 
 
-The effective wind velocity in the limit of an impulsive star formation may then be written
-as 
+The effective wind velocity in the limit of an impulsive star
+formation may then be written as
 \begin{align}
 \bar{v}_w(t)=2 \dot{\bar{e}}(t)/\dot{\bar{m}}(t)
 \label{eq:vwImp}
@@ -160,13 +176,14 @@ The mass return parameter will be
   other hand, the dynamical friction inspiral time for small satellite
   galaxies is quite long, generally much greater than the $\sim
   10^7~{\rm yr}$ for which young stars can dominate the heating
-  budget.  
+  budget.  The mass of stars accreted for halo masses, $M_{\rm halo}< 3
+  \times 10^{12} \Msun$, and redshifts, $z>4$, is small and is neglected.
 
-To find the total mass ($\Mdot'(t)$) and energy
-  ($\dot{E}'(t)$) injection rates, including the contribution of
-  accreted stars, we add a convolution of the specific mass and
-  injection rates with the accretion history $A(t)$ to the mass and
-  energy injection rates from star formed in-situ.  Thus,
+  To find the total mass ($\Mdot'(t)$) and energy ($\dot{E}'(t)$)
+  injection rates, including the contribution of accreted stars, we
+  add a convolution of the specific mass and injection rates with the
+  accretion history $A(t)$ to the mass and energy injection rates from
+  star formed in-situ.  Thus,
 
 \begin{align}
 \Mdot '(t)&=\Mdot(t)+\int_{0}^{t} A(t_{\rm acc}) \frac{\Mdot(t_{\rm acc})}
