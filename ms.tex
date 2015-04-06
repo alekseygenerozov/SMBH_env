@@ -1107,7 +1107,7 @@ energy and mass for the CNM.  An additional uncertainty results from the thermal
 
 \subsection{Type Ia Supernovae} 
 
-Type Ia supernovae (SNe Ia) represent a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each Ia supernova injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SNe rate (per stellar mass) is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate of $E_{\rm Ia}R_{\rm  Ia}$ produces an effective wind heating parameter (eq.~[\ref{eq:vw_eff}]) of \begin{align} v_{w}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
+Type Ia SNe represent a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each SN Ia injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SN rate per stellar mass is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate of $E_{\rm Ia}R_{\rm  Ia}$ produces an effective heating parameter (eq.~[\ref{eq:vw_eff}]) of \begin{align} v_{w}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
 E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
 \end{align} The thermal energy injected by each SN Ia, $E_{\rm Ia} \simeq
 \epsilon_{\rm Ia} 10^{51}$ erg, depends on the efficiency $\epsilon_{\rm Ia}$
@@ -1146,22 +1146,20 @@ homogeneous if the rate of SNe is rapid compared to the characteristic
 evolution time of the flow at the radius of interest
 (\citealt{ShcherbakovWong+:2014a}).  We define the ``Ia radius"
   \begin{align}
-    r_{\rm Ia} \sim \left(\frac{G}{R_{\rm Ia}\sigma}\right)^{1/2} \sim
-    38 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
+    r_{\rm Ia} \sim \left(\frac{G}{R_{\rm Ia}\sigma_0}\right)^{1/2} \sim
+    29 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
     \label{eq:rIa}
   \end{align}
   as the location exterior of which the time interval between
   subsequent supernovae $\tau_{\rm Ia} \sim (M_{\rm enc}R_{\rm
-    Ia})^{-1} \sim G/(r\sigma^{2}R_{\rm Ia})$ exceeds the local
-  dynamical timescale $t_{\rm dyn} \sim r/\sigma$, where we again
+    Ia})^{-1} \sim G/(r\sigma_0^{2}R_{\rm Ia})$ exceeds the local
+  dynamical timescale $t_{\rm dyn} \sim r/\sigma_0$, where we again
   adopt the Ia rate for an old stellar population and in the final
-  equality we estimate the velocity dispersion using the
-  $M_{\bullet}-\sigma$ relationship (eq.~[\ref{eq:Msigma}]).
+  equality we estimate $\sigma_0 \approx \sqrt{3}\sigma$ using $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
 
 Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting
 $v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into equation (\ref{eq:stag_simple})
 for the stagnation radius, we find that
-
 \begin{align}
   \left.\frac{r_{\rm Ia}}{r_{\rm s}}\right|_{\rm v_{w}^{\rm Ia}}&\approx
   \begin{cases}
@@ -1179,30 +1177,20 @@ for the stagnation radius, we find that
    \end{cases}
 \label{eq:rIars}
 \end{align}
-If $r_{\rm Ia} \gg r_{\rm s}$, then SN Ia heating can only be
-approximated as a steady heating source near the stagnation radius for
-extremely massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or in
-the case of a very young stellar population ($\tau_{\star} \ll t_{\rm
-h}$).  
+Equation (\ref{eq:rIars}) shows that SN Ia can only be approximated as a steady heating source near the stagnation radius for
+extremely massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or for a very young stellar population ($\tau_{\star} \ll t_{\rm h}$).  
 
-%On the other hand, equation (\ref{eq:rIars}) may underestimate
-%the importance of Ia heating because $r_{\rm Ia}/r_{\rm s}$ will be
-%substantially smaller than its value estimated using $v_{w}^{\rm Ia}$
-%if the heating rate excluding SN Ia is less than this.
-
-Even if SN Ia are rare near the stagnation radius, they may cap the
+However, even if SN Ia are rare near the stagnation radius, SN Ia may cap the
 SMBH accretion rate by periodically blowing gas out of the nucleus of
-low mass galaxies.  Between successive supernovae, stars release a
+low mass galaxies.  Between successive SNe, stars release a
 gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$
-interior to the Ia radius, which is gravitationally bound to the SMBH
-by an energy $E_{\rm bind} \sim M_{\rm g}\sigma_0^{2}f^{2}$, where $f \sim 1$ for cusp galaxies and $f \sim$ few for core galaxies due to the greater escape speed from core galaxies.  
-
-According
-to the above definitions, we thus find that 
+interior to the Ia radius, which is locally gravitationally bound to the SMBH
+by an energy $E_{\rm bind} \sim M_{\rm g}\sigma_0^{2}\mathcal{F}^{2}$, where typically $\mathcal{F} 
+\lesssim$ few.  From the above definitions we find that 
 \be
-E_{\rm Ia}/E_{\rm bind} \sim (v_{w}^{\rm Ia})^{2}/2f^{2}\sigma^{2}.  
+\frac{E_{\rm Ia}}{E_{\rm bind}} \sim \frac{(v_{w}^{\rm Ia})^{2}}{2\mathcal{F}^{2}\sigma_0^{2}}.  
 \ee
-Hence, for low mass BHs with $\sigma_0 \ll f v^{\rm Ia}_{w}/2$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Thus, even when heating is sufficiently weak for the stagnation radius to formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is limited to a value
+Hence, for low mass BHs with $\sigma_0 \ll \mathcal{F}v^{\rm Ia}_{w}/2$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Even when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is still potentially limited to a value
 \begin{eqnarray}
 \frac{\dot{M}_{\rm Ia}}{\dot{M}_{\rm edd}} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{r_{\rm Ia}}{r_{\rm soi}}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
@@ -1212,9 +1200,9 @@ Hence, for low mass BHs with $\sigma_0 \ll f v^{\rm Ia}_{w}/2$, SN Ia are capabl
   \end{cases}
   \label{eq:eddr_Ia}
 \end{eqnarray}
-obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}]) for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$ (eq.~[$\ref{eq:eddr_analytic}$]).  Note, however, that for low mass black holes $\dot{M}_{\rm Ia}$ generally exceeds the maximum accretion rate for a thermally stable flow $\dot{M}_{\rm TI}$ (eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe Ia cannot alone prevent cooling instabilities in the nuclei of low mass galaxies.  
+obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}]) for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$ (eq.~[$\ref{eq:eddr_analytic}$]).  Note, however, that for low mass SMBHs, $\dot{M}_{\rm Ia}$ generally exceeds the maximum accretion rate for a thermally stable flow $\dot{M}_{\rm TI}$ (eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe Ia cannot alone prevent cooling instabilities in the nuclei of low mass galaxies.  
 
-The deep potential wells of high mass galaxies $\sigma \gg f v^{\rm Ia}_{w}$ prevent SN Ia from dynamically clearing out gas.  Equation (\ref{eq:eddr_Ia}) may nevertheless cap the accretion rate in practice because, even if other source of heating are ineffective, the Ia heating rate (eq.~[\ref{eq:vIa}]) is sufficiently great to prevent the stagnation radius from substantially exceeding $r_{\rm Ia}$.
+The deep gravitational potential wells of high mass galaxies $\sigma_0 \gg f v^{\rm Ia}_{w}$ prevent SN Ia from dynamically clearing out gas in these systems.  Equation (\ref{eq:eddr_Ia}) nevertheless represents a cap on the accretion rate in practice because if other source of heating are ineffective, then the Ia heating rate (eq.~[\ref{eq:vIa}]) is usually sufficiently high to prevent the stagnation radius (calculated including the heating from SN Ia) from substantially exceeding $r_{\rm Ia}$.
 
 %Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
 
