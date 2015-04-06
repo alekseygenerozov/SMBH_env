@@ -527,7 +527,7 @@ for time integration and artificial viscosity terms in the velocity
 and entropy equations for numerical stability
 (\citealt{Brandenburg:2003a}).  We assume different choices of $v_{w}
 = 300, 600, 1200$ km s$^{-1}$ spanning a physically plausible range of
-thermally stable {\bf AG phrasing ok?} heating rates.  Although we are
+thermally stable heating rates.  Although we are
 interested in the steady-state inflow/outflow solution (assuming one
 exists), the time-dependent equations are solved to avoid numerical
 issues that arise near the critical sonic points, of which there are
@@ -837,12 +837,9 @@ where the first line for each case is derived using equation
 (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v_{\rm TI})$, whereas
 the second line corresponds to the low wind heating limit $\zeta \ll
 \zeta_c$.  $\zeta_c$ is calculated using the empirical correlation for
-core galaxies $r_{b}/r_{\rm soi} \approx 7.6M_{\bullet,8}^{-0.2}$ {\bf
-AG: this is the second time I have caught this, is there any
-particular reason you think this should be +0.2 not -0.2} which
+core galaxies $r_{b}/r_{\rm soi} \approx 7.6M_{\bullet,8}^{-0.2}$ which
 follows from equation (\ref{eq:rsoi}) and the $r_b-M_{\bullet}$
 correlation derived from the results of \citet{LauerFaber+:2007a}.
-{\bf BDM: check this}
 
 
 \begin{figure}
@@ -1027,8 +1024,7 @@ us to study a range of CNM properties and to assess the validity of
 the analytic estimates from the previous section.  
 
 Figure~\ref{fig:profiles} shows profiles of the density $\rho(r)$,
-temperature $T(r)$, and radial velocity $|v(r)|$ (expressed in units
-of the sound speed), for the cusp ($\Gamma=0.8$) solutions within our
+temperature $T(r)$, and radial velocity $|v(r)|/c_s$, for the cusp ($\Gamma=0.8$) solutions within our
 grid.  As expected, the gas density increases towards the SMBH
 $\rho\propto r^{-\densSlope}$ with $\densSlope\simeq1$, i.e. shallower
 than the $-3/2$ power law for Bondi accretion. This power law behavior
@@ -1092,7 +1088,7 @@ diverges to large radii (Fig.~\ref{fig:stag}).
   \caption{\label{fig:stag} Stagnation radius $r_{s}$ in units of the
     sphere of influence radius $r_{\rm soi}$ (eq.~[\ref{eq:rsoi}]) for
     galaxies in our sample as a function of the stellar wind heating
-    parameter $\zeta \equiv \sqrt{v_w^{2} + \sigma_0^{2}}/\sigma_0$.
+    parameter $\zeta \equiv \sqrt{1+(v_w/\sigma_0)^{2}}$.
     Green, orange, and blue symbols correspond to different values of
     $v_{w} =$ 300, 600, and 1200 km s$^{-1}$, respectively.  Squares
     correspond to cusp galaxies ($\Gamma = 0.8$), while triangles
@@ -1100,8 +1096,8 @@ diverges to large radii (Fig.~\ref{fig:stag}).
     cusp solutions which would be thermally unstable. The black curves
     correspond to the analytic prediction from equation
     (\ref{eq:rs2main}), with solid and dashed curves calculated for
-    parameters $\{\Gamma=0.8, \densSlope\simeq1\}$ and
-    $\{\Gamma=0.1,\densSlope\simeq0.6\}$, respectively. }
+    parameters $(\Gamma=0.8, \densSlope\simeq1)$ and
+    $(\Gamma=0.1,\densSlope\simeq0.6)$, respectively. }
 \end{figure}
 
 
@@ -1184,7 +1180,7 @@ energy and mass for the CNM.  An additional uncertainty results from the thermal
 
 \subsection{Type Ia Supernovae} 
 
-Type Ia SNe represent a potentially important source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each SN Ia injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SN rate per stellar mass is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate of $E_{\rm Ia}R_{\rm  Ia}$ produces an effective heating parameter (eq.~[\ref{eq:vw_eff}]) of \begin{align} v_{w}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
+Type Ia SNe represent a source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each SN Ia injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SN rate per stellar mass is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate of $E_{\rm Ia}R_{\rm  Ia}$ produces an effective heating parameter (eq.~[\ref{eq:vw_eff}]) of \begin{align} v_{w}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
 E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
 \end{align} The thermal energy injected by each SN Ia, $E_{\rm Ia} \simeq
 \epsilon_{\rm Ia} 10^{51}$ erg, depends on the efficiency $\epsilon_{\rm Ia}$
