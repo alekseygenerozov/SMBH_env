@@ -1305,6 +1305,7 @@ exceeding $r_{\rm Ia}$. Stated another way, if the stagnation radius moves inwar
 
 Our criterion for cooling instability given by equations \eqref{eq:cooling2} and ~\eqref{eq:Mdotmax} is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  However, by re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we the ratio of heating to radiative cooling at $\rIa$ is given by
 \begin{align}
+\label{eq:heatingratioIa}
 &\left.\frac{\dot{q}_{\rm heat}}{\left|\dot{q}_{\rm rad}\right|}\right|_{\rIa}\simeq
 \begin{cases}
   90 \Mbheight^{1.3} (\epsilon_{\rm Ia}/0.4)^{1.7} (\tau_{\star}/\th)^{-3}
@@ -1320,7 +1321,7 @@ Our criterion for cooling instability given by equations \eqref{eq:cooling2} and
   & \text{cusp}\\
 \end{cases}
 \end{align}
-Thus, only for high mass galaxies and/or relatively old stellar populations is Ia heating is sufficient to prevent cooling instabilities on scales of the stagnation radius. 
+Thus, for high mass galaxies and/or relatively old stellar populations, Ia heating is capable of preventing cooling instabilities on scales of the stagnation radius $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad})_{\rIa})$. However, for lower mass galaxies or younger stellar populations, Ia blow-out is itself unlikely to prevent cooling instabilities.
 
 
 %Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
@@ -1624,7 +1625,7 @@ of young stellar populations significantly reduce the role of stellar
 wind heating.  But for these massive galaxies, that Ia radius is sufficiently small for Ia heating to contribute a comparable level of heating, $v_{w}^{\rm Ia} \gtrsim 600$ km s$^{-1}$ (for low mass galaxies Ia heating does not contribute to the total heating rate because $r_{\rm Ia} > \rs$; bottom panel).  Strikingly, we find that galactic nuclei experiencing the same
   average star formation history as their host galaxies produce thermally stable flows across almost all black hole masses.  
 
-An important caveat, however, is that $\vw$ is only a few times higher than the stellar velocity dispersion, i.e. $\zeta \sim \zeta_c$.  This implies that the true stagnation radius could be larger than our analytic estimates, potentially resulting in thermal instability, especially for core galaxies with large break radii ($\S\ref{sec:mdot}$).
+An important caveat, however, is that $\vw$ is only a few times higher than the stellar velocity dispersion, i.e. $\zeta \sim \zeta_c$ (eq.~[\ref{eq:zetacrit}]).  This implies that the true stagnation radius and SMBH accretion rate could be larger than our analytic estimates, potentially resulting in thermal instability, especially for core galaxies with large break radii ($\S\ref{sec:mdot}$).
 
 Realistic variations (``burstiness") in the star formation history
 will also often produce lower stellar wind heating rates (Appendix
@@ -1709,10 +1710,9 @@ For low mass black holes, blow out from SN Ia radius caps the SMBH
 accretion rate at a value $\dot{M}_{\rm Ia} \sim
 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ (green lines;
 eq.~[\ref{eq:eddr_Ia}]), which is however not low enough to prevent
-otherwise thermally-unstable flow at smaller radii (see discussion
-following eq.~[\ref{eq:eddr_Ia}]).  On the other hand, for higher
+otherwise thermally-unstable flow at smaller radii (eq.~[\ref{eq:heatingratioIa}]).  On the other hand, for higher
 $M_{\bullet}$ the stagnation resides close to the Ia radius so Ia
-heating contributes to the steady gas heating rate, however the energy
+heating contributes to the steady gas heating rate, even if the energy
 released by a single Ia is insufficient to unbind gas from the stellar
 bulge (eq.~[\ref{eq:blowout}]).
 
