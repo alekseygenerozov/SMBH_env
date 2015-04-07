@@ -791,7 +791,6 @@ To within a constant of order unity, equation (\ref{eq:cooling2}) also
 equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n
 kT/2 \mu)/\dot{q}_{\rm rad}$ to the free-fall time $t_{\rm ff}$ at the
 stagnation radius, as can be derived using the equality
-
 \begin{align}
 \rho|_{r_{\rm s}}=\frac{3 q\tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
@@ -1275,7 +1274,7 @@ by an energy $E_{\rm bind} \sim M_{\rm g}\sigma_0^{2}\mathcal{F}^{2}$, where typ
 \frac{E_{\rm Ia}}{E_{\rm bind}} \sim \frac{(v_{w}^{\rm Ia})^{2}}{2\mathcal{F}^{2}\sigma_0^{2}}.  
 \label{eq:blowout}
 \ee
-Hence, for low mass BHs with $\sigma_0 \ll \mathcal{F}v^{\rm Ia}_{w}/2$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Even when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is still potentially limited to a value
+Hence, for low mass BHs with $\sigma_0 \ll v^{\rm Ia}_{w}$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Even when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is still potentially limited to a value
 \begin{eqnarray}
 \frac{\dot{M}_{\rm Ia}}{\dot{M}_{\rm edd}} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{r_{\rm Ia}}{r_{\rm inf}}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
@@ -1287,37 +1286,25 @@ Hence, for low mass BHs with $\sigma_0 \ll \mathcal{F}v^{\rm Ia}_{w}/2$, SN Ia a
 \end{eqnarray}
 obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}])
 for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$
-(eq.~[$\ref{eq:eddr_analytic}$]).  Note, however, that for low mass
-SMBHs, $\dot{M}_{\rm Ia}$ generally exceeds the maximum accretion rate
-for a thermally stable flow $\dot{M}_{\rm TI}$
-(eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe
-Ia cannot alone prevent cooling instabilities in the nuclei of low
-mass galaxies {\bf AG--careful one needs a separate criterion for
-  thermal stability when heating is dominated by the Ias}. 
+(eq.~[$\ref{eq:eddr_analytic}$]).  
+%Note, however, that for low mass
+%SMBHs, $\dot{M}_{\rm Ia}$ generally exceeds the maximum accretion rate
+%for a thermally stable flow $\dot{M}_{\rm TI}$
+%(eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe
+%Ia cannot alone prevent cooling instabilities in the nuclei of low
+%mass galaxies.
 
 The deep gravitational potential wells of high mass galaxies $\sigma_0
-\gg f v^{\rm Ia}_{w}$ prevent SN Ia from dynamically clearing out gas
+\gg  v^{\rm Ia}_{w}$ prevent SN Ia from dynamically clearing out gas
 in these systems.  Equation (\ref{eq:eddr_Ia}) nevertheless represents
 a cap on the accretion rate in practice because if other source of
 heating are ineffective, then the Ia heating rate (eq.~[\ref{eq:vIa}])
 is usually sufficiently high to prevent the stagnation radius
 (calculated including the heating from SN Ia) from substantially
-exceeding $r_{\rm Ia}$.
+exceeding $r_{\rm Ia}$. Stated another way, if the stagnation radius moves inwards from $\rIa$, then decreased heating will force it outwards again. However, if the stagnation radius moves well outside of $\rIa$, then the high level of Ia heating will force it inwards. 
 
-If Ia supernovae are the dominant source of heating we expect $\rs\sim
-r_{\rm Ia}$. If the stagnation radius moves inwards from $\rIa$, the
-decreased heating will force it outwards again. If the it moves
-outwards the Ia heating will force it inwards. Thus,
-equations~\eqref{eq:cooling2} and ~\eqref{eq:Mdotmax} will no longer
-be valid as they assume that $\rs$ follows equation
-\eqref{eq:stag_simple}. We derive $\dot{q}_{\rm
-  heat}/\left|\dot{q}_{\rm rad}\right|$ for $\rs=\rIa$ to evaluate
-thermal stability in SNe Ia dominate the heating.
-
+Our criterion for cooling instability given by equations \eqref{eq:cooling2} and ~\eqref{eq:Mdotmax} is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  However, by re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we the ratio of heating to radiative cooling at $\rIa$ is given by
 \begin{align}
-&\rho(\rIa)\simeq \frac{3 q(\rIa)}{2-\Gamma} \nonumber\\
-&T(\rIa)\simeq \frac{\gamma-1}{\gamma}\frac{\mu m_p v^{\rm Ia \,\,
-    2}_{w}}{2k}\nonumber\\
 &\left.\frac{\dot{q}_{\rm heat}}{\left|\dot{q}_{\rm rad}\right|}\right|_{\rIa}\simeq
 \begin{cases}
   90 \Mbheight^{1.3} (\epsilon_{\rm Ia}/0.4)^{1.7} (\tau_{\star}/\th)^{-3}
@@ -1333,6 +1320,7 @@ thermal stability in SNe Ia dominate the heating.
   & \text{cusp}\\
 \end{cases}
 \end{align}
+Thus, only for high mass galaxies and/or relatively old stellar populations is Ia heating is sufficient to prevent cooling instabilities on scales of the stagnation radius. 
 
 
 %Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
