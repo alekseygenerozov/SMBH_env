@@ -1,7 +1,9 @@
 
 \subsection{Single Burst}
 
-In the case of a single implusive burst of star formation, the mass and energy injection rate per unit stellar mass at time $t$ after the burst are given, respectively, by 
+In the case of a single implusive burst of star formation, the mass
+and energy injection rate per unit stellar mass at time $t$ after the
+burst are given, respectively, by
 \begin{align} 
   \dot{\bar{m}}(t) &= \frac{\Delta M(t) \mu|_{M_{\rm TO}(t)}
     \left|\dot{M}_{\rm TO}(t)\right| + f_{\rm MS} \int_{m_0}^{m_{\rm
@@ -142,20 +144,18 @@ The mass return parameter will be
 \end{align}
 
  \begin{figure}
-  \includegraphics[width=\columnwidth]{NickPlot2.pdf}
-  \caption{\label{fig:NickPlot2} Effective wind velocities for nonstandard
-    star formation histories.  The black curve shows, for reference,
-    $v_{\rm w}$ calculated using the halo-averaged $S(t)$.  Other
-    colors show the effective wind velocities $\mathcal{V}_{\rm w}$
-    computed using convolved star formation histories
-    $\mathcal{S}(t)$.  The purple curve shows a recent drop in the
-    star formation rate, i.e. $\delta t_{\star}=10^6~{\rm yr}$.  The blue
-    and red curves show $\delta t_{\star}=10^7~{\rm yr}$ and $t_{\rm
-      scale}=10^8~{\rm yr}$, respectively; longer scale times look
-    quite similar to the red curves.  Dashed, dotted, and dot-dashed
-    line styles show star formation rates that have declined to
-    fractions $\iota= 0.001$, $\iota = 0.1$, and $\iota = 0.3$ of
-    their halo-averaged values, respectively. }
+  \includegraphics[width=\columnwidth]{bumpy.pdf}
+  \caption{\label{fig:NickPlot2} Effective wind velocities for
+    nonstandard star formation histories.  The black curves shows, for
+    reference, $v_{\rm w}$ calculated using the halo-averaged $S(t)$,
+    and gray curves show wind heating resulting from perturbed star
+    formation histories of the form of
+    equation~\eqref{sfrPerturbed}. In the top panel the star formation
+    rate declines for a time, $\delta t_*=10^{7}$ years to
+    fractions $\iota= 0.001$ (dashed), $\iota =0.1$ (dotted), and
+    $\iota = 0.3$ (dot-dashed) of the halo averaged value. The bottom
+    panel shows results for $\delta t_*=10^{8}$ years and
+    $\iota$=0.001 (dashed) and 0.1 (dotted).}
   \end{figure}
   We estimate the stellar wind heating provided by the {\it average}
   star formation history of galaxies of a given $\Mbh$ using the
@@ -211,13 +211,24 @@ Figure \ref{fig:NickPlot2} shows how the wind heating varies as star formation h
 \end{align}
 In these equations, 
 \begin{equation}
-\mathcal{S}(t) = S(t) \times \left(\frac{2}{\pi}(1-\iota)\arctan(t/\delta t_{\star}) + \iota \right).
+\mathcal{S}(t) = S(t) \times
+\left(\frac{2}{\pi}(1-\iota)\arctan(t/\delta t_{\star}) + \iota
+\right).
+\label{eq:sfrPerturbed}
 \end{equation}
-This function convolves the recent ($z \approx 0$) halo-averaged star formation history with local variation to give a more pessimistic estimate for the value of $\tilde{v}_{\rm w}$.  In particular, replacing $S(t)$ with $\mathcal{S}(t)$ reduces the recent star formation rate to a fraction $\epsilon$ of its halo-averaged value, and does so for a characteristic time $\delta t_{\star}$ into the past.  As we can see in Fig. \ref{fig:NickPlot2}, this dramatically lowers the effective wind speed when both $\delta t_{\star} \gtrsim 10^7 ~{\rm yr}$ and $\epsilon \lesssim 0.1$, but otherwise has too modest of an effect to change the thermal stability properties of the flow (although the location of $r_{\rm s}$ and the value of $\dot{M}$ may change significantly).
+This function convolves the recent ($z \approx 0$) halo-averaged star
+formation history with local variation to give a more pessimistic
+estimate for the value of $\tilde{v}_{\rm w}$.  In particular,
+replacing $S(t)$ with $\mathcal{S}(t)$ reduces the recent star
+formation rate to a fraction $\epsilon$ of its halo-averaged value,
+and does so for a characteristic time $\delta t_{\star}$ into the
+past.  As we can see in Fig. \ref{fig:NickPlot2}, this dramatically
+lowers the effective wind speed when both $\delta t_{\star} \gtrsim
+10^7 ~{\rm yr}$ and $\epsilon \lesssim 0.1$, but otherwise has too
+modest of an effect to change the thermal stability properties of the
+flow (although the location of $r_{\rm s}$ and the value of $\dot{M}$
+may change significantly).
 
- % Figure \ref{NickPlot2} shows the resulting $v_{\rm W}$ as a function of SMBH mass.  For comparison we also show cases in which the star formation rate is modulated sinuisoidally from its average value.   It seems that ``bumpy'' SF histories severely diminish $v_{\rm w}$ if the timescale for SF variability is a factor of a few or more greater than the duration of high-velocity winds (either 10 or 40 Myr). {\bf AG: this plot still uses the old ad hoc vw
-  % prescription? If so it would need to be fixed. In any case, we still
-  % differ in detail on the vw from stars}.  
 
 %%% Local Variables: 
 %%% mode: latex
