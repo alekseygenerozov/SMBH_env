@@ -1,9 +1,12 @@
 \documentclass[usenatbib,fleqn]{mn2e}
 
+
 \makeatletter
 \newlength{\abovecaptionskip}%
 \setlength{\abovecaptionskip}{10\p@}
 \makeatother
+%\renewcommand{\citeauthoryear}[3]{} 
+
 \usepackage{threeparttable}
 
 
@@ -104,19 +107,33 @@
 
 \begin{abstract}
   We calculate steady-state, one-dimensional hydrodynamic profiles of
-  hot gas in slowly accreting (``quiescent") galactic nuclei for a range of
-  central black hole masses $M_{\bullet}$, parameterized gas heating
-  rates, and observationally-motivated stellar density profiles.  Mass
-  is supplied to the circumnuclear medium by stellar winds, while gas
-  is heated primarily by stellar winds, supernovae, and black hole
-  feedback.  Analytic estimates are derived for the stagnation radius
-  (where the radial velocity of the gas passes through zero) and the
-  black hole accretion rate, $\dot{M}$, as a function of $M_{\bullet}$ and the gas heating efficiency, the latter being related to the star-formation history.  We assess the conditions under which radiative instabilities develop, separately in the case
-  of a single burst of star formation and for the average star formation history predicted by cosmological simulations for galaxies hosting black holes of a given mass.  By combining a sample of measured nuclear X-ray luminosities, $L_{X}$, of nearby quiescent galactic nuclei with our results for $\dot{M}(M_{\bullet})$ we show that most nuclei are consistent with accreting in a steady-state, thermally-stable manner.  However, thermally-stable accretion cannot explain the short average growth times of low mass black holes in the local universe, which must instead result from gas being fed in from
-  large radii, due either to galaxy mergers or thermal instabilities acting on larger, galactic scales.  Our results have implications for attempts to constrain the occupation fraction of SMBHs in low mass galaxies using the mean
-  $L_{\rm X}-M_{\bullet}$ correlation, as well as the predicted diversity of the
-  circumnuclear densities encountered by relativistic outflows from
-  tidal disruption events.
+  hot gas in slowly accreting (``quiescent") galactic nuclei for a
+  range of central black hole masses $M_{\bullet}$, parameterized gas
+  heating rates, and observationally-motivated stellar density
+  profiles.  Mass is supplied to the circumnuclear medium by stellar
+  winds, while gas is heated primarily by stellar winds, supernovae,
+  and black hole feedback.  Analytic estimates are derived for the
+  stagnation radius (where the radial velocity of the gas passes
+  through zero) and the black hole accretion rate, $\dot{M}$, as a
+  function of $M_{\bullet}$ and the gas heating efficiency, the latter
+  being related to the star-formation history.  We assess the
+  conditions under which radiative instabilities develop, separately
+  in the case of a single burst of star formation and for the average
+  star formation history predicted by cosmological simulations for
+  galaxies hosting black holes of a given mass.  By combining a sample
+  of measured nuclear X-ray luminosities, $L_{X}$, of nearby quiescent
+  galactic nuclei with our results for $\dot{M}(M_{\bullet})$ we show
+  that most nuclei are consistent with accreting in a steady-state,
+  thermally-stable manner.  However, thermally-stable accretion cannot
+  explain the short average growth times of low mass black holes in
+  the local universe, which must instead result from gas being fed in
+  from large radii, due either to galaxy mergers or thermal
+  instabilities acting on larger, galactic scales.  Our results have
+  implications for attempts to constrain the occupation fraction of
+  SMBHs in low mass galaxies using the mean $L_{\rm X}-M_{\bullet}$
+  correlation, as well as the predicted diversity of the circumnuclear
+  densities encountered by relativistic outflows from tidal disruption
+  events.
 \end{abstract}
 
 \begin{keywords}
@@ -2070,9 +2087,30 @@ We have calculated steady-state models for the hot gaseous circumnuclear media o
 
 \item Type Ia SNe only provide a continuous heating source exterior to the Ia radius $\rIa$ (eq.~[\ref{eq:rIa}]) where the time between subsequent SNe exceeds the dynamical timescale.  Non-Ia heating due to the average SFH results in $\rs <\rIa$, except for the most massive galaxies (Fig.~\ref{fig:vwSources}).  However, if $\rs$ does approach or exceed $\rIa$, then the SN Ia heating is usually sufficiently large to prevent $\rs$ from greatly exceeding $\rIa$.  SNe Ia thus regulates the SMBH accretion rate below the value $\dot{M}_{\rm Ia}$ (eq.~[\ref{eq:eddr_Ia}]), except possibly in high mass elliptical galaxies with large break radii and $\zeta(v_w^{\rm Ia}) \gtrsim \zeta_c$. 
 
-\item Heating from SMBH feedback, unlike stellar heating, depends on the SMBH accretion rate, which is itself a function of the heating rate.  Compton heating is generally unimportant compared to stellar wind heating for the average SFH, but it can dominate in the case of an impulsive star burst (Fig.~\ref{fig:vwSourcesImp}).  Although in principle Compton heating is sufficiently high to prevent thermal instabilities when acting alone, i.e. $\dot{M}_{C} \lesssim \dot{M}_{\rm TI}$ (Fig.~\ref{fig:bh_growth}), SMBH feedback may not however be capable of truly stabilizing the flow given its inability to respond instantaneously to local changes in the properties of the gas.  Kinetic feedback could also be important in determining $\dot{M}(M_{\bullet}$) when stellar heating is weak ($\S\ref{sec:kinetic}$) but is more challenging to quantify.
+\item Heating from SMBH feedback, unlike stellar heating, depends on
+  the SMBH accretion rate, which is itself a function of the heating
+  rate.  Compton heating is generally unimportant compared to stellar
+  wind heating for the average SFH, but it can dominate in the case of
+  an impulsive star burst (Fig.~\ref{fig:vwSourcesImp}).  Although in
+  principle Compton heating is sufficiently high to prevent thermal
+  instabilities when acting alone, i.e. $\dot{M}_{C} \lesssim
+  \dot{M}_{\rm TI}$ (Fig.~\ref{fig:bh_growth}), SMBH feedback may not
+  however be capable of truly stabilizing the flow given its inability
+  to respond instantaneously to local changes in the properties of the
+  gas.  Kinetic feedback could also be important in determining
+  $\dot{M}(M_{\bullet}$) when stellar heating is weak
+  ($\S\ref{sec:kinetic}$) but is more challenging to quantify.
 
-\item Stellar wind heating from the average SFH is sufficient to permit thermally-stable, steady-state accretion.  However, the resulting average Eddington-normalized accretion rate is predicted to increase weakly with $M_{\bullet}$ (Fig.~\ref{fig:miller}), in tension with the (also weak) downsizing trend of measured nuclear X-ray luminosities of early-type galaxies (e.g., \citealt{Miller+15}).  However, these differences may not be discriminating given the huge uncertainty in translating the predicted gas inflow rate on parsec scales to the disk X-ray luminosity.
+\item Stellar wind heating from the average SFH is sufficient to
+  permit thermally-stable, steady-state accretion.  However, the
+  resulting average Eddington-normalized accretion rate is predicted
+  to increase weakly with $M_{\bullet}$ (Fig.~\ref{fig:miller}), in
+  tension with the (also weak) downsizing trend of measured nuclear
+  X-ray luminosities of early-type galaxies (e.g.,
+  \citealt{Miller+15}).  However, these differences may not be
+  discriminating given the huge uncertainty in translating the
+  predicted gas inflow rate on parsec scales to the disk X-ray
+  luminosity.
 
 Thermally stable accretion models can reproduce the observed scatter in nuclear X-ray luminosities at fixed $\Mbh$ of 2-4 orders of magnitude due to combination of (1) intrinsic scatter in the SMBH scaling relations; (2) stochastic variation in SFH from galaxy to galaxy, or from time to time due to burstiness in the SFH (e.g.~\ref{fig:NickPlot2}); (3) Variations in the amount of inflowing mass which is lost to small scale outflows from the SMBH accretion disk, due to variations in the angular momentum of the accreting gas (e.g.~\citealt{Li+13}).
 
@@ -2090,26 +2128,56 @@ Thermally stable accretion models can reproduce the observed scatter in nuclear 
 
 \end{enumerate}
    
-%    Overall we conclude that for values of $\Mbh\lsim 10^{8} \Msun$,
- %   the observed nuclear x-ray luminosities in quiescent, early type
-  %  galaxies could be understood as coming from thermally stable
-   % steady-state accretion of stellar winds shed in the galactic
-    %nucleus.  
 
 We conclude by drawing attention to the following limitations of our model
     \begin{enumerate}
-    \item Overall the accretion rate onto the central SMBH will be strongly
-    tied to the properties of the stellar population (e.g. age) within
-    the sphere of influence of the black hole. Thus, our model cannot
-    say anything definitive about the mode accretion for individual
-    galaxies which may have significant variations about our assumed
-    average SFHs.
-    \item Also, the SFH of bulges may (and probably
-      does) systematically differ from the average star formation
-      history for galaxies as a whole.
-    \item Furthermore, there could be a radial gradient in the star
-      formation history within a given bulge... 
-     {\bf AG this section needs to be finished...}
+    \item We assume that there is no large scale inflow of gas to the
+      nucleus, and the only source of gas feeding the black hole is
+      stellar wind mass loss from the local stellar population. Thus,
+      our estimates of gas density are a lower bound on the nuclear
+      gas density {\bf AG: make sense?}.
+
+      As we have already pointed out AGN activity cannot be explained
+      by steady thermally stable accretion of mass lost from stellar
+      winds.
+
+    \item Overall the accretion rate onto the central SMBH will be
+      strongly tied to the properties of the stellar population
+      (e.g. age) within the sphere of influence of the black
+      hole. Thus, our model cannot say anything definitive about the
+      mode accretion for individual galaxies unless something is known
+      about their specific star formation history.
+
+    \item We adopt halo average star formation rates measured in
+      cosmological simulations by \citet{MosterNaab+:2013a}, and
+      neglect any spatial variation in the star formation rate for any
+      given galaxy. Galaxies with masses$\gsim 7\times 10^{10} \Msun$,
+      assemble their stars from the inside out
+      \citet{PerezCidFernandes+:2013a}
+      and so for a given halo mass
+      the galactic nucleus may be significantly older than in our
+      model and thus more prone to thermal instability.
+      
+      On the other hand, \citealt{LauerFaber+:2005a} find that $\sim
+      60\%$ of cusp galaxies and $\sim29\%$ of core galaxies have
+      (generally unresolved) emission in excess of the inward
+      extrapolation of the Nuker law, and noted that these nuclei are bluer
+      than the background galaxy starlight, suggesting the presence of
+      younger stars towards the center of the galaxy. 
+
+      In fact it is possible that the mass injection is in fact
+      dominated by a nuclear star cluster with a break radius on
+      parsec scales. Although this is much smaller than our fiducial
+      break radius (100 pc). If the heating is sufficiently high
+      moving the break radius inwards would merely change the outer
+      gas density profile, without changing the stagnation radius in
+      the flow and thus the accretion rate onto the black hole. Of
+      course if one moves the break radius to where the stagnation
+      radius would be the stagnation radius would move inwards
+      somewhat. However note the for high heating rate ($v_w \gsim 500
+      $ km/s and small black hole masses $\Mbh \lsim 10^7 \Msun$), we
+      predict stagnation radii smaller than a parsec. 
+    
     \end{enumerate}
   
 
