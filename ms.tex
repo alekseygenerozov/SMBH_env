@@ -586,7 +586,7 @@ Hydrostatic equilibrium likewise determines the value of the stagnation radius (
       8\Gamma}{4+2\Gamma}- \frac{3\nu}{2+\Gamma}\right]. 
 \label{eq:stag_analytic}
 \end{align}
-For low heating rates $v_w \ll \sigma_0$, the stagnation radius resides well inside the SMBH sphere of influence.  In this case $\Mstar|_{\rs}/\Mbh \ll1$, such that equation~\eqref{eq:stag_analytic} simplifies to
+For high heating rates $v_w \gg \sigma_0$, the stagnation radius resides well inside the SMBH sphere of influence.  In this case $\Mstar|_{\rs}/\Mbh \ll1$, such that equation~\eqref{eq:stag_analytic} simplifies to
 \begin{align}
   &\rs \underset{v_w \gtrsim \sigma_0}\approx
   \left(\frac{13+8\Gamma}{4+2\Gamma}-
@@ -608,7 +608,7 @@ stagnation radius moves to large radii, approaching the break radius
 $\rb$ in the stellar density profile, formally implying that almost the
 entire ISM of the galaxy is accreting.  In particular, in Appendix
 \ref{app:be} we show that $\rs \Rightarrow \rb$ for heating below a
-critical threshold \be \zeta\equiv \sqrt{1 + \frac{v_w}{\sigma_0}^2} <
+critical threshold (Fig.~\ref{fig:zetaCrit}) \be \zeta\equiv \sqrt{1 + \frac{v_w}{\sigma_0}^2} <
 \zeta_c \approx \left(\frac{\rb}{\rsoi}\right)^{0.5(1-\Gamma)}.
 \label{eq:zetacrit}
 \ee This result makes intuitive sense: gas is supplied to the nucleus
@@ -740,7 +740,7 @@ stellar density profile is approximated as (eq.~[\ref{eq:rhostar}])
 \end{eqnarray}
 where the stagnation radius is assume to reside well inside the Nuker
 break radius.  Equation (\ref{eq:conduction}) shows that, even when conduction is saturated, our neglect of heat conduction
-results in at most an order unity correction for plausible, causal values of
+results in at most an order unity correction for causal values of
 the saturation parameter $\phi < 0.1$.  Our numerical experiments which include conductive heating confirm this
 ($\S\ref{sec:numerical}$).
 
@@ -787,7 +787,7 @@ for the gas and stellar densities at the stagnation radius,
 respectively.  We have approximated the cooling function for $T <
 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
   \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$, which assumes solar
-metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).
+metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  
 
 To within a constant of order unity, equation (\ref{eq:cooling2}) also
 equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n
@@ -896,7 +896,7 @@ for the thermally-stable solutions of interest.
 is generally $< 0.1$ on radial scales $<$ 10 per cent of the galaxy
 half-light radius and that $\lambda_R$ decreases with decreasing $R$ interior to this point.  From equation (\ref{eq:rcirc}) we thus conclude that $r_{\rm
   circ} \lesssim 0.01r_{s}$, i.e.~that gas will circularize well
-inside the inner sonic point of the flow (typically located at $r\lsim
+inside the inner sonic point of the flow ($r\lsim
 0.1r_{\rm s}$; Fig.~\ref{fig:profiles}).  Angular momentum should only
 become dynamically important for thermally stable flows in a region
 that is causally disconnected from the outer part of the flow where
@@ -910,9 +910,7 @@ the mass accretion rate is determined.
 \begin{threeparttable}
 %\centering
 \begin{minipage}{18cm}
-  \caption{Summary of Numerical Solutions {\bf AG make sure the
-      headings are consistent. Mark solutions which are unstable for
-      some values of eta.}}
+  \caption{Summary of Numerical Solutions}
 \begin{tabular}{lccccccccc}
   \hline
   {$M_{\bullet}$} & {$v_{w}$} & {$r_b^{(b)}$} &   $r_{\rm s}/r_{\rm inf}$ &  {$\left(\frac{\dot{M}}{\dot{M}_{\rm edd}}\frac{\eta}{0.2}\right)_{r_{s}}^{(c)}$} &
@@ -1050,10 +1048,8 @@ profile that is somewhat steeper than the local free-fall velocity $v
 radius is subsonic, but becomes supersonic at two critical points, one
 located at small radii, $r \lesssim 0.1r_{\rm s}$, and the other
 located at large radii, $r \gtrsim 10^{3}r_{\rm s}$.  In many cases
-the supersonic transition is instigated by the transition to a steeper
-stellar density profile exterior to the outer Nuker break radius,
-making our solutions near $r_{\rm s}$ also potentially sensitive to
-the break radius value.
+the outer supersonic transition is instigated by the transition to a steeper
+stellar density profile exterior to the outer Nuker break radius.
 
 Figure~\ref{fig:stag} shows our calculation of the stagnation radius
 $r_{\rm s}/r_{\rm inf}$ as a function of the wind heating parameter
@@ -1076,7 +1072,7 @@ occurs approximately when $\zeta < \zeta_c \propto (r_b/r_{\rm
 bottom). 
 
 Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for a sample of
-our numerical solutions in Eddington units for different values of
+our numerical solutions for different values of
 $\vwO =$ 300, 600 and 1200 km s$^{-1}$, and for both core
 ($\Gamma$=0.1) and cusp galaxies ($\Gamma$=0.8).  Shown for comparison
 is our analytic estimate of $\dot{M}/\dot{M}_{\rm edd}$ from equation
@@ -1130,17 +1126,16 @@ function of radius (solid lines) for each of our solutions shown in
 Figure \ref{fig:profiles}.  Dashed lines show for comparison the ratio
 of the cooling to the free-fall timescale $t_{\rm cool}/t_{\rm ff}$.
 For high heating rates both ratios are approximately equal at the
-stagnation radius (marked as squares).  When $\dot{q}_{\rm
-heat}/\dot{q}_{\rm rad} \lesssim 1$ and/or $t_{\rm cool}/t_{\rm ff}
-\lesssim 10$, the flow is susceptible thermal instabilities.}
+stagnation radius (squares).  When $\dot{q}_{\rm
+heat}/\dot{q}_{\rm rad} \lesssim 10$ (or, equivalently, $t_{\rm cool}/t_{\rm ff}
+\lesssim 10$ near the stagnation radius), then the flow is susceptible to thermal instabilities.}
 \end{figure}
 
 
 Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative
 cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$
 (eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of
-radius for our fiducial solutions shown in Figure \ref{fig:profiles}.
-For high heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling
+radius for our fiducial solutions shown in Figure \ref{fig:profiles}.  Radiative cooling is calculated using the cooling function from \citealt{Draine:2011a}.  For high heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling
 is unimportant across all radii, while for $v_{w} = 300$ km s$^{-1}$
 we see that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ and $\tcool/\tff$
 can be less than unity, depending on the wind mass loss parameter
@@ -1156,7 +1151,9 @@ equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the true
 gas density, which is greater in a subsonic inflow (weak heating) than
 in a supersonic outflow (strong heating).
 
-In addition to our solutions which neglect thermal conduction and radiative cooling, we explore a smaller set of simulations including these effects explicitly, as marked by dagger symbols in Table \ref{table:models}.  For solutions which are far from being thermally unstable when cooling is neglected (e.g., $M_{\bullet} = 10^{8}M_{\odot}$, $v_{w} = 600$ km s$^{-1}$, $r_{b} = 100$ pc, $\eta = 0.2$, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| = 76$), the inclusion of radiative cooling has little effect on the key properties of the flow, e.g., stagnation radius, mass accretion rate, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$.  However, for solutions that are only marginally thermally stable, including radiative losses acts to decrease the value of $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ by a greater fractional amount.  We calculated solutions with radiative cooling for all cusp galaxies with $v_w=300$ km s$^{-1}$ and for all core galaxies with $v_w=600 $ km s$^{-1}$, each for three different values of $\eta = 0.02, 0.2, 0.6$, spanning the physical range of expected mass loss rates.  Solutions found to be unstable for all values of $\eta$ are marked in boldface as ``TI" in Table \ref{table:models}, with the unstable values of $\eta$ provided in the final column.  In contrast, changes in the solution when thermal conduction was included were always found to be minor for our choice of the saturation parameter $\phi = 0.1$.  Conduction does, however, offset the effects of radiative cooling, making the flow more thermally stable (e.g.~\citealt{Zakamska&Narayan03}).  
+In addition to our solutions which neglect thermal conduction and radiative cooling, we explore a smaller set of simulations including these effects explicitly, as marked by dagger symbols in Table \ref{table:models}.  For solutions which are far from being thermally unstable when cooling is neglected (e.g., $M_{\bullet} = 10^{8}M_{\odot}$, $v_{w} = 600$ km s$^{-1}$, $r_{b} = 100$ pc, $\eta = 0.2$, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| = 76$), the inclusion of radiative cooling has little effect on the key properties of the flow, e.g., stagnation radius, mass accretion rate, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$.  However, for solutions that are only marginally thermally stable, including radiative losses acts to decrease the value of $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ by a greater fractional amount.  We calculated solutions with radiative cooling for all cusp galaxies with $v_w=300$ km s$^{-1}$ and for all core galaxies with $v_w=600 $ km s$^{-1}$, each for three different values of $\eta = 0.02, 0.2, 0.6$, spanning the physical range of expected mass loss rates.  Solutions found to be unstable for all values of $\eta$ are marked in boldface as ``TI" in Table \ref{table:models}, with the unstable values of $\eta$ provided in the final column.  
+
+Thermal conduction, by contrast, results in only minor changes to our solutions for our fiducial value of the saturation parameter $\phi = 0.1$.  Conduction may, however, offset the effects of radiative cooling in making the flow more thermally stable (e.g.~\citealt{Zakamska&Narayan03}).  
 
 \section{Heating Sources}
 \label{sec:heating}
@@ -1179,13 +1176,12 @@ stellar population which is formed impulsively (Fig.~\ref{fig:vwImp}).
 At the earliest times ($\tau_{\star} \lesssim 10^{7}$ yr), the wind
 heating rate exceeds 1000 km s$^{-1}$, while much later ($\tau_{\star}
 \sim t_{\rm h}$) stellar wind heating dominated by main sequence winds
-is much lower, $v^{\star}_{\rm w} \sim 50-100 $ km s$^{-1}$.  As shown below in $\S\ref{sec:combined}$, for the case of quasi-continuous star
-formation (representative of the average SFHs of low
-mass galaxies), the stellar wind heating rate produced by stellar winds
-can also be significant, $v_{\rm w}^{\star} \sim 1000$ km s$^{-1}$.  
+is much lower, $v^{\star}_{\rm w} \sim 50-100 $ km s$^{-1}$.  As will be shown in $\S\ref{sec:combined}$, for the case of quasi-continuous star
+formation representative of the average SFHs of low
+mass galaxies, the heating rate from stellar winds can also be significant, $v_{\rm w}^{\star} \sim 1000$ km s$^{-1}$.  
 
 Stellar winds thus contribute a potentially important source of both
-energy and mass to the CNM.  An additional uncertainty results from the thermalization efficiency of massive stellar winds.  We assume this efficiency to be unity, an optimistic assumption which is partially offset by our neglect of energy input from core collapse supernovae, which contribute a heating rate comparable to that from massive stellar winds.  
+energy and mass to the CNM.  However, two additional uncertainties are (1) the efficiency with which massive stellar winds thermalize their energy and (2) heating from core collapse supernovae, which is potentially comparable to that provided by stellar winds.  We neglect both effects, but expect they will act in different directions in changing the total heating rate.  
 
 \subsection{Type Ia Supernovae} 
 
@@ -1304,7 +1300,7 @@ is usually sufficiently high to prevent the stagnation radius
 (calculated including the heating from SN Ia) from substantially
 exceeding $r_{\rm Ia}$. Stated another way, if the stagnation radius moves inwards from $\rIa$, then decreased heating will force it outwards again. However, if the stagnation radius moves well outside of $\rIa$, then the high level of Ia heating will force it inwards. 
 
-Our criterion for cooling instability given by equations \eqref{eq:cooling2} and ~\eqref{eq:Mdotmax} is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  However, by re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we find the ratio of heating to radiative cooling at $\rIa$ is given by
+Our criterion for cooling instability given by equations \eqref{eq:cooling2} and ~\eqref{eq:Mdotmax} is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  However, by re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we find the ratio of heating to radiative cooling at $\rIa$ to be given by
 \begin{align}
 \label{eq:heatingratioIa}
 &\left.\frac{\dot{q}_{\rm heat}}{\left|\dot{q}_{\rm rad}\right|}\right|_{\rIa}\simeq
@@ -1322,7 +1318,7 @@ Our criterion for cooling instability given by equations \eqref{eq:cooling2} and
   & \text{cusp}\\
 \end{cases}
 \end{align}
-Thus, for high mass galaxies and/or relatively old stellar populations, Ia heating is capable of preventing cooling instabilities on scales of the stagnation radius $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad})_{\rIa})$. However, for lower mass galaxies or younger stellar populations, Ia blow-out is by itself unlikely to prevent cooling instabilities.
+Thus, for high mass galaxies and/or relatively old stellar populations, Ia heating is capable of preventing cooling instabilities on scales of the stagnation radius, i.e. $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{\rIa} \gtrsim 10$. However, for lower mass galaxies or younger stellar populations, Ia blow-out cannot prevent cooling instabilities.
 
 
 %Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
@@ -1433,7 +1429,7 @@ C,9}^{-0.4} M_{\bullet,8}^{0.08}
   \end{cases}
   \label{eq:MdotC}
 \end{align}
-We note that accretion is unlikely to be steady in cases where AGN heating dominates, due to the inherent delay between black hole feedback and the structure of the accretion flow on larger scales.  
+We note that accretion is unlikely to be steady in cases where AGN heating dominates, due to the inherent delay between black hole feedback and the structure of the accretion flow on larger scales.   Equations (\ref{eq:MdotCa}), (\ref{eq:MdotC}) may nevertheless represent characteristic average value for the accretion rate, assuming a quasi-equilibrium state is achieved over many cycles.  
 %{\bf  Total efficiency is 10 (mdot/MdotEdd). Everywhere.}
 
 
@@ -1453,8 +1449,8 @@ j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
 heat}}\right)^{1-\Gamma/2},
 \label{eq:vjet}
 \end{eqnarray} 
-where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\star}(r) \propto
-M_{\bullet}(r/r_{\rm inf})^{2-\Gamma}$ (eq.~[\ref{eq:rhostar}]).  If the bulk of the outflow energy is released near the stagnation radius, then even a small heating efficiency $\epsilon_{\rm j} \gtrsim
+where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\star}(r) =
+M_{\bullet}(r/r_{\rm inf})^{2-\Gamma}$ (eq.~[\ref{eq:rhostar}]).  If the bulk of the energy from kinetic feedback is released near the stagnation radius, then even a small heating efficiency $\epsilon_{\rm j} \gtrsim
 10^{-5}$ is sufficient for $v_{w}^{\bullet}$ to exceed other sources of non-accretion powered heating.  However, if this energy is instead deposited over much larger physical scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then kinetic feedback is unimportant, even for a powerful jet with $\epsilon_{\rm j} \sim 0.1$.  
 
 The time required for a jet of luminosity $L_{\rm
@@ -1574,7 +1570,7 @@ resulting from its non-steady nature by setting $v_{w}^{\rm Ia} = 0$
 when the stagnation radius (calculated excluding Ia heating) exceeds
 the Ia radius $r_{\rm Ia}$ exterior to which the interval between
 subsequent supernovae exceeds the local dynamical time
-(eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$
+(eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and $v_{\rm w}^{\rm Ia}$
 depends on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us
 to simultaneously solve a series of implicit equations to determine
 each heating rate.  Heating from MSPs is found to be negligibly small
@@ -1604,7 +1600,7 @@ flow, given its inability to respond instantaneously to local changes
 in gas properties.  Thermally unstable flow is present
 throughout the single starburst case except at very early times,
 $\tau_{\star} \lesssim 10^7$ yr, and at late times $\tau_{\star}
-\gtrsim 10^{8}$ yr in the high $M_{\bullet}$ case.
+\gtrsim 10^{9}$ yr in the high $M_{\bullet}$ case.
 
 \subsubsection{Continuous SFH}
 A single burst of star formation does not describe the typical star
@@ -1629,7 +1625,7 @@ the average SFH of galaxies containing a given
 black hole mass.  The younger stellar populations characterizing galaxies
 with $\Mbh\lsim 3\times 10^{8} \Msun$ are dominated by stellar winds, with $v_{w}^{\star} \gtrsim 700$ km s$^{-1}$.  Only for $\Mbh\gsim 3\times 10^{8} \Msun$ does the lack
 of young stellar populations significantly reduce the role of stellar
-wind heating.  But for these massive galaxies, the Ia radius is sufficiently small for Ia heating to contribute a comparable level of heating, $v_{w}^{\rm Ia} \gtrsim 600$ km s$^{-1}$ (in low mass galaxies Ia heating does not contribute to the total heating rate because $r_{\rm Ia} > \rs$; bottom panel).  Strikingly, we find that galactic nuclei experiencing the same
+wind heating.  But for these massive galaxies, the Ia radius is sufficiently small for SN Ia to contribute a comparable level of heating, $v_{w}^{\rm Ia} \gtrsim 600$ km s$^{-1}$ (in low mass galaxies SN Ia do not contribute to the total heating rate because $r_{\rm Ia} > \rs$; bottom panel).  Strikingly, we find that galactic nuclei experiencing the same
   average SFH as their host galaxies produce thermally stable flows across almost all black hole masses.  
 
 An important caveat, however, is that $\vw$ is only a few times higher than the stellar velocity dispersion, i.e. $\zeta \sim \zeta_c$ (eq.~[\ref{eq:zetacrit}]).  This implies that the true stagnation radius and SMBH accretion rate could be larger than our analytic estimates, potentially resulting in thermal instability, especially for core galaxies with large break radii ($\S\ref{sec:mdot}$).
@@ -1673,8 +1669,8 @@ fiducial volumetric averages, calculated using SFHs from \citet{MosterNaab+:2013
 \caption{\label{fig:bh_growth} {\it Top panel:} Critical values of the
   black hole accretion rate $\dot{M}$ in Eddington units as a function
   of black hole mass $M_{\bullet}$, shown separately for core
-  ($\Gamma=0.1$, solid lines) and cusp galaxies ($\Gamma=0.8$,
-  dot-dashed lines).  Black lines show the accretion rate calculated
+  ($\Gamma=0.1$, dot-dashed) and cusp galaxies ($\Gamma=0.8$,
+  solid).  Black lines show the accretion rate calculated
   from equation (\ref{eq:eddr_analytic}) using our estimate of the gas
   heating rate provided at $z = 0$ by the average star formation
   histories for each galaxy mass (Fig.~\ref{fig:vwSources}).  Teal
@@ -1873,8 +1869,7 @@ stagnation radius that may underpredict the true accretion rate if
 $\zeta < \zeta_c$, as may occur in massive core galaxies with large
 break radii.  If the actual radiative efficiency is lower than our
 fiducial assumption, then many of the X-ray detections would lie above
-the predicted value of $\langle L_X \rangle$ for stable accretion
-(green line).  In this case the X-ray detected galaxies experience
+the predictions for stable accretion, i.e., $L_X \gtrsim \epsilon_X \dot{M}_{\rm TI}$ (yellow line).  In this case the X-ray detected galaxies experience
 less heating than average galaxies of the same mass, and may not be
 stably accreting at all.  This is particularly plausible because the
 \citet{Miller+15} sample includes only early-type galaxies, with older
