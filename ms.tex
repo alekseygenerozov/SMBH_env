@@ -366,15 +366,14 @@ $\nu$ & gas density power-law slope at the stagnation radius
 \label{sec:gal_model}
 \citet{LauerFaber+:2007a} use Hubble Space Telescope WFPC2 imaging to
 measure the radial surface brightness profiles for hundreds of nearby
-early type galaxies. The measured brightness profile is generally
-well-fit by a ``Nuker" law parameterization:
+early type galaxies. The measured profile is fit by a ``Nuker" law parameterization:
 \begin{equation}
   I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b},
 \end{equation}
 i.e., a broken power law that transitions from an inner power law
 slope, $\Gamma$, to an outer power law slope, $\beta$, at a
-break radius, $\rb$.  Assuming the stellar population is spherically
-symmetric, this corresponds to a stellar density $\rhostar \propto
+break radius, $\rb$.  If the stellar population is spherically
+symmetric, then this corresponds to a 3D stellar density $\rhostar \propto
 r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\propto r^{-1-\beta}$ for
 $r \gg \rb$.  We can write the deprojected stellar density approximately (formally, this is the $\alpha \rightarrow \infty$ limit) as
 \begin{align}
@@ -409,9 +408,7 @@ bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim
 We bracket these possibilities by considering models with $\Gamma=0.8$
 and $\Gamma=0.1$.  
 
-We fix $\beta = 2$ because our results are
-generally not sensitive to the properties of the gas flow on radial
-scales $\gtrsim r_b$. The presence of the break radius $r_{b}$ is,
+We fix $\beta = 2$ because our results are not overly sensitive to the properties of the gas flow on radial scales $\gtrsim r_b$. The presence of the break radius $r_{b}$ is,
 however, necessary to obtain a converged steady state for some regions
 of our parameter space.  We consider solutions calculated for up to
 four values of $\rb$: 50 pc, 100 pc, 200 pc, and 400 pc, motivated by
@@ -461,38 +458,31 @@ time $\tau_{\star}$ following an impulsive star burst (e.g.,
 \citealt{Ciotti+91})\footnote{\citet{Ciotti+91} give the mass return
   rate from evolved stars as a function of B-band luminosity instead
   of volumetrically, but our expressions are equivalent.}, although
-$\eta$ is significantly higher for continuous SFHss
+$\eta$ is significantly higher for continuous SFHs
 (bottom panel of Fig.~\ref{fig:vwSources}).
 
 Source terms $\propto q$ also appear in the momentum and entropy
 equations (eqs.~[\ref{eq:dvdt}] and [\ref{eq:dsdt}]) because the isotropic injection of mass represents, in the SMBH rest frame, a source of momentum
 and energy relative to the mean flow.  Physically, these result from
-the mismatch between the properties of virialized gas injected locally
-by stellar winds and the mean properties of the background flow.  The
-term $\propto -q c_{s}^{2}$ is important because it acts to potentially stabilize the flow against runaway cooling ($\S\ref{sec:instability}$).
+the mismatch between the properties of virialized gas injected by stellar winds and the mean background flow.  The
+term $\propto p/\rho = c_{s}^{2}$ is important because it acts to stabilize the flow against runaway cooling ($\S\ref{sec:instability}$).
 
 The term $\propto \vw^2 = \sigma(r)^2+v_{w}^2$ in the entropy equation
 accounts for external heating sources (e.g.,
-\citealt{ShcherbakovWong+:2014a}).  The first term approximates the
-minimum amount of shock heating from stellar winds due to the random
-movement of stars with respect to one another at the characteristic
-velocity of 
+\citealt{ShcherbakovWong+:2014a}), where
 \be\sigma \approx \sqrt{\frac{3 G \Mbh}{(\Gamma+2)
     r}+\sigma_0^2},
 \label{eq:sigmarel}
-\ee where the first term is the velocity dispersion of the power law
-stellar density profile in the SMBH potential.  The second term,
-$\sigma_0\approx 3 \sigma^2$ is a constant, motivated by the observed
+\ee 
+is the stellar velocity dispersion and which accounts for the minimal amount of shock heating from stellar winds due to the random motion of stars in the SMBH potential, while $\sigma_0^{2} \approx 3 \sigma^2$ is assumed to be constant, corresponding to the observed
 velocity dispersion outside of the SMBH sphere of influence
-\citep{ChaeBernardi+:2014a}, where $\sigma$ is the velocity dispersion
-in the $\Mbh-\sigma$ relation (eq.~[\ref{eq:Msigma}]).  The second
-component of the total heating, $v_{w}^{2}$, parameterizes all
-additional sources of energy input, including faster winds from young
-stars, millisecond pulsars, supernovae, AGN feedback, etc.  We assume
+\citep{ChaeBernardi+:2014a}.  The second term, $v_{w}^{2}$, parameterizes additional sources of energy input, including faster winds from young
+stars, millisecond pulsars, supernovae, AGN feedback, etc  ($\S\ref{sec:heating}$).  We assume
 that $v_w$ is constant with radius, i.e. that the volumetric heating
-rate is proportional to the local stellar density.  The value of $v_w$
-will in general depend on the SMBH mass and the age of the stellar
-population ($\S\ref{sec:heating}$).
+rate is proportional to the local stellar density.  
+%The value of $v_w$
+%will in general depend on the SMBH mass and the age of the stellar
+%population ($\S\ref{sec:heating}$).
 
 To isolate the physics of greatest interest, our baseline calculations
 neglects three potentially important effects: heat conduction,
