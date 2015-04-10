@@ -73,7 +73,7 @@
 
 \newcommand{\phirs}{\frac{G \Menc}{\rs}}
 \newcommand{\soi}{\rm inf}
-\newcommand{\rsoi}{r_{\soi}}
+\newcommand{\rinf}{r_{\rm inf}}
 \newcommand{\rIa}{r_{\rm Ia}}
 \newcommand{\EIa}{E_{\rm Ia}}
 \newcommand{\RateIa}{R_{\rm Ia}}
@@ -81,7 +81,7 @@
 
 \newcommand{\vwO}{v_{w}}
 \newcommand{\kewO}{\frac{\vwO^2}{2}}
-\newcommand{\x}{\frac{r_s}{\rsoi}}
+\newcommand{\x}{\frac{r_s}{\rinf}}
 \newcommand{\vwNorm}{\frac{\vwO}{\sigsoi}}
 \newcommand{\vwOFH}{v_{500}}
 \newcommand{\vwOFHexp}{\frac{\vwO}{500 \, {\rm km/s}}}
@@ -379,14 +379,14 @@ $r \gg \rb$.  We can write the deprojected stellar density approximately (formal
 \begin{align}
 \rho_\star = 
 \begin{cases}
-\rho_\star|_{\rsoi} \left(r/\rsoi\right)^{-1-\Gamma} & r \leq r_b\\
+\rho_\star|_{\rinf} \left(r/\rinf\right)^{-1-\Gamma} & r \leq r_b\\
 \rho_\star|_{r_b} \left(r/r_b\right)^{-1-\beta} & r > r_b,
 \label{eq:rhostar}
 \end{cases}
 \end{align}
-where $\rho_\star|_{\rsoi}$ is the stellar density at the radius of the black hole sphere of influence\footnote{This approximate expression agrees surprisingly well with the mean empirical scaling relation for $r_{\rm inf}(M_\bullet)$ calculated in Appendix C of \citet{Stone&Metzger15}, although we note that this relation has significant scatter.}, 
+where $\rho_\star|_{\rinf}$ is the stellar density at the radius of the black hole sphere of influence\footnote{This approximate expression agrees surprisingly well with the mean empirical scaling relation for $r_{\rm inf}(M_\bullet)$ calculated in Appendix C of \citet{Stone&Metzger15}, although we note that this relation has significant scatter.}, 
 \begin{equation}
-\rsoi \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
+\rinf \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
 \label{eq:rsoi}
 \end{equation}
 where $M_{\bullet,8} \equiv M_{\bullet}/10^{8}M_{\odot}$ and the
@@ -608,10 +608,15 @@ stagnation radius moves to large radii, approaching the break radius
 $\rb$ in the stellar density profile, formally implying that almost the
 entire ISM of the galaxy is accreting.  In particular, in Appendix
 \ref{app:be} we show that $\rs \Rightarrow \rb$ for heating below a
-critical threshold (Fig.~\ref{fig:zetaCrit}) \be \zeta\equiv \sqrt{1 + \frac{v_w}{\sigma_0}^2} <
-\zeta_c \approx \left(\frac{\rb}{\rsoi}\right)^{0.5(1-\Gamma)}.
+critical threshold (Fig.~\ref{fig:zetaCrit}) 
+
+\begin{equation} 
+\zeta\equiv \sqrt{1 + \frac{v_w}{\sigma_0}^2} <
+\zeta_c \approx \left(\frac{\rb}{\rinf}\right)^{0.5(1-\Gamma)}.
 \label{eq:zetacrit}
-\ee This result makes intuitive sense: gas is supplied to the nucleus
+\end{equation}
+
+This result makes intuitive sense: gas is supplied to the nucleus
 by stars which are gravitationally bound to the black hole, so
 outflows are possible only if the specific heating rate $\sim
 v_{w}^{2}$ significantly exceeds the specific gravitational binding
@@ -1090,16 +1095,19 @@ diverges to large radii (Fig.~\ref{fig:stag}).
   \caption{\label{fig:stag} Stagnation radius $r_{s}$ in units of the
     sphere of influence radius $r_{\rm inf}$ (eq.~[\ref{eq:rsoi}]) for
     galaxies in our sample as a function of the stellar wind heating
-    parameter $\zeta \equiv \sqrt{1+(v_w/\sigma_0)^{2}}$.
-    Green, orange, and blue symbols correspond to different values of
-    $v_{w} =$ 300, 600, and 1200 km s$^{-1}$, respectively.  Squares
+    parameter $\zeta \equiv \sqrt{1+(v_w/\sigma_0)^{2}}$.  Green,
+    orange, and blue symbols correspond to different values of $v_{w}
+    =$ 300, 600, and 1200 km s$^{-1}$, respectively.  Squares
     correspond to cusp galaxies ($\Gamma = 0.8$), while triangles
     correspond to cores ($\Gamma = 0.1$). Green circles correspond to
     cusp solutions which would be thermally unstable. The black curves
     correspond to the analytic prediction from equation
-    (\ref{eq:rs2main}), with solid and dashed curves calculated for
-    parameters $(\Gamma=0.8, \densSlope\simeq1)$ and
-    $(\Gamma=0.1,\densSlope\simeq0.6)$, respectively. }
+    (\ref{eq:rs2main}), with thick solid and dot-dashed curves
+    calculated for parameters $(\Gamma=0.8, \densSlope\simeq 1)$ and
+    $(\Gamma=0.1,\densSlope\simeq0.6)$, respectively. The thin black
+    solid line corresponds to the simplified analytic result for $\rs$
+    from equation~\eqref{eq:stag_simple} (recall that $\rinf \simeq 14
+    \Mbheight^{0.6} {\rm pc}$).}
 \end{figure}
 
 \begin{figure}
@@ -1111,10 +1119,14 @@ diverges to large radii (Fig.~\ref{fig:stag}).
     km s$^{-1}$ ({\it blue}).  Squares correspond to cusp galaxies
     ($\Gamma=0.8$), while triangles correspond to cores
     ($\Gamma$=0.1). Green circles correspond to cusp solutions which
-    would be thermally unstable.  Solid and dot-dashed curves correspond
-    to our analytic estimates of $\dot{M}/\dot{M}_{\rm edd}$
-    (eq.~[\ref{eq:eddr_analytic}]) for cusp and core galaxies,
-    respectively. }
+    would be thermally unstable.  Thin solid and dot-dashed curves
+    correspond to our analytic estimates of $\dot{M}/\dot{M}_{\rm
+      edd}$ (eq.~[\ref{eq:eddr_analytic}]) for cusp and core galaxies,
+    respectively. Equation ~[\ref{eq:eddr_analytic}] is derived from
+    the approximate analytic result for the stagnation radius given by
+    equation~\eqref{eq:stag_simple}. If we instead use the more
+    accurate result from equation~\eqref{eq:rs2main} we obtain the
+    thick curves.}
 \end{figure}
 
 
@@ -2009,9 +2021,16 @@ range estimated by modeling the radio afterglow of {\it Swift}
 J1644+57 (\citealt{Metzger+12}, \citealt{BergerZauderer+:2012a}), as shown in Fig.~\ref{fig:bh_growth}.
 
 \citet{BergerZauderer+:2012a} infer a flattening of the gas density
-profile of the host of J1644+57 on radial scales $r \gtrsim 0.4$ pc (their Fig.~6) which looks
-qualitatively similar to the shape density profile we predict for core
-galaxies (Fig.~\ref{fig:profiles}, solid line).  To obtain such a flattening on the inferred radial scales would require a black hole of $\Mbh\sim 10^7 \Msun$.  However,  this is inconsistent with the break in the gas density seen at $\sim 0.6$ pc by \citet{BergerZauderer+:2012a}, which should correspond to the break radius of the {\it stellar density} profile, thus implying an unrealistically small SMBH mass of $\Mbh\simeq 100\Msun$ according to the mean $r_b-M_{\bullet}$ relationship \citep{LauerFaber+:2007a}.  
+profile of the host of J1644+57 on radial scales $r \gtrsim 0.4$ pc
+(their Fig.~6) which looks qualitatively similar to the shape density
+profile we predict for core galaxies (Fig.~\ref{fig:profiles}, solid
+line).  To obtain such a flattening on the inferred radial scales
+would require a black hole of $\Mbh\sim 10^7 \Msun$.  However, this is
+inconsistent with the break in the gas density seen at $\sim 0.6$ pc
+by \citet{BergerZauderer+:2012a}, which should correspond to the break
+radius of the {\it stellar density} profile, thus implying an
+unrealistically small SMBH mass of $\Mbh\simeq 100\Msun$ according to
+the mean $r_b-M_{\bullet}$ relationship \citep{LauerFaber+:2007a}.
 
 Alternatively, the observed density break in J1644+57 could result from the outer edge of a sub-parsec nuclear star cluster (e.g., \citealt{Carson+15}).  The high stellar densities of such a compact star cluster could greatly enhance the TDE rate (e.g.~\citealt{Stone&Metzger15}), possibly making this association uncoincidental.
 
@@ -2049,24 +2068,38 @@ environment.  As already discussed, it is furthermore unclear whether a steady-s
 %However, although both radiative and kinetic feed-back process seem capable of producing sufficient heating to offset radiative cooling and prevent instability (e.g., $v_w \gtrsim v_{\rm TI}$; eq.~[\ref{eq:cooling3}]), this is somewhat misleading because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scale.  Thus, even if the AGN heating balances cooling on average, the flow may still experience limit cycle behavior in this case (\citealt{Yuan&Li11}).   
 
 
-%{\bf AG Challenge: Except in the most massive systems the jet duty
- % cycle is rather low (0.001-0.01). The jets tend to overheat the gas,
-  %and then periodically turn once the gas begins to cools
-  %(Refs). Thus, jets cannot be treated as a truly steady source of
-  %heating. 
-%}
-
 %\subsection{Jet Power Correlation}
 
-%Accretion rates onto SMBHs can in principle be estimated directly by assuming Bondi accretion and using high resolution X-ray observations to estimate the gas temperature and density near the Bondi radius.
-%This technique has led to the intriguing conclusion that the Bondi accretion power correlates with the AGN jet power (e.g.,
-%\citealt{AllenDunn+:2006a}; \citealt{Russell+13}; \citealt{FujitaKawakatu+:2014a}), the latter estimated from the energy
-%required to inflate the observed cavities within the X-ray emitting gas.  In practice is it almost never possible to resolve the Bondi radius, therefore requiring all such studies to extrapolate the observed gas temperature and density profiles to smaller radial scales.
+%Accretion rates onto SMBHs can in principle be estimated directly by
+% assuming Bondi accretion and using high resolution X-ray
+% observations to estimate the gas temperature and density near the
+% Bondi radius.  This technique has led to the intriguing conclusion
+% that the Bondi accretion power correlates with the AGN jet power
+% (e.g., \citealt{AllenDunn+:2006a}; \citealt{Russell+13};
+% \citealt{FujitaKawakatu+:2014a}), the latter estimated from the
+% energy required to inflate the observed cavities within the X-ray
+% emitting gas.  In practice is it almost never possible to resolve
+% the Bondi radius, therefore requiring all such studies to
+% extrapolate the observed gas temperature and density profiles to
+% smaller radial scales.
 
 \section{Conclusions}
 \label{sec:conclusions}
 
-We have calculated steady-state models for the hot gaseous circumnuclear media of quiescent galaxies, under the assumption that gas is supplied exclusively by stellar wind mass loss and heated by shocked stellar winds, supernovae and black hole feedback.  We compute solutions for a range of different black hole masses, heating rates, and observationally-motivated stellar density profiles.  Our numerical results (Table \ref{table:models}) are used to verify and calibrate analytic relationships (Appendix \ref{app:rs}, \ref{app:be}).  We use the latter to explore systematically how the SMBH accretion rate varies with black hole mass and the galaxy's SFH.  Our results for $\dot{M}(\Mbh)$ are compared with observed trends of the nuclear X-ray luminosities of quiescent SMBHs and low luminosity AGN.  They are also used to address key questions such as the thermal stability of the accretion flow.  Our conclusions are summarized as follows.
+We have calculated steady-state models for the hot gaseous
+circumnuclear media of quiescent galaxies, under the assumption that
+gas is supplied exclusively by stellar wind mass loss and heated by
+shocked stellar winds, supernovae and black hole feedback.  We compute
+solutions for a range of different black hole masses, heating rates,
+and observationally-motivated stellar density profiles.  Our numerical
+results (Table \ref{table:models}) are used to verify and calibrate
+analytic relationships (Appendix \ref{app:rs}, \ref{app:be}).  We use
+the latter to explore systematically how the SMBH accretion rate
+varies with black hole mass and the galaxy's SFH.  Our results for
+$\dot{M}(\Mbh)$ are compared with observed trends of the nuclear X-ray
+luminosities of quiescent SMBHs and low luminosity AGN.  They are also
+used to address key questions such as the thermal stability of the
+accretion flow.  Our conclusions are summarized as follows.
 
   \begin{enumerate}
   \item A stagnation radius, $\rs$, divides the nuclear gas between an accretion flow and an
