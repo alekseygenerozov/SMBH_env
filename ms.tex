@@ -804,7 +804,11 @@ respectively.  We have approximated the cooling function for $T <
   \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$, which assumes solar
 metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  Note that in
 our runs with radiative cooling we take $\Lambda(T)$ to be a piecewise
-function with $\Lambda = $. 
+function with $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
+  \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$ for $T\leq 2\times
+10^{7}$ K and $\Lambda = 2.3 \times 10^{-24} \left(T/10^6
+  \text{K}\right)^{0.5}$ for $T>2\times 10^{7}$ K.
+
 To within a constant of order unity, equation (\ref{eq:cooling2}) also
 equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n
 kT/2 \mu)/|\dot{q}_{\rm rad}|$ to the free-fall time $t_{\rm ff}$ at the
