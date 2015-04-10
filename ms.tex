@@ -1090,14 +1090,19 @@ break radius $r_b \gg r_{\rm inf}$.  This divergence occurs
 approximately when $\zeta < \zeta_c \propto (r_b/r_{\rm
   soi})^{0.5(\Gamma-1)}$ (eq.~[\ref{eq:zetacrit}]), which coincides
 with the Bernoulli parameter of the gas decreasing below unity near
-the stagnation radius (Appendix \ref{app:be}).  This divergence of the
-stagnation radius to large radii occurs at a higher value of $\zeta$
-in core galaxies ($\Gamma = 0.8$) with large break radii, explaining
-the behavior of the two core galaxies shown in Fig.~\ref{fig:stag} as
-vertically aligned orange triangles.  These solutions correspond to
-the same black hole mass ($\Mbh = 10^8 \Msun$) and heating rate ($v_w
-= 600$ km s$^{-1}$) but assume different break radii of $r_{b} =$ 25,
-50 pc (from top to bottom).
+the stagnation radius (Appendix \ref{app:be}).  Thus, for small values
+of the heating rate (small $\zeta$) the location of the stagnation
+radius will vary strongly with the break radius. This explains the
+behavior of the two vertically aligned green circles. These are two cusp
+($\Gamma=0.8$) galaxies with the $\Mbh=10^7 \Msun$ and $v_w=300$ km/s
+but with different break radii ($\rb=100, 400$ pc from top to
+bottom). This divergence of the stagnation radius to large radii
+occurs at a higher value of $\zeta$ in core galaxies ($\Gamma = 0.1$),
+explaining the behavior of the two core galaxies shown in
+Fig.~\ref{fig:stag} as vertically aligned orange triangles.  These
+solutions correspond to the same black hole mass ($\Mbh = 10^8 \Msun$)
+and heating rate ($v_w = 600$ km s$^{-1}$) but assume different break
+radii of $r_{b} =$ 25, 50 pc (from top to bottom).
 
 Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for a sample of
 our numerical solutions for different values of
@@ -1123,13 +1128,17 @@ diverges to large radii (Fig.~\ref{fig:stag}).
     =$ 300, 600, and 1200 km s$^{-1}$, respectively.  Squares
     correspond to cusp galaxies ($\Gamma = 0.8$), while triangles
     correspond to cores ($\Gamma = 0.1$). Green circles correspond to
-    cusp solutions which would be thermally unstable. The black curves
-    correspond to the analytic prediction from equation
-    (\ref{eq:rs2main}), with thick solid and dot-dashed curves
-    calculated for parameters $(\Gamma=0.8, \densSlope\simeq 1)$ and
-    $(\Gamma=0.1,\densSlope\simeq0.6)$, respectively. The thin black
-    solid line corresponds to the simplified analytic result for $\rs$
-    from equation~\eqref{eq:stag_simple} (recall that $\rinf \simeq 14
+    cusp solutions which would be thermally unstable. The green circle
+    with an upwards arrow corresponds to a lower bound--this is a
+    model for where we were not able to obtain a converged value for
+    the stagnation radius as it moves outwards when the outer boundary
+    is moved outwards. The black curves correspond to the analytic
+    prediction from equation (\ref{eq:rs2main}), with thick solid and
+    dot-dashed curves calculated for parameters $(\Gamma=0.8,
+    \densSlope\simeq 1)$ and $(\Gamma=0.1,\densSlope\simeq0.6)$,
+    respectively. The thin black solid line corresponds to the
+    simplified analytic result for $\rs$ from
+    equation~\eqref{eq:stag_simple} (recall that $\rinf \simeq 14
     \Mbheight^{0.6} {\rm pc}$).}
 \end{figure}
 
@@ -1142,9 +1151,13 @@ diverges to large radii (Fig.~\ref{fig:stag}).
     km s$^{-1}$ ({\it blue}).  Squares correspond to cusp galaxies
     ($\Gamma=0.8$), while triangles correspond to cores
     ($\Gamma$=0.1). Green circles correspond to cusp solutions which
-    would be thermally unstable.  Thin solid and dot-dashed curves
-    correspond to our analytic estimates of $\dot{M}/\dot{M}_{\rm
-      edd}$ (eq.~[\ref{eq:eddr_analytic}]) for cusp and core galaxies,
+    would be thermally unstable.  The green circle with an upwards
+    arrow corresponds to a lower bound--this is a model for where we
+    were not able to obtain a converged value for the stagnation
+    radius as it moves outwards when the outer boundary is moved
+    outwards.  Thin solid and dot-dashed curves correspond to our
+    analytic estimates of $\dot{M}/\dot{M}_{\rm edd}$
+    (eq.~[\ref{eq:eddr_analytic}]) for cusp and core galaxies,
     respectively. Equation ~[\ref{eq:eddr_analytic}] is derived from
     the approximate analytic result for the stagnation radius given by
     equation~\eqref{eq:stag_simple}. If we instead use the more
@@ -1690,14 +1703,31 @@ convolved with the Ia DTD distribution to determine the SN Ia heating.
 
 Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating
 source (stars, MSPs, SNe Ia, and black hole feedback) calculated for
-the average SFH of galaxies containing a given
-black hole mass.  The younger stellar populations characterizing galaxies
-with $\Mbh\lsim 3\times 10^{8} \Msun$ are dominated by stellar winds, with $v_{w}^{\star} \gtrsim 700$ km s$^{-1}$.  Only for $\Mbh\gsim 3\times 10^{8} \Msun$ does the lack
-of young stellar populations significantly reduce the role of stellar
-wind heating.  But for these massive galaxies, the Ia radius is sufficiently small for SN Ia to contribute a comparable level of heating, $v_{w}^{\rm Ia} \gtrsim 600$ km s$^{-1}$ (in low mass galaxies SN Ia do not contribute to the total heating rate because $r_{\rm Ia} > \rs$; bottom panel).  Strikingly, we find that galactic nuclei experiencing the same
-  average SFH as their host galaxies produce thermally stable flows across almost all black hole masses.  
+the average SFH of galaxies containing a given black hole mass.  The
+younger stellar populations characterizing galaxies with $\Mbh\lsim
+3\times 10^{8} \Msun$ are dominated by stellar winds, with
+$v_{w}^{\star} \gtrsim 700$ km s$^{-1}$.  Only for $\Mbh\gsim 3\times
+10^{8} \Msun$ does the lack of young stellar populations significantly
+reduce the role of stellar wind heating.  But for these massive
+galaxies, the Ia radius is sufficiently small for SN Ia to contribute
+a comparable level of heating, $v_{w}^{\rm Ia} \gtrsim 600$ km
+s$^{-1}$ (in low mass galaxies SN Ia do not contribute to the total
+heating rate because $r_{\rm Ia} > \rs$; bottom panel).  Strikingly,
+we find that galactic nuclei experiencing the same average SFH as
+their host galaxies produce thermally stable flows across almost all
+black hole masses.
 
-An important caveat, however, is that $\vw$ is only a few times higher than the stellar velocity dispersion, i.e. $\zeta \sim \zeta_c$ (eq.~[\ref{eq:zetacrit}]).  This implies that the true stagnation radius and SMBH accretion rate could be larger than our analytic estimates, potentially resulting in thermal instability, especially for core galaxies with large break radii ($\S\ref{sec:mdot}$).  In other words, the CNM of some subset of massive ellipticals be thermally unstable, not necessarily because they are receiving lower stellar feedback than the average for their galaxy mass, but due to the high heating required for stability given the structure of their stellar potential.  
+An important caveat, however, is that $\vw$ is only a few times higher
+than the stellar velocity dispersion, i.e. $\zeta \sim \zeta_c$
+(eq.~[\ref{eq:zetacrit}]).  This implies that the true stagnation
+radius and SMBH accretion rate could be larger than our analytic
+estimates, potentially resulting in thermal instability, especially
+for core galaxies with large break radii ($\S\ref{sec:mdot}$).  In
+other words, the CNM of some subset of massive ellipticals be
+thermally unstable, not necessarily because they are receiving lower
+stellar feedback than the average for their galaxy mass, but due to
+the high heating required for stability given the structure of their
+stellar potential.
 
 Realistic variations (``burstiness") in the SFH
 will also often produce lower stellar wind heating rates (Appendix
@@ -2240,22 +2270,45 @@ accretion flow.  Our conclusions are summarized as follows.
 \end{enumerate}
    
 
-We conclude by drawing attention to the following limitations of our model.  First, by neglecting any large scale inflow of gas to the nucleus and assuming the only source of gas feeding the black hole is stellar wind mass loss from the local stellar population, our estimates represent a lower bound on the gas density of the CNM.  Our model therefore cannot account for AGN.   
+We conclude by drawing attention to the following limitations of our
+model.  First, by neglecting any large scale inflow of gas to the
+nucleus and assuming the only source of gas feeding the black hole is
+stellar wind mass loss from the local stellar population, our
+estimates represent a lower bound on the time averaged gas density of
+the CNM.  Our model therefore cannot account for AGN.
 
-Predictions for the  SMBH accretion rate are strongly tied to the age and radial distribution of the stellar population within the sphere of influence.  Our model therefore cannot make definitive predictions for the accretion mode of individual galaxies without knowledge of their specific SFH.
-We adopt halo average star formation rates measured in cosmological simulations by \citet{MosterNaab+:2013a}, and neglect any spatial variation in the star formation rate for any given galaxy. However, galaxies of mass $\gsim 7\times 10^{10} \Msun$ assemble their stars from the inside out \citep{PerezCidFernandes+:2013a}, resulting in galactic nuclei which may be systematically older than assumed in our model and thus more prone to thermal instability.  
+Predictions for the SMBH accretion rate are strongly tied to the age
+and radial distribution of the stellar population within the sphere of
+influence.  Our model therefore cannot make definitive predictions for
+the accretion mode of individual galaxies without knowledge of their
+specific SFH.  We adopt halo average star formation rates measured in
+cosmological simulations by \citet{MosterNaab+:2013a}, and neglect any
+spatial variation in the star formation rate for any given
+galaxy. However, galaxies of mass $\gsim 7\times 10^{10} \Msun$
+assemble their stars from the inside out
+\citep{PerezCidFernandes+:2013a}, resulting in galactic nuclei which
+may be systematically older than assumed in our model and thus more
+prone to thermal instability.
 
-On the other hand, \citealt{LauerFaber+:2005a} find that $\sim
-      60\%$ of cusp galaxies and $\sim29\%$ of core galaxies have
-      (generally unresolved) emission in excess of the inward
-      extrapolation of the Nuker law.  They note that these nuclei are bluer
-      than the background galaxy starlight, suggesting the presence of
-      younger stars towards galactic center {\bf AG mass
-        threshold for this effect}.  Mass injection to the nucleus could in some cases therefore be dominated by a nuclear star cluster with its own break radius on parsec scales, i.e. much smaller than our fiducial value of $r_b \sim 100$ pc.  In the case of high heating, a smaller break radius does not appreciably change the stagnation radius, resulting in a similar SMBH accretion rate.  For break radii smaller than the nominal stagnation radius, the presence of a smaller break radius would likely decrease the stagnation radius and accretion rate.  
-%      be for large break radii, the stagnation radius would move
- %     inwards somewhat. However note the for high heating rate ($v_w
-  %    \gsim 500 $ km/s and small black hole masses $\Mbh \lsim 10^7
-   %   \Msun$), we predict stagnation radii smaller than a parsec.
+On the other hand, \citealt{LauerFaber+:2005a} find that $\sim 60\%$
+of cusp galaxies and $\sim29\%$ of core galaxies have (generally
+unresolved) emission in excess of the inward extrapolation of the
+Nuker law.  They note that these nuclei are bluer than the background
+galaxy starlight, suggesting the presence of younger stars towards
+galactic center. Nuclear star cluster could be important for small
+values of $M_{\rm bulge}\lsim 10^{11} \Msun$ ($\Mbh\lsim 2\times 10^8
+\Msun$), but are extremely subdominant for higher mass galaxies
+\citep{GrahamSpitler:2009a}.
+
+Mass injection to the nucleus could (for $\Mbh\lsim 2 \times 10^{8}
+\Msun$) therefore be dominated by a nuclear star cluster with its own
+break radius on parsec scales, i.e. much smaller than our fiducial
+value of $r_b \sim 100$ pc.  In the case of high heating, a smaller
+break radius does not appreciably change the stagnation radius,
+resulting in a similar SMBH accretion rate.  For break radii smaller
+than the nominal stagnation radius, the presence of a smaller break
+radius would likely decrease the stagnation radius and accretion rate.
+
     
 
 \section*{Acknowledgments}
