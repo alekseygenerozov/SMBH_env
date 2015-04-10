@@ -386,14 +386,14 @@ $r \gg \rb$.  We can write the deprojected stellar density approximately (formal
 \end{align}
 where $\rho_\star|_{\rinf}$ is the stellar density at the radius of the black hole sphere of influence\footnote{This approximate expression agrees surprisingly well with the mean empirical scaling relation for $r_{\rm inf}(M_\bullet)$ calculated in Appendix C of \citet{Stone&Metzger15}, although we note that this relation has significant scatter.}, 
 \begin{equation}
-\rinf \simeq G \Mbh/\sigma^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
+  \rinf \simeq G \Mbh/\sigma_{\bullet}^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
 \label{eq:rsoi}
 \end{equation}
 where $M_{\bullet,8} \equiv M_{\bullet}/10^{8}M_{\odot}$ and the
 second equality in (\ref{eq:rsoi}) employs the $\Mbh-\sigma$
 relationship of \citet{McConnellMa+:2011a},
  \begin{align}
-M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma}{200\,{\rm
+M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma_{\bullet}{200\,{\rm
       km\,s^{-1}}}\right)^{5.1}M_{\odot}.
 \label{eq:Msigma}
 \end{align}
@@ -470,16 +470,26 @@ term $\propto p/\rho = c_{s}^{2}$ is important because it acts to stabilize the 
 The term $\propto \vw^2 = \sigma(r)^2+v_{w}^2$ in the entropy equation
 accounts for external heating sources (e.g.,
 \citealt{ShcherbakovWong+:2014a}), where
-\be\sigma \approx \sqrt{\frac{3 G \Mbh}{(\Gamma+2)
+
+\begin{equation}
+\sigma \approx \sqrt{\frac{3 G \Mbh}{(\Gamma+2)
     r}+\sigma_0^2},
 \label{eq:sigmarel}
-\ee 
-is the stellar velocity dispersion and which accounts for the minimal amount of shock heating from stellar winds due to the random motion of stars in the SMBH potential, while $\sigma_0^{2} \approx 3 \sigma^2$ is assumed to be constant, corresponding to the observed
-velocity dispersion outside of the SMBH sphere of influence
-\citep{ChaeBernardi+:2014a}.  The second term, $v_{w}^{2}$, parameterizes additional sources of energy input, including faster winds from young
-stars, millisecond pulsars, supernovae, AGN feedback, etc  ($\S\ref{sec:heating}$).  We assume
-that $v_w$ is constant with radius, i.e. that the volumetric heating
-rate is proportional to the local stellar density.  
+\end{equation}
+
+is the stellar velocity dispersion and which accounts for the minimal
+amount of shock heating from stellar winds due to the random motion of
+stars in the SMBH potential. We take $\sigma_0$ to be constant and use
+$\sigma_0^{2} \approx 3 \sigma_{\bullet}^2$, where
+$\sigma_{\bullet}\simeq 170 \Mbheight^{0.2}$ km/s is the velocity
+dispersion from the \citet{McConnellMa+:2011a} $\Mbh-\sigma$
+relation. 
+% \citep{ChaeBernardi+:2014a}
+.  The second term, $v_{w}^{2}$, parameterizes additional sources of
+energy input, including faster winds from young stars, millisecond
+pulsars, supernovae, AGN feedback, etc ($\S\ref{sec:heating}$).  We
+assume that $v_w$ is constant with radius, i.e. that the volumetric
+heating rate is proportional to the local stellar density.
 %The value of $v_w$
 %will in general depend on the SMBH mass and the age of the stellar
 %population ($\S\ref{sec:heating}$).
@@ -639,7 +649,7 @@ The accretion rate onto the SMBH is given by the total mass loss rate interior t
   \end{cases}
   \label{eq:mdot_analytic}
 \end{eqnarray}
-where we have assumed $v_{w} \gg \sigma$ by adopting equation
+where we have assumed $v_{w} \gg \sigma_0$ by adopting equation
 (\ref{eq:stag_simple}) for $r_s$.  The resulting Eddington ratio is
 given by
 \begin{eqnarray}
@@ -893,7 +903,7 @@ correlation derived from the results of \citet{LauerFaber+:2007a}.
 \label{eq:rcirc}
 \end{equation}
 where we have used the definition $r_{\rm inf} \equiv
-GM_{\bullet}/\sigma^{2}$ and in the second inequality have assumed
+GM_{\bullet}/\sigma_{\bullet}^{2}$ and in the second inequality have assumed
 that $r_{\rm s} \lesssim r_{\rm inf}$, a condition which is satisfied
 for the thermally-stable solutions of interest.
 
@@ -924,7 +934,7 @@ the mass accretion rate is determined.
   $\eta$'s  \\
   ($M_{\odot}$) & (km s$^{-1}$) & (pc) &- & - & - &  & \\ 
   \hline
-  & & & Cusp Galaxies, $\Gamma^{(a)} = 0.8$ & & & & & \\
+ Cusp Galaxies, $\Gamma^{(a)} = 0.8$ & & & & & & & & \\
   $    10^{ 6 }$ & 300 & -- & 0.12 & $ 5.1 \times 10^{ -5 }$ & 28 \\
 ... & 600 & -- & $ 3.2 \times 10^{ -2 }$ & $ 1.0 \times 10^{ -5 }$ & $ 1.9 \times 10^{ 3 }$ \\
 ... & 1200 & -- & $ 7.9 \times 10^{ -3 }$ & $ 1.8 \times 10^{ -6 }$ & $ 7.7 \times 10^{ 4 }$ \\
@@ -958,7 +968,7 @@ $    10^{ 8 }$ & 300 & 25 & 0.69 & $ 4.2 \times 10^{ -4 }$ & 5.5 & 0.6\\
 ... & ... & 400 & 0.23 & $ 1.1 \times 10^{ -4 }$ & $ 1.5 \times 10^{ 2 }$ \\
 ... & 1200 & 100 & $ 5.0 \times 10^{ -2 }$ & $ 1.8 \times 10^{ -5 }$ & $ 8.3 \times 10^{ 3 }$ \\
 \hline
-& & & Core Galaxies, $\Gamma = 0.1$ & & & & & & \\
+Core Galaxies, $\Gamma = 0.1$  &  & & & & & & & & \\
 $    10^{ 6 }$ & 600 & 25 & $ 9.4 \times 10^{ -2 }$ & $ 7.4 \times 10^{ -6 }$ & $ 1.1 \times 10^{ 2 }$ \\
 ... & 1200 & -- & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
 % ... & ... & 50 & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
@@ -1245,7 +1255,7 @@ evolution time of the flow at the radius of interest
     Ia})^{-1} \sim G/(r\sigma_0^{2}R_{\rm Ia})$ exceeds the local
   dynamical timescale $t_{\rm dyn} \sim r/\sigma_0$, where we again
   adopt the Ia rate for an old stellar population and in the final
-  equality we estimate $\sigma_0 \approx \sqrt{3}\sigma$ using $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
+  equality we estimate $\sigma_0 \approx \sqrt{3}\sigma_{\bullet}$ using $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
 
 Assuming that $v_{w}^{\rm Ia} \gg \sigma$ then by substituting
 $v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into equation (\ref{eq:stag_simple})
