@@ -712,7 +712,7 @@ unity.
 Equation (\ref{eq:mdot_gas}) closely resembles the Bondi formula (eq.~[\ref{eq:bondi}]) provided that $r_{\rm B}$ is replaced by $\rs$.  Indeed, for $r_{s} < r_{\rm inf}$ we have that (eq.~[\ref{eq:stag_simple}])
 \begin{align}
   \rs\approx\frac{13+8\Gamma}{4+2\Gamma}\frac{G \Mbh}{\densSlope
-    \vw^2} \approx \frac{13+8\Gamma}{12+6\Gamma}r_{\rm B},
+    \vw^2} \approx 2 \frac{13+8\Gamma}{(4+2\Gamma)(3+4\Gamma)}r_{\rm B},
   \label{eq:rbondi}
 \end{align}
 where the second equality makes use of equation (\ref{eq:Tanalytic}).  
@@ -1221,8 +1221,14 @@ energy and mass to the CNM.  However, two additional uncertainties are (1) the e
 
 \subsection{Type Ia Supernovae} 
 
-Type Ia SNe represent a source of heating, which unlike core collapse SNe is present even in an evolved stellar population.  If each SN Ia injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and the SN rate per stellar mass is given by $R_{\rm   Ia}$, then the resulting volumetric heating rate of $E_{\rm Ia}R_{\rm  Ia}$ produces an effective heating parameter (eq.~[\ref{eq:vw_eff}]) of \begin{align} v_{w}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia}
-E_{\rm Ia}}{\eta}} \label{eq:vw_sne}.
+Type Ia SNe represent a source of heating, which unlike core collapse
+SNe is present even in an evolved stellar population.  If each SN Ia
+injects thermal energy $E_{\rm Ia}$ into the interstellar medium, and
+the SN rate per stellar mass is given by $R_{\rm Ia}$, then the
+resulting volumetric heating rate of $E_{\rm Ia}R_{\rm Ia}$ produces
+an effective heating parameter (eq.~[\ref{eq:vw_eff}])
+of \begin{align} v_{w}^{\rm Ia} =\sqrt{\frac{2 t_h R_{\rm Ia} E_{\rm
+        Ia}}{\eta}} \label{eq:vw_sne}.
 \end{align} The thermal energy injected by each SN Ia, $E_{\rm Ia} \simeq
 \epsilon_{\rm Ia} 10^{51}$ erg, depends on the efficiency $\epsilon_{\rm Ia}$
 with which the initial blast wave energy is converted into bulk or turbulent
@@ -1232,11 +1238,15 @@ depending weakly on surrounding density, but \citet{Sharma+14} argues
 that $\epsilon_{\rm Ia}$ can be considerably higher, $\sim 0.4$, if
 the SNe occur in a hot dilute medium, as may characterize the circumnuclear medium.  Hereafter we adopt $\epsilon_{\rm Ia} = 0.4$ as fiducial.
 
-The SN Ia rate, $\RateIa$, depends on the age of the stellar population, as it represent the convolution of the star formation rate and the Ia delay time distribution (DTD) divided by the present stellar mass.  In
-the limit of impulsive star formation, $\RateIa$ is the DTD evaluated at the time since the star formation episode.  The observationally-inferred DTD (Fig. 1 of \citealt{MaozMannucci+:2012a}) has the
-approximate functional form \begin{align}
-  R_{\rm Ia} =1.7\times 10^{-14}\left(\tau_{\star}/t_{\rm
-      h}\right)^{-1.12} M_{\odot}^{-1}\,{\rm yr^{-1}}
+The SN Ia rate, $\RateIa$, depends on the age of the stellar
+population, as it represent the convolution of the star formation rate
+and the Ia delay time distribution (DTD) divided by the present
+stellar mass.  In the limit of impulsive star formation, $\RateIa$ is
+the DTD evaluated at the time since the star formation episode.  The
+observationally-inferred DTD (Fig. 1 of \citealt{MaozMannucci+:2012a})
+has the approximate functional form \begin{align} R_{\rm Ia}
+  =1.7\times 10^{-14}\left(\tau_{\star}/t_{\rm h}\right)^{-1.12}
+  M_{\odot}^{-1}\,{\rm yr^{-1}}
 \label{eq:DTD}
   \end{align}
   where $\tau_{\star}$ is the time since star formation.
@@ -1251,7 +1261,9 @@ From equations (\ref{eq:vw_sne}), (\ref{eq:DTD}) we thus estimate that
       \,s^{-1}},
 \label{eq:vIa}
   \end{eqnarray}
-where the second line assumes $\eta\simeq 0.02 (\tau_{\star}/t_h)^{-1.3}$ for a single burst of star formation (e.g. , \citealt{Ciotti+91}).
+  where the second line assumes $\eta\simeq 0.02
+  (\tau_{\star}/t_h)^{-1.3}$ for a single burst of star formation
+  (e.g. , \citealt{Ciotti+91}).
 
 The high value of $v_{w}^{\rm Ia}$ implies that Ia SNe represent an
 important source of CNM heating.  However, SNe can only be
@@ -1261,7 +1273,7 @@ evolution time of the flow at the radius of interest
 (\citealt{ShcherbakovWong+:2014a}).  We define the ``Ia radius"
   \begin{align}
     r_{\rm Ia} \sim \left(\frac{G}{R_{\rm Ia}\sigma_0}\right)^{1/2} \sim
-    29 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
+    35 M_{\bullet,8}^{-0.1}(\tau_{\star}/t_{\rm h})^{0.56}\,{\rm pc}
     \label{eq:rIa}
   \end{align}
   as the location exterior to which the time interval between
@@ -1269,7 +1281,8 @@ evolution time of the flow at the radius of interest
     Ia})^{-1} \sim G/(r\sigma_0^{2}R_{\rm Ia})$ exceeds the local
   dynamical timescale $t_{\rm dyn} \sim r/\sigma_0$, where we again
   adopt the Ia rate for an old stellar population and in the final
-  equality we estimate $\sigma_0 \approx \sqrt{3}\sigma_{\bullet}$ using $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
+  equality we estimate $\sigma_0 \approx \sqrt{3}\sigma_{\bullet}$
+  using $M_{\bullet}-\sigma$ (eq.~[\ref{eq:Msigma}]).
 
 Assuming that $v_{w}^{\rm Ia} \gg \sigma_0$ then by substituting
 $v_{w}^{\rm Ia}$ (eq.~\ref{eq:vIa}) into equation (\ref{eq:stag_simple})
@@ -1296,15 +1309,16 @@ a steady heating source near the stagnation radius for extremely
 massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or for a very
 young stellar population ($\tau_{\star} \ll t_{\rm h}$).
 
-However, even if SN Ia are rare near the stagnation radius, SN Ia may cap the
-SMBH accretion rate by periodically blowing gas out of the nucleus of
-low mass galaxies.  Between successive SNe, stars release a
+However, even if SN Ia are rare near the stagnation radius, SN Ia may
+cap the SMBH accretion rate by periodically blowing gas out of the
+nucleus of low mass galaxies.  Between successive SNe, stars release a
 gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$
-interior to the Ia radius, which is locally gravitationally bound to the SMBH
-by an energy $E_{\rm bind} \sim M_{\rm g}\sigma_0^{2}\mathcal{F}^{2}$, where typically $\mathcal{F} 
-\lesssim$ few.  From the above definitions we find that 
-\be
-\frac{E_{\rm Ia}}{E_{\rm bind}} \sim \frac{(v_{w}^{\rm Ia})^{2}}{2\mathcal{F}^{2}\sigma_0^{2}}.  
+interior to the Ia radius, which is locally gravitationally bound to
+the SMBH by an energy $E_{\rm bind} \sim M_{\rm
+  g}\sigma_0^{2}\mathcal{F}^{2}$, where typically $\mathcal{F}
+\lesssim$ few.  From the above definitions we find that \be
+\frac{E_{\rm Ia}}{E_{\rm bind}} \sim \frac{(v_{w}^{\rm
+    Ia})^{2}}{2\mathcal{F}^{2}\sigma_0^{2}}.
 \label{eq:blowout}
 \ee
 Hence, for low mass BHs with $\sigma_0 \ll v^{\rm Ia}_{w}$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Even when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is still potentially limited to a value
