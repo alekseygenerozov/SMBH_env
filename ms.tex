@@ -262,9 +262,7 @@ temporarily increase the gas accretion rate towards the nucleus until
 feedback becomes strong enough to shut off the flow and halt
 SMBH growth.  
 
-Between outbursts \citealt{Ciotti+10} find that galactic nuclei exist
-in a quasi-stationary thermal stable state. We focus on this region of
-parameter space calculating time-independent models, in which the
+In the this paper we focus on time-independent models, in which the
 nuclear gas receives sufficient heating to render radiative cooling
 negligible.  This approach allows us to systematically explore the
 relevant parameter space and to derive analytic expressions that prove
@@ -274,10 +272,9 @@ other (non-AGN) forms of feedback can produce a prolonged state of
 steady, thermally stable accretion.  Even if cooling instabilities
 develop on galactic scales over longer $\sim$ Gyr timescales, a quasi
 steady-state may exist between these inflow events on smaller radial
-scales comparable to the sphere of influence.  We are thus motivated
-to explore whether such steady flows are generally expected within the
-nucleus, or whether in most galaxies the nuclear gas content is always
-building towards instability.
+scales comparable to the sphere of influence.  We note that
+\citealt{Ciotti+10} find that between outbursts gas may exist in a
+quasi-steady state {\bf AG reworded}.
 
 In the presence of strong heating, one-dimensional steady-state flow
 is characterized by an inflow-outflow structure, with a critical
@@ -292,7 +289,7 @@ radius may move to much larger radii or not exist at all, in which
 case nearly the entire ISM of the galaxy is flowing towards the SMBH.
 Here we assess under what conditions a stagnation
 radius exists, a question intimately tied to that of cooling
-instability. {\bf AG this section still needs work...}
+instability. 
 
 
 This paper is organized as follows.  In $\S\ref{sec:model}$ we
@@ -377,11 +374,13 @@ early type galaxies. The measured profile is fit by a ``Nuker" law parameterizat
   I(\xi)=I_b 2^{(\beta-\Gamma)/\alpha} \xi^{-\Gamma} (1+\xi^\alpha)^{-(\beta-\Gamma)/\alpha}, \,\,\,\xi\equiv\frac{r}{r_b},
 \end{equation}
 i.e., a broken power law that transitions from an inner power law
-slope, $\Gamma$, to an outer power law slope, $\beta$, at a
-break radius, $\rb$.  If the stellar population is spherically
-symmetric, then this corresponds to a 3D stellar density $\rhostar \propto
+slope, $\Gamma$, to an outer power law slope, $\beta$, at a break
+radius, $\rb$.  If the stellar population is spherically symmetric,
+then this corresponds to a 3D stellar density $\rhostar \propto
 r^{-1-\Gamma}$ for $r \ll \rb$ and $\rhostar\propto r^{-1-\beta}$ for
-$r \gg \rb$.  We can write the deprojected stellar density approximately (formally, this is the $\alpha \rightarrow \infty$ limit) as
+$r \gg \rb$.  We can write the deprojected stellar density
+approximately (formally, this is the $\alpha \rightarrow \infty$
+limit) as
 \begin{align}
 \rho_\star = 
 \begin{cases}
@@ -390,7 +389,12 @@ $r \gg \rb$.  We can write the deprojected stellar density approximately (formal
 \label{eq:rhostar}
 \end{cases}
 \end{align}
-where $\rho_\star|_{\rinf}$ is the stellar density at the radius of the black hole sphere of influence\footnote{This approximate expression agrees surprisingly well with the mean empirical scaling relation for $r_{\rm inf}(M_\bullet)$ calculated in Appendix C of \citet{Stone&Metzger15}, although we note that this relation has significant scatter.}, 
+where $\rho_\star|_{\rinf}$ is the stellar density at the radius of
+the black hole sphere of influence\footnote{This approximate
+  expression agrees surprisingly well with the mean empirical scaling
+  relation for $r_{\rm inf}(M_\bullet)$ calculated in Appendix C of
+  \citet{Stone&Metzger15}, although we note that this relation has
+  significant scatter.},
 \begin{equation}
   \rinf \simeq G \Mbh/\sigma_{\bullet}^2 \approx 14 M_{\bullet,8}^{0.6}\,{\rm pc},
 \label{eq:rsoi}
@@ -403,7 +407,9 @@ M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma_{\bullet}}{200\,{\rm
       km\,s^{-1}}}\right)^{5.1}M_{\odot}.
 \label{eq:Msigma}
 \end{align}
-Though of questionable validity for low mass black holes (e.g., \citealt{Greene&Ho07}), we adopt equation (\ref{eq:Msigma}) for lack of an obviously better alternative.
+Though of questionable validity for low mass black holes (e.g.,
+\citealt{Greene&Ho07}), we adopt equation (\ref{eq:Msigma}) for lack
+of an obviously better alternative.
 
 A galaxy model is fully specified by four parameters: $\Mbh$,
 $\Gamma$, $r_b$, and $\beta$.  We compute models for three different
@@ -414,21 +420,32 @@ bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim
 We bracket these possibilities by considering models with $\Gamma=0.8$
 and $\Gamma=0.1$.  
 
-We fix $\beta = 2$ because our results are not overly sensitive to the properties of the gas flow on radial scales $\gtrsim r_b$. The presence of the break radius $r_{b}$ is,
-however, necessary to obtain a converged steady state for some regions
-of our parameter space.  We consider solutions calculated for up to
-four values of $\rb$: 50 pc, 100 pc, 200 pc, and 400 pc, motivated by
-the range of break radii from the \citet{LauerFaber+:2007a}
-sample.\footnote{For the core galaxies the break radius follows the
-  scaling relationship $\rb\sim 106 \, (\Mbheight)^{0.39}$ pc, with
-  scatter of approximately one dex.  Most the cusp galaxies have $\rb$
-  between 100 and 1000 pc, and lack a clear trend with $\Mbh$.}  In
-practice we calculate solutions for a range of $\rb$ only in cases
-when its precise value is expected to have a significant affect on the
-solution, in particular for high SMBH masses and low heating rates,
-for which the stagnation radius approaches large radii. We also
-neglect value of $r_b$ which would give unphysically large bulges for
-a given $\Mbh$.
+We fix $\beta = 2$ because our results are not overly sensitive to the
+properties of the gas flow on radial scales $\gtrsim r_b$ {\bf AG:
+  beta=1 could be problematic for low heating rates}. The presence of
+the break radius $r_{b}$ is, however, necessary to obtain a converged
+steady state for some regions of our parameter space.  We consider
+solutions calculated for up to four values of $\rb$: 50 pc, 100 pc,
+200 pc, and 400 pc, motivated by the range of break radii from the
+\citet{LauerFaber+:2007a} sample.\footnote{For the core galaxies the
+  break radius follows the scaling relationship $\rb\sim 106 \,
+  (\Mbheight)^{0.39}$ pc, with scatter of approximately one dex.  Most
+  the cusp galaxies have $\rb$ between 100 and 1000 pc, and lack a
+  clear trend with $\Mbh$.}  In practice we calculate solutions for a
+range of $\rb$ only in cases when its precise value is expected to
+have a significant affect on the solution, in particular for high SMBH
+masses and low heating rates, for which the stagnation radius
+approaches large radii. We also neglect values of $r_b$ which would
+give unphysically large bulges for a given $\Mbh$.
+
+For low mass galaxies, nuclear star clusters $\Mbh\lsim 2\times 10^8
+\Msun$ may be present \citep{GrahamSpitler:2009a}.  Mass injection to
+the nucleus could (for $\Mbh\lsim 2 \times 10^{8} \Msun$) therefore be
+dominated by a nuclear star cluster with its own break radius on
+parsec scales, i.e. much smaller than our fiducial value of $r_b \sim
+100$ pc. However, for high heating rates the stagnation radius is not
+sensitive to the location of the break radius, and out models could
+also describe the accretion rate in the case of a nuclear star cluster.
 
 
 \subsection{Hydrodynamic Equations}
@@ -439,17 +456,20 @@ Following \citet{Quataert:2004a} (see also
 we calculate the density $\rho$, temperature $T$, and radial velocity
 $v$ of the CNM for each galaxy model by solving the equations of
 one-dimensional, time-dependent hydrodynamics,
+
 \begin{align}
   &\drhodt+\frac{1}{r^2}\frac{\partial}{\partial r}\left(\rho r^2 v\right)=q \label{eq:drhodt}\\
   &\rho \left(\frac{\partial v}{\partial t} + v\frac{\partial
       v}{\partial r}\right) =-\frac{\partial p}{\partial r}- \rho\frac{GM_{\rm enc}}{r^{2}} -q v \label{eq:dvdt}\\
   &\rho T\left(\frac{\partial s}{\partial t} + v\frac{\partial
-      s}{\partial r}\right)=q\left[\ke+\kew-\gammaf \cs \right] 
-, 
+      s}{\partial r}\right)=q\left[\ke+\kew-\gammaf \cs \right] ,
 \label{eq:dsdt}
 \end{align}
-where $p$ and $s$ are the pressure and specific entropy, respectively, and $M_{\rm enc} = M_{\star}(r) + \Mbh$ is the
-enclosed mass (we neglect dark matter contributions).  We adopt an ideal gas equation of state with $p = \rho kT/\mu m_p$ with $\mu = 0.62$  and $\gamma = 5/3$. 
+
+where $p$ and $s$ are the pressure and specific entropy, respectively,
+and $M_{\rm enc} = M_{\star}(r) + \Mbh$ is the enclosed mass (we
+neglect dark matter contributions).  We adopt an ideal gas equation of
+state with $p = \rho kT/\mu m_p$ with $\mu = 0.62$ and $\gamma = 5/3$.
 
 The source term in equation (\ref{eq:drhodt}),
 \begin{align}
@@ -671,9 +691,10 @@ Eddington accretion rate, assuming a radiative efficiency of ten per
 cent.  Note the sensitive dependence of the accretion rate on the wind
 heating rate. Also, we emphasize that
 equation~\eqref{eq:eddr_analytic} represents the mass inflow rate on
-large scales and does not include small scale outflows. In reality, only
-a fraction $\alpha$ (the standard Shakura-Sunyaev parameter--assumed
-to be 0.1) will make it down to the black hole \citep{Li+2013}. 
+large scales and does not include small scale
+outflows. \citep{Li+2013} suggest only a fraction $\alpha$ (the
+standard Shakura-Sunyaev parameter--assumed to be 0.1) will make it
+down to the black hole.
 
 The gas density at the stagnation radius, $\rho|_{r_{\rm s}}$, is more
 challenging to estimate accurately.  By using an alternative estimate of
@@ -695,12 +716,6 @@ the free-fall time $t_{\rm ff}|_{r_{\rm s}} = (r_{\rm
   \label{eq:rhors}
 \end{align}
 
-%Note that by combining equations~\eqref{eq:mdot_analytic}
-%and~\eqref{eq:mdot_gas}, one can also write
-%\begin{align}
-%\rho|_{r_{\rm s}}=\frac{3 q|_{r_{\rm s}} \tff|_{r_{\rm s}}}{2-\Gamma}.
-%\label{eq:rhors2}
-%\end{align}
 
 It is useful to compare our expression for $\dot{M}$ (eq.~[\ref{eq:mdot_analytic}]) to the standard Bondi rate for accretion onto a point source from an external medium of specified density and temperature (\citealt{Bondi52}):
 \begin{align}
@@ -761,10 +776,11 @@ stellar density profile is approximated as (eq.~[\ref{eq:rhostar}])
   \label{eq:rhostarrs}
 \end{eqnarray}
 where the stagnation radius is assume to reside well inside the Nuker
-break radius.  Equation (\ref{eq:conduction}) shows that, even when conduction is saturated, our neglect of heat conduction
-results in at most an order unity correction for causal values of
-the saturation parameter $\phi < 0.1$.  Our numerical experiments which include conductive heating confirm this
-($\S\ref{sec:numerical}$).
+break radius.  Equation (\ref{eq:conduction}) shows that, even when
+conduction is saturated, our neglect of heat conduction results in at
+most an order unity correction for causal values of the saturation
+parameter $\phi < 0.1$.  Our numerical experiments which include
+conductive heating confirm this ($\S\ref{sec:numerical}$).
 
 
 
@@ -778,24 +794,27 @@ balance.  If radiative cooling becomes important, it can qualitatively
 alter key features of the accretion flow. Initially hydrostatic gas
 that cools at constant pressure $P \propto nT$ at the rate
 $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$
-(eq.~[\ref{eq:qdot_rad}]; see below) is thermally unstable
-(e.g., \citealt{McCourt+12}, \citealt{Li&Bryan14a}), potentially resulting
-in the formation of a multi-phase medium and enhanced star formation (\citealt{Li&Bryan14b}).
-Even if the hot plasma of the CNM does not condense into cold clouds,
-the loss of pressure can temporarily increase the black hole accretion
-rate.  When coupled to feed-back processes which result from such enhanced accretion, this can lead to
-time-dependent limit cycle behavior
-(e.g.~\citealt{Ciotti&Ostriker07}; \citealt{Ciotti+10};
-\citealt{Yuan&Li11}, \citealt{Gan+14}), which is also inconsistent
-with our assumption of a steady, single-phase flow.
+(eq.~[\ref{eq:qdot_rad}]; see below) is thermally unstable (e.g.,
+\citealt{McCourt+12}, \citealt{Li&Bryan14a}), potentially resulting in
+the formation of a multi-phase medium and enhanced star formation
+(\citealt{Li&Bryan14b}).  Even if the hot plasma of the CNM does not
+condense into cold clouds, the loss of pressure can temporarily
+increase the black hole accretion rate.  When coupled to feed-back
+processes which result from such enhanced accretion, this can lead to
+time-dependent limit cycle behavior (e.g.~\citealt{Ciotti&Ostriker07};
+\citealt{Ciotti+10}; \citealt{Yuan&Li11}, \citealt{Gan+14}), which is
+also inconsistent with our assumption of a steady, single-phase flow.
 
-Cooling instability can, however, be prevented if destabilizing radiative cooling ($\dot{q}_{\rm rad} \propto T^{-2.7}$) is overwhelmed by
-other sources of cooling, namely the {\it stabilizing} term $\propto -q c_{s}^{2}
-\propto -T$ in the entropy equation (eq.~[\ref{eq:dsdt}]).
-Neglecting radiative cooling to first order, this term is balanced at the stagnation
-radius by the external heating term, $\dot{q}_{\rm heat} = q
-\tilde{v}_{w}^{2}/2$.  We assess thermal stability near the stagnation radius by comparing the ratio of external heating to
-radiative cooling $|\dot{q}_{\rm rad}|$ (eq.~[\ref{eq:qdot_rad}]),
+Cooling instability can, however, be prevented if destabilizing
+radiative cooling ($\dot{q}_{\rm rad} \propto T^{-2.7}$) is
+overwhelmed by other sources of cooling, namely the {\it stabilizing}
+term $\propto -q c_{s}^{2} \propto -T$ in the entropy equation
+(eq.~[\ref{eq:dsdt}]).  Neglecting radiative cooling to first order,
+this term is balanced at the stagnation radius by the external heating
+term, $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$.  We assess thermal
+stability near the stagnation radius by comparing the ratio of
+external heating to radiative cooling $|\dot{q}_{\rm rad}|$
+(eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
 \left.\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm rad}|}\right|_{\rm r_{\rm s}} \simeq
   \begin{cases}
@@ -932,9 +951,10 @@ properties on large scales will generally be unaffected by angular momentum.
 
 For $r\simeq r_{\rm circ} $ the gas will encounter a centrifugal
 barrier, which means that much of the gas flowing in from larger
-scales will be driven out in a conical outflow. The actual accretion
-rate will be $\sim\alpha$ times the accretion rate on large scales
-\citep{Li+2013}.
+scales will be driven out in a conical outflow. \citep{Li+2013}
+suggest that the actual accretion rate will be $\sim\alpha$ times the
+accretion rate on large scales.
+
 
 
 \section{Numerical Results}
@@ -1518,14 +1538,15 @@ C,9}^{-0.7}\epsilon_{-2}^{-0.7} M_{\bullet,8}^{0.14}
 \citet{Sharma+2007} calculate the radiative efficiency, $\epsilon$,
 based on MHD shearing box simulations of collisionless plasmas. For
 accretion rates $10^{-4} \lsim \eddr \lsim 10^{-2}$, the radiative
-efficiency is $\sim 2.6\%$ {\bf AG described in more
-  detail?}. Additionally, a large fraction of the $\dot{M}$ on large scales
-will be driven out in outflows as the gas has some non-zero angular
-momentum and a centrifugal barrier will stop it from accreting
-\citet{Li+2013}. In the limit weak cooling appropriate for low
-accretion rates the accretion rate on small scales will be of order
-$\alpha \Mdot$. Here we adopt $\alpha=0.1$ so that our overall
-efficiency is 0.26\%
+efficiency is $\epsilon_{\rm rad}\sim 2.6\%$\footnote{for $\eddr\lsim
+  10^{-4} \epsilon_{\rm rad}\sim \eddr^{0.9}$. For $\eddr\gg 0.01$
+  $\epsilon_{\rm rad}\sim 0.1$...}. Additionally, a large
+fraction of the $\dot{M}$ on large scales will be driven out in
+outflows as the gas has some non-zero angular momentum and a
+centrifugal barrier will stop it from accreting \citet{Li+2013}. In
+the limit weak cooling appropriate for low accretion rates the
+accretion rate on small scales will be of order $\alpha \Mdot$. Here
+we adopt $\alpha=0.1$ so that our overall efficiency is 0.26\%
 
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
@@ -1920,16 +1941,18 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; red).
   (Fig.~\ref{fig:bh_growth}), calculated using a power-law fit for the
   relationship $\Gamma(M_{\bullet})$ derived from the
   \citet{LauerFaber+:2007a} sample.  Shown for comparison are the
-  measurements ({\it black stars}) and upper limits ({\it gray 
+  measurements ({\it black stars}) and upper limits ({\it gray
     triangles}) for $L_X/L_{\rm edd}$ values, from the
   \citet{Miller+15} sample of early-type galaxies (a black line shows
   the best power-law fit $\langle L_X/L_{\rm edd}\rangle \propto
   M_{\bullet}^{\alpha}$, with $\alpha = -0.2$).  The left panel is
   calculated assuming a constant radiative efficiency
   $\epsilon_X=10^{-4} (\epsilon_{\rm bol}/0.1)$, while the right hand
-  panel assumes $\epsilon_X= (\epsilon_{\rm
-    bol}/0.1)(\Mdot/\MdotEdd)$, as predicted by ADAF models (e.g.,
-  \citealt{Narayan&Yi95}).  Shown for comparison are the X-ray
+  panel assumes $\epsilon_X= 0.01 (\epsilon_{\rm bol}/0.1)
+  (\alpha/0.1) \epsilon_{rad} (\eddr) $, where $\epsilon_{\rm
+    rad}\simeq 0.026$ for $\lsim 10^{-4} \eddr\lsim 10^{-2} $, as
+  motivated by shearing box simulations of collisionless plasma (see
+  \citet{Sharma+2007}).  Shown for comparison are the X-ray
   luminosities calculated for the maximum thermally-stable accretion
   rate ({\it dashed orange line}; eq.~[\ref{eq:Mdotmax}]); the SN
   Ia-regulated accretion rate ({\it dashed teal line};
