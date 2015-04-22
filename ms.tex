@@ -1538,17 +1538,38 @@ C,9}^{-0.7}\epsilon_{-2}^{-0.7} M_{\bullet,8}^{0.14}
 \end{align}
 
 \citet{Sharma+2007} calculate the radiative efficiency, $\epsilon$,
-based on MHD shearing box simulations of collisionless plasmas. For
-accretion rates $10^{-4} \lsim \eddr \lsim 10^{-2}$, the radiative
-efficiency is $\epsilon_{\rm rad}\sim 2.6\%$\footnote{for $\eddr\lsim
-  10^{-4} \epsilon_{\rm rad}\sim \eddr^{0.9}$. For $\eddr\gg 0.01$
-  $\epsilon_{\rm rad}\sim 0.1$...}. Additionally, a large
-fraction of the $\dot{M}$ on large scales will be driven out in
-outflows as the gas has some non-zero angular momentum and a
-centrifugal barrier will stop it from accreting \citet{Li+2013}. In
-the limit weak cooling appropriate for low accretion rates the
-accretion rate on small scales will be of order $\alpha \Mdot$. Here
-we adopt $\alpha=0.1$ so that our overall efficiency is 0.26\%
+based on MHD shearing box simulations of collisionless plasmas. The
+following piecewise power law approximately reproduces
+their results for the radiative efficiency, $\epsilon_{\rm rad}$
+
+\begin{align}
+\epsilon_{\rm rad} \simeq 
+\begin{cases}
+  2.6 \times 10^{-2} \left(\eddr\right)^{0.9} & \eddr \lsim 10^{-4} \\
+  2.6 \times 10^{-2} &  10^{-2} \lsim \eddr \lsim  10^{-4}\\
+  0.1 \left(\eddr\right)^{0.58} &  10^{-2} \lsim \eddr \lsim  0.1\\
+  0.1 & \eddr \gsim 0.1
+\end{cases}
+\label{eq:efficiency}
+\end{align}
+
+The first two lines are a piecewise power law fit designed to
+approximately reproduce the solid line in Figure 6
+in \citet{Sharma+2007}, which assumes 33\% of the viscous dissipation
+heats the electrons. For $\eddr\gsim 0.1$, $\epsilon_{rad}$ should saturate
+to 0.1, hence the fourth line. The third line is a power law which
+connects $\epsilon_{\rm rad} (\eddr=0.01) = 0.026$ to $\epsilon_{\rm
+  rad} (\eddr=0.1) = 0.1$.
+
+Additionally, a large fraction of the $\dot{M}$ on large scales will
+be driven out in outflows as the gas has some non-zero angular
+momentum and a centrifugal barrier will stop it from accreting
+\citet{Li+2013}. In the limit weak cooling appropriate for low
+accretion rates the accretion rate on small scales will be of order
+$\alpha \Mdot$.  Taking $epsilon=\alpha \epsilon_{\rm rad}$ for the
+overall efficiency with $\alpha=0.1$ and $\epsilon_{\rm rad}$ from
+equation~\eqref{eq:efficiency} we obtain {\bf AG note the change in
+  the description of the efficiency}, 
 
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
@@ -1951,13 +1972,11 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; red).
   calculated assuming a constant radiative efficiency
   $\epsilon_X=10^{-4} (\epsilon_{\rm bol}/0.1)$, while the right hand
   panel assumes $\epsilon_X= 0.01 (\epsilon_{\rm bol}/0.1)
-  (\alpha/0.1) \epsilon_{rad} (\eddr) $, where $\epsilon_{\rm
-    rad}\simeq 0.026$ for $\lsim 10^{-4} \eddr\lsim 10^{-2} $, as
-  motivated by shearing box simulations of collisionless plasma (see
-  \citet{Sharma+2007}).  Shown for comparison are the X-ray
-  luminosities calculated for the maximum thermally-stable accretion
-  rate ({\it dashed orange line}; eq.~[\ref{eq:Mdotmax}]); the SN
-  Ia-regulated accretion rate ({\it dashed teal line};
+  (\alpha/0.1) \epsilon_{rad} (\eddr) $, where $\epsilon_{\rm rad}$ is
+  given by equation~\eqref{eq:efficiency}.  Shown for comparison are
+  the X-ray luminosities calculated for the maximum thermally-stable
+  accretion rate ({\it dashed orange line}; eq.~[\ref{eq:Mdotmax}]);
+  the SN Ia-regulated accretion rate ({\it dashed teal line};
   eq.~[\ref{eq:eddr_Ia}]), and the Compton heating-regulated accretion
   rate ({\it dashed pink line}; eq.~[\ref{eq:MdotCa}]), again all
   calculated for the average SFH corresponding to each SMBH mass.}
