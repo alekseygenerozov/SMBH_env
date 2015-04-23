@@ -1574,13 +1574,10 @@ their results for the radiative efficiency, $\epsilon_{\rm rad}$
 The first two lines are a piecewise power law fit designed to
 approximately reproduce the solid line in Figure 6 in
 \citet{Sharma+2007}, which assumes 33\% of the viscous dissipation
-heats the electrons. For $\eddrt\gsim 0.1$, $\epsilon_{\rm rad}$
-should saturate to 0.1, hence the fourth line. The third line is a
-power law which connects $\epsilon_{\rm rad} (\eddrt=0.01) = 0.026$ to
-$\epsilon_{\rm rad} (\eddrt=0.1) = 0.1$. The tildes are put in as a
-reminder that the efficiency will depend on the small scale $\Mdot$
-($\tilde{\dot{M}}$) which will in general be different from the large
-scale $\Mdot$.
+heats the electrons. We assume that $\epsilon_{\rm rad}$ saturates to
+0.1 at $\eddrt\simeq 0.1$. $\tilde{\dot{M}}$ correspond to the true
+accretion rate (as opposed to the inflow rate on large scales--which
+is generally what we mean by $\Mdot$).
 
 Additionally, a large fraction of the $\dot{M}$ on large scales will
 be driven out in outflows as the gas has some non-zero angular
@@ -1589,13 +1586,16 @@ momentum and a centrifugal barrier will stop it from accreting
 accretion rates the accretion rate on small scales will be of order
 $\alpha \Mdot$.  We take $\epsilon=\alpha \epsilon_{\rm rad}$ for the
 overall efficiency with $\alpha=0.1$ and $\epsilon_{\rm rad}$ from
-equation~\eqref{eq:efficiency}. This means that the bolometric
-luminosity, $L=\epsilon \Mdot c^2=\alpha \epsilon_{\rm rad} (\alpha
-\eddr) \Mdot c^2= \epsilon_{\rm rad} (\eddrt) \tilde{\dot{M}} c^2$, where
-$\Mdot$ is mass inflow rate on large scales and $\tilde{\dot{M}}$ is
-the mass inflow rate on small scales. Note that in evaluating the
-efficiency one has to account for the $\alpha$ suppression in $\eddr$.
-we obtain {\bf AG note the change in the description of the
+equation~\eqref{eq:efficiency}. Note that in evaluating the efficiency
+one has to use $\tilde{\dot{M}}\simeq \alpha \Mdot$. 
+% This means that the bolometric
+% luminosity, $L=\epsilon \Mdot c^2=\alpha \epsilon_{\rm rad} (\alpha
+% \eddr) \Mdot c^2= \epsilon_{\rm rad} (\eddrt) \tilde{\dot{M}} c^2$, where
+% $\Mdot$ is mass inflow rate on large scales and $\tilde{\dot{M}}$ is
+% the mass inflow rate on small scales. Note that in evaluating the
+% efficiency one has to account for the $\alpha$ suppression in $\eddr$.
+% we obtain 
+{\bf AG note the change in the description of the
   efficiency. Also, the alpha's kept tripping me up},
 
 \begin{align}
@@ -2199,14 +2199,7 @@ inconsistent with the break in the gas density seen at $\sim 0.6$ pc
 by \citet{BergerZauderer+:2012a}, which should correspond to the break
 radius of the {\it stellar density} profile, thus implying an
 unrealistically small SMBH mass of $\Mbh\simeq 100\Msun$ according to
-the mean $r_b-M_{\bullet}$ relationship \citep{LauerFaber+:2007a}. We
-also note that \citet{Tchekhovskoy+2014} favor a smaller black hole
-($10^5-10^6 \Msun$) based on the observed jet power, the jet
-shut-off time (if linked with the accretion becoming sub-Eddington), and an
-observed QPO in the x-ray light curve favor a smaller black hole {\bf
-  AG Gone mad!}. 
-
-
+the mean $r_b-M_{\bullet}$ relationship \citep{LauerFaber+:2007a}.
 Alternatively, the observed density break in J1644+57 could result
 from the outer edge of a sub-parsec nuclear star cluster (e.g.,
 \citealt{Carson+15}).  The high stellar densities of such a compact
@@ -2214,6 +2207,12 @@ star cluster could greatly enhance the TDE rate
 (e.g.~\citealt{Stone&Metzger15}), possibly making this association
 uncoincidental.
 
+
+ We also note that \citet{Tchekhovskoy+2014} favor a smaller black hole
+($10^5-10^6 \Msun$) for J1644+57 based on the observed jet power, the jet
+shut-off time (if linked with the accretion becoming sub-Eddington), and an
+observed QPO in the x-ray light curve favor a smaller black hole {\bf
+  AG Gone mad!}. 
 
 
 \subsection{Regulation by SMBH Kinetic Feedback}
