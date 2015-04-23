@@ -28,6 +28,7 @@
 
 \newcommand{\Mdot}{\dot{M}}
 \newcommand{\eddr}{\dot{M}/\dot{M}_{\rm Edd}}
+\newcommand{\eddrt}{\tilde{\dot{M}}/\dot{M}_{\rm Edd}}
 \newcommand{\MdotEdd}{\dot{M}_{\rm Edd}}
 \newcommand{\Mdotb}{\dot{M}_{\rm bondi}}
 
@@ -1551,37 +1552,46 @@ their results for the radiative efficiency, $\epsilon_{\rm rad}$
 \begin{align}
 \epsilon_{\rm rad} \simeq 
 \begin{cases}
-  2.6 \times 10^{-2} \left(\frac{\eddr}{10^{-4}}\right)^{0.9} & \eddr \lsim 10^{-4} \\
-  2.6 \times 10^{-2} &  10^{-2} \lsim \eddr \lsim  10^{-4}\\
-  0.1 \left(\frac{\eddr}{0.1}\right)^{0.58} &  10^{-2} \lsim \eddr \lsim  0.1\\
-  0.1 & \eddr \gsim 0.1
+  2.6 \times 10^{-2} \left(\frac{\eddrt}{10^{-4}}\right)^{0.9} & \eddrt \lsim 10^{-4} \\
+  2.6 \times 10^{-2} &  10^{-2} \lsim \eddrt \lsim  10^{-4}\\
+  0.1 \left(\frac{\eddrt}{0.1}\right)^{0.58} &  10^{-2} \lsim \eddrt \lsim  0.1\\
+  0.1 & \eddrt \gsim 0.1
 \end{cases}
 \label{eq:efficiency}
 \end{align}
 
 The first two lines are a piecewise power law fit designed to
-approximately reproduce the solid line in Figure 6
-in \citet{Sharma+2007}, which assumes 33\% of the viscous dissipation
-heats the electrons. For $\eddr\gsim 0.1$, $\epsilon_{rad}$ should saturate
-to 0.1, hence the fourth line. The third line is a power law which
-connects $\epsilon_{\rm rad} (\eddr=0.01) = 0.026$ to $\epsilon_{\rm
-  rad} (\eddr=0.1) = 0.1$.
+approximately reproduce the solid line in Figure 6 in
+\citet{Sharma+2007}, which assumes 33\% of the viscous dissipation
+heats the electrons. For $\eddrt\gsim 0.1$, $\epsilon_{\rm rad}$
+should saturate to 0.1, hence the fourth line. The third line is a
+power law which connects $\epsilon_{\rm rad} (\eddrt=0.01) = 0.026$ to
+$\epsilon_{\rm rad} (\eddrt=0.1) = 0.1$. The tildes are put in as a
+reminder that the efficiency will depend on the small scale $\Mdot$
+($\tilde{\dot{M}}$) which will in general be different from the large
+scale $\Mdot$.
 
 Additionally, a large fraction of the $\dot{M}$ on large scales will
 be driven out in outflows as the gas has some non-zero angular
 momentum and a centrifugal barrier will stop it from accreting
 \citet{Li+2013}. In the limit weak cooling appropriate for low
 accretion rates the accretion rate on small scales will be of order
-$\alpha \Mdot$.  Taking $epsilon=\alpha \epsilon_{\rm rad}$ for the
+$\alpha \Mdot$.  We take $\epsilon=\alpha \epsilon_{\rm rad}$ for the
 overall efficiency with $\alpha=0.1$ and $\epsilon_{\rm rad}$ from
-equation~\eqref{eq:efficiency} we obtain {\bf AG note the change in
-  the description of the efficiency}, 
+equation~\eqref{eq:efficiency}. This means that the bolometric
+luminosity, $L=\epsilon \Mdot c^2=\alpha \epsilon_{\rm rad} (\alpha
+\eddr) \Mdot c^2= \epsilon_{\rm rad} (\eddrt) \tilde{\dot{M}} c^2$, where
+$\Mdot$ is mass inflow rate on large scales and $\tilde{\dot{M}}$ is
+the mass inflow rate on small scales. Note that in evaluating the
+efficiency one has to account for the $\alpha$ suppression in $\eddr$.
+we obtain {\bf AG note the change in the description of the
+  efficiency. Also, the alpha's kept tripping me up},
 
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
-\begin{cases} 5.9\times 10^{-3} \eta_{0.02}^{0.12}T_{\rm
+\begin{cases} 6\times 10^{-3} \eta_{0.02}^{0.12}T_{\rm
 C,9}^{-0.44}M_{\bullet,8}^{0.09}
-&, \text{core}\\ 2.1\times 10^{-3} \eta_{0.02}^{0.17}T_{\rm
+&, \text{core}\\ 2\times 10^{-3} \eta_{0.02}^{0.17}T_{\rm
 C,9}^{-0.4} M_{\bullet,8}^{0.08}
 &, \text{cusp}.
   \end{cases}
@@ -1598,18 +1608,28 @@ assuming a quasi-equilibrium state is achieved over many cycles.
 
 \subsubsection{Kinetic Feedback}
 
-Kinetic feedback results from outflows of energy or momentum from close to the black hole in the form of a disk wind or jet, which deposits its energy as heat, e.g. via shocks or wave dissipation, over much larger radial scales (e.g.~\citealt{McNamara&Nulsen07}; \citealt{Novak+11}; \citealt{Gaspari+12}).  
+Kinetic feedback results from outflows of energy or momentum from
+close to the black hole in the form of a disk wind or jet, which
+deposits its energy as heat, e.g. via shocks or wave dissipation, over
+much larger radial scales (e.g.~\citealt{McNamara&Nulsen07};
+\citealt{Novak+11}; \citealt{Gaspari+12}).
 
-Assume that the outflow power is proportional to the SMBH accretion rate, $L_{\rm j} =
-\epsilon_{\rm j} \dot{M}c^{2}$, where $\epsilon_{\rm j} < 1$ is a jet efficiency factor.  Further assume that this energy is deposited as heat uniformly interior to a radius $r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm
-heat}^{3}$.  The resulting volumetric heating rate $e = \epsilon_{\rm
-j}\dot{M}c^{2}/V_{\rm heat}$ near the stagnation radius results in a heating parameter given by
+Assume that the outflow power is proportional to the SMBH accretion
+rate, $L_{\rm j} = \epsilon_{\rm j} \dot{M}c^{2}$, where
+$\epsilon_{\rm j} < 1$ is a jet efficiency factor.  Further assume
+that this energy is deposited as heat uniformly interior to a radius
+$r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm heat}^{3}$.
+The resulting volumetric heating rate $e = \epsilon_{\rm
+  j}\dot{M}c^{2}/V_{\rm heat}$ near the stagnation radius results in a
+heating parameter given by
 \begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{2t_{\rm
-h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
-\rho_{\star}|_{r_{s}}}\right)^{1/2} \sim \left(\frac{\epsilon_{\rm
-j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
-&\approx& 300\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm j}}{10^{-6}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
-heat}}\right)^{1-\Gamma/2},
+        h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
+      \rho_{\star}|_{r_{s}}}\right)^{1/2} \sim
+  \left(\frac{\epsilon_{\rm
+        j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
+  &\approx& 300\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm
+        j}}{10^{-6}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
+        heat}}\right)^{1-\Gamma/2},
 \label{eq:vjet}
 \end{eqnarray} 
 where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\star}(r) =
@@ -1978,14 +1998,16 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; red).
   calculated assuming a constant radiative efficiency
   $\epsilon_X=10^{-4} (\epsilon_{\rm bol}/0.1)$, while the right hand
   panel assumes $\epsilon_X= 0.01 (\epsilon_{\rm bol}/0.1)
-  (\alpha/0.1) \epsilon_{rad} (\eddr) $, where $\epsilon_{\rm rad}$ is
-  given by equation~\eqref{eq:efficiency}.  Shown for comparison are
-  the X-ray luminosities calculated for the maximum thermally-stable
-  accretion rate ({\it dashed orange line}; eq.~[\ref{eq:Mdotmax}]);
-  the SN Ia-regulated accretion rate ({\it dashed teal line};
-  eq.~[\ref{eq:eddr_Ia}]), and the Compton heating-regulated accretion
-  rate ({\it dashed pink line}; eq.~[\ref{eq:MdotCa}]), again all
-  calculated for the average SFH corresponding to each SMBH mass.}
+  (\alpha/0.1) \epsilon_{rad} ( (\alpha/0.1) 0.1 \eddr) $, where
+  $\epsilon_{\rm rad}$ is given by equation~\eqref{eq:efficiency} and
+  $\eddr$ corresponds to the gas inflow rate on large scales.  Shown
+  for comparison are the X-ray luminosities calculated for the maximum
+  thermally-stable accretion rate ({\it dashed orange line};
+  eq.~[\ref{eq:Mdotmax}]); the SN Ia-regulated accretion rate ({\it
+    dashed teal line}; eq.~[\ref{eq:eddr_Ia}]), and the Compton
+  heating-regulated accretion rate ({\it dashed pink line};
+  eq.~[\ref{eq:MdotCa}]), again all calculated for the average SFH
+  corresponding to each SMBH mass.}
 \end{figure*}
 
 If the nuclei of elliptical galaxies are heated as expected for the
