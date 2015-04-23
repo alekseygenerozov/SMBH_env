@@ -420,15 +420,16 @@ bimodal, with a concentration of ``core" galaxies with $\Gamma \lsim
 We bracket these possibilities by considering models with $\Gamma=0.8$
 and $\Gamma=0.1$.  
 
-We fix $\beta = 2$ because our results are not overly sensitive to the
-properties of the gas flow on radial scales $\gtrsim r_b$ {\bf AG:
-  beta=1 could be problematic for low heating rates}. The presence of
-the break radius $r_{b}$ is, however, necessary to obtain a converged
-steady state for some regions of our parameter space.  We consider
-solutions calculated for up to four values of $\rb$: 50 pc, 100 pc,
-200 pc, and 400 pc, motivated by the range of break radii from the
-\citet{LauerFaber+:2007a} sample.\footnote{For the core galaxies the
-  break radius follows the scaling relationship $\rb\sim 106 \,
+We fix $\beta = 2$ but have our results are not overly sensitive to
+the properties of the gas flow on radial scales $\gtrsim r_b$ for
+$\beta\gsim 1.5$ (this is near the peak of the distribution of $\beta$
+in \citet{LauerFaber+:2007a}) {\bf AG: a little more detail}. The
+presence of the break radius $r_{b}$ is, however, necessary to obtain
+a converged steady state for some regions of our parameter space.  We
+consider solutions calculated for up to four values of $\rb$: 50 pc,
+100 pc, 200 pc, and 400 pc, motivated by the range of break radii from
+the \citet{LauerFaber+:2007a} sample.\footnote{For the core galaxies
+  the break radius follows the scaling relationship $\rb\sim 106 \,
   (\Mbheight)^{0.39}$ pc, with scatter of approximately one dex.  Most
   the cusp galaxies have $\rb$ between 100 and 1000 pc, and lack a
   clear trend with $\Mbh$.}  In practice we calculate solutions for a
@@ -539,26 +540,31 @@ an an additional heating term in equation (\ref{eq:dsdt}),
  m_p)^{1/2}$ is the isothermal sound speed and $\phi \lesssim 1$ is an
  uncertain dimensionless constant (we adopt $\phi = 0.1$).  Even a
  weak magnetic field that is oriented perpendicular to the flow could
- suppress the conductivity by reducing the electron mean free
- path.  However, for radially-decreasing temperature profiles of
- interest, the flow is susceptible to the magneto-thermal instability
- (\citealt{Balbus01}), the non-linear evolution of which results in a radially-directed field geometry
- (\citealt{Parrish&Stone07}).  In $\S\ref{sec:conductivity}$ we show that neglecting conductivity results in at
- most order-unity errors in the key properties of the solutions.
+ suppress the conductivity by reducing the electron mean free path.
+ However, for radially-decreasing temperature profiles of interest,
+ the flow is susceptible to the magneto-thermal instability
+ (\citealt{Balbus01}), the non-linear evolution of which results in a
+ radially-directed field geometry (\citealt{Parrish&Stone07}).  In
+ $\S\ref{sec:conductivity}$ we show that neglecting conductivity
+ results in at most order-unity errors in the key properties of the
+ solutions.
 
-Radiative cooling contributes an additional term to equation (\ref{eq:dsdt}), of the form
+ Radiative cooling contributes an additional term to equation
+ (\ref{eq:dsdt}), of the form
 \begin{equation}
 \dot{q}_{\rm rad} = -\Lambda(T)n^{2},
 \label{eq:qdot_rad}
 \end{equation}
-where $n \equiv \rho/\mu m_p$ and $\Lambda(T)$ is
-the cooling function.  We neglect radiative cooling in our baseline
-calculations, despite the fact that this is not justified when the
-wind heating $\vwO$ is low or if the mass return rate $\eta$ is high.
-Once radiative cooling becomes important compared to other
-sources of heating and cooling, its presence leads to thermal
-instability (e.g.~\citealt{McCourt+12}, \citealt{Li&Bryan14a}) that cannot be accounted for
-by our 1D time-independent model.  Our goal is to use solutions which neglect radiation to determine over what range of conditions cooling instabilities will develop
+where $n \equiv \rho/\mu m_p$ and $\Lambda(T)$ is the cooling
+function.  We neglect radiative cooling in our baseline calculations,
+despite the fact that this is not justified when the wind heating
+$\vwO$ is low or if the mass return rate $\eta$ is high.  Once
+radiative cooling becomes important compared to other sources of
+heating and cooling, its presence leads to thermal instability
+(e.g.~\citealt{McCourt+12}, \citealt{Li&Bryan14a}) that cannot be
+accounted for by our 1D time-independent model.  Our goal is to use
+solutions which neglect radiation to determine over what range of
+conditions cooling instabilities will develop
 ($\S\ref{sec:instability}$).
 
 Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
@@ -1545,9 +1551,9 @@ their results for the radiative efficiency, $\epsilon_{\rm rad}$
 \begin{align}
 \epsilon_{\rm rad} \simeq 
 \begin{cases}
-  2.6 \times 10^{-2} \left(\eddr\right)^{0.9} & \eddr \lsim 10^{-4} \\
+  2.6 \times 10^{-2} \left(\frac{\eddr}{10^{-4}}\right)^{0.9} & \eddr \lsim 10^{-4} \\
   2.6 \times 10^{-2} &  10^{-2} \lsim \eddr \lsim  10^{-4}\\
-  0.1 \left(\eddr\right)^{0.58} &  10^{-2} \lsim \eddr \lsim  0.1\\
+  0.1 \left(\frac{\eddr}{0.1}\right)^{0.58} &  10^{-2} \lsim \eddr \lsim  0.1\\
   0.1 & \eddr \gsim 0.1
 \end{cases}
 \label{eq:efficiency}
