@@ -1564,20 +1564,20 @@ their results for the radiative efficiency, $\epsilon_{\rm rad}$
 \epsilon_{\rm rad} \simeq 
 \begin{cases}
   2.6 \times 10^{-2} \left(\frac{\eddrt}{10^{-4}}\right)^{0.9} & \eddrt \lsim 10^{-4} \\
-  2.6 \times 10^{-2} &  10^{-2} \lsim \eddrt \lsim  10^{-4}\\
-  0.1 \left(\frac{\eddrt}{0.1}\right)^{0.58} &  10^{-2} \lsim \eddrt \lsim  0.1\\
-  0.1 & \eddrt \gsim 0.1
-\end{cases}
+ 2.6 \times 10^{-2} &  10^{-2} \lsim \eddrt \lsim  10^{-4}\\
+%   0.1 \left(\frac{\eddrt}{0.1}\right)^{0.58} &  10^{-2} \lsim \eddrt \lsim  0.1\\
+%   0.1 & \eddrt \gsim 0.1
+% \end{cases}
 \label{eq:efficiency}
 \end{align}
 
 The first two lines are a piecewise power law fit designed to
 approximately reproduce the solid line in Figure 6 in
 \citet{Sharma+2007}, which assumes 33\% of the viscous dissipation
-heats the electrons. We assume that $\epsilon_{\rm rad}$ saturates to
-0.1 at $\eddrt\simeq 0.1$. $\tilde{\dot{M}}$ correspond to the true
-accretion rate (as opposed to the inflow rate on large scales--which
-is generally what we mean by $\Mdot$).
+heats the electrons. $\epsilon_{\rm rad}$ should saturate to 0.1 at
+larger values of $\eddrt>0.01$, but such a black hole would certainly
+be active and thermally unstable (and thus outside the scope of our
+models). We note they $\eddrt<0.01$ for all of our models.
 
 Additionally, a large fraction of the $\dot{M}$ on large scales will
 be driven out in outflows as the gas has some non-zero angular
@@ -1754,12 +1754,13 @@ resulting from its non-steady nature by setting $v_{w}^{\rm Ia} = 0$
 when the stagnation radius (calculated excluding Ia heating) exceeds
 the Ia radius $r_{\rm Ia}$ exterior to which the interval between
 subsequent supernovae exceeds the local dynamical time
-(eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and $v_{\rm w}^{\rm Ia}$
-depends on the total heating rate (eq.~[\ref{eq:vtot}]), requiring us
-to simultaneously solve a series of implicit equations to determine
-each heating rate.  Heating from MSPs is found to be negligibly small
-for fiducial parameters and hence is not shown, while kinetic feedback
-is neglected given its uncertain efficiency ($\S\ref{sec:kinetic}$).
+(eq.~[\ref{eq:rIa}]).  Finally, note that $v_{\rm w}^{\rm C}$ and
+$v_{\rm w}^{\rm Ia}$ depends on the total heating rate
+(eq.~[\ref{eq:vtot}]), requiring us to simultaneously solve a series
+of implicit equations to determine each heating rate.  Heating from
+MSPs is found to be negligibly small for fiducial parameters and hence
+is not shown, while kinetic feedback is neglected given its uncertain
+efficiency ($\S\ref{sec:kinetic}$).
 
 For low-mass black holes (Fig.~\ref{fig:vwSourcesImp}, top panel),
 stellar winds are the most important source of heating on timescales
