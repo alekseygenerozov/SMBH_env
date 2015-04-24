@@ -1567,7 +1567,7 @@ their results for the radiative efficiency, $\epsilon_{\rm rad}$
  2.6 \times 10^{-2} &  10^{-2} \lsim \eddrt \lsim  10^{-4}\\
 %   0.1 \left(\frac{\eddrt}{0.1}\right)^{0.58} &  10^{-2} \lsim \eddrt \lsim  0.1\\
 %   0.1 & \eddrt \gsim 0.1
-% \end{cases}
+\end{cases}
 \label{eq:efficiency}
 \end{align}
 
@@ -1643,9 +1643,18 @@ heating parameter given by
         heat}}\right)^{1-\Gamma/2},
 \label{eq:vjet}
 \end{eqnarray} 
-where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm s}}/t_{\rm h}$ and, for radii inside the Nuker break radius, $M_{\star}(r) =
-M_{\bullet}(r/r_{\rm inf})^{2-\Gamma}$ (eq.~[\ref{eq:rhostar}]).  If the bulk of the energy from kinetic feedback is released near the stagnation radius, then even a small heating efficiency $\epsilon_{\rm j} \gtrsim
-10^{-5}$ is sufficient for $v_{w}^{\bullet}$ to exceed other sources of non-accretion powered heating.  However, if this energy is instead deposited over much larger physical scales comparable to the size of the galaxy, i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then kinetic feedback is unimportant, even for a powerful jet with $\epsilon_{\rm j} \sim 0.1$.  
+where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm
+    s}}/t_{\rm h}$ and, for radii inside the Nuker break radius,
+$M_{\star}(r) = M_{\bullet}(r/r_{\rm inf})^{2-\Gamma}$
+(eq.~[\ref{eq:rhostar}]).  If the bulk of the energy from kinetic
+feedback is released near the stagnation radius, then even a small
+heating efficiency $\epsilon_{\rm j} \gtrsim 10^{-5}$ is sufficient
+for $v_{w}^{\bullet}$ to exceed other sources of non-accretion powered
+heating.  However, if this energy is instead deposited over much
+larger physical scales comparable to the size of the galaxy,
+i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then
+kinetic feedback is unimportant, even for a powerful jet with
+$\epsilon_{\rm j} \sim 0.1$.
 
 The time required for a jet of luminosity $L_{\rm
   j}$ and half opening angle $\theta_{\rm j} = 0.1$ (characteristic of
@@ -1681,7 +1690,7 @@ to $\S\ref{sec:kinetic}$.
   the gas heating rate in galactic nuclei at time $\tau_{\star}$ after
   a single burst of star formation.  Top and bottom panels show cases
   for black hole masses of $\Mbh=10^6 \Msun$ and $\Mbh= 10^8 \Msun$
-  (both cusps).  Solid and dashed lines show the ranges of
+  (both cusps with $\Gamma=0.8$).  Solid and dashed lines show the ranges of
   $\tau_{\star}$ for which the accretion flow is thermally stable and
   unstable, respectively, according to the ratio of $\dot{q}_{\rm
     heat}/|\dot{q}_{\rm rad}|$ near the stagnation radius
@@ -1696,19 +1705,37 @@ to $\S\ref{sec:kinetic}$.
 \begin{figure}
 \includegraphics[width=\columnwidth]{vwSources.pdf}
 \caption{\label{fig:vwSources} {\it Top Panel:} Sources contributing
-  to the total heating rate of the CNM, $\vwO$ ({\it black}):
-  stellar wind heating ({\it orange}), Ia supernovae ({\it
-    green}), millisecond pulsars ({\it blue}), and compton heating
-  ({\it pink}).  Each heating source varies with black hole mass
-  $\Mbh$ calculated for average SFHs from \citet{MosterNaab+:2013a};
-  see Appendix~\ref{app:windheat} for details.  {\it Bottom Panel:}
-  The ratio of the total heating rate ($\dot{q}_{\rm heat} \propto
+  to the total heating rate of the CNM, $\vwO$ ({\it black}): stellar
+  wind heating ({\it orange}), Ia supernovae ({\it green}),
+  millisecond pulsars ({\it blue}), and compton heating ({\it pink}).
+  Each heating source varies with black hole mass $\Mbh$ calculated
+  for average SFHs from \citet{MosterNaab+:2013a}; see
+  Appendix~\ref{app:windheat} for details.  {\it Bottom Panel:} The
+  ratio of the total heating rate ($\dot{q}_{\rm heat} \propto
   v_{w}^{2}$) from the top panel to the radiative cooling rate
-  ($|\dot{q}_{\rm rad}|$) at the stagnation radius (red), parameter $\eta$
-  characterizing stellar mass loss rate (eq.~[\ref{eq:q}]) as a
+  ($|\dot{q}_{\rm rad}|$) at the stagnation radius (red), parameter
+  $\eta$ characterizing stellar mass loss rate (eq.~[\ref{eq:q}]) as a
   function of black hole mass $\Mbh$, calculated for average star SFHs
-  from \citealt{MosterNaab+:2013a} (blue) and the ratio of Ia radius to
-  stagnation radius as a function of $\Mbh$ (green).}
+  from \citealt{MosterNaab+:2013a} (blue), the ratio of Ia radius to
+  stagnation radius as a function of $\Mbh$ (green), and the ratio of
+  the normalized heating rate
+  $\zeta=\sqrt{1+\frac{v_w^2}{\sigma_0^2}}$ to the critical heating
+  rate $\zeta_c$ for which no outflow is possible (see
+  eq.~\eqref{eq:zetacrit}). In evaluating the latter quantity we use
+  scaling relations for $r_b$, $\rinf$, and $\Gamma$ based on
+  \citet{LauerFaber+:2007a}. {\bf AG added the zeta/zetac line}.}
+
+ % $\Gamma=0.3
+ %  \Mbheight^{-0.24}$, $\rinf=14 \Mbheight^{0.6}$ pc
+ %  (eq~\eqref{\eqref{eq:rsoi}}), $\rb\simeq 106 \Mbheight^{0.39} $ pc
+ %  (for $\Gamma<0.3$), and $\rb\simeq 100$ pc (for $\Gamma\geq 0.3$)
+ %  {\bf Added zeta/zeta_c line but unfortunately caption became
+ %    somewhat verbose (I don't think all of this description is
+ %    necessary--maybe just say we use scaling relations based on Lauer
+ %    et al. sample?) Also being so close to zeta/zeta_c=1 implies
+ %    there is a limit to how much scatter we could explain just by
+ %    variations in the heating rate}.
+
 \end{figure}
 
 
@@ -2000,7 +2027,7 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; red).
   Green lines show our prediction in the case of heating due to the
   average SFH for galaxies corresponding to each black hole mass
   (Fig.~\ref{fig:bh_growth}), calculated using a power-law fit for the
-  relationship $\Gamma(M_{\bullet})$ derived from the
+  relationship $\Gamma(M_{\bullet})=0.3 \Mbheight^{-0.24}$ derived from the
   \citet{LauerFaber+:2007a} sample.  Shown for comparison are the
   measurements ({\it black stars}) and upper limits ({\it gray
     triangles}) for $L_X/L_{\rm edd}$ values, from the
@@ -2051,14 +2078,14 @@ velocity and mass loss parameter, $\dot{M}/\dot{M}_{\rm edd} \propto
 combined with the significant dependence of $v_w$ on stochastic
 intermittency in the star formation history (Appendix
 \ref{fig:NickPlot2}), this can lead to order of magnitude differences
-in $\dot{M}$; (3) differences in angular momentum of the infalling gas
-from galaxy to galaxy, resulting in differences in the fraction of the
-gas lost to outflows.  Also potentially contributing is the order of
-magnitude difference, at fixed $v_w$ and $M_{\bullet}$, between
-$\dot{M}$ for core and cusp galaxies (Fig.~\ref{fig:bh_growth}).
-Differences in $\dot{M}$ are augmented by the theoretical expectation
-that $L_{\rm X} \propto \dot{M}^{2} $ for radiatively inefficient
-flows.
+in $\dot{M}$ {\bf AG limitation from zetac}; (3) differences in
+angular momentum of the infalling gas from galaxy to galaxy, resulting
+in differences in the fraction of the gas lost to outflows.  Also
+potentially contributing is the order of magnitude difference, at
+fixed $v_w$ and $M_{\bullet}$, between $\dot{M}$ for core and cusp
+galaxies (Fig.~\ref{fig:bh_growth}).  Differences in $\dot{M}$ are
+augmented by the theoretical expectation that $L_{\rm X} \propto
+\dot{M}^{2} $ for radiatively inefficient flows.
 
 
 
