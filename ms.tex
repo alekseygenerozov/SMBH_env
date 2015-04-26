@@ -899,16 +899,12 @@ correlation derived from the results of \citet{LauerFaber+:2007a}.
   \includegraphics[width=\columnwidth]{profiles.eps}
   \caption{\label{fig:profiles}Radial profiles of the CNM density
     ({\it top}), temperature ({\it middle}), and velocity ({\it bottom}),
-    calculated for a representative sample of galaxies.  Different colors
-    denote different values of the effective wind heating rate,
-    $\vwO=1200$ km s$^{-1}$ ({\it blue}), $\vwO$=600 km s$^{-1}$ ({\it
-      orange}), and 300 km s$^{-1}$ ({\it green}).  Different
-    line styles correspond to different values of $\Mbh$: $\Mbh=10^6
-    \Msun$ ({\it dot-dashed}), $\Mbh=10^7 \Msun$ ({\it solid}), and
-    $\Mbh=10^8 \Msun$ ({\it dashed}). Thin lines correspond to cusp
-    galaxies ($\Gamma$=0.8) and thick lines correspond to core
-    galaxies ($\Gamma$=0.1). Squares mark the location of
-    the stagnation radius for each solution.
+    calculated for a representative sample of galaxies.  Colors
+    denote values of the effective wind heating rate,
+    $\vwO=1200$ km s$^{-1}$ ({\it blue}), 600 km s$^{-1}$ ({\it
+      orange}), and 300 km s$^{-1}$ ({\it green}).  Line styles denote different black hole masses: $\Mbh=10^6
+    \Msun$ ({\it dot-dashed}), $10^7 \Msun$ ({\it solid}), and
+    $10^8 \Msun$ ({\it dashed}). Thin and thick lines denote cusp galaxies ($\Gamma$=0.8) and core galaxies ($\Gamma$=0.1), respectively.  Squares mark the locations of the stagnation radius.
  }
 \end{figure}
 
@@ -973,13 +969,13 @@ properties on large scales will generally be unaffected by angular momentum.
   \caption{Summary of Numerical Solutions}
 \begin{tabular}{lccccccccc}
   \hline
-  {$M_{\bullet}$} & {$v_{w}$} & {$r_b^{(b)}$} &   $r_{\rm s}/r_{\rm
-    inf}$ &  {$\left(\frac{\dot{M}}{\dot{M}_{\rm edd}}\right)_{r_{s}}^{(c)}
+  {$M_{\bullet}$} & {$v_{w}$} & {$r_b^{(a)}$} &   $r_{\rm s}/r_{\rm
+    inf}$ &  {$\left(\frac{\dot{M}}{\dot{M}_{\rm edd}}\right)_{r_{s}}^{(b)}
       (\eta=0.2)$} & {$\left(\frac{\dot{q}_{\rm heat}}{|\dot{q}_{\rm
-            rad}|}\right)_{r_s}^{(d)} (\eta=0.2)$} & Unstable $\eta$'s  \\
-    ($M_{\odot}$) & (km s$^{-1}$) & (pc) &- & - & - &  & \\ 
+            rad}|}\right)_{r_s}^{(c)} (\eta=0.2)$} & Unstable $\eta$'s  \\
+    ($M_{\odot}$) & (km s$^{-1}$) & (pc) &- & - & - &  - & \\ 
     \hline
-    Cusp Galaxies, $\Gamma^{(a)} = 0.8$ & & & & & & & & \\
+    Cusp Galaxies, $\Gamma = 0.8$ & & & & & & & & \\
     $    10^{ 6 }$ & 300 & -- & 0.12 & $ 5.1 \times 10^{ -5 }$ & 28 \\
     ... & 600 & -- & $ 3.2 \times 10^{ -2 }$ & $ 1.0 \times 10^{ -5 }$ & $ 1.9 \times 10^{ 3 }$ \\
     ... & 1200 & -- & $ 7.9 \times 10^{ -3 }$ & $ 1.8 \times 10^{ -6 }$ & $ 7.7 \times 10^{ 4 }$ \\
@@ -1036,23 +1032,14 @@ $    10^{ 8 }$ & 600 & 25 & 0.27 & $ 5.7 \times 10^{ -5 }$ & $ 1.0 \times 10^{ 2
 \label{table:models}  
 \end{tabular}
 \begin{tablenotes}
-\item $^{(a)}$ Inner power-law index of stellar Nuker profile.
-  $^{(b)}$ Break radius of stellar Nuker profile.  $^{(c)}$Accretion
+\item $^{(a)}$ Break radius of stellar density profile.  $^{(b)}$Accretion
   rate in Eddington units, normalized to a stellar mass input
-  parameter $\eta = 0.2$.  $^{(d)}$Ratio of wind heating rate to
-  radiative cooling rate at the stagnation radius.  Thermally unstable
-  solutions are shown in bold text.  $\dagger$Calculated with
+  parameter $\eta = 0.2$.  $^{(c)}$Ratio of wind heating rate to
+  radiative cooling rate at the stagnation radius. $\dagger$Calculated with
   radiative cooling included, assuming mass loss parameter $\eta =
   0.2$.  $\ddagger$Calculated with radiative cooling and conductivity
   included, assuming mass loss parameter $\eta = 0.2$ and conductivity
-  saturation parameter $\phi = 0.1$ (recall that the conductive heat
-  flux saturates to $F_{\rm cond}=5\phi \rho c_s^3$). We ran solutions
-  with radiative cooling for all cusp galaxies with $v_w=300 $ km/s
-  and all core galaxies with $v_w=600 $ km/s with three different
-  values of the mass loss parameter $\eta$: 0.02, 0.2, and 0.6. Any
-  values of $\eta$ for which a solution turned out to be thermally
-  unstable are marked in the ``Unstable $\eta$'s'' column.  Entries
-  for solutions found to be thermally unstable for all values of $\eta
+  saturation parameter $\phi = 0.1$.  Solutions including radiative cooling were performed for cusp galaxies with $v_w=300 $ km s$^{-1}$ and core galaxies with $v_w=600 $ km s$^{-1}$ for $\eta$ = 0.02, 0.2, and 0.6.  Values of $\eta$ resulting in thermally unstable solutions are marked in the final column.  Solutions found to be thermally unstable for all $\eta
   \geq 0.02$ are denoted as {\bf TI}.
 \end{tablenotes}
 \end{minipage}
@@ -1375,14 +1362,14 @@ for the stagnation radius, we find that
 \end{align}
 SN Ia can only be approximated as a steady heating source near the stagnation radius for extremely
 massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or for a very
-young stellar population ($\tau_{\star} \ll t_{\rm h}$).
+young stellar population with $\tau_{\star} \ll t_{\rm h}$.
 
 Even if SN Ia are rare near the stagnation radius, they may cap the SMBH accretion rate by periodically blowing gas out of the nucleus of low mass galaxies.  Between successive SNe, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$
 interior to the Ia radius, which is locally gravitationally bound to
-the SMBH by an energy $E_{\rm bind} \sim M_{\rm
-  g}\sigma_0^{2}$.  From the above definitions we find that
+the SMBH by an energy $E_{\rm bind} \gtrsim M_{\rm
+  g}\sigma_0^{2}$.  From the above definitions it follows that
  \be
-\frac{E_{\rm Ia}}{E_{\rm bind}} \sim \frac{(v_{w}^{\rm
+\frac{E_{\rm Ia}}{E_{\rm bind}} \lesssim \frac{(v_{w}^{\rm
     Ia})^{2}}{2\sigma_0^{2}}.
 \label{eq:blowout}
 \ee
