@@ -1583,34 +1583,34 @@ much larger radial scales (e.g.~\citealt{McNamara&Nulsen07};
 \citealt{Novak+11}; \citealt{Gaspari+12}).
 
 Assume that the outflow power is proportional to the SMBH accretion
-rate, $L_{\rm j} = \epsilon_{\rm j} \dot{M}c^{2}$, where
-$\epsilon_{\rm j} < 1$ is a jet efficiency factor.  Further assume
+rate, $L_{\rm j} = \epsilon_{\rm j} \dot{M}_{\bullet}c^{2} = 0.1\epsilon_{\rm j} \dot{M}c^{2} $, where
+$\epsilon_{\rm j} < 1$ is an outflow efficiency factor and we have again assumed a fraction $\alpha = 0.1$ of the infall rate reaches the SMBH.  Further assume
 that this energy is deposited as heat uniformly interior to a radius
 $r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm heat}^{3}$.
-The resulting volumetric heating rate $e = \epsilon_{\rm
+The resulting volumetric heating rate $e = 0.1\epsilon_{\rm
   j}\dot{M}c^{2}/V_{\rm heat}$ near the stagnation radius results in a
 heating parameter given by
-\begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{2t_{\rm
+\begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{0.2t_{\rm
         h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
       \rho_{\star}|_{r_{s}}}\right)^{1/2} \sim
-  \left(\frac{\epsilon_{\rm
+  \left(\frac{0.1\epsilon_{\rm
         j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
   &\approx& 300\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm
-        j}}{10^{-6}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
+        j}}{10^{-5}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
         heat}}\right)^{1-\Gamma/2},
 \label{eq:vjet}
 \end{eqnarray} 
 where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm
-    s}}/t_{\rm h}$ and, for radii inside the Nuker break radius,
+    s}}/t_{\rm h}$ and, for radii inside the stellar break radius,
 $M_{\star}(r) = M_{\bullet}(r/r_{\rm inf})^{2-\Gamma}$
 (eq.~[\ref{eq:rhostar}]).  If the bulk of the energy from kinetic
 feedback is released near the stagnation radius, then even a small
-heating efficiency $\epsilon_{\rm j} \gtrsim 10^{-5}$ is sufficient
+heating efficiency $\epsilon_{\rm j} \gtrsim 10^{-4}$ is sufficient
 for $v_{w}^{\bullet}$ to exceed other sources of non-accretion powered
 heating.  However, if this energy is instead deposited over much
 larger physical scales comparable to the size of the galaxy,
 i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then
-kinetic feedback is unimportant, even for a powerful jet with
+kinetic feedback is unimportant, even for a powerful outflow with
 $\epsilon_{\rm j} \sim 0.1$.
 
 The time required for a jet of luminosity $L_{\rm
@@ -1627,17 +1627,16 @@ r/\sigma$ is given by
 \end{equation}
 independent of $r$.  A jet with power sufficient to appreciably heat
 the CNM on radial scales $\sim r_{\rm s}$ ($\epsilon_{j} \gtrsim
-10^{-6}$) also necessarily has sufficient power to escape the nuclear
+10^{-5}$) also necessarily has sufficient power to escape the nuclear
 region and propagate to much larger radii.  Slower outflows from the
-accretion disk, instead of a collimated relativistic jet, may provide
-a more promising source of feedback in these systems
-(e.g.~\citealt{Li+13}).
+accretion disk, instead of a collimated relativistic jet, provide
+a potentially more promising source of feedback in these systems.
 
 As in the case of Compton heating, kinetic heating could in principle
 `self-regulate' the accretion flow insofar as a lower heating rate
 results in a higher accretion rate (eq.~[\ref{eq:vjet}]), which in
 turn may create stronger kinetic feedback.  However, given the uncertainty
-in the efficiency of kinetic heating, we hereafter exclude its effect and defer further discussion
+in the efficiency of kinetic heating, we hereafter neglect its effect and defer further discussion
 to $\S\ref{sec:kinetic}$.
 
 
@@ -1712,7 +1711,7 @@ The total external gas heating rate,
 includes contributions from stellar winds, supernovae, pulsars, and
 radiative SMBH feedback.  The strength of each heating source depends
 explicitly on the SMBH mass and the stellar population in the galactic
-nuclear region.  As we now describe, the latter could best be
+nuclear region.  The latter could best be
 described by a single star burst formation in the past, or by a more
 continuous SFH that itself varies systematically
 with the galaxy mass and hence $\Mbh$.
