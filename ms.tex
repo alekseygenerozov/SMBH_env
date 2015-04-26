@@ -1512,10 +1512,11 @@ C,9}^{0.29}\epsilon_{-2}^{0.29} M_{\bullet,8}^{0.14}\,{\rm km\,s^{-1}}
   \end{cases}
   \label{eq:vC2}
 \end{align} 
-Compton heating can thus be significant in young stellar populations
+Compton heating is thus significant in young stellar populations
 with relatively high mass loss rates, e.g. $v_{w}^{\rm C} \gtrsim 300$
-km s$^{-1}$ for $\eta \gtrsim 1$.  The accretion rate
-corresponding to a state in which Compton heating self-regulates the accretion flow is given by substituting equation (\ref{eq:vC2}) into equation (\ref{eq:eddr_analytic}):
+km s$^{-1}$ for $\eta \gtrsim 1$.  
+
+The accretion rate corresponding to a state in which Compton heating self-regulates the accretion flow is given by substituting equation (\ref{eq:vC2}) into equation (\ref{eq:eddr_analytic}):
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
 \begin{cases} 2\times 10^{-3} \eta_{0.02}^{0.2}T_{\rm
@@ -1527,49 +1528,17 @@ C,9}^{-0.7}\epsilon_{-2}^{-0.7} M_{\bullet,8}^{0.14}
   \label{eq:MdotCa}
 \end{align}
 
-\citet{Sharma+2007} calculate the radiative efficiency, $\epsilon$,
-based on MHD shearing box simulations of collisionless plasmas. The
-following piecewise power law approximately reproduces
-their results for the radiative efficiency, $\epsilon_{\rm rad}$
-
+\citet{Sharma+2007} estimate the value of the radiative efficiency of low luminosity AGN, $\epsilon_{\rm rad}$,
+based on MHD shearing box simulations of collisionless plasmas.  For Eddington ratios of relevance, their results (shown in their Fig.~6) are well approximated by
 \begin{align}
 \epsilon_{\rm rad} \simeq 
 \begin{cases}
-  2.6 \times 10^{-2} \left(\frac{\eddrt}{10^{-4}}\right)^{0.9} & \eddrt \lsim 10^{-4} \\
- 2.6 \times 10^{-2} &  10^{-2} \lsim \eddrt \lsim  10^{-4}\\
-%   0.1 \left(\frac{\eddrt}{0.1}\right)^{0.58} &  10^{-2} \lsim \eddrt \lsim  0.1\\
-%   0.1 & \eddrt \gsim 0.1
+  0.03 \left(\frac{\dot{M}_{\bullet}}{10^{-4}\dot{M}_{\rm edd}}\right)^{0.9} & \frac{\dot{M}_{\bullet}}{\dot{M}_{\rm edd}} \lsim 10^{-4} \\
+ 0.03 &  10^{-2} \lsim \frac{\dot{M}_{\bullet}}{\dot{M}_{\rm edd}} \lsim  10^{-4},
 \end{cases}
 \label{eq:efficiency}
 \end{align}
-
-The first two lines are a piecewise power law fit designed to
-approximately reproduce the solid line in Figure 6 in
-\citet{Sharma+2007}, which assumes 33\% of the viscous dissipation
-heats the electrons. $\epsilon_{\rm rad}$ should saturate to 0.1 at
-larger values of $\eddrt>0.01$, but such a black hole would certainly
-be active and thermally unstable (and thus outside the scope of our
-models). We note they $\eddrt<0.01$ for all of our models.
-
-Additionally, a large fraction of the $\dot{M}$ on large scales will
-be driven out in outflows as the gas has some non-zero angular
-momentum and a centrifugal barrier will stop it from accreting
-\citet{Li+2013}. In the limit weak cooling appropriate for low
-accretion rates the accretion rate on small scales will be of order
-$\alpha \Mdot$.  We take $\epsilon=\alpha \epsilon_{\rm rad}$ for the
-overall efficiency with $\alpha=0.1$ and $\epsilon_{\rm rad}$ from
-equation~\eqref{eq:efficiency}. Note that in evaluating the efficiency
-one has to use $\tilde{\dot{M}}\simeq \alpha \Mdot$. 
-% This means that the bolometric
-% luminosity, $L=\epsilon \Mdot c^2=\alpha \epsilon_{\rm rad} (\alpha
-% \eddr) \Mdot c^2= \epsilon_{\rm rad} (\eddrt) \tilde{\dot{M}} c^2$, where
-% $\Mdot$ is mass inflow rate on large scales and $\tilde{\dot{M}}$ is
-% the mass inflow rate on small scales. Note that in evaluating the
-% efficiency one has to account for the $\alpha$ suppression in $\eddr$.
-% we obtain 
-{\bf AG note the change in the description of the
-  efficiency. Also, the alpha's kept tripping me up},
-
+where $\dot{M}_{\bullet}$ is the BH accretion.  In general $\dot{M}_{\bullet}$ will be smaller than the inflow rate $\dot{M}$ calculated thus far by a factor $\alpha < 1$ due to outflows from the accretion disk on small scales.  Thus, the full efficiency relating the mass inflow rate to the radiative output is $\epsilon = \alpha \epsilon_{\rm rad}$, where we take $\alpha = 0.1$ following \citet{Li+2013}, who find that the fraction of the inflowing matter lost to outflows equals the effective Shakura-Sunyaev viscosity parameter of the disk.  Substituting $\epsilon$ into equation (\ref{eq:MdotCa}) and solving for the accretion rate results in
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
 \begin{cases} 6\times 10^{-3} \eta_{0.02}^{0.12}T_{\rm
@@ -1580,13 +1549,29 @@ C,9}^{-0.4} M_{\bullet,8}^{0.08}
   \end{cases}
   \label{eq:MdotC}
 \end{align}
-We note that accretion is unlikely to be steady in cases where AGN
+Accretion may not be truly steady in cases where AGN
 heating dominates, due to the inherent delay between black hole
 feedback and the structure of the accretion flow on larger scales.
-Equations (\ref{eq:MdotCa}), (\ref{eq:MdotC}) may nevertheless
-represent characteristic average value for the accretion rate,
-assuming a quasi-equilibrium state is achieved over many cycles.
-%{\bf  Total efficiency is 10 (mdot/MdotEdd). Everywhere.}
+Equation (\ref{eq:MdotC}) may nevertheless
+represent a characteristic average value for the accretion rate if a quasi-equilibrium is achieved over many cycles.
+
+%Additionally, a large fraction of the $\dot{M}$ on large scales will
+%be driven out in outflows as the gas has some non-zero angular
+%momentum and a centrifugal barrier will stop it from accreting
+%\citet{Li+2013}. In the limit weak cooling appropriate for low
+%accretion rates the accretion rate on small scales will be of order
+%$\alpha \Mdot$.  We take $\epsilon=\alpha \epsilon_{\rm rad}$ for the
+%overall efficiency with $\alpha=0.1$ and $\epsilon_{\rm rad}$ from
+%equation~\eqref{eq:efficiency}. Note that in evaluating the efficiency
+%one has to use $\tilde{\dot{M}}\simeq \alpha \Mdot$. 
+% This means that the bolometric
+% luminosity, $L=\epsilon \Mdot c^2=\alpha \epsilon_{\rm rad} (\alpha
+% \eddr) \Mdot c^2= \epsilon_{\rm rad} (\eddrt) \tilde{\dot{M}} c^2$, where
+% $\Mdot$ is mass inflow rate on large scales and $\tilde{\dot{M}}$ is
+% the mass inflow rate on small scales. Note that in evaluating the
+% efficiency one has to account for the $\alpha$ suppression in $\eddr$.
+% we obtain 
+
 
 
 \subsubsection{Kinetic Feedback}
