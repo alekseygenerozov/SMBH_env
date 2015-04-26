@@ -270,8 +270,7 @@ other (non-AGN) forms of feedback can produce a prolonged state of
 steady, thermally stable accretion.  Even if cooling instabilities
 develop on galactic scales over longer $\sim$ Gyr timescales, we aim to explore whether a quasi
 steady-state may exist between these inflow events on smaller radial scales comparable to the sphere of influence.  
-
-%For instance, \citealt{Ciotti+10} find that between outbursts gas may exist in a
+%For instance, for massive galaxies \citealt{Ciotti+10} find that between outbursts gas may exist in a
 %quasi-steady state {\bf AG reworded}.
 
 In the presence of strong heating, one-dimensional steady-state flow
@@ -285,7 +284,7 @@ show that $\rs$ usually resides near the nominal Bondi
 radius).  When heating is sufficiently weak, however, the stagnation
 radius may move to much larger radii or not exist at all, in which
 case nearly the entire ISM of the galaxy is flowing towards the SMBH, i.e. a ``cooling flow".
-However, the hydrostatic nature of gas near the stagnation radius also renders the CNM at this location particularly susceptible to {\it local} thermal instabilities, the outcome of which could be distinct from the development of a cooling flow.       
+However, the hydrostatic nature of gas near the stagnation radius also renders the CNM at this location particularly susceptible to {\it local} thermal instabilities, the outcome of which could well be distinct from the development of a cooling flow.       
 
 
 This paper is organized as follows.  In $\S\ref{sec:model}$ we
@@ -427,14 +426,19 @@ the \citet{LauerFaber+:2007a} sample.\footnote{For the core galaxies
   the break radius follows the scaling relationship $\rb\sim 106 \,
   (\Mbheight)^{0.39}$ pc, with scatter of approximately one dex.  Most
   the cusp galaxies have $\rb$ between 100 and 1000 pc, and lack a
-  clear trend with $\Mbh$.}  In practice we calculate solutions for a
-range of $\rb$ only in cases when its precise value is expected to
-have a significant affect on the solution, in particular for high SMBH
-masses and low heating rates, for which the stagnation radius
-approaches large radii. We also neglect values of $r_b$ which would
+  clear trend with $\Mbh$.}  We neglect values of $r_b$ which would
 give unphysically large bulges for a given $\Mbh$.
+% In practice we calculate solutions for a
+%range of $\rb$ only in cases when its precise value is expected to
+%have a significant affect on the solution, in particular for high SMBH
+%masses and low heating rates, for which the stagnation radius
+%approaches large radii. 
+%We also neglect values of $r_b$ which would
+%give unphysically large bulges for a given $\Mbh$.
 
-Finally, we note that some low mass galaxies with $\Mbh\lsim 2 \times 10^{8} \Msun$ possess nuclear star clusters (\citealt{GrahamSpitler:2009a}), which are not accounted for by our simple parametrization of the stellar density.  In such cases gas and energy injection could be dominated by the cluster itself, i.e. concentrated within its own pc-scale ``break radius" which is much smaller than the outer break in the older stellar population on much larger scales.  If the extent of the cluster is known, however, our model can be fully generalized to this case.  Furthermore, for high heating rates the stagnation radius and concomitant accretion rate are not sensitive to the location of the break radius.
+
+
+Finally, we note that \citealt{LauerFaber+:2005a} find that $\sim 60\%$ of cusp galaxies and $\sim29\%$ of core galaxies have (generally unresolved) emission in excess of the inward extrapolation of the Nuker law.  Indeed, some low mass galaxies with $\Mbh\lsim 10^{8} \Msun$ possess nuclear star clusters (\citealt{GrahamSpitler:2009a}), which are not accounted for by our simple parametrization of the stellar density.  In such cases gas and energy injection could be dominated by the cluster itself, i.e. concentrated within its own pc-scale ``break radius" which is much smaller than the outer break in the older stellar population on much larger scales.  Although our analysis does not take into account the influence such an inner break, for high heating rates the stagnation radius and concomitant accretion rate are not sensitive to the location of the break radius.
 
 
 \subsection{Hydrodynamic Equations}
@@ -458,9 +462,7 @@ one-dimensional, time-dependent hydrodynamics,
 where $p$ and $s$ are the pressure and specific entropy, respectively,
 and $M_{\rm enc} = M_{\star}(r) + \Mbh$ is the enclosed mass (we
 neglect dark matter contributions).  We adopt an ideal gas equation of
-state with $p = \rho kT/\mu m_p$ with $\mu = 0.62$ and $\gamma = 5/3$.
-
-The source term in equation (\ref{eq:drhodt}),
+state with $p = \rho kT/\mu m_p$ with $\mu = 0.62$ and $\gamma = 5/3$.  The source term in equation (\ref{eq:drhodt}),
 \begin{align}
   q=\frac{\eta \rhostar}{\th},
 \label{eq:q}
@@ -591,7 +593,7 @@ rate $\tilde{v}_{w}$, and wind mass loss parameter $\eta$.
 Continuity of the entropy derivative at the stagnation radius where $v = 0$ requires that the temperature at this location be given by (eq.~[\ref{eq:first_law}])
 \begin{align}
 T|_{r_{s}}& = \frac{\gamma-1}{\gamma}\frac{\mu m_p
-  \tilde{v}_{w}^{2}}{2k} \approx \frac{\gamma-1}{\gamma}\frac{\mu
+  \tilde{v}_{w}^{2}}{2k} \underset{v_w \gg \sigma_0}\approx \frac{\gamma-1}{\gamma}\frac{\mu
   m_p v_w^2}{2k} \frac{13+8\Gamma}{13+8\Gamma-6\nu} \nonumber\\ 
  &\approx
  \begin{cases}
@@ -600,10 +602,8 @@ T|_{r_{s}}& = \frac{\gamma-1}{\gamma}\frac{\mu m_p
  \end{cases}
 \label{eq:Tanalytic}
 \end{align}
-where we have assumed $\gamma=5/3$, $v_{500} \equiv v_{w}/(500$ km
-s$^{-1}$), $v_w\gg\sigma_0$,  and $\densSlope \equiv -d{\rm ln}\rho/d{\rm ln\,r}|_{r_{\rm
-    s}}$ is the density power-law slope at $r = r_{\rm s}$.
-Empirically, we find that
+where $v_{500} \equiv v_{w}/(500$ km s$^{-1}$)  and $\densSlope \equiv -d{\rm ln}\rho/d{\rm ln\,r}|_{r_{\rm s}}$ is the density power-law slope at $r = r_{\rm s}$.
+Empirically, we find from our numerical solutions that
 \begin{align}
 \densSlope \simeq \frac{1}{6} \left(4 \Gamma+3\right).
 \label{eq:densSlope}
@@ -642,7 +642,7 @@ entire ISM of the galaxy is accreting.  In particular, in Appendix
 critical threshold (Fig.~\ref{fig:zetaCrit}) 
 
 \begin{equation} 
-\zeta\equiv \sqrt{1 + \frac{v_w}{\sigma_0}^2} <
+\zeta\equiv \sqrt{1 + \left(\frac{v_w}{\sigma_0}\right)^2} <
 \zeta_c \approx \left(\frac{\rb}{\rinf}\right)^{0.5(1-\Gamma)}.
 \label{eq:zetacrit}
 \end{equation}
@@ -656,9 +656,9 @@ the condition that the wind heating parameter be less than the local escape
 speed near the break radius, $v_{\rm esc} \sim (GM_{\star}|_{r_{\rm
     b}}/r_b)^{1/2}$, where $M_{\star} \propto r^{2-\Gamma}$.
 
-\subsection{SMBH Accretion Rate}
+\subsection{Accretion Rate}
 
-The accretion rate onto the SMBH is given by the total mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
+The accretion rate towards the SMBH is given by the total mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
 \begin{eqnarray}
   \dot{M} &=& 4\pi \int_{0}^{r_{s}}q r^{2}dr = \frac{\eta M_{\star}|_{r_{\rm s}}}{\th} \nonumber \\
 &\approx&
@@ -686,12 +686,7 @@ given by
 where $\dot{M}_{\rm edd} = 2.6M_{\bullet,8}M_{\odot}$ yr$^{-1}$ is the
 Eddington accretion rate, assuming a radiative efficiency of ten per
 cent.  Note the sensitive dependence of the accretion rate on the wind
-heating rate. Also, we emphasize that
-equation~\eqref{eq:eddr_analytic} represents the mass inflow rate on
-large scales and does not include small scale
-outflows. \citep{Li+2013} suggest only a fraction $\alpha$ (the
-standard Shakura-Sunyaev parameter--assumed to be 0.1) will make it
-down to the black hole.
+heating rate.  We emphasize that equation~\eqref{eq:eddr_analytic} represents the radial mass inflow rate on relatively large scales and does not include outflows from the accretion disk on small scales (e.g.~\citealt{Blandford&Begelman99}; \citealt{Li+13}), which could significantly reduce the fraction of $\dot{M}$ actually reaching the SMBH.
 
 The gas density at the stagnation radius, $\rho|_{r_{\rm s}}$, is more
 challenging to estimate accurately.  By using an alternative estimate of
@@ -777,7 +772,7 @@ break radius.  Equation (\ref{eq:conduction}) shows that, even when
 conduction is saturated, our neglect of heat conduction results in at
 most an order unity correction for causal values of the saturation
 parameter $\phi < 0.1$.  Our numerical experiments which include
-conductive heating confirm this ($\S\ref{sec:numerical}$).
+conductive heating confirm this ($\S\ref{sec:numerical}$).  {\bf BDM: whats going on wrt johnson and quataert?}
 
 
 
@@ -794,10 +789,11 @@ $\dot{q}_{\rm rad} = n^{2}\Lambda \propto T^{-2.7}$
 (eq.~[\ref{eq:qdot_rad}]; see below) is thermally unstable (e.g.,
 \citealt{McCourt+12}, \citealt{Li&Bryan14a}), potentially resulting in
 the formation of a multi-phase medium and enhanced star formation
-(\citealt{Li&Bryan14b}).  Even if the hot plasma of the CNM does not
+(\citealt{Li&Bryan14b}).  
+
+Even if the hot plasma of the CNM does not
 condense into cold clouds, the loss of pressure can temporarily
-increase the black hole accretion rate.  When coupled to feed-back
-processes which result from such enhanced accretion, this can lead to
+increase the black hole accretion rate by producing a large-scale cooling flow.  When coupled to feed-back processes which result from such enhanced accretion, this can lead to
 time-dependent limit cycle behavior (e.g.~\citealt{Ciotti&Ostriker07};
 \citealt{Ciotti+10}; \citealt{Yuan&Li11}, \citealt{Gan+14}), which is
 also inconsistent with our assumption of a steady, single-phase flow.
@@ -825,17 +821,19 @@ for the gas and stellar densities at the stagnation radius,
 respectively.  We have approximated the cooling function for $T <
 2\times 10^{7}$ K as $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
   \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$, which assumes solar
-metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  Note that in
-our runs with radiative cooling we take $\Lambda(T)$ to be a piecewise
-function with $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
-  \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$ for $T\leq 2\times
-10^{7}$ K and $\Lambda = 2.3 \times 10^{-24} \left(T/10^6
-  \text{K}\right)^{0.5}$ for $T>2\times 10^{7}$ K.
+metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  
+
+%Note that in
+%our runs with radiative cooling we take $\Lambda(T)$ to be a piecewise
+%function with $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
+ % \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$ for $T\leq 2\times
+%10^{7}$ K and $\Lambda = 2.3 \times 10^{-24} \left(T/10^6
+ % \text{K}\right)^{0.5}$ for $T>2\times 10^{7}$ K.
 
 To within a constant of order unity, equation (\ref{eq:cooling2}) also
 equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n
 kT/2 \mu)/|\dot{q}_{\rm rad}|$ to the free-fall time $t_{\rm ff}$ at the
-stagnation radius, as can be derived using the equality
+stagnation radius.  This equivalence can be derived using the equality
 \begin{align}
 \rho|_{r_{\rm s}}=\frac{3 q\tff|_{r_{\rm s}}}{2-\Gamma}.
 \label{eq:rhors2}
@@ -863,7 +861,7 @@ where the final condition corresponds to the low wind heating limit
 ($\zeta \ll \zeta_c$; eq.~[\ref{eq:zetacrit}]), for which our
 numerical and analytic results show that the stagnation radius moves
 out to the break radius $r_b$; the quasi-hydrostatic structure that
-develops in this case greatly increases the gas density, resulting in
+develops in this case greatly increases the gas density, resulting in local
 thermal instability.
 
 Note that in practice when $v_{w}<v_{\rm TI}$, a cooling flow may
@@ -957,11 +955,11 @@ dynamically important for thermally stable flows in a region that is
 causally disconnected from the outer part of the flow. Thus, the flow
 properties on large scales will generally be unaffected by angular momentum.
 
-For $r\simeq r_{\rm circ} $ the gas will encounter a centrifugal
-barrier, which means that much of the gas flowing in from larger
-scales will be driven out in a conical outflow. \citep{Li+2013}
-suggest that the actual accretion rate will be $\sim\alpha$ times the
-accretion rate on large scales {\bf Note that new ending paragraph}.
+%At $r\simeq r_{\rm circ} $ the gas will encounter a centrifugal
+%barrier, which means that much of the gas flowing in from larger
+%scales will be driven out in a conical outflow. \citep{Li+2013}
+%suggest that the actual accretion rate will be $\sim\alpha$ times the
+%accretion rate on large scales {\bf Note that new ending paragraph}.
 
 
 
@@ -1217,8 +1215,7 @@ Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative
 cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$
 (eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of
 radius for our fiducial solutions shown in Figure \ref{fig:profiles}.
-Radiative cooling is calculated using the cooling function from
-\citealt{Draine:2011a}.  For high heating rates of $v_{w} = 600$ and
+Radiative cooling is calculated using the cooling function of \citet{Draine:2011a} for solar metallicity.  For high heating rates of $v_{w} = 600$ and
 $1200$ km s$^{-1}$ cooling is unimportant across all radii, while for
 $v_{w} = 300$ km s$^{-1}$ we see that $\dot{q}_{\rm
   heat}/|\dot{q}_{\rm rad}|$ and $\tcool/\tff$ can be less than unity,
@@ -1261,10 +1258,7 @@ final column.
 
 Thermal conduction, by contrast, results in only minor changes to our
 solutions for our fiducial value of the saturation parameter $\phi =
-0.1$.  Thermal conduction, by contrast, results in only order unity
-changes to our results for the stagnation radius (and hence the
-accretion rate) for our fiducial value of the saturation parameter
-$\phi =0.1$. 
+0.1$.  
 
 \section{Heating Sources}
 \label{sec:heating}
@@ -1379,24 +1373,20 @@ for the stagnation radius, we find that
    \end{cases}
 \label{eq:rIars}
 \end{align}
-Equation (\ref{eq:rIars}) shows that SN Ia can only be approximated as
-a steady heating source near the stagnation radius for extremely
+SN Ia can only be approximated as a steady heating source near the stagnation radius for extremely
 massive SMBHs with $M_{\bullet} \gtrsim 10^9 \Msun$ or for a very
 young stellar population ($\tau_{\star} \ll t_{\rm h}$).
 
-However, even if SN Ia are rare near the stagnation radius, SN Ia may
-cap the SMBH accretion rate by periodically blowing gas out of the
-nucleus of low mass galaxies.  Between successive SNe, stars release a
-gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$
+Even if SN Ia are rare near the stagnation radius, they may cap the SMBH accretion rate by periodically blowing gas out of the nucleus of low mass galaxies.  Between successive SNe, stars release a gaseous mass $M_{\rm g} \approx \eta M_{\star}\tau_{\rm Ia}/t_{\rm h}$
 interior to the Ia radius, which is locally gravitationally bound to
 the SMBH by an energy $E_{\rm bind} \sim M_{\rm
-  g}\sigma_0^{2}\mathcal{F}^{2}$, where typically $\mathcal{F}
-\lesssim$ few.  From the above definitions we find that \be
+  g}\sigma_0^{2}$.  From the above definitions we find that
+ \be
 \frac{E_{\rm Ia}}{E_{\rm bind}} \sim \frac{(v_{w}^{\rm
-    Ia})^{2}}{2\mathcal{F}^{2}\sigma_0^{2}}.
+    Ia})^{2}}{2\sigma_0^{2}}.
 \label{eq:blowout}
 \ee
-Hence, for low mass BHs with $\sigma_0 \ll v^{\rm Ia}_{w}$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Even when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is still potentially limited to a value
+Hence, for low mass BHs with $\sigma_0 \ll v^{\rm Ia}_{w}$, SN Ia are capable of dynamically clearing out gas from radii $\sim r_{\rm Ia} \gtrsim r_{\rm s}$.  Thus even when heating is sufficiently weak that the stagnation radius formally exceeds $r_{\rm Ia}$, the SMBH accretion rate is still limited to a value
 \begin{eqnarray}
 \frac{\dot{M}_{\rm Ia}}{\dot{M}_{\rm edd}} &\approx& \frac{\eta M_{\bullet}}{\dot{M}_{\rm edd} t_{\rm h}}\left(\frac{r_{\rm Ia}}{r_{\rm inf}}\right)^{2-\Gamma} \approx \nonumber \\
  && \begin{cases}
@@ -1416,16 +1406,10 @@ for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$
 %Ia cannot alone prevent cooling instabilities in the nuclei of low
 %mass galaxies.
 
-The deep gravitational potential wells of high mass galaxies $\sigma_0
-\gg  v^{\rm Ia}_{w}$ prevent SN Ia from dynamically clearing out gas
-in these systems.  Equation (\ref{eq:eddr_Ia}) nevertheless represents
-a cap on the accretion rate in practice because if other source of
-heating are ineffective, then the Ia heating rate (eq.~[\ref{eq:vIa}])
-is usually sufficiently high to prevent the stagnation radius
-(calculated including the heating from SN Ia) from substantially
-exceeding $r_{\rm Ia}$. Stated another way, if the stagnation radius moves inwards from $\rIa$, then decreased heating will force it outwards again. However, if the stagnation radius moves well outside of $\rIa$, then the high level of Ia heating will force it inwards. 
+The deep gravitational potential wells of high mass galaxies prevent SN Ia from dynamically clearing out gas in these systems ($\sigma_0 \gg  v^{\rm Ia}_{w}$).  Equation (\ref{eq:eddr_Ia}) nevertheless still represents a cap on the accretion rate in practice because the Ia heating rate (eq.~[\ref{eq:vIa}])
+is usually high enough to prevent the stagnation radius (calculated including the Ia heating) from substantially exceeding $r_{\rm Ia}$. If the stagnation radius moves inwards from $\rIa$, then decreased heating will force it outwards again.  On the other hand, if the stagnation radius moves well outside of $\rIa$, then the high level of Ia heating will force it inwards. 
 
-Our criterion for cooling instability given by equations \eqref{eq:cooling2} and ~\eqref{eq:Mdotmax} is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  However, by re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we find the ratio of heating to radiative cooling at $\rIa$ to be given by
+Finally, note that our criterion for cooling instability (eq.~[\ref{eq:cooling2}], [\ref{eq:Mdotmax}]) is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  By re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we find that
 \begin{align}
 \label{eq:heatingratioIa}
 &\left.\frac{\dot{q}_{\rm heat}}{\left|\dot{q}_{\rm rad}\right|}\right|_{\rIa}\simeq
@@ -1443,7 +1427,7 @@ Our criterion for cooling instability given by equations \eqref{eq:cooling2} and
   & \text{cusp}\\
 \end{cases}
 \end{align}
-Thus, for high mass galaxies and/or relatively old stellar populations, Ia heating is capable of preventing cooling instabilities on scales of the stagnation radius, i.e. $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{\rIa} \gtrsim 10$. However, for lower mass galaxies or younger stellar populations, Ia blow-out cannot prevent cooling instabilities.
+For high mass galaxies and relatively old stellar populations, Ia heating can preventing cooling instabilities on scales of the stagnation radius, i.e. $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{\rIa} \gtrsim 10$.  However, for lower mass galaxies or younger stellar populations, Ia blow-out cannot prevent cooling instabilities.
 
 
 %Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
@@ -2461,26 +2445,27 @@ galaxy. However, galaxies of mass $\gsim 7\times 10^{10} \Msun$
 assemble their stars from the inside out
 \citep{PerezCidFernandes+:2013a}, resulting in galactic nuclei which
 may be systematically older than assumed in our model and thus more
-prone to thermal instability.
+prone to thermal instability.  
 
-On the other hand, \citealt{LauerFaber+:2005a} find that $\sim 60\%$
-of cusp galaxies and $\sim29\%$ of core galaxies have (generally
-unresolved) emission in excess of the inward extrapolation of the
-Nuker law.  They note that these nuclei are bluer than the background
-galaxy starlight, suggesting the presence of younger stars towards
-galactic center. Nuclear star cluster could be important for small
-values of $M_{\rm bulge}\lsim 10^{11} \Msun$ ($\Mbh\lsim 2\times 10^8
-\Msun$), but are extremely subdominant for higher mass galaxies
-\citep{GrahamSpitler:2009a}.
+%Finally, as already mentioned, our models 
+%On the other hand, \citealt{LauerFaber+:2005a} find that $\sim 60\%$
+%of cusp galaxies and $\sim29\%$ of core galaxies have (generally
+%unresolved) emission in excess of the inward extrapolation of the
+%Nuker law.  They note that these nuclei are bluer than the background
+%galaxy starlight, suggesting the presence of younger stars towards
+%galactic center. Nuclear star cluster could be important for small
+%values of $M_{\rm bulge}\lsim 10^{11} \Msun$ ($\Mbh\lsim 2\times 10^8
+%\Msun$), but are extremely subdominant for higher mass galaxies
+%\citep{GrahamSpitler:2009a}.
 
-Mass injection to the nucleus could (for $\Mbh\lsim 2 \times 10^{8}
-\Msun$) therefore be dominated by a nuclear star cluster with its own
-break radius on parsec scales, i.e. much smaller than our fiducial
-value of $r_b \sim 100$ pc.  In the case of high heating, a smaller
-break radius does not appreciably change the stagnation radius,
-resulting in a similar SMBH accretion rate.  For break radii smaller
-than the nominal stagnation radius, the presence of a smaller break
-radius would likely decrease the stagnation radius and accretion rate.
+%Mass injection to the nucleus could (for $\Mbh\lsim 2 \times 10^{8}
+%\Msun$) therefore be dominated by a nuclear star cluster with its own
+%break radius on parsec scales, i.e. much smaller than our fiducial
+%value of $r_b \sim 100$ pc.  In the case of high heating, a smaller
+%break radius does not appreciably change the stagnation radius,
+%resulting in a similar SMBH accretion rate.  For break radii smaller
+%than the nominal stagnation radius, the presence of a smaller break
+%radius would likely decrease the stagnation radius and accretion rate.
 
     
 
