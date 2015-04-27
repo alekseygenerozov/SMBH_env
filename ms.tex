@@ -1773,8 +1773,7 @@ fiducial volumetric averages, calculated using SFHs from \citet{MosterNaab+:2013
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{mdot_sfr.pdf}
-\caption{\label{fig:bh_growth} {\it Top panel:} Gas inflow rate
-  (excluding small-scale outflows) $\dot{M}$ in Eddington units as a
+\caption{\label{fig:bh_growth} {\it Top panel:} Gas inflow rate $\dot{M}/\dot{M}_{\rm edd}$ as a
   function of black hole mass $M_{\bullet}$, shown separately for core
   ($\Gamma=0.1$, dot-dashed) and cusp galaxies ($\Gamma=0.8$, solid).
   Black lines show the accretion rate calculated from equation
@@ -1793,9 +1792,9 @@ fiducial volumetric averages, calculated using SFHs from \citet{MosterNaab+:2013
   to several orders of magnitude smaller due to the presence of small
   scale outflows. Thus the plot is really showing
   the gas inflow rate on large scales (e.g. near the stagnation
-  radius) {\it Bottom panel:} Growth times $\Mbh/\Mdot$ in units of
+  radius) {\it Bottom panel:} Growth times $\Mbh/\dot{M}_{\bullet}$ in units of
   the Hubble time $\th$ for each of the accretion rates shown in the
-  top panel.}
+  top panel, where $\dot{M}_{\bullet} = 0.1\dot{M}$ to account for the fraction of the inflowing matter lost to outflows from the accretion disk.}
 \end{figure}
 
 Figure \ref{fig:vwSources} shows that the heating associated with the
@@ -1824,11 +1823,11 @@ For low mass black holes, blow out from SN Ia radius caps the SMBH
 accretion rate at a value $\dot{M}_{\rm Ia} \sim
 10^{-6}-10^{-5}M_{\odot}$ yr$^{-1}$ (green lines;
 eq.~[\ref{eq:eddr_Ia}]), which is however not low enough to prevent
-otherwise thermally-unstable flow at smaller radii (eq.~[\ref{eq:heatingratioIa}]).  On the other hand, for higher
+otherwise thermally-unstable flow at smaller radii (eq.~[\ref{eq:heatingratioIa}]).  For higher
 $M_{\bullet}$ the stagnation resides close to the Ia radius so Ia
 heating contributes to the steady gas heating rate, even if the energy
 released by a single Ia is insufficient to unbind gas from the stellar
-bulge (eq.~[\ref{eq:blowout}]).
+bulge (eq.~[\ref{eq:blowout}]).  This explains why the black and yellow lines mean at high $M_{\bullet}$.
 
 % For these highest mass black holes, the maximum accretion rate as
 % set by the SN Ia radius (green lines; eq.~[\ref{eq:eddr_Ia}]) could
@@ -1842,18 +1841,17 @@ bulge (eq.~[\ref{eq:blowout}]).
 Shown also for comparison in Figure \ref{fig:bh_growth} (top panel) is
 the accretion rate onto SgrA* calculated by \citet{Quataert:2004a}.
 Also show is the range of $\dot{M}$ for the low-luminosity AGN NGC3115
-derived through detailed modeling by \citealt{ShcherbakovWong+:2014a},
+derived through detailed modeling by \citet{ShcherbakovWong+:2014a},
 who find a range of accretion rates depending on the assumed model for
-thermal conductivity (although we expect this range would be smaller
-had they included saturation of the conductive flux).  The SgrA* rate
-exceeds our estimate of $\dot{M}$ due to the average star formation
-history for the same $M_{\bullet}$ by almost two orders of magnitude.
-This discrepancy can be understood by the fact that star formation in
+thermal conductivity\footnote{We expect this range would be have been smaller
+had \citet{ShcherbakovWong+:2014a} included saturation of the conductive flux}.  The SgrA* rate
+exceeds our estimate of $\dot{M}$ due to the average SFH for the same $M_{\bullet}$ by almost two orders of magnitude.
+This discrepancy can in part be understood by the fact that star formation in
 the central parsec of the Milky Way cannot be described as
 steady-state: feedback is instead dominated by the stellar winds from
 the ring of young massive stars of mass $\sim 10^{4}M_{\odot}$ and
 estimated age $\sim 10$ Myr (e.g., \citealt{Schodel+07}).  Such a star
-formation history is better described by our `star burst' scenario,
+formation history is better described by our impulsive (starburst) scenario,
 for which the value of $\eta \sim 100$ at $\tau_{\star} = 10^{7}$ yr
 (Fig.~\ref{fig:vwImp}) is a factor of $\sim 100$ times higher than the
 value of $\eta \sim 1$ predicted in the average SFH case
@@ -1881,11 +1879,9 @@ The left panel of Figure \ref{fig:miller} is calculated assuming a
 constant low value for the radiative efficiency of $\epsilon_X =
 10^{-4}$, typical of those estimated for low luminosity AGN (e.g.,
 \citealt{Ho:2009a}), while the right panel luminosities are calculated
-instead assuming an efficiency of $\epsilon_X= 10 \epsilon_{\rm
-  bol}\dot{M}/\dot{M}_{\rm edd}$ that depends on the Eddington ratio
-as predicted by some models for radiatively inefficient accretion
-flows (\citealt{Narayan&Yi95}; \citealt{Narayan+98}).  Shown for
-comparison are the X-ray measurements (green stars) and upper limits
+instead assuming an efficiency of $\epsilon_X= \epsilon_{\rm
+  bol}\epsilon_{\rm rad}$ that depends on the Eddington ratio
+as predicted by \citet{Sharma+2007} (see eq.~[\ref{eq:efficiency}] and surrounding discussion).  Shown for comparison are the X-ray measurements (green stars) and upper limits
 (gray triangles) from the sample of early-type galaxies compiled by
 \citet{Miller+15} (cf.~\citealt{Gallo+10}).  A green line shows the
 best power-law fit to the X-ray luminosity from \citet{Miller+15},
@@ -1914,10 +1910,7 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; red).
   M_{\bullet}^{\alpha}$, with $\alpha = -0.2$).  The left panel is
   calculated assuming a constant radiative efficiency
   $\epsilon_X=10^{-4} (\epsilon_{\rm bol}/0.1)$, while the right hand
-  panel assumes $\epsilon_X= 0.01 (\epsilon_{\rm bol}/0.1)
-  (\alpha/0.1) \epsilon_{rad} ( (\alpha/0.1) 0.1 \eddr) $, where
-  $\epsilon_{\rm rad}$ is given by equation~\eqref{eq:efficiency} and
-  $\eddr$ corresponds to the gas inflow rate on large scales.  Shown
+  panel assumes $\epsilon_X= \alpha \epsilon_{\rm bol}\epsilon_{\rm rad}$, where $\epsilon_{\rm rad}$ is the radiative efficiency calculated by \citet{Sharma+2007} (eq.~[\ref{eq:efficiency}]) and $\alpha = 0.1$ is the fraction of the mass inflowing on large scales that reaches the SMBH.  Shown
   for comparison are the X-ray luminosities calculated for the maximum
   thermally-stable accretion rate ({\it dashed orange line};
   eq.~[\ref{eq:Mdotmax}]); the SN Ia-regulated accretion rate ({\it
