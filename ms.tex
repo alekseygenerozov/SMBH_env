@@ -1637,13 +1637,7 @@ to $\S\ref{sec:kinetic}$.
   $\eta$ characterizing stellar mass loss rate (eq.~[\ref{eq:q}]) as a
   function of black hole mass $\Mbh$, calculated for average star SFHs
   from \citealt{MosterNaab+:2013a} (blue), the ratio of Ia radius to
-  stagnation radius as a function of $\Mbh$ (green), and the ratio of
-  the normalized heating rate
-  $\zeta=\sqrt{1+\frac{v_w^2}{\sigma_0^2}}$ to the critical heating
-  rate $\zeta_c$ for which no outflow is possible (see
-  eq.~\eqref{eq:zetacrit}). In evaluating the latter quantity we use
-  scaling relations for $r_b$, $\rinf$, and $\Gamma$ based on
-  \citet{LauerFaber+:2007a}. {\bf AG added the zeta/zetac line}.}
+  stagnation radius as a function of $\Mbh$ (green), and the ratio of $\zeta/\zeta_{c}$ (blue), where $\zeta_c$ (eq.~[\ref{eq:zetacrit}]) is the critical heating parameter $\zeta \equiv \sqrt{1+(v_w/\sigma_0)^2}$ below which outflows are impossible.  The latter quantity is evalulated using mean scaling relations for $r_b$, $\rinf$, and $\Gamma$ from the \citet{LauerFaber+:2007a} galaxy sample.}
 
  % $\Gamma=0.3
  %  \Mbheight^{-0.24}$, $\rinf=14 \Mbheight^{0.6}$ pc
@@ -1712,7 +1706,7 @@ is not shown, while kinetic feedback is neglected given its uncertain efficiency
 \subsubsection{Continuous SFH}
 A single burst of star formation does not describe the typical star
 formation history of most galaxies.  Qualitatively, smaller galaxies
-will on average have more recent star formation, resulting in
+will on average experience more recent star formation, resulting in
 energetic young stellar winds and supernovae which dominate the gas
 heating budget.  Massive galaxies, on the other hand, will on average
 possess older stellar populations, with their heating rates dominated
@@ -1729,30 +1723,20 @@ convolved with the Ia DTD distribution to determine the SN Ia heating.
 Figure~\ref{fig:vwSources} shows $\vwO(M_{\bullet})$ from each heating
 source (stars, MSPs, SNe Ia, and black hole feedback) calculated for
 the average SFH of galaxies containing a given black hole mass.  The
-younger stellar populations characterizing galaxies with $\Mbh\lsim
+younger stellar populations characterizing low mass galaxies with $\Mbh\lsim
 3\times 10^{8} \Msun$ are dominated by stellar winds, with
 $v_{w}^{\star} \gtrsim 700$ km s$^{-1}$.  Only for $\Mbh\gsim 3\times
 10^{8} \Msun$ does the lack of young stellar populations significantly
-reduce the role of stellar wind heating.  But for these massive
-galaxies, the Ia radius is sufficiently small for SN Ia to contribute
-a comparable level of heating, $v_{w}^{\rm Ia} \gtrsim 600$ km
+reduce the role of stellar wind heating.  For these massive
+galaxies, however, the Ia radius is sufficiently small that SN Ia contribute
+a comparable level of heating, $v_{w}^{\rm Ia} \gtrsim 500$ km
 s$^{-1}$ (in low mass galaxies SN Ia do not contribute to the total
-heating rate because $r_{\rm Ia} > \rs$; bottom panel).  Strikingly,
-we find that galactic nuclei experiencing the same average SFH as
-their host galaxies produce thermally stable flows across almost all
-black hole masses.
+heating rate because $r_{\rm Ia} > \rs$; bottom panel).  
 
-An important caveat, however, is that $\vw$ is only a few times higher
-than the stellar velocity dispersion, i.e. $\zeta \sim \zeta_c$
-(eq.~[\ref{eq:zetacrit}]).  This implies that the true stagnation
-radius and SMBH accretion rate could be larger than our analytic
-estimates, potentially resulting in thermal instability, especially
-for core galaxies with large break radii ($\S\ref{sec:mdot}$).  In
-other words, the CNM of some subset of massive ellipticals be
-thermally unstable, not necessarily because they are receiving lower
-stellar feedback than the average for their galaxy mass, but due to
-the high heating required for stability given the structure of their
-stellar potential.
+Strikingly, we find that galactic nuclei that experience the same average SFH as
+their host galaxies possess thermally stable flows across all
+black hole masses.  An important caveat, however, is that $\vw$ is generally only a few times higher than the stellar velocity dispersion, i.e. $\zeta \sim \zeta_c$
+(eq.~[\ref{eq:zetacrit}]).  This implies that the true stagnation radius and SMBH accretion rate could be larger than our analytic estimates, potentially resulting in thermal instability in a significant fraction of galaxies.  The bottom panel of Figure~\ref{fig:vwSources} also shows $\zeta/\zeta_c$, where $\zeta_c$ is estimated from the best-fit power-law dependence of $r_b$, $\rinf$, and $\Gamma$ on $M_{\bullet}$ from the \citet{LauerFaber+:2007a} galaxy sample.   In other words, the CNM of a significant fraction of massive ellipticals may be thermally unstable, not necessarily because they are receiving lower stellar feedback than the average for their galaxy mass, but due to the high heating required for stability given the structure of their stellar potential.
 
 Realistic variations (``burstiness") in the SFH
 will also often produce lower stellar wind heating rates (Appendix
