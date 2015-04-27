@@ -585,9 +585,10 @@ the grid, in addition to the integral constraint on the energy
 
 We first describe analytic estimates of physical quantities, such as
 the stagnation radius $\rs$ and the mass accretion rate, the detailed
-derivation of which are given in Appendix \ref{app:rs}.  Our results
-are expressed in terms of the SMBH mass $M_{\bullet}$, total heating
-rate $\tilde{v}_{w}$, and wind mass loss parameter $\eta$.
+derivation of which are given in Appendix \ref{app:rs}.  
+%Our results
+%are expressed in terms of the SMBH mass $M_{\bullet}$, total heating
+%rate $\tilde{v}_{w}$, and wind mass loss parameter $\eta$.
 
 \subsection{Flow Properties Near the Stagnation Radius}
 
@@ -687,7 +688,7 @@ given by
 where $\dot{M}_{\rm edd} = 2.6M_{\bullet,8}M_{\odot}$ yr$^{-1}$ is the
 Eddington accretion rate, assuming a radiative efficiency of ten per
 cent.  Note the sensitive dependence of the accretion rate on the wind
-heating rate.  We emphasize that equation~\eqref{eq:eddr_analytic} represents the radial mass inflow rate on relatively large scales and does not include outflows from the accretion disk on small scales (e.g.~\citealt{Blandford&Begelman99}; \citealt{Li+13}), which could significantly reduce the fraction of $\dot{M}$ actually reaching the SMBH.
+heating rate.  As will be discussed later, equation~\eqref{eq:eddr_analytic} is the radial mass inflow rate on relatively large scales and does not include outflows from the SMBH accretion disk (e.g.~\citealt{Blandford&Begelman99}; \citealt{Li+13}), which may significantly reduce the fraction of $\dot{M}$ that actually reaches the SMBH.
 
 The gas density at the stagnation radius, $\rho|_{r_{\rm s}}$, is more
 challenging to estimate accurately.  By using an alternative estimate of
@@ -1121,15 +1122,16 @@ the stagnation radius (Appendix \ref{app:be}).  Thus, for small values
 of the heating rate (small $\zeta$) the location of the stagnation
 radius will vary strongly with the break radius. This explains the
 behavior of the three vertically aligned green squares. These are three
-cusp ($\Gamma=0.8$) galaxies with $\Mbh=10^8 \Msun$ and $v_w=300$ km/s
+cusp ($\Gamma=0.8$) galaxies with t$\Mbh=10^8 \Msun$ and $v_w=300$ km s$^{-1}$
 but with different break radii ($\rb=$ 25, 50, and 100 pc from top to
 bottom). This divergence of the stagnation radius to large radii
 occurs at a higher value of $\zeta$ in core galaxies ($\Gamma = 0.1$),
 explaining the behavior of the two core galaxies shown in
-Fig.~\ref{fig:stag} as vertically aligned orange triangles.  These
-solutions correspond to the same black hole mass ($\Mbh = 10^8 \Msun$)
-and heating rate ($v_w = 600$ km s$^{-1}$) but assume different break
-radii of $r_{b} =$ 25, 50 pc (from top to bottom).
+Fig.~\ref{fig:stag} as vertically aligned orange triangles.  
+%These
+%solutions correspond to the same black hole mass ($\Mbh = 10^8 \Msun$)
+%and heating rate ($v_w = 600$ km s$^{-1}$) but assume different break
+%radii of $r_{b} =$ 25, 50 pc (from top to bottom).
 
 Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for a sample of
 our numerical solutions for different values of
@@ -1213,40 +1215,22 @@ within a factor of two of its minimum across the entire grid, the
 value of $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ can be
 taken as diagnostic of thermal instability at all radii.
 
-Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have that
-$\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$
-near the stagnation radius.  However, the two ratios diverge from each
-other at low heating ($v_{w} \lesssim 300$ km s$^{-1}$) because
-equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the true
-gas density, which is greater in a subsonic flow (weak heating) than
-in a supersonic outflow (strong heating).
+Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$
+near the stagnation radius, but these ratios diverge from each other at low heating ($v_{w} \lesssim 300$ km s$^{-1}$).  This results because equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the true gas density in the case of subsonic flow (weak heating).
 
-
-In addition to our solutions which neglect thermal conduction and
-radiative cooling, we explore a smaller set of simulations including
-these effects explicitly, as marked by dagger symbols in Table
-\ref{table:models}.  For solutions which are far from being thermally
+Although most of our solutions neglect thermal conduction and
+radiative cooling, these effects are explore explicitly in subset of simulations, as marked by dagger symbols in Table \ref{table:models}.  For cases which are far from being thermally
 unstable when cooling is neglected (e.g., $M_{\bullet} =
 10^{8}M_{\odot}$, $v_{w} = 600$ km s$^{-1}$, $r_{b} = 100$ pc, $\eta =
-0.2$, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| = 76$), the inclusion of
-radiative cooling has little effect on the key properties of the flow,
-e.g., stagnation radius, mass accretion rate, $\dot{q}_{\rm
-  heat}/|\dot{q}_{\rm rad}|$.  However, for solutions that are only
-marginally thermally stable, including radiative losses acts to
-decrease the value of $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ by a
-greater fractional amount.  We calculated solutions with radiative
+0.2$, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| = 76$), including radiative cooling has little effect on the key properties of the solution, such as the stagnation radius, mass accretion rate, and the cooling ratio $\dot{q}_{\rm
+  heat}/|\dot{q}_{\rm rad}|$.  However, for solutions that are marginally thermally stable, including radiative losses acts to significantly decrease $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$.  We calculated solutions with radiative
 cooling for all cusp galaxies with $v_w=300$ km s$^{-1}$ and for all
 core galaxies with $v_w=600 $ km s$^{-1}$, each for three different
 values of $\eta = 0.02, 0.2, 0.6$, spanning the physical range of
-expected mass loss for continuous star formation (see
-Fig.~\ref{fig:vwSources}).  Solutions found to be unstable for all
-values of $\eta$ are marked in boldface as ``TI" in Table
-\ref{table:models}, with the unstable values of $\eta$ provided in the
-final column.
+expected mass loss for continuous star formation (Fig.~\ref{fig:vwSources}).  Solutions found to be unstable for all values of $\eta$ are marked in boldface as ``TI" in Table
+\ref{table:models}, with the unstable values of $\eta$ provided in the final column.
 
-Thermal conduction, by contrast, results in only minor changes to our
-solutions for our fiducial value of the saturation parameter $\phi =
-0.1$.  
+Including thermal conduction, by contrast, results in only minor changes to our solutions for our fiducial value of the saturation parameter $\phi = 0.1$, consistent with our analytic expectation (eq.~[\ref{eq:conduction}]).  
 
 \section{Heating Sources}
 \label{sec:heating}
