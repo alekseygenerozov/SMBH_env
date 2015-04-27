@@ -1774,27 +1774,15 @@ fiducial volumetric averages, calculated using SFHs from \citet{MosterNaab+:2013
 \begin{figure}
 \includegraphics[width=\columnwidth]{mdot_sfr.pdf}
 \caption{\label{fig:bh_growth} {\it Top panel:} Gas inflow rate $\dot{M}/\dot{M}_{\rm edd}$ as a
-  function of black hole mass $M_{\bullet}$, shown separately for core
+  function of black hole mass $M_{\bullet}$, shown for core
   ($\Gamma=0.1$, dot-dashed) and cusp galaxies ($\Gamma=0.8$, solid).
   Black lines show the accretion rate calculated from equation
-  (\ref{eq:eddr_analytic}) using our estimate of the gas heating rate
-  provided at $z = 0$ by the average star formation histories for each
-  galaxy mass (Fig.~\ref{fig:vwSources}).  Teal lines show the maximum
-  accretion set by Ia supernovae blow-out (\ref{eq:eddr_Ia}).  Red
-  lines show the accretion rate obtained if Compton heating alone was
-  acting (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum
-  accretion rate for a thermally stable flow near the stagnation
-  radius (eq.~[\ref{eq:Mdotmax}]).  We also show Eddington ratios
-  inferred for SgrA* from \citet{Quataert:2004a} (gray circles), for
-  NGC3115 from \citet{ShcherbakovWong+:2014a} (gray diamonds), and for
-  the Swift J1644+57 TDE from \citet{BergerZauderer+:2012a} (gray
-  triangles). Note that the actual black hole accretion rate could one
-  to several orders of magnitude smaller due to the presence of small
-  scale outflows. Thus the plot is really showing
-  the gas inflow rate on large scales (e.g. near the stagnation
-  radius) {\it Bottom panel:} Growth times $\Mbh/\dot{M}_{\bullet}$ in units of
+  (\ref{eq:eddr_analytic}) using the heating rate provided at $z = 0$ by the average star formation histories for each galaxy mass (Fig.~\ref{fig:vwSources}).  Teal lines show the maximum accretion set by Ia supernovae blow-out, $\dot{M}_{\rm Ia}$ (\ref{eq:eddr_Ia}).  Red lines show the accretion rate obtained if Compton heating acts alone, $\dot{M}_{\rm C}$ (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum
+  accretion rate for a thermally stable flow near the stagnation radius, $\dot{M}_{\rm TI}$ (eq.~[\ref{eq:Mdotmax}]).  Also shown are the inferred accretion rates of SgrA* from \citet{Quataert:2004a} (gray circles), for
+  NGC3115 from \citet{ShcherbakovWong+:2014a} (gray diamonds), and for Swift J1644+57 from \citet{BergerZauderer+:2012a} (gray
+  triangles).  {\it Bottom panel:} Growth times $t_{\rm grow} \equiv \Mbh/\dot{M}_{\bullet}$ in units of
   the Hubble time $\th$ for each of the accretion rates shown in the
-  top panel, where $\dot{M}_{\bullet} = 0.1\dot{M}$ to account for the fraction of the inflowing matter lost to outflows from the accretion disk.}
+  top panel, where $\dot{M}_{\bullet} = \alpha\dot{M}$, where $\alpha = 0.1$, to account for the fraction of inflowing mass lost to disk outflows on small scales.}
 \end{figure}
 
 Figure \ref{fig:vwSources} shows that the heating associated with the
@@ -1910,7 +1898,7 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; red).
   M_{\bullet}^{\alpha}$, with $\alpha = -0.2$).  The left panel is
   calculated assuming a constant radiative efficiency
   $\epsilon_X=10^{-4} (\epsilon_{\rm bol}/0.1)$, while the right hand
-  panel assumes $\epsilon_X= \alpha \epsilon_{\rm bol}\epsilon_{\rm rad}$, where $\epsilon_{\rm rad}$ is the radiative efficiency calculated by \citet{Sharma+2007} (eq.~[\ref{eq:efficiency}]) and $\alpha = 0.1$ is the fraction of the mass inflowing on large scales that reaches the SMBH.  Shown
+  panel assumes $\epsilon_X= \alpha \epsilon_{\rm bol}\epsilon_{\rm rad}$, where $\epsilon_{\rm rad}$ is the radiative efficiency of low luminosity accretion disks calculated by \citet{Sharma+2007} (eq.~[\ref{eq:efficiency}]) and $\alpha = 0.1$ is the fraction of the mass inflowing on large scales that reaches the SMBH.  Shown
   for comparison are the X-ray luminosities calculated for the maximum
   thermally-stable accretion rate ({\it dashed orange line};
   eq.~[\ref{eq:Mdotmax}]); the SN Ia-regulated accretion rate ({\it
@@ -1925,8 +1913,8 @@ average SFH of galaxies with similar mass, then to first order we
 predict that $\langle L_{X}/L_{\rm edd}\rangle$ should be a weakly
 increasing function of BH mass.  This result is in tension with the
 observed down-sizing trend that the average Eddington ratio is seen to
-decrease (albeit weakly) with $M_{\bullet}$, especially in the
-$\epsilon_X= (\epsilon_{\rm bol}/0.1)(\Mdot/\MdotEdd)$ model.
+decrease (albeit weakly) with $M_{\bullet}$, especially in the model where
+$\epsilon_X$ increases with the Eddington ratio.
 However, one must keep in mind the enormous uncertainty in calculating
 the luminosity of the accretion flow close to the black hole in a
 single waveband based on the feeding rate on larger scales.  If disk
