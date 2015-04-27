@@ -1859,22 +1859,19 @@ powerful diagnostic of the SMBH accretion rates and how they vary with
 SMBH mass and other galaxy properties (e.g., \citealt{Ho08} and
 references therein).  Figure~\ref{fig:miller} shows our predictions
 for $\langle L_{X} \rangle =\epsilon_X \dot{M} c^2$ as a function of
-black hole mass, where $\epsilon_{X} = \epsilon\epsilon_{\rm bol}$,
-$\epsilon$ is the total radiative efficiency, and $\epsilon_{\rm bol}
-\sim 0.1$ is the bolometric correction into the measured X-ray band
-for low luminosity AGN (\citealt{Ho08}).  The value of $\langle L_X
-\rangle$ is calculated using the average accretion for galaxies with
+black hole mass, where $\epsilon_{X} = \alpha\epsilon_{\rm rad}\epsilon_{\rm bol}$, $\alpha = 0.1$ accounts for the fraction of the inflowing matter loss to outflows from the accretion disk, $\epsilon_{\rm rad}$ is the radiative efficiency of the accreted matter, and $\epsilon_{\rm bol} \sim 0.1$ is the bolometric correction into the measured X-ray band
+for low luminosity AGN (\citealt{Ho08}).  In all cases the value of $\langle L_X
+\rangle$ is calculated using the average accretion rate for galaxies with
 core ($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) stellar density
-profiles, using the relationship $\Gamma = 0.3 \Mbheight^{-0.24}$ fit
-to the \citet{LauerFaber+:2007a} galaxy sample.
+profiles, using the mean power-law relationship $\Gamma = 0.3 \Mbheight^{-0.24}$, based on fitting the \citet{LauerFaber+:2007a} galaxy sample.
 
 The left panel of Figure \ref{fig:miller} is calculated assuming a
 constant low value for the radiative efficiency of $\epsilon_X =
 10^{-4}$, typical of those estimated for low luminosity AGN (e.g.,
-\citealt{Ho:2009a}), while the right panel luminosities are calculated
+\citealt{Ho:2009a}).  The right panel luminosities are calculated
 instead assuming an efficiency of $\epsilon_X= \epsilon_{\rm
   bol}\epsilon_{\rm rad}$ that depends on the Eddington ratio
-as predicted by \citet{Sharma+2007} (see eq.~[\ref{eq:efficiency}] and surrounding discussion).  Shown for comparison are the X-ray measurements (green stars) and upper limits
+as predicted by MHD sheaing box simulations by \citet{Sharma+2007} (see eq.~[\ref{eq:efficiency}] and surrounding discussion).  Shown for comparison are the X-ray measurements (green stars) and upper limits
 (gray triangles) from the sample of early-type galaxies compiled by
 \citet{Miller+15} (cf.~\citealt{Gallo+10}).  A green line shows the
 best power-law fit to the X-ray luminosity from \citet{Miller+15},
@@ -1923,11 +1920,10 @@ $\epsilon_X$ increases with the Eddington ratio.
 However, one must keep in mind the enormous uncertainty in calculating
 the luminosity of the accretion flow close to the black hole in a
 single waveband based on the feeding rate on larger scales.  If disk
-outflows carry away most of the infalling mass before it reaches X-ray
+outflows indeed carry away most of the infalling mass before it reaches X-ray
 producing radii (e.g.~\citealt{Blandford&Begelman99};
 \citealt{Li+13}), then the angular momentum of the infalling gas might
-also influence the X-ray luminosity, in a way that could depend
-systematically on the stellar population and hence $M_{\bullet}$.
+also influence the X-ray luminosity indirectly through the inflow efficiency $\alpha$, in a way that could depend systematically on the stellar population and hence $M_{\bullet}$.
 
 Perhaps a more readily addressable test is whether a steady-state
 accretion picture developed in this work can account for the the large
@@ -1937,12 +1933,12 @@ three effects: (1) intrinsic scatter in the scaling relationships
 ($\Mbh-\sigma$ and $\Mbh-L_{\rm bulge}$) used to measure $\Mbh$; (2)
 the strong sensitivity of the accretion rate to the stellar wind
 velocity and mass loss parameter, $\dot{M}/\dot{M}_{\rm edd} \propto
-\eta v_{w}^{-3.8(-2.4)}$ for core(cusp) galaxies, respectively
+v_{w}^{-3.8(-2.4)}$ for core(cusp) galaxies, respectively
 (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  When
 combined with the significant dependence of $v_w$ on stochastic
 intermittency in the star formation history (Appendix
 \ref{fig:NickPlot2}), this can lead to order of magnitude differences
-in $\dot{M}$ {\bf AG limitation from zetac}; (3) differences in
+in $\dot{M}$; (3) differences in
 angular momentum of the infalling gas from galaxy to galaxy, resulting
 in differences in the fraction of the gas lost to outflows.  Also
 potentially contributing is the order of magnitude difference, at
@@ -1958,8 +1954,9 @@ augmented by the theoretical expectation that $L_{\rm X} \propto
 \label{sec:cycle}
 
 It is also possible that many of the \citet{Miller+15} sample of
-galactic nuclei are not accreting in steady state. Within our steady
-state solutions gas outside the stagnation radius $\rs$ is being blown
+galactic nuclei are not accreting in steady state.  This is supported by the fact that many of the X-say luminosities in Figure \ref{fig:miller} lie above the predictions for stable accretion, i.e., $L_X \gtrsim \epsilon_X \dot{M}_{\rm TI}c^{2}$ (yellow line), at least for our choice of radiative efficiency.  
+
+Within our steady state solutions gas outside the stagnation radius $\rs$ is being blown
 out in wind. However, for very massive galaxies ($\Mbh\gsim 10^8
 \Msun$) the energy injected into the gas is not enough to truly blow
 the gas out of the potential well of the galaxy. This gas is likely to
@@ -1974,29 +1971,20 @@ of early-type galaxies in the local universe have undergone recent ($<
 1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).
 
  
-Furthermore, our SFH-averaged accretion rates are derived using
-analytic expressions for the stagnation radius that may underpredict
-the true accretion rate if $\zeta < \zeta_c$, as may occur in massive
-core galaxies with large break radii.
+%Furthermore, our SFH-averaged accretion rates are derived using
+%analytic expressions for the stagnation radius that may underpredict
+%the true accretion rate if $\zeta < \zeta_c$, as may occur in massive
+%core galaxies with large break radii.
 
 If the actual radiative efficiency is lower than our fiducial
-assumption, then many of the X-ray detections would lie above the
-predictions for stable accretion, i.e., $L_X \gtrsim \epsilon_X
-\dot{M}_{\rm TI}$ (yellow line).  For example, we assume 10\% 
-of the mass inflow rate is drive out in small scale outflows, but this
-fraction could be considerably large. In this case the X-ray detected
-galaxies experience less heating than average galaxies of the same
-mass, and may not be stably accreting at all.  This is particularly
-plausible because the \citet{Miller+15} sample includes only
-early-type galaxies, with older stellar populations than the average
-for their black hole mass.
+assumption, then an even larger fraction of the X-ray detections would lie above the
+predictions for stable accretion.  For example, we assume that a fraction $\alpha = 0.1$ 
+of the mass inflow rate reaches the SMBH, but this fraction could be considerably smaller. In such a case the X-ray detected galaxies will be experience less heating than we calculate for the average SFH, and may not be stably accreting at all.  This is plausible given that the \citet{Miller+15} sample includes only early-type galaxies with older stellar populations than the average for their stellar mass.
 
 Figure \ref{fig:bh_growth} (top panel) also shows that $\dot{M}_{\rm
   C} > \dot{M}_{\rm TI}$ across all black hole masses.  This indicates
 that even if Compton heating could act to stabilize the flow in a
-quasi-steady state (which, as already discussed, is unlikely), the
-magnitude of the heating is insufficient to produce a thermally stable
-accretion rate given conditions corresponding to the average SFH.
+quasi-steady state, the magnitude of Compton heating is not sufficient to produce a thermally stable accretion rate, at least for conditions corresponding to the average SFH.
 
 
 Similar cyclic AGN activity could occur on the smaller radial scale of
@@ -2006,18 +1994,9 @@ luminosities shown in Fig \ref{fig:miller} could result from the wide
 range of inflow rates experienced over the course of a cyclic episode
 between instabilities and periodic nuclear outbursts. 
 
-
-If the galaxies for which $L_{\rm X}$ is measured at low $M_{\bullet}$
-in Fig \ref{fig:miller} are indeed in a state of thermally-unstable
-outburst, then a subset of the galaxies with X-ray upper limits
-may contribute to a separate population of thermally stable, steadily
-accreting nuclei.  Such a population could include SgrA*, which has a
-much lower X-ray luminosity for its black hole mass than predicted by
-the \citet{Miller+15} trend.  A potentially bimodal population of
-steady and outbursting galactic nuclei calls into question the physical
-justification of using simple extrapolations of power-law fits to the
-$L_{\rm X}(M_{\bullet}$) relationship to low $M_{\bullet}$ to
-constrain the occupation fraction of SMBHs in the nuclei of low mass
+If the galaxies with measured $L_{\rm X}$ at low $M_{\bullet}$
+in Figure \ref{fig:miller} are indeed in a state of thermally-unstable
+outburst, then some of the galaxies with X-ray upper limits could be contributing to a separate population of thermally-stable, steadily accreting nuclei.  Such a population could include SgrA*, which has a much lower X-ray luminosity for its SMBH mass than predicted by the \citet{Miller+15} trend.  A potentially bimodal population of steady and outbursting galactic nuclei calls into question the practice of using simple extrapolations of power-law fits to the $L_{\rm X}(M_{\bullet}$) relationship to low $M_{\bullet}$ to constrain the occupation fraction of SMBHs in the nuclei of low mass
 galaxies.
 
 
