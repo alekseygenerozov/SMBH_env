@@ -785,8 +785,9 @@ conductive heating confirm this ($\S\ref{sec:numerical}$).  {\bf BDM: whats goin
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{TI.pdf}
-  \caption{hello
+  \caption{
  }
+\label{fig:TI}
 \end{figure}
 
 Radiative cooling usually has its greatest impact near or external to
@@ -813,8 +814,8 @@ overwhelmed by other sources of cooling, namely the {\it stabilizing}
 term $\propto -q c_{s}^{2} \propto -T$ in the entropy equation
 (eq.~[\ref{eq:dsdt}]).  Neglecting radiative cooling to first order,
 this term is balanced at the stagnation radius by the external heating
-term, $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$.  We assess thermal
-stability near the stagnation radius by comparing the ratio of
+term, $\dot{q}_{\rm heat} = q \tilde{v}_{w}^{2}/2$.  One can therefore assess thermal
+stability by comparing the ratio of
 external heating to radiative cooling $|\dot{q}_{\rm rad}|$
 (eq.~[\ref{eq:qdot_rad}]),
 \begin{align}
@@ -862,25 +863,20 @@ v_{w} > v_{\rm TI} \simeq
   {\rm max}\begin{cases}
    280 \eta_{0.02}^{0.14} M_{\bullet,8}^{0.11}\,{\rm km\,s^{-1}}  &, \text{core}\\
    240 \eta_{0.02}^{0.17} M_{\bullet,8}^{0.08}\,{\rm km\,s^{-1}}   &, \text{cusp}  \\
-\approx \sigma_0(r_{b}/r_{\rm inf})^{0.5(1-\Gamma)} &, \zeta \ll \zeta_c, 
+%\approx \sigma_0(r_{b}/r_{\rm inf})^{0.5(1-\Gamma)} &, \zeta \ll \zeta_c. 
   \end{cases}
   \label{eq:cooling3}
 \end{align}
-where the final condition corresponds to the low wind heating limit
-($\zeta \ll \zeta_c$; eq.~[\ref{eq:zetacrit}]), for which our
-numerical and analytic results show that the stagnation radius moves
-out to the break radius $r_b$; the quasi-hydrostatic structure that
-develops in this case greatly increases the gas density, resulting in local
-thermal instability.
+Equations (\ref{eq:cooling2}) and (\ref{eq:cooling3}) are derived using expressions for the stagnation radius and gas density in the high heating limit of $\zeta > \zeta_c = (r_{b}/r_{\rm inf})^{0.5(1-\Gamma)}$ (eq.~[\ref{eq:zetacrit}]).  However, for $\zeta < \zeta_c$, the stagnation radius diverges to the break radius $r_b$ (Appendix \ref{app:be}).  The quasi-hydrostatic structure that results in this case greatly increases the gas density, which in practice we find renders the flow susceptible to thermal runaway, even if $v_{w} > v_{\rm TI}$ according to equation (\ref{eq:cooling3}).  In other words, the true condition for thermal instability  can be written
+\be
+v_w > {\rm max}[v_{\rm TI},\sigma_0\{1-(r_{b}/r_{\rm inf})^{0.5(1-\Gamma)}\}]
+\ee
 
-Note that in practice when $v_{w}<v_{\rm TI}$, a cooling flow may
-develop rather than a true local thermal instability: in the former
-case the stagnation radius $\rs$ may move to large radii, greatly
-increasing the density in the inner part of the flow, which increases
-cooling and creates a large inflow of cold gas towards the center of
-the galaxy.  In this paper we do not attempt to distinguish under what
-conditions a global cooling flow would develop vs. a local thermal
-instability.
+Figure \ref{fig:TI} shows $v_{\rm TI}(M_{\bullet})$ for different mass input parameters $\eta$, as well as the $\zeta > \zeta_c$ criterion, shown separately for cusp and core galaxies.  We calculate $\zeta_c$ using the empirical correlation for
+core galaxies $r_{b}/r_{\rm inf} \approx 7.6M_{\bullet,8}^{-0.2}$ which
+follows from equation (\ref{eq:rsoi}) and the $r_b-M_{\bullet}$
+correlation derived from the results of \citet{LauerFaber+:2007a}.
+For cusp galaxies we see that the $v_w \gtrsim v_{\rm TI}$ criterion is generally more strigent, while for core galaxies the $\zeta > \zeta_c$ criterion is more strigent for core galaxies, except for very high mass loss rates $\eta > 10$.
 
 The minimum heating rate for thermal stability
 (eq.~[\ref{eq:cooling2}]) corresponds to maximum thermally-stable
@@ -902,6 +898,8 @@ the second line corresponds to the low wind heating limit $\zeta \ll
 core galaxies $r_{b}/r_{\rm inf} \approx 7.6M_{\bullet,8}^{-0.2}$ which
 follows from equation (\ref{eq:rsoi}) and the $r_b-M_{\bullet}$
 correlation derived from the results of \citet{LauerFaber+:2007a}.
+
+Note that in practice  what we describe as "thermal instability" may simply indicate the transition of an inflow-outflow solution to a global cooling flow, instead of a true local thermal instability.  In the former case the stagnation radius diverges to large radii, increasing the density in the inner parts of the flow, which increases cooling and creates a large inflow of cold gas towards the nucleus.  A true thermal instability would cause parts of the hot ISM to condense into cold clouds.  In this paper we do not distinguish between these possibilities, although both are likely present at some level.  Note that if the CNM were to somehow ``regulate" itself to a state of local marginal thermal instability (as has previously been invoked on cluster scales; e.g., \citealt{Voit+15}), then equation (\ref{eq:Mdotmax}) could reflect the assocated mass ``fall-out" rate and concomitant star formation rate.  
 
 
 \begin{figure}
@@ -1129,7 +1127,7 @@ the stagnation radius (Appendix \ref{app:be}).  Thus, for small values
 of the heating rate (small $\zeta$) the location of the stagnation
 radius will vary strongly with the break radius. This explains the
 behavior of the three vertically aligned green squares. These are three
-cusp ($\Gamma=0.8$) galaxies with t$\Mbh=10^8 \Msun$ and $v_w=300$ km s$^{-1}$
+cusp ($\Gamma=0.8$) galaxies with $\Mbh=10^8 \Msun$ and $v_w=300$ km s$^{-1}$
 but with different break radii ($\rb=$ 25, 50, and 100 pc from top to
 bottom). This divergence of the stagnation radius to large radii
 occurs at a higher value of $\zeta$ in core galaxies ($\Gamma = 0.1$),
