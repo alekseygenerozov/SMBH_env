@@ -774,7 +774,7 @@ break radius.  Equation (\ref{eq:conduction}) shows that, even when
 conduction is saturated, our neglect of heat conduction results in at
 most an order unity correction for causal values of the saturation
 parameter $\phi < 0.1$.  Our numerical experiments which include
-conductive heating confirm this ($\S\ref{sec:numerical}$).  {\bf BDM: whats going on wrt johnson and quataert?}
+conductive heating confirm this ($\S\ref{sec:numerical}$). 
 
 
 
@@ -867,39 +867,27 @@ v_{w} > v_{\rm TI} \simeq
   \end{cases}
   \label{eq:cooling3}
 \end{align}
-Equations (\ref{eq:cooling2}) and (\ref{eq:cooling3}) are derived using expressions for the stagnation radius and gas density in the high heating limit of $\zeta > \zeta_c = (r_{b}/r_{\rm inf})^{0.5(1-\Gamma)}$ (eq.~[\ref{eq:zetacrit}]).  However, for $\zeta < \zeta_c$, the stagnation radius diverges to the break radius $r_b$ (Appendix \ref{app:be}).  The quasi-hydrostatic structure that results in this case greatly increases the gas density, which in practice we find renders the flow susceptible to thermal runaway, even if $v_{w} > v_{\rm TI}$ according to equation (\ref{eq:cooling3}).  In other words, the true condition for thermal instability  can be written
+Equations (\ref{eq:cooling2}) and (\ref{eq:cooling3}) are derived using expressions for the stagnation radius and gas density in the high heating limit of $\zeta > \zeta_c = (r_{b}/r_{\rm inf})^{0.5(1-\Gamma)}$ (eq.~[\ref{eq:zetacrit}]).  However, for $\zeta < \zeta_c$, the stagnation radius diverges to the break radius $r_b$ (Appendix \ref{app:be}).  The quasi-hydrostatic structure that results in this case greatly increases the gas density, which in practice renders the flow susceptible to thermal runaway, even if $v_{w} > v_{\rm TI}$ according to equation (\ref{eq:cooling3}).  In other words, the true condition for thermal instability  can be written
 \be
 v_w > {\rm max}[v_{\rm TI},\sigma_0\{1-(r_{b}/r_{\rm inf})^{0.5(1-\Gamma)}\}]
 \ee
 
-Figure \ref{fig:TI} shows $v_{\rm TI}(M_{\bullet})$ for different mass input parameters $\eta$, as well as the $\zeta > \zeta_c$ criterion, shown separately for cusp and core galaxies.  We calculate $\zeta_c$ using the empirical correlation for
-core galaxies $r_{b}/r_{\rm inf} \approx 7.6M_{\bullet,8}^{-0.2}$ which
+Figure \ref{fig:TI} shows $v_{\rm TI}(M_{\bullet})$ for different mass input parameters $\eta$, as well as the [$\eta$-independent] $\zeta > \zeta_c$ criterion, shown separately for cusp and core galaxies.  For core galaxies, we calculate $\zeta_c$ using the empirical relation, $r_{b}/r_{\rm inf} \approx 7.6M_{\bullet,8}^{-0.2}$, which
 follows from equation (\ref{eq:rsoi}) and the $r_b-M_{\bullet}$
 correlation derived from the results of \citet{LauerFaber+:2007a}.
 For cusp galaxies we see that the $v_w \gtrsim v_{\rm TI}$ criterion is generally more strigent, while for core galaxies the $\zeta > \zeta_c$ criterion is more strigent for core galaxies, except for very high mass loss rates $\eta > 10$.
 
-The minimum heating rate for thermal stability
-(eq.~[\ref{eq:cooling2}]) corresponds to maximum thermally-stable
-accretion rate,
+The minimum heating rate for thermal stability (eq.~[\ref{eq:cooling2}]) corresponds to {\it maximum} thermally-stable accretion rate,
 \begin{align}
-  \frac{\dot{M}_{\rm TI}}{\dot{M}_{\rm edd}} \simeq {\rm
-    min}\begin{cases}
-    2\times 10^{-4} \eta_{0.02}^{0.47} M_{\bullet,8}^{0.36} &, \text{core}, \zeta > \zeta_c\\
-    4\times 10^{-6}\eta_{0.02}M_{\bullet,8}^{-0.37} &, \text{core}, \zeta < \zeta_c \\
-    8\times 10^{-5} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.28}    &, \text{cusp}, \zeta > \zeta_c\\
-    1\times 10^{-4}\eta_{0.02}&, \text{cusp}, \zeta < \zeta_c
+  \frac{\dot{M}_{\rm TI}}{\dot{M}_{\rm edd}} \simeq \begin{cases}
+    4\times 10^{-6}\eta_{0.02}M_{\bullet,8}^{-0.37} &, \text{core}, \\
+    8\times 10^{-5} \eta_{0.02}^{0.59} M_{\bullet,8}^{0.28}    &, \text{cusp},\\
   \end{cases}
   \label{eq:Mdotmax}
 \end{align}
-where the first line for each case is derived using equation
-(\ref{eq:eddr_analytic}) to calculate $\dot{M}(v_{\rm TI})$, and
-the second line corresponds to the low wind heating limit $\zeta \ll
-\zeta_c$.  $\zeta_c$ is calculated using the empirical correlation for
-core galaxies $r_{b}/r_{\rm inf} \approx 7.6M_{\bullet,8}^{-0.2}$ which
-follows from equation (\ref{eq:rsoi}) and the $r_b-M_{\bullet}$
-correlation derived from the results of \citet{LauerFaber+:2007a}.
+where the cusp case is derived using equation (\ref{eq:eddr_analytic}) to calculate $\dot{M}(v_{\rm TI})$, and the core case corresponds to the more stringent $\zeta > \zeta_c$ criterion, calculated again using the mean $r_{b}/r_{\rm inf}$ relation from \citet{LauerFaber+:2007a}.
 
-Note that in practice  what we describe as "thermal instability" may simply indicate the transition of an inflow-outflow solution to a global cooling flow, instead of a true local thermal instability.  In the former case the stagnation radius diverges to large radii, increasing the density in the inner parts of the flow, which increases cooling and creates a large inflow of cold gas towards the nucleus.  A true thermal instability would cause parts of the hot ISM to condense into cold clouds.  In this paper we do not distinguish between these possibilities, although both are likely present at some level.  Note that if the CNM were to somehow ``regulate" itself to a state of local marginal thermal instability (as has previously been invoked on cluster scales; e.g., \citealt{Voit+15}), then equation (\ref{eq:Mdotmax}) could reflect the assocated mass ``fall-out" rate and concomitant star formation rate.  
+What we describe above as ``thermal instability" may in practice simply indicate an abruption transition from a steady inflow-outflow solution to a global cooling flow, as opposed a true thermal instability.  In the former case the stagnation radius diverges to large radii, increasing the density in the inner parts of the flow, which increases cooling and creates a large inflow of cold gas towards the nucleus.  A true thermal instability would likely result in a portion of the hot ISM condensing into cold clouds, a situation which may or may not be present in a cooling flow.  In this paper we do not distinguish between these possibilities, although both are likely present at some level.  Finally, note that if the CNM were to ``regulate" itself to a state of local marginal thermal instability (as has previously been invoked on cluster scales; e.g., \citealt{Voit+15}), then equation (\ref{eq:Mdotmax}) might naturally reflect the characteristic mass fall-out rate and concomitant star formation rate.  
 
 
 \begin{figure}
@@ -2108,7 +2096,7 @@ of the form we have adopted leads to an Eddington ratio dependence on
 SMBH mass of $\dot{M}/\dot{M}_{\rm edd} \propto
 M_{\bullet}^{-0.5(-0.2)}$.
 
-This prediction is also consistent with the observed downsizing trend of
+This prediction is also consistent with the observed dependence of
 $\langle L_{X}/L_{\rm edd} \rangle$ in elliptical galaxies
 (Fig.~\ref{fig:miller}, green line), suggesting that accretion
 regulation by kinetic feedback could play a role in determining the
