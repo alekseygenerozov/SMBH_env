@@ -1064,7 +1064,7 @@ properties on large scales will generally be unaffected by angular momentum.
     ... & 600 & -- & $ 3.2 \times 10^{ -2 }$ & $ 1.0 \times 10^{ -5 }$ & $ 1.9 \times 10^{ 3 }$ \\
     ... & 1200 & -- & $ 7.9 \times 10^{ -3 }$ & $ 1.8 \times 10^{ -6 }$ & $ 7.7 \times 10^{ 4 }$ \\
 %    $    10^{ 7 }$ & 300 & 25 & 0.42 & $ 2.4 \times 10^{ -4 }$ & 7 & 0.2, 0.6\\ 
-   10$^{7}$ & ... & 50 & 0.38 & $ 2.0 \times 10^{ -4 }$ & 4.5 & 0.2, 0.6\\
+   10$^{7}$ & 300 & 50 & 0.38 & $ 2.0 \times 10^{ -4 }$ & 4.5 & 0.2, 0.6\\
 % ... & ... & 100 & 0.43 & $ 2.4 \times 10^{ -4 }$ & 2.7 & 0.2, 0.6 \\
 % ... & ... & 200 & 0.47 & $ 2.7 \times 10^{ -4 }$ & $\mathbf{2.1}$ \\
 % ... & ... & 400 & 1.1 & $ 7.0 \times 10^{ -4 }$ & $\mathbf{0.28}$ \\
@@ -1094,7 +1094,8 @@ $    10^{ 8 }$ & 300 & 25 & 0.69 & $ 4.2 \times 10^{ -4 }$ & 5.5 & 0.6\\
 ... & 1200 & 100 & $ 5.0 \times 10^{ -2 }$ & $ 1.8 \times 10^{ -5 }$ & $ 8.3 \times 10^{ 3 }$ \\
 \hline
 Core Galaxies, $\Gamma = 0.1$  &  & & & & & & & & \\
-$    10^{ 6 }$ & 600 & 25 & $ 9.4 \times 10^{ -2 }$ & $ 7.4 \times 10^{ -6 }$ & $ 1.1 \times 10^{ 2 }$ \\
+$    10^{ 6 }$ & 600 & 25 & $ 9.4 \times 10^{ -2 }$ & $ 7.4 \times
+10^{ -6 }$ & $ 1.1 \times 10^{ 2 }$ & 0.2, 0.6\\
 ... & 1200 & -- & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
 % ... & ... & 50 & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
 % ... & ... & 100 & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
@@ -1268,47 +1269,67 @@ diverges to large radii (Fig.~\ref{fig:stag}).
 \begin{figure}
   \includegraphics[width=\columnwidth]{cooling.eps}
   \caption{\label{fig:cooling} Ratio of the rates of heating to
-radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$, as a
-function of radius (solid lines) for each of our solutions shown in
-Figure \ref{fig:profiles}.  Dashed lines show the ratio
-of the cooling timescale to the free-fall timescale $t_{\rm cool}/t_{\rm ff}$.
-For high heating rates both ratios are approximately equal at the
-stagnation radius (squares).  When $\dot{q}_{\rm
-heat}/\dot{q}_{\rm rad} \lesssim 10$ (or, equivalently, $t_{\rm cool}/t_{\rm ff}
-\lesssim 10$ near the stagnation radius), then the flow is susceptible to thermal instabilities.}
+    radiative cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$, as a
+    function of radius (solid lines) for a $\Mbh=10^7 \Msun$ cusp
+    galaxy ($\Gamma=0.8$).  Dashed lines show the ratio of the cooling
+    timescale to the free-fall timescale $t_{\rm cool}/t_{\rm ff}$.
+    For high heating rates both ratios are approximately equal at the
+    stagnation radius (squares).  When $\dot{q}_{\rm
+      heat}/\dot{q}_{\rm rad} \lesssim 10$ (or, equivalently, $t_{\rm
+      cool}/t_{\rm ff} \lesssim 10$ near the stagnation radius), then
+    the flow is susceptible to thermal instabilities.}
 \end{figure}
 
 
 Fig.~\ref{fig:cooling} shows the ratio of wind heating to radiative
 cooling, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$
 (eq.~[\ref{eq:cooling2}] and surrounding discussion) as a function of
-radius for our fiducial solutions shown in Figure \ref{fig:profiles}.
-Radiative cooling is calculated using the cooling function of \citet{Draine:2011a} for solar metallicity.  For high heating rates of $v_{w} = 600$ and
-$1200$ km s$^{-1}$ cooling is unimportant across all radii, while for
-$v_{w} = 300$ km s$^{-1}$ we see that $\dot{q}_{\rm
-  heat}/|\dot{q}_{\rm rad}|$ and $\tcool/\tff$ can be less than unity,
-depending on the wind mass loss parameter $\eta$.  Because at the
-stagnation radius $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ reaches
-within a factor of two of its minimum across the entire grid, the
-value of $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ can be
-taken as diagnostic of thermal instability at all radii.
+radius for $v_w=300, 600,$ and 1200 km/s, $\Mbh=10^{7} \Msun$, and
+$\Gamma=0.8$.  Radiative cooling is calculated using the cooling
+function of \citet{Draine:2011a} for solar metallicity.  For high
+heating rates of $v_{w} = 600$ and $1200$ km s$^{-1}$ cooling is
+unimportant across all radii, while for $v_{w} = 300$ km s$^{-1}$ we
+see that $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ and $\tcool/\tff$
+can be less than unity, depending on the wind mass loss parameter
+$\eta$.  Because at the stagnation radius $\dot{q}_{\rm
+  heat}/|\dot{q}_{\rm rad}|$ reaches within a factor of two of its
+minimum across the entire grid, the value of $(\dot{q}_{\rm
+  heat}/|\dot{q}_{\rm rad}|)_{r_{s}}$ can be taken as diagnostic of
+thermal instability at all radii.
 
-Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$
-near the stagnation radius, but these ratios diverge from each other at low heating ($v_{w} \lesssim 300$ km s$^{-1}$).  This results because equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate the true gas density in the case of subsonic flow (weak heating).
+Also note that for $v_{w}=600$ and $1200$ km s$^{-1}$ we have
+$\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| \sim t_{\rm cool}/t_{\rm ff}$
+near the stagnation radius, but these ratios diverge from each other
+at low heating ($v_{w} \lesssim 300$ km s$^{-1}$).  This results
+because equations (\ref{eq:mdot_gas}), (\ref{eq:rhors}) underestimate
+the true gas density in the case of subsonic flow (weak heating).
 
 Although most of our solutions neglect thermal conduction and
-radiative cooling, these effects are explore explicitly in subset of simulations, as marked by dagger symbols in Table \ref{table:models}.  For cases which are far from being thermally
-unstable when cooling is neglected (e.g., $M_{\bullet} =
-10^{8}M_{\odot}$, $v_{w} = 600$ km s$^{-1}$, $r_{b} = 100$ pc, $\eta =
-0.2$, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| = 76$), including radiative cooling has little effect on the key properties of the solution, such as the stagnation radius, mass accretion rate, and the cooling ratio $\dot{q}_{\rm
-  heat}/|\dot{q}_{\rm rad}|$.  However, for solutions that are marginally thermally stable, including radiative losses acts to significantly decrease $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$.  We calculated solutions with radiative
+radiative cooling, these effects are explored explicitly in subset of
+simulations.  Dagger symbols in Table \ref{table:models} correspond to
+solutions for which we turned on radiative cooling.  For cases which
+are far from being thermally unstable when cooling is neglected (e.g.,
+$M_{\bullet} = 10^{8}M_{\odot}$, $v_{w} = 600$ km s$^{-1}$, $r_{b} =
+100$ pc, $\eta = 0.2$, $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}| = 76$),
+including radiative cooling has little effect on the key properties of
+the solution, such as the stagnation radius, mass accretion rate, and
+the cooling ratio $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$.  However,
+for solutions that are marginally thermally stable, including
+radiative losses acts to significantly decrease $\dot{q}_{\rm
+  heat}/|\dot{q}_{\rm rad}|$.  We calculated solutions with radiative
 cooling for all cusp galaxies with $v_w=300$ km s$^{-1}$ and for all
 core galaxies with $v_w=600 $ km s$^{-1}$, each for three different
 values of $\eta = 0.02, 0.2, 0.6$, spanning the physical range of
-expected mass loss for continuous star formation (Fig.~\ref{fig:vwSources}).  Solutions found to be unstable for all values of $\eta$ are marked in boldface as ``TI" in Table
-\ref{table:models}, with the unstable values of $\eta$ provided in the final column.
+expected mass loss for continuous star formation
+(Fig.~\ref{fig:vwSources}).  Solutions found to be unstable for all
+values of $\eta$ are marked in boldface as ``TI" in Table
+\ref{table:models}, with the unstable values of $\eta$ provided in the
+final column.
 
-Including thermal conduction, by contrast, results in only minor changes to our solutions for our fiducial value of the saturation parameter $\phi = 0.1$, consistent with our analytic expectation (eq.~[\ref{eq:conduction}]).  
+Including thermal conduction, by contrast, results in only minor
+changes to our solutions for our fiducial value of the saturation
+parameter $\phi = 0.1$, consistent with our analytic expectation
+(eq.~[\ref{eq:conduction}]).
 
 \section{Heating Sources}
 \label{sec:heating}
