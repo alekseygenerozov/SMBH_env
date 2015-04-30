@@ -799,6 +799,11 @@ most an order unity correction for causal values of the saturation
 parameter $\phi < 0.1$.  Our numerical experiments which include
 conductive heating confirm this ($\S\ref{sec:numerical}$). 
 
+% For supersonic inflow, we find that conductivity has little effect on our
+% solutions, and our analytics confirm that its effect of redistributing
+% heat near the stagnation radius is at most an order unity correction.  We
+% do not consider the possibility that the conduction of heat from the very
+% inner accretion flow can affect the flow on much larger scales \
 
 
 
@@ -1334,7 +1339,11 @@ parameter $\phi = 0.1$, consistent with our analytic expectation
 \section{Heating Sources}
 \label{sec:heating}
 
-Key properties of the flow, such as the SMBH accretion rate and the likelihood of thermal instability depend sensitively on the assumed heating rate $\propto qv_{w}^{2}$.  This section summarizes individual heating sources, providing estimates of the value of
+Key properties of the flow, such as the SMBH accretion rate and the
+likelihood of thermal instability depend sensitively on the assumed
+heating rate $\propto qv_{w}^{2}$.  This section summarizes individual
+heating sources, providing estimates of the value of the effective
+wind velocity
 \begin{align}
   v_{w} = \sqrt{\frac{2 t_h \dot{e}}{\eta \rhostar}}
   \label{eq:vw_eff}
@@ -1343,21 +1352,37 @@ for each, where $\dot{e}$ is volumetric heating rate.
 
 \subsection{Stellar winds} 
 
-Energy and mass input to the CNM by stellar winds is the sum of contributions from main sequence and post-main sequence populations.  At early times following star formation, energy input is dominated by core collapse supernovae and by the fast outflows of Wolf-Rayet stars (e.g., \citealt{VossDiehl+:2009a}).  At later times energy input is dominated by main sequence winds (e.g., \citealt{NaimanSoares-Furtado+:2013a}).  Mass input is also dominated by massive stars for very young stellar populations, but for most stellar ages the slow AGB winds of evolved low-mass stars dominate the mass budget.  
+Energy and mass input to the CNM by stellar winds is the sum of
+contributions from main sequence and post-main sequence populations.
+At early times following star formation, energy input is dominated by
+core collapse supernovae and by the fast outflows of Wolf-Rayet stars
+(e.g., \citealt{VossDiehl+:2009a}).  At later times energy input is
+dominated by main sequence winds (e.g.,
+\citealt{NaimanSoares-Furtado+:2013a}).  Mass input is also dominated
+by massive stars for very young stellar populations, but for most
+stellar ages the slow AGB winds of evolved low-mass stars dominate the
+mass budget.
 
 In Appendix \ref{app:windheat} we calculate the wind heating rate from
 stellar winds, $v_{\rm w}^{\star}$, and the mass loss parameter,
 $\eta$ (eq.~[\ref{eq:q}]), as a function of age, $\tau_{\star}$, of a
-stellar population which is formed impulsively (Fig.~\ref{fig:vwImp}).  
+stellar population which is formed impulsively (Fig.~\ref{fig:vwImp}).
 At the earliest times ($\tau_{\star} \lesssim 10^{7}$ yr), the wind
 heating rate exceeds 1000 km s$^{-1}$, while much later ($\tau_{\star}
 \sim t_{\rm h}$) stellar wind heating dominated by main sequence winds
-is much lower, $v^{\star}_{\rm w} \sim 50-100 $ km s$^{-1}$.  As will be shown in $\S\ref{sec:combined}$, for the case of quasi-continuous star
-formation representative of the average SFHs of low
-mass galaxies, the heating rate from stellar winds can also be significant, $v_{\rm w}^{\star} \sim 1000$ km s$^{-1}$.  
+is much lower, $v^{\star}_{\rm w} \sim 50-100 $ km s$^{-1}$.  As will
+be shown in $\S\ref{sec:combined}$, for the case of quasi-continuous
+star formation representative of the average SFHs of low mass
+galaxies, the heating rate from stellar winds can also be significant,
+$v_{\rm w}^{\star} \sim 1000$ km s$^{-1}$.
 
 Stellar winds thus contribute a potentially important source of both
-energy and mass to the CNM.  However, two additional uncertainties are (1) the efficiency with which massive stellar winds thermalize their energy and (2) heating from core collapse supernovae, which is potentially comparable to that provided by stellar winds.  We neglect both effects, but expect they will act in different directions in changing the total heating rate.  
+energy and mass to the CNM.  However, two additional uncertainties are
+(1) the efficiency with which massive stellar winds thermalize their
+energy and (2) heating from core collapse supernovae, which is
+potentially comparable to that provided by stellar winds.  We neglect
+both effects, but expect they will act in different directions in
+changing the total heating rate.
 
 \subsection{Type Ia Supernovae} 
 
@@ -1479,8 +1504,16 @@ for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$
 %Ia cannot alone prevent cooling instabilities in the nuclei of low
 %mass galaxies.
 
-The deep gravitational potential wells of high mass galaxies prevent SN Ia from dynamically clearing out gas in these systems ($\sigma_0 \gg  v^{\rm Ia}_{w}$).  Equation (\ref{eq:eddr_Ia}) nevertheless still represents a cap on the accretion rate in practice because the Ia heating rate (eq.~[\ref{eq:vIa}])
-is usually high enough to prevent the stagnation radius (calculated including the Ia heating) from substantially exceeding $r_{\rm Ia}$. If the stagnation radius moves inwards from $\rIa$, then decreased heating will force it outwards again.  On the other hand, if the stagnation radius moves well outside of $\rIa$, then the high level of Ia heating will force it inwards. 
+The deep gravitational potential wells of high mass galaxies prevent
+SN Ia from dynamically clearing out gas in these systems ($\sigma_0
+\gg v^{\rm Ia}_{w}$).  Equation (\ref{eq:eddr_Ia}) nevertheless still
+represents a cap on the accretion rate in practice because the Ia
+heating rate (eq.~[\ref{eq:vIa}]) is usually high enough to prevent
+the stagnation radius (calculated including the Ia heating) from
+substantially exceeding $r_{\rm Ia}$. If the stagnation radius moves
+inwards from $\rIa$, then decreased heating will force it outwards
+again.  On the other hand, if the stagnation radius moves well outside
+of $\rIa$, then the high level of Ia heating will force it inwards.
 
 %Finally, note that our criterion for cooling instability (eq.~[\ref{eq:cooling2}], [\ref{eq:Mdotmax}]) is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  By re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we find that
 %\begin{align}
@@ -1681,27 +1714,26 @@ much larger radial scales (e.g.~\citealt{McNamara&Nulsen07};
 \citealt{Novak+11}; \citealt{Gaspari+12}).
 
 Assume that the outflow power is proportional to the SMBH accretion
-rate, $L_{\rm j} = \epsilon_{\rm j} \dot{M}_{\bullet}c^{2} = 0.1\epsilon_{\rm j} \dot{M}c^{2} $, where
-$\epsilon_{\rm j} < 1$ is an outflow efficiency factor and we have again assumed a fraction $\alpha = 0.1$ of the infall rate reaches the SMBH.  Further assume
-that this energy is deposited as heat uniformly interior to a radius
-$r_{\rm heat}$ and volume $V_{\rm heat} \propto r_{\rm heat}^{3}$.
-The resulting volumetric heating rate $e = 0.1\epsilon_{\rm
+rate, $L_{\rm j} = \epsilon_{\rm j} \dot{M}_{\bullet}c^{2} =
+0.1\epsilon_{\rm j} \dot{M}c^{2} $, where $\epsilon_{\rm j} < 1$ is an
+outflow efficiency factor and we have again assumed a fraction $\alpha
+= 0.1$ of the infall rate reaches the SMBH.  Further assume that this
+energy is deposited as heat uniformly interior to a radius $r_{\rm
+  heat}$ and volume $V_{\rm heat} \propto r_{\rm heat}^{3}$.  The
+resulting volumetric heating rate $e = 0.1\epsilon_{\rm
   j}\dot{M}c^{2}/V_{\rm heat}$ near the stagnation radius results in a
 heating parameter given by
-\begin{eqnarray} v_{w}^{\bullet} &\approx& \left(\frac{0.2t_{\rm
-        h}\epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
-      \rho_{\star}|_{r_{s}}}\right)^{1/2} \sim
-  \left(\frac{0.1\epsilon_{\rm
-        j}\dot{M}c^{2}t_{\rm h}}{\eta M_{\rm enc}}\right)^{1/2} \nonumber \\
-  &\approx& 300\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm
+\begin{eqnarray} 
+  v_{w}^{\bullet} &\approx& \left(\frac{0.2 \th \epsilon_{\rm j}\dot{M}c^{2}}{V_{\rm heat}\eta
+      \rho_{\star}|_{r_{s}}}\right)^{1/2} \\
+  &\approx& \frac{700}{\sqrt{2-\Gamma}}\,{\rm km\,s^{-1}}\,\left(\frac{\epsilon_{\rm
         j}}{10^{-5}}\right)^{1/2}\left(\frac{r_{\rm s}}{r_{\rm
-        heat}}\right)^{1-\Gamma/2},
+        heat}}\right)^{3/2} ,
 \label{eq:vjet}
 \end{eqnarray} 
 where we have used the facts that $\dot{M} = \eta M_{\star}|_{r_{\rm
-    s}}/t_{\rm h}$ and, for radii inside the stellar break radius,
-$M_{\star}(r) = M_{\bullet}(r/r_{\rm inf})^{2-\Gamma}$
-(eq.~[\ref{eq:rhostar}]).  If the bulk of the energy from kinetic
+    s}}/t_{\rm h}$ and $\rho_{\star}(\rs) = M_{\star}(\rs)
+(2-\Gamma)/(4 \pi \rs^3)$.  If the bulk of the energy from kinetic
 feedback is released near the stagnation radius, then even a small
 heating efficiency $\epsilon_{\rm j} \gtrsim 10^{-4}$ is sufficient
 for $v_{w}^{\bullet}$ to exceed other sources of non-accretion powered
@@ -1711,9 +1743,10 @@ i.e. $r_{\rm heat} \gtrsim $ 10 kpc $\sim 10^{4}r_{\rm s}$, then
 kinetic feedback is unimportant, even for a powerful outflow with
 $\epsilon_{\rm j} \sim 0.1$.
 
-The time required for a jet of luminosity $L_{\rm
-  j}$ and half opening angle $\theta_{\rm j} = 0.1$ (characteristic of
-AGN jets) to propagate through a gaseous mass $M_{\rm g}$ of radius $r$ is estimated from \citet{Bromberg+11} to be 
+The time required for a jet of luminosity $L_{\rm j}$ and half opening
+angle $\theta_{\rm j} = 0.1$ (characteristic of AGN jets) to propagate
+through a gaseous mass $M_{\rm g}$ of radius $r$ is estimated from
+\citet{Bromberg+11} to be
 \begin{eqnarray}
   t_{\rm jet} \sim 4000\,{\rm yr}\left(\frac{{L}_{\rm j}}{10^{40}\,\rm erg\,s^{-1}}\right)^{-1/3}\left(\frac{r}{\rm pc}\right)^{2/3}\left(\frac{M_{\rm g}}{10^{8}M_{\odot}}\right)^{1/3} 
 \end{eqnarray}
@@ -2260,16 +2293,16 @@ even in low luminosity AGN.
 Our simple parameterization of kinetic feedback (eq.~[\ref{eq:vjet}])
 assumes a uniform volumetric heating and predicts an effective wind
 velocity which increases with SMBH mass as $v_{w}^{\bullet} \propto
-M_{\bullet}^{0.33(0.28)}$ for core(cusp) galaxies, respectively.
+M_{\bullet}^{0.38}$ for core(cusp) galaxies, respectively.
 Coupled with the dependence of the SMBH accretion rate on the wind
 heating, $\dot{M}/\dot{M}_{\rm edd} \propto
 M_{\bullet}^{0.76(0.48)}v_{w}^{-3.8(-2.4)}$ (Fig.~\ref{fig:mdot_mass};
 eq.~[\ref{eq:eddr_analytic}]), a dominant source of kinetic feedback
 of the form we have adopted leads to an Eddington ratio dependence on
 SMBH mass of $\dot{M}/\dot{M}_{\rm edd} \propto
-M_{\bullet}^{-0.5(-0.2)}$.
+M_{\bullet}^{-0.7(-0.4)}$.
 
-This prediction is also consistent with the observed dependence of
+This prediction is more in line with the observed dependence of
 $\langle L_{X}/L_{\rm edd} \rangle$ in elliptical galaxies
 (Fig.~\ref{fig:miller}, green line), suggesting that accretion
 regulation by kinetic feedback could play a role in determining the
@@ -2283,25 +2316,6 @@ SMBH feedback dominates due to the time delay between the small scale
 accretion flow and the thermodynamic response of the CNM on larger
 scales.
 
-%For a fixed $r_{\rm heat}$, the effective heating rate from kinetic outflows $v_{\rm w}^{\bullet} \propto r_{\rm s}^{1-\Gamma/2} \propto M_{\bullet}^{1-\Gamma/2}v_{w}^{\Gamma-2}$ is proportional to $v_{w}$
-%to a negative power (where we have used of eq.~[\ref{eq:stag_simple}]).  Thus, as in the case of Compton heating, kinetic heating could in principle  `self-regulate' insofar as a lower heating rate results in a higher accretion rate, which in turn results in stronger jet feedback.  
-%However, although both radiative and kinetic feed-back process seem capable of producing sufficient heating to offset radiative cooling and prevent instability (e.g., $v_w \gtrsim v_{\rm TI}$; eq.~[\ref{eq:cooling3}]), this is somewhat misleading because black hole feedback depends on the central accretion rate, which (unlike stellar feedback) does not respond instantaneously to changes in the thermodynamic properties of the gas on larger scale.  Thus, even if the AGN heating balances cooling on average, the flow may still experience limit cycle behavior in this case (\citealt{Yuan&Li11}).   
-
-
-%\subsection{Jet Power Correlation}
-
-%Accretion rates onto SMBHs can in principle be estimated directly by
-% assuming Bondi accretion and using high resolution X-ray
-% observations to estimate the gas temperature and density near the
-% Bondi radius.  This technique has led to the intriguing conclusion
-% that the Bondi accretion power correlates with the AGN jet power
-% (e.g., \citealt{AllenDunn+:2006a}; \citealt{Russell+13};
-% \citealt{FujitaKawakatu+:2014a}), the latter estimated from the
-% energy required to inflate the observed cavities within the X-ray
-% emitting gas.  In practice is it almost never possible to resolve
-% the Bondi radius, therefore requiring all such studies to
-% extrapolate the observed gas temperature and density profiles to
-% smaller radial scales.
 
 \section{Conclusions}
 \label{sec:conclusions}
