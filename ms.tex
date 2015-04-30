@@ -321,9 +321,8 @@ our method for calculating stellar wind heating and mass input.
   rate from stellar and black hole velocity dispersion \\
   $v_{w}$ & total heating parameter, excluding minimum heating rate from
   velocity dispersion \\
-  $\sigma_{\bullet}$ & The line of sight velocity dispersion from the  $\Mbh-\sigma$ relation (eq.~\eqref{eq:Msigma})\\
-  $\sigma_0$ & stellar velocity dispersion (assumed to be radially
-  constant and equal to $\sqrt{3} \Mbh$).\\
+   $\sigma_0$ & stellar velocity dispersion (assumed to be radially
+   constant).\\
   $\zeta$ & alternative heating parameter, $\zeta \equiv \sqrt{1 + (v_w/\sigma_0)^2}$ (eq.~[\ref{eq:zetacrit}])\\
   $r_{s}$ & stagnation radius, where gas radial velocity goes to zero \\
   $r_{\rm inf}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
@@ -571,7 +570,8 @@ solutions which neglect radiation to determine over what range of
 conditions cooling instabilities will develop
 ($\S\ref{sec:instability}$).
 
-Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) are solved using a sixth
+Equations (\ref{eq:drhodt})-(\ref{eq:dsdt}) 
+are solved using a sixth
 order finite difference scheme with a third order Runge-Kutta scheme
 for time integration and artificial viscosity terms in the velocity
 and entropy equations for numerical stability
@@ -1754,18 +1754,6 @@ to $\S\ref{sec:kinetic}$.
   ($\Gamma=0.1$) galaxies  using mean scaling
   relations for $r_b$, $\rinf$, and $\Gamma$ from the
   \citet{LauerFaber+:2007a} galaxy sample.}
-
- % $\Gamma=0.3
- %  \Mbheight^{-0.24}$, $\rinf=14 \Mbheight^{0.6}$ pc
- %  (eq~\eqref{\eqref{eq:rsoi}}), $\rb\simeq 106 \Mbheight^{0.39} $ pc
- %  (for $\Gamma<0.3$), and $\rb\simeq 100$ pc (for $\Gamma\geq 0.3$)
- %  {\bf Added zeta/zeta_c line but unfortunately caption became
- %    somewhat verbose (I don't think all of this description is
- %    necessary--maybe just say we use scaling relations based on Lauer
- %    et al. sample?) Also being so close to zeta/zeta_c=1 implies
- %    there is a limit to how much scatter we could explain just by
- %    variations in the heating rate}.
-
 \end{figure}
 
 
