@@ -313,41 +313,43 @@ our method for calculating stellar wind heating and mass input.
 \begin{minipage}{18cm}
 \caption{Definitions of commonly used variables}
 \begin{tabular}{ll}
-\hline
-{Variable} & {Definition} \\
-\hline
-$M_{\bullet}$ & black hole mass \\
-$\tilde{v}_{w}$ & total heating parameter, including minimum heating
-rate from stellar and black hole velocity dispersion \\
-$v_{w}$ & total heating parameter, excluding minimum heating rate from
-velocity dispersion \\
-$\sigma_0$ & stellar velocity dispersion (assumed to be radially constant)\\
-$\zeta$ & alternative heating parameter, $\zeta \equiv \sqrt{1 + (v_w/\sigma_0)^2}$ (eq.~[\ref{eq:zetacrit}])\\
-$r_{s}$ & stagnation radius, where gas radial velocity goes to zero \\
-$r_{\rm inf}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
-$r_{\rm b}$ & outer break radius of stellar density profile \\ 
-$r_{\rm Ia}$ & radius interior to which SN Ia are infrequent compared to the dynamical timescale (eq.~[\ref{eq:rIa}]) \\ 
-$\rho_{\star}(r)$ & 3D radial stellar density profile \\
-$\rho(r)$ & gas density of CNM \\
-$M_{\star}(r)$ & total enclosed stellar mass inside radius $r$ \\
-$M_{\rm enc}(r)$ & total enclosed mass inside radius $r$ (SMBH + stars) \\
-$q(r)$ & mass source term due to stellar winds, $q \propto \rho_{\star}$ (eq.~[\ref{eq:q}]) \\
-$\eta$ & parameter setting normalization of mass input from stellar winds (eq.~[\ref{eq:q}]) \\
-$\tau_{\star}$ & age of stellar population, in case of a single burst of star formation \\
-$\Gamma$ & power-law slope of radial stellar surface brightness
-profile interior to the break radius \\
-$\delta$ & power-law slope of the 3D stellar density profile inside of
-the break radius, $\delta \equiv \Gamma+1$.\\
-$\dot{M}$ & accretion rate (not necessarily equal to the SMBH accretion rate)   \\
-$\dot{M}_{\bullet}$ & SMBH accretion rate, $\dot{M}_{\bullet} = \alpha\dot{M}$, where $\alpha < 1$ accounts for outflows from the accretion disk on small scales.   \\
-$\dot{M}_{\rm Ia}$ & maximum mass accretion rate as limited by SN Ia (eq.~[\ref{eq:eddr_Ia}]) \\
-$\dot{M}_{\rm C}$ & equilibrium accretion rate set by Compton heating acting alone (eq.~[\ref{eq:MdotC}]) \\
-$\dot{M}_{\rm TI}$ & maximum accretion rate for thermally stable accretion (eq.~[\ref{eq:Mdotmax}]) \\
-$\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ & ratio of external heating (stellar winds, SN Ia, MSPs) to radiative cooling (eq.~[\ref{eq:cooling2}]) \\
-$t_{\rm h}$ & Hubble timescale \\
-$\nu$ & gas density power-law slope at the stagnation radius
-(eq.~[\ref{eq:densSlope}]) \\
-\hline
+  \hline
+  {Variable} & {Definition} \\
+  \hline
+  $M_{\bullet}$ & black hole mass \\
+  $\tilde{v}_{w}$ & total heating parameter, including minimum heating
+  rate from stellar and black hole velocity dispersion \\
+  $v_{w}$ & total heating parameter, excluding minimum heating rate from
+  velocity dispersion \\
+  $\sigma_{\bullet}$ & The line of sight velocity dispersion from the  $\Mbh-\sigma$ relation (eq.~\eqref{eq:Msigma})\\
+  $\sigma_0$ & stellar velocity dispersion (assumed to be radially
+  constant and equal to $\sqrt{3} \Mbh$).\\
+  $\zeta$ & alternative heating parameter, $\zeta \equiv \sqrt{1 + (v_w/\sigma_0)^2}$ (eq.~[\ref{eq:zetacrit}])\\
+  $r_{s}$ & stagnation radius, where gas radial velocity goes to zero \\
+  $r_{\rm inf}$ & radius of sphere of influence (eq.~[\ref{eq:rsoi}]) \\
+  $r_{\rm b}$ & outer break radius of stellar density profile \\ 
+  $r_{\rm Ia}$ & radius interior to which SN Ia are infrequent compared to the dynamical timescale (eq.~[\ref{eq:rIa}]) \\ 
+  $\rho_{\star}(r)$ & 3D radial stellar density profile \\
+  $\rho(r)$ & gas density of CNM \\
+  $M_{\star}(r)$ & total enclosed stellar mass inside radius $r$ \\
+  $M_{\rm enc}(r)$ & total enclosed mass inside radius $r$ (SMBH + stars) \\
+  $q(r)$ & mass source term due to stellar winds, $q \propto \rho_{\star}$ (eq.~[\ref{eq:q}]) \\
+  $\eta$ & parameter setting normalization of mass input from stellar winds (eq.~[\ref{eq:q}]) \\
+  $\tau_{\star}$ & age of stellar population, in case of a single burst of star formation \\
+  $\Gamma$ & power-law slope of radial stellar surface brightness
+  profile interior to the break radius \\
+  $\delta$ & power-law slope of the 3D stellar density profile inside of
+  the break radius, $\delta \equiv \Gamma+1$.\\
+  $\dot{M}$ & accretion rate (not necessarily equal to the SMBH accretion rate)   \\
+  $\dot{M}_{\bullet}$ & SMBH accretion rate, $\dot{M}_{\bullet} = \alpha\dot{M}$, where $\alpha < 1$ accounts for outflows from the accretion disk on small scales.   \\
+  $\dot{M}_{\rm Ia}$ & maximum mass accretion rate as limited by SN Ia (eq.~[\ref{eq:eddr_Ia}]) \\
+  $\dot{M}_{\rm C}$ & equilibrium accretion rate set by Compton heating acting alone (eq.~[\ref{eq:MdotC}]) \\
+  $\dot{M}_{\rm TI}$ & maximum accretion rate for thermally stable accretion (eq.~[\ref{eq:Mdotmax}]) \\
+  $\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|$ & ratio of external heating (stellar winds, SN Ia, MSPs) to radiative cooling (eq.~[\ref{eq:cooling2}]) \\
+  $t_{\rm h}$ & Hubble timescale \\
+  $\nu$ & gas density power-law slope at the stagnation radius
+  (eq.~[\ref{eq:densSlope}]) \\
+  \hline
 \label{table:definitions}  
 \end{tabular}
 %\begin{tablenotes}
@@ -675,15 +677,16 @@ speed near the break radius, $v_{\rm esc} \sim (GM_{\star}|_{r_{\rm
 
 The accretion rate towards the SMBH is given by the total mass loss rate interior to the stagnation radius (eq.~[\ref{eq:q}]), 
 \begin{eqnarray}
-  \dot{M} &=& 4\pi \int_{0}^{r_{s}}q r^{2}dr = \frac{\eta M_{\star}|_{r_{\rm s}}}{\th} \nonumber \\
-&\approx&
+  \dot{M} &=& 4\pi \int_{0}^{r_{s}}q r^{2}dr = \frac{\eta
+    M_{\star}|_{r_{\rm s}}}{\th} = \frac{\eta \Mbh (\rs/\rinf)^{2-\Gamma}}{\th} \nonumber \\
+  &\approx&
   \begin{cases}
     4.5 \times 10^{-5} M_{\bullet,8}^{1.76}
     v_{500}^{-3.8}  \eta_{0.02} \Msun \, \pyear& \text{core} \\
     3.2 \times 10^{-5} M_{\bullet,8}^{1.48} 
     v_{500}^{-2.4}  \eta_{0.02} \Msun \, \pyear  & \text{cusp}, 
   \end{cases}
-  \label{eq:mdot_analytic}
+  \label{eq:mdot_analytic}            
 \end{eqnarray}
 where we have assumed $v_{w} \gg \sigma_0$ by adopting equation
 (\ref{eq:stag_simple}) for $r_s$.  The resulting Eddington ratio is
@@ -1602,16 +1605,15 @@ by
 \end{cases}
 \label{eq:efficiency}
 \end{align}
-where $\dot{M}_{\bullet}$ is the BH accretion (we use a more general
-parametrization of the \citet{Sharma+2007} results in our numerical
-results presented later).  In general $\dot{M}_{\bullet}$ will be
-smaller than the inflow rate $\dot{M}$ calculated thus far by a factor
-$\alpha < 1$ due to outflows from the accretion disk on small scales.
-Thus, the full efficiency relating the mass inflow rate to the
-radiative output is $\epsilon = \alpha \epsilon_{\rm rad}$, where we
-take $\alpha = 0.1$ following \citet{Li+2013}, who find that the
-fraction of the inflowing matter lost to outflows equals the
-Shakura-Sunyaev viscosity parameter of the disk.
+where $\dot{M}_{\bullet}$ is the BH accretion rate. In general
+$\dot{M}_{\bullet}$ will be smaller than the inflow rate $\dot{M}$
+calculated thus far by a factor $\alpha < 1$ due to outflows from the
+accretion disk on small scales.  Thus, the full efficiency relating
+the mass inflow rate to the radiative output is $\epsilon = \alpha
+\epsilon_{\rm rad}$, where we take $\alpha = 0.1$ following
+\citet{Li+2013}, who find that the fraction of the inflowing matter
+lost to outflows equals the Shakura-Sunyaev viscosity parameter of the
+disk.
 
 Substituting $\epsilon$ into equation (\ref{eq:MdotCa}) and solving for the accretion rate results in
 \begin{align}
@@ -1921,9 +1923,9 @@ fiducial volumetric averages, calculated using SFHs from \citet{MosterNaab+:2013
   calculated from equation (\ref{eq:eddr_analytic}) using the heating
   rate provided at $z = 0$ by the average star formation histories for
   each galaxy mass (Fig.~\ref{fig:vwSources}).  Teal lines show the
-  maximum accretion set by Ia supernovae blow-out, $\dot{M}_{\rm Ia}$
-  (\ref{eq:eddr_Ia}).  Red lines show the accretion rate obtained if
-  Compton heating acts alone, $\dot{M}_{\rm C}$
+  maximum accretion set by Ia supernovae blow-out or heating,
+  $\dot{M}_{\rm Ia}$ (\ref{eq:eddr_Ia}).  Red lines show the accretion
+  rate obtained if Compton heating acts alone, $\dot{M}_{\rm C}$
   (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum accretion
   rate for a thermally stable flow near the stagnation radius,
   $\dot{M}_{\rm TI}$ (eq.~[\ref{eq:Mdotmax}]).  Also shown are the
@@ -1956,11 +1958,10 @@ black holes ($M_{\bullet} \sim 10^{6}M_{\odot}$) to $\dot{M} \sim
 10^{-4}M_{\odot}$ yr$^{-1}$ for $M_{\bullet} \sim 10^{8}M_{\sun}$.
 These fall below the maximum thermally stable accretion rate,
 $\dot{M}_{\rm TI}$ (yellow lines), although in practice high mass core
-galaxies may be thermally unstable as we do not include the
-$\zeta<\zeta_c$ criterion in Fig.~\ref{fig:mdot_mass} (see
-equation~\eqref{eq:cooling4}).
-% , although they become closer at the highest
-% black hole masses $\sim 10^{9}M_{\odot}$. 
+galaxies may be thermally unstable due to their deep potential wells
+(we do not include the $\zeta<\zeta_c$ criterion in
+Fig.~\ref{fig:mdot_mass}--see equation~\eqref{eq:cooling4} and
+surrounding discussion).
 
 
 For low mass black holes, blow out from SN Ia radius caps the SMBH
@@ -1971,7 +1972,7 @@ otherwise thermally-unstable flow at smaller radii.  For higher
 $M_{\bullet}$ the stagnation resides close to the Ia radius so Ia
 heating contributes to the steady gas heating rate, even if the energy
 released by a single Ia is insufficient to unbind gas from the stellar
-bulge (eq.~[\ref{eq:blowout}]).  This explains why the black and yellow lines mean at high $M_{\bullet}$.
+bulge (eq.~[\ref{eq:blowout}]).  This explains why the black and teal lines mean at high $M_{\bullet}$.
 
 Shown also for comparison in Figure \ref{fig:bh_growth} (top panel) is
 the accretion rate onto SgrA* calculated by \citet{Quataert:2004a}.
@@ -2010,11 +2011,10 @@ $\epsilon_{\rm rad}$ is the radiative efficiency of the accreted
 matter, and $\epsilon_{\rm bol} = 0.1$ is the assumed bolometric
 correction into the measured X-ray band for low luminosity AGN
 (\citealt{Ho08}).  In all cases the value of $\langle L_X \rangle$ is
-calculated using the average accretion rate for galaxies with core
-($\Gamma = 0.1$) and cusp ($\Gamma = 0.8$) stellar density profiles,
-using the mean power-law relationship $\Gamma = 0.3
+calculated using the accretion rate from the top line of
+equation~\eqref{eq:mdot_analytic} with $\Gamma = 0.3
 \Mbheight^{-0.24}$, based on fitting the \citet{LauerFaber+:2007a}
-galaxy sample.
+galaxy sample. 
 
 The left panel of Figure \ref{fig:miller} is calculated assuming a
 constant low value for the radiative efficiency of $\epsilon_X =
@@ -2085,15 +2085,21 @@ also influence the X-ray luminosity indirectly through the inflow efficiency $\a
 Perhaps a more readily addressable test is whether a steady-state
 accretion picture developed in this work can account for the the large
 scatter, typically of $2-3$ orders of magnitude, in $L_{X}/L_{\rm
-  edd}$ at fixed $M_{\bullet}$.  Scatter could result from the strong sensitivity of the accretion rate to the stellar wind
-velocity and mass loss parameter, $\dot{M}/\dot{M}_{\rm edd} \propto
+  edd}$ at fixed $M_{\bullet}$.  Scatter could result from the strong
+sensitivity of the accretion rate to the stellar wind velocity and
+mass loss parameter, $\dot{M}/\dot{M}_{\rm edd} \propto
 v_{w}^{-3.8(-2.4)}$ for core(cusp) galaxies, respectively
 (Fig.~\ref{fig:mdot_mass}; eq.~[\ref{eq:eddr_analytic}]).  When
 combined with the significant dependence of $v_w$ on stochastic
 intermittency in the star formation history (Appendix
 \ref{fig:NickPlot2}), this can lead to order of magnitude differences
-in $\dot{M}$.  However, we note that $v_w$ is not expected to vary by more than a factor of a few for a thermally-stable flow, limiting the allowed variation of  $\dot{M}/\dot{M}_{\rm edd}$.  Variations in $L_{X}/L_{\rm
-  edd}$ could also result from differences in angular momentum of the infalling gas from galaxy to galaxy, resulting in differences in the fraction of the gas lost to outflows.  Also potentially contributing is the order of magnitude difference, at
+in $\dot{M}$.  However, we note that $v_w$ is not expected to vary by
+more than a factor of a few for a thermally-stable flow, limiting the
+allowed variation of $\dot{M}/\dot{M}_{\rm edd}$.  Variations in
+$L_{X}/L_{\rm edd}$ could also result from differences in angular
+momentum of the infalling gas from galaxy to galaxy, resulting in
+differences in the fraction of the gas lost to outflows.  Also
+potentially contributing is the order of magnitude difference, at
 fixed $v_w$ and $M_{\bullet}$, between $\dot{M}$ for core and cusp
 galaxies (Fig.~\ref{fig:bh_growth}).  Differences in $\dot{M}$ are
 augmented by the theoretical expectation that $L_{\rm X} \propto
@@ -2295,15 +2301,17 @@ scales.
 We have calculated steady-state models for the hot gaseous
 circumnuclear media of quiescent galaxies, under the assumption that
 gas is supplied exclusively by stellar wind mass loss and heated by
-shocked stellar winds, supernovae and black hole feedback.  We compute
-solutions for a range of different black hole masses, heating rates,
-and observationally-motivated stellar density profiles.  Our numerical
-results (Table \ref{table:models}) are used to verify and calibrate
-analytic relationships (Appendix \ref{app:rs}, \ref{app:be}).  We use
-the latter to explore systematically how the SMBH accretion rate
-varies with black hole mass and the galaxy's SFH.  Our results for
+shocked stellar winds, supernovae and black hole feedback.  We
+numerically compute solutions for a range of different black hole
+masses, heating rates, and observationally-motivated stellar density
+profiles.  Then we use our numerical results (Table
+\ref{table:models}) are used to verify and calibrate analytic
+relationships (Appendix \ref{app:rs}, \ref{app:be}).  We use the
+latter to explore systematically how the SMBH accretion rate varies
+with black hole mass and the galaxy's SFH.  Our results for
 $\dot{M}(\Mbh)$ are compared with observed trends of the nuclear X-ray
-luminosities of quiescent SMBHs and low luminosity AGN.  Our conclusions are summarized as follows.
+luminosities of quiescent SMBHs and low luminosity AGN.  Our
+conclusions are summarized as follows.
 
   \begin{enumerate}
   \item A stagnation radius, $\rs$, divides the nuclear gas between an
@@ -2325,35 +2333,38 @@ luminosities of quiescent SMBHs and low luminosity AGN.  Our conclusions are sum
     stability) for causal values of the conduction saturation
     parameter $\phi < 0.1$ (eq.~[\ref{eq:conduction}]).  Angular
     momentum is also unlikely to invalidate our spherically symmetric
-    model on large scales, given observationally inferred rotation rates of galactic nuclei
-    near the stagnation radius ($\S\ref{sec:rotation}$). 
-%However, on
- %   small scales gas would encounter a centrifugal barrier which would
-  %  cause much of the gas flowing inwards on large scales to be driven
-   % outwards in an outflow (as in \citealt{Li+2013}). 
+    model on large scales, given observationally inferred rotation
+    rates of galactic nuclei near the stagnation radius
+    ($\S\ref{sec:rotation}$).
 
-\item Radiative cooling has a more pronounced influence on the flow
-  structure.  Cooling becomes important when the
-  radiative cooling rate exceeds the gas heating rate near the
-  stagnation radius, where the gas is in nearly hydrostatic equilibrium (Fig.~\ref{fig:TI}).  This condition is approximately equivalent to
-  the $t_{\rm cool} \gg t_{\rm ff}$ criterion for thermal instability advocated by
-  \citet{McCourt+12} and \citet{Li&Bryan14a}.  The transition in the flow properties that occurs as heating is reduced may represent a true ``thermal instability" (hot ISM condensing into a cooler clouds), or it may simply represent an abruption transition from a steady inflow-outflow solution to a global cooling flow.  We leave distinguishing between these possibilities to future work.  
 
-\item The location of the stagnation radius, and hence the SMBH
-  accretion rate, is a sensitive function of the gas heating rate
-  $\propto v_w^{2}$.  Quantitatively, $\rs\propto v_w^{-2}$, implying
-  that $\Mdot\propto v_w^{-3.8 (-2.4)}$ for fiducial core (cusp) galaxies.
-  However, $\Mdot$ can increase even more rapidly with decreasing
-  $v_w$ for two reasons: (1) when $v_w$ becomes comparable to the
-  stellar velocity dispersion ($\zeta < \zeta_c$;
-  eq.~$[\ref{eq:zetacrit}]$), then gas remains bound to the stellar
-  bulge and cannot produce a flow with a positive kinetic energy
-  interior to the stellar break radius, as we show in Appendix \ref{app:be}; (2)
-  For low $v_w$, gas near the stagnation radius becomes thermally
-  unstable, which based on the results of previous numerical studies
-  (e.g.,\citealt{Ciotti+10}) is instead likely to result in
-  time-dependent cycles of alternating high and low accretion phases
-  ($\S\ref{sec:cycle}$).
+  \item Radiative cooling has a more pronounced influence on the flow
+    structure when the radiative cooling rate exceeds the gas heating
+    rate near the stagnation radius, where the gas is in nearly
+    hydrostatic equilibrium (Fig.~\ref{fig:TI}).  This condition is
+    approximately equivalent to the $t_{\rm cool} \gg t_{\rm ff}$
+    criterion for thermal instability advocated by \citet{McCourt+12}
+    and \citet{Li&Bryan14a}.  The transition in the flow properties
+    that occurs as heating is reduced may represent a true ``thermal
+    instability" (hot ISM condensing into a cooler clouds), or it may
+    simply represent an abrupt transition from a steady inflow-outflow
+    solution to a global cooling flow.  We leave distinguishing
+    between these possibilities to future work.
+
+  \item The location of the stagnation radius, and hence the SMBH
+    accretion rate, is a sensitive function of the gas heating rate
+    $\propto v_w^{2}$.  Quantitatively, $\rs\propto v_w^{-2}$,
+    implying that $\Mdot\propto v_w^{-3.8 (-2.4)}$ for fiducial core
+    (cusp) galaxies.  However, $\Mdot$ can increase even more rapidly
+    with decreasing $v_w$ for two reasons: (1) when $v_w$ becomes
+    comparable to the stellar velocity dispersion ($\zeta < \zeta_c$;
+    eq.~$[\ref{eq:zetacrit}]$), then gas remains bound to the stellar
+    bulge and cannot produce a flow with a positive kinetic energy
+    interior to the stellar break radius, as we show in Appendix
+    \ref{app:be}; (2) For low $v_w$, gas near the stagnation radius
+    becomes thermally unstable, which based on the results of previous
+    numerical studies (e.g.,\citealt{Ciotti+10}) is instead likely to
+    result in a burst of high accretion ($\S\ref{sec:cycle}$).
 
   \item Stellar wind heating, supernovae, and AGN feedback depend
     explicitly on the SMBH mass as well as the SFH in the galactic
