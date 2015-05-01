@@ -4,7 +4,7 @@
 \newlength{\abovecaptionskip}%
 \setlength{\abovecaptionskip}{10\p@}
 \makeatother
-%\renewcommand{\citeauthoryear}[3]{} 
+
 
 \usepackage{threeparttable}
 
@@ -20,10 +20,7 @@
 \usepackage{aas_macros}
 \usepackage{astro}
 \usepackage{deluxetable}
-% \usepackage{natbib}
 
-% \renewcommand{\l}{\left}
-% \renewcommand{\r}{\right}
 
 \newcommand{\Mdot}{\dot{M}}
 \newcommand{\eddr}{\dot{M}/\dot{M}_{\rm Edd}}
@@ -221,23 +218,19 @@ for very young stellar populations (\citealt{Rubin&Loeb11}), while
 time-averaged accretion rate of quiescent SMBHs.
 
 \citet{Ho:2009a} determines the SMBH accretion rates in a sample of
-early-type galaxies by using X-ray observations to determine the
-Bondi accretion rate and based on estimates for the mass loss rate of
+early-type galaxies by using X-ray observations to determine the Bondi
+accretion rate and based on estimates for the mass loss rate of
 evolved stars.  Both methods lead him to conclude that the available
 gas reservoir is more than sufficient to power the observed
 low-luminosity AGN, assuming the standard $\sim$ 10 per cent radiative
-efficiency for thin disk accretion.  Several lines of evidence now suggest that low-luminosity AGN result from accretion
-proceeding in a radiatively inefficient mode
-(\citealt{Yuan&Narayan14}), due either to the advection of
-gravitationally-released energy across the SMBH horizon
-(e.g.~\citealt{Narayan&Yi95}) or due to disk outflows, which reduce the efficiency with which the inflowing gas ultimately reaches the SMBH (e.g.~\citealt{Blandford&Begelman99}; \citealt{Li+13}).
+efficiency for thin disk accretion.  Several lines of evidence now
+suggest that low-luminosity AGN result from accretion proceeding in a
+radiatively inefficient mode (\citealt{Yuan&Narayan14}), due either to
+the advection of gravitationally-released energy across the SMBH
+horizon (e.g.~\citealt{Narayan&Yi95}) or due to disk outflows, which
+reduce the efficiency with which the inflowing gas ultimately reaches
+the SMBH (e.g.~\citealt{Blandford&Begelman99}; \citealt{Li+13}).
 
-%In fact, the temperature profile is assumed to be flat inside of the
-%Bondi radius.  In reality, the cusp in the velocity dispersion near
-%the SMBH, should cause a cusp in the gas temperature profile (assuming
-%the kinetic energy of stellar winds is efficiently thermalized in
-%shocks).
-%% AG-give sense of scale.
 
 Another approach to determine the SMBH accretion rate, which we adopt
 in this paper, is to directly calculate the density, velocity and
@@ -272,8 +265,7 @@ cooling instabilities develop on galactic scales over longer $\sim$
 Gyr timescales, we aim to explore whether a quasi steady-state may
 exist between these inflow events on smaller radial scales comparable
 to the sphere of influence.
-%For instance, for massive galaxies \citealt{Ciotti+10} find that between outbursts gas may exist in a
-%quasi-steady state {\bf AG reworded}.
+
 
 In the presence of strong heating, one-dimensional steady-state flow
 is characterized by an inflow-outflow structure, with a critical
@@ -315,7 +307,6 @@ our method for calculating stellar wind heating and mass input.
 
 \begin{table*}
 \begin{threeparttable}
-%\centering
 \begin{minipage}{18cm}
 \caption{Definitions of commonly used variables}
 \begin{tabular}{ll}
@@ -527,9 +518,6 @@ energy input, including faster winds from young stars, millisecond
 pulsars, supernovae, AGN feedback, etc ($\S\ref{sec:heating}$).  We
 assume that $v_w$ is constant with radius, i.e. that the volumetric
 heating rate is proportional to the local stellar density.
-%The value of $v_w$
-%will in general depend on the SMBH mass and the age of the stellar
-%population ($\S\ref{sec:heating}$).
 
 To isolate the physics of interest, our baseline calculations
 neglects three potentially important effects: heat conduction,
@@ -607,9 +595,6 @@ the grid, in addition to the integral constraint on the energy
 We first describe analytic estimates of physical quantities, such as
 the stagnation radius $\rs$ and the mass accretion rate, the detailed
 derivation of which are given in Appendix \ref{app:rs}.  
-%Our results
-%are expressed in terms of the SMBH mass $M_{\bullet}$, total heating
-%rate $\tilde{v}_{w}$, and wind mass loss parameter $\eta$.
 
 \subsection{Flow Properties Near the Stagnation Radius}
 
@@ -884,13 +869,6 @@ respectively.  We have approximated the cooling function for $T <
   \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$, which assumes solar
 metallicity gas (\citealt{Draine:2011a}; his Fig. 34.1).  
 
-%Note that in
-%our runs with radiative cooling we take $\Lambda(T)$ to be a piecewise
-%function with $\Lambda(T) = 1.1 \times 10^{-22} \left(T/10^6
- % \text{K}\right)^{-0.7} $erg cm$^3 $s$^{-1}$ for $T\leq 2\times
-%10^{7}$ K and $\Lambda = 2.3 \times 10^{-24} \left(T/10^6
- % \text{K}\right)^{0.5}$ for $T>2\times 10^{7}$ K.
-
 To within a constant of order unity, equation (\ref{eq:cooling2}) also
 equals the ratio of the gas cooling timescale $t_{\rm cool} \equiv (3n
 kT/2 \mu)/|\dot{q}_{\rm rad}|$ to the free-fall time $t_{\rm ff}$ at the
@@ -1072,11 +1050,7 @@ properties on large scales will generally be unaffected by angular momentum.
     $    10^{ 6 }$ & 300 & -- & 0.12 & $ 5.1 \times 10^{ -5 }$ & 28 & 0.6\\
     ... & 600 & -- & $ 3.2 \times 10^{ -2 }$ & $ 1.0 \times 10^{ -5 }$ & $ 1.9 \times 10^{ 3 }$ \\
     ... & 1200 & -- & $ 7.9 \times 10^{ -3 }$ & $ 1.8 \times 10^{ -6 }$ & $ 7.7 \times 10^{ 4 }$ \\
-%    $    10^{ 7 }$ & 300 & 25 & 0.42 & $ 2.4 \times 10^{ -4 }$ & 7 & 0.2, 0.6\\ 
    10$^{7}$ & 300 & 50 & 0.38 & $ 2.0 \times 10^{ -4 }$ & 4.5 & 0.2, 0.6\\
-% ... & ... & 100 & 0.43 & $ 2.4 \times 10^{ -4 }$ & 2.7 & 0.2, 0.6 \\
-% ... & ... & 200 & 0.47 & $ 2.7 \times 10^{ -4 }$ & $\mathbf{2.1}$ \\
-% ... & ... & 400 & 1.1 & $ 7.0 \times 10^{ -4 }$ & $\mathbf{0.28}$ \\
 ... & ... & 100 & $\mathbf{TI}$ & $\mathbf{TI}$ & $\mathbf{TI}$ \\
 ... & ... & 200 & $\mathbf{TI}$ & $\mathbf{TI}$ & $\mathbf{TI}$ \\
 ... & ... & 400 & $\mathbf{TI}$ & $\mathbf{TI}$ & $\mathbf{TI}$ \\
@@ -1088,8 +1062,6 @@ $    10^{ 8 }$ & 300 & 25 & 0.69 & $ 4.2 \times 10^{ -4 }$ & 5.5 & 0.6\\
  ... & ... & 100 & 1.4 & $ 9.5 \times 10^{ -4 }$ & 0.48 & 0.2, 0.6 \\
  ... & ... & 200 & 2.5 & $ 1.9 \times 10^{ -3 }$ & $5.3 \times  10^{
    -2 }$ & 0.2, 0.6  \\
-% ... & ... & 100 & $\mathbf{TI}$ & $\mathbf{TI}$ & $\mathbf{TI}$ \\
-%... & ... & 200 & $\mathbf{TI}$ & $\mathbf{TI}$ & $\mathbf{TI}$ \\
 ... & 450 & 100 & 0.43 & $ 2.4 \times 10^{ -4 }$ & 19 \\
 ...$^{\dagger}$ & 450 & 100 & 1.2 & $ 8.1 \times 10^{ -4 }$ & 2.6 \\
 ... & 600 & 25 & 0.21 & $ 1.0 \times 10^{ -4 }$ & $ 2.1 \times 10^{ 2 }$ \\
@@ -1107,21 +1079,17 @@ $    10^{ 6 }$ & 600 & 25 & $ 9.4 \times 10^{ -2 }$ & $ 7.4 \times
 10^{ -6 }$ & $ 1.1 \times 10^{ 2 }$ & 0.2, 0.6\\
 ... & 1200 & -- & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
 % ... & ... & 50 & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
-% ... & ... & 100 & $ 1.5 \times 10^{ -2 }$ & $ 2.3 \times 10^{ -7 }$ & $ 1.7 \times 10^{ 5 }$ \\
 $    10^{ 7 }$ & 600 & 25 & 0.19 & $ 2.9 \times 10^{ -5 }$ & 79 & 0.6 \\
-%... & ... & 50 & 0.76 & $ 3.9 \times 10^{ -4 }$ & $\mathbf{ 8.0
-%\times 10^{ -2 }}$ \\
 ... & ... & 50 & $\mathbf{TI}$ & $\mathbf{TI}$ & $\mathbf{TI}$ \\
 ... & 1200 & 25 & $ 3.9 \times 10^{ -2 }$ & $ 1.4 \times 10^{ -6 }$ & $ 2.9 \times 10^{ 4 }$ \\
  ... & ... & 50 & $ 4.1 \times 10^{ -2 }$ & $ 1.5 \times 10^{ -6 }$ & $ 2.3 \times 10^{ 4 }$ \\
-% ... & ... & 100 & $ 4.8 \times 10^{ -2 }$ & $ 2.1 \times 10^{ -6 }$ & $ 1.2 \times 10^{ 4 }$ \\
-$    10^{ 8 }$ & 600 & 25 & 0.27 & $ 5.7 \times 10^{ -5 }$ & $ 1.0 \times 10^{ 2 }$ \\
+$    10^{ 8 }$ & 600 & 25 & 0.27 & $ 5.7 \times 10^{ -5 }$ &
+ $ 1.0 \times 10^{ 2 }$ \\
 ... & ... & 50 & 0.46 & $ 1.5 \times 10^{ -4 }$ & 9.4 & 0.2, 0.6\\
 ... & 1200 & 25 & $ 8.5 \times 10^{ -2 }$ & $ 6.1 \times 10^{ -6 }$ & $ 8.2 \times 10^{ 3 }$ \\
 ... & ... & 50 & $ 9.2 \times 10^{ -2 }$ & $ 7.0 \times 10^{ -6 }$ & $ 6.0 \times 10^{ 3 }$ \\
 ... & ... & 100 & 0.1 & $ 8.8 \times 10^{ -6 }$ & $ 3.8 \times 10^{ 3 }$ \\
 ... & ... & 200 & 0.15 & $ 1.7 \times 10^{ -5 }$ & $ 8.0 \times 10^{ 2 }$ \\
-% ... & ... & 400 & 0.8  & $ 2.5 \times 10^{ -2 }$ & $\mathbf{ 3.1 \times 10^{ -4 }}$ \\
 \hline
 \label{table:models}  
 \end{tabular}
@@ -1213,17 +1181,15 @@ with the Bernoulli parameter of the gas decreasing below unity near
 the stagnation radius (Appendix \ref{app:be}).  Thus, for small values
 of the heating rate (small $\zeta$) the location of the stagnation
 radius will vary strongly with the break radius. This explains the
-behavior of the three vertically aligned green squares. These are three
-cusp ($\Gamma=0.8$) galaxies with $\Mbh=10^8 \Msun$ and $v_w=300$ km s$^{-1}$
-but with different break radii ($\rb=$ 25, 50, and 100 pc from top to
-bottom). This divergence of the stagnation radius to large radii
-occurs at a higher value of $\zeta$ in core galaxies ($\Gamma = 0.1$),
-explaining the behavior of the two core galaxies shown in
-Fig.~\ref{fig:stag} as vertically aligned orange triangles.  
-%These
-%solutions correspond to the same black hole mass ($\Mbh = 10^8 \Msun$)
-%and heating rate ($v_w = 600$ km s$^{-1}$) but assume different break
-%radii of $r_{b} =$ 25, 50 pc (from top to bottom).
+behavior of the three vertically aligned green squares. These are
+three cusp ($\Gamma=0.8$) galaxies with $\Mbh=10^8 \Msun$ and
+$v_w=300$ km s$^{-1}$ but with different break radii ($\rb=$ 25, 50,
+and 100 pc from top to bottom). This divergence of the stagnation
+radius to large radii occurs at a higher value of $\zeta$ in core
+galaxies ($\Gamma = 0.1$), explaining the behavior of the two core
+galaxies shown in Fig.~\ref{fig:stag} as vertically aligned orange
+triangles.
+
 
 Figure~\ref{fig:mdot_mass} shows the SMBH accretion rate for a sample of
 our numerical solutions for different values of
@@ -1501,12 +1467,6 @@ Hence, for low mass BHs with $\sigma_0 \ll v^{\rm Ia}_{w}$, SN Ia are capable of
 obtained substituting the Ia radius $r_{\rm Ia}$ (eq.~[\ref{eq:rIa}])
 for $r_{\rm s}$ in the derivation leading to our estimate of $\dot{M}$
 (eq.~[$\ref{eq:eddr_analytic}$]).  
-%Note, however, that for low mass
-%SMBHs, $\dot{M}_{\rm Ia}$ generally exceeds the maximum accretion rate
-%for a thermally stable flow $\dot{M}_{\rm TI}$
-%(eq.~[\ref{eq:Mdotmax}]), implying that dynamical `blow-out' from SNe
-%Ia cannot alone prevent cooling instabilities in the nuclei of low
-%mass galaxies.
 
 The deep gravitational potential wells of high mass galaxies prevent
 SN Ia from dynamically clearing out gas in these systems ($\sigma_0
@@ -1518,31 +1478,6 @@ substantially exceeding $r_{\rm Ia}$. If the stagnation radius moves
 inwards from $\rIa$, then decreased heating will force it outwards
 again.  On the other hand, if the stagnation radius moves well outside
 of $\rIa$, then the high level of Ia heating will force it inwards.
-
-%Finally, note that our criterion for cooling instability (eq.~[\ref{eq:cooling2}], [\ref{eq:Mdotmax}]) is no longer valid if $\rs$ is regulated to $\rIa$ instead of being determined by equation \eqref{eq:stag_simple}.  By re-evaluating the density and temperature of gas at $\rIa$ using equations  (\ref{eq:rhors2}) and (\ref{eq:Tanalytic}) for $v_w = v_{w}^{\rm Ia}$, we find that
-%\begin{align}
-%\label{eq:heatingratioIa}
-%&\left.\frac{\dot{q}_{\rm heat}}{\left|\dot{q}_{\rm rad}\right|}\right|_{\rIa}\simeq
-%\begin{cases}
- % 90 \Mbheight^{1.3} (\epsilon_{\rm Ia}/0.4)^{1.7} (\tau_{\star}/\th)^{-3}
-  %\eta_{0.02}^{-2.7} & \text{core}\nonumber\\
-   %90 \Mbheight^{0.8} (\epsilon_{\rm Ia}/0.4)^{1.7} (\tau_{\star}/\th)^{-2.7}
-  %\eta_{0.02}^{-2.7} & \text{cusp}\nonumber\\
-%\end{cases}\\&\simeq
-%\begin{cases}
- % 90 \Mbheight^{1.3} (\epsilon_{\rm Ia}/0.4)^{1.7}
-  %(\tau_{\star}/\th)^{0.5}
- %& \text{core}\\
-  % 90 \Mbheight^{0.8} (\epsilon_{\rm Ia}/0.4)^{1.7} (\tau_{\star}/\th)^{0.9}
-  %& \text{cusp}\\
-%\end{cases}
-%\end{align}
-%For high mass galaxies and relatively old stellar populations, Ia heating can preventing cooling instabilities on scales of the stagnation radius, i.e. $(\dot{q}_{\rm heat}/|\dot{q}_{\rm rad}|)_{\rIa} \gtrsim 10$.  However, for lower mass galaxies or younger stellar populations, Ia blow-out cannot prevent cooling instabilities.
-
-
-%Also note that Ia supernovae only cap the accretion rate to this maximum value if the gas feeding the black hole is supplied by local stellar mass loss: the gaseous mass can become much greater if the nucleus is fed externally, e.g. due to a galaxy merger or to cooling flows developing within the galaxy over much longer timescales (e.g.~\citealt{Ciotti&Ostriker07}). 
-
-
 
 \subsection{Millisecond Pulsars}
 Energy injection from the magnetic braking of millisecond pulsars
@@ -1576,7 +1511,7 @@ km\,s^{-1}},
   pulsars, then the higher value of $v_{w}^{\rm MSP} \lesssim 300$ km
   s$^{-1}$ makes MSP heating in principle important under the most
   optimistic assumptions $\epsilon_{\rm msp} = 1$ and $\eta = 0.02$.
-%  On the other hand, it seems likely that the stellar binaries giving rise to MSPs could be disassociated by stellar interactions in the dense nuclear cluster, reducing the numbers of MSPs as compared to the field population estimate above.  
+
 
 
 \subsection{SMBH Feedback}
@@ -1689,24 +1624,6 @@ heating dominates, due to the inherent delay between black hole
 feedback and the structure of the accretion flow on larger scales.
 Equation (\ref{eq:MdotC}) may nevertheless
 represent a characteristic average value for the accretion rate if a quasi-equilibrium is achieved over many cycles.
-
-%Additionally, a large fraction of the $\dot{M}$ on large scales will
-%be driven out in outflows as the gas has some non-zero angular
-%momentum and a centrifugal barrier will stop it from accreting
-%\citet{Li+2013}. In the limit weak cooling appropriate for low
-%accretion rates the accretion rate on small scales will be of order
-%$\alpha \Mdot$.  We take $\epsilon=\alpha \epsilon_{\rm rad}$ for the
-%overall efficiency with $\alpha=0.1$ and $\epsilon_{\rm rad}$ from
-%equation~\eqref{eq:efficiency}. Note that in evaluating the efficiency
-%one has to use $\tilde{\dot{M}}\simeq \alpha \Mdot$. 
-% This means that the bolometric
-% luminosity, $L=\epsilon \Mdot c^2=\alpha \epsilon_{\rm rad} (\alpha
-% \eddr) \Mdot c^2= \epsilon_{\rm rad} (\eddrt) \tilde{\dot{M}} c^2$, where
-% $\Mdot$ is mass inflow rate on large scales and $\tilde{\dot{M}}$ is
-% the mass inflow rate on small scales. Note that in evaluating the
-% efficiency one has to account for the $\alpha$ suppression in $\eddr$.
-% we obtain 
-
 
 
 \subsubsection{Kinetic Feedback}
@@ -2159,33 +2076,37 @@ augmented by the theoretical expectation that $L_{\rm X} \propto
 It is also possible that many of the \citet{Miller+15} sample of
 galactic nuclei are not accreting in steady state.  This is supported by the fact that many of the X-say luminosities in Figure \ref{fig:miller} lie above the predictions for stable accretion, i.e., $L_X \gtrsim \epsilon_X \dot{M}_{\rm TI}c^{2}$ (yellow line), at least for our choice of radiative efficiency.  
 
-Within our steady state solutions gas outside the stagnation radius $\rs$ is being blown
-out in wind. However, for very massive galaxies ($\Mbh\gsim 10^8
-\Msun$) the energy injected into the gas is not enough to truly blow
-the gas out of the potential well of the galaxy. This gas is likely to
-build up on the outskirts of the galaxy until a thermal instability
-develops, causing the CNM to undergo cyclic oscillations of rapid
-cooling and high accretion rates, followed by quiescent periods once
-gas has been consumed and/or AGN feedback becomes effective. Such
-cycles are seen in numerical simulations of elliptical galaxies on
-large scales and long timescales (\citealt{Ciotti+10}).  Evidence for
-such periodic outbursts includes observations showing that a fraction
-of early-type galaxies in the local universe have undergone recent ($<
-1-2$ Gyr old) star formation episodes (\citealt{Donas+07}).
-
- 
-%Furthermore, our SFH-averaged accretion rates are derived using
-%analytic expressions for the stagnation radius that may underpredict
-%the true accretion rate if $\zeta < \zeta_c$, as may occur in massive
-%core galaxies with large break radii.
+Within our steady state solutions gas outside the stagnation radius
+$\rs$ is being blown out in wind. However, for very massive galaxies
+($\Mbh\gsim 10^8 \Msun$) the energy injected into the gas is not
+enough to truly blow the gas out of the potential well of the
+galaxy. This gas is likely to build up on the outskirts of the galaxy
+until a thermal instability develops, causing the CNM to undergo
+cyclic oscillations of rapid cooling and high accretion rates,
+followed by quiescent periods once gas has been consumed and/or AGN
+feedback becomes effective. Such cycles are seen in numerical
+simulations of elliptical galaxies on large scales and long timescales
+(\citealt{Ciotti+10}).  Evidence for such periodic outbursts includes
+observations showing that a fraction of early-type galaxies in the
+local universe have undergone recent ($< 1-2$ Gyr old) star formation
+episodes (\citealt{Donas+07}).
 
 If the actual radiative efficiency is lower than our fiducial
-assumption, then an even larger fraction of the X-ray detections would lie above the
-predictions for stable accretion.  For example, we assume that a fraction $\alpha = 0.1$ 
-of the mass inflow rate reaches the SMBH, but this fraction could be considerably smaller. In such a case the X-ray detected galaxies will be experience less heating than we calculate for the average SFH, and may not be stably accreting at all.  This is plausible given that the \citet{Miller+15} sample includes only early-type galaxies with older stellar populations than the average for their stellar mass.
+assumption, then an even larger fraction of the X-ray detections would
+lie above the predictions for stable accretion.  For example, we
+assume that a fraction $\alpha = 0.1$ of the mass inflow rate reaches
+the SMBH, but this fraction could be considerably smaller. In such a
+case the X-ray detected galaxies will be experience less heating than
+we calculate for the average SFH, and may not be stably accreting at
+all.  This is plausible given that the \citet{Miller+15} sample
+includes only early-type galaxies with older stellar populations than
+the average for their stellar mass.
 
 Figure \ref{fig:bh_growth} (top panel) also shows that $\dot{M}_{\rm
-  C} > \dot{M}_{\rm TI}$ across all black hole masses.  This indicates that Compton heating is not sufficient to produce a thermally stable accretion rate, at least for conditions corresponding to the average SFH.
+  C} > \dot{M}_{\rm TI}$ across all black hole masses.  This indicates
+that Compton heating is not sufficient to produce a thermally stable
+accretion rate, at least for conditions corresponding to the average
+SFH.
 
 
 Similar cyclic AGN activity could occur on the smaller radial scale of
@@ -2226,11 +2147,6 @@ likely instead require an source of gas external to the nuclear
 region, triggered either by galaxy mergers associated with the
 hierarchical growth of structure or thermal instabilities on larger,
 galactic scales (e.g.~\citealt{Ciotti+10}, \citealt{Voit+15}).  
-%In
-%support of this, \citet{Kauffmann&Heckman09} find that the growth of
-%low mass black holes is dominated by young stellar bulges which have a
-%log normal distribution of Eddington ratios peaked at
-%$\Mdot/\dot{M}_{\rm edd} \sim 0.01$. 
 
 That the growth time associated with thermally-unstable accretion
 (yellow line in Fig.~\ref{fig:bh_growth}) exceeds the Hubble time
@@ -2276,12 +2192,11 @@ from the outer edge of a sub-parsec nuclear star cluster (e.g.,
 \citealt{Carson+15}).  The high stellar densities of such a compact
 star cluster could greatly enhance the TDE rate
 (e.g.~\citealt{Stone&Metzger15}), possibly making this association
-uncoincidental.  On the other hand, we note that some models for J1644+57  (e.g., \citealt{Tchekhovskoy+2014}) favor a much smaller black hole ($10^5-10^6 \Msun$) than we estimate would be required to produce the observed inner break.
+uncoincidental.  On the other hand, we note that some models for
+J1644+57 (e.g., \citealt{Tchekhovskoy+2014}) favor a much smaller
+black hole ($10^5-10^6 \Msun$) than we estimate would be required to
+produce the observed inner break.
 
-% based on the observed jet power, the jet
-%shut-off time (if linked with the accretion becoming sub-Eddington), and an
-%observed QPO in the x-ray light curve favor a smaller black hole {\bf
- % AG Gone mad!}. 
 
 
 \subsection{Regulation by SMBH Kinetic Feedback}
@@ -2498,27 +2413,6 @@ assemble their stars from the inside out
 may be systematically older than assumed in our model and thus more
 prone to thermal instability.  
 
-%Finally, as already mentioned, our models 
-%On the other hand, \citealt{LauerFaber+:2005a} find that $\sim 60\%$
-%of cusp galaxies and $\sim29\%$ of core galaxies have (generally
-%unresolved) emission in excess of the inward extrapolation of the
-%Nuker law.  They note that these nuclei are bluer than the background
-%galaxy starlight, suggesting the presence of younger stars towards
-%galactic center. Nuclear star cluster could be important for small
-%values of $M_{\rm bulge}\lsim 10^{11} \Msun$ ($\Mbh\lsim 2\times 10^8
-%\Msun$), but are extremely subdominant for higher mass galaxies
-%\citep{GrahamSpitler:2009a}.
-
-%Mass injection to the nucleus could (for $\Mbh\lsim 2 \times 10^{8}
-%\Msun$) therefore be dominated by a nuclear star cluster with its own
-%break radius on parsec scales, i.e. much smaller than our fiducial
-%value of $r_b \sim 100$ pc.  In the case of high heating, a smaller
-%break radius does not appreciably change the stagnation radius,
-%resulting in a similar SMBH accretion rate.  For break radii smaller
-%than the nominal stagnation radius, the presence of a smaller break
-%radius would likely decrease the stagnation radius and accretion rate.
-
-    
 
 \section*{Acknowledgments}
 
