@@ -799,17 +799,15 @@ stellar density profile is approximated as (eq.~[\ref{eq:rhostar}])
 where the stagnation radius is assume to reside well inside the Nuker
 break radius.  
 
-Equation (\ref{eq:conduction}) shows that, even when
-conduction is saturated, our neglect of heat conduction results in at
-most an order unity correction for causal values of the saturation
-parameter $\phi < 0.1$.  Our numerical experiments which include
-conductive heating confirm this ($\S\ref{sec:numerical}$). 
+Equation (\ref{eq:conduction}) shows that, even when conduction is
+saturated, our neglecting of heat conduction near the stagnation
+radius results in at most an order unity correction for causal values
+of the saturation parameter $\phi < 0.1$.  Our numerical experiments
+which include conductive heating confirm this
+($\S\ref{sec:numerical}$).  We do not consider the possibility that
+the conduction of heat from the very inner accretion flow can affect
+the flow on much larger scales \citep{Johnson+2007}. 
 
-% For supersonic inflow, we find that conductivity has little effect on our
-% solutions, and our analytics confirm that its effect of redistributing
-% heat near the stagnation radius is at most an order unity correction.  We
-% do not consider the possibility that the conduction of heat from the very
-% inner accretion flow can affect the flow on much larger scales \
 
 
 
@@ -1071,7 +1069,7 @@ properties on large scales will generally be unaffected by angular momentum.
     ($M_{\odot}$) & (km s$^{-1}$) & (pc) &- & - & - &  - & \\ 
     \hline
     Cusp Galaxies, $\Gamma = 0.8$ & & & & & & & & \\
-    $    10^{ 6 }$ & 300 & -- & 0.12 & $ 5.1 \times 10^{ -5 }$ & 28 \\
+    $    10^{ 6 }$ & 300 & -- & 0.12 & $ 5.1 \times 10^{ -5 }$ & 28 & 0.6\\
     ... & 600 & -- & $ 3.2 \times 10^{ -2 }$ & $ 1.0 \times 10^{ -5 }$ & $ 1.9 \times 10^{ 3 }$ \\
     ... & 1200 & -- & $ 7.9 \times 10^{ -3 }$ & $ 1.8 \times 10^{ -6 }$ & $ 7.7 \times 10^{ 4 }$ \\
 %    $    10^{ 7 }$ & 300 & 25 & 0.42 & $ 2.4 \times 10^{ -4 }$ & 7 & 0.2, 0.6\\ 
@@ -2355,15 +2353,17 @@ conclusions are summarized as follows.
     r_{\rm inf}$, greatly increasing the density of gas on smaller
     radial scales.
 
-  \item Including the effects of heat transport by electron conduction
-    results in at most order unity changes to the key properties of
-    the flow (e.g. stagnation radius, mass accretion rate, and thermal
-    stability) for causal values of the conduction saturation
-    parameter $\phi < 0.1$ (eq.~[\ref{eq:conduction}]).  Angular
-    momentum is also unlikely to invalidate our spherically symmetric
-    model on large scales, given observationally inferred rotation
-    rates of galactic nuclei near the stagnation radius
-    ($\S\ref{sec:rotation}$).
+  \item In the vicinity of the stagnation radius including the effects
+    of heat transport by electron conduction results in at most order
+    unity changes to the key properties of the flow (e.g. stagnation
+    radius, mass accretion rate, and thermal stability) for causal
+    values of the conduction saturation parameter $\phi < 0.1$
+    (eq.~[\ref{eq:conduction}]). However, in principle heat conduction
+    of heat from the very inner accretion flow can affect the flow on
+    much larger scales \citep{Johnson+2007}. Angular momentum is also
+    unlikely to invalidate our spherically symmetric model on large
+    scales, given observationally inferred rotation rates of galactic
+    nuclei near the stagnation radius ($\S\ref{sec:rotation}$).
 
 
   \item Radiative cooling has a more pronounced influence on the flow
@@ -2396,16 +2396,16 @@ conclusions are summarized as follows.
 
   \item Stellar wind heating, supernovae, and AGN feedback depend
     explicitly on the SMBH mass as well as the SFH in the galactic
-    nucleus.  A young starburst of age $\lesssim 10$ Myr
-    produces mass and energy injection dominated by young stellar
-    winds ($v_w \sim 1000$ km s$^{-1}$), while for exclusively old
-    stellar populations mass input is dominated by AGB winds and
-    heating is dominated by AGN feedback and supernovae.  Ongoing,
-    continuous star formation presents a hybrid situation, with energy
-    input usually dominated by young stars and mass input dominated by
-    old stars (Appendix \ref{app:windheat}).  Galactic nuclei with
-    $\Mbh \lesssim 10^8\Msun$ that are heated according to their average SFHs
-    (as derived from cosmological simulations) receive a stellar wind
+    nucleus.  A young starburst of age $\lesssim 10$ Myr produces mass
+    and energy injection dominated by young stellar winds ($v_w \sim
+    1000$ km s$^{-1}$), while for exclusively old stellar populations
+    mass input is dominated by AGB winds and heating is dominated by
+    AGN feedback and supernovae.  Ongoing, continuous star formation
+    presents a hybrid situation, with energy input usually dominated
+    by young stars and mass input dominated by old stars (Appendix
+    \ref{app:windheat}).  Galactic nuclei with $\Mbh \lesssim
+    10^8\Msun$ that are heated according to their average SFHs (as
+    derived from cosmological simulations) receive a stellar wind
     heating of $v_w \sim 700$ km s$^{-1}$.  This heating can be
     suppressed if the star formation is sufficiently intermittent
     (Fig.~\ref{fig:NickPlot2}).
@@ -2434,23 +2434,33 @@ conclusions are summarized as follows.
   ($\S\ref{sec:kinetic}$) but is more challenging to quantify.
 
 \item Stellar wind heating from the average SFH may be sufficient to
-  permit thermally-stable, steady-state accretion, depending on the accretion efficiency of the SMBH.  However, the
-  resulting average Eddington-normalized accretion rate is predicted
-  to increase weakly with $M_{\bullet}$ (Fig.~\ref{fig:miller}), in
-  tension with the (also weak) downsizing trend of measured 
-  X-ray luminosities in early-type galactic nuclei (e.g.,
-  \citealt{Miller+15}).  Thermally stable accretion models can reproduce the observed scatter
-  in nuclear X-ray luminosities at fixed $\Mbh$ (2-4 orders of
-  magnitude) due to the combination of (1) differences in the stellar wind heating rate due to stochastic variation in SFH between galaxies, or within one galaxy due to burstiness in the SFH, as in ~Fig.~\ref{fig:NickPlot2}; (2) Variations in the amount of
-  inflowing mass which is lost to small scale outflows from the SMBH accretion disk, likely due to variations in the angular momentum of the accreting gas (cf.~\citealt{Pellegrini10}).
+  permit thermally-stable, steady-state accretion, depending on the
+  accretion efficiency of the SMBH.  However, the resulting average
+  Eddington-normalized accretion rate is predicted to increase weakly
+  with $M_{\bullet}$ (Fig.~\ref{fig:miller}), in tension with the
+  (also weak) downsizing trend of measured X-ray luminosities in
+  early-type galactic nuclei (e.g., \citealt{Miller+15}).  Thermally
+  stable accretion models can reproduce the observed scatter in
+  nuclear X-ray luminosities at fixed $\Mbh$ (2-4 orders of magnitude)
+  due to the combination of (1) differences in the stellar wind
+  heating rate due to stochastic variation in SFH between galaxies, or
+  within one galaxy due to burstiness in the SFH, as in
+  ~Fig.~\ref{fig:NickPlot2}; (2) Variations in the amount of inflowing
+  mass which is lost to small scale outflows from the SMBH accretion
+  disk, likely due to variations in the angular momentum of the
+  accreting gas (cf.~\citealt{Pellegrini10}).
 
-\item However, for lower X-ray radiative efficiencies, the accretion rates of early-type galaxies are above the maximum value for thermally stable flow, $\dot{M}_{\rm TI}$
-  (Fig.~\ref{fig:miller}).  This implies that current X-ray detections could instead be comprised
-  mostly of nuclei undergoing outburst due to thermal instabilities.
-  In such a case, there may exist a separate (usually undetected) branch of low-$L_X$ nuclei accreting stably.  The existence of such a bimodal population would call into question constraints on the SMBH occupation
-  fraction in low mass galaxies (\citealt{Miller+15}) derived by
-  extrapolating the $L_{\rm X}(M_{\bullet}$) relationship
-  to small $M_{\bullet}$.
+\item However, for lower X-ray radiative efficiencies, the accretion
+  rates of early-type galaxies are above the maximum value for
+  thermally stable flow, $\dot{M}_{\rm TI}$ (Fig.~\ref{fig:miller}).
+  This implies that current X-ray detections could instead be
+  comprised mostly of nuclei undergoing outburst due to thermal
+  instabilities.  In such a case, there may exist a separate (usually
+  undetected) branch of low-$L_X$ nuclei accreting stably.  The
+  existence of such a bimodal population would call into question
+  constraints on the SMBH occupation fraction in low mass galaxies
+  (\citealt{Miller+15}) derived by extrapolating the $L_{\rm
+    X}(M_{\bullet}$) relationship to small $M_{\bullet}$.
 
 \item Low mass black holes grow in the low redshift universe over
   timescales comparable to the Hubble time (\citealt{Heckman+04}).  The
@@ -2511,10 +2521,10 @@ prone to thermal instability.
 
 \section*{Acknowledgments}
 
-We acknowledge helpful conversations with Greg Bryan, Jenny Greene, Jules Halpern,
-Kathryn Johnston, Jerry Ostriker, and Eliot Quataert.  This work
-relied on Columbia University's Yeti computer cluster, and we
-acknowledge the Columbia HPC support staff for assistance.  BDM
+We acknowledge helpful conversations with Greg Bryan, Jenny Greene,
+Jules Halpern, Kathryn Johnston, Jerry Ostriker, and Eliot Quataert.
+This work relied on Columbia University's Yeti computer cluster, and
+we acknowledge the Columbia HPC support staff for assistance.  BDM
 gratefully acknowledges support from NASA {\it Fermi} grant
 NNX14AQ68G, NSF grant AST-1410950, and the Alfred P. Sloan Foundation.
 
