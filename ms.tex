@@ -918,8 +918,8 @@ other words, the true condition for thermal instability  can be
 written
 
 \begin{equation}
-v_w > {\rm max}[v_{\rm TI},\sigma_0\{1-(r_{b}/r_{\rm
-  inf})^{0.5(1-\Gamma)}\}]
+v_w > {\rm max}[v_{\rm TI},\sigma_0\{(r_{b}/r_{\rm
+  inf})^{(1-\Gamma)}-1\}^{1/2}\}]
 \label{eq:cooling4}
 \end{equation}
 
@@ -927,7 +927,7 @@ Figure \ref{fig:TI} shows $v_{\rm TI}(M_{\bullet})$ for different mass
 input parameters $\eta$, as well as the [$\eta$-independent] $\zeta >
 \zeta_c$ criterion, shown separately for cusp and core galaxies.
 Based on the \citet{LauerFaber+:2007a} sample we take $\rinf = 25(8)M
-0.6$ pc and $\rb = 106 \Mbheight^{0.4}$ (100 pc) and thus
+^{0.6}$ pc and $\rb = 106 \Mbheight^{0.4}$ (100 pc) and thus
 $\rb/\rinf\simeq 4 \Mbheight^{-0.2} (13 \Mbheight^{-0.6})$ for cores
 (cusps).  For cusp galaxies we see that the $v_w \gtrsim v_{\rm TI}$
 criterion is generally more stringent, while for core galaxies the
@@ -1025,14 +1025,12 @@ for the thermally-stable solutions of interest.
 is generally $< 0.1$ on radial scales $<$ 10 per cent of the galaxy
 half-light radius and that $\lambda_R$ decreases with decreasing $R$
 interior to this point.  From equation (\ref{eq:rcirc}) we thus
-conclude that $r_{\rm circ} \lesssim 0.01r_{s}$, i.e.~that gas will
-most likely circularize within the inner sonic point of the flow
-(Fig.~\ref{fig:profiles}).  Angular momentum should only become
-dynamically important for thermally stable flows in a region that is
-causally disconnected from the outer part of the flow. Thus, the flow
-properties on large scales will generally be unaffected by angular
-momentum.
-
+conclude that $r_{\rm circ} \lesssim 0.01r_{s}$. For the low inflow
+rates considered the gas ($\eddr<0.01$) would be unable to cool on a
+dynamical time and would likely drive a bipolar outflow
+\citep{Li+2013}. Our model cannot capture such two dimensional
+structures, but would still be relevant for large scale flow
+properties in regions where the gas is inflowing.
 
 
 \section{Numerical Results}
@@ -2419,12 +2417,13 @@ conclusions are summarized as follows.
 \end{enumerate}
    
 
-We conclude by drawing attention to a few limitations of our
-model.  First, we have neglected any large scale inflow of gas to the
-nucleus by assuming the only source of gas feeding the black hole is
-stellar wind mass loss from the local stellar population.  Our
-estimates represent a lower bound on the time averaged gas density of
-the CNM.  Although our model can, under certain assumptions, describe quiescent galactic nuclei, it cannot account for AGN.
+We conclude by drawing attention to a few limitations of our model.
+First, we have neglected any large scale inflow of gas to the nucleus
+by assuming the only source of gas feeding the black hole is stellar
+wind mass loss from the local stellar population.  Our estimates
+represent a lower bound on the time averaged gas density of the CNM.
+Although our model can, under certain assumptions, describe quiescent
+galactic nuclei, it cannot account for AGN.
 
 Predictions for the SMBH accretion rate are strongly tied to the age
 and radial distribution of the stellar population within the sphere of

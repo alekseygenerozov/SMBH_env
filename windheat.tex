@@ -7,25 +7,37 @@ burst are given, respectively, by
 \begin{align} 
   \dot{\bar{m}}(t) &= \frac{\Delta M(t) \mu|_{M_{\rm TO}(t)}
     \left|\dot{M}_{\rm TO}(t)\right| + f_{\rm MS} \int_{m_0}^{m_{\rm
-        T}(t)}
-    \dot{m}(\Mstar, t) \mu|_{\Mstar} {\rm d}\Mstar }{\bar{m}_*}\\
-  \dot{\bar{e}}(t) &=\dot{e}_{\rm TO}(t)+ f_{\rm MS} \int_{m_0}^{m_{\rm T}(t)}
-  \frac{\vw^2(\Mstar, t) \dot{m}(\Mstar, t) \mu|_{\Mstar} {\rm d}\Mstar}{\bar{m}_*},
+        T}(t)} \dot{m}(\Mstar, t) \mu|_{\Mstar} {\rm d}\Mstar
+  }{\bar{m}_*}\label{eq:mdotImp}
+  \\
+  \dot{\bar{e}}(t) &=f_{\rm OB} \, \dot{e}_{\rm OB}(t)+ f_{\rm MS}
+  \int_{m_0}^{m_{\rm T}(t)} \frac{\vw^2(\Mstar, t) \dot{m}(\Mstar, t)
+    \mu|_{\Mstar} {\rm d}\Mstar}{\bar{m}_*},
   \label{eq:edotImp}
 \end{align} 
-where the first and second terms in each expression corresponds to
-contributions from main sequence (MS) stars and post-main sequence
-(PMS) stars, respectively.  Here $ f_{\rm MS} < 1$ is the efficiency
-with which main sequence winds thermalize their energy with the rest
-of the injected gas (we hereafter assume $f_{\rm MS} = 1$) and $\mu$
-is the IMF, which we take to be of the Salpeter form $\mu|_{\Mstar}
-\propto M_{\star}^{-2.35}$, truncated at $m_0 = 0.1 \Msun$ on the low
-mass end and at $100 \Msun$ on the high mass end, where $\bar{m}_*$ =
-0.35 $\Msun$ is the corresponding mean stellar mass.  Our optimistic
-assumption of 100 per cent thermalization efficiency of stellar winds
-is at least partially offset by our conservative assumption to neglect
-energy input from core collapse supernovae, which contribute a
-comparable energy injection rate to massive stellar winds.
+In the top line, the first and second terms correspond to contributions
+from main sequence (MS) stars and post-main sequence (PMS) stars,
+respectively. Here $\mu$ is the IMF, which we take to be of the
+Salpeter form $\mu|_{\Mstar} \propto M_{\star}^{-2.35}$, truncated at
+$m_0 = 0.1 \Msun$ on the low mass end and at $100 \Msun$ on the high
+mass end, where $\bar{m}_*$ = 0.35 $\Msun$ is the corresponding mean
+stellar mass. In practice the contribution of main sequence winds to
+the mass budget is negligible, and so we drop the second term in
+equation~\eqref{eq:mdotImp}.
+
+The first term in equation~\eqref{eq:edotImp} corresponds energy
+injection from massive O \& B stars, while the second term accounts
+for energy injection from stars on the lower main sequence. Both terms
+have a thermalization efficiency, $f$, which we talk to be $1$. Note
+we do not account for energy from Type II supernovae. However, the
+mass injection from type II supernovae is implicitly included in the
+first term of equation~\eqref{eq:mdotImp}
+
+Winds from lower main sequence stars only dominate the energy
+injection a late times ~10 Gyr after an impulsive burst of star
+formation. Even with 100\% thermalization efficiency these winds could
+not thermally stabilize the CNM. Thus, we could not describe this
+regime within our steady formalism.
 
 The quantity of mass lost in PMS winds $\Delta M(t)$ is estimated from
 the expression given by \citet{CiottiOstriker:2007a} (their eq.~[10]),
@@ -78,13 +90,12 @@ close to the value found by \citet{NaimanSoares-Furtado+:2013a} for
 globular clusters based on a more sophisticated population synthesis
 treatment.
 
-The rate of energy input from PMS winds, $\dot{e}_{\rm TO}(t) =
-f_{8}\dot{\mathcal{E}}/\bar{m}_*$, is dominated by fast Wolf-Rayet
-winds and core-collapse supernovae from massive stars ($M_{\star} >
-8M_{\odot}$), where $f_{8} =2.6 \times 10^{-3}$ is the fraction of the
-stellar mass with $M_{\star} > 8M_{\odot}$ for our assumed Salpeter
-IMF.  Here $\dot{\mathcal{E}} (t)$ is the energy injection rate per
-massive star, which we estimate as
+The rate of energy injection due to winds from massive
+stars, $\dot{e}_{\rm OB}(t) = f_{8}\dot{\mathcal{E}}/\bar{m}_*$, where
+$f_{8} =2.6 \times 10^{-3}$ is the fraction of the stellar mass with
+$M_{\star} > 8M_{\odot}$ for our assumed Salpeter IMF.  Here
+$\dot{\mathcal{E}} (t)$ is the energy injection rate per massive star,
+which we estimate as
 \begin{align}
 \dot{\mathcal{E}} (t)=  1.3 \times 10^{36} {\rm erg\,s^{-1}}
 \begin{cases}
@@ -98,11 +109,9 @@ massive star, which we estimate as
 \end{align}
 based on the results of \citet{VossDiehl+:2009a} (their Fig.~7, top
 panel), who use a population synthesis code to simulate the mass and
-energy injection into the ISM from an OB association.  Although
-equation~\eqref{eq:voss} is valid only for $t \lsim 10$ Myr, in
-practice the precise functional form of $\dot{e}_{\rm TO}(t)$ is
-generally unimportant for our purposes, so we adopt
-equation~\eqref{eq:voss} as being valid for all times. 
+energy injection into the ISM from an OB association. {\bf AG--should
+  just truncate the energy injection at $10^7$ years. Explain why
+  turn-off energy injection is negligible in lower mass stars.}
 
 
 The effective wind velocity in the limit of an impulsive star
