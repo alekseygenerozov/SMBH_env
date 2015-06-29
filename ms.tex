@@ -430,9 +430,10 @@ range of break radii from the \citet{LauerFaber+:2007a}
 sample.\footnote{For the core galaxies the break radius follows the
   scaling relationship $\rb\sim 106 \, (\Mbheight)^{0.39}$ pc, with
   scatter of approximately one dex.  Most the cusp galaxies have $\rb$
-  between 100 and 1000 pc, and lack a clear trend with $\Mbh$.}  We
-neglect values of $r_b$ which would give unphysically large bulges for
-a given $\Mbh$.
+  between 100 and 1000 pc, and lack a clear trend with $\Mbh$. {\bf AG
+    I redid the fitting and found $\rb\sim 90 \, (\Mbheight)^{0.5}$
+    pc}} We neglect values of $r_b$ which would give unphysically
+large bulges for a given $\Mbh$.
 
 
 
@@ -823,7 +824,8 @@ the flow on much larger scales \citep{Johnson+2007}.
       inf})^{0.5(1-\Gamma)}$ (eq.~[\ref{eq:zetacrit}]), separately for
     cusp (solid) and core (dashed) galaxies. Based on the
     \citet{LauerFaber+:2007a} sample we take $\rinf=25 (8) \Mbh^{0.6}
-    pc$ and $\rb=106 \Mbheight^{0.4}$ pc (100 pc)  for cores (cusps). For
+    pc$ and $\rb=106 \Mbheight^{0.4}$ pc (100 pc)  for cores (cusps)
+    {\bf AG update rb fit}. For
     $\zeta < \zeta_c$ the stagnation radius moves from inside the
     influence radius, out to the stellar break radius $r_b$ (Appendix
     \ref{app:be}); in practice renders the flow susceptible to thermal
@@ -1604,7 +1606,7 @@ by
 \epsilon_{\rm rad} \simeq 
 \begin{cases}
   0.03 \left(\frac{\dot{M}_{\bullet}}{10^{-4}\dot{M}_{\rm edd}}\right)^{0.9} & \frac{\dot{M}_{\bullet}}{\dot{M}_{\rm edd}} \lsim 10^{-4} \\
- 0.03 &  10^{-2} \lsim \frac{\dot{M}_{\bullet}}{\dot{M}_{\rm edd}} \lsim  10^{-4},
+ 0.03 &  10^{-2} \gsim \frac{\dot{M}_{\bullet}}{\dot{M}_{\rm edd}} \gsim  10^{-4},
 \end{cases}
 \label{eq:efficiency}
 \end{align}
@@ -1620,16 +1622,18 @@ disk.
 
 Substituting $\epsilon$ into equation (\ref{eq:MdotCa}) and solving
 for the inflow rate results in
+
 \begin{align}
 \frac{\dot{M}_{C}}{\dot{M}_{\rm edd}} \approx 
-\begin{cases} 6\times 10^{-3} \eta_{0.02}^{0.12}T_{\rm
-C,9}^{-0.44}M_{\bullet,8}^{0.09}
-&, \text{core}\\ 2\times 10^{-3} \eta_{0.02}^{0.17}T_{\rm
-C,9}^{-0.4} M_{\bullet,8}^{0.08}
+\begin{cases} 4\times 10^{-2} \eta_{0.02}^{0.2}T_{\rm
+C,9}^{-0.8} M_{\bullet,8}^{0.16}
+&, \text{core}\\ 9\times 10^{-3} \eta_{0.02}^{0.3}T_{\rm
+C,9}^{-0.7} M_{\bullet,8}^{0.14}
 &, \text{cusp}.
   \end{cases}
   \label{eq:MdotC}
 \end{align}
+
 Accretion may not be truly steady in cases where AGN heating
 dominates, due to the inherent delay between black hole feedback and
 the structure of the accretion flow on larger scales.  Equation
@@ -1852,9 +1856,9 @@ implies that the true stagnation radius and the inflow rate could
 be larger than our analytic estimates, potentially resulting in
 thermal instability in a significant fraction of galaxies.  The bottom
 panel of Figure~\ref{fig:vwSources} also shows $\zeta/\zeta_c$, where
-$\zeta_c$ is estimated from the best-fit power-law dependence of
-$r_b$, $\rinf$, and $\Gamma$ on $M_{\bullet}$ from the
-\citet{LauerFaber+:2007a} galaxy sample.  In other words, the CNM of a
+$\zeta_c$ is estimated ...{\bf AG this sentence needs to be
+  fixed. Power law fits different for cores and cusps. Power law fixed
+to be 0.6 for influence radius in doing fits}.  In other words, the CNM of a
 significant fraction of massive ellipticals may be thermally unstable,
 not necessarily because they are receiving lower stellar feedback than
 the average for their galaxy mass, but due to the high heating
@@ -1994,9 +1998,12 @@ matter, and $\epsilon_{\rm bol} = 0.1$ is the assumed bolometric
 correction into the measured X-ray band for low luminosity AGN
 (\citealt{Ho08}).  In all cases the value of $\langle L_X \rangle$ is
 calculated using the accretion rate from the top line of
-equation~\eqref{eq:mdot_analytic} with $\Gamma = 0.3
-\Mbheight^{-0.24}$, based on fitting the \citet{LauerFaber+:2007a}
-galaxy sample. 
+equation~\eqref{eq:mdot_analytic} with $\Gamma = 0.8$ for $\Mbh < 3
+\times 10^7 \Msun$, and $\Gamma=-0.3 \log_{10}
+\left(\frac{\Mbh}{3\times 10^7 \Msun}\right)$+0.8 for $\Mbh \geq 3
+\times 10^7 \Msun$. This is functional form is designed to
+approximately reproduce the behavior of $\Gamma(\Mbh)$ in the
+\citet{LauerFaber+:2007a} sample.
 
 The left panel of Figure \ref{fig:miller} is calculated assuming a
 constant low value for the radiative efficiency of $\epsilon_X =
@@ -2025,33 +2032,34 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; pink).
   L_X \rangle = \epsilon_X \Mdot c^2$, as a function of SMBH mass.
   Green lines show our prediction in the case of heating due to the
   average SFH for galaxies corresponding to each black hole mass
-  (Fig.~\ref{fig:bh_growth}), calculated using a power-law fit for the
-  relationship $\Gamma(M_{\bullet})=0.3 \Mbheight^{-0.24}$ derived
-  from the \citet{LauerFaber+:2007a} sample.  Shown for comparison are
-  the measurements ({\it black stars}) and upper limits ({\it gray
-    triangles}) for $L_X/L_{\rm edd}$ values, from the
-  \citet{Miller+15} sample of early-type galaxies (a black line shows
-  the best power-law fit $\langle L_X/L_{\rm edd}\rangle \propto
-  M_{\bullet}^{\alpha}$, with $\alpha = -0.2$).  The left panel is
-  calculated assuming a constant radiative efficiency
-  $\epsilon_X=10^{-4} (\epsilon_{\rm bol}/0.1)$, while the right hand
-  panel assumes $\epsilon_X= \alpha \epsilon_{\rm bol}\epsilon_{\rm
-    rad}$, where $\epsilon_{\rm rad}$ is the radiative efficiency of
-  low luminosity accretion disks calculated by \citet{Sharma+2007}
-  (eq.~[\ref{eq:efficiency}]) and $\alpha = 0.1$ is the fraction of
-  the mass inflowing on large scales that reaches the SMBH.  Shown for
-  comparison are the X-ray luminosities calculated for the maximum
-  thermally-stable accretion rate ({\it dashed orange line};
-  eq.~[\ref{eq:Mdotmax}]); the SN Ia-regulated accretion rate ({\it
-    dashed teal line}; eq.~[\ref{eq:eddr_Ia}]), and the Compton
-  heating-regulated accretion rate ({\it dashed pink line};
-  eq.~[\ref{eq:MdotCa}]), again all calculated for the average SFH
-  corresponding to each SMBH mass.}
+  (Fig.~\ref{fig:bh_growth}), calculated using $\Gamma = 0.8$ for
+  $\Mbh < 3 \times 10^7 \Msun$, and $\Gamma=-0.3 \log_{10}
+  \left(\frac{\Mbh}{3\times 10^7 \Msun}\right)$+0.8 for $\Mbh \geq 3
+  \times 10^7 \Msun$ derived from the \citet{LauerFaber+:2007a}
+  sample.  Shown for comparison are the measurements ({\it black
+    stars}) and upper limits ({\it gray triangles}) for $L_X/L_{\rm
+    edd}$ values, from the \citet{Miller+15} sample of early-type
+  galaxies (a black line shows the best power-law fit $\langle
+  L_X/L_{\rm edd}\rangle \propto M_{\bullet}^{\alpha}$, with $\alpha =
+  -0.2$).  The left panel is calculated assuming a constant radiative
+  efficiency $\epsilon_X=10^{-4} (\epsilon_{\rm bol}/0.1)$, while the
+  right hand panel assumes $\epsilon_X= \alpha \epsilon_{\rm
+    bol}\epsilon_{\rm rad}$, where $\epsilon_{\rm rad}$ is the
+  radiative efficiency of low luminosity accretion disks calculated by
+  \citet{Sharma+2007} (eq.~[\ref{eq:efficiency}]) and $\alpha = 0.1$
+  is the fraction of the mass inflowing on large scales that reaches
+  the SMBH.  Shown for comparison are the X-ray luminosities
+  calculated for the maximum thermally-stable accretion rate ({\it
+    dashed orange line}; eq.~[\ref{eq:Mdotmax}]); the SN Ia-regulated
+  accretion rate ({\it dashed teal line}; eq.~[\ref{eq:eddr_Ia}]), and
+  the Compton heating-regulated accretion rate ({\it dashed pink
+    line}; eq.~[\ref{eq:MdotCa}]), again all calculated for the
+  average SFH corresponding to each SMBH mass.}
 \end{figure*}
 
 If the nuclei of elliptical galaxies are heated as expected for the
 average SFH of galaxies with similar mass, then to first order we
-predict that $\langle L_{X}/L_{\rm edd}\rangle$ should be a weakly
+predict that $\langle L_{X}/L_{\rm edd}\rangle$ should be an 
 increasing function of BH mass.  This result is in tension with the
 observed down-sizing trend that the average Eddington ratio is seen to
 decrease (albeit weakly) with $M_{\bullet}$, especially in the model where
@@ -2375,15 +2383,15 @@ conclusions are summarized as follows.
 \item Stellar wind heating from the average SFH may be sufficient to
   permit thermally-stable, steady-state accretion, depending on the
   accretion efficiency of the SMBH.  However, the resulting average
-  Eddington-normalized accretion rate is predicted to increase weakly
-  with $M_{\bullet}$ (Fig.~\ref{fig:miller}), in tension with the
-  (also weak) downsizing trend of measured X-ray luminosities in
-  early-type galactic nuclei (e.g., \citealt{Miller+15}).  Thermally
-  stable accretion models can reproduce the observed scatter in
-  nuclear X-ray luminosities at fixed $\Mbh$ (2-4 orders of magnitude)
-  due to the combination of (1) differences in the stellar wind
-  heating rate due to stochastic variation in SFH between galaxies, or
-  within one galaxy due to burstiness in the SFH, as in
+  Eddington-normalized accretion rate is predicted to increase with
+  $M_{\bullet}$ (Fig.~\ref{fig:miller}), in tension with the (also
+  weak) downsizing trend of measured X-ray luminosities in early-type
+  galactic nuclei (e.g., \citealt{Miller+15}).  Thermally stable
+  accretion models can reproduce the observed scatter in nuclear X-ray
+  luminosities at fixed $\Mbh$ (2-4 orders of magnitude) due to the
+  combination of (1) differences in the stellar wind heating rate due
+  to stochastic variation in SFH between galaxies, or within one
+  galaxy due to burstiness in the SFH, as in
   ~Fig.~\ref{fig:NickPlot2}; (2) Variations in the amount of inflowing
   mass which is lost to small scale outflows from the SMBH accretion
   disk, likely due to variations in the angular momentum of the
