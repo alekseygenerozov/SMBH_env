@@ -406,7 +406,8 @@ M_{\bullet} \simeq 2\times 10^{8}\left(\frac{\sigma_{\bullet}}{200\,{\rm
 This may be of questionable validity for low mass black holes (e.g.,
 \citealt{Greene+2010, Kormendy+2013}). Also, several of the black hole
 masses used in \citealt{McConnellMa+:2011a} were underestimated
-\citep{Kormendy+2013}. 
+\citep{Kormendy+2013}. However, our results are not overly sensitive
+to the exact form of the $\Mbh-\sigma$ relationship that we use.
 
 A galaxy model is fully specified by four parameters: $\Mbh$,
 $\Gamma$, $r_b$, and $\beta$.  We compute models for three different
@@ -418,22 +419,19 @@ We bracket these possibilities by considering models with $\Gamma=0.8$
 and $\Gamma=0.1$.  
 
 We fix $\beta = 2$ but find that our results are not overly sensitive
-to the properties of the gas flow on radial scales $\gtrsim r_b$ for
-values of $\beta\gsim 1.5$, which characterize most of the
-\citet{LauerFaber+:2007a} sample\footnote{The median $\beta$ in the
-  \citet{LauerFaber+:2007a} sample is 1.39 (1.64) for core (cusp)
-  galaxies}.  The presence of the break radius $r_{b}$ is, however,
-necessary to obtain a converged steady state for some regions of our
-parameter space.  We consider solutions calculated for up to four
-values of $\rb$: 50 pc, 100 pc, 200 pc, and 400 pc, motivated by the
-range of break radii from the \citet{LauerFaber+:2007a}
-sample.\footnote{For the core galaxies the break radius follows the
-  scaling relationship $\rb\sim 106 \, (\Mbheight)^{0.39}$ pc, with
-  scatter of approximately one dex.  Most the cusp galaxies have $\rb$
-  between 100 and 1000 pc, and lack a clear trend with $\Mbh$. {\bf AG
-    I redid the fitting and found $\rb\sim 90 \, (\Mbheight)^{0.5}$
-    pc}} We neglect values of $r_b$ which would give unphysically
-large bulges for a given $\Mbh$.
+to the properties of the gas flow on radial scales $\gtrsim r_b$.  The
+presence of the break radius $r_{b}$ is, however, necessary to obtain
+a converged steady state for some regions of our parameter space.  We
+consider solutions calculated for up to four values of $\rb$: 50 pc,
+100 pc, 200 pc, and 400 pc, motivated by the range of break radii from
+the \citet{LauerFaber+:2007a} sample.\footnote{For the core galaxies
+  the break radius follows the scaling relationship $\rb\sim 90 \,
+  (\Mbheight)^{0.5}$ pc, with scatter of approximately one dex. Most
+  the cusp galaxies have $\rb$ between 100 and 1000 pc, and lack a
+  clear trend with $\Mbh$. The mean $r_b$ for cusp galaxies in the
+  \citet{LauerFaber+:2007a} sample is $\sim 240$ pc} We neglect
+values of $r_b$ which would give unphysically large bulges for a given
+$\Mbh$.
 
 
 
@@ -824,14 +822,16 @@ the flow on much larger scales \citep{Johnson+2007}.
       inf})^{0.5(1-\Gamma)}$ (eq.~[\ref{eq:zetacrit}]), separately for
     cusp (solid) and core (dashed) galaxies. Based on the
     \citet{LauerFaber+:2007a} sample we take $\rinf=25 (8) \Mbh^{0.6}
-    pc$ and $\rb=106 \Mbheight^{0.4}$ pc (100 pc) for cores (cusps)
-    {\bf AG update rb fit}. For $\zeta < \zeta_c$ the stagnation
-    radius moves from inside the influence radius, out to the stellar
-    break radius $r_b$ (Appendix \ref{app:be}); in practice renders
-    the flow susceptible to thermal runaway, even if $v_{w} > v_{\rm
-      TI}$.  For cusp galaxies the $v_w > v_{\rm TI}$ is usually the
-    more strigent criterion for stability, while for core galaxies the
-    $\zeta > \zeta_c$ is usually more relevant.}
+    pc$ and $\rb=90 \Mbheight^{0.5}$ pc (240 pc) for cores
+    (cusps). For $\zeta < \zeta_c$ the stagnation radius moves from
+    inside the influence radius, out to the stellar break radius $r_b$
+    (Appendix \ref{app:be}); in practice renders the flow susceptible
+    to thermal runaway, even if $v_{w} > v_{\rm TI}$.  
+    % For cusp
+%     galaxies the $v_w > v_{\rm TI}$ is usually the more stringent
+%     criterion for stability, while for core galaxies the $\zeta >
+%     \zeta_c$ is usually more relevant.
+}
 \label{fig:TI}
 \end{figure}
 
@@ -928,12 +928,12 @@ Figure \ref{fig:TI} shows $v_{\rm TI}(M_{\bullet})$ for different mass
 input parameters $\eta$, as well as the [$\eta$-independent] $\zeta >
 \zeta_c$ criterion, shown separately for cusp and core galaxies.
 Based on the \citet{LauerFaber+:2007a} sample we take $\rinf = 25(8)M
-^{0.6}$ pc and $\rb = 106 \Mbheight^{0.4}$ (100 pc) and thus
-$\rb/\rinf\simeq 4 \Mbheight^{-0.2} (13 \Mbheight^{-0.6})$ for cores
+^{0.6}$ pc and $\rb = 90 \Mbheight^{0.5}$ (240 pc) and thus
+$\rb/\rinf\simeq 4 \Mbheight^{-0.1} (30 \Mbheight^{-0.6})$ for cores
 (cusps).  For cusp galaxies we see that the $v_w \gtrsim v_{\rm TI}$
-criterion is generally more stringent, while for core galaxies the
-$\zeta > \zeta_c$ criterion is more strigent for core galaxies, except
-for high mass loss rates $\eta > 1$.
+criterion is more stringent for $\eta \gsim 0.1$. The $\zeta >
+\zeta_c$ is more important for core galaxies especially for $\Mbh
+\gsim 10^8 \Msun$, where most core galaxies are found. 
 
 The minimum heating rate for thermal stability corresponds to {\it
   maximum} thermally-stable inflow rate. Due to the large scatter
@@ -1859,20 +1859,20 @@ average SFH as their host galaxies possess thermally stable flows
 across all black hole masses.  An important caveat, however, is that
 $\vw$ is generally only a few times higher than the stellar velocity
 dispersion, i.e. $\zeta \sim \zeta_c$ (eq.~[\ref{eq:zetacrit}]).  This
-implies that the true stagnation radius and the inflow rate could
-be larger than our analytic estimates, potentially resulting in
-thermal instability in a significant fraction of galaxies.  The bottom
-panel of Figure~\ref{fig:vwSources} also shows $\zeta/\zeta_c$, where
-$\zeta_c$ is estimated ...{\bf AG this sentence needs to be
-  fixed. Power law fits different for cores and cusps. Power law fixed
-to be 0.6 for influence radius in doing fits}.  In other words, the CNM of a
-significant fraction of massive ellipticals may be thermally unstable,
-not necessarily because they are receiving lower stellar feedback than
-the average for their galaxy mass, but due to the high heating
-required for stability given the structure of their stellar potential.
+implies that the true stagnation radius and the inflow rate could be
+larger than our analytic estimates, potentially resulting in thermal
+instability in a significant fraction of galaxies.  The bottom panel
+of Figure~\ref{fig:vwSources} also shows $\zeta/\zeta_c$, where
+$\zeta_c$ is estimated using fits for $r_b$, $\rinf$, and $\Gamma$
+derived from the \citet{LauerFaber+:2007a} sample.  In other words,
+the CNM of a significant fraction of massive ellipticals may be
+thermally unstable, not necessarily because they are receiving lower
+stellar feedback than the average for their galaxy mass, but due to
+the high heating required for stability given the structure of their
+stellar potential.
 
-Realistic variations (``burstiness") in the SFH
-will also often produce lower stellar wind heating rates (Appendix
+Realistic variations (``burstiness") in the SFH will also often
+produce lower stellar wind heating rates (Appendix
 \ref{app:windheat}).  Figure \ref{fig:NickPlot2} shows the heating
 rate as a function of average black hole mass for non-fiducial cases
 in which the current ($z = 0$) star formation is suppressed by a
@@ -1880,45 +1880,21 @@ factor $\iota$ from its average $z = 0$ value, for a characteristic
 timescale $\delta t_{\star}$.  For $\delta t_{\star} \lesssim 10^{7}$
 yr, we see that $v_{\rm w}^{\star}$ is reduced by at most a factor of
 $\approx 2$ from its average value, even for huge drops in the star
-formation rate ($\iota \sim 10^{-3}$).  However, burstiness in the
-SFH over longer timescales can suppress heating
-more significantly.  When $\delta t_{\star} \gtrsim 10^8~{\rm yr}$,
-$v_{\rm w}^\star$ becomes very sensitive to $\iota$: at $\iota=0.1$,
-$v_{\rm w}^\star \approx 400~{\rm km~s}^{-1}$ in most galaxies, but
-for smaller $\iota$, $v_{\rm w}^\star \approx 200~{\rm km~s}^{-1}$ (an
-exception to this is in galactic nuclei with $M_\bullet \gtrsim
-10^8~M_\odot$, where heating is stabilized by SN Ia).  Our use
-of average cosmic SFHs is appropriate provided
-local variations are either on short timescales ($\delta t_{\star}
-\lesssim 10^7~{\rm yr}$), or limited in magnitude ($\iota \gtrsim
-0.1$).  If both of these conditions are violated, then the effective
-heating rates for all but the most massive galaxies (where Ia
-explosions dominate) will fall by a factor $\gtrsim 4$ from our
-fiducial volumetric averages, calculated using SFHs from \citet{MosterNaab+:2013a}.
-
-% \begin{table*}
-% \begin{threeparttable}
-% \begin{minipage}{18cm}
-% \caption{Comparison of CNM gas density at r=10$^{18}$ between our
-%   model and existing constraints on the gas density on this scale for
-%   the Milky Way from Chandra x-ray observations (first row) and from
-%   modeling the radio light curve in the Swift J1644 transient (second row).}
-% \begin{tabular}{lll}
-%   {System} &  {Model} & {Comparison} \\
-%   %\hline
-%   Milky Way & 3 cm${-3}$ & 26 cm$^{-3}$\\
-%   Swift J1644+57 & 5 cm$^{-3}$ & 0.8 cm$^{-3}$\\
-%   %\hline
-% \label{table:compare}  
-% \end{tabular}
-% % \begin{tablenotes}
-% %   Model estimate has been corrected for the fact the analytic
-% %   prescription underestimates gas density. This corresponds to model
-% %   estimate for core galaxies.
-% % \end{tablenotes}
-% \end{minipage}
-% \end{threeparttable}
-% \end{table*}
+formation rate ($\iota \sim 10^{-3}$).  However, burstiness in the SFH
+over longer timescales can suppress heating more significantly.  When
+$\delta t_{\star} \gtrsim 10^8~{\rm yr}$, $v_{\rm w}^\star$ becomes
+very sensitive to $\iota$: at $\iota=0.1$, $v_{\rm w}^\star \approx
+400~{\rm km~s}^{-1}$ in most galaxies, but for smaller $\iota$,
+$v_{\rm w}^\star \approx 200~{\rm km~s}^{-1}$ (an exception to this is
+in galactic nuclei with $M_\bullet \gtrsim 10^8~M_\odot$, where
+heating is stabilized by SN Ia).  Our use of average cosmic SFHs is
+appropriate provided local variations are either on short timescales
+($\delta t_{\star} \lesssim 10^7~{\rm yr}$), or limited in magnitude
+($\iota \gtrsim 0.1$).  If both of these conditions are violated, then
+the effective heating rates for all but the most massive galaxies
+(where Ia explosions dominate) will fall by a factor $\gtrsim 4$ from
+our fiducial volumetric averages, calculated using SFHs from
+\citet{MosterNaab+:2013a}.
 
 
 \section{Implications and Discussion}
@@ -1941,18 +1917,17 @@ fiducial volumetric averages, calculated using SFHs from \citet{MosterNaab+:2013
   maximum accretion set by Ia supernovae blow-out or heating,
   $\dot{M}_{\rm Ia}$ (\ref{eq:eddr_Ia}).  Red lines show the inflow
   rate obtained if Compton heating acts alone, $\dot{M}_{\rm C}$
-  (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum inflow
-  rate for a thermally stable flow near the stagnation radius,
+  (eq.~[\ref{eq:MdotC}]).  Yellow lines show the maximum inflow rate
+  for a thermally stable flow near the stagnation radius,
   $\dot{M}_{\rm TI}$ (eq.~[\ref{eq:Mdotmax}]).  Also shown are the
-  inferred inflow rates of SgrA* from \citet{Quataert:2004a} (gray
-  circles), for NGC3115 from \citet{ShcherbakovWong+:2014a} (gray
-  diamonds), and for Swift J1644+57 from \citet{BergerZauderer+:2012a}
-  (gray triangles).  {\it Bottom panel:} Growth times $t_{\rm grow}
-  \equiv \Mbh/\dot{M}_{\bullet}$ in units of the Hubble time $\th$ for
-  each of the accretion rates shown in the top panel, where
-  $\dot{M}_{\bullet} = \alpha\dot{M}$, where $\alpha = 0.1$, to
-  account for the fraction of inflowing mass lost to disk outflows on
-  small scales.}
+  inferred inflow rates of SgrA* from \citet{Quataert:2004a} and
+  \citet{Cuadra+2008} (gray circles) and for NGC3115 from
+  \citet{ShcherbakovWong+:2014a} (gray diamonds).  {\it Bottom panel:}
+  Growth times $t_{\rm grow} \equiv \Mbh/\dot{M}_{\bullet}$ in units
+  of the Hubble time $\th$ for each of the accretion rates shown in
+  the top panel, where $\dot{M}_{\bullet} = \alpha\dot{M}$, where
+  $\alpha = 0.1$, to account for the fraction of inflowing mass lost
+  to disk outflows on small scales.}
 \end{figure}
 
 Figure \ref{fig:vwSources} shows that the heating associated with the
@@ -1997,10 +1972,10 @@ range of $\dot{M}$ for the low-luminosity AGN NGC3115 derived through
 detailed modeling by \citet{ShcherbakovWong+:2014a}, who find a range
 of inflow rates depending on the assumed model for thermal
 conductivity.  The inflow rate SgrA* estimated from
-\citet{Quataert2004} exceeds our estimate of $\dot{M}$ due to the
+\citet{Quataert:2004a} exceeds our estimate of $\dot{M}$ due to the
 average SFH for the same $M_{\bullet}$ by almost two orders of
 magnitude. This is because the mass source term in
-\citet{Quataert2004} exceeds ours by several orders of magnitude.
+\citet{Quataert:2004a} exceeds ours by several orders of magnitude.
 The star formation in the central parsec of the Milky Way cannot be
 described as steady-state: feedback is instead dominated by the
 stellar winds from the ring of young massive stars of mass $\sim
@@ -2014,7 +1989,7 @@ value of $\eta \sim 1$ predicted in the average SFH case
 
 However, simulations by \citet{Cuadra+2006} find that
 the inflow rate for Sgr A* is reduced by up to an order of magnitude
-compared to the result in \citet{Quataert2004} when the discreteness
+compared to the result in \citet{Quataert:2004a} when the discreteness
 and disk geometry of stellar sources is taken into account.
 
 
@@ -2095,18 +2070,25 @@ Compton heating feedback (eq.~[\ref{eq:MdotC}]; pink).
 
 If the nuclei of elliptical galaxies are heated as expected for the
 average SFH of galaxies with similar mass, then to first order we
-predict that $\langle L_{X}/L_{\rm edd}\rangle$ should be an 
+predict that $\langle L_{X}/L_{\rm edd}\rangle$ should be an
 increasing function of BH mass.  This result is in tension with the
 observed down-sizing trend that the average Eddington ratio is seen to
-decrease (albeit weakly) with $M_{\bullet}$, especially in the model where
-$\epsilon_X$ increases with the Eddington ratio.
-However, one must keep in mind the enormous uncertainty in calculating
-the luminosity of the accretion flow close to the black hole in a
-single waveband based on the feeding rate on larger scales.  Also, if disk
-outflows indeed carry away most of the infalling mass before it reaches X-ray
-producing radii (e.g.~\citealt{Blandford&Begelman99};
+decrease (albeit weakly) with $M_{\bullet}$, especially in the model
+where $\epsilon_X$ increases with the Eddington ratio.  However, one
+must keep in mind the enormous uncertainty in calculating the
+luminosity of the accretion flow close to the black hole in a single
+waveband based on the feeding rate on larger scales.  Also, if disk
+outflows indeed carry away most of the infalling mass before it
+reaches X-ray producing radii (e.g.~\citealt{Blandford&Begelman99};
 \citealt{Li+13}), then the angular momentum of the infalling gas might
-also influence the X-ray luminosity indirectly through the inflow efficiency $\alpha$, in a way that could depend systematically on the stellar population and hence $M_{\bullet}$.  However, in general the efficiency with which inflowing matter reaches the SMBH (and hence X-ray luminosity) would naively be expected to {\it decrease} with decreasing $M_{\bullet}$ due to the increasing angular momentum of low mass galaxies, exacerbating the tension between our findings and the observed downsizing trend.
+also influence the X-ray luminosity indirectly through the inflow
+efficiency $\alpha$, in a way that could depend systematically on the
+stellar population and hence $M_{\bullet}$.  However, in general the
+efficiency with which inflowing matter reaches the SMBH (and hence
+X-ray luminosity) would naively be expected to {\it decrease} with
+decreasing $M_{\bullet}$ due to the increasing angular momentum of low
+mass galaxies, exacerbating the tension between our findings and the
+observed downsizing trend.
 
 Perhaps a more readily addressable test is whether a steady-state
 accretion picture developed in this work can account for the the large
@@ -2183,10 +2165,17 @@ luminosities shown in Fig \ref{fig:miller} could result from the wide
 range of inflow rates experienced over the course of a cyclic episode
 between instabilities and periodic nuclear outbursts. 
 
-If the galaxies with measured $L_{\rm X}$ at low $M_{\bullet}$
-in Figure \ref{fig:miller} are indeed in a state of thermally-unstable
-outburst, then some of the galaxies with X-ray upper limits could be contributing to a separate population of thermally-stable, steadily accreting nuclei.  Such a population could include SgrA*, which has a much lower X-ray luminosity for its SMBH mass than predicted by the \citet{Miller+15} trend.  A potentially bimodal population of steady and outbursting galactic nuclei calls into question the practice of using simple extrapolations of power-law fits to the $L_{\rm X}(M_{\bullet}$) relationship to low $M_{\bullet}$ to constrain the occupation fraction of SMBHs in the nuclei of low mass
-galaxies.
+If the galaxies with measured $L_{\rm X}$ at low $M_{\bullet}$ in
+Figure \ref{fig:miller} are indeed in a state of thermally-unstable
+outburst, then some of the galaxies with X-ray upper limits could be
+contributing to a separate population of thermally-stable, steadily
+accreting nuclei.  Such a population could include SgrA*, which has a
+much lower X-ray luminosity for its SMBH mass than predicted by the
+\citet{Miller+15} trend.  A potentially bimodal population of steady
+and outbursting galactic nuclei calls into question the practice of
+using simple extrapolations of power-law fits to the $L_{\rm
+  X}(M_{\bullet}$) relationship to low $M_{\bullet}$ to constrain the
+occupation fraction of SMBHs in the nuclei of low mass galaxies.
 
 
 
@@ -2235,13 +2224,13 @@ Our results also have implications for the environments encountered by
 relativistic jets from TDEs.  For low-mass SMBHs with $M_{\bullet}
 \lesssim 10^{7}M_{\odot}$, such as that responsible for powering the
 transient {\it Swift} J1644+57 (\citealt{Bloom+11}), we predict gas
-densities of a $n \sim 0.3-3$ cm$^{-3}$ on radial scales of 0.3 pc for
+densities of a $n \sim $few cm$^{-3}$ on radial scales of 0.3 pc for
 wind heating rates within the physically expected range $v_{\rm w}
-\sim 500-1000$ km s$^{-1}$ (Fig.~\ref{fig:profiles}).  These values
-are within the range estimated by modeling the radio afterglow of {\it
-  Swift} J1644+57 (\citealt{Metzger+12},
-\citealt{BergerZauderer+:2012a}), as shown in
-Fig.~\ref{fig:bh_growth}.
+\sim 500-1000$ km s$^{-1}$ and $\eta=0.4$ {\bf AG might be good to
+  cite figure 2 here but this has eta=0.2}.  These values are within
+the range estimated by modeling the radio afterglow of {\it Swift}
+J1644+57 (\citealt{Metzger+12},\citealt{BergerZauderer+:2012a}). However,
+\citet{Mimica+2015} find a much higher density of $60 cm^{-3}$ at 0.3 pc. 
 
 \citet{BergerZauderer+:2012a} infer a flattening of the gas density
 profile of the host of J1644+57 on radial scales $r \gtrsim 0.4$ pc
@@ -2274,7 +2263,7 @@ of kinetic feedback, since the effects of radiative feedback are
 relatively straightforward to calculate from the properties of the
 accretion flow.  However, it is possible kinetic feedback from SMBH
 outflows could play an equal or greater role in regulating accretion,
-even in low luminosity AGN.
+even in low luminosity AG.
 
 Our simple parameterization of kinetic feedback (eq.~[\ref{eq:vjet}])
 assumes a uniform volumetric heating and predicts an effective wind

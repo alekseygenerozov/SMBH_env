@@ -25,16 +25,22 @@ stellar wind mass loss rate per massive star can be approximated to within
 a factor of a few by
 
 \begin{equation}
-\dot{\mathcal{M}}=10^{-5.4} \left(\frac{t}{4\times 10^6 {\rm
-       yr}}\right)^{-3} 4 {\, \rm Myr} \leq t \leq 40 {\, \rm Myr}. 
+\dot{\mathcal{M}}=
+\begin{cases}
+10^{-6.5} \Msun {\rm yr^{-1}} & t < 4 Myr\\
+10^{-5.4} \Msun {\rm yr^{-1}} \left(\frac{t}{4\times 10^6 {\rm
+       yr}}\right)^{-3} & 4 {\, \rm Myr} \leq t \leq 40 {\, \rm Myr}. \\
+0 & t>40 {\rm Myr}
+\end{cases}
 \end{equation}
 
-and 0 for all later times. We neglect the mass injection due to
-stellar winds for times $t\lsim 4$ Myr. $\dot{m}_{\rm OB}=f_{8}
-\dot{\mathcal{M}}/\bar{m}_{\star}$, where $f_{8} =2.6 \times 10^{-3}$
-is the fraction of the stellar mass with $M_{\star} > 8M_{\odot}$ and
-$m_{\star}=0.35 \Msun$ is the mean stellar mass for our assumed
-Salpeter IMF, $\mu\sim M_\star^{-2.35}$.
+We neglect the mass injection due to stellar winds for times $t\lsim
+4$ Myr. $\dot{m}_{\rm OB}=f_{8} \dot{\mathcal{M}}/\bar{m}_{\star}$,
+where $f_{8} =2.6 \times 10^{-3}$ is the fraction of the stellar mass
+with $M_{\star} > 8M_{\odot}$ and $m_{\star}=0.35 \Msun$ is the mean
+stellar mass for our assumed Salpeter IMF, $\mu\sim M_\star^{-2.35}$.
+
+
 
 For the mass loss rate from post-main sequence winds, we take
 
@@ -43,7 +49,7 @@ For the mass loss rate from post-main sequence winds, we take
     \mu|_{M_{\rm TO}(t)}}{\bar{m}_{\star}}  \,\,  t \geq {\rm 40 Myr},
 \end{equation}
 
-and 0 for earlier times. By truncating $dot{m}_{\rm TO}$ at 40 Myr, we
+and 0 for earlier times. By truncating $\dot{m}_{\rm TO}$ at 40 Myr, we
 are ignoring the non-steady mass injection by type II supernovae.
 
 The quantity of mass lost in PMS winds $\Delta M(t)$ is estimated from
@@ -120,8 +126,7 @@ which we estimate as
 \begin{cases}
   1 & t<4 \times 10^6 {\rm yr}\\
   \left(\frac{t}{4 \times  10^6\,{\rm yr}}\right)^{-3.73} &  4\times
-  10^{6} {\rm yr}  \le t \le 10^{8} {\rm yr}
-  \times 10^6 {\rm yr},\\
+  10^{6} {\rm yr}  \le t \le 10^{8} {\rm yr},\\
   0 & t > 10^8 {\rm yr}
 \end{cases}
 \label{eq:voss}
